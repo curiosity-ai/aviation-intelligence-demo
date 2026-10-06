@@ -1,4 +1,4 @@
-[tools: Curiosity.ChatAITools.UID("AVsandboX1111111111111")]
+﻿[tools: Curiosity.ChatAITools.UID("AVsandboX1111111111111")]
 [tools: Curiosity.ChatAITools.DisplayName("Aviation News Desk")]
 [tools: Curiosity.ChatAITools.Description("The aviation and aerospace news desk: every monitored RSS feed and every article the connector has read, as files you can grep, plus commands to filter the news by date, category, priority and publisher, and report templates that turn one JSON file into an HTML brief and a PowerPoint deck. Use it to answer questions about recent aviation news and to produce daily and weekly market intelligence reports.")]
 [tools: Curiosity.ChatAITools.DisplayDescription("Browse the monitored aviation feeds and articles, and publish daily or weekly market reports as an HTML page or a PowerPoint deck.")]
@@ -29,9 +29,9 @@ public class AviationNewsDesk : ISandbox
 {
     //How far back /news/days reaches, and the window /news/index.tsv covers. The `news` command
     //is not bound by either.
-    private const int DAYS_LISTED      = 31;
-    private const int INDEX_DAYS       = 7;
-    private const int MAX_NEWS_ROWS    = 2_000;
+    private const int DAYS_LISTED = 31;
+    private const int INDEX_DAYS = 7;
+    private const int MAX_NEWS_ROWS = 2_000;
 
     public string FunctionName => "news_desk";
 
@@ -102,7 +102,7 @@ public class AviationNewsDesk : ISandbox
 
         SandboxCommand.Create("render-report",
             "render-report report|deck <data.json> [<name>]: fills /templates/report.html (an HTML brief) or /templates/deck.html "
-          + "(a page that builds a PowerPoint deck) with the report JSON and writes /artifacts/<name>.html. Checks the JSON against "
+          + "(a page that builds a PowerPoint deck) with the report JSON and writes /artifacts/<name>.html (an agent run: its own directory). Checks the JSON against "
           + "the contract in /templates/README.md first and refuses a report with missing sections or sources. Then run: publish <name>.html",
             RenderReportAsync),
 
@@ -148,7 +148,7 @@ public class AviationNewsDesk : ISandbox
 
         if (path == "index.tsv")
         {
-            var to   = DateTimeOffset.UtcNow;
+            var to = DateTimeOffset.UtcNow;
             var from = to.UtcDateTime.Date.AddDays(-(INDEX_DAYS - 1));
 
             return Task.FromResult(SandboxFile.Text(path, Tsv(scope, Articles(scope, new DateTimeOffset(from, TimeSpan.Zero), to.AddHours(1)))));
@@ -221,8 +221,8 @@ public class AviationNewsDesk : ISandbox
     private static Task<IEnumerable<SandboxFile>> ReadFeeds(ToolScope scope)
     {
         var lookup = FeedLookup.Build(scope);
-        var files  = new List<SandboxFile>();
-        var tsv    = new StringBuilder("#name\tcategory\tpriority\tsource_type\tpublisher\tlanguage\taccess\tlast_status\tlast_items\tlast_item_utc\turl\tslug\n");
+        var files = new List<SandboxFile>();
+        var tsv = new StringBuilder("#name\tcategory\tpriority\tsource_type\tpublisher\tlanguage\taccess\tlast_status\tlast_items\tlast_item_utc\turl\tslug\n");
 
         foreach (var feed in lookup.Feeds.Values.OrderBy(f => f.Rank).ThenBy(f => f.Category).ThenBy(f => f.Name))
         {
@@ -247,7 +247,7 @@ public class AviationNewsDesk : ISandbox
         if (node is null) return "This feed no longer exists.";
 
         var feed = lookup.Feeds[uid];
-        var sb   = new StringBuilder();
+        var sb = new StringBuilder();
 
         sb.AppendLine("# " + feed.Name).AppendLine();
         sb.AppendLine($"- uid: {uid}");
@@ -287,8 +287,8 @@ public class AviationNewsDesk : ISandbox
     private static string Tsv(ToolScope scope, IEnumerable<ReadOnlyNode> articles, int limit = int.MaxValue)
     {
         var lookup = FeedLookup.Build(scope);
-        var sb     = new StringBuilder("#published\tuid\tcategory\tpriority\tpublisher\tlang\tcontent\twords\ttitle\turl\n");
-        var count  = 0;
+        var sb = new StringBuilder("#published\tuid\tcategory\tpriority\tpublisher\tlang\tcontent\twords\ttitle\turl\n");
+        var count = 0;
 
         foreach (var node in articles)
         {
@@ -319,12 +319,12 @@ public class AviationNewsDesk : ISandbox
 
         if (node is null || node.Type != N.Article.Type) return null;
 
-        var lookup  = FeedLookup.Build(scope);
+        var lookup = FeedLookup.Build(scope);
         var primary = lookup.PrimaryFeedOf(scope, uid);
-        var feeds   = scope.Q().StartAt(uid).Out(N.Feed.Type, E.AppearedIn).AsUIDEnumerable().Where(lookup.Feeds.ContainsKey).Select(f => lookup.Feeds[f]).OrderBy(f => f == primary ? 0 : 1).ThenBy(f => f.Rank).ToList();
-        var tags    = scope.Q().StartAt(uid).Out(N.Tag.Type, E.TaggedWith).AsEnumerable().Select(t => t.GetString(N.Tag.Name)).ToList();
-        var note    = node.GetString(N.Article.ExtractionNote);
-        var sb      = new StringBuilder();
+        var feeds = scope.Q().StartAt(uid).Out(N.Feed.Type, E.AppearedIn).AsUIDEnumerable().Where(lookup.Feeds.ContainsKey).Select(f => lookup.Feeds[f]).OrderBy(f => f == primary ? 0 : 1).ThenBy(f => f.Rank).ToList();
+        var tags = scope.Q().StartAt(uid).Out(N.Tag.Type, E.TaggedWith).AsEnumerable().Select(t => t.GetString(N.Tag.Name)).ToList();
+        var note = node.GetString(N.Article.ExtractionNote);
+        var sb = new StringBuilder();
 
         sb.AppendLine("# " + node.GetString(N.Article.Title)).AppendLine();
         sb.AppendLine($"- uid: {uid}");
@@ -353,9 +353,9 @@ public class AviationNewsDesk : ISandbox
         if (args.Error is not null) return call.Fail(args.Error);
 
         var lookup = FeedLookup.Build(call.Scope);
-        var sb     = new StringBuilder(args.Json ? "" : "#published\tuid\tcategory\tpriority\tpublisher\tlang\tcontent\twords\ttitle\turl\n");
-        var rows   = 0;
-        var more   = 0;
+        var sb = new StringBuilder(args.Json ? "" : "#published\tuid\tcategory\tpriority\tpublisher\tlang\tcontent\twords\ttitle\turl\n");
+        var rows = 0;
+        var more = 0;
 
         foreach (var node in Articles(call.Scope, args.From, args.To))
         {
@@ -372,17 +372,17 @@ public class AviationNewsDesk : ISandbox
                 sb.AppendLine(JsonSerializer.Serialize(new
                 {
                     published = node.Timestamp.ToDateTimeOffset().ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture),
-                    uid       = node.UID.ToString(),
-                    category  = feed?.Category,
-                    priority  = feed?.Priority,
+                    uid = node.UID.ToString(),
+                    category = feed?.Category,
+                    priority = feed?.Priority,
                     publisher = feed?.Publisher,
-                    feed      = feed?.Name,
-                    lang      = node.GetString(N.Article.Language),
-                    content   = node.GetString(N.Article.ContentSource),
-                    words     = node.GetInt(N.Article.WordCount),
-                    title     = node.GetString(N.Article.Title),
-                    url       = node.GetString(N.Article.Url),
-                    excerpt   = node.GetString(N.Article.Excerpt),
+                    feed = feed?.Name,
+                    lang = node.GetString(N.Article.Language),
+                    content = node.GetString(N.Article.ContentSource),
+                    words = node.GetInt(N.Article.WordCount),
+                    title = node.GetString(N.Article.Title),
+                    url = node.GetString(N.Article.Url),
+                    excerpt = node.GetString(N.Article.Excerpt),
                 }));
             }
             else
@@ -403,24 +403,24 @@ public class AviationNewsDesk : ISandbox
 
         if (args.Error is not null) return call.Fail(args.Error);
 
-        var lookup     = FeedLookup.Build(call.Scope);
+        var lookup = FeedLookup.Build(call.Scope);
         var byCategory = new Dictionary<string, int>();
         var byPriority = new Dictionary<string, int>();
         var byPublisher = new Dictionary<string, int>();
-        var byDay      = new SortedDictionary<string, int>();
-        var byContent  = new Dictionary<string, int>();
-        var feedsSeen  = new HashSet<UID128>();
-        var total      = 0;
+        var byDay = new SortedDictionary<string, int>();
+        var byContent = new Dictionary<string, int>();
+        var feedsSeen = new HashSet<UID128>();
+        var total = 0;
 
         foreach (var node in Articles(call.Scope, args.From, args.To))
         {
             var feed = lookup.PrimaryFeedOf(call.Scope, node.UID);
             total++;
 
-            Bump(byCategory,  feed?.Category  ?? "(none)");
-            Bump(byPriority,  feed?.Priority  ?? "(none)");
+            Bump(byCategory, feed?.Category ?? "(none)");
+            Bump(byPriority, feed?.Priority ?? "(none)");
             Bump(byPublisher, feed?.Publisher ?? "(none)");
-            Bump(byContent,   node.GetString(N.Article.ContentSource));
+            Bump(byContent, node.GetString(N.Article.ContentSource));
             byDay[node.Timestamp.ToDateTimeOffset().ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)] = byDay.GetValueOrDefault(node.Timestamp.ToDateTimeOffset().ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)) + 1;
 
             foreach (var f in call.Scope.Q().StartAt(node.UID).Out(N.Feed.Type, E.AppearedIn).AsUIDEnumerable()) feedsSeen.Add(f);
@@ -433,20 +433,20 @@ public class AviationNewsDesk : ISandbox
         sb.AppendLine($"feeds_with_articles\t{feedsSeen.Count}\tof {lookup.Feeds.Count} monitored");
         sb.AppendLine($"publishers_with_articles\t{feedsSeen.Where(lookup.Feeds.ContainsKey).Select(f => lookup.Feeds[f].Publisher).Distinct().Count()}");
 
-        Section(sb, "by_category",  byCategory);
-        Section(sb, "by_priority",  byPriority);
+        Section(sb, "by_category", byCategory);
+        Section(sb, "by_priority", byPriority);
         Section(sb, "by_publisher", byPublisher, 15);
-        Section(sb, "by_content",   byContent);
+        Section(sb, "by_content", byContent);
 
         sb.AppendLine().AppendLine("## by_day");
         foreach (var (day, n) in byDay) sb.AppendLine($"{day}\t{n}");
 
         var failing = lookup.Feeds.Values.Where(f => f.LastStatus != "OK" && f.LastStatus != "Empty").OrderBy(f => f.Rank).ToList();
-        var silent  = lookup.Feeds.Values.Where(f => f.Priority == "Core" && !feedsSeen.Contains(f.UID)).OrderBy(f => f.Name).ToList();
+        var silent = lookup.Feeds.Values.Where(f => f.Priority == "Core" && !feedsSeen.Contains(f.UID)).OrderBy(f => f.Name).ToList();
 
         sb.AppendLine().AppendLine($"## feed_health\nfailing_on_last_fetch\t{failing.Count}\ncore_feeds_without_articles\t{silent.Count}");
         foreach (var f in failing.Take(20)) sb.AppendLine($"failing\t{f.Name}\t{f.LastStatus}");
-        foreach (var f in silent.Take(20))  sb.AppendLine($"silent\t{f.Name}\t{f.Category}");
+        foreach (var f in silent.Take(20)) sb.AppendLine($"silent\t{f.Name}\t{f.Category}");
 
         return sb.ToString();
     }
@@ -503,16 +503,22 @@ public class AviationNewsDesk : ISandbox
         //The artifact is named from the page's <title> when it is published, so the report's own title
         //is written there rather than left to the script that sets it when the page runs.
         var title = System.Net.WebUtility.HtmlEncode(root.GetProperty("title").GetString() + (call.Arguments[0] == "deck" ? " (deck)" : ""));
-        var html  = Regex.Replace(template, "<title>[^<]*</title>", "<title>" + title.Replace("$", "$$") + "</title>")
+        var html = Regex.Replace(template, "<title>[^<]*</title>", "<title>" + title.Replace("$", "$$") + "</title>")
                          .Replace("/*REPORT_DATA*/", data);
-        var path = "/artifacts/" + name + ".html";
+        //An agent the conversation delegated to may write only in its own directory under /agents and
+        //cannot publish, so its render lands there and the conversation copies it into /artifacts.
+        var delegated = call.WorkingDirectory.StartsWith("/agents/", StringComparison.Ordinal);
+        var path = (delegated ? call.WorkingDirectory.TrimEnd('/') : "/artifacts") + "/" + name + ".html";
 
         await call.Files.WriteTextAsync(path, html, call.CancellationToken);
 
         var sections = root.GetProperty("sections").GetArrayLength();
-        var items    = root.GetProperty("sections").EnumerateArray().Sum(s => s.TryGetProperty("items", out var i) ? i.GetArrayLength() : 0);
+        var items = root.GetProperty("sections").EnumerateArray().Sum(s => s.TryGetProperty("items", out var i) ? i.GetArrayLength() : 0);
+        var next = delegated
+            ? $"this run cannot publish: return {path} - the conversation copies it to /artifacts and publishes it"
+            : $"publish {name}.html";
 
-        return $"wrote {path} ({(call.Arguments[0] == "deck" ? "PowerPoint deck page" : "HTML report")}, {sections} sections, {items} items, {html.Length / 1024} KB)\nnext: publish {name}.html";
+        return $"wrote {path} ({(call.Arguments[0] == "deck" ? "PowerPoint deck page" : "HTML report")}, {sections} sections, {items} items, {html.Length / 1024} KB)\nnext: {next}";
     }
 
     private static List<string> Validate(JsonElement root)
@@ -524,7 +530,7 @@ public class AviationNewsDesk : ISandbox
         if (root.ValueKind != JsonValueKind.Object) { problems.Add("the top level must be an object"); return problems; }
 
         if (Str(root, "kind") is not ("daily" or "weekly")) problems.Add("\"kind\" must be \"daily\" or \"weekly\"");
-        if (string.IsNullOrWhiteSpace(Str(root, "title")))  problems.Add("\"title\" is required");
+        if (string.IsNullOrWhiteSpace(Str(root, "title"))) problems.Add("\"title\" is required");
         if (string.IsNullOrWhiteSpace(Str(root, "headline"))) problems.Add("\"headline\" is required - one sentence, the top line of the period");
 
         if (!root.TryGetProperty("period", out var period) || string.IsNullOrWhiteSpace(Str(period, "from")) || string.IsNullOrWhiteSpace(Str(period, "label")))
@@ -560,7 +566,7 @@ public class AviationNewsDesk : ISandbox
                 var where = $"section {s} item {i}";
 
                 if (string.IsNullOrWhiteSpace(Str(item, "headline"))) problems.Add($"{where} has no \"headline\"");
-                if (string.IsNullOrWhiteSpace(Str(item, "so_what")))  problems.Add($"{where} has no \"so_what\" - say why it matters, not what happened");
+                if (string.IsNullOrWhiteSpace(Str(item, "so_what"))) problems.Add($"{where} has no \"so_what\" - say why it matters, not what happened");
                 if (Str(item, "signal") is { } sig && sig is not ("positive" or "negative" or "watch" or "neutral")) problems.Add($"{where}: \"signal\" must be positive, negative, watch or neutral");
 
                 if (!item.TryGetProperty("sources", out var sources) || sources.ValueKind != JsonValueKind.Array || sources.GetArrayLength() == 0)
@@ -593,19 +599,19 @@ public class AviationNewsDesk : ISandbox
     /// <summary>One feed as the files describe it, resolved once per script rather than once per article.</summary>
     private sealed class FeedInfo
     {
-        public UID128 UID        { get; init; }
-        public string Name       { get; init; }
-        public string Url        { get; init; }
-        public string Slug       { get; init; }
-        public string Category   { get; init; }
-        public string Priority   { get; init; }
-        public int    Rank       { get; init; }
+        public UID128 UID { get; init; }
+        public string Name { get; init; }
+        public string Url { get; init; }
+        public string Slug { get; init; }
+        public string Category { get; init; }
+        public string Priority { get; init; }
+        public int Rank { get; init; }
         public string SourceType { get; init; }
-        public string Publisher  { get; init; }
-        public string Language   { get; init; }
-        public string Access     { get; init; }
+        public string Publisher { get; init; }
+        public string Language { get; init; }
+        public string Access { get; init; }
         public string LastStatus { get; init; }
-        public int    LastItems  { get; init; }
+        public int LastItems { get; init; }
         public string LastItemAt { get; init; }
     }
 
@@ -616,7 +622,7 @@ public class AviationNewsDesk : ISandbox
         public static FeedLookup Build(ToolScope scope)
         {
             var lookup = new FeedLookup();
-            var slugs  = new HashSet<string>();
+            var slugs = new HashSet<string>();
 
             foreach (var feed in scope.Q().StartAt(N.Feed.Type).AsEnumerable())
             {
@@ -624,8 +630,8 @@ public class AviationNewsDesk : ISandbox
                     scope.Q().StartAt(feed.UID).Out(type, edge).AsEnumerable().Select(n => n.GetString(field)).FirstOrDefault() ?? "";
 
                 var priority = scope.Q().StartAt(feed.UID).Out(N.Priority.Type, E.FeedHasPriority).AsEnumerable().FirstOrDefault();
-                var name     = feed.GetString(N.Feed.Name);
-                var slug     = Slug(name);
+                var name = feed.GetString(N.Feed.Name);
+                var slug = Slug(name);
 
                 while (!slugs.Add(slug)) slug += "-x";
 
@@ -633,19 +639,19 @@ public class AviationNewsDesk : ISandbox
 
                 lookup.Feeds[feed.UID] = new FeedInfo
                 {
-                    UID        = feed.UID,
-                    Name       = name,
-                    Url        = feed.GetString(N.Feed.FeedUrl),
-                    Slug       = slug,
-                    Category   = One(N.FeedCategory.Type, E.FeedInCategory, N.FeedCategory.Name),
-                    Priority   = priority?.GetString(N.Priority.Name) ?? "",
-                    Rank       = priority?.GetInt(N.Priority.Rank) ?? 9,
+                    UID = feed.UID,
+                    Name = name,
+                    Url = feed.GetString(N.Feed.FeedUrl),
+                    Slug = slug,
+                    Category = One(N.FeedCategory.Type, E.FeedInCategory, N.FeedCategory.Name),
+                    Priority = priority?.GetString(N.Priority.Name) ?? "",
+                    Rank = priority?.GetInt(N.Priority.Rank) ?? 9,
                     SourceType = One(N.SourceType.Type, E.FeedOfSourceType, N.SourceType.Name),
-                    Publisher  = One(N.Publisher.Type, E.PublishedBy, N.Publisher.Name),
-                    Language   = feed.GetString(N.Feed.ExpectedLanguage),
-                    Access     = feed.GetString(N.Feed.AccessNote),
+                    Publisher = One(N.Publisher.Type, E.PublishedBy, N.Publisher.Name),
+                    Language = feed.GetString(N.Feed.ExpectedLanguage),
+                    Access = feed.GetString(N.Feed.AccessNote),
                     LastStatus = feed.GetString(N.Feed.LastFetchStatus),
-                    LastItems  = feed.GetInt(N.Feed.LastItemCount),
+                    LastItems = feed.GetInt(N.Feed.LastItemCount),
                     LastItemAt = lastItem.Year > 2000 ? lastItem.ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture) : "",
                 };
             }
@@ -669,18 +675,18 @@ public class AviationNewsDesk : ISandbox
     /// <summary>The filters `news` and `stats` share.</summary>
     private sealed class Options
     {
-        public DateTimeOffset From      { get; private set; }
-        public DateTimeOffset To        { get; private set; } = DateTimeOffset.UtcNow.AddHours(1);
-        public string         Category  { get; private set; }
-        public string         Priority  { get; private set; }
-        public string         Publisher { get; private set; }
-        public string         Feed      { get; private set; }
-        public string         Lang      { get; private set; }
-        public string         Grep      { get; private set; }
-        public string         Content   { get; private set; }
-        public int            Limit     { get; private set; } = 200;
-        public bool           Json      { get; private set; }
-        public string         Error     { get; private set; }
+        public DateTimeOffset From { get; private set; }
+        public DateTimeOffset To { get; private set; } = DateTimeOffset.UtcNow.AddHours(1);
+        public string Category { get; private set; }
+        public string Priority { get; private set; }
+        public string Publisher { get; private set; }
+        public string Feed { get; private set; }
+        public string Lang { get; private set; }
+        public string Grep { get; private set; }
+        public string Content { get; private set; }
+        public int Limit { get; private set; } = 200;
+        public bool Json { get; private set; }
+        public string Error { get; private set; }
 
         public static Options Parse(IReadOnlyList<string> argv)
         {
@@ -692,18 +698,18 @@ public class AviationNewsDesk : ISandbox
 
                 switch (argv[i])
                 {
-                    case "--since":     o.From      = ParseWhen(Next(), o, isEnd: false); break;
-                    case "--until":     o.To        = ParseWhen(Next(), o, isEnd: true);  break;
-                    case "--category":  o.Category  = Next(); break;
-                    case "--priority":  o.Priority  = Next(); break;
+                    case "--since": o.From = ParseWhen(Next(), o, isEnd: false); break;
+                    case "--until": o.To = ParseWhen(Next(), o, isEnd: true); break;
+                    case "--category": o.Category = Next(); break;
+                    case "--priority": o.Priority = Next(); break;
                     case "--publisher": o.Publisher = Next(); break;
-                    case "--feed":      o.Feed      = Next(); break;
-                    case "--lang":      o.Lang      = Next(); break;
-                    case "--grep":      o.Grep      = Next(); break;
-                    case "--content":   o.Content   = Next(); break;
-                    case "--json":      o.Json      = true;   break;
-                    case "--limit":     o.Limit     = int.TryParse(Next(), out var n) ? Math.Clamp(n, 1, MAX_NEWS_ROWS) : 200; break;
-                    default:            o.Error     = $"unknown option '{argv[i]}' - see `help news`"; break;
+                    case "--feed": o.Feed = Next(); break;
+                    case "--lang": o.Lang = Next(); break;
+                    case "--grep": o.Grep = Next(); break;
+                    case "--content": o.Content = Next(); break;
+                    case "--json": o.Json = true; break;
+                    case "--limit": o.Limit = int.TryParse(Next(), out var n) ? Math.Clamp(n, 1, MAX_NEWS_ROWS) : 200; break;
+                    default: o.Error = $"unknown option '{argv[i]}' - see `help news`"; break;
                 }
             }
 
@@ -1414,3 +1420,4 @@ without a source URL, and says which.
 }
 
 return new AviationNewsDesk();
+
