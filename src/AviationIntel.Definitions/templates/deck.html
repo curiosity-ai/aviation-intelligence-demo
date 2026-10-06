@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aviation Market Deck</title>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs/dist/pptxgen.bundle.js"></script>
+<style>
+  :root { --bg: #f4f3ef; --fg: #142030; --muted: #5b6573; --line: #d9d5cb; --accent: #0e4c7a; --on-accent: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #10161e; --fg: #e6ebf1; --muted: #98a3b1; --line: #28313d; --accent: #6cb4e8; --on-accent: #0b1622; }
+  }
+  body { margin: 0; padding: 32px 16px; background: var(--bg); color: var(--fg);
+         font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.5; }
+  main { max-width: 680px; margin: 0 auto; display: grid; gap: 20px; }
+  .kicker { margin: 0; font: 600 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  h1 { margin: 0; font-size: 32px; line-height: 1.15; text-wrap: balance; }
+  p { margin: 0; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  button { font: 600 15px/1 system-ui, sans-serif; padding: 12px 18px; border-radius: 8px; border: 0;
+           background: var(--accent); color: var(--on-accent); cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  button:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+  #status { color: var(--muted); font-size: 14px; }
+  ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); counter-reset: s; }
+  li { counter-increment: s; display: grid; grid-template-columns: 2.5em 1fr; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  li::before { content: counter(s, decimal-leading-zero); color: var(--muted); font: 13px ui-monospace, Menlo, monospace; padding-top: 2px; }
+  .note { font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker" id="kicker">PowerPoint deck &middot; 16:9</p>
+  <h1 id="title">Aviation Market Deck</h1>
+  <p id="headline"></p>
+  <div class="actions">
+    <button id="download" type="button" disabled>Download .pptx</button>
+    <span id="status" role="status">Building the deck&hellip;</span>
+  </div>
+  <ol id="slides"></ol>
+  <p class="note">Native PowerPoint text, shapes, charts and tables - every element is editable. Set in Segoe UI with Arial as fallback.</p>
+</main>
+
+<!-- The deck's content. render-report replaces the marker with the report JSON - the same JSON the
+     HTML report template reads, so one data file makes both. -->
+<script id="report-data" type="application/json">/*REPORT_DATA*/</script>
+
+<script>
+  // ── Flight Deck design system ──────────────────────────────────────────────
+  // 13.333 x 7.5 in. Navy ground for title and divider slides, warm paper for content slides,
+  // one accent, signal colours only on the signal bar of an item.
+  const T = {
+    navy: '0B2236', paper: 'F7F6F2', ink: '17202B', muted: '5D6673', line: 'DCD8CE', accent: '1F7AB8', accentSoft: 'DCEAF5',
+    pos: '1D7A46', neg: 'B3361F', watch: 'B07400', neutral: '7A8491',
+    head: 'Segoe UI', body: 'Segoe UI', mono: 'Consolas',
+  };
+  const SIGNAL = { positive: [T.pos, 'POSITIVE'], negative: [T.neg, 'NEGATIVE'], watch: [T.watch, 'WATCH'], neutral: [T.neutral, 'CONTEXT'] };
+
+  function clip(s, n) { s = String(s == null ? '' : s); return s.length <= n ? s : s.slice(0, n - 1).trimEnd() + '…'; }
+
+  function frame(pptx, slide, title, kicker, page) {
+    slide.background = { color: T.paper };
+    slide.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: 13.333, h: 0.12, fill: { color: T.accent }, line: { color: T.accent } });
+    if (kicker) slide.addText(kicker.toUpperCase(), { x: 0.6, y: 0.38, w: 12, h: 0.3, margin: 0, fontFace: T.mono, fontSize: 11, color: T.accent, bold: true, charSpacing: 2 });
+    slide.addText(clip(title, 90), { x: 0.6, y: 0.68, w: 12.1, h: 0.75, margin: 0, fontFace: T.head, fontSize: 28, bold: true, color: T.ink, valign: 'top' });
+    slide.addShape(pptx.ShapeType.line, { x: 0.6, y: 6.92, w: 12.13, h: 0, line: { color: T.line, width: 0.75 } });
+    slide.addText('Aviation Market Intelligence', { x: 0.6, y: 6.98, w: 6, h: 0.3, margin: 0, fontFace: T.body, fontSize: 10, color: T.muted });
+    slide.addText(String(page), { x: 11.73, y: 6.98, w: 1, h: 0.3, margin: 0, fontFace: T.mono, fontSize: 10, color: T.muted, align: 'right' });
+  }
+
+  window.buildDeck = async function (data) {
+    const pptx = new PptxGenJS();
+    pptx.layout = 'LAYOUT_WIDE';
+    pptx.title = data.title || 'Aviation market brief';
+    pptx.company = 'Aviation Market Intelligence';
+    const kind = data.kind === 'weekly' ? 'Weekly market report' : 'Daily market brief';
+    const period = data.period && data.period.label ? data.period.label : '';
+    const titles = [];
+    let page = 1;
+
+    // 1 ── title
+    {
+      const s = pptx.addSlide();
+      s.background = { color: T.navy };
+      s.addShape(pptx.ShapeType.rect, { x: 0.6, y: 1.55, w: 1.2, h: 0.08, fill: { color: T.accent }, line: { color: T.accent } });
+      s.addText((kind + (period ? ' · ' + period : '')).toUpperCase(), { x: 0.6, y: 1.8, w: 12, h: 0.4, margin: 0, fontFace: T.mono, fontSize: 14, color: '9CC7E6', bold: true, charSpacing: 2 });
+      s.addText(clip(data.title || kind, 80), { x: 0.6, y: 2.3, w: 11.5, h: 1.6, margin: 0, fontFace: T.head, fontSize: 44, bold: true, color: 'FFFFFF', valign: 'top' });
+      if (data.headline) s.addText(clip(data.headline, 220), { x: 0.6, y: 4.1, w: 10.8, h: 1.3, margin: 0, fontFace: T.body, fontSize: 18, color: 'D5E2EE', valign: 'top' });
+      s.addText(clip([data.audience, data.generatedAt ? 'Generated ' + data.generatedAt : null].filter(Boolean).join(' · '), 120),
+                { x: 0.6, y: 6.6, w: 12, h: 0.35, margin: 0, fontFace: T.body, fontSize: 11, color: '8FA6BC' });
+      titles.push(data.title || kind);
+    }
+
+    // 2 ── summary + KPIs
+    if ((data.summary && data.summary.length) || (data.metrics && data.metrics.length)) {
+      const s = pptx.addSlide(); page++;
+      const title = data.kind === 'weekly' ? 'The week in brief' : 'What matters today';
+      frame(pptx, s, title, kind, page); titles.push(title);
+      const bullets = (data.summary || []).slice(0, 5).map(b => ({ text: clip(b, 230), options: { bullet: { indent: 18 }, paraSpaceAfter: 10 } }));
+      if (bullets.length) s.addText(bullets, { x: 0.6, y: 1.65, w: 7.6, h: 5.0, margin: 0, fontFace: T.body, fontSize: 15, color: T.ink, valign: 'top' });
+      (data.metrics || []).slice(0, 4).forEach((m, i) => {
+        const y = 1.65 + i * 1.27;
+        s.addShape(pptx.ShapeType.rect, { x: 8.75, y, w: 3.98, h: 1.1, fill: { color: 'FFFFFF' }, line: { color: T.line, width: 0.75 } });
+        s.addText(clip(m.value, 12), { x: 8.95, y: y + 0.1, w: 3.6, h: 0.5, margin: 0, fontFace: T.head, fontSize: 24, bold: true, color: T.accent });
+        s.addText(clip(m.label + (m.note ? ' · ' + m.note : ''), 60), { x: 8.95, y: y + 0.62, w: 3.6, h: 0.38, margin: 0, fontFace: T.body, fontSize: 11, color: T.muted });
+      });
+    }
+
+    // 3 ── activity charts (native, editable)
+    const charts = data.charts || {};
+    const left = (charts.byCategory || []).slice(0, 10);
+    const right = (data.kind === 'weekly' ? charts.byDay : charts.byPublisher) || [];
+    if (left.length || right.length) {
+      const s = pptx.addSlide(); page++;
+      const title = 'Where the news came from';
+      frame(pptx, s, title, 'Coverage', page); titles.push(title);
+      const opts = { catAxisLabelFontFace: T.body, catAxisLabelFontSize: 10, valAxisLabelFontSize: 9, valAxisLabelColor: T.muted, catAxisLabelColor: T.ink,
+                     showValue: true, dataLabelFontSize: 9, dataLabelColor: T.ink, valGridLine: { color: T.line, size: 0.5 }, showLegend: false };
+      if (left.length) {
+        s.addText('Articles by category', { x: 0.6, y: 1.55, w: 6, h: 0.35, margin: 0, fontFace: T.body, fontSize: 13, bold: true, color: T.ink });
+        s.addChart(pptx.ChartType.bar, [{ name: 'Articles', labels: left.map(r => clip(r.label, 34)).reverse(), values: left.map(r => Number(r.value) || 0).reverse() }],
+                   Object.assign({ x: 0.6, y: 1.95, w: 6.1, h: 4.8, barDir: 'bar', chartColors: [T.accent] }, opts));
+      }
+      if (right.length) {
+        const label = data.kind === 'weekly' ? 'Articles per day' : 'Most active publishers';
+        s.addText(label, { x: 7.0, y: 1.55, w: 5.7, h: 0.35, margin: 0, fontFace: T.body, fontSize: 13, bold: true, color: T.ink });
+        //A horizontal bar chart draws its first category at the bottom, so it is reversed to read top-down.
+        const ordered = data.kind === 'weekly' ? right.slice(0, 10) : right.slice(0, 10).reverse();
+        s.addChart(pptx.ChartType.bar, [{ name: 'Articles', labels: ordered.map(r => clip(r.label, 24)), values: ordered.map(r => Number(r.value) || 0) }],
+                   Object.assign({ x: 7.0, y: 1.95, w: 5.73, h: 4.8, barDir: data.kind === 'weekly' ? 'col' : 'bar', chartColors: ['7FA7C4'] }, opts));
+      }
+    }
+
+    // 4..n ── one slide per section, up to four items each
+    (data.sections || []).forEach(sec => {
+      const items = (sec.items || []).slice(0, 4);
+      if (!items.length) return;
+      const s = pptx.addSlide(); page++;
+      frame(pptx, s, sec.title, 'Section', page); titles.push(sec.title);
+      if (sec.takeaway) s.addText(clip(sec.takeaway, 160), { x: 0.6, y: 1.42, w: 12.1, h: 0.45, margin: 0, fontFace: T.body, fontSize: 14, italic: true, color: T.muted });
+      //Cards keep their size whatever the count, so two items read as two cards rather than two empty boxes.
+      const top = 2.0, gap = 0.15, h = Math.min(1.55, (6.75 - top - gap * (items.length - 1)) / items.length);
+      items.forEach((it, i) => {
+        const y = top + i * (h + gap);
+        const [color, word] = SIGNAL[it.signal] || SIGNAL.neutral;
+        s.addShape(pptx.ShapeType.rect, { x: 0.6, y, w: 12.13, h, fill: { color: 'FFFFFF' }, line: { color: T.line, width: 0.75 } });
+        s.addShape(pptx.ShapeType.rect, { x: 0.6, y, w: 0.09, h, fill: { color }, line: { color } });
+        s.addText(word, { x: 11.2, y: y + 0.12, w: 1.4, h: 0.25, margin: 0, fontFace: T.mono, fontSize: 9, bold: true, color, align: 'right' });
+        s.addText(clip(it.headline, 95), { x: 0.85, y: y + 0.1, w: 10.3, h: 0.36, margin: 0, fontFace: T.head, fontSize: 15, bold: true, color: T.ink, valign: 'top' });
+        const body = [it.so_what, h >= 1.5 ? it.detail : null].filter(Boolean).join(' ');
+        if (body) s.addText(clip(body, h >= 1.5 ? 260 : 130), { x: 0.85, y: y + 0.5, w: 11.7, h: h - 0.9, margin: 0, fontFace: T.body, fontSize: 12, color: T.ink, valign: 'top' });
+        const src = (it.sources || [])[0];
+        if (src) {
+          const text = clip((src.publisher ? src.publisher + ': ' : '') + (src.title || src.url), 110) + (src.published ? ' · ' + src.published : '');
+          const run = /^https?:\/\//i.test(src.url || '') ? [{ text, options: { hyperlink: { url: src.url } } }] : [{ text }];
+          s.addText(run, { x: 0.85, y: y + h - 0.34, w: 11.7, h: 0.26, margin: 0, fontFace: T.body, fontSize: 10, color: T.muted });
+        }
+      });
+    });
+
+    // ── watchlist
+    if (data.watchlist && data.watchlist.length) {
+      const s = pptx.addSlide(); page++;
+      frame(pptx, s, 'Watchlist', 'What to follow next', page); titles.push('Watchlist');
+      const head = ['What', 'Why it matters', 'Next'].map(t => ({ text: t, options: { bold: true, color: 'FFFFFF', fill: { color: T.navy } } }));
+      const rows = data.watchlist.slice(0, 8).map(w => [clip(w.item, 60), clip(w.why, 140), clip(w.next || '—', 40)]);
+      s.addTable([head, ...rows], { x: 0.6, y: 1.65, w: 12.13, colW: [3.4, 6.53, 2.2], fontFace: T.body, fontSize: 12, color: T.ink,
+                                    border: { type: 'solid', pt: 0.5, color: T.line }, fill: { color: 'FFFFFF' }, valign: 'middle', margin: 0.08 });
+    }
+
+    // ── sources appendix
+    const all = [];
+    const seen = new Set();
+    (data.sections || []).forEach(sec => (sec.items || []).forEach(it => (it.sources || []).forEach(src => {
+      const key = src.url || src.title;
+      if (key && !seen.has(key)) { seen.add(key); all.push(src); }
+    })));
+    if (all.length) {
+      const s = pptx.addSlide(); page++;
+      frame(pptx, s, 'Sources', 'Appendix', page); titles.push('Sources');
+      const runs = all.slice(0, 22).map(src => ({
+        text: clip((src.publisher ? src.publisher + ' — ' : '') + (src.title || src.url), 120) + (src.published ? '  (' + src.published + ')' : ''),
+        options: Object.assign({ breakLine: true }, /^https?:\/\//i.test(src.url || '') ? { hyperlink: { url: src.url } } : {}),
+      }));
+      s.addText(runs, { x: 0.6, y: 1.6, w: 12.1, h: 5.1, margin: 0, fontFace: T.body, fontSize: 12, color: T.ink, valign: 'top', paraSpaceAfter: 4 });
+      if (all.length > 22) s.addText('+ ' + (all.length - 22) + ' more in the HTML report', { x: 0.6, y: 6.6, w: 6, h: 0.25, margin: 0, fontFace: T.body, fontSize: 9, color: T.muted });
+    }
+
+    return { pptx, titles };
+  };
+</script>
+<script>
+  const button = document.getElementById('download');
+  const status = document.getElementById('status');
+  let deckFile = null;
+  let fileName = 'aviation-market-brief.pptx';
+
+  // Built once when the page opens: a mistake in the deck shows up here, not on the click, and the
+  // click only has to hand over a file that already exists.
+  (async () => {
+    try {
+      const data = JSON.parse(document.getElementById('report-data').textContent);
+      const kind = data.kind === 'weekly' ? 'Weekly market report' : 'Daily market brief';
+      document.title = data.title || kind;
+      document.getElementById('kicker').textContent = 'PowerPoint deck · 16:9 · ' + kind + (data.period && data.period.label ? ' · ' + data.period.label : '');
+      document.getElementById('title').textContent = data.title || kind;
+      document.getElementById('headline').textContent = data.headline || '';
+      fileName = (data.fileName || (data.title || kind)).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '.pptx';
+
+      const { pptx, titles } = await window.buildDeck(data);
+      const list = document.getElementById('slides');
+      titles.forEach(t => { const li = document.createElement('li'); li.textContent = t; list.appendChild(li); });
+
+      deckFile = await pptx.write({ outputType: 'blob' });
+      button.disabled = false;
+      status.textContent = 'Ready - ' + titles.length + ' slides, ' + Math.round(deckFile.size / 1024) + ' KB.';
+    } catch (err) {
+      status.textContent = 'The deck could not be built: ' + (err && err.message ? err.message : err);
+    }
+  })();
+
+  button.addEventListener('click', () => {
+    if (!deckFile) return;
+    const url = URL.createObjectURL(deckFile);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+  });
+</script>
+</body>
+</html>

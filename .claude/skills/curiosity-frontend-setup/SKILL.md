@@ -11,6 +11,14 @@ search, the graph, files, chat and admin for free, and you override the parts th
 
 ---
 
+> **Verified on `Curiosity.FrontEnd*` 26.10.6430 / Tesserae 2026.10.71964 / Transpose.Build.Target
+> 26.9.4870** (`src/AviationIntel.FrontEnd`): the settings type is now **`AppSettings`**
+> (`App.Initialize(Action<AppSettings>, Action)`), the sidebar hook is
+> **`AppSidebar.OnSidebarRebuild_AfterHeader`** with **`AppSidebar.Mode.Default`**, and `tps.json`
+> takes `"outputBy": "Module"` (no `outputFormatting`). The examples below still show the older
+> `App.DefaultSettings` / `App.Sidebar` names. A local server serves a custom front end from
+> `MSK_WWW_FOLDER=<project>/bin/Debug/netstandard2.0/tps`.
+
 ## 1. Project shape
 
 ```

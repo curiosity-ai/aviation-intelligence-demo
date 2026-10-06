@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aviation Market Brief</title>
+<style>
+  :root {
+    --bg: #f6f5f1; --surface: #ffffff; --fg: #17202b; --muted: #5d6673; --line: #dfdcd3;
+    --accent: #0e4c7a; --accent-soft: #e3edf5; --on-accent: #ffffff;
+    --pos: #1d7a46; --neg: #b3361f; --watch: #a36a00; --neutral: #5d6673;
+    --bar: #0e4c7a; --bar-2: #7fa7c4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #11161d; --surface: #171e27; --fg: #e8ecf1; --muted: #9aa5b3; --line: #29323e;
+      --accent: #6cb4e8; --accent-soft: #1b2a3a; --on-accent: #0b1622;
+      --pos: #5ccf8d; --neg: #ff8a73; --watch: #f2b84b; --neutral: #9aa5b3;
+      --bar: #6cb4e8; --bar-2: #35607f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 28px 16px 48px; background: var(--bg); color: var(--fg);
+         font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.5; }
+  main { max-width: 920px; margin: 0 auto; display: grid; gap: 28px; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  header { display: grid; gap: 8px; border-bottom: 3px solid var(--accent); padding-bottom: 18px; }
+  .kicker { margin: 0; font: 600 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  h1 { margin: 0; font-size: clamp(26px, 4vw, 36px); line-height: 1.15; text-wrap: balance; }
+  .headline { margin: 0; font-size: 18px; color: var(--fg); max-width: 70ch; }
+  .meta { margin: 0; font-size: 13px; color: var(--muted); }
+  h2 { margin: 0 0 12px; font-size: 20px; }
+  h3 { margin: 0; font-size: 16px; line-height: 1.35; }
+  p { margin: 0; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .tile { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .tile .value { font-size: 28px; font-weight: 700; line-height: 1.1; color: var(--accent); }
+  .tile .label { font-size: 13px; font-weight: 600; margin-top: 4px; }
+  .tile .note { font-size: 12px; color: var(--muted); }
+  .summary { background: var(--accent-soft); border-radius: 10px; padding: 18px 20px; }
+  .summary ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+  .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .chart { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  .chart h3 { font-size: 14px; margin-bottom: 10px; }
+  .chart svg { width: 100%; height: auto; display: block; }
+  .chart text { fill: var(--fg); font-size: 11px; font-family: system-ui, sans-serif; }
+  .chart .axis { fill: var(--muted); }
+  section.topic { display: grid; gap: 12px; }
+  .topic-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px;
+                border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+  .topic-head h2 { margin: 0; }
+  .takeaway { color: var(--muted); font-size: 14px; }
+  .items { display: grid; gap: 12px; }
+  .item { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--neutral);
+          border-radius: 8px; padding: 14px 16px; display: grid; gap: 8px; }
+  .item.positive { border-left-color: var(--pos); } .item.negative { border-left-color: var(--neg); }
+  .item.watch { border-left-color: var(--watch); }
+  .item-top { display: flex; gap: 10px; align-items: flex-start; justify-content: space-between; }
+  .chip { flex: none; font: 600 11px/1 ui-monospace, Menlo, monospace; text-transform: uppercase; letter-spacing: .06em;
+          padding: 5px 8px; border-radius: 999px; border: 1px solid currentColor; color: var(--neutral); }
+  .chip.positive { color: var(--pos); } .chip.negative { color: var(--neg); } .chip.watch { color: var(--watch); }
+  .so-what { font-weight: 600; }
+  .detail { font-size: 14px; color: var(--muted); }
+  .sources { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--muted); }
+  .sources a { color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+  tr:last-child td { border-bottom: 0; }
+  footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; display: grid; gap: 6px; }
+  .empty { color: var(--muted); font-style: italic; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<main id="report" aria-live="polite"></main>
+
+<!-- The report's content. render-report replaces the marker below with the report JSON; nothing
+     else in this file needs to change for a new report. -->
+<script id="report-data" type="application/json">/*REPORT_DATA*/</script>
+
+<script>
+(function () {
+  const root = document.getElementById('report');
+  let data;
+
+  try {
+    data = JSON.parse(document.getElementById('report-data').textContent);
+  } catch (err) {
+    root.textContent = 'This report could not be read: ' + err.message;
+    return;
+  }
+
+  const SIGNALS = { positive: 'Positive', negative: 'Negative', watch: 'Watch', neutral: 'Context' };
+
+  function el(tag, cls, text) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined && text !== null) e.textContent = String(text);
+    return e;
+  }
+
+  function add(parent, ...children) { children.filter(Boolean).forEach(c => parent.appendChild(c)); return parent; }
+
+  function safeUrl(u) { return /^https?:\/\//i.test(u || '') ? u : null; }
+
+  //A horizontal bar chart drawn to one scale: bars, ticks and labels all come from max.
+  function barChart(title, rows, color) {
+    if (!rows || !rows.length) return null;
+    const box = el('div', 'chart');
+    add(box, el('h3', null, title));
+
+    const labelW = 150, barW = 180, rowH = 22, pad = 6, valueW = 30;
+    const w = labelW + barW + valueW, h = rows.length * rowH + pad * 2;
+    const max = Math.max(1, ...rows.map(r => Number(r.value) || 0));
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', title);
+
+    rows.forEach((r, i) => {
+      const y = pad + i * rowH;
+      const v = Number(r.value) || 0;
+      const label = document.createElementNS(ns, 'text');
+      label.setAttribute('x', labelW - 8); label.setAttribute('y', y + rowH / 2 + 4); label.setAttribute('text-anchor', 'end');
+      label.textContent = String(r.label).length > 26 ? String(r.label).slice(0, 25) + '…' : String(r.label);
+      const rect = document.createElementNS(ns, 'rect');
+      rect.setAttribute('x', labelW); rect.setAttribute('y', y + 4); rect.setAttribute('height', rowH - 8);
+      rect.setAttribute('width', Math.max(2, barW * v / max)); rect.setAttribute('rx', 3);
+      rect.setAttribute('fill', color);
+      const value = document.createElementNS(ns, 'text');
+      value.setAttribute('x', labelW + Math.max(2, barW * v / max) + 6); value.setAttribute('y', y + rowH / 2 + 4);
+      value.setAttribute('class', 'axis'); value.textContent = v;
+      svg.appendChild(label); svg.appendChild(rect); svg.appendChild(value);
+    });
+
+    box.appendChild(svg);
+    return box;
+  }
+
+  function sourcesList(sources) {
+    if (!sources || !sources.length) return null;
+    const ul = el('ul', 'sources');
+    sources.forEach(s => {
+      const li = el('li');
+      const url = safeUrl(s.url);
+      const name = (s.publisher ? s.publisher + ': ' : '') + (s.title || s.url || 'source');
+      if (url) { const a = el('a', null, name); a.href = url; a.rel = 'noopener'; li.appendChild(a); }
+      else li.textContent = name;
+      if (s.published) li.appendChild(document.createTextNode(' · ' + s.published));
+      if (s.note) li.appendChild(document.createTextNode(' · ' + s.note));
+      ul.appendChild(li);
+    });
+    return ul;
+  }
+
+  // ── header ──
+  const kind = data.kind === 'weekly' ? 'Weekly market report' : 'Daily market brief';
+  document.title = data.title || kind;
+  const header = el('header');
+  add(header,
+      el('p', 'kicker', kind + (data.period && data.period.label ? ' · ' + data.period.label : '')),
+      el('h1', null, data.title || kind),
+      data.headline ? el('p', 'headline', data.headline) : null,
+      el('p', 'meta', [data.audience, data.generatedAt ? 'Generated ' + data.generatedAt : null,
+                       data.period && data.period.from ? 'Coverage ' + data.period.from + (data.period.to && data.period.to !== data.period.from ? ' to ' + data.period.to : '') : null]
+                      .filter(Boolean).join(' · ')));
+  root.appendChild(header);
+
+  // ── metrics ──
+  if (data.metrics && data.metrics.length) {
+    const tiles = el('div', 'tiles');
+    data.metrics.forEach(m => {
+      const t = el('div', 'tile');
+      add(t, el('div', 'value mono', m.value), el('div', 'label', m.label), m.note ? el('div', 'note', m.note) : null);
+      tiles.appendChild(t);
+    });
+    root.appendChild(tiles);
+  }
+
+  // ── executive summary ──
+  if (data.summary && data.summary.length) {
+    const s = el('section', 'summary');
+    add(s, el('h2', null, data.kind === 'weekly' ? 'The week in brief' : 'What matters today'));
+    const ul = el('ul');
+    data.summary.forEach(b => ul.appendChild(el('li', null, b)));
+    s.appendChild(ul);
+    root.appendChild(s);
+  }
+
+  // ── charts ──
+  const charts = data.charts || {};
+  const chartBoxes = [barChart('Articles by category', charts.byCategory, 'var(--bar)'),
+                      barChart(data.kind === 'weekly' ? 'Articles per day' : 'Most active publishers', data.kind === 'weekly' ? charts.byDay : charts.byPublisher, 'var(--bar-2)')]
+                     .filter(Boolean);
+  if (chartBoxes.length) add(root, add(el('div', 'charts'), ...chartBoxes));
+
+  // ── topic sections ──
+  (data.sections || []).forEach(sec => {
+    const s = el('section', 'topic');
+    const head = el('div', 'topic-head');
+    add(head, el('h2', null, sec.title), sec.takeaway ? el('p', 'takeaway', sec.takeaway) : null);
+    s.appendChild(head);
+    const items = el('div', 'items');
+    (sec.items || []).forEach(it => {
+      const signal = SIGNALS[it.signal] ? it.signal : 'neutral';
+      const card = el('article', 'item ' + signal);
+      const top = el('div', 'item-top');
+      add(top, el('h3', null, it.headline), el('span', 'chip ' + signal, SIGNALS[signal]));
+      add(card, top,
+          it.so_what ? el('p', 'so-what', it.so_what) : null,
+          it.detail ? el('p', 'detail', it.detail) : null,
+          sourcesList(it.sources));
+      items.appendChild(card);
+    });
+    if (!(sec.items || []).length) items.appendChild(el('p', 'empty', 'Nothing material in this period.'));
+    s.appendChild(items);
+    root.appendChild(s);
+  });
+
+  // ── watchlist ──
+  if (data.watchlist && data.watchlist.length) {
+    const s = el('section', 'topic');
+    add(s, add(el('div', 'topic-head'), el('h2', null, 'Watchlist')));
+    const wrap = el('div', 'table-wrap');
+    const table = el('table');
+    const thead = el('thead');
+    add(thead, add(el('tr'), el('th', null, 'What'), el('th', null, 'Why it matters'), el('th', null, 'Next')));
+    const tbody = el('tbody');
+    data.watchlist.forEach(w => add(tbody, add(el('tr'), el('td', null, w.item), el('td', null, w.why), el('td', 'mono', w.next || '—'))));
+    add(table, thead, tbody);
+    add(s, add(wrap, table));
+    root.appendChild(s);
+  }
+
+  // ── coverage ──
+  const c = data.coverage || {};
+  const footer = el('footer');
+  add(footer,
+      el('p', null, 'Based on ' + (c.articles ?? '?') + ' articles from ' + (c.feeds ?? '?') + ' feeds and ' + (c.publishers ?? '?') + ' publishers'
+                    + (c.summaryOnly ? ', of which ' + c.summaryOnly + ' could be read from the feed summary only' : '') + '.'),
+      c.notes ? el('p', null, c.notes) : null,
+      el('p', null, 'Source text is quoted from public feeds and publisher pages; every claim links to its article. Figures are as published by the source and were not independently verified.'));
+  root.appendChild(footer);
+})();
+</script>
+</body>
+</html>

@@ -1,181 +1,129 @@
-# Curiosity application template
+# Aviation Market Intelligence
 
-Start a new Curiosity application here. The repository carries three things:
+A Curiosity application that monitors **248 real aviation & aerospace RSS feeds**, reads every new
+article in full where the publisher allows it, and turns a day or a week of news into a **daily
+brief** or a **weekly market report** - each published as an HTML page and a PowerPoint deck.
 
-| | |
+Read [`docs/use-case.md`](docs/use-case.md) for the design brief. The repository started from the
+Curiosity application template; its guide is in
+[`docs/curiosity-application-template.md`](docs/curiosity-application-template.md), and
+`sample-application/` is kept as the reference implementation.
+
+| | Where |
 | --- | --- |
-| [`CLAUDE.md`](CLAUDE.md) | The working agreement, with the bracketed sections to fill in. It is the file your agent reads first. |
-| [`.claude/skills/`](.claude/skills) | Fourteen skills — one per layer of a Curiosity application, nine of them with complete reference implementations. |
-| [`sample-application/`](sample-application/README.md) | A worked example built end to end against the skills: corpus, connector, workspace definitions, endpoints, AI layer and front end. |
+| Feed directory (real sources) | [`data/feeds/aviation-aerospace-rss-directory.csv`](data/feeds/aviation-aerospace-rss-directory.csv) |
+| Connector: RSS + Playwright + Readability | [`src/AviationIntel.Connector/`](src/AviationIntel.Connector) |
+| Workspace definitions (sandbox, agent, skill, assistant, endpoint, schemas) | [`src/AviationIntel.Definitions/`](src/AviationIntel.Definitions) |
+| Report templates (HTML report, PowerPoint deck) | [`src/AviationIntel.Definitions/templates/`](src/AviationIntel.Definitions/templates) |
+| Front end (Transpose + Tesserae) | [`src/AviationIntel.FrontEnd/`](src/AviationIntel.FrontEnd) |
+| Offline fixtures (synthetic) | [`tests/fixtures/`](tests/fixtures) |
+| Tools | [`tools/`](tools) |
 
-Nothing here is about any one industry. Everything here is about how you turn *a
-customer's corpus and a customer's decision* into a Curiosity workspace that answers it.
-Where a skill says *"in the reference implementation"*, it means `sample-application/`,
-and the path it names is real.
+## How it fits together
 
-## Getting started
+```mermaid
+flowchart LR
+    CSV[Feed directory CSV] --> C[Connector]
+    RSS[248 RSS / Atom feeds] --> C
+    C -- Chromium + Readability --> P[Article pages]
+    C -->|Feed, Publisher, Category,\nPriority, SourceType, Article, Tag| G[(Workspace graph)]
+    G --> E[aviation/dashboard endpoint] --> FE[Front end: news desk]
+    G --> S[Aviation News Desk sandbox]
+    S --> A[Analyst agent]
+    S --> AS[Aviation Market Intelligence assistant]
+    K[aviation-market-reports skill] --> AS
+    A --> AS
+    AS -- render-report + publish --> R[HTML brief + PowerPoint deck]
+    FE -- Daily brief / Weekly report --> AS
+```
 
-1. Read [`CLAUDE.md`](CLAUDE.md) and replace everything in `<ANGLE BRACKETS>`.
-2. Read [`curiosity-use-case-discovery`](.claude/skills/curiosity-use-case-discovery/SKILL.md)
-   and write `docs/use-case.md` from the answers.
-3. Read [`curiosity-solution-blueprint`](.claude/skills/curiosity-solution-blueprint/SKILL.md)
-   for the five deliverables, then
-   [`curiosity-toolchain-and-packages`](.claude/skills/curiosity-toolchain-and-packages/SKILL.md)
-   before creating any project.
-4. Work down the layers in the order §1 of `CLAUDE.md` gives, opening the skill for each
-   layer as you reach it and cross-checking against `sample-application/`.
+### 1. The connector
 
-Delete `sample-application/` once you no longer need it beside you — nothing outside it
-depends on it.
+`src/AviationIntel.Connector` is a .NET console app on `Curiosity.Library`:
 
----
+1. reads the directory CSV (248 feeds, deduplicated by URL);
+2. fetches every feed (HTTP first; through headless Chromium when a bot check answers the HTTP
+   client with a 403 or a challenge page) and parses RSS/Atom with `CodeHollow.FeedReader`;
+3. groups items across feeds by canonical URL (tracking parameters stripped), so a syndicated
+   release is **one** article with an edge per feed;
+4. consults the hash cache **before** loading any page - an unchanged item costs nothing;
+5. loads each new article in **Playwright/Chromium** (images, media and fonts blocked; one page
+   at a time per host, with a delay; up to N hosts in parallel) and extracts it with
+   **SmartReader** (Readability) from the rendered DOM - the same extractor the workspace's
+   `RssTask` uses, but over what a browser sees, which covers client-rendered newsrooms and
+   consent walls;
+6. chooses the body - page text, the feed's own full text, or the feed summary - and records
+   which (`ContentSource`) and why (`ExtractionNote`: paywall, 404, unreachable, too short);
+7. writes each `Feed` once with this run's fetch status, and each `Article` once with everything.
 
-## Who this is for
+```bash
+# Real run (schedule it, e.g. hourly)
+dotnet run --project src/AviationIntel.Connector -- --root . \
+    --endpoint https://<workspace> --token <library token>
 
-A developer with:
+# Useful options
+--dry-run                 map everything, write nothing
+--priority Core           only the Core feeds        --feed <text>   name/category/URL filter
+--since-days 7            item window (default 14)   --max-items 50  per feed
+--browser-concurrency 4   pages at once              --no-browser    feed text only
+--chromium <path>         an existing Chromium (or CHROMIUM_PATH); default: Playwright's own
+--reset-cache             forget what was ingested
+--emit-frontend-schema src/AviationIntel.FrontEnd/src/Schema/N.cs
+```
 
-- the **Curiosity product documentation**,
-- the **Tesserae** source (`curiosity-ai/tesserae`),
-- the `Curiosity.Library`, `Curiosity.FrontEnd*` and `Tesserae` NuGet packages,
-- an LLM coding agent,
-- and **no access to the `mosaik` source**.
+Install Playwright's browser once with `dotnet run --project src/AviationIntel.Connector -- --install-browser`,
+or point `--chromium` at an existing Chromium. The connector honours `HTTPS_PROXY` for both the
+HTTP client and the browser.
 
-That last point is why these skills exist and why they are shaped the way they are. The
-sample application was built with the product source open beside it, and every non-obvious
-API fact was verified against it. Those facts are written down here so the next project
-does not need it. **When a skill states a signature, a constraint or a failure mode, treat
-it as verified.** When you need something a skill does not cover, ask for it rather than
-guessing from a doc page — the published documentation lags the product.
+### 2. The workspace definitions
 
----
+Imported with `python3 tools/import_definitions.py --endpoint <url>` **after the first connector
+run**, because the code compiles against the `N`/`E` constants the workspace generates from the
+schema the connector registers. Every file is the workspace's own export, byte for byte.
 
-## The stack, in one paragraph
-
-A Curiosity application is **C# end to end**. The connector is an ordinary .NET console app on
-`Curiosity.Library`. The endpoints and the AI layer are C# *scripts* stored in the workspace.
-The front end is C# too — compiled to JavaScript by the **Transpose** compiler (a global dotnet
-tool, `tps`, that the build shells out to) and rendered with **Tesserae**, the C# UI component
-library whose source is public and is the contract for every component's real API. No
-TypeScript, no React.
-
-> **Before creating any project, update every NuGet package to the latest release** — in its own
-> commit, before the work. The Curiosity packages ship continuously and the published
-> documentation lags them. `curiosity-toolchain-and-packages` has the commands, the per-project
-> package lists, and what breaks when versions drift apart.
-
-## The skills
-
-Read `curiosity-use-case-discovery` first on a new engagement,
-`curiosity-solution-blueprint` immediately after, and `curiosity-toolchain-and-packages` before
-creating any project. The rest are reference, opened when you reach the layer they describe.
-
-Most skills carry an `examples/` folder of **complete, heavily commented reference
-implementations** — see [Reference implementations](#reference-implementations) below.
-
-### Getting started
-
-| Skill | What it covers |
+| Definition | What it is |
 | --- | --- |
-| [`curiosity-use-case-discovery`](.claude/skills/curiosity-use-case-discovery/SKILL.md) | **The interrogation.** The questions to put to the developer/customer before any code exists, in the order that makes the next answer cheaper, and the design brief they add up to. |
-| [`curiosity-solution-blueprint`](.claude/skills/curiosity-solution-blueprint/SKILL.md) | The five deliverables of a Curiosity application, the repository layout, the strict build order, and what must be true before each stage starts. |
-| [`curiosity-toolchain-and-packages`](.claude/skills/curiosity-toolchain-and-packages/SKILL.md) | The Transpose compiler, Tesserae, the SDK, the update-packages-first rule, and the NuGet package set for each kind of project. |
+| `code/chat-ai-tools/AVsandboX1111111111111.cs` | **Aviation News Desk** - an `ISandbox`: `/news` (lazy, by day: `README.md`, `index.tsv`, `days/<date>/<uid>.md`), `/feeds` (`directory.tsv` with fetch health, one file per feed), `/templates`, `/work`, `/artifacts`; commands `news`, `article`, `stats`, `render-report`, `search`, `consult`; graph `query` over the seven aviation types |
+| `code/skills/aviation-market-reports-*.md` | The editorial method for the daily brief and the weekly report, and the render/publish workflow |
+| `code/agents/aviation-market-intelligence-analyst-*.cs` | **Aviation Market Intelligence Analyst** - writes a report end to end |
+| `code/ai-assistants/aviation-market-intelligence-*.cs` | **Aviation Market Intelligence** - the sandbox, search, consult, the agent and the skill |
+| `code/endpoints/aviation/dashboard.cs` | The home page's live numbers, each with the UIDs it counted |
+| `config/schemas/` | The seven node schemas, the edges, and node styles |
 
-### Data & the graph
+### 3. The report templates
 
-| Skill | What it covers |
-| --- | --- |
-| [`curiosity-graph-modelling`](.claude/skills/curiosity-graph-modelling/SKILL.md) | The central decision: for each field, **property, node + edge, NER-linked, or nothing**. The rules that decide it, and what each choice costs and buys. |
-| [`curiosity-data-connector`](.claude/skills/curiosity-data-connector/SKILL.md) | The `Curiosity.Library` connector — handler-per-input-type, `[Node]`/`[Key]`/`[Property]`, `HashCache`, commit ordering, `AddOrUpdate` clobbering, users, attachments, deterministic derived state. |
-| [`curiosity-entity-linking-nlp`](.claude/skills/curiosity-entity-linking-nlp/SKILL.md) | Spotters, index-linking, NLP pipelines and text indexes — how `_Mentions` / `_AppearsIn` get created, and which fields deserve which. |
+`templates/report.html` and `templates/deck.html` both render from **one report JSON** whose
+contract is `templates/README.md`. The agent writes data, never HTML:
 
-### Back end
+```bash
+stats --since 1d                                  # numbers for metrics, charts, coverage
+news --since 1d --priority Core                   # scan
+article <uid> ...                                 # read what will be cited
+cat > /work/daily.json <<'EOF' ... EOF            # write the report
+render-report report /work/daily.json             # HTML brief  -> /artifacts
+render-report deck   /work/daily.json             # PowerPoint  -> /artifacts
+publish <name>.html                               # show it in the chat
+```
 
-| Skill | What it covers |
-| --- | --- |
-| [`curiosity-workspace-configuration`](.claude/skills/curiosity-workspace-configuration/SKILL.md) | The definitions export/import cycle, what each `config/` file controls, node visibility, search settings, and treating the whole workspace as version-controlled source. |
-| [`curiosity-code-endpoints`](.claude/skills/curiosity-code-endpoints/SKILL.md) | Server-side code endpoints — the file format, `AccessMode`, `ReadOnly`, the injected `N`/`E`/`Q()`, shared DTO libraries, and the UID-not-key discipline. |
-| [`curiosity-similarity-scenarios`](.claude/skills/curiosity-similarity-scenarios/SKILL.md) | The similarity engine — signals, weights, fusion, rules, negative signals, and how graph structure becomes a retrieval signal. |
-| [`curiosity-ai-tools-and-agents`](.claude/skills/curiosity-ai-tools-and-agents/SKILL.md) | AI tools, `consult` readers, agents, assistants and system prompts — what belongs at each layer, and the context rules that decide whether an answer is grounded. |
+`render-report` refuses a report with a missing headline, an item without a "so what", or an
+item without a source URL. The deck page builds a native `.pptx` (editable text, charts and
+tables) with the workspace's PptxGenJS and hands it over from a download button. A delegated
+agent run cannot publish, so its render lands in its own `/agents/...` directory and the
+assistant publishes it.
 
-### Front end
+Edit a template, preview it, then run `python3 tools/embed_templates.py` to splice it into the
+sandbox tool.
 
-| Skill | What it covers |
-| --- | --- |
-| [`curiosity-frontend-setup`](.claude/skills/curiosity-frontend-setup/SKILL.md) | The Transpose project, `App.Initialize`, generated `N`/`E`, routes, the sidebar, and the Transpose constraints that shape every DTO. |
-| [`curiosity-node-renderers`](.claude/skills/curiosity-node-renderers/SKILL.md) | `INodeRenderer` / `NodeRendererBase` — auto-discovery, the card, the footer, `LabelField`, tabs, the 360 view, and property-as-relationship rendering. |
-| [`curiosity-dashboards-and-lists`](.claude/skills/curiosity-dashboards-and-lists/SKILL.md) | Replacing the home view, metric tiles that open the list they counted, live-computed performance, work lists, and `SearchArea` as the universal list. |
-| [`curiosity-chat-experience`](.claude/skills/curiosity-chat-experience/SKILL.md) | Custom `ChatView`, pinned assistants and capability sets, and handing a question to an assistant with its evidence already attached. |
+### 4. The front end
 
-### Shipping
+`#/` is the news desk: **Daily brief** and **Weekly report** (open a chat on the assistant with the
+request), tiles for the last 24 hours / 7 days / feed health / summary-only articles - each opens
+exactly the articles it counted (`#/news?set=...`) - the week by category, articles per day, and
+the latest news. `#/feeds` is the directory, faceted by category, priority, source type and
+publisher. Every node type has a renderer.
 
-| Skill | What it covers |
-| --- | --- |
-| [`curiosity-delivery`](.claude/skills/curiosity-delivery/SKILL.md) | Build, ingest, import, verify, publish — the order that works, what breaks if you reorder it, and what to check before a demo. |
+## Running it locally against a live server
 
-### The working agreement
-
-[`CLAUDE.md`](CLAUDE.md) — the root file of this repository, and the one to fill in first.
-It encodes the working agreement, the build order and the non-negotiables the reference
-implementation learned the hard way.
-
----
-
-## Reference implementations
-
-Nine of the skills carry an `examples/` folder: complete, heavily commented templates for the
-layer they describe, written against **one small generic domain** so they read as a single
-application rather than nine fragments.
-
-That domain is deliberately boring: a **`Case`** (the unit of work) analysing a **`Change`**
-(its subject) against **`Manual`** records, over **`PartNumber`** and **`Category`** reference
-data, with shared **`Status`** / **`Classification`** / **`Keyword`** metadata and users who
-specialise in categories. Map your own nouns onto those five and every file transfers.
-
-| Layer | Where |
-| --- | --- |
-| Connector — csproj, `Program`, context, edges, a CSV handler, a JSON handler, metadata vocabularies, deterministic assignment, users, schema emitter | [`curiosity-data-connector/examples/`](.claude/skills/curiosity-data-connector/examples/) |
-| Endpoints — the shared DTO library, a read endpoint, a write endpoint | [`curiosity-code-endpoints/examples/`](.claude/skills/curiosity-code-endpoints/examples/) |
-| A full similarity scenario | [`curiosity-similarity-scenarios/examples/`](.claude/skills/curiosity-similarity-scenarios/examples/) |
-| AI layer — consult readers, a workload tool, an agent, an assistant prompt | [`curiosity-ai-tools-and-agents/examples/`](.claude/skills/curiosity-ai-tools-and-agents/examples/) |
-| Front end shell — csproj, `tps.json`, entry point, the `Api` layer | [`curiosity-frontend-setup/examples/`](.claude/skills/curiosity-frontend-setup/examples/) |
-| Renderers — the shared base, concrete renderers, label fields, property links, the 360 view | [`curiosity-node-renderers/examples/`](.claude/skills/curiosity-node-renderers/examples/) |
-| Dashboard — home view, work lists, the viewer | [`curiosity-dashboards-and-lists/examples/`](.claude/skills/curiosity-dashboards-and-lists/examples/) |
-| Chat — a custom `ChatView`, the ask-with-evidence handoff | [`curiosity-chat-experience/examples/`](.claude/skills/curiosity-chat-experience/examples/) |
-
-**They are templates, not a compiling solution.** A few referenced handlers and views are
-elided, the UIDs are placeholders, and the package versions need updating before use. Read them
-as the skill's prose made concrete — every non-obvious line carries the comment explaining why
-it is that way.
-
----
-
-## The five things the reference implementation got wrong first
-
-Read these before the skills; each one is a section in a skill, but they are the load-bearing
-lessons.
-
-1. **A string is not a relationship.** Property facets exist (string, enum, time) but filter
-   one node type only; anything more than one type carries — and anything a similarity signal
-   keys on — has to be a node on the other end of an edge. Half the schema work on the
-   sample application was promoting properties to nodes after the fact.
-   → `curiosity-graph-modelling`
-
-2. **`AddOrUpdate` writes the node's whole content.** A second pass that calls it with three
-   computed fields blanks everything the first pass wrote. Compute derived state *before*
-   the node is written, or use the partial-update overload.
-   → `curiosity-data-connector` §4
-
-3. **Identify things by UID across every boundary.** Endpoint requests, endpoint responses,
-   AI tool results, front-end state. A response of UIDs renders itself through the registered
-   renderers; a response of titles goes stale and forces the server to guess types.
-   → `curiosity-code-endpoints` §3
-
-4. **A node type with no renderer has no label and no icon**, and shows as a raw UID
-   wherever it is reachable. Every type — including three-line key-only metadata types —
-   needs one.
-   → `curiosity-node-renderers` §2
-
-5. **The connector must not create the links the application is supposed to discover.** If
-   the demo's claim is "we find impacts nobody catalogued", an edge written from the source
-   data for that same relationship makes the demo prove nothing.
-   → `curiosity-graph-modelling` §5
+See [`docs/running-locally.md`](docs/running-locally.md) - building Curiosity from source,
+ingesting (from the real feeds or the offline fixtures), importing the definitions, serving this
+front end, and exercising the sandbox and the agent without an LLM key.
