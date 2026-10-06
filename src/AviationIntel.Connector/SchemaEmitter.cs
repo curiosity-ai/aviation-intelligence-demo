@@ -30,6 +30,10 @@ internal static class SchemaEmitter
         ("_FileEntry", ["OriginalName", "ContentType", "Size"]),
     ];
 
+    /// <summary>Edges the workspace's entity linking writes. Not declared in <see cref="Edges"/>,
+    /// because the connector never writes them, but read by every surface that shows a mention.</summary>
+    private static readonly string[] GraphOwnedEdges = ["_Mentions", "_AppearsIn"];
+
     /// <summary>Types whose records are "documents" — drives the published-file tab and the
     /// default 360 type list, so a new record type joins both by existing.</summary>
     private static readonly string[] DocumentTypes = ["Article"];
@@ -76,6 +80,8 @@ internal static class SchemaEmitter
         // N.All360Types picks up a new record type without anyone editing a list by hand.
         sb.AppendLine($"        public static readonly string[] DocumentTypes = {{ {Quoted(DocumentTypes)} }};");
         sb.AppendLine($"        public static readonly string[] All360Types   = {{ {Quoted(NodeTypes().Select(t => t.Name))} }};");
+        // The vocabularies entity linking resolves mentions to - what "who and what is this about" means.
+        sb.AppendLine($"        public static readonly string[] EntityTypes   = {{ {Quoted(NodeTypes().Where(t => t.DeclaringType == typeof(Ingest.ReferenceIngest)).Select(t => t.Name))} }};");
         sb.AppendLine("    }");
         sb.AppendLine();
 
@@ -83,6 +89,8 @@ internal static class SchemaEmitter
         sb.AppendLine("    {");
         foreach (var field in typeof(Edges).GetFields().Where(f => f.IsLiteral))
             sb.AppendLine($"        public const string {field.Name} = \"{(string)field.GetRawConstantValue()!}\";");
+        foreach (var edge in GraphOwnedEdges)
+            sb.AppendLine($"        public const string {edge} = \"{edge}\";");
         sb.AppendLine("    }");
         sb.AppendLine("}");
 

@@ -41,4 +41,16 @@ public static class Edges
     // The publisher's own tags (<category> in RSS), normalised.
     public const string TaggedWith = nameof(TaggedWith);
     public const string TagOf      = nameof(TagOf);
+
+    // --- the reference vocabularies ---------------------------------------------------
+    // As Wikidata states them (manufacturer, powered by). They connect the entities to each
+    // other, never to an article: an article reaches them only through _Mentions.
+    public const string AircraftBuiltBy = nameof(AircraftBuiltBy);
+    public const string BuildsAircraft  = nameof(BuildsAircraft);
+
+    public const string EngineBuiltBy = nameof(EngineBuiltBy);
+    public const string BuildsEngine  = nameof(BuildsEngine);
+
+    public const string PoweredBy = nameof(PoweredBy);
+    public const string Powers    = nameof(Powers);
 }

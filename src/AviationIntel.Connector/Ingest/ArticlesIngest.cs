@@ -114,7 +114,16 @@ internal static class ArticlesIngest
         {
             var done = 0;
 
-            await Parallel.ForEachAsync(candidates, new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, ctx.Options.BrowserConcurrency * 4) }, async (c, ct) =>
+            //Round-robin across hosts. In URL order one publisher's fifty items sit together, every
+            //worker queues on that host's politeness gate, and the run goes one page at a time.
+            var interleaved = candidates.GroupBy(c => Urls.Host(c.Item.Url), StringComparer.OrdinalIgnoreCase)
+                                        .SelectMany(g => g.Select((c, i) => (Candidate: c, Turn: i)))
+                                        .OrderBy(x => x.Turn)
+                                        .ThenBy(x => x.Candidate.Item.Url, StringComparer.Ordinal)
+                                        .Select(x => x.Candidate)
+                                        .ToList();
+
+            await Parallel.ForEachAsync(interleaved, new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, ctx.Options.BrowserConcurrency * 4) }, async (c, ct) =>
             {
                 extracted[c.Item.Url] = await extractor.ExtractAsync(c.Item.Url, ct);
 

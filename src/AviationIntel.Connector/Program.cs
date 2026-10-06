@@ -26,6 +26,7 @@ using Microsoft.Extensions.Logging;
 //   --chromium <path>         Chromium executable (or CHROMIUM_PATH); default: Playwright's own
 //   --no-browser              do not load article pages; bodies come from the feed
 //   --reset-cache             forget which articles were already ingested
+//   --skip-reference          do not (re)write the reference vocabularies under data/reference
 //   --install-browser         download Playwright's Chromium and exit (once per machine)
 //
 // The connector writes only what the sources state: the directory's classification of each
@@ -118,6 +119,10 @@ try
         graph.SetAutoCommitCost(everyNodes: 5_000, everyEdges: 20_000);
     }
 
+    // The vocabularies first: an article that arrives before the entity it names still gets linked
+    // once the spotter is rebuilt, but there is no reason to make it wait.
+    if (!Flag("--skip-reference")) await Step("reference", () => ReferenceIngest.RunAsync(ctx));
+
     if (!options.NoBrowser) extractor = await ArticleExtractor.StartAsync(options);
 
     var rows = FeedDirectoryIngest.Load(ctx);
@@ -190,6 +195,10 @@ static async Task SyncSchemaAsync(Graph graph)
     await graph.CreateNodeSchemaAsync<FeedDirectoryIngest.Publisher>(overwrite: true);
     await graph.CreateNodeSchemaAsync<ArticlesIngest.Article>(overwrite: true);
     await graph.CreateNodeSchemaAsync<ArticlesIngest.Tag>(overwrite: true);
+    await graph.CreateNodeSchemaAsync<ReferenceIngest.Organisation>(overwrite: true);
+    await graph.CreateNodeSchemaAsync<ReferenceIngest.AircraftType>(overwrite: true);
+    await graph.CreateNodeSchemaAsync<ReferenceIngest.EngineType>(overwrite: true);
+    await graph.CreateNodeSchemaAsync<ReferenceIngest.Airport>(overwrite: true);
 
     await graph.CreateEdgeSchemaAsync(typeof(Edges));
 }
