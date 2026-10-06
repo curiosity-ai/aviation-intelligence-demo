@@ -104,6 +104,15 @@ edge catalogue with `CreateEdgeSchemaAsync(typeof(Edges))`.
 
 ---
 
+## 2.1 Field names the workspace refuses
+
+A node schema is refused at `CreateNodeSchemaAsync` - not at build time, not in `--dry-run` - when a
+field is named like a member of the workspace's own node API: `UID`, `Type`, `Key`, `Timestamp`,
+`Edges`, `Summary`, `Emit`, `Pinned`, the `Get*`/`Set*` accessors, and C# keywords
+(`SchemaNameValidation` in the product). The error is `Restricted field name used 'Summary'`.
+Verified on 26.10: an `Article.Summary` property passed every dry run and failed the first real
+run. Name it `Excerpt`, `Abstract`, `Lede`.
+
 ## 3. The handler contract
 
 Every `RunAsync` is the same four beats, in this order:
@@ -292,6 +301,33 @@ ctx.Graph.Link(file, Node.FromKey(nodeType, docId), Edges.AttachmentOf, Edges.Ha
   <dir>`. The rest of the mapping runs in seconds; this does not.
 
 ---
+
+## 8.1 Reading web pages (RSS and other web sources)
+
+Verified building `src/AviationIntel.Connector` (Playwright 1.63, SmartReader 0.11, CodeHollow.FeedReader 1.2.6):
+
+- **Load the page in a browser, then run Readability over the rendered DOM**:
+  `new SmartReader.Reader(page.Url, await page.ContentAsync()).GetArticle()`. A plain GET (what
+  `SmartReader.ParseArticleAsync(url)` does) misses client-rendered bodies and consent walls.
+  Block `image`/`media`/`font` requests in a context route; gate one page per host with a delay,
+  and parallelise across hosts.
+- **Consult the hash cache before loading anything.** `HashCache.Hash(dto)` +
+  `ContainsHash(version, hash)` to select the misses, extract them in parallel, write serially,
+  `EnqueueHash` after `CommitPendingAsync`. `IfNotCached` would serialise the page loads.
+- **Key articles by canonical URL** (tracking parameters, fragment and trailing slash removed)
+  and group items across feeds first: a syndicated release is one node with an edge per feed.
+- **Record how much of the article you have.** Store which text became the body (page, feed full
+  text, feed summary) and why - a report must never present a teaser as the article.
+- **A 200 can be a bot check.** Detect an HTML page where a feed was expected and retry through
+  the browser, re-requesting through `context.APIRequest` (it carries the challenge's cookies).
+  Some publishers (Imperva-protected ones) still refuse a headless browser - leave them failing
+  and visible, do not build evasion.
+- **Atom entries often carry only `<updated>`**: FeedReader's `PublishingDate` is `<published>`, so
+  fall back to `((AtomFeedItem)item.SpecificItem).UpdatedDate`.
+- **Proxies:** Chromium ignores `HTTPS_PROXY`; pass it as the launch `Proxy` with
+  `Bypass = "localhost,127.0.0.1,[::1]"` (`<-loopback>` *removes* the loopback bypass).
+- **In a dry run, silence the library's logging**: it still announces the connector to the
+  placeholder endpoint and retries in the background.
 
 ## 9. Program.cs
 

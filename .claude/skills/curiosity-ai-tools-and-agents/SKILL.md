@@ -172,6 +172,33 @@ names it.
 
 ---
 
+## 4.1 Sandboxes and artifacts
+
+Verified on 26.10 against a live server (the Aviation News Desk in
+`src/AviationIntel.Definitions/code/chat-ai-tools/AVsandboX1111111111111.cs`):
+
+- **A sandbox is an AI tool whose code returns an `ISandbox`** - mounts (`SandboxMount.Lazy`,
+  `.Live`, `.Cached`, `.Files`, `.Scratch`), `SandboxCommand.Create(name, usage, call => ...)`, the
+  workspace's own `SandboxCommand.Search(types)` / `.Consult(types)`, and `Query =>
+  SandboxQueryAccess.For(types)` for the graph query engine. The model calls it as one tool,
+  `FunctionName`, with a `script` argument run in an in-process bash/python.
+- **`Artifacts => new[] { ArtifactType.Html, ArtifactType.Pdf }`** adds `/artifacts` and `publish`;
+  the published page opens in the chat's side pane in a frame that can reach nothing.
+- **Put the `using` block first in the file**, before any comment: the workspace injects `N`/`E`
+  above the code unless the usings start at index 0, and a using after a declaration does not
+  compile.
+- **Check it compiled and validated:** `GET /api/chatai/sandboxes` lists every sandbox with its
+  mounts, commands and `DefinitionError` (null when valid).
+- **A delegated agent run is confined.** When the conversation hands work to an agent, every mount
+  is read-only to it except `/agents/<agent>/<run>` (its working directory), and it **cannot
+  publish**. Write output there (`call.WorkingDirectory` starts with `/agents/`), return the path,
+  and publish from the conversation.
+- **The artifact's name is the page's `<title>` at publish time**, read from the file - set it
+  server-side; a title the page sets from script is too late.
+- **Test without a model:** the Lorem Ipsum provider plus a `:replay` message (`call <tool> <json>`,
+  `agent "<name>" <message>`, `say ...`) runs tools for real. An agent's own turn can be scripted
+  by making its input message a `:replay` script.
+
 ## 5. Grounding rules — the ones that decide whether it works
 
 - **Attach the evidence, do not describe it.** A question typed into a bare chat makes the

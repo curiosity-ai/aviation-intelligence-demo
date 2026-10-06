@@ -26,6 +26,7 @@ using Microsoft.Extensions.Logging;
 //   --chromium <path>         Chromium executable (or CHROMIUM_PATH); default: Playwright's own
 //   --no-browser              do not load article pages; bodies come from the feed
 //   --reset-cache             forget which articles were already ingested
+//   --install-browser         download Playwright's Chromium and exit (once per machine)
 //
 // The connector writes only what the sources state: the directory's classification of each
 // feed and each item's own metadata. Which companies, programmes and airports an article is
@@ -37,6 +38,12 @@ if (emitSchemaTo is object)
 {
     SchemaEmitter.Emit(emitSchemaTo);
     return 0;
+}
+
+if (Flag("--install-browser"))
+{
+    //Playwright's own installer, so no PowerShell is needed for playwright.ps1.
+    return Microsoft.Playwright.Program.Main(new[] { "install", "chromium" });
 }
 
 var root     = Path.GetFullPath(Arg("--root") ?? Directory.GetCurrentDirectory());
