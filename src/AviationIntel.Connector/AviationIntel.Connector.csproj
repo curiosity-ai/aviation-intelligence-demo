@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>AviationIntel.Connector</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CodeHollow.FeedReader" Version="1.2.6" />
+    <PackageReference Include="CsvHelper" Version="33.1.0" />
+    <PackageReference Include="Curiosity.Library" Version="26.10.6427" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.12" />
+    <!-- Loads every article page in a real browser, so pages that render their body with
+         JavaScript, or sit behind a consent wall that a plain GET never gets past, still
+         reach Readability as the reader would see them. -->
+    <PackageReference Include="Microsoft.Playwright" Version="1.63.0" />
+    <!-- The C# port of Mozilla Readability - the same extractor the workspace's own RssTask uses. -->
+    <PackageReference Include="SmartReader" Version="0.11.1" />
+  </ItemGroup>
+
+</Project>
