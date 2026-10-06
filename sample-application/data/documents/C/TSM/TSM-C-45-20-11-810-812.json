@@ -1,0 +1,163 @@
+[
+  {
+    "doc_id": "TSM-C-45-20-11-810-812",
+    "doc_type": "TSM",
+    "title": "Maintenance Message With No Correlated Flight Deck Effect",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-03-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-10-14",
+      "released": "2023-03-24",
+      "revised": null,
+      "effective": "2023-04-21"
+    },
+    "abstract": "Fault isolation for a maintenance message that the aircraft has recorded without an associated flight deck effect, distinguishing a genuine uncorrelated event from a correlation window limitation.",
+    "sections": {
+      "purpose": "To decide whether a maintenance message recorded without a flight deck effect is a genuine fault or an artefact of the correlation window, before any component is removed.",
+      "fault_description": "The line finds a maintenance message in the aircraft record with no flight deck effect attached to it, and the technical log carries no crew entry that matches. This is the single most common cause of an unconfirmed removal on this type. On aircraft with the delivered application the correlation window is four seconds, and a study of eleven hundred line events showed a third of genuine correlations falling outside it. On aircraft with the upgraded application the window is sixteen seconds with a weighting that falls off with time, and an uncorrelated message is much more likely to be real.",
+      "isolation_procedure": "Read the correlation window in use from the maintenance terminal and record it. If the window is four seconds, look for a crew entry in the technical log within thirty seconds either side of the message time stamp before treating the message as uncorrelated. If a plausible crew entry exists, work the crew-reported symptom and disregard the correlation state. If the window is sixteen seconds and no crew entry exists within thirty seconds, treat the message as genuine and work it in its own chapter. Read the fault history and count how many times the same message has appeared in the last forty legs; a message that appears once is not actionable, a message that appears in more than three legs is. Where the message appears only on the first leg of the day, check whether the aircraft carries the non-volatile history, because on the delivered application the evidence is lost at every power cycle and the pattern cannot be seen at all. Do the fault history read and correlation self-test as the confirmation task. Do not remove a component on the strength of an uncorrelated message alone.",
+      "dispatch_note": "There is no dispatch consequence. A maintenance message without a flight deck effect does not itself restrict dispatch, and the aircraft is released on the state of the system the message refers to rather than on the message."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4520114738386",
+        "D4520128145158",
+        "GRA258107-86"
+      ],
+      "fins": [
+        "4310TN",
+        "1TM"
+      ],
+      "drawings": [
+        "D45201180284"
+      ],
+      "software": [
+        "LH6CEDA1669",
+        "LH3C76AB34D"
+      ],
+      "zones": [
+        "244",
+        "164"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-45-20-11-700-016-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-45-45-11-700-030-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "maintenance message",
+      "correlation window",
+      "unconfirmed removal",
+      "fault history",
+      "power cycle"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "45-20-11-810-812",
+      "fault_symptom": "Maintenance message recorded with no associated flight deck effect",
+      "fault_codes": [
+        "452011003",
+        "452011021"
+      ],
+      "warning_messages": [],
+      "affected_fins": [
+        "4310TN",
+        "1TM"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Genuine event outside the four second correlation window",
+          "probability_pct": 38,
+          "fin": "4310TN"
+        },
+        {
+          "cause": "Crew entry made without a matching maintenance message time",
+          "probability_pct": 27,
+          "fin": "4310TN"
+        },
+        {
+          "cause": "History lost at power cycle so the pattern is not visible",
+          "probability_pct": 21,
+          "fin": "1TM"
+        },
+        {
+          "cause": "Message-to-chapter navigation table out of date",
+          "probability_pct": 14,
+          "fin": "4310TN"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-C-45-20-11-700-016-A",
+      "dispatch": {
+        "mel_item": null,
+        "dispatchable": true,
+        "dispatch_condition": "No dispatch restriction attaches to the message itself"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

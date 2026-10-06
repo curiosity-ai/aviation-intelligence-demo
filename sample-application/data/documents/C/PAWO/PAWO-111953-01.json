@@ -1,0 +1,441 @@
+[
+  {
+    "doc_id": "PAWO-111953-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Cold Weather Heat Stack and Predictive Brake Wear Reporting",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-12",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "IN_PROGRESS",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-11",
+      "title": "Wheels and Brakes — Brake Assembly"
+    },
+    "secondary_ata": [
+      "32-40-12",
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "CIRRANE-11"
+      ],
+      "models": [
+        "CRN-11G1"
+      ],
+      "msns": [
+        "C00071",
+        "C00137",
+        "C00205"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "TJT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-12",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the cold weather heat stack and the computed wear figure, covering the competing claim on the brake control unit software, the bulletin whose effectivity this change would invalidate, and the gear bay download path.",
+    "sections": {
+      "objective": "Establish whether the computed wear figure competes with reporting already published by the same computer, whether the higher low-temperature friction coefficient disturbs the accelerate-stop data, whether the gear bay harness has room for the additional download path, and which existing bulletins lose their effectivity.",
+      "scope_note": "The search covered ATA 32 as the primary chapter with ATA 92 for the gear bay wiring, because the operator asked specifically for a line-embodiable change and the harness is what decides whether that is possible. ATA 27 and ATA 57 were included because wear limits and their measurement methods are written the same way across those chapters and the reviewer wanted the precedent. The MSN restriction follows the operator's three sample aircraft. Chapters above 45 were excluded except where the zone seed pulled them in.",
+      "method_note": "Entity linking was run from the six part numbers, the three functional item numbers, the two software loads and the three zones, and it produced most of the findings directly because this change sits in a densely instrumented area. Semantic similarity was run afterwards on the operator words about not knowing a limit is coming, and it returned the crew braking procedure, which shares no identifier with the candidate and which describes the same cold stack behaviour from the flight deck.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the brake control unit software: the tyre pressure standard already publishes through the same operational load and the same download path, and this proposal assumes both are free. They are not, and the two teams have been working from different assumptions about the available bandwidth in the gear bay run. Immediately behind it is an effectivity problem that nobody had noticed: the tyre pressure bulletin carries a caveat about aircraft planned for the cold weather stack, which was added at its second revision as a placeholder, and the effectivity of that bulletin has to be closed off properly rather than left as a note. The crew procedure finding is the one worth showing: it already tells the pilot that a cold carbon stack gives less retardation on the first application and that this is a characteristic of the material, which is precisely the behaviour this change alters, and it shares no identifier with the modification at all. The remaining items are the maintenance and trouble shooting content and the illustrated part list.",
+      "next_steps": "Agree the download bandwidth and the publication rate with the tyre pressure team and record the outcome as a concurrency constraint. Ask the certification office whether the accelerate-stop data has to be re-established for the higher low-temperature coefficient or whether the existing case bounds it. Close off the tyre pressure bulletin effectivity properly. Confirm the gear bay harness spare capacity on one of the three sample aircraft before the design review."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240114184230",
+        "D3240116874031",
+        "ROD941184-53",
+        "VE268628-67",
+        "AGS678120-8C",
+        "UM887929-15"
+      ],
+      "fins": [
+        "584GB",
+        "210WS9",
+        "248WS"
+      ],
+      "drawings": [
+        "D32401111305",
+        "D32401138594"
+      ],
+      "software": [
+        "LA5CCE9DE6B",
+        "LH4C830E70C"
+      ],
+      "zones": [
+        "773",
+        "771",
+        "753"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00071",
+        "C00137"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111953",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-260241",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "heat stack",
+      "wear reporting",
+      "download path",
+      "effectivity"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Lorencourt",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111953-01",
+      "subject_mod": "MOD-111953",
+      "source_io": "IO-C-260241",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-02-12",
+      "due_date": "2026-08-21",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Lorencourt",
+        "contributing_departments": [
+          "ELSC",
+          "EDSA",
+          "EYIS"
+        ],
+        "estimated_manhours": 140,
+        "spent_manhours": 108
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11"
+        ],
+        "ata_2d": [
+          "32",
+          "92",
+          "27",
+          "57"
+        ],
+        "ata_4d": [
+          "32-40",
+          "32-30",
+          "92-31",
+          "27-50",
+          "57-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "C00071",
+          "to": "C00205"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3240114184230",
+            "D3240116874031",
+            "ROD941184-53",
+            "UM887929-15"
+          ],
+          "fins": [
+            "584GB",
+            "210WS9",
+            "248WS"
+          ],
+          "drawings": [
+            "D32401111305"
+          ],
+          "zones": [
+            "773",
+            "771",
+            "753"
+          ],
+          "software": [
+            "LA5CCE9DE6B",
+            "LH4C830E70C"
+          ]
+        },
+        "similarity_seeds": [
+          "knowing three or four weeks in advance that a brake is coming due",
+          "less retardation from the first brake application on a short cold sector"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Entity search on the brake assembly and control unit entities",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the download path and publication rate against existing reporting",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review bulletin effectivity affected by the stack change",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Similarity search on the operator wording",
+          "method": "SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T05",
+          "title": "Certification position on accelerate-stop data",
+          "method": "SME_INTERVIEW",
+          "owner": "EDSA",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "WDM-C-92-31-21",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "210WS9",
+              "584GB"
+            ],
+            "shared_zones": [
+              "773",
+              "771"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The gear bay sheet records that the spare pair count on the left-hand run is now zero, because the wheel sensing receiver feeds took the pairs that used to be spare. This change assumes an additional download path is available in the same run.",
+          "resolution": "Confirm the spare capacity on an aircraft and, if there is none, decide whether the wear figure shares the existing path or the harness is changed."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "FCOM-C-PRO-32-40-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The two documents have no identifier in common. One speaks of heat stacks, friction coefficients and integrated applied energy; the other tells a pilot to apply the brakes firmly and progressively at touchdown because a cold stack gives less retardation. They describe the same physics in two registers that share almost no words."
+          },
+          "rationale": "The crew procedure states that reduced retardation from a cold stack is a characteristic of the material and not a fault. The whole purpose of the higher low-temperature friction coefficient is to change that characteristic. If the change is embodied on part of a fleet the crew procedure becomes true for some aircraft and false for others, which is the worst possible outcome for a technique instruction.",
+          "resolution": "Decide with the flight operations office whether the procedure is re-written for a mixed fleet or whether embodiment is made fleet-wide before the wording changes."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-111388",
+          "doc_type": "MOD",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "210WS9"
+            ],
+            "shared_zones": [
+              "773",
+              "771"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Also returned by similarity on the shared subject of publishing a measured value from the gear to the maintenance system."
+          },
+          "rationale": "The tyre pressure standard publishes six pressure values and their temperatures through the same brake control unit operational load and the same download path that this proposal intends to use for the computed wear figure. Both changes state that the path is available. Both cannot be right, and neither team had seen the other's claim.",
+          "resolution": "Agree the download bandwidth and the publication rate jointly, and record the outcome as a concurrency constraint on whichever change is embodied second."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "CRN-32-2008",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "210WS9"
+            ],
+            "shared_zones": [
+              "771",
+              "773"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The tyre pressure bulletin carries a pre-modification condition against this candidate and a caveat added at its second revision saying that aircraft planned for the cold weather stack will need the effectivity reviewed. That caveat was written as a placeholder and never resolved. Embodying this change would silently take three aircraft outside the bulletin effectivity without anyone recording it.",
+          "resolution": "Close off the bulletin effectivity properly with an explicit statement rather than a caveat, and issue it before the first stack embodiment."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-C-32-40-11-300-032-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240114184230",
+              "D3240116874031",
+              "ROD941184-53",
+              "VE268628-67",
+              "AGS678120-8C"
+            ],
+            "shared_fins": [
+              "584GB",
+              "210WS9",
+              "248WS"
+            ],
+            "shared_zones": [
+              "773",
+              "771",
+              "753"
+            ],
+            "shared_ata_6d": [
+              "32-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The stack replacement task already notes that the disc order and the bedding-in schedule differ for the cold weather stack, but neither is published because the stack does not exist yet. The task cannot be released with the change unless both are written.",
+          "resolution": "Write the disc order and the bedding-in schedule for the new stack as part of the design work rather than as a documentation follow-up."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "TSM-C-32-40-13-810-814",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "210WS9",
+              "248WS"
+            ],
+            "shared_zones": [
+              "773",
+              "771"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure already asks the technician to confirm the brake control unit software standard before any hardware is changed, because an out-of-date load has produced a frozen value. A second reporting function on the same load makes that check more important and its wording less precise.",
+          "resolution": "Amend the software standard check to name both reporting functions once the wear figure is released."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "IPC-C-32-40-13-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "UM887929-15"
+            ],
+            "shared_fins": [
+              "210WS9",
+              "248WS"
+            ],
+            "shared_zones": [
+              "771",
+              "773"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries a pre and post modification pair for the brake control unit regulator, distinguished only by the label. Adding a second reason for the same part number to change standard would give three effectivity states behind one part number, which the line will not be able to work with.",
+          "resolution": "Introduce a distinguishing suffix or a new item number rather than adding a third effectivity note to the same item."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111394",
+          "doc_type": "MOD",
+          "reason": "A very close semantic match: it is also about moving wear from a component that cannot be replaced onto one that can, and about revised wear limits and a measurement that can be done without removal. It is a flap carriage change in a different chapter with no shared part, no shared functional item and no shared zone, and it does not touch the brake control unit."
+        },
+        {
+          "doc_id": "SRM-C-57-30-12-912",
+          "doc_type": "SRM",
+          "reason": "Returned on the wear limit vocabulary and on the phrase 'the shorter of the two limits applies', which appears in both. It is a structural crack repair at the flap track fairing rib and has no relationship to brake wear beyond the shared way of writing a limit."
+        }
+      ],
+      "conclusion": "Not yet issued. The download path competition with the tyre pressure standard is blocking and the bulletin effectivity has to be closed off before any embodiment.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

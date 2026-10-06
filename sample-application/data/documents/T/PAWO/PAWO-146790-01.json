@@ -1,0 +1,278 @@
+[
+  {
+    "doc_id": "PAWO-146790-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Take-Off Phase Inhibit Table and Input Card Replacement",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-50-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-20",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the take-off phase inhibit standard, opened to decide whether its remaining fleet coverage should be completed or delegated to the second issue programme now running.",
+    "sections": {
+      "objective": "Decide whether the remaining unconverted aircraft should be brought to the take-off phase inhibit standard through the existing bulletin, or whether that population should be taken directly to the second issue, and identify the documentation consequences of each route.",
+      "findings_summary": "The work was delegated to the second issue programme. Taking the remaining aircraft through the first issue and then through the second means two data loads, two functional tests and two crew documentation supplements for a population of fewer than thirty aircraft. The second issue requires the first issue hardware, so the card change cannot be skipped, but the first issue software load can be: the second issue operational load supersedes it and the loader accepts the sequence. Two further items were confirmed. The first issue bulletin cannot simply be cancelled, because the card content is still needed. The crew documentation must describe the intermediate state for any aircraft that is left with the card fitted and neither load applied, which is a state the current wording does not cover.",
+      "next_steps": "Delegate the remaining population to the second issue programme, applying the card content of the first issue bulletin and then loading the second issue software directly. Amend the first issue bulletin to state that the software step may be omitted where the second issue follows immediately. Add the intermediate state to the crew documentation."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150111234640",
+        "D3150111745067",
+        "D3150116156104"
+      ],
+      "fins": [
+        "60FW"
+      ],
+      "drawings": [
+        "D31501271700"
+      ],
+      "software": [
+        "LC2RA4D7C66"
+      ],
+      "zones": [
+        "292"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146790",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "inhibit table",
+      "delegation",
+      "software load",
+      "historical"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-146790-01",
+      "subject_mod": "MOD-146790",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-02",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-04-20",
+      "due_date": "2026-06-12",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 120,
+        "spent_manhours": 155
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "31"
+        ],
+        "ata_4d": [
+          "31-50",
+          "31-60"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00152"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3150116156104",
+            "D3150111745067"
+          ],
+          "fins": [
+            "60FW"
+          ],
+          "drawings": [
+            "D31501271700"
+          ],
+          "zones": [
+            "292"
+          ],
+          "software": [
+            "LC2RA4D7C66"
+          ]
+        },
+        "similarity_seeds": [
+          "caution inhibited during the take-off acceleration segment",
+          "phase boundary derived from more than one signal"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare the two-step and single-step conversion routes",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm the loader accepts the second issue load on first issue hardware",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the crew documentation for the intermediate state",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-149310",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3150111745067",
+              "D3150116156104"
+            ],
+            "shared_fins": [
+              "60FW"
+            ],
+            "shared_zones": [
+              "292"
+            ],
+            "shared_ata_6d": [
+              "31-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The second issue requires the first issue hardware but supersedes its software. That combination is what makes a single-step conversion possible and is the basis of the delegation decision.",
+          "resolution": "Delegate the remaining population to the second issue programme."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-31-1031",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3150116156104",
+              "D3150111234640"
+            ],
+            "shared_fins": [
+              "60FW"
+            ],
+            "shared_zones": [
+              "292"
+            ],
+            "shared_ata_6d": [
+              "31-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin cannot be cancelled because its card content is still required, but as written it obliges the operator to load the first issue software before the second issue can be applied.",
+          "resolution": "Amend the bulletin to state that the software step may be omitted where the second issue follows immediately."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "FCOM-T-DSC-31-50-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew description covers the two published inhibit standards but not an aircraft carrying the hardware of one and the software of neither, which is the state a single-step conversion creates for the duration of the visit."
+          },
+          "rationale": "An aircraft with the card fitted and neither load applied behaves according to the earlier table, which is not the standard the crew documentation describes for that hardware.",
+          "resolution": "Add the intermediate state to the crew documentation with an explicit statement of which table applies."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Remaining population delegated to the second issue programme. Two documentation amendments raised.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,120 @@
+[
+  {
+    "doc_id": "FCOM-Z-DSC-23-70-01",
+    "doc_type": "FCOM",
+    "title": "Communications — Controller Pilot Datalink and Connection Monitoring",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-10-09",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-00",
+      "title": "Datalink — General"
+    },
+    "secondary_ata": [
+      "23-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-09-21",
+      "released": "2021-04-07",
+      "revised": "2024-10-09",
+      "effective": "2024-10-30"
+    },
+    "abstract": "Flight crew description of the controller pilot datalink, how a connection is established at an airspace boundary and how the crew can tell whether the connection is still live.",
+    "sections": {
+      "purpose": "This entry describes to the flight crew how a datalink connection with air traffic control is established, what the crew sees while it is live, and how a loss of connection becomes apparent.",
+      "description": "A datalink connection is requested before the airspace boundary and is confirmed when the controlling authority accepts the log-on. Once connected, clearances and reports are exchanged as messages rather than by voice, and the aircraft is expected to answer within the response time published for that airspace. The crew sees the connected state on the display and the authority identifier alongside it. What the crew does not see, on the earlier equipment standard, is the moment a connection is lost: there is no annunciation and the first indication is usually a controller calling on the voice frequency to ask why a message was not answered. Crews should therefore treat the connection as something to check, not something to assume, and should confirm it whenever a period passes with no exchange. On aircraft at the later standard the loss is annunciated directly and no periodic check is needed.",
+      "crew_procedure": "Request the log-on at the time published for the airspace and confirm the connected state and the authority identifier on the display before the boundary. During the crossing, confirm the connection whenever twenty minutes pass with no message exchange. If a controller calls on voice to query an unanswered message, assume the connection has been lost, revert to voice procedures and attempt a fresh log-on rather than waiting for the session to recover. Report the loss with the approximate time so that the recorded session log can be matched to it."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-Z-DSC-31-50-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "controller pilot datalink",
+      "log-on",
+      "connection monitoring",
+      "voice reversion",
+      "airspace boundary"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Description — Communications and Datalink",
+      "entry_number": "DSC-23-70-01",
+      "flight_phase": "CRUISE",
+      "operational_impact": "NONE",
+      "crew_action": "Confirm the connected state before the boundary and whenever twenty minutes pass with no exchange.",
+      "affects_qrh": false,
+      "affects_mel": true,
+      "mel_items": [
+        "23-70-01A"
+      ],
+      "systems": [
+        "ATC Datalink",
+        "Audio Management",
+        "Flight Deck Display"
+      ],
+      "related_entries": [
+        "FCOM-Z-DSC-31-50-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

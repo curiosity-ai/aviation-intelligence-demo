@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_6/xml_schema_flat/sb.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="ZPH" systemDiffCode="A" systemCode="21" subSystemCode="6" subSubSystemCode="0" assyCode="11" disassyCode="00" disassyCodeVariant="A" infoCode="700" infoCodeVariant="A" itemLocationCode="A" />
+        <language languageIsoCode="en" countryIsoCode="GB" />
+        <issueInfo issueNumber="002" inWork="00" />
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="08" day="07" />
+        <dmTitle>
+          <techName>Temperature Control — Trim Air System</techName>
+          <infoName>Air Conditioning — Trim Air System — Conversion to the Standard 2 Zone Regulation Configuration</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="revised">
+      <security securityClassification="01" />
+      <responsiblePartnerCompany enterpriseCode="U8025">
+        <enterpriseName>AERALIS S.A.S.</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="U8025">
+        <enterpriseName>AERALIS S.A.S. — In-Service Engineering, Valmont</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>ZEPHYR-20 and ZEPHYR-22 and ZEPHYR-24, all aircraft, post MOD-150422</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <firstVerification verificationType="tabtop" />
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <sb>
+      <sbManagementInfo>
+        <sbNumber>ZPH-21-1218</sbNumber>
+        <sbAta>21-60-11</sbAta>
+        <sbCompliance sbComplianceCategory="sbcc02" />
+        <sbTaskType sbTaskCategory="sbtc03" />
+        <sbOriginalIssueDate>
+          <issueDate year="2020" month="02" day="11" />
+        </sbOriginalIssueDate>
+      </sbManagementInfo>
+      <sbRevisionInfo>
+        <sbRevisionSummary>
+          <para>Revision 01 (2020-02-11): Initial issue</para>
+          <para>Revision 02 (2026-08-07): Sensor boss alignment gauged and dimensioned in the accomplishment instructions; further boss changes held pending the candidate third standard</para>
+        </sbRevisionSummary>
+      </sbRevisionInfo>
+      <sbSummary>
+        <para>Conversion of in-service aircraft to the standard 2 trim air regulation configuration, closing the zone loop on a duct-mounted sensor, damping the pack transient with an accumulator, and controlling the sensor boss alignment that no other document sets.</para>
+      </sbSummary>
+      <sbPlanningInfo>
+        <sbEffectivity>
+          <para>Applicable to ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 aircraft already at the hardened valve seat standard and not built to the standard 2 configuration. Aircraft delivered from the production cut-in are excluded. The boss standard itself is under review: a candidate configuration deletes the duct boss altogether, and no further revision affecting the boss geometry will be released until that configuration is decided, so that operators are not asked to absorb two changes to the same weld.</para>
+          <sbAircraftEffectivity>
+            <sbAircraftModel>ZPH-20C2</sbAircraftModel>
+            <sbSerialNumbers>All aircraft</sbSerialNumbers>
+          </sbAircraftEffectivity>
+          <sbAircraftEffectivity>
+            <sbAircraftModel>ZPH-20C5</sbAircraftModel>
+            <sbSerialNumbers>All aircraft</sbSerialNumbers>
+          </sbAircraftEffectivity>
+          <sbAircraftEffectivity>
+            <sbAircraftModel>ZPH-20N3</sbAircraftModel>
+            <sbSerialNumbers>All aircraft</sbSerialNumbers>
+          </sbAircraftEffectivity>
+          <sbAircraftEffectivity>
+            <sbAircraftModel>ZPH-22C4</sbAircraftModel>
+            <sbSerialNumbers>All aircraft</sbSerialNumbers>
+          </sbAircraftEffectivity>
+          <sbAircraftEffectivity>
+            <sbAircraftModel>ZPH-22V2</sbAircraftModel>
+            <sbSerialNumbers>All aircraft</sbSerialNumbers>
+          </sbAircraftEffectivity>
+          <sbAircraftEffectivity>
+            <sbAircraftModel>ZPH-22N1</sbAircraftModel>
+            <sbSerialNumbers>All aircraft</sbSerialNumbers>
+          </sbAircraftEffectivity>
+          <sbAircraftEffectivity>
+            <sbAircraftModel>ZPH-24C1</sbAircraftModel>
+            <sbSerialNumbers>All aircraft</sbSerialNumbers>
+          </sbAircraftEffectivity>
+          <sbAircraftEffectivity>
+            <sbAircraftModel>ZPH-24V1</sbAircraftModel>
+            <sbSerialNumbers>All aircraft</sbSerialNumbers>
+          </sbAircraftEffectivity>
+        </sbEffectivity>
+        <sbReason>
+          <para>Even with the hardened valve seat, cabin zone temperature overshoot on descent averages four degrees and the aft zone of a full aircraft regularly exceeds the selected temperature by more than that. The cause is the position of the sensing element: the loop closes on returned cabin air with a transport delay of two to three minutes, so the valve chases a temperature that is already out of date. Crews on the longest sectors respond by leaving the zone selectors at the extremes, which removes any benefit from the system. Aircraft that are not converted will continue to generate cabin comfort complaints that no valve change can resolve.</para>
+        </sbReason>
+        <sbDescription>
+          <para>This Service Bulletin converts the trim air regulation to standard 2. Each zone valve is replaced by the switched assembly that carries a sensor boss on its outlet flange, an accumulator is installed upstream of each valve to damp pack transients, and the zone controller parameter set is re-scaled to the new loop gains. On ZEPHYR-24 aircraft a third sensing point is added for the forward zone. The distribution ducting itself is not replaced.</para>
+          <figure>
+            <title>Temperature Control — Trim Air System — location, side view</title>
+            <graphic infoEntityIdent="ICN-ZPH-A-216011-A-U8025-2B294D1001-A-001-01" />
+          </figure>
+        </sbDescription>
+        <sbCompliance>
+          <para>Recommended. Accomplish At the operator's convenience, normally at a base maintenance visit. Operators reporting cabin comfort complaints are advised to embody within 24 months..</para>
+        </sbCompliance>
+        <sbApproval>
+          <para>The technical content of this service bulletin is approved under the authority of the Aeralis design organisation approval.</para>
+        </sbApproval>
+        <sbManpower>
+          <para>The estimated man-hours are 58 man-hours for one aircraft, based on 3 technicians working at the same time, and an elapsed time of 26 hours. The downtime category is A check.</para>
+        </sbManpower>
+        <sbWeightBalance>
+          <para>The change of mass is 3.4 kg per aircraft. The aircraft weighing record is to be amended at accomplishment.</para>
+        </sbWeightBalance>
+        <sbInterchangeability>
+          <para>The parts are not interchangeable. A mixed installation is not permitted.</para>
+        </sbInterchangeability>
+        <sbPublicationsAffected>
+          <para>The following are revised at the next scheduled revision: IPC-Z-21-60-11-FIG-11.</para>
+        </sbPublicationsAffected>
+      </sbPlanningInfo>
+      <sbMaterialInfo>
+        <sbMaterialPrice>
+          <para>The material is supplied as kit K2160-1218-01, one kit per aircraft.</para>
+        </sbMaterialPrice>
+        <sbMaterialKit>
+          <table>
+            <title>Kit K2160-1218-01 contents, one kit per aircraft</title>
+            <tgroup cols="3">
+              <colspec colname="c1" colwidth="2*" />
+              <colspec colname="c2" colwidth="0.8*" />
+              <colspec colname="c3" colwidth="0.8*" />
+              <thead>
+                <row>
+                  <entry>Part number</entry>
+                  <entry>Quantity</entry>
+                  <entry>Unit</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>D2160114404059</entry>
+                  <entry>2</entry>
+                  <entry>EA</entry>
+                </row>
+                <row>
+                  <entry>KAE541402-61</entry>
+                  <entry>2</entry>
+                  <entry>EA</entry>
+                </row>
+                <row>
+                  <entry>AES510897-5A</entry>
+                  <entry>8</entry>
+                  <entry>EA</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </sbMaterialKit>
+        <sbMaterialAvailability>
+          <para>The kit is available from 2020-03-16. The following are to be returned: KAD437362-51. Consumables: Grease, high temperature, silicone free, Sealant, polysulphide, class B. Tooling: Duct boss alignment gauge 98D21601-218, Torque wrench 3-20 Nm, Portable data loader. Kit K2160-1218-01 contains two switched assemblies, two accumulators, the bracket and pin set and the sensor harness for a two-zone aircraft; kit K2160-1218-02 adds the third channel for ZEPHYR-24 aircraft. The switched assembly is a long-lead item at twenty-eight weeks. Removed valves are returned to Aeralis for credit.</para>
+        </sbMaterialAvailability>
+      </sbMaterialInfo>
+      <sbAccomplishmentInstructions>
+        <sbGeneral>
+          <para>Conversion of in-service aircraft to the standard 2 trim air regulation configuration, closing the zone loop on a duct-mounted sensor, damping the pack transient with an accumulator, and controlling the sensor boss alignment that no other document sets.</para>
+        </sbGeneral>
+        <sbProcedure>
+          <proceduralStep>
+            <para>Confirm that the aircraft is at the hardened valve seat standard before you start; if it is not, this bulletin must not be embodied.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Make sure that the air conditioning system is depressurised.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Get access through the ceiling and lateral panels in zones 254, 291 and 273.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Remove the existing valves following task AMM-Z-21-60-11-000-023-A.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Install the switched assembly D2160114404059 at the forward valve FIN 726HQ and at the aft valve FIN 980HQ.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>On ZEPHYR-24 aircraft install the third assembly at FIN 872HQ.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Set the sensor boss on each outlet flange with the alignment gauge and check it at two positions before the flange is torqued: the boss angular position and its offset from the flange datum are controlled here and in no other document, and a boss set outside the stated band puts the sensing element in the wall boundary layer.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Install the accumulator KAE541402-61 on the new bracket and secure it with the clevis pins AES510897-5A.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Install the valves following task AMM-Z-21-60-11-400-023-A.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Connect the sensor harness at the duct boss and do a continuity check.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Load the revised zone controller parameter set.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Do the trim air system operational test with the packs running and record the zone response time.</para>
+          </proceduralStep>
+          <proceduralStep>
+            <para>Restore the ceiling and lateral panels.</para>
+          </proceduralStep>
+        </sbProcedure>
+      </sbAccomplishmentInstructions>
+      <sbAdditionalInfo>
+        <para>Report the accomplishment of this service bulletin through the customer services portal, quoting the aircraft serial number and the date of accomplishment.</para>
+      </sbAdditionalInfo>
+    </sb>
+  </content>
+</dmodule>

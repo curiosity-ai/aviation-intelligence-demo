@@ -1,0 +1,436 @@
+[
+  {
+    "doc_id": "PAWO-158813-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Ka-Band Connectivity Server and Ceiling Wireless Access Point Installation",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-30",
+      "ata_6d": "44-30-11",
+      "title": "External Communication — Onboard Connectivity Server"
+    },
+    "secondary_ata": [
+      "24-30",
+      "33-20",
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-1226",
+        "VDK-1232",
+        "PYR-1127G",
+        "PYR-1133G"
+      ],
+      "operators": [
+        "SOL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-20",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the connectivity installation for Evo aircraft, dominated by the electrical margin question, the cabin intercommunication database it has to share with the lighting scenes, and the ceiling void volume already committed elsewhere.",
+    "sections": {
+      "objective": "Establish which released and candidate items applicable to the Evo models constrain the proposed connectivity installation, with priority on the direct current margin, on the cabin intercommunication database version and on the ceiling void volume that several cabin programmes are competing for.",
+      "scope_note": "The search covers ATA 44-30 as the primary chapter, ATA 24-30 because the server takes its supply from the rectifier unit harness, ATA 33-20 because the announcement interface shares a database with the lighting scenes, and ATA 92-31 because the supply harness runs with the direct current feeder. ATA 25-20 was searched for the ceiling volume question and one item retained. Flight deck avionics chapters were excluded: the installation has no interface to them.",
+      "method_note": "Entity linking was seeded from the five part numbers, the four FINs, the three software part numbers and the four zones on the candidate. Semantic similarity was run over titles and reason text with two seed phrases about cabin electrical growth and about scene and announcement control. The software finding is the interesting one: the two documents share a FIN and a database load but almost no vocabulary, because one is written as a lighting change and the other as a communications installation.",
+      "findings_summary": "Seven items were confirmed and one blocks. The blocker is electrical. The candidate takes its supply from the same rectifier unit harness that a launched electrical uprating is about to replace, and the two are working from different assumptions about the available margin: the connectivity design assumes the margin that the uprating creates, while the uprating's business case counts the connectivity load as one of the demands it exists to meet. Neither can be released until the load book is reconciled, and the sequencing matters because the connectivity harness terminates on a contactor that the uprating renews. The second significant item is the cabin intercommunication database. The lighting scene work already loads a database at the same director, and the announcement interface the candidate needs would occupy the same load. Only one database version can be present, so the two must be merged rather than embodied independently. The remaining findings are the wiring sheet, the parts figure, the maintenance task, the draft troubleshooting procedure and a certification question about the ceiling volume released by the ZEPHYR-24 Evo cabin conversion.",
+      "next_steps": "Reconcile the load book with the electrical uprating programme and agree which change owns the margin. Ask the cabin systems owner to produce a single merged database load definition covering both the lighting scenes and the announcement interface. Confirm with the cabin programme whether the ceiling void volume above the forward cabin is already committed, and get the certification office to state whether the crown antenna needs a separate flight test or can ride on the existing campaign."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4430002603184",
+        "D4430121624211",
+        "D4430125051276",
+        "JAR899476-98",
+        "D2430112027785"
+      ],
+      "fins": [
+        "40RM3",
+        "3RK",
+        "7GX",
+        "313RM"
+      ],
+      "drawings": [
+        "D44301167656",
+        "D44301273500",
+        "D44301273782"
+      ],
+      "software": [
+        "LG9NEA81802",
+        "LE8N1773245",
+        "LG9N7BD4A16"
+      ],
+      "zones": [
+        "215",
+        "274",
+        "291",
+        "294"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-158813",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-Z-260058",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "connectivity",
+      "electrical margin",
+      "database load",
+      "ceiling void"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-158813-01",
+      "subject_mod": "MOD-158813",
+      "source_io": "IO-Z-260058",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-02-20",
+      "due_date": "2026-05-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ELSC",
+          "EAAM"
+        ],
+        "estimated_manhours": 160,
+        "spent_manhours": 88
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "44",
+          "24",
+          "33",
+          "92"
+        ],
+        "ata_4d": [
+          "44-30",
+          "24-30",
+          "33-20",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "Z08996",
+          "to": "Z12370"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4430002603184",
+            "D4430121624211",
+            "D4430125051276",
+            "D2430112027785"
+          ],
+          "fins": [
+            "40RM3",
+            "3RK",
+            "7GX",
+            "313RM"
+          ],
+          "drawings": [
+            "D44301167656",
+            "D44301273500"
+          ],
+          "zones": [
+            "215",
+            "274",
+            "291",
+            "294"
+          ],
+          "software": [
+            "LG9NEA81802",
+            "LG9N7BD4A16"
+          ]
+        },
+        "similarity_seeds": [
+          "growth in cabin electrical demand consuming the direct current margin",
+          "cabin scene and announcement control through the cabin intercommunication system"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Reconcile the connectivity load with the electrical margin study",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish the cabin intercommunication database version conflict",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm ceiling void volume availability with the cabin programme",
+          "method": "SME_INTERVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Assess the crown antenna certification and flight test route",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-158190",
+          "doc_type": "MOD",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2430112027785"
+            ],
+            "shared_fins": [
+              "7GX"
+            ],
+            "shared_zones": [
+              "274"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "Both changes terminate on the same rectifier unit contactor and both assume the direct current margin the other is supposed to provide. The connectivity harness lands on a contactor that the electrical uprating renews with a different lug arrangement, so the two cannot be embodied independently in either order without rework.",
+          "resolution": "Reconcile the load book, agree which change owns the margin, and define the terminal arrangement once for both."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-156345",
+          "doc_type": "MOD",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "3RK"
+            ],
+            "shared_zones": [
+              "291"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The lighting change loads a cabin intercommunication database at the same director that the candidate needs for the announcement interface. Only one database version can be present on an aircraft, and the two definitions are produced by different owners from different configuration sheets.",
+          "resolution": "Produce a single merged database definition covering the lighting scenes and the announcement interface, and give one owner the configuration sheet."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-Z-92-31-11",
+          "doc_type": "WDM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "274"
+            ],
+            "shared_ata_6d": [
+              "24-30"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The connectivity supply harness runs with the direct current feeder under the cabin floor and its separation from every signal harness has to be stated at each crossing. The sheet also warns that a shortened feeder run of the kind the electrical uprating proposes would delete three bracket stations, which changes where the connectivity harness can be supported.",
+          "resolution": "Re-issue the sheet once the feeder routing is frozen, and include the connectivity harness in the separation study rather than adding it afterwards."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-154781",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both are cabin installations on Evo aircraft driven by a commercial product promise rather than by a technical problem, and both describe competing for volume in the ceiling above the cabin. They share no part number, no FIN, no software and no zone."
+          },
+          "rationale": "The ZEPHYR-24 Evo cabin conversion re-arranges the ceiling above the rear cabin and takes volume that a later connectivity fitment would want. It does not affect the forward cabin where the server sits, but an aircraft that has both will have less routing space than the connectivity design assumes.",
+          "resolution": "Ask the cabin programme for the residual ceiling volume on a converted aircraft and reflect it in the harness routing definition."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "ZPH-25-1310",
+          "doc_type": "SB",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "33-20"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The cabin conversion bulletin requires the solid state lighting standard to be embodied first because the scene definitions for the new zone boundaries only exist there. The connectivity announcement interface would add a third consumer of the same database, and the emergency lighting proof test in that bulletin has to be repeated whenever the database changes.",
+          "resolution": "Confirm with the certification office whether the proof test must be repeated for a database change that only adds an announcement interface, and state the answer in the retrofit bulletin."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-Z-44-30-11-FIG-10",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4430121624211",
+              "D4430125051276"
+            ],
+            "shared_fins": [
+              "40RM3",
+              "3RK"
+            ],
+            "shared_zones": [
+              "291",
+              "294"
+            ],
+            "shared_ata_6d": [
+              "44-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The preliminary figure exists only to support this pre-analysis and no item on it is released for spares provisioning. It cannot be issued for service until the access point positions are fixed, which depends on the per-operator configuration sheet.",
+          "resolution": "Hold the figure at draft until the installation standard is frozen and then release it with the per-operator position table."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "AMM-Z-44-30-11-400-018-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4430002603184",
+              "JAR899476-98"
+            ],
+            "shared_fins": [
+              "7GX",
+              "313RM"
+            ],
+            "shared_zones": [
+              "274",
+              "291",
+              "294"
+            ],
+            "shared_ata_6d": [
+              "44-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task already tells the technician to confirm the available direct current margin before connecting the server, which is an instruction the task cannot enforce and which will read differently once the electrical uprating is embodied. The task was reached by following the modification's own reference rather than by either search.",
+          "resolution": "Rewrite the margin check as a documented pre-condition in the retrofit bulletin and reduce the task step to a measurement and record."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-157011",
+          "doc_type": "MOD",
+          "reason": "Surfaced by the words 'software standard', 'database' and 'configuration' and by the same Evo model applicability, but it is a flight management change in the avionics bay with no cabin interface. It shares no part number, no FIN, no software and no zone with the connectivity installation."
+        },
+        {
+          "doc_id": "TSM-Z-24-30-11-810-804",
+          "doc_type": "TSM",
+          "reason": "Matched on the rectifier unit FIN and on the phrase 'bus load above the unit rating', which is the candidate's central concern. The procedure is a fault isolation for a unit reported inoperative and needs no change: it already tells the technician to measure the load before changing a component, which is exactly the right behaviour after the connectivity load is added."
+        }
+      ],
+      "conclusion": "Not yet issued. The electrical reconciliation is blocking and the database merge needs a single owner before either change can be frozen.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

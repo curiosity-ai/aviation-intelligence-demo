@@ -1,0 +1,353 @@
+[
+  {
+    "doc_id": "AMM-C-44-20-13-400-009-A",
+    "doc_type": "AMM",
+    "title": "In-Seat Power Supply Unit — Installation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-06-18",
+      "reason": "Original issue of the in-seat power supply unit installation task.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-13",
+      "title": "Inflight Entertainment — IFE Power Supply"
+    },
+    "secondary_ata": [
+      "24-50",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-04-26",
+      "released": "2018-06-18",
+      "revised": "2018-06-18",
+      "effective": "2018-07-09"
+    },
+    "abstract": "Installation of an in-seat power supply unit in the aft cabin, including the socket count declaration that has to match the unit rating and the load check on ground power that closes the task.",
+    "sections": {
+      "purpose": "This task gives the installation of one in-seat power supply unit, the declaration of the connected socket count and the load check that verifies the installation against the unit rating.",
+      "job_setup_note": "The connected socket count for the cabin has to be established from the cabin layout record before the unit is selected, and compared with the available power figure in the load table. The load table gives the aft secondary distribution box outlet rating, which is the figure any cabin reconfiguration is planned against.",
+      "procedure": "1. WARNING: DE-ENERGISE THE CABIN DISTRIBUTION AND PROVE THE SUPPLY TERMINALS DEAD BEFORE THE UNIT IS DISTURBED. 2. Establish the connected socket count for the cabin and verify it physically against the seat plan. 3. CAUTION: DO NOT INSTALL A UNIT WHOSE RATING IS BELOW THE CONNECTED SOCKET COUNT. THE UNIT WILL CURRENT LIMIT DURING BOARDING. 4. Remove the aft cabin sidewall panel at the unit position. 5. Offer the unit to the mounting trim D4420139171185 and check that it clears the overhead housing D4420139649717. 6. Install the mounting fasteners to the torque given in the task. 7. Connect the supply feeder from the harness D2450122851975, observing the feeder group given on the work card. 8. Confirm that the supply panel 1RM and its decor panel 335RM are correctly seated and that the bus bar 403XU2 strapping matches the work card. 9. Restore power and do the insulation resistance check before any load is applied. 10. Do the load check on ground power with every socket occupied by a test load. 11. Confirm that no socket group drops during a ten minute hold at full load. 12. Install the sidewall panel and confirm the trim alignment.",
+      "close_out": "Make sure that the sidewall panel is correctly seated and that no fastener is left loose. Confirm that no cabin maintenance message remains active. Record the installed unit rating, the declared socket count, the feeder group, the available power taken from the load table and the result of the ten minute full load hold in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420139171185",
+        "D4420139649717",
+        "D2450122851975"
+      ],
+      "fins": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "drawings": [
+        "D24501217521"
+      ],
+      "software": [],
+      "zones": [
+        "252",
+        "272",
+        "922"
+      ],
+      "figures": [
+        "FIG-44-20-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-24-50-12-400-007-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-44-20-13-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "seat power supply",
+      "socket count",
+      "load table",
+      "box rating",
+      "feeder group"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "44-20-13-400-009-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. The load table gives the aft secondary distribution box outlet rating as the available power for the aft cabin.",
+      "manhours": 6.5,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "252",
+          "272",
+          "922"
+        ],
+        "access_panels": [
+          "252BL",
+          "272BL",
+          "922CR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "De-energise the cabin distribution and prove the supply terminals dead.",
+          "Do not apply load before the insulation resistance check has passed.",
+          "Do not stand on a seat to reach the sidewall panel."
+        ],
+        "tooling": [
+          {
+            "reference": "98D44201-009",
+            "description": "Socket load test set"
+          },
+          {
+            "reference": "98D44201-012",
+            "description": "Insulation resistance tester"
+          },
+          {
+            "reference": "98D44201-014",
+            "description": "Torque screwdriver, 0.5 to 5 Nm"
+          }
+        ],
+        "consumables": [
+          "Contact lubricant, electrical",
+          "Cable ties, self-locking"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-24-50-12-400-007-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-C-44-20-13-400-009-A",
+    "doc_type": "AMM",
+    "title": "In-Seat Power Supply Unit — Installation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-14",
+      "reason": "Load table re-issued against the aft feeder run rating, with both ratings named and the case each applies to stated.",
+      "raised_by_pawo": "PAWO-111138-01",
+      "raised_by_finding": "F04",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-13",
+      "title": "Inflight Entertainment — IFE Power Supply"
+    },
+    "secondary_ata": [
+      "24-50",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-04-26",
+      "released": "2018-06-18",
+      "revised": "2026-07-14",
+      "effective": "2026-08-04"
+    },
+    "abstract": "Installation of an in-seat power supply unit in the aft cabin, including the socket count declaration, the two-column load table that separates the box rating from the feeder run rating, and the load check on ground power.",
+    "sections": {
+      "purpose": "This task gives the installation of one in-seat power supply unit, the declaration of the connected socket count and the load check that verifies the installation against the unit rating.",
+      "job_setup_note": "The connected socket count for the cabin has to be established from the cabin layout record before the unit is selected, because a unit whose rating is below the fitted socket count enters current limit during boarding and drops sockets in blocks. Where the cabin has been through a refit the layout record may not match the aircraft, so the count must be verified physically. The load table now gives two figures and they are not alternatives. The aft secondary distribution box outlet rating is a terminal figure and applies to what may be connected at the box. The aft feeder run rating is the lower of the two and applies to what the run between the box and the cabin outlets will carry continuously; it is the figure any cabin reconfiguration or added seat load is planned against. Planning against the box rating gives an available power about a fifth higher than the installation actually has.",
+      "procedure": "1. WARNING: DE-ENERGISE THE CABIN DISTRIBUTION AND PROVE THE SUPPLY TERMINALS DEAD BEFORE THE UNIT IS DISTURBED. 2. Establish the connected socket count for the cabin and verify it physically against the seat plan. 3. CAUTION: DO NOT INSTALL A UNIT WHOSE RATING IS BELOW THE CONNECTED SOCKET COUNT. THE UNIT WILL CURRENT LIMIT DURING BOARDING. 4. Remove the aft cabin sidewall panel at the unit position. 5. Offer the unit to the mounting trim D4420139171185 and check that it clears the overhead housing D4420139649717. 6. Install the mounting fasteners to the torque given in the task. 7. Connect the supply feeder from the harness D2450122851975, observing the feeder group given on the work card. 8. Confirm that the supply panel 1RM and its decor panel 335RM are correctly seated and that the bus bar 403XU2 strapping matches the work card. 9. Restore power and do the insulation resistance check before any load is applied. 10. Do the load check on ground power with every socket occupied by a test load. 11. Confirm that no socket group drops during a ten minute hold at full load. 12. Install the sidewall panel and confirm the trim alignment.",
+      "close_out": "Make sure that the sidewall panel is correctly seated and that no fastener is left loose. Confirm that no cabin maintenance message remains active. Record the installed unit rating, the declared socket count, the feeder group, the available power taken from the feeder run column of the load table, and the result of the ten minute full load hold in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420139171185",
+        "D4420139649717",
+        "D2450122851975"
+      ],
+      "fins": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "drawings": [
+        "D24501217521"
+      ],
+      "software": [],
+      "zones": [
+        "252",
+        "272",
+        "922"
+      ],
+      "figures": [
+        "FIG-44-20-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-24-50-12-400-007-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-44-20-13-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111138",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "seat power supply",
+      "socket count",
+      "feeder run rating",
+      "load table",
+      "load check"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "44-20-13-400-009-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. On refitted cabins the connected socket count must be verified physically, not taken from the layout record, and the available power is read from the feeder run column of the load table.",
+      "manhours": 6.5,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "252",
+          "272",
+          "922"
+        ],
+        "access_panels": [
+          "252BL",
+          "272BL",
+          "922CR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "De-energise the cabin distribution and prove the supply terminals dead.",
+          "Do not apply load before the insulation resistance check has passed.",
+          "Do not stand on a seat to reach the sidewall panel."
+        ],
+        "tooling": [
+          {
+            "reference": "98D44201-009",
+            "description": "Socket load test set"
+          },
+          {
+            "reference": "98D44201-012",
+            "description": "Insulation resistance tester"
+          },
+          {
+            "reference": "98D44201-014",
+            "description": "Torque screwdriver, 0.5 to 5 Nm"
+          }
+        ],
+        "consumables": [
+          "Contact lubricant, electrical",
+          "Cable ties, self-locking"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-24-50-12-400-007-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

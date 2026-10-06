@@ -1,0 +1,226 @@
+[
+  {
+    "doc_id": "CRN-22-2001",
+    "doc_type": "SB",
+    "title": "Auto Flight — Flight Management Computer Partition Increase and Second Load Path",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-06-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-11",
+      "title": "Flight Management Computing — Flight Management Computer"
+    },
+    "secondary_ata": [
+      "22-80-12",
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00479"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "GVA",
+        "HAT",
+        "SRP"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2022-01-31",
+      "released": "2022-06-20",
+      "revised": null,
+      "effective": "2022-07-18"
+    },
+    "abstract": "Retrofit of the larger navigation database partition and of the second load path at the maintenance connector, so that worldwide coverage can be carried and a database cycle can be loaded from the avionics bay.",
+    "sections": {
+      "planning_reason": "The delivered partition cannot hold the worldwide coverage several operators have moved to, and three of them are running trimmed regional databases with a documented restriction on diversion planning. The twenty-eight day database cycle must also be loaded through a single path with the aircraft powered on the stand, and operators with more than fifteen aircraft report that the load window is the binding constraint on their overnight plan. One operator lost eleven departures in a year to a database load that overran.",
+      "description": "The bulletin replaces the flight management computer with the later hardware standard, replaces its mounting tray, wires the database loading module to the maintenance connector and loads the navigation and operational software at the supporting standard.",
+      "accomplishment_summary": "Put the aircraft on external power. Do the removal task AMM-C-22-80-11-000-014-A for the flight management computer. Remove the mounting tray D2280111910946 and install the deeper tray HES490975-50 using bolts EN462879-3E and collars AGS987591K7. Install the later computer D2280117216234 and connect the rack backplane. Route the second load path from the database loading module D2280124326903 to the maintenance connector in zone 173 and allocate functional item 8488CE. Do the installation task AMM-C-22-80-11-400-014-A. Load the navigation database LA7C64D57DF and the operational load LE1C320FA60 from the maintenance terminal. Do a load from the second path and confirm the result. Record the embodiment.",
+      "effectivity_note": "Applicable to CIRRANE-11 and CIRRANE-13 aircraft from MSN C00001 to MSN C00479 delivered with the smaller partition. Aircraft from MSN C00479 onward are already at the standard. There is no pre-modification or post-modification condition.",
+      "material_note": "Kit K2280-2001-01 contains the computer, the tray, the load path cable and the fastener set. Lead time is sixteen weeks. The removed computer is returned to the supplier under the exchange agreement and the removed tray is scrapped locally."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2280117216234",
+        "D2280111910946",
+        "HES490975-50",
+        "D2280124326903",
+        "EN462879-3E",
+        "AGS987591K7"
+      ],
+      "fins": [
+        "5CC",
+        "8488CE"
+      ],
+      "drawings": [
+        "D22801178992"
+      ],
+      "software": [
+        "LA7C64D57DF",
+        "LE1C320FA60"
+      ],
+      "zones": [
+        "263",
+        "173"
+      ],
+      "figures": [
+        "FIG-22-80-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00479"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111277",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-C-22-80-11-000-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-22-80-11-400-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-22-80-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "navigation database",
+      "partition",
+      "second load path",
+      "mounting tray",
+      "database cycle"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Customer Services Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-22-2001",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, and before the operator moves to worldwide navigation database coverage.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-111277",
+      "manpower": {
+        "elapsed_time_hours": 6,
+        "manhours": 10,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K2280-2001-01",
+        "kit_available_from": "2022-08-05",
+        "parts_required": [
+          {
+            "part_number": "HES490975-50",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2280124326903",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "EN462879-3E",
+            "qty": 12,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS987591K7",
+            "qty": 12,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2280111910946",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Cable ties, self-locking",
+          "Contact cleaner, electrical"
+        ],
+        "tooling": [
+          "Torque wrench 2-20 Nm",
+          "Maintenance terminal"
+        ]
+      },
+      "weight_change_kg": 1.1,
+      "accomplishment_steps": 10,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2022-06-20",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

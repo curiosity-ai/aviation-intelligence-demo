@@ -1,0 +1,263 @@
+[
+  {
+    "doc_id": "PAWO-148830-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Segregated Routing for the Engine Electronic Control Harness",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-20",
+      "ata_6d": "73-20-11",
+      "title": "Engine Fuel Control — Electronic Control Unit"
+    },
+    "secondary_ata": [
+      "73-20-12"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "CVX-7270"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the engine control harness segregation change, opened to decide who owns the engine change documentation update and delegated to the powerplant integration office.",
+    "sections": {
+      "objective": "Establish what has to change in the engine change and engine build-up documentation now that two routing standards exist in service, and decide which organisation owns that change.",
+      "findings_summary": "The work was delegated to the powerplant integration office. Two routing standards will coexist for at least a decade, and an engine moved between a modified and an unmodified aircraft carries a harness that will not fit the support brackets on the receiving fan case. Nothing in the engine change documentation currently records the routing standard, so the mismatch is only discovered when the engine is on the wing. The wiring content and the installation task both state the standard correctly, so the gap is specifically in the engine change path, which is owned by powerplant integration and not by the systems chapter that raised the modification. Two items were confirmed: the wiring sheet shows both routes correctly, and the installation task carries the separation measurement that is the acceptance for either standard.",
+      "next_steps": "Delegate the engine change documentation update to the powerplant integration office, with the requirement that the routing standard is recorded on the engine record and checked before an engine is moved between aircraft. No change is required to the wiring content or to the installation task."
+    },
+    "entities": {
+      "part_numbers": [
+        "EN25879-6A",
+        "LN953956K3",
+        "AGS860444K6"
+      ],
+      "fins": [
+        "6EF",
+        "9EF"
+      ],
+      "drawings": [
+        "D73201179350"
+      ],
+      "software": [],
+      "zones": [
+        "462",
+        "423"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-148830",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "harness routing",
+      "engine change",
+      "delegation",
+      "historical"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-148830-01",
+      "subject_mod": "MOD-148830",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-21",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-06-08",
+      "due_date": "2026-07-31",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 104
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "73",
+          "92",
+          "71"
+        ],
+        "ata_4d": [
+          "73-20",
+          "92-51",
+          "71-00"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "T00090",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "AGS860444K6",
+            "LN953956K3"
+          ],
+          "fins": [
+            "6EF",
+            "9EF"
+          ],
+          "drawings": [
+            "D73201179350"
+          ],
+          "zones": [
+            "423"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "two channels running in one bundle inside a fire zone",
+          "engine moved between aircraft at different standards"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Check the engine change documentation for a routing standard record",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm the wiring content shows both routes",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "WDM-T-92-51-12",
+          "doc_type": "WDM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS860444K6"
+            ],
+            "shared_fins": [
+              "6EF",
+              "9EF"
+            ],
+            "shared_zones": [
+              "423",
+              "462"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The sheet shows both channel routes with the fire zone boundary drawn, which is what an engineer needs to establish the standard from the wiring content. It was reviewed to confirm the gap is not here.",
+          "resolution": "No change. The sheet is correct."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-73-20-11-400-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN25879-6A",
+              "LN953956K3",
+              "AGS860444K6"
+            ],
+            "shared_fins": [
+              "6EF",
+              "9EF"
+            ],
+            "shared_zones": [
+              "462",
+              "423"
+            ],
+            "shared_ata_6d": [
+              "73-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task carries the separation measurement that accepts either standard, but it assumes the fan case already has the support brackets. On an engine moved from a modified aircraft the brackets are on the engine side and the assumption fails.",
+          "resolution": "Delegated to powerplant integration with the engine change documentation update."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-149970",
+          "doc_type": "MOD",
+          "reason": "Same ATA 6D and the same control unit, and it is declared concurrent with the routing change, but it concerns the data load format and the loading procedure and has no bearing on where the harness runs."
+        }
+      ],
+      "conclusion": "Engine change documentation update delegated to powerplant integration.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

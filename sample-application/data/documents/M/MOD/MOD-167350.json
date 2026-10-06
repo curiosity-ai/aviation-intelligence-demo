@@ -1,0 +1,159 @@
+[
+  {
+    "doc_id": "MOD-167350",
+    "doc_type": "MOD",
+    "title": "Filter Element and Position Transmitter Change on the Ram Air Turbine",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-08-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-20",
+      "ata_6d": "29-20-12",
+      "title": "Auxiliary System — Ram Air Turbine"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-08-05",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "A coarser filter element and a contactless position transmitter are launched for the ram air turbine, after deployment test findings traced slow stow indications to filter blocking and to transmitter wear rather than to the actuator.",
+    "sections": {
+      "reason": "Scheduled ram air turbine deployment tests produced eleven slow stow indications across the fleet in three years. Nine of the eleven were closed by replacing the actuator, and in seven of those the removed actuator tested serviceable. Bench work on returned assemblies found two independent contributors: a filter element blocking with fine wear debris after a small number of deployments, and a contacting position transmitter whose wiper track degrades in the same environment. Neither had been identified because the test only reports the elapsed stow time.",
+      "description": "The filter element D2920128017062 is replaced by a coarser item with a higher dirt capacity and a bypass indicator that latches, so that a blocked filter is visible without a strip. The position transmitter D2920129947503 is replaced by a contactless unit with the same electrical interface, and the accumulator D2920125958145 is re-charged to a slightly higher pre-charge to recover the stow rate lost to the coarser element. Arrangement is on drawing D29201256290. Work is in the turbine bay and the adjacent equipment area, zones 151 and 173, with the turbine locked in the stowed position. The turbine actuator 17GA is disturbed and refitted unchanged, and the turbine sensor 90GG is replaced with the transmitter.",
+      "effects": "Estimated mass increase of 0.9 kg per aircraft. Electrical load reduced by 6 VA. One-way interchangeable: the contactless transmitter drives the existing indication path, but the contacting transmitter must not be fitted to a post-modification harness because the excitation differs. Slow stow indications are expected to fall by around ninety per cent on the modelled failure rates, which removes an actuator removal that costs four days each time. Dispatch relief for the turbine is unchanged. The deployment test task needs a new acceptance criterion and a bypass indicator check.",
+      "embodiment_note": "Launched for production, retrofit and spares. Retrofit takes one shift with the turbine bay open and is normally combined with the scheduled deployment test so that the turbine only has to be cycled once.",
+      "open_points": "Pre-analysis must confirm that the higher accumulator pre-charge stays inside the qualified envelope for the existing hose set, and whether the hydraulic indicating documentation has to change for the latching bypass indicator."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2920128017062",
+        "D2920129947503",
+        "D2920125958145"
+      ],
+      "fins": [
+        "17GA",
+        "90GG"
+      ],
+      "drawings": [
+        "D29201256290"
+      ],
+      "software": [],
+      "zones": [
+        "151",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [],
+    "keywords": [
+      "ram air turbine",
+      "filter element",
+      "position transmitter",
+      "slow stow",
+      "deployment test"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Hydraulic Systems Design Office"
+    },
+    "type_data": {
+      "mod_number": 167350,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1435"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.9,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": -6,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2920128017062",
+        "D2920129947503",
+        "D2920125958145"
+      ],
+      "fins_affected": [
+        "17GA",
+        "90GG"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 34,
+      "estimated_cost_keur": 410,
+      "lead_time_weeks": 40,
+      "production_impact": "Cut-in planned once the contactless transmitter qualification is complete",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

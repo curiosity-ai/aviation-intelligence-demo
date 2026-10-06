@@ -1,0 +1,324 @@
+[
+  {
+    "doc_id": "PAWO-111862-02",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis Round Two — Re-Routed Waste Line Clearance at the Rear Lavatories",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-12",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "38",
+      "ata_4d": "38-30",
+      "ata_6d": "38-30-11",
+      "title": "Waste Disposal — Vacuum Toilet Assembly"
+    },
+    "secondary_ata": [
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "CBS"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-12",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Second pre-analysis round on the rear lavatory waste line re-routing, opened after the first round found that the new line path crosses structure covered by an in-service repair scheme and by a cabin lining standard.",
+    "sections": {
+      "objective": "Close the single open point left by the first round: establish whether the re-routed waste line can be installed on aircraft that carry in-service structural repairs or the later cabin lining standard in the same area, and what the embodiment instruction has to check before the line is cut in.",
+      "scope_note": "This round is deliberately narrow. It covers only the structural and furnishing content in the space the re-routed line passes through, which is the floor structure and the lower shell below the rear lavatories. The vacuum system content itself was cleared in the first round and is not re-examined. Nothing outside ATA 25, 38, 51 and 53 was searched, and the search is limited to the operator sub-fleet named in the candidate applicability.",
+      "method_note": "Entity linking returned nothing useful in this round, which is itself the finding: the waste system and the structure below it share no part numbers, no functional item numbers and no zones, because the two are catalogued from opposite sides of the floor. The whole result set came from semantic similarity run over the physical description of the line path against repair and lining content, and from a manual review of the repair schemes applicable to the area by an engineer who knew what to look for.",
+      "findings_summary": "Five items are confirmed and one is blocking. The re-routed line runs outboard and down before it turns aft, and on that leg it passes over the area that the external patch repair for the aft lower shell bilge line occupies. An aircraft carrying that repair cannot take the new line without the repair's repeat inspection access being lost, and three aircraft in the operator sub-fleet carry it. That is the blocking item and it was found by description alone: the two documents share nothing an entity search could match. The general metallic repair practice is implicated because the floor cover has to be re-cut and the existing fastener holes fall inside the new cut-out, which needs the oversize or plug method rather than a new hole. The later cabin lining standard, its retrofit bulletin and the lining installation task all describe a panel set that has to clear the new line path and none of them know about it.",
+      "next_steps": "Obtain a written position from the repair design owner on whether the bilge patch and the re-routed line can coexist, and if they cannot, define the pre-embodiment check. Confirm with the furnishing owner that the lining panel clears the new path with the panel standard fitted to later aircraft. Add the hole restoration method to the embodiment instruction rather than leaving it to the technician. Re-submit for design review once the repair position is received."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3830113615277",
+        "D3830119707579",
+        "D3830119251732",
+        "AES710749-83"
+      ],
+      "fins": [
+        "7WP",
+        "804WM"
+      ],
+      "drawings": [
+        "D38300053631"
+      ],
+      "software": [],
+      "zones": [
+        "941",
+        "943",
+        "945"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00283",
+        "C00484"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111862",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-250216",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "waste line routing",
+      "repair clearance",
+      "second round",
+      "lining standard"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111862-02",
+      "subject_mod": "MOD-111862",
+      "source_io": "IO-C-250216",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-01-12",
+      "due_date": "2026-04-24",
+      "analysis_round": 2,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA",
+          "ESZS"
+        ],
+        "estimated_manhours": 60,
+        "spent_manhours": 38
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "38",
+          "25",
+          "51",
+          "53"
+        ],
+        "ata_4d": [
+          "38-30",
+          "25-50",
+          "51-70",
+          "53-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "C00001",
+          "to": "C00717"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3830113615277",
+            "D3830119707579",
+            "D3830119251732"
+          ],
+          "fins": [
+            "7WP",
+            "804WM"
+          ],
+          "drawings": [
+            "D38300053631"
+          ],
+          "zones": [
+            "941",
+            "943",
+            "945"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "a service line re-routed across the aft floor structure and the lower shell",
+          "panel or repair material occupying the space below a rear lavatory monument"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search repair schemes applicable to the structure below the rear lavatories",
+          "method": "SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Manual review of the line path against the applicable repair set",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the cabin lining standard clearance over the new line path",
+          "method": "SEMANTIC",
+          "owner": "EAAM",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-C-53-31-12-902",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The two documents share no identifier whatsoever and are catalogued from opposite sides of the cabin floor. The connection is entirely physical and is only visible in the descriptive text: one describes an external patch over the bilge line between two stations, the other describes a service line re-routed outboard and down through the same bay."
+          },
+          "rationale": "The repair is life limited and carries a repeat ultrasonic inspection of its perimeter that is performed from inside the compartment. The re-routed line passes directly over the inboard access to that perimeter, so on an aircraft carrying the patch the inspection can no longer be performed. Three aircraft in the operator sub-fleet carry it today.",
+          "resolution": "Obtain a written position from the repair design owner and, if the two cannot coexist, add a mandatory pre-embodiment check for this repair to the embodiment instruction."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SRM-C-51-70-11-908",
+          "doc_type": "SRM",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Connected by the description of re-cutting an existing panel and reusing existing fastener positions; no identifier is shared."
+          },
+          "rationale": "The floor cover has to be re-cut for the new line path and several existing fastener holes fall inside the new cut-out boundary or within the minimum edge distance of it. Restoring those positions is exactly what the general hole practice covers, and leaving the method to the technician invites an unapproved repair.",
+          "resolution": "Name the applicable hole restoration method in the embodiment instruction and state which of the two methods is acceptable at each affected position."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-111166",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both describe panel work in the space between the cabin floor and the lower shell, with no shared identifier and no shared zone because the two are catalogued from different compartments."
+          },
+          "rationale": "The impact resistant panel set has a thicker lower edge with a rolled return that projects further into the bay than the earlier lining. The new line path runs close to that projection at one position and the clearance has not been measured on an aircraft carrying the panel standard.",
+          "resolution": "Measure the clearance on a delivered aircraft at the panel standard and adjust the line path or the clip position if required."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "CRN-25-1018",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The lining conversion bulletin is offered per compartment and instructs the technician to install panels without drilling structure. If the new line path requires a clip position in that bay, the bulletin either has to allow it or has to be sequenced after the line change.",
+          "resolution": "Decide the embodiment order between the two changes and state it in whichever is published second."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-C-25-50-11-400-008-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The lining installation task requires every fastener to be started by hand before any is tightened, which assumes an unobstructed panel approach. A service line clipped across the bay changes the approach angle at one position and the task should say so.",
+          "resolution": "Add a note to the task once the line path is frozen; no change to the installation sequence is expected."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111875",
+          "doc_type": "MOD",
+          "reason": "Returned on the shared vocabulary of compartment access, lining panel removal and clearance to a longer component body, but it is a cargo smoke detection change in the aft hold on the other side of the floor structure, with no shared zone and no physical relationship to the waste line path."
+        },
+        {
+          "doc_id": "SRM-C-52-30-13-903",
+          "doc_type": "SRM",
+          "reason": "Surfaces as a temporary repair with a strap across a deflected region, which matches the search phrasing closely, but it repairs a cargo door latch bracket at the door surround and has no possible interaction with a line routed under the rear lavatories."
+        }
+      ],
+      "conclusion": "Not yet issued. The first round closed everything except the structural clearance; this round has confirmed one blocking repair conflict and is awaiting the repair design position.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

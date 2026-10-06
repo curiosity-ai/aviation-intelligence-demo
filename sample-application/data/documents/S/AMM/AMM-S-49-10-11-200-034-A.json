@@ -1,0 +1,174 @@
+[
+  {
+    "doc_id": "AMM-S-49-10-11-200-034-A",
+    "doc_type": "AMM",
+    "title": "Auxiliary Power Unit Air Intake Flap — Travel and Seal Condition Check",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-08-11",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-10",
+      "ata_6d": "49-10-11",
+      "title": "Power Plant — APU Installation"
+    },
+    "secondary_ata": [
+      "49-10-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-03-05",
+      "released": "2018-12-03",
+      "revised": "2023-08-11",
+      "effective": "2023-08-30"
+    },
+    "abstract": "Scheduled check of the intake flap travel, opening time and seal land condition, with the cold-soak variant that applies at stations where the aircraft has stood below zero overnight.",
+    "sections": {
+      "purpose": "This task establishes that the intake flap reaches the fully open and fully closed positions inside the specified time, that the open indication is correct, and that the seal land is fit to keep water out of the compartment.",
+      "job_setup_note": "Record the ambient temperature before you start; the acceptance time depends on it. Where the aircraft has stood below zero overnight, use the cold-soak column of the limits table and do the check before the first start of the day rather than after it, otherwise the mechanism will already have been warmed by the compartment.",
+      "procedure": "1. Record the ambient temperature and whether the aircraft has been cold soaked. 2. Isolate the auxiliary power unit and put the warning notice in the flight compartment. 3. Open the access panel in zone 393. 4. Do a general visual inspection of the flap seal land for cuts, hardening and de-icing fluid residue. Clean the land if residue is present and record that you did. 5. Restore power and command the flap open. Time the movement from the command to the open indication. 6. Repeat for the closing movement. 7. Do two further cycles and record all times. WARNING: KEEP CLEAR OF THE FLAP. IT MOVES WITHOUT WARNING AND THE EDGE IS SHARP. 8. Compare every recorded time against the correct column of the limits table. 9. Where any time is outside limits, examine the actuator output bearing through the aperture and check the shroud 5135PB for movement. CAUTION: DO NOT LUBRICATE THE OUTPUT BEARING. IT IS SEALED AND ANY GREASE WILL COLLECT DUST. 10. Confirm that the open indication clears within one second of the flap leaving the open position. 11. Confirm the cowl latch 52PB is secure and that the bracket 64PA shows no fretting. 12. Close the access panel.",
+      "close_out": "Record all four opening and closing times, the ambient temperature and the cold-soak state. Where a time is outside limits, raise a defect quoting this task and the recorded times, and do not defer it into a period of forecast freezing weather."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4910119498267",
+        "D4910120418494"
+      ],
+      "fins": [
+        "52PB",
+        "5135PB",
+        "64PA",
+        "3PA"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "393",
+        "394"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-49-10-11-000-033-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-49-10-11-810-810",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flap travel check",
+      "opening time",
+      "cold soak",
+      "seal land",
+      "de-icing residue"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "49-10-11-200-034-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft; the cold-soak column applies below minus five degrees Celsius",
+      "manhours": 2.0,
+      "personnel": 1,
+      "elapsed_time_hours": 1.5,
+      "access": {
+        "zones": [
+          "393",
+          "394"
+        ],
+        "access_panels": [
+          "393BL",
+          "393AL"
+        ],
+        "doors": [
+          "Tail cone access door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep clear of the flap during the cycle test.",
+          "Isolate the auxiliary power unit before opening the panel."
+        ],
+        "tooling": [
+          {
+            "reference": "98D49101-101",
+            "description": "Stopwatch, calibrated"
+          },
+          {
+            "reference": "98D49101-084",
+            "description": "Tail cone access stand"
+          }
+        ],
+        "consumables": [
+          "Cleaning cloth, lint free",
+          "Solvent, general purpose"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-49-10-11-000-033-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

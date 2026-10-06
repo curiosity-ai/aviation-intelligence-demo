@@ -1,0 +1,314 @@
+[
+  {
+    "doc_id": "PAWO-130940-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Wing Anti-Ice Valve Feedback Standard and Retrofit Extension to the Evo Fleet",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Airfoil Anti-Ice — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-20",
+      "released": "2026-06-18",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed work order examining whether the non-contact valve feedback standard can be extended across the whole twin-engine fleet and what it does to the two fault isolation procedures that were written around the potentiometric sensor.",
+    "sections": {
+      "objective": "Determine whether the reprofiled butterfly and non-contact position feedback standard can be extended from the production cut-in to the full SOLANO-30, SOLANO-34, SOLANO-38 and SOLANO-39 population, and identify the maintenance and troubleshooting content written around the old potentiometric feedback that would become misleading once the fleet is mixed. The work order was raised internally by the ice protection system office after a second season of no-fault-found valve removals on aircraft that had not received the change.",
+      "findings_summary": "Three items were confirmed and none of them blocks the extension. The fault isolation procedure for the climb anti-ice message resolves on a resistance sweep of the potentiometric track, a measurement that has no meaning on a non-contact sensor; run against a modified valve it sends the mechanic to a serviceable unit. The operational test task has the same problem in its acceptance table, which still quotes a resistance band rather than a duty cycle. The third item is softer: the trim air valve regulator change from the same period shares the ATA 36-10 bleed distribution context and rewrote a similar acceptance table, and its author had already solved the mixed-fleet wording problem in a way worth copying rather than reinventing.",
+      "next_steps": "Raise troubleshooting and maintenance change requests to split both acceptance tables by feedback standard, with the modification stated as the effectivity discriminator rather than an MSN break. Reuse the mixed-fleet wording already agreed for the trim air regulator table. Confirm with the ice protection system office that no dispatch relief depends on the resistance measurement before the changes are issued, and close the no-fault-found removal action once they are."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010115902013",
+        "EN229422-9A",
+        "EN906402-5B"
+      ],
+      "fins": [
+        "6HA"
+      ],
+      "drawings": [
+        "D30100042160"
+      ],
+      "software": [],
+      "zones": [
+        "512",
+        "551",
+        "611"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-130940",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "TSM-S-30-10-11-810-802",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-30-10-11-700-015-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-130510",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-36-10-11-812-808",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "anti-ice valve",
+      "position feedback",
+      "fault isolation",
+      "retrofit extension"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-130940-01",
+      "subject_mod": "MOD-130940",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-18",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-04-20",
+      "due_date": "2026-06-26",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ETGC"
+        ],
+        "estimated_manhours": 60,
+        "spent_manhours": 44
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34",
+          "SOLANO-38",
+          "SOLANO-39"
+        ],
+        "ata_2d": [
+          "30",
+          "36",
+          "21"
+        ],
+        "ata_4d": [
+          "30-10",
+          "36-10",
+          "21-60"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "S00003",
+          "to": "S01900"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3010115902013",
+            "EN229422-9A",
+            "EN906402-5B"
+          ],
+          "fins": [
+            "6HA"
+          ],
+          "drawings": [
+            "D30100042160"
+          ],
+          "zones": [
+            "512",
+            "551",
+            "611"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "intermittent anti-ice fault message in the climb with nothing found on the ground",
+          "valve position feedback replaced by a non-contact sensor"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search maintenance and troubleshooting content on ATA 30-10",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review acceptance tables that quote feedback resistance",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Look for comparable mixed-fleet wording elsewhere in bleed distribution",
+          "method": "SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TSM-S-30-10-11-810-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3010115902013",
+              "EN229422-9A"
+            ],
+            "shared_fins": [
+              "6HA"
+            ],
+            "shared_zones": [
+              "512",
+              "551",
+              "611"
+            ],
+            "shared_ata_6d": [
+              "30-10-11"
+            ],
+            "similarity_note": "Returned first by both the entity link on the valve and its FIN position and by the similarity search on the climb fault symptom."
+          },
+          "rationale": "The procedure resolves on a resistance sweep of the potentiometric feedback track. On a modified valve there is no track to sweep, so the branch either fails to complete or condemns a serviceable unit. Extending the standard fleet-wide multiplies the exposure.",
+          "resolution": "Split the isolation branch by feedback standard and give the non-contact sensor its own duty cycle check."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-S-30-10-11-700-015-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3010115902013",
+              "EN229422-9A",
+              "EN906402-5B"
+            ],
+            "shared_fins": [
+              "6HA"
+            ],
+            "shared_zones": [
+              "512",
+              "551",
+              "611"
+            ],
+            "shared_ata_6d": [
+              "30-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The operational test acceptance table quotes a feedback resistance band across the sweep. The modified valve reports position as a duty cycle and cannot satisfy the table at any point, so the test as written is not passable post-embodiment.",
+          "resolution": "Rewrite the acceptance table with a standard-dependent column and reference the modification rather than an MSN break."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-130510",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "No shared identifier at all. Both replace a mechanically referenced actuator element by an electrically commanded one and both had to rewrite an acceptance table for a mixed fleet, but one is written in cabin temperature vocabulary and the other in ice protection vocabulary."
+          },
+          "rationale": "The trim air regulator change solved the same documentation problem three years earlier and agreed a form of words for standard-dependent acceptance tables. Reinventing it produces two different conventions for the same situation.",
+          "resolution": "Reuse the agreed wording; no design action."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "TSM-S-36-10-11-812-808",
+          "doc_type": "TSM",
+          "reason": "Surfaces on the bleed distribution context and on the shared ATA 36-10 secondary chapter, and its symptom text reads close to the anti-ice message. It isolates a precooler outlet leak indication, touches no anti-ice valve identifier and its resolution path never enters the wing leading edge."
+        }
+      ],
+      "conclusion": "The feedback standard can be extended to the whole twin-engine fleet. Two manual change requests are required first; neither is a design constraint.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

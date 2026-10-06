@@ -1,0 +1,317 @@
+[
+  {
+    "doc_id": "PAWO-154310-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Flight Warning Computer Standard H2 Alert Priority Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-50-12",
+      "31-60"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-17",
+      "released": "2026-06-09",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the standard H2 alerting change, opened when an operator asked to embody it on part of a fleet, and closed with a rejection of the partial embodiment on training grounds.",
+    "sections": {
+      "objective": "An operator with a mixed fleet asked whether the standard H2 computer could be embodied on the Evo sub-fleet only, leaving the remaining aircraft at the earlier priority order. The round was opened to establish what a split fleet would mean for the published content and for the crews who fly across it.",
+      "findings_summary": "Four items were confirmed and the partial embodiment was rejected. The retrofit bulletin already states that the change must not be embodied on part of a fleet without a briefing plan, and the operator had not produced one. The warning system test task selects a priority table by loaded software part number, which handles a split fleet correctly on the ground but tells the crew nothing in the air. The trouble shooting procedure explicitly warns the engineer not to treat a changed alert order as a fault, which is the maintenance mirror of the crew problem and shows the issue had already been recognised on one side of the house. The fourth finding is the crew description of the alerting hierarchy, which now has to describe two orders in one document if the fleet is split, and which the operator's own training material copies verbatim.",
+      "next_steps": "Reject the partial embodiment and tell the operator that the change is available once a briefing plan is in place. Ask flight operations support to state in the crew entry how a mixed fleet should be handled. Re-open the request when the operator returns with a training position."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150128195373",
+        "DE823727-50",
+        "IBE53464-77"
+      ],
+      "fins": [
+        "7462FW",
+        "2993FW",
+        "668FP2"
+      ],
+      "drawings": [
+        "D31501108484"
+      ],
+      "software": [
+        "LB6NE4646B3"
+      ],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-154310",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "partial embodiment",
+      "alert priority",
+      "mixed fleet",
+      "briefing plan"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-154310-01",
+      "subject_mod": "MOD-154310",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-09",
+      "outcome": "REJECTED",
+      "raised_date": "2026-02-17",
+      "due_date": "2026-06-05",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 115,
+        "spent_manhours": 124
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "31"
+        ],
+        "ata_4d": [
+          "31-50",
+          "31-60"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D3150128195373",
+            "IBE53464-77"
+          ],
+          "fins": [
+            "7462FW",
+            "2993FW"
+          ],
+          "drawings": [
+            "D31501108484"
+          ],
+          "zones": [
+            "211",
+            "214"
+          ],
+          "software": [
+            "LB6NE4646B3"
+          ]
+        },
+        "similarity_seeds": [
+          "aural alert priority order differing between aircraft of one fleet",
+          "crew briefing required before an alerting change is embodied"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish what a split fleet means for the published content",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review the maintenance content for split fleet handling",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the crew description and the operator training material",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-31-1005",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3150128195373"
+            ],
+            "shared_fins": [
+              "7462FW"
+            ],
+            "shared_zones": [
+              "211"
+            ],
+            "shared_ata_6d": [
+              "31-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin states that the change must not be embodied on part of a fleet without a briefing plan, and no plan was produced with the request.",
+          "resolution": "Withhold the embodiment until a briefing plan is provided."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-Z-31-50-11-810-813",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "DE823727-50"
+            ],
+            "shared_fins": [
+              "7462FW",
+              "2993FW"
+            ],
+            "shared_zones": [
+              "214"
+            ],
+            "shared_ata_6d": [
+              "31-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure already warns the engineer not to treat a changed alert order as a fault, which shows the split fleet problem had been recognised on the maintenance side.",
+          "resolution": "No change required; the caution already covers the case."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-Z-31-50-11-700-033-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "IBE53464-77"
+            ],
+            "shared_fins": [
+              "668FP2"
+            ],
+            "shared_zones": [
+              "211"
+            ],
+            "shared_ata_6d": [
+              "31-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The warning system test selects the priority table by loaded software part number, which handles a split fleet correctly on the ground but tells the crew nothing in the air.",
+          "resolution": "No change required on the maintenance side."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "FCOM-Z-DSC-31-50-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew entry describes responding to alerts in the order presented; the modification text describes a priority table in protected memory and discrete inputs. The two share no identifier and read as different subjects."
+          },
+          "rationale": "The crew description would have to carry two alert orders in one document if the fleet is split, and the operator copies that description verbatim into its own training material.",
+          "resolution": "Ask flight operations support to state how a mixed fleet is to be handled before the request is re-opened."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-22-1145",
+          "doc_type": "SB",
+          "reason": "Surfaced by the shared vocabulary of a computer standard change and a software load, but it loads a flight management computer standard and has no interface with the alerting hierarchy or with the aural priority table."
+        }
+      ],
+      "conclusion": "Closed with the request rejected on training rather than engineering grounds. The change itself is sound and remains available once a briefing plan exists.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

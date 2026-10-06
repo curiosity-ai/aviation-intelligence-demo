@@ -1,0 +1,174 @@
+[
+  {
+    "doc_id": "MOD-153315",
+    "doc_type": "MOD",
+    "title": "Passenger Oxygen Chemical Generator Change to a Twenty-Two Minute Duration Standard",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2022-06-08",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "35",
+      "ata_4d": "35-20",
+      "ata_6d": "35-20-11",
+      "title": "Passenger Oxygen — Chemical Oxygen Generators"
+    },
+    "secondary_ata": [
+      "25-20",
+      "33-20"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "Z09781",
+      "production_cut_in_date": "2019-05-20",
+      "retrofit_via": [
+        "ZPH-35-1012"
+      ]
+    },
+    "dates": {
+      "created": "2018-02-19",
+      "released": "2019-01-29",
+      "revised": "2022-06-08",
+      "effective": "2022-06-29"
+    },
+    "abstract": "Introduction of a twenty-two minute chemical oxygen generator for the passenger service units, so that operators flying extended range routes over high terrain can meet the descent profile without carrying gaseous oxygen.",
+    "sections": {
+      "reason": "Operators opening routes over high terrain found that the published fifteen minute generator duration did not cover the drift-down profile their route analysis required, and the only alternative offered was a gaseous system that costs weight, cabin volume and a servicing infrastructure at line stations. Nine operators requested a longer duration solid generator between 2016 and 2018, and two of them made it a condition of an aircraft order. The chemical generator supplier had by then qualified a twenty-two minute core in a compatible envelope, which made a change feasible without touching the passenger service unit itself.",
+      "description": "The generator core is replaced by the twenty-two minute item, retaining the existing passenger service unit envelope and the existing lanyard mechanism. The accumulator D3520114349032 in the distribution manifold is replaced by an item rated for the longer flow duration, and the filter D3520117593776 upstream of it is changed to match. The mask hose length is unchanged. Because the new core runs hotter over the longer duration, the thermal blanket in the passenger service unit cavity is extended aft and the ceiling panel in zones 254 and 265 is fitted with an additional standoff. No wiring is changed and the fire detection loop routing is unaffected. Detail is on drawings D35201154822 and D35201170600.",
+      "effects": "Mass increase of 14.2 kilograms per aircraft in a single-class 180 seat layout, distributed along the cabin ceiling, with a centre of gravity effect below 0.03 per cent MAC. No electrical load change. Not interchangeable: the manifold accumulator and the generator core must be at the same standard, and mixing durations in one cabin is not permitted. The cabin oxygen dispatch condition in the minimum equipment list is unchanged in structure but the allowable number of inoperative units changes with the longer duration. The passenger oxygen inspection task, the parts figure and the flight crew limitation on maximum cabin altitude duration all require re-issue.",
+      "embodiment_note": "Production cut-in at MSN Z09781 in May 2019 on the Evo models only. Retrofit is by service bulletin and is a cabin task, quoted at three shifts for a 180 seat layout, normally combined with a cabin refresh. Generators are dated stock with a fifteen year life, so operators are advised to align embodiment with their existing replacement cycle."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3520114349032",
+        "D3520117593776"
+      ],
+      "fins": [],
+      "drawings": [
+        "D35201154822",
+        "D35201170600"
+      ],
+      "software": [],
+      "zones": [
+        "254",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z09781"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-35-1012",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-Z-35-20-11-200-031-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-Z-35-20-11-FIG-15",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "chemical oxygen generator",
+      "twenty-two minute duration",
+      "drift down",
+      "passenger service unit",
+      "thermal blanket"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Neuhafen",
+      "role": "Cabin Systems Design"
+    },
+    "type_data": {
+      "mod_number": 153315,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1441",
+          "CS 25.1443",
+          "CS 25.1447"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 14.2,
+      "balance_impact": "Distributed along the cabin ceiling, CG shift below 0.03 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3520114349032"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3520117593776"
+      ],
+      "fins_affected": [],
+      "software_affected": [],
+      "estimated_manhours": 460,
+      "estimated_cost_keur": 2350,
+      "lead_time_weeks": 56,
+      "production_impact": "Cut-in at MSN Z09781, generator stock managed by delivery date",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

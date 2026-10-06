@@ -1,0 +1,162 @@
+[
+  {
+    "doc_id": "TSM-S-80-10-11-810-812",
+    "doc_type": "TSM",
+    "title": "Engine Hung Start at High Field Elevation",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-05-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "36-10",
+      "49-50"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7000"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-10-19",
+      "released": "2021-05-27",
+      "revised": null,
+      "effective": "2021-06-15"
+    },
+    "abstract": "Fault isolation for a start that hangs at high field elevation, working through the supply mass flow before the starter itself, and using the dry motoring figures as the discriminator.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an engine start that hangs at high field elevation, where the same engine starts normally at sea level.",
+      "fault_description": "The start proceeds normally to a point and then the rotor speed stops rising short of the light-up condition, most often on the second engine and most often in the middle of the day. The crew abandon the start and, on a second attempt with the auxiliary power unit given time to recover, it usually succeeds. This is a mass flow problem and not a starter problem: at elevation the supply is already marginal and a small loss that is invisible at sea level becomes the whole margin. Replacing the starter is the common wrong answer, and the removed unit will test serviceable every time.",
+      "isolation_procedure": "1. Establish the field elevation and the ambient temperature at which the hung starts occurred, and confirm that the engine starts normally at low elevation. 2. Check the auxiliary power unit bleed pressure and temperature during a start attempt and compare against the schedule. 3. Where the bleed supply is below schedule, the fault is upstream of this procedure; use the auxiliary power unit bleed procedure. 4. Do a dry motoring run and record the peak rotor speed and the time to reach it. 5. Compare both against the previous record for the engine. A fall of more than five per cent in peak speed indicates a leaking duct joint. 6. Open the fan cowls and do a borescope inspection of the duct joint faces. WARNING: DO NOT OPEN THE FAN COWLS ABOVE THE CROSSWIND LIMIT. 7. Measure the fretting depth at four points on each joint face and compare against the limits table. 8. Where the joint is outside limits, remove the duct and re-machine or replace as applicable. 9. Where the joints are inside limits, check the clamp tension at both clamps. 10. Where the two-piece clamp is fitted, confirm that the spherical seat is free to move. 11. Where all of the above pass, and only then, replace the air starter motor. 12. After any action, repeat the dry motoring run and confirm the peak speed has recovered.",
+      "dispatch_note": "The aircraft may be dispatched with a hung start history at elevation provided the engine has started normally on the most recent attempt and the auxiliary power unit duty cycle is respected. Crews should be advised that a cross-bleed start from the running engine avoids the condition entirely."
+    },
+    "entities": {
+      "part_numbers": [
+        "D8010119758805",
+        "PE187919-09",
+        "WES955482-79",
+        "EN290030-3C"
+      ],
+      "fins": [
+        "983ES",
+        "5193ES",
+        "2788ES3"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "421",
+        "456",
+        "481"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-80-10-11-400-040-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "hung start",
+      "field elevation",
+      "dry motoring",
+      "duct fretting",
+      "clamp tension"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "80-10-11-810-812",
+      "fault_symptom": "Engine start hangs below the light-up rotor speed at field elevations above 2 500 metres",
+      "fault_codes": [
+        "801011004",
+        "801011019"
+      ],
+      "warning_messages": [
+        "ENG START FAULT",
+        "ENG STARTER TIME EXCEEDED"
+      ],
+      "affected_fins": [
+        "983ES",
+        "5193ES",
+        "2788ES3"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Supply duct joint fretting causing mass flow loss",
+          "probability_pct": 50,
+          "fin": "2788ES3"
+        },
+        {
+          "cause": "Clamp tension relaxed or spherical seat bound",
+          "probability_pct": 22,
+          "fin": "5193ES"
+        },
+        {
+          "cause": "Auxiliary power unit bleed supply below schedule",
+          "probability_pct": 18,
+          "fin": "983ES"
+        },
+        {
+          "cause": "Air starter motor internal degradation",
+          "probability_pct": 10,
+          "fin": "2788ES3"
+        }
+      ],
+      "isolation_steps": 12,
+      "confirmation_task": "AMM-S-80-10-11-400-040-A",
+      "dispatch": {
+        "mel_item": "80-10-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Most recent start successful, auxiliary power unit duty cycle respected, cross-bleed start recommended at elevation"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

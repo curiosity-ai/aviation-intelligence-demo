@@ -1,0 +1,373 @@
+[
+  {
+    "doc_id": "AMM-Z-27-50-12-700-009-A",
+    "doc_type": "AMM",
+    "title": "Operational Test of the Flap Position Sensing System",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1990-11-28",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-12",
+      "title": "Flaps — Flap Position Sensing"
+    },
+    "secondary_ata": [
+      "27-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1990-02-09",
+      "released": "1990-11-28",
+      "revised": null,
+      "effective": "1990-12-19"
+    },
+    "abstract": "Operational test of the flap position sensing system through the full flap range, verifying the transmitted position at each detent, the asymmetry monitor and the fault annunciation on the flight deck.",
+    "sections": {
+      "purpose": "This task verifies that the flap position sensing system reports the correct position at every detent, that the asymmetry monitor operates at the design threshold and that the associated warning is annunciated correctly.",
+      "job_setup_note": "The test needs hydraulic power on the green and yellow systems and a clear area around both wings. Two people are required, one in the flight compartment and one observing the flap at the wing. Establish radio contact before you start. The indicated angle at each detent is accepted within 0.4 degrees of the published value, measured from the lower flange of the flap support rib, which is the rigging datum for this system. Do not run the test with the flap trestles in position or with any access panel open in the flap area.",
+      "procedure": "1. Make sure that the area around the flaps is clear and that all trestles and access equipment have been removed. WARNING: KEEP CLEAR OF THE FLAP AND SLAT SURFACES DURING THE TEST. THEY MOVE WITHOUT FURTHER WARNING WHEN THE LEVER IS SET. 2. Establish radio contact between the flight compartment and the wing observer. 3. Apply hydraulic power to the green and yellow systems. 4. Set the flap lever to position 1 and confirm the indication on the flight deck and the physical position at the wing. 5. Repeat for positions 2, 3 and FULL, and record the indicated angle at each detent. 6. Retract the flaps to zero and confirm the indication. 7. Do the asymmetry monitor test using the test set connected at the sensing valve FIN 3416KS4. CAUTION: DO NOT LEAVE THE TEST SET CONNECTED FOR LONGER THAN THE PERIOD GIVEN. THE INJECTED SIGNAL OVERRIDES THE REAL POSITION. 8. Confirm that the asymmetry warning appears at the design threshold and that the flap system stops. 9. Reset the system and confirm that the warning clears. 10. Disconnect the test set and confirm that the sensing valve pipe TF950088-45 is correctly secured. 11. Do a final full cycle and confirm no residual fault message.",
+      "close_out": "Remove hydraulic power and the test set. Confirm that no warning message remains on the flight deck. Record the indicated angle at each detent, the asymmetry threshold and the reset behaviour against the aircraft. Report any indicated angle outside tolerance before release to service."
+    },
+    "entities": {
+      "part_numbers": [
+        "TF950088-45",
+        "D2750126616735",
+        "AES390161K8"
+      ],
+      "fins": [
+        "3416KS4"
+      ],
+      "drawings": [
+        "D27501286380"
+      ],
+      "software": [],
+      "zones": [
+        "562",
+        "662",
+        "525"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-27-50-13-400-008-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-159570",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flap position sensing",
+      "operational test",
+      "asymmetry monitor",
+      "detent indication",
+      "test set"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "27-50-12-700-009-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft",
+      "manhours": 5.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "562",
+          "662",
+          "525"
+        ],
+        "access_panels": [
+          "562BL",
+          "662CL",
+          "525CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep clear of the flap and slat surfaces during the test.",
+          "Remove all trestles and access equipment before you apply hydraulic power.",
+          "Establish radio contact between the flight compartment and the wing.",
+          "Do not leave the test set connected longer than the stated period."
+        ],
+        "tooling": [
+          {
+            "reference": "98D27501-201",
+            "description": "Flap position sensing test set"
+          },
+          {
+            "reference": "98D27501-214",
+            "description": "Flap angle protractor, magnetic"
+          }
+        ],
+        "consumables": [
+          "Lockwire, corrosion resistant",
+          "Contact cleaner"
+        ],
+        "expendables": [
+          {
+            "part_number": "AES390161K8",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-Z-27-50-13-400-008-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-Z-27-50-12-700-009-A",
+    "doc_type": "AMM",
+    "title": "Operational Test of the Flap Position Sensing System",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2018-10-30",
+      "reason": "The rigging tolerance is re-stated against the reinforced rib datum so that the closing check does not fail on correctly rigged aircraft.",
+      "raised_by_pawo": "PAWO-154120-01",
+      "raised_by_finding": "F04",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-12",
+      "title": "Flaps — Flap Position Sensing"
+    },
+    "secondary_ata": [
+      "27-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1990-02-09",
+      "released": "1990-11-28",
+      "revised": "2018-10-30",
+      "effective": "2018-11-20"
+    },
+    "abstract": "Operational test of the flap position sensing system through the full flap range, verifying the transmitted position at each detent against the rigging datum of the rib standard fitted, the asymmetry monitor and the flight deck annunciation.",
+    "sections": {
+      "purpose": "This task verifies that the flap position sensing system reports the correct position at every detent, that the asymmetry monitor operates at the design threshold and that the associated warning is annunciated correctly.",
+      "job_setup_note": "The test needs hydraulic power on the green and yellow systems and a clear area around both wings. Two people are required, one in the flight compartment and one observing the flap at the wing. Establish radio contact before you start. The indicated angle at each detent is accepted within 0.4 degrees of the published value, but the datum the measurement is taken from depends on the rib standard. On the original rib the datum is the lower flange. On aircraft at the reinforced rib standard of MOD-154120 the datum is the upper cleat face, because the lower flange sits 1.6 millimetres further aft after reinforcement; measured from the old datum a correctly rigged flap reads about 0.3 degrees high and the closing check fails on good work. Read the rib standard from the aircraft configuration record before you set the protractor. Do not run the test with the flap trestles in position or with any access panel open in the flap area.",
+      "procedure": "1. Make sure that the area around the flaps is clear and that all trestles and access equipment have been removed. WARNING: KEEP CLEAR OF THE FLAP AND SLAT SURFACES DURING THE TEST. THEY MOVE WITHOUT FURTHER WARNING WHEN THE LEVER IS SET. 2. Establish radio contact between the flight compartment and the wing observer. 3. Apply hydraulic power to the green and yellow systems. 4. Set the flap lever to position 1 and confirm the indication on the flight deck and the physical position at the wing. 5. Repeat for positions 2, 3 and FULL, and record the indicated angle at each detent. 6. Retract the flaps to zero and confirm the indication. 7. Do the asymmetry monitor test using the test set connected at the sensing valve FIN 3416KS4. CAUTION: DO NOT LEAVE THE TEST SET CONNECTED FOR LONGER THAN THE PERIOD GIVEN. THE INJECTED SIGNAL OVERRIDES THE REAL POSITION. 8. Confirm that the asymmetry warning appears at the design threshold and that the flap system stops. 9. Reset the system and confirm that the warning clears. 10. Disconnect the test set and confirm that the sensing valve pipe TF950088-45 is correctly secured. 11. Do a final full cycle and confirm no residual fault message.",
+      "close_out": "Remove hydraulic power and the test set. Confirm that no warning message remains on the flight deck. Record the indicated angle at each detent, the datum used, the asymmetry threshold and the reset behaviour against the aircraft. Report any indicated angle outside tolerance before release to service."
+    },
+    "entities": {
+      "part_numbers": [
+        "TF950088-45",
+        "D2750126616735",
+        "AES390161K8"
+      ],
+      "fins": [
+        "3416KS4"
+      ],
+      "drawings": [
+        "D27501286380"
+      ],
+      "software": [],
+      "zones": [
+        "562",
+        "662",
+        "525"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-27-50-13-400-008-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-159570",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-154120",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flap position sensing",
+      "operational test",
+      "rigging datum",
+      "asymmetry monitor",
+      "detent indication"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "27-50-12-700-009-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft; the rigging datum depends on whether the reinforced flap support rib of MOD-154120 is fitted",
+      "manhours": 5.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "562",
+          "662",
+          "525"
+        ],
+        "access_panels": [
+          "562BL",
+          "662CL",
+          "525CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep clear of the flap and slat surfaces during the test.",
+          "Remove all trestles and access equipment before you apply hydraulic power.",
+          "Establish radio contact between the flight compartment and the wing.",
+          "Do not leave the test set connected longer than the stated period."
+        ],
+        "tooling": [
+          {
+            "reference": "98D27501-201",
+            "description": "Flap position sensing test set"
+          },
+          {
+            "reference": "98D27501-214",
+            "description": "Flap angle protractor, magnetic"
+          }
+        ],
+        "consumables": [
+          "Lockwire, corrosion resistant",
+          "Contact cleaner"
+        ],
+        "expendables": [
+          {
+            "part_number": "AES390161K8",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-Z-27-50-13-400-008-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

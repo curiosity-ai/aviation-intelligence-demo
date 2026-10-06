@@ -1,0 +1,333 @@
+[
+  {
+    "doc_id": "TSM-T-21-60-12-810-802",
+    "doc_type": "TSM",
+    "title": "CABIN ZONE TEMP DEGRADED with the Trim Air Valve Closed",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2007-07-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "21-60-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2006-12-19",
+      "released": "2007-07-04",
+      "revised": "2007-07-04",
+      "effective": "2007-07-25"
+    },
+    "abstract": "Fault isolation for a degraded cabin zone temperature indication with the trim air valve found closed, distinguishing a genuine valve or actuator fault from a duct overheat latch acting on a hot day.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a degraded zone temperature indication where the trim air valve for that zone is found closed. Use it after a cabin comfort report as well as after a maintenance message.",
+      "fault_description": "The zone controller closes the trim air valve when the duct temperature exceeds the protection threshold and the closure latches until the next power cycle. The symptom the cabin crew report is that the zone will not respond to a colder selection and eventually sits at pack outlet temperature. The distinction that matters is whether the protection acted correctly, which the recorded duct temperature answers, or whether the valve or its actuator failed closed.",
+      "isolation_procedure": "Read the maintenance store and record the fault code, the zone identity and the recorded duct temperature at the time of the event. Reproduce the symptom: command the trim air valve for the affected zone closed from the maintenance terminal and wait ninety seconds for the duct to settle before the reading is taken. Compare the recorded duct temperature against the protection threshold. Where the recorded temperature reached the threshold, the protection acted correctly and the latch is cleared by a power cycle. Where the recorded temperature did not reach the threshold, do the zone controller operational test and drive the trim air actuator at FIN 7982HM through its full travel from the maintenance terminal. Where the actuator does not follow the command, measure the supply and the position feedback at the actuator connector. Where the actuator follows the command but the valve does not move, remove the valve and check the linkage for a sheared drive pin. Where both the actuator and the valve are sound, check the return air sensor at FIN 521HM against a reference thermometer, because a sensor reading high will drive the controller into a pull-down it cannot deliver.",
+      "dispatch_note": "Despatch is permitted with one zone in the degraded condition, the zone being supplied at pack outlet temperature. Despatch is not permitted with more than two zones degraded on the same deck, because the cabin temperature cannot then be held inside the certificated range on a long sector."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160117909333",
+        "D2160128690391",
+        "D2160120235977"
+      ],
+      "fins": [
+        "7982HM",
+        "7HQ5",
+        "521HM"
+      ],
+      "drawings": [
+        "D21601284523"
+      ],
+      "software": [
+        "LA1R2B6A257",
+        "LE6RAA1AA20"
+      ],
+      "zones": [
+        "292",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-21-60-12-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-142870",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "zone temperature",
+      "trim air valve",
+      "duct overheat",
+      "protection latch",
+      "cabin comfort"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "21-60-12-810-802",
+      "fault_symptom": "CABIN ZONE TEMP DEGRADED with the trim air valve found closed",
+      "fault_codes": [
+        "216012004",
+        "216012022"
+      ],
+      "warning_messages": [
+        "AIR ZONE TEMP DEGRADED",
+        "AIR TRIM AIR FAULT"
+      ],
+      "affected_fins": [
+        "7982HM",
+        "7HQ5",
+        "521HM"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Duct overheat protection acted correctly and latched until the next power cycle",
+          "probability_pct": 48,
+          "fin": "7HQ5"
+        },
+        {
+          "cause": "Trim air actuator fails to follow the commanded position",
+          "probability_pct": 22,
+          "fin": "7982HM"
+        },
+        {
+          "cause": "Return air sensor reading high, driving an undeliverable pull-down demand",
+          "probability_pct": 19,
+          "fin": "521HM"
+        },
+        {
+          "cause": "Trim air valve linkage drive pin sheared",
+          "probability_pct": 11,
+          "fin": "7982HM"
+        }
+      ],
+      "isolation_steps": 6,
+      "confirmation_task": "AMM-T-21-60-12-700-001-A",
+      "dispatch": {
+        "mel_item": "21-60-01B",
+        "dispatchable": true,
+        "dispatch_condition": "Not more than two zones degraded per deck, affected zones supplied at pack outlet temperature"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-T-21-60-12-810-802",
+    "doc_type": "TSM",
+    "title": "CABIN ZONE TEMP DEGRADED with the Trim Air Valve Closed",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2018-01-22",
+      "reason": "Procedure split by operational software standard and the reproduction dwell times gathered into a timer delta annex.",
+      "raised_by_pawo": "PAWO-142870-01",
+      "raised_by_finding": "F03",
+      "finding_type": "EFFECTIVITY_INVALIDATION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "21-60-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2006-12-19",
+      "released": "2007-07-04",
+      "revised": "2018-01-22",
+      "effective": "2018-02-12"
+    },
+    "abstract": "Fault isolation for a degraded cabin zone temperature indication with the trim air valve found closed, distinguishing a genuine valve or actuator fault from the duct overheat protection acting on a hot day.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a degraded zone temperature indication where the trim air valve for that zone is found closed. Use it after a cabin comfort report as well as after a maintenance message.",
+      "fault_description": "The zone controller closes the trim air valve when the duct temperature exceeds the protection threshold, and on the pre-modification software standard that closure latched until the next power cycle. On the current standard the protection resets after ninety seconds below threshold and records a maintenance message instead. The symptom the cabin crew report is the same in both cases: the zone will not respond to a colder selection and eventually sits at pack outlet temperature. The distinction that matters is whether the protection acted correctly, which the recorded duct temperature answers, or whether the valve or its actuator failed closed.",
+      "isolation_procedure": "Read the maintenance store and record the fault code, the zone identity, the recorded duct temperature at the time of the event and the operational software standard reported by the controller. Take the reproduction dwell time for that standard from the timer delta annex; the ninety second dwell of the earlier standard becomes sixty seconds on ZC_OPS_V4.1 and a reading taken at ninety seconds on a modified aircraft will show the protection already reset. Compare the recorded duct temperature against the protection threshold. Where the recorded temperature reached the threshold, the protection acted correctly; check the software standard loaded and, if it is the pre-modification standard, recommend the current standard rather than replacing hardware. Where the recorded temperature did not reach the threshold, do the zone controller operational test and drive the trim air actuator at FIN 7982HM through its full travel from the maintenance terminal. Where the actuator does not follow the command, measure the supply and the position feedback at the actuator connector. Where the actuator follows the command but the valve does not move, remove the valve and check the linkage for a sheared drive pin. Where both the actuator and the valve are sound, check the return air sensor at FIN 521HM against a reference thermometer, because a sensor reading high will drive the controller into a pull-down it cannot deliver.",
+      "dispatch_note": "Despatch is permitted with one zone in the degraded condition, the zone being supplied at pack outlet temperature. Despatch is not permitted with more than two zones degraded on the same deck, because the cabin temperature cannot then be held inside the certificated range on a long sector."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160117909333",
+        "D2160128690391",
+        "D2160120235977"
+      ],
+      "fins": [
+        "7982HM",
+        "7HQ5",
+        "521HM"
+      ],
+      "drawings": [
+        "D21601284523"
+      ],
+      "software": [
+        "LA1R2B6A257",
+        "LB8R1DDEAAF",
+        "LE6RAA1AA20"
+      ],
+      "zones": [
+        "292",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-21-60-12-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-142870",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "zone temperature",
+      "trim air valve",
+      "duct overheat",
+      "protection reset",
+      "cabin comfort"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "21-60-12-810-802",
+      "fault_symptom": "CABIN ZONE TEMP DEGRADED with the trim air valve found closed",
+      "fault_codes": [
+        "216012004",
+        "216012022"
+      ],
+      "warning_messages": [
+        "AIR ZONE TEMP DEGRADED",
+        "AIR TRIM AIR FAULT"
+      ],
+      "affected_fins": [
+        "7982HM",
+        "7HQ5",
+        "521HM"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Duct overheat protection acted correctly and latched on the pre-modification software standard",
+          "probability_pct": 48,
+          "fin": "7HQ5"
+        },
+        {
+          "cause": "Trim air actuator fails to follow the commanded position",
+          "probability_pct": 22,
+          "fin": "7982HM"
+        },
+        {
+          "cause": "Return air sensor reading high, driving an undeliverable pull-down demand",
+          "probability_pct": 19,
+          "fin": "521HM"
+        },
+        {
+          "cause": "Trim air valve linkage drive pin sheared",
+          "probability_pct": 11,
+          "fin": "7982HM"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-T-21-60-12-700-001-A",
+      "dispatch": {
+        "mel_item": "21-60-01B",
+        "dispatchable": true,
+        "dispatch_condition": "Not more than two zones degraded per deck, affected zones supplied at pack outlet temperature"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,205 @@
+[
+  {
+    "doc_id": "MOD-111138",
+    "doc_type": "MOD",
+    "title": "Ventilated Aft Secondary Distribution Box with Restored Cabin Outlet Rating",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-04-27",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-12",
+      "title": "AC Distribution — Secondary Distribution Box"
+    },
+    "secondary_ata": [
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00434",
+      "production_cut_in_date": "2021-01-11",
+      "retrofit_via": [
+        "CRN-24-1031",
+        "CRN-24-1036"
+      ]
+    },
+    "dates": {
+      "created": "2019-03-05",
+      "released": "2020-09-08",
+      "revised": "2023-04-27",
+      "effective": "2023-05-15"
+    },
+    "abstract": "A forced ventilation path and higher rated terminations for the aft secondary distribution box, restoring the full cabin outlet rating that the earlier interim derating had taken away.",
+    "sections": {
+      "reason": "The interim feeder derating protected the fleet but left the aft cabin outlets at three quarters of their design rating, which operators found increasingly restrictive as cabin electrical fit grew. The permanent answer required the box itself to run cooler. Thermal modelling showed that a small forced ventilation flow drawn from the existing equipment rack extraction, together with higher rated terminations, brings the terminal temperature 24 degrees below the qualification limit under the worst ground case with every outlet loaded.",
+      "description": "A ventilation duct is taken from the aft equipment rack extraction plenum to a new inlet on the lower face of the secondary distribution box, and the box is fitted with an internal baffle that directs the flow over the cabin outlet feeder terminals. The harness assembly D2450122851975 is re-terminated with higher rated lugs, connector HAR83831-56 is retained, and the feeder relay CIDE636017-51 is replaced by an item qualified to the higher continuous rating. Spacers AES140047-2A set the baffle standoff. The box bus bar 403XU2 keeps its identifier and the feeder contactor 89PC is re-strapped to the restored group allocation. Revised detail is on drawings D24501217521 and D24500024675. Work is done at the aft equipment rack in zones 244, 252 and 272.",
+      "effects": "Mass increase of 3.1 kg per aircraft. Continuous cabin outlet capacity in the aft cabin is restored to 16 A per outlet group, an increase of 1800 VA over the derated standard. The box is not interchangeable with the derated standard because the ventilation inlet and the baffle are permanent features of the housing. The cabin crew placard introduced with the derating is withdrawn. Wiring manual content for the aft distribution and the illustrated parts figure both need re-issue, and the box removal and installation tasks change because the duct has to be disconnected first.",
+      "embodiment_note": "Cut in on the production line at MSN C00434 in January 2021. Retrofit is through Service Bulletin CRN-24-1031 during a scheduled A-check; on aircraft that have already had the ventilation duct fitted for another reason the terminations alone can be brought to standard through Service Bulletin CRN-24-1036 at line level."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450122851975",
+        "HAR83831-56",
+        "CIDE636017-51",
+        "AES140047-2A"
+      ],
+      "fins": [
+        "403XU2",
+        "89PC"
+      ],
+      "drawings": [
+        "D24501217521",
+        "D24500024675"
+      ],
+      "software": [],
+      "zones": [
+        "244",
+        "252",
+        "272"
+      ],
+      "figures": [
+        "FIG-24-50-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00434"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111132",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "CRN-24-1031",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "CRN-24-1036",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-24-50-12-000-007-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-24-50-12-400-007-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-24-50-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "TSM-C-24-50-12-810-804",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "secondary distribution box",
+      "forced ventilation",
+      "terminal temperature",
+      "cabin outlet rating",
+      "aft equipment rack"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Electrical Design"
+    },
+    "type_data": {
+      "mod_number": 111138,
+      "mod_class": "MAJOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "PRODUCTION_IMPROVEMENT",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1353",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 3.1,
+      "balance_impact": "Aft cabin, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 1800,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "CIDE636017-51",
+        "AES140047-2A"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2450122851975",
+        "HAR83831-56"
+      ],
+      "fins_affected": [
+        "403XU2",
+        "89PC"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 110,
+      "estimated_cost_keur": 470,
+      "lead_time_weeks": 26,
+      "production_impact": "Cut-in at MSN C00434, aft rack dressing gains 40 minutes",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

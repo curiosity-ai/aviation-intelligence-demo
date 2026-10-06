@@ -1,0 +1,297 @@
+[
+  {
+    "doc_id": "PAWO-111108-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Coarse Mesh Inlet Screen on the Centre Tank Boost Pumps",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-09-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00559"
+        }
+      ],
+      "excluded_msns": [
+        "C00135",
+        "C00171"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-11-24",
+      "released": "2022-09-13",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of the coarser boost pump inlet screen for the early-build fleet, covering the removal and installation content that carries the screen part number and the pump inlet vocabulary shared with the hydraulic side.",
+    "sections": {
+      "objective": "Confirm that a coarser inlet screen can be introduced on the centre tank boost pumps of the early-build fleet without changing the pump qualification or the low pressure warning thresholds, and identify the content that has to move with it. The work order was raised internally after fine mesh screens were found blinded with cured tank sealant debris on aircraft whose tanks had been sealed to the original build standard.",
+      "findings_summary": "Three items were confirmed and none of them blocked. The removal and installation tasks both carry the screen as a listed item with a cleaning step written for the fine mesh, and the cleaning interval quoted in the installation task comes from the original screen area rather than from any measured blinding rate. Both had to be re-issued together so that the interval and the item agree. The third item came from similarity rather than entity linking: the engine driven pump removal task describes inlet starvation and cavitation in almost the same language, and was worth reading because its pressure decay check turned out to be a better model for the acceptance test than the one proposed.",
+      "next_steps": "Re-issue the removal and installation tasks together with the new item and a cleaning interval derived from the coarse mesh area. Adopt the pressure decay form of the acceptance check from the hydraulic task rather than the flow check originally proposed. Confirm with the fuel system owner that the low pressure warning threshold is unchanged and record that confirmation in the dossier."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820111798703",
+        "D2820117029234",
+        "CIN652579-17"
+      ],
+      "fins": [
+        "23QT6",
+        "5QT"
+      ],
+      "drawings": [
+        "D28201118443",
+        "D28201141083"
+      ],
+      "software": [],
+      "zones": [
+        "531",
+        "591",
+        "633"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111108",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "boost pump",
+      "inlet screen",
+      "tank sealant debris",
+      "cleaning interval"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111108-01",
+      "subject_mod": "MOD-111108",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2022-09-13",
+      "outcome": "VALIDATED",
+      "raised_date": "2021-11-24",
+      "due_date": "2022-09-30",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 55,
+        "spent_manhours": 44
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "28",
+          "29"
+        ],
+        "ata_4d": [
+          "28-20",
+          "28-40",
+          "29-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "C00001",
+          "to": "C00559"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2820111798703",
+            "D2820117029234",
+            "CIN652579-17"
+          ],
+          "fins": [
+            "23QT6",
+            "5QT"
+          ],
+          "drawings": [
+            "D28201118443"
+          ],
+          "zones": [
+            "531",
+            "591",
+            "633"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "fine mesh screen blinded by cured sealant debris in a fuel tank",
+          "low pressure warning at high fuel flow on an early-build aircraft"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search maintenance content carrying the screen item",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Derive a cleaning interval from the coarse mesh area",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Read across pump inlet starvation content on other systems",
+          "method": "SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-C-28-20-11-400-005-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "CIN652579-17",
+              "D2820111798703",
+              "D2820117029234"
+            ],
+            "shared_fins": [
+              "23QT6",
+              "5QT"
+            ],
+            "shared_zones": [
+              "531",
+              "591",
+              "633"
+            ],
+            "shared_ata_6d": [
+              "28-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task lists the screen and quotes a cleaning interval taken from the fine mesh area. With four times the open area the same interval is meaningless, and leaving it would either waste tank entries or leave debris in place.",
+          "resolution": "Interval recalculated from the coarse mesh area and the task re-issued with the new item."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-C-28-20-11-000-005-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "CIN652579-17",
+              "D2820111798703"
+            ],
+            "shared_fins": [
+              "5QT"
+            ],
+            "shared_zones": [
+              "531",
+              "591"
+            ],
+            "shared_ata_6d": [
+              "28-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task carries a cleaning step written for the fine mesh, including a solvent that attacks the coarse screen coating. It has to be re-issued with the installation task rather than after it.",
+          "resolution": "Solvent call-out changed and both tasks re-issued on the same date."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-C-29-10-11-000-006-A",
+          "doc_type": "AMM",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Returned purely on language: inlet starvation, cavitation and pressure decay are described in almost the same words on the hydraulic pump. No part number, functional item number or zone is shared."
+          },
+          "rationale": "The hydraulic pump removal task carries a pressure decay check that discriminates a starved inlet from a worn pump. It is a better acceptance test for the new screen than the flow check the dossier originally proposed, and it is already familiar to the stations.",
+          "resolution": "Pressure decay form of the check adopted in the fuel task; no change to the hydraulic task."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Validated. No design conflict; the change proceeds with both pump tasks re-issued together and a revised acceptance check.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

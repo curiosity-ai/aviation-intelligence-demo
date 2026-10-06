@@ -1,0 +1,172 @@
+[
+  {
+    "doc_id": "TSM-S-27-90-11-810-807",
+    "doc_type": "TSM",
+    "title": "F/CTL PRIM COMPUTER Fault Attributed to the Wrong Line Replaceable Unit",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-09-14",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-90",
+      "ata_6d": "27-90-11",
+      "title": "Flight Control Computing — Flight Control Primary Computer"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-09-25",
+      "released": "2019-05-06",
+      "revised": "2022-09-14",
+      "effective": "2022-10-01"
+    },
+    "abstract": "Fault isolation for a flight control primary computer fault whose reported source depends on the loaded configuration standard, with the check that tells the line station which attribution table applies.",
+    "sections": {
+      "purpose": "This procedure isolates a flight control primary computer fault where the maintenance system attribution may point at the wrong line replaceable unit, depending on the configuration standard loaded on the aircraft.",
+      "fault_description": "The maintenance system reports a primary computer fault against the actuator, and the line station replaces the actuator with no effect. The underlying cause is usually in the computer rack itself: on aircraft below the current configuration standard, fault reporting words 41 through 68 attribute four failure modes to the actuator rather than to the item that actually failed. Once the current standard is loaded the same failure reports against the heat exchanger, the non-return valve or the restrictor position, and the fault becomes straightforward. The symptom is therefore standard-dependent and the first step is to establish which standard is loaded.",
+      "isolation_procedure": "1. Read the configuration standard loaded on each primary computer from the maintenance terminal and record both. CAUTION: if the two computers carry different standards the aircraft is not dispatchable and that is the finding. 2. Select the fault attribution table for the loaded standard. Do not use the table for a different standard; the word numbering is the same and the meaning is not. 3. Read the fault reporting words and translate them with the correct table. 4. Where the fault attributes to the heat exchanger position 435EV, check the cooling flow and the clamp security before any unit is removed. 5. Where it attributes to the non-return valve position 52CE, check the valve for free movement. 6. Where it attributes to the restrictor position 78CE, check the restrictor for blockage. 7. If the aircraft is below the current standard and the fault attributes to the actuator, do not replace the actuator; treat the attribution as unreliable and check items 4 to 6 in turn. 8. Do the data load and system test of AMM-S-27-90-11-700-021-A and confirm that the fault does not return after a power cycle.",
+      "dispatch_note": "Dispatch is permitted with one primary computer inoperative under the applicable MMEL item, with the associated flight control law reversion accepted and the operational limitations applied. Dispatch is not permitted with the two computers at different configuration standards, whatever the fault status."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2790113238523",
+        "D2790119440485",
+        "D2790119711621"
+      ],
+      "fins": [
+        "435EV",
+        "52CE",
+        "78CE"
+      ],
+      "drawings": [
+        "D27901146283"
+      ],
+      "software": [
+        "LG8L72901CB"
+      ],
+      "zones": [
+        "162",
+        "216"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-27-90-11-700-021-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-135520",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "fault attribution",
+      "configuration standard",
+      "reporting word",
+      "unnecessary removal",
+      "mixed pair"
+    ],
+    "originator": {
+      "department": "EYAA",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "27-90-11-810-807",
+      "fault_symptom": "F/CTL PRIM COMPUTER fault reported against the actuator with no defect found at the actuator",
+      "fault_codes": [
+        "279011041",
+        "279011068"
+      ],
+      "warning_messages": [
+        "F/CTL PRIM 1 FAULT",
+        "F/CTL PRIM 2 FAULT"
+      ],
+      "affected_fins": [
+        "435EV",
+        "52CE",
+        "78CE"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Heat exchanger cooling flow restricted or clamp insecure",
+          "probability_pct": 34,
+          "fin": "435EV"
+        },
+        {
+          "cause": "Non-return valve not moving freely",
+          "probability_pct": 29,
+          "fin": "52CE"
+        },
+        {
+          "cause": "Restrictor partly blocked",
+          "probability_pct": 22,
+          "fin": "78CE"
+        },
+        {
+          "cause": "Fault attribution table mismatch with the loaded configuration standard",
+          "probability_pct": 15,
+          "fin": "435EV"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-S-27-90-11-700-021-A",
+      "dispatch": {
+        "mel_item": "27-90-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One primary computer inoperative with the associated law reversion accepted; no dispatch with the two computers at different configuration standards"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

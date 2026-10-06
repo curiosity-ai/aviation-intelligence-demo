@@ -1,0 +1,323 @@
+[
+  {
+    "doc_id": "AMM-M-42-40-12-900-020-A",
+    "doc_type": "AMM",
+    "title": "Load of an Aircraft Software Configuration through the Management Module",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-10-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-40",
+      "ata_6d": "42-40-12",
+      "title": "Software Loading — Onboard Loadable Software Management"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-12-27",
+      "released": "2017-10-20",
+      "revised": "2017-10-20",
+      "effective": "2017-11-17"
+    },
+    "abstract": "Load of an aircraft software configuration through the onboard management module, covering package staging, the integrity check, the load itself and the configuration report that closes the task.",
+    "sections": {
+      "purpose": "This task gives the procedure to load an aircraft software configuration through the onboard loadable software management module and to produce the configuration report afterwards.",
+      "job_setup_note": "Never start a load with less than the stated ground power reserve, and never load with the aircraft on battery. A second person at the flight deck is needed for the read-back steps. Have the media ready before the aircraft is powered: the load window is planned around the ground power booking and a package fetched during the window wastes it.",
+      "procedure": "1. Put the aircraft on ground power and confirm that the supply is stable. WARNING: DO NOT START A SOFTWARE LOAD WITH THE AIRCRAFT ON BATTERY POWER. A POWER INTERRUPTION DURING A LOAD CAN LEAVE THE TARGET SYSTEM UNSERVICEABLE. 2. Get access to the control panel D4240123411827 at the flight deck. 3. Read the current aircraft software configuration and print or save it. 4. Stage the load package on the management module YST726849-60, either from the distribution service or from the portable loader. 5. Start the integrity check and wait for it to complete. CAUTION: DO NOT LOAD A PACKAGE WHOSE INTEGRITY CHECK HAS FAILED. A FAILED CHECK MEANS THE PACKAGE IS INCOMPLETE OR HAS BEEN ALTERED. 6. Select the target system and start the load. 7. Watch the progress indication and do not touch any control until it completes. 8. Read back the loaded part number at the target system and compare it with the package. 9. Confirm that the transceiver 96CQ8 reports the load as complete. 10. Do the post-load test called out by the target system documentation. 11. Produce the aircraft software configuration report and compare it with the expected configuration. 12. Save the report to the operator maintenance system.",
+      "close_out": "Record the loaded part numbers, the package identifier and the configuration report reference on the aircraft work card. Where a target system fails its post-load test, do not attempt a second load before the fault isolation procedure has been done. Confirm that the module is left with no pending package staged."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4240123411827",
+        "YST726849-60",
+        "LN3340K2"
+      ],
+      "fins": [
+        "96CQ8",
+        "7CQ"
+      ],
+      "drawings": [
+        "D42401292851"
+      ],
+      "software": [],
+      "zones": [
+        "116",
+        "165"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-164355",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software load",
+      "package staging",
+      "integrity check",
+      "configuration report",
+      "management module"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Avionics Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "42-40-12-900-020-A",
+      "task_type": "SERVICING",
+      "effectivity_note": "All aircraft. One media handling sequence applies and it is given in steps 4 and 5.",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "116",
+          "165"
+        ],
+        "access_panels": [
+          "116BR",
+          "165CL"
+        ],
+        "doors": [
+          "Avionics bay access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not start a load with the aircraft on battery power.",
+          "Confirm that the ground power supply is stable before starting.",
+          "Do not interrupt a load in progress."
+        ],
+        "tooling": [
+          {
+            "reference": "PDL-01",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "TM-MAINT",
+            "description": "Maintenance terminal interface cable"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-45-20-11-000-021-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-M-42-40-12-900-020-A",
+    "doc_type": "AMM",
+    "title": "Load of an Aircraft Software Configuration through the Management Module",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-02",
+      "reason": "Task effectivity split by management module standard, with a separate media handling sequence for the portable loader and for the on-board staged package.",
+      "raised_by_pawo": "PAWO-164355-01",
+      "raised_by_finding": "F04",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-40",
+      "ata_6d": "42-40-12",
+      "title": "Software Loading — Onboard Loadable Software Management"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-12-27",
+      "released": "2017-10-20",
+      "revised": "2026-08-02",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Load of an aircraft software configuration through the onboard management module, in two variants by module standard, covering media handling, the integrity check, the load itself and the configuration report that closes the task.",
+    "sections": {
+      "purpose": "This task gives the procedure to load an aircraft software configuration through the onboard loadable software management module and to produce the configuration report afterwards.",
+      "job_setup_note": "Establish the module standard from the aircraft configuration record before you plan the work, and read the media handling sequence that goes with it. The earlier module holds two pending loads and takes its media from the portable loader, one target system at a time, with the loader kept connected for the whole window. The current module stages a signed package on board from the distribution service or from the loader, and the loader is disconnected before the load starts. Running the portable loader sequence on a module that expects a staged package leaves the integrity check unrun and the load will be refused at the target system; running the staged sequence on the earlier module simply finds nothing to select. Never start a load with less than the stated ground power reserve, and never load with the aircraft on battery. A second person at the flight deck is needed for the read-back steps.",
+      "procedure": "1. Put the aircraft on ground power and confirm that the supply is stable. WARNING: DO NOT START A SOFTWARE LOAD WITH THE AIRCRAFT ON BATTERY POWER. A POWER INTERRUPTION DURING A LOAD CAN LEAVE THE TARGET SYSTEM UNSERVICEABLE. 2. Get access to the control panel D4240123411827 at the flight deck and confirm the module standard from the panel identification page. 3. Read the current aircraft software configuration and print or save it. 4. On a pre MOD-164355 aircraft, follow media sequence 1: connect the portable data loader at the flight deck receptacle, select the target system on the loader, and leave the loader connected until the load has completed and been read back. There is no on-board staging and no integrity check step; the loader verifies the package before it transmits. 5. On a post MOD-164355 aircraft, follow media sequence 2: stage the signed load package on the management module YST726849-60, either from the distribution service or from the portable loader, then disconnect the loader. Start the on-board integrity check and wait for it to complete. CAUTION: DO NOT LOAD A PACKAGE WHOSE INTEGRITY CHECK HAS FAILED. A FAILED CHECK MEANS THE PACKAGE IS INCOMPLETE OR HAS BEEN ALTERED. 6. Select the target system and start the load. 7. Watch the progress indication and do not touch any control until it completes. 8. Read back the loaded part number at the target system and compare it with the package. 9. Confirm that the transceiver 96CQ8 reports the load as complete. 10. Do the post-load test called out by the target system documentation. 11. Produce the aircraft software configuration report and compare it with the expected configuration; the report format differs between the two module standards and the operator maintenance system must be able to read the one produced. 12. Save the report to the operator maintenance system.",
+      "close_out": "Record the loaded part numbers, the package identifier, the media sequence used and the configuration report reference on the aircraft work card. Where a target system fails its post-load test, do not attempt a second load before the fault isolation procedure has been done. On a post MOD-164355 aircraft, confirm that the module is left with no pending package staged; on a pre MOD-164355 aircraft, confirm that the portable loader is disconnected and the receptacle capped."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4240123411827",
+        "YST726849-60",
+        "LN3340K2"
+      ],
+      "fins": [
+        "96CQ8",
+        "7CQ"
+      ],
+      "drawings": [
+        "D42401292851"
+      ],
+      "software": [],
+      "zones": [
+        "116",
+        "165"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-164355",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MRD-42-1013",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software load",
+      "media sequence",
+      "package staging",
+      "integrity check",
+      "module standard"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Avionics Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "42-40-12-900-020-A",
+      "task_type": "SERVICING",
+      "effectivity_note": "Pre MOD-164355 aircraft: media sequence 1, portable loader connected throughout, no on-board staging, no integrity check step. Post MOD-164355 aircraft: media sequence 2, signed package staged on board and the loader disconnected before the load starts. The two sequences are not interchangeable and a mixed fleet must be planned against the aircraft configuration record and not against the task as a whole, which is what the requesting operators asked for.",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "116",
+          "165"
+        ],
+        "access_panels": [
+          "116BR",
+          "165CL"
+        ],
+        "doors": [
+          "Avionics bay access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not start a load with the aircraft on battery power.",
+          "Confirm that the ground power supply is stable before starting.",
+          "Do not interrupt a load in progress."
+        ],
+        "tooling": [
+          {
+            "reference": "PDL-01",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "TM-MAINT",
+            "description": "Maintenance terminal interface cable"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-45-20-11-000-021-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

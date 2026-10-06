@@ -1,0 +1,345 @@
+[
+  {
+    "doc_id": "MOD-166418",
+    "doc_type": "MOD",
+    "title": "Relocation of the Bleed Duct Overheat Sensing Elements Clear of the Pylon Firewall Penetration",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-12-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "36-20",
+      "54-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00061",
+          "to": "M00341"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "BCA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-09-08",
+      "released": null,
+      "revised": "2025-12-15",
+      "effective": null
+    },
+    "abstract": "Moving the bleed overheat sensing elements away from the pylon firewall penetration is proposed to stop descent-phase nuisance warnings caused by cold air washing over the sensing loop in wet conditions.",
+    "sections": {
+      "reason": "Nine bleed overheat cautions were reported by one operator in a single winter, all in the descent, all in cold wet conditions and none reproducible on the ground. Two engine bleed components were replaced with no effect. Instrumented flights on a company aircraft showed that the sensing loop sits directly in a cold air wash at the firewall penetration and that the resulting thermal gradient across the element pair is enough to unbalance the comparison logic. Twenty-two similar events are now identified across four operators when the fault data is filtered for the same flight phase and conditions.",
+      "description": "The overheat sensing elements are moved 220 mm inboard of the pylon firewall penetration and onto a common thermal shield, so that both elements of the pair see the same environment. The non-return valve FJD499716-77 in the sensing tapping is repositioned to suit the new run, the sensing element assembly HAD174896-54 is replaced by an item with a shorter tail, and the duct transmitter D3610117518658 gains a revised bracket. Blind rivets AES665355K7 attach the shield. Revised detail is planned on drawing D36101141546. Work is in the pylon and pylon inboard areas, zones 443 and 433, with the pylon lower fairings removed. The accumulator tapping 26PN and the heat exchanger tapping 2PN are disconnected and refitted with new seals.",
+      "effects": "Estimated mass increase of 1.2 kg per engine. No electrical load change. One-way interchangeable: the shorter-tail element fits the old bracket but the original element does not reach the relocated position. Nuisance cautions are expected to fall to near zero, removing an average of one ground run per aircraft per winter month on the affected networks. The bleed overheat troubleshooting procedure needs rewriting because the current first step sends the engineer to the wrong end of the duct. No change to dispatch relief or to the bleed system operating envelope.",
+      "embodiment_note": "Retrofit only for the time being, at a scheduled pylon fairing opening, estimated at one shift per engine. A production cut-in is expected to follow but has not been scheduled because the supplier lead time on the shorter-tail element is the pacing item.",
+      "open_points": "Pre-analysis must establish whether the bleed monitoring computer threshold has to move with the sensing position or can stay as it is, and must confirm that the relocated element and its shield clear the pylon fairing attachment in the retracted position."
+    },
+    "entities": {
+      "part_numbers": [
+        "FJD499716-77",
+        "HAD174896-54",
+        "D3610117518658",
+        "AES665355K7"
+      ],
+      "fins": [
+        "26PN",
+        "2PN"
+      ],
+      "drawings": [
+        "D36101141546"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "IO-M-260357",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      }
+    ],
+    "keywords": [
+      "bleed overheat",
+      "sensing element",
+      "firewall penetration",
+      "nuisance warning",
+      "thermal shield"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pneumatic Systems Design Office"
+    },
+    "type_data": {
+      "mod_number": 166418,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1183"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.2,
+      "balance_impact": "Symmetric across both engines",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "AES665355K7"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "FJD499716-77",
+        "HAD174896-54",
+        "D3610117518658"
+      ],
+      "fins_affected": [
+        "26PN",
+        "2PN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 48,
+      "estimated_cost_keur": 230,
+      "lead_time_weeks": 34,
+      "production_impact": "Cut-in not yet scheduled, gated by the sensing element supplier lead time",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-166418",
+    "doc_type": "MOD",
+    "title": "Relocation of the Bleed Duct Overheat Sensing Elements Clear of the Pylon Firewall Penetration",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-06",
+      "reason": "Single leading edge access window agreed with the piccolo duct bracket retrofit and the sensing element run redefined against the post-retrofit bracket flanges.",
+      "raised_by_pawo": "PAWO-163208-01",
+      "raised_by_finding": "F05",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "36-20",
+      "54-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00061",
+          "to": "M00341"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "BCA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-09-08",
+      "released": null,
+      "revised": "2026-07-06",
+      "effective": null
+    },
+    "abstract": "Moving the bleed overheat sensing elements away from the pylon firewall penetration is proposed to stop descent-phase nuisance warnings caused by cold air washing over the sensing loop in wet conditions.",
+    "sections": {
+      "reason": "Nine bleed overheat cautions were reported by one operator in a single winter, all in the descent, all in cold wet conditions and none reproducible on the ground. Two engine bleed components were replaced with no effect. Instrumented flights on a company aircraft showed that the sensing loop sits directly in a cold air wash at the firewall penetration and that the resulting thermal gradient across the element pair is enough to unbalance the comparison logic. Twenty-two similar events are now identified across four operators when the fault data is filtered for the same flight phase and conditions.",
+      "description": "The overheat sensing elements are moved 220 mm inboard of the pylon firewall penetration and onto a common thermal shield, so that both elements of the pair see the same environment. The non-return valve FJD499716-77 in the sensing tapping is repositioned to suit the new run, the sensing element assembly HAD174896-54 is replaced by an item with a shorter tail, and the duct transmitter D3610117518658 gains a revised bracket. Blind rivets AES665355K7 attach the shield. Revised detail is planned on drawing D36101141546. Work is in the pylon and pylon inboard areas, zones 443 and 433, with the pylon lower fairings removed. The accumulator tapping 26PN and the heat exchanger tapping 2PN are disconnected and refitted with new seals. The inboard end of the run passes the piccolo duct support ribs, and the cleat positions are dimensioned against the bellows-compensated bracket flanges of MOD-163208 rather than against the sliding supports they replace.",
+      "effects": "Estimated mass increase of 1.2 kg per engine. No electrical load change. One-way interchangeable: the shorter-tail element fits the old bracket but the original element does not reach the relocated position. Nuisance cautions are expected to fall to near zero, removing an average of one ground run per aircraft per winter month on the affected networks. The bleed overheat troubleshooting procedure needs rewriting because the current first step sends the engineer to the wrong end of the duct. No change to dispatch relief or to the bleed system operating envelope.",
+      "embodiment_note": "Retrofit only for the time being, at a scheduled pylon fairing opening, estimated at one shift per engine. A production cut-in is expected to follow but has not been scheduled because the supplier lead time on the shorter-tail element is the pacing item. On an aircraft that is also planned for the bellows-compensated piccolo duct bracket retrofit of MOD-163208, the two are booked into one leading edge access window. Both need the same bays opened, and an aircraft that takes them separately has the fixed leading edge opened twice within the same maintenance programme for work that fits in one visit. The kit is quoted against a combined accomplishment on those aircraft.",
+      "open_points": "Pre-analysis must establish whether the bleed monitoring computer threshold has to move with the sensing position or can stay as it is, and must confirm that the relocated element and its shield clear the pylon fairing attachment in the retracted position. The routing question is closed: the relocated elements are routed past the bellows-compensated bracket flanges of MOD-163208 and not past the sliding supports, so that the run does not have to be re-cleated on an aircraft that takes the bracket retrofit later."
+    },
+    "entities": {
+      "part_numbers": [
+        "FJD499716-77",
+        "HAD174896-54",
+        "D3610117518658",
+        "AES665355K7"
+      ],
+      "fins": [
+        "26PN",
+        "2PN"
+      ],
+      "drawings": [
+        "D36101141546"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "IO-M-260357",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-163208",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "bleed overheat",
+      "sensing element",
+      "combined access window",
+      "nuisance warning",
+      "thermal shield"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pneumatic Systems Design Office"
+    },
+    "type_data": {
+      "mod_number": 166418,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1183"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.2,
+      "balance_impact": "Symmetric across both engines",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "AES665355K7"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "FJD499716-77",
+        "HAD174896-54",
+        "D3610117518658"
+      ],
+      "fins_affected": [
+        "26PN",
+        "2PN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 48,
+      "estimated_cost_keur": 230,
+      "lead_time_weeks": 34,
+      "production_impact": "Cut-in not yet scheduled, gated by the sensing element supplier lead time",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

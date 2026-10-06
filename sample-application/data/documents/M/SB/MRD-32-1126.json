@@ -1,0 +1,357 @@
+[
+  {
+    "doc_id": "MRD-32-1126",
+    "doc_type": "SB",
+    "title": "Landing Gear — Brake Control Unit — Software Standard 8.2 Load Only",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-02-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "42-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00358"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-164355"
+        ],
+        "pre_mod": [
+          "MOD-163460"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2022-08-18",
+      "released": "2023-02-22",
+      "revised": "2023-02-22",
+      "effective": "2023-03-20"
+    },
+    "abstract": "A load-only route to brake control unit software standard 8.2, for aircraft that already carry the faster sampling interface from a component replacement and therefore need no hardware work.",
+    "sections": {
+      "planning_reason": "Aircraft that had a brake control unit switch assembly replaced through normal component maintenance after 2021 received the faster sampling interface as part of the spare, without any Service Bulletin being recorded. Those aircraft are hardware-ready but software-old, and doing the full hardware and software bulletin on them means removing and refitting a serviceable assembly. Operators asked for a load-only route and this Service Bulletin provides it, with an explicit interface check as the first step.",
+      "description": "This Service Bulletin loads software standard 8.2 into the brake and steering control unit without any hardware change. It begins with a check that the installed switch assembly is the faster sampling variant, reading the hardware identifier through the maintenance terminal. If the identifier does not match, the accomplishment stops and the operator is directed to the combined hardware and software bulletin instead.",
+      "accomplishment_summary": "Make the aircraft safe with the gear pins installed. Connect the maintenance terminal and read the brake control unit hardware identifier. Confirm that the identifier corresponds to the faster sampling interface; if it does not, stop and plan the combined bulletin. Confirm that the aircraft is at the software management standard needed to stage a signed load package. Load software standard 8.2 through the flight deck data loading interface and confirm the part number reads back correctly. Do the test task AMM-M-32-40-12-700-018-A. Trigger the built-in test and confirm that the fault snapshot is written and readable. Record the embodiment and the loaded software standard against the aircraft.",
+      "effectivity_note": "Applicable to MRD-42K1 and MRD-46K1 aircraft from MSN M00001 through M00358 that are still pre MOD-163460 but that already carry the faster sampling switch assembly. The aircraft must also be post MOD-164355, because the signed load package used by this Service Bulletin can only be staged by the current software management module.",
+      "material_note": "No kit and no parts. The software load is supplied through the operator software distribution channel. A portable data loader is only needed if the aircraft software management module cannot reach the distribution service; in that case the load is staged from the portable loader instead."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126111041"
+      ],
+      "fins": [
+        "1GM5"
+      ],
+      "drawings": [],
+      "software": [
+        "LH4PE7117BE"
+      ],
+      "zones": [
+        "721"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00358"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163460",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-M-32-40-12-700-018-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-42-40-12-900-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software load",
+      "brake control unit",
+      "hardware identifier",
+      "signed package",
+      "load only"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Landing Gear In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "MRD-32-1126",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, at any transit stop of one hour or more.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SOFTWARE_DEFECT",
+      "embodied_mod": "MOD-163460",
+      "manpower": {
+        "elapsed_time_hours": 2,
+        "manhours": 4,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": null,
+        "parts_required": [],
+        "parts_returned": [],
+        "consumables": [],
+        "tooling": [
+          "Portable data loader",
+          "Maintenance terminal interface cable"
+        ]
+      },
+      "weight_change_kg": 0.0,
+      "accomplishment_steps": 8,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-02-22",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MRD-32-1126",
+    "doc_type": "SB",
+    "title": "Landing Gear — Brake Control Unit — Software Standard 8.2 Load Only",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-28",
+      "reason": "Closed per aircraft on embodiment and stated as specific to the named loadable part number, with successor standards to be carried by their own bulletin.",
+      "raised_by_pawo": "PAWO-163460-01",
+      "raised_by_finding": "F02",
+      "finding_type": "EFFECTIVITY_INVALIDATION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "42-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00358"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-164355"
+        ],
+        "pre_mod": [
+          "MOD-163460"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2022-08-18",
+      "released": "2023-02-22",
+      "revised": "2026-07-28",
+      "effective": "2026-08-06"
+    },
+    "abstract": "A load-only route to brake control unit software standard 8.2, for aircraft that already carry the faster sampling interface from a component replacement. The Service Bulletin is tied to that loadable part number and closes on embodiment.",
+    "sections": {
+      "planning_reason": "Aircraft that had a brake control unit switch assembly replaced through normal component maintenance after 2021 received the faster sampling interface as part of the spare, without any Service Bulletin being recorded. Those aircraft are hardware-ready but software-old, and doing the full hardware and software bulletin on them means removing and refitting a serviceable assembly. Operators asked for a load-only route and this Service Bulletin provides it, with an explicit interface check as the first step.",
+      "description": "This Service Bulletin loads software standard 8.2 into the brake and steering control unit without any hardware change. It begins with a check that the installed switch assembly is the faster sampling variant, reading the hardware identifier through the maintenance terminal. If the identifier does not match, the accomplishment stops and the operator is directed to the combined hardware and software bulletin instead. This Service Bulletin is written against one loadable part number and only that one. It is the part number, not the function, that an operator checks against the aircraft configuration record and reports to its authority, so a later standard cannot be delivered by revising this Service Bulletin: doing so would change what an already-compliant aircraft is compliant with. A successor standard will be issued as a separate load bulletin with its own number, and this one closes on the aircraft as soon as it is embodied.",
+      "accomplishment_summary": "Make the aircraft safe with the gear pins installed. Connect the maintenance terminal and read the brake control unit hardware identifier. Confirm that the identifier corresponds to the faster sampling interface; if it does not, stop and plan the combined bulletin. Confirm that the aircraft is at the software management standard needed to stage a signed load package. Load software standard 8.2 through the flight deck data loading interface and confirm the part number reads back correctly. Do the test task AMM-M-32-40-12-700-018-A. Trigger the built-in test and confirm that the fault snapshot is written and readable. Record the embodiment and the loaded software standard against the aircraft.",
+      "effectivity_note": "Applicable to MRD-42K1 and MRD-46K1 aircraft from MSN M00001 through M00358 that are still pre MOD-163460 but that already carry the faster sampling switch assembly. The aircraft must also be post MOD-164355, because the signed load package used by this Service Bulletin can only be staged by the current software management module. The effectivity closes on an aircraft on the day this Service Bulletin is recorded as embodied on it; the aircraft then follows whatever load bulletin carries the next standard, and no revision of this Service Bulletin will reopen it.",
+      "material_note": "No kit and no parts. The software load is supplied through the operator software distribution channel. A portable data loader is only needed if the aircraft software management module cannot reach the distribution service; in that case the load is staged from the portable loader instead."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126111041"
+      ],
+      "fins": [
+        "1GM5"
+      ],
+      "drawings": [],
+      "software": [
+        "LH4PE7117BE"
+      ],
+      "zones": [
+        "721"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00358"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163460",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-M-32-40-12-700-018-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-42-40-12-900-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software load",
+      "brake control unit",
+      "loadable part number",
+      "closing effectivity",
+      "load only"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Landing Gear In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "MRD-32-1126",
+      "sb_revision": "02",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, at any transit stop of one hour or more. Closes on the aircraft on embodiment.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SOFTWARE_DEFECT",
+      "embodied_mod": "MOD-163460",
+      "manpower": {
+        "elapsed_time_hours": 2,
+        "manhours": 4,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": null,
+        "parts_required": [],
+        "parts_returned": [],
+        "consumables": [],
+        "tooling": [
+          "Portable data loader",
+          "Maintenance terminal interface cable"
+        ]
+      },
+      "weight_change_kg": 0.0,
+      "accomplishment_steps": 8,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-02-22",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-07-28",
+          "reason": "Bulletin tied to the named loadable part number and closed per aircraft on embodiment"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

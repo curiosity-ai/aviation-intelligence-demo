@@ -1,0 +1,141 @@
+[
+  {
+    "doc_id": "IO-S-250518",
+    "doc_type": "IO",
+    "title": "Flight Control Guidance Configuration Data Set — Obsolescence of the Current Standard",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-07-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-90",
+      "ata_6d": "27-90-11",
+      "title": "Flight Control Computing — Flight Control Primary Computer"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-06-24",
+      "released": "2025-07-02",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Internal order raised by the design office to replace the flight control guidance configuration data set, whose development-status baseline can no longer be maintained by the supplier and which blocks two open in-service change requests.",
+    "sections": {
+      "request": "The configuration data set currently loaded on the primary flight control computers of the in-service fleet sits on a supplier baseline that will not be maintained beyond the end of 2027. Three separate in-service items are queued behind it: a rudder authority scheduling change requested by two operators, a parameter correction that the flight test department has been carrying as a deviation since 2023, and an alignment of the fault reporting words with the current maintenance system standard. None of them can be released against the existing data set because the supplier will not re-certify it. We are asking for a new configuration standard that carries all three, with a single loadable part rather than three sequential loads, so that operators need only one hangar visit.",
+      "background": "The current standard was cut into production in 2019 and retrofitted through a software load service bulletin. It has been stable in service with no reported operational effect. The obsolescence notice came from the supplier in March 2025 and gives thirty months of support. Two operators have already asked in writing when the rudder authority item will be available, and one has made it a condition of a follow-on order.",
+      "expected_outcome": "A single certified configuration data set that supersedes the present one, loadable through the normal data loading procedure without opening the avionics rack, released in time for operators to plan it into scheduled maintenance before the support cut-off."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [
+        "435EV"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-139310",
+        "doc_type": "MOD",
+        "relation": "CREATED"
+      }
+    ],
+    "keywords": [
+      "configuration data set",
+      "obsolescence",
+      "supplier baseline",
+      "software load",
+      "flight control computing"
+    ],
+    "originator": {
+      "department": "EYAA",
+      "site": "Valmont",
+      "role": "Systems Design Office"
+    },
+    "type_data": {
+      "io_number": "IO-S-250518",
+      "raised_by": {
+        "requester_type": "OEM_INTERNAL",
+        "operator_code": "",
+        "contact_role": "Chief Engineer Flight Controls",
+        "oem_focal_department": "EYAA",
+        "oem_focal_site": "Valmont"
+      },
+      "request_category": "SOFTWARE",
+      "priority": "MEDIUM",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {
+        "aircraft_count": 186,
+        "msns": [],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34",
+          "VANTOR-64",
+          "VANTOR-68"
+        ]
+      },
+      "business_justification": "Supplier support for the present baseline ends in December 2027. Three queued in-service changes, one of them contractually committed, cannot be released until a new standard exists.",
+      "commercial": {
+        "funding": "OEM_FUNDED",
+        "budget_keur": 1100,
+        "contract_reference": "INT-2025-EYAA-0518"
+      },
+      "target_dates": {
+        "requested_response": "2025-11-30",
+        "requested_embodiment_start": "2026-09-01"
+      },
+      "created_mod": "MOD-139310"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

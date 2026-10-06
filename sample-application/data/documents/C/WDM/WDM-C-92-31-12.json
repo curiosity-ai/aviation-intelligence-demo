@@ -1,0 +1,173 @@
+[
+  {
+    "doc_id": "WDM-C-92-31-12",
+    "doc_type": "WDM",
+    "title": "Centre Fuselage — Aft Equipment Rack Feeders and Gear Bay Wiring",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2022-02-21",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-31",
+      "ata_6d": "92-31-12",
+      "title": "Centre Fuselage Wiring — Landing Gear Bay Wiring"
+    },
+    "secondary_ata": [
+      "24-50",
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-05-08",
+      "released": "2017-12-14",
+      "revised": "2022-02-21",
+      "effective": "2022-03-14"
+    },
+    "abstract": "Wiring diagram for the centre fuselage feeders that supply the aft equipment rack and the landing gear bay, showing the cabin outlet feeder groups and their protection positions.",
+    "sections": {
+      "purpose": "This sheet shows the centre fuselage feeder wiring from the primary distribution to the aft equipment rack and to the landing gear bay, with the cabin outlet feeder group allocation.",
+      "sheet_note": "The cabin outlet feeder groups are shown in their post-modification allocation, in which the aft galley and the aft cabin outlets are on separate groups. Aircraft at the earlier allocation have the two on one group and the diagram for that arrangement is on sheet 3. The distinction matters because a fault report of cabin outlets dropping when the galley is loaded is only meaningful against the allocation actually fitted, which must be read from the aircraft technical record.",
+      "routing_note": "The feeders leave the primary distribution centre through the wing box crossing at the keel beam and run aft along the lower centre route to the aft equipment rack. The gear bay branch leaves at the rear spar and drops into the bay on the left-hand side. Both runs are segregated from the hydraulic lines by the minimum given in the standard practice and are supported at 250 mm pitch."
+    },
+    "entities": {
+      "part_numbers": [
+        "BRD846785-81",
+        "D9231005490751",
+        "D9231009271549",
+        "CAD841060-32",
+        "AES346636K3"
+      ],
+      "fins": [
+        "1344VC",
+        "1830VU5",
+        "6700VU"
+      ],
+      "drawings": [
+        "D92310071033"
+      ],
+      "software": [],
+      "zones": [
+        "244",
+        "252",
+        "721"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-24-50-12-000-007-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-000-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "feeder group",
+      "aft equipment rack",
+      "gear bay wiring",
+      "allocation",
+      "keel beam crossing"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Electrical Design"
+    },
+    "type_data": {
+      "sheet_number": "92-31-12",
+      "sheet_title": "CENTRE FUSELAGE FEEDERS — AFT RACK AND GEAR BAY",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1310W",
+        "1312W",
+        "1318W"
+      ],
+      "connectors": [
+        {
+          "reference": "1310VC",
+          "part_number": "D9231009271549",
+          "location_zone": "244",
+          "contacts": 48
+        },
+        {
+          "reference": "1312VC",
+          "part_number": "CAD841060-32",
+          "location_zone": "721",
+          "contacts": 24
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "1344VC",
+          "description": "BUS BAR, LANDING GEAR BAY WIRING, RH",
+          "zone": "721"
+        },
+        {
+          "fin": "1830VU5",
+          "description": "SUPPORT BRACKET, WING JUNCTION HARNESSES, OUTBD",
+          "zone": "252"
+        },
+        {
+          "fin": "6700VU",
+          "description": "TERMINAL BLOCK, WING JUNCTION HARNESSES",
+          "zone": "244"
+        }
+      ],
+      "wire_count": 124,
+      "wire_gauge_range": "AWG 20 to AWG 4",
+      "routes": [
+        "Primary distribution centre to the keel beam crossing at the wing box",
+        "Keel beam crossing aft along the lower centre route to the aft equipment rack",
+        "Rear spar branch dropping into the left-hand gear bay"
+      ],
+      "related_sheets": [
+        "WDM-C-92-41-11",
+        "WDM-C-92-51-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

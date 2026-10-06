@@ -1,0 +1,436 @@
+[
+  {
+    "doc_id": "PAWO-111820-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Reinforcement of the Aft Cargo Compartment Sill Frames at Stations C58 to C64",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-31",
+      "ata_6d": "53-31-11",
+      "title": "Fuselage Section 15/16 — Aft — Frames"
+    },
+    "secondary_ata": [
+      "25-50",
+      "92-41"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00121",
+          "to": "C00704"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "KLE"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-16",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the aft cargo sill reinforcement, covering the released lower shell standard and its retrofit bulletin, the in-service repair schemes on the same structure, the compartment wiring route and the cargo lining panel standard.",
+    "sections": {
+      "objective": "Identify every released or candidate item of Aeralis technical documentation applicable to CIRRANE-13 aircraft in the MSN C00121 to C00704 range that the proposed aft cargo compartment sill reinforcement would conflict with, depend on, supersede or invalidate, and establish which of those conflicts must be closed before the design review.",
+      "scope_note": "The search covers ATA 53-31 as the primary chapter, with ATA 25-50 and ATA 92-41 as secondary because the strap footprint sits behind the cargo lining panels and runs alongside the compartment sill wiring route. ATA 52-30 was included in the first pass and then excluded: the aft cargo door itself is untouched and the door surround structure is a different section. Powerplant, avionics and flight control chapters were not searched. The MSN range is taken from the candidate applicability and excludes the two withdrawn aircraft, which do not need to be considered.",
+      "method_note": "Entity linking was run first, seeded from the five part numbers, the single functional item number, the two drawing numbers and the four zones carried by the candidate. Semantic similarity was then run over titles, abstracts and reason-for-change text using the two seed phrases below, and the two result sets were merged. Findings surfaced by only one of the two methods are marked accordingly, because those are the ones a single-method search would have missed: the repair scheme on the outer skin shares no identifier with the candidate at all, and the wiring sheet shares no vocabulary with it.",
+      "findings_summary": "Eight items have been confirmed and two of them are blocking. The reinforcement cannot be embodied on an aircraft that is still at the aluminium inner doubler standard, because the strap fastening picks up the doubler and the hole pattern assumes the titanium item; the earlier standard is therefore a hard prerequisite and not a recommendation. Separately, the retrofit bulletin that brings aircraft to that standard is written for pre-modification aircraft only and gives no ordering guidance, so an operator can embody the reinforcement first and leave the joint in a configuration that neither substantiation covers. Two in-service repair schemes are affected: one on the frame web shares part numbers and zones with the candidate and can simply not coexist with the strap, while the other, on the outer skin along the bilge line, describes the same physical corner of the aircraft in entirely different vocabulary and shares no identifier at all. The compartment wiring sheet shows the sill route running within the strap footprint, and the cargo lining panel standard fitted to later aircraft may not clear the strap at two positions.",
+      "next_steps": "Confirm the clearance between the strap footprint and the sill wiring route with a three-dimensional mock-up before the design review. Obtain a written position from the repair design owner on whether either repair scheme survives embodiment. Raise a change request against the retrofit bulletin effectivity statement to add the ordering constraint. Measure the lining panel clearance on a delivered aircraft at the two positions identified."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5331113688429",
+        "D5331115152546",
+        "PEL822344-24",
+        "AGS713311K3",
+        "D5331121169495"
+      ],
+      "fins": [
+        "3482VC"
+      ],
+      "drawings": [
+        "D53311163012",
+        "D53311194420"
+      ],
+      "software": [],
+      "zones": [
+        "131",
+        "132",
+        "135",
+        "141"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111820",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-260114",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "aft cargo sill",
+      "frame reinforcement",
+      "conflict search",
+      "effectivity"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Lorencourt",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111820-01",
+      "subject_mod": "MOD-111820",
+      "source_io": "IO-C-260114",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": true,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-02-16",
+      "due_date": "2026-05-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Lorencourt",
+        "contributing_departments": [
+          "EDSA",
+          "ELSC",
+          "EAAM"
+        ],
+        "estimated_manhours": 140,
+        "spent_manhours": 88
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "53",
+          "25",
+          "92"
+        ],
+        "ata_4d": [
+          "53-31",
+          "25-50",
+          "92-41"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "C00121",
+          "to": "C00704"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5331113688429",
+            "D5331115152546",
+            "AGS713311K3",
+            "D5331121169495"
+          ],
+          "fins": [
+            "3482VC"
+          ],
+          "drawings": [
+            "D53311163012"
+          ],
+          "zones": [
+            "131",
+            "132",
+            "135",
+            "141"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "cycle driven cracking at the lower flange of an aft cargo compartment sill frame",
+          "titanium strap installed on fuselage frames to diffuse a loading rail reaction"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released and candidate modifications on ATA 53-31",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check in-service repair schemes on the aft lower shell and the sill frames",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the compartment sill wiring route clearance",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Assess the cargo lining panel standard clearance over the strap",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111020",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331121169495"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "141"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The strap fastening picks up the inner doubler of the longitudinal joint and the hole pattern is drilled on the assumption that the titanium item with the machined drain relief is installed. On an aircraft still carrying the aluminium doubler the hole positions fall inside the edge distance limit of that item, so the reinforcement cannot be embodied first.",
+          "resolution": "Declare the corrosion-resistant doubler standard as a post-mod applicability condition on the candidate and state the constraint explicitly in the retrofit bulletin that will carry the reinforcement."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "CRN-53-1042",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331121169495"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "141"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin is effective only on aircraft that are pre the corrosion-resistant doubler standard and its accomplishment instructions assume an undisturbed joint. Once the reinforcement exists, an operator that embodies the reinforcement first leaves the joint in a configuration that neither substantiation covers, and the bulletin gives no warning of it.",
+          "resolution": "Re-issue the bulletin effectivity statement with an explicit ordering note, and record the constraint on both documents so that the planning system enforces it."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-C-53-31-12-902",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The repair and the candidate describe the same physical corner of the aft fuselage in entirely different vocabulary — 'external patch over the bilge line on the lower shell skin' against 'load diffusion strap on the inboard face of the sill frames' — and share no part numbers, no functional item numbers and no zones. Only the descriptive text connects them."
+          },
+          "rationale": "An aircraft that already carries this life limited patch has an external doubler on the skin in the area where the reinforcement adds an internal strap on the frames. The combined stack has never been substantiated, and the repeat ultrasonic inspection of the patch perimeter cannot be performed once the strap blocks access to the inboard side of the joint.",
+          "resolution": "Obtain a position from the repair design owner on whether the patch survives embodiment and add an explicit pre-embodiment check for this repair to the retrofit bulletin."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "WDM-C-92-41-11",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "3482VC"
+            ],
+            "shared_zones": [
+              "131",
+              "135",
+              "141"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The compartment sill route runs at a nominal 40 mm from the frame lower flange along the whole length that the strap occupies, and the wiring sheet already calls that clearance the tightest point of the installation. The strap adds material on exactly that face. The two documents share no vocabulary whatever, so only the functional item number and the zone list connect them.",
+          "resolution": "Measure the actual clearance on a delivered aircraft and, if it is inadequate, move the stand-off clip line outboard as part of the modification rather than leaving it to the embodiment instruction."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "SRM-C-53-31-11-904",
+          "doc_type": "SRM",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331113688429",
+              "AGS713311K3"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "135"
+            ],
+            "shared_ata_6d": [
+              "53-31-11"
+            ],
+            "similarity_note": "Both documents work on the same frame rib with the same bolt standard and describe the same failure mode in similar language, so the two search methods return the pair independently."
+          },
+          "rationale": "The insert repair replaces a region of the frame web with a bolted insert and a doubler strap on the inboard face, which is the same face and in part the same area that the reinforcement occupies. An aircraft carrying the repair cannot take the reinforcement without the insert being removed, and the repair is life limited so some aircraft will carry it at the time of embodiment.",
+          "resolution": "Add a pre-embodiment check for this repair to the retrofit bulletin and define whether an aircraft carrying it must have the frame rib replaced before the reinforcement is applied."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-C-53-31-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331113688429",
+              "D5331115152546",
+              "PEL822344-24"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "135",
+              "141"
+            ],
+            "shared_ata_6d": [
+              "53-31-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure lists the frame rib, the lower intercostal and the stiffener that the modification changes or adds. The lower intercostal becomes a thicker item and the stiffener quantity changes, so the figure needs a pre and post modification item pair rather than a simple part number substitution.",
+          "resolution": "Raise the illustrated parts change request at design freeze and specify the pre and post item pair rather than a straight replacement."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "MOD-111166",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "141"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Both describe work inside the aft cargo compartment at the same stations, one from the structural side and one from the lining side, using different vocabulary for the same physical space."
+          },
+          "rationale": "The impact resistant lining panel has a thicker lower edge with a rolled return that sits close to the frame lower flange. The strap adds up to 6 mm on that face at two panel positions, and the panel is not adjustable. Aircraft that carry both standards may not be able to refit the lining after embodiment.",
+          "resolution": "Measure the lining clearance at the two positions on a delivered aircraft carrying the panel standard, and if necessary release a local panel cut-out as part of the modification."
+        },
+        {
+          "finding_id": "F08",
+          "doc_id": "AMM-C-53-31-11-200-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331113688429",
+              "D5331115152546"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "135",
+              "141"
+            ],
+            "shared_ata_6d": [
+              "53-31-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The scheduled inspection task inspects the frame lower flange and the run-out area that the strap covers. After embodiment the inspection surface is no longer visible and the task as written cannot be performed, which is also the basis of the maintenance saving claimed for the modification.",
+          "resolution": "Prepare the task withdrawal request in parallel with the fatigue substantiation so that the maintenance programme change is available at the same time as the modification."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111071",
+          "doc_type": "MOD",
+          "reason": "Near-identical title and the same ATA 53 chapter, but it applies to the forward cargo door surround of the CIRRANE-11 only. There is no MSN overlap with the candidate, no shared part number, no shared zone, and the two structures are at opposite ends of a different fuselage."
+        },
+        {
+          "doc_id": "SRM-C-53-21-13-901",
+          "doc_type": "SRM",
+          "reason": "Surfaces on the phrase 'cargo door' and on the structural repair vocabulary, but it repairs a corner gusset at the forward cargo door cut-out on a different section, with no shared identifier and no possibility of coexisting with the aft sill strap."
+        }
+      ],
+      "conclusion": "Not yet issued. Two blocking conflicts are confirmed, two repair schemes are under assessment and the wiring clearance measurement is outstanding.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

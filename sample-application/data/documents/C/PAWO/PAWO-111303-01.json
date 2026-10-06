@@ -1,0 +1,322 @@
+[
+  {
+    "doc_id": "PAWO-111303-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Chromate-Free Sealant Release into Operator Repair Procedures",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "20",
+      "ata_4d": "20-40",
+      "ata_6d": "20-40-11",
+      "title": "Sealing and Bonding — Sealant Application"
+    },
+    "secondary_ata": [
+      "20-30",
+      "51-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-10",
+      "released": "2026-06-03",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the chromate-free sealant release, run to identify every published procedure that assumed the longer application window, and delegated to technical data once the list was complete.",
+    "sections": {
+      "objective": "Identify every published maintenance and repair procedure that assumes the four hour application window of the chromated system, so that the shortened ninety minute window does not reach the line as a surprise inside an existing procedure.",
+      "findings_summary": "Four items were confirmed and the work was delegated to technical data. The window change turned out to be far more invasive than the material change: the shortened window is not a property a technician thinks about until a job is already in progress, and three of the four procedures found assume that a surface can be prepared at the end of one shift and treated at the start of the next. The most consequential was the lap joint inspection, where a large area is abraded before any treatment is applied and the practice as written cannot be completed inside ninety minutes on a full joint run. The repair scheme, the antenna land installation and the general practice itself all needed the constraint stated at the point where the work is planned rather than in the material note.",
+      "next_steps": "Re-issue the four procedures with the window stated at the planning step rather than in the material list. Add a note to the lap joint inspection limiting the area that may be abraded in one operation. Technical data to complete the re-issue and to sweep for any further procedure using the phrase after abrasion."
+    },
+    "entities": {
+      "part_numbers": [
+        "ZEDE604998-69",
+        "HE139604-23",
+        "EN149290-27",
+        "WES848069-85",
+        "LN455787K4"
+      ],
+      "fins": [],
+      "drawings": [
+        "D20301285477",
+        "D20201115628"
+      ],
+      "software": [],
+      "zones": [
+        "131",
+        "141",
+        "191"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00680"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111303",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "application window",
+      "chromate-free",
+      "procedure sweep",
+      "planning step"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Alcadara",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111303-01",
+      "subject_mod": "MOD-111303",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-03",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-02-10",
+      "due_date": "2026-06-12",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EDSA",
+        "lead_site": "Alcadara",
+        "contributing_departments": [
+          "EYIS",
+          "ELSC"
+        ],
+        "estimated_manhours": 200,
+        "spent_manhours": 268
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "20",
+          "51",
+          "53",
+          "23"
+        ],
+        "ata_4d": [
+          "20-40",
+          "51-20",
+          "53-31",
+          "23-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "SRM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "ZEDE604998-69",
+            "HE139604-23",
+            "EN149290-27",
+            "WES848069-85"
+          ],
+          "fins": [],
+          "drawings": [
+            "D20301285477"
+          ],
+          "zones": [
+            "131",
+            "141",
+            "191"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "preparing a surface at the end of one shift and treating it at the start of the next",
+          "how long a prepared surface may be left before it is treated"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Sweep published procedures for the four hour assumption",
+          "method": "SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess the lap joint inspection against the shortened window",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the antenna land practice",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-C-51-20-11-200-018-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "BLOCKING",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "141",
+              "191"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Found by searching on the idea of preparing a large area before treating any of it, which is not phrased the same way in the two documents."
+          },
+          "rationale": "The inspection abrades a whole joint run before any treatment is applied, and on a full run that cannot be completed inside ninety minutes. The practice as written would have driven technicians into a window breach without either document saying so.",
+          "resolution": "Note added limiting the area that may be abraded in one operation, and the window stated at the planning step."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SRM-C-51-20-11-911",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "141",
+              "191"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The repair scheme states the window in its procedure text but not in its planning section, so a repair planned over two shifts would have been planned wrongly.",
+          "resolution": "Window moved to the planning step at the next revision."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-C-20-40-11-800-017-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ZEDE604998-69",
+              "HE139604-23",
+              "EN149290-27",
+              "WES848069-85",
+              "LN455787K4"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "141",
+              "191"
+            ],
+            "shared_ata_6d": [
+              "20-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The general practice states both windows in a caution, which is correct, but the caution sits in the middle of the procedure rather than in the job setup where the work is planned.",
+          "resolution": "Caution duplicated in the job setup note."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "CRN-20-2003",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ZEDE604998-69",
+              "HE139604-23",
+              "EN149290-27",
+              "WES848069-85",
+              "LN455787K4"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "141",
+              "191"
+            ],
+            "shared_ata_6d": [
+              "20-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The information bulletin tells the operator to re-plan any line repair that assumed the longer window but does not list the affected procedures, which is what the operator actually needs.",
+          "resolution": "List of affected procedures added at the next revision."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111318",
+          "doc_type": "MOD",
+          "reason": "Returned by every search on treatment and joint land vocabulary. The two-stage treatment change has its own window and was released separately; it is a neighbour of this change rather than a finding, and conflating the two would have doubled the procedure list for no benefit."
+        }
+      ],
+      "conclusion": "Delegated to technical data. The shortened window rather than the material change is what reaches the line, and four procedures assumed the old one.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

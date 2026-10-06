@@ -1,0 +1,174 @@
+[
+  {
+    "doc_id": "MOD-169244",
+    "doc_type": "MOD",
+    "title": "Data Load Session Integrity and Configuration Rollback on Power Interruption",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-12",
+      "title": "Data Loading — Data Load Configuration"
+    },
+    "secondary_ata": [
+      "45-20",
+      "31-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168300"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-04-27",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposes an atomic load session with automatic rollback, so that an interrupted data load leaves the aircraft in a known configuration rather than in a partial state that only a full configuration read can detect.",
+    "sections": {
+      "reason": "The extended load record introduced in production records what was loaded but does nothing about the aircraft being left part-loaded. Three maintenance organisations have reported an aircraft released with a partial load after a night stop power interruption, found only at the next configuration read, and in one case after a revenue sector. The record makes the event traceable after the fact; it does not prevent it. The onboard maintenance function has no rollback of its own and the portable loader cannot know whether it is resuming or restarting.",
+      "description": "The proposal makes a load session atomic in the configuration computer: items are written to a shadow area and committed only when the session completes and its integrity check passes, with an automatic rollback to the previous committed configuration on any interruption. The configuration computer is retained but its application is replaced, the maintenance computer database is reissued to display the shadow and committed states separately, and the portable data loader interface unit is replaced by a variant that reports the commit state to the loader. Cushioned loop clamps at the computer position are carried over from the production standard. The loading protocol on the ground side is unchanged, so existing loaders continue to work.",
+      "effects": "Mass change is negligible; only the interface unit differs. No electrical load change. Not interchangeable, because a rollback-capable computer and an old maintenance database will show a configuration the operator cannot interpret. The onboard maintenance procedures and the troubleshooting entry for an incomplete load both change substantially, and the crew-facing description of the maintenance system is affected where it states what the aircraft does after an interrupted load.",
+      "embodiment_note": "Proposed for production cut-in and for retrofit at any avionics bay visit of about four hours. Retrofit requires the production data load record standard to be embodied first.",
+      "open_points": "Pre-analysis must confirm that the shadow area fits in the memory freed by the production standard, whether the rollback behaviour needs its own certification argument, and whether the maintenance database reissue can be aligned with the recorder configuration work already in progress on a different chapter."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545120504726",
+        "LN760453-5C",
+        "JA751423-16"
+      ],
+      "fins": [
+        "228TN",
+        "480TM1",
+        "822TM8"
+      ],
+      "drawings": [
+        "D45450007012"
+      ],
+      "software": [
+        "LH4PE007934"
+      ],
+      "zones": [
+        "273",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168300",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "data load",
+      "atomic session",
+      "rollback",
+      "shadow configuration",
+      "portable loader"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "mod_number": 169244,
+      "mod_class": "MINOR",
+      "change_category": "SOFTWARE",
+      "trigger": "SAFETY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1529"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.3,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "JA751423-16"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4545120504726",
+        "LN760453-5C"
+      ],
+      "fins_affected": [
+        "228TN",
+        "822TM8"
+      ],
+      "software_affected": [
+        "LH4PE007934"
+      ],
+      "estimated_manhours": 940,
+      "estimated_cost_keur": 1700,
+      "lead_time_weeks": 50,
+      "production_impact": "Cut-in proposed two quarters after the certification decision",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

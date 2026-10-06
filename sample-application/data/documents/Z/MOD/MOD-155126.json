@@ -1,0 +1,364 @@
+[
+  {
+    "doc_id": "MOD-155126",
+    "doc_type": "MOD",
+    "title": "Multi-Mode Receiver Installation for Automatic Dependent Surveillance Broadcast Compliance",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-10-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50",
+      "92-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "FROZEN",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2016-05-30",
+      "released": "2017-10-24",
+      "revised": null,
+      "effective": "2017-11-14"
+    },
+    "abstract": "Replacement of the standalone global positioning receiver by a multi-mode receiver with the position integrity performance that automatic dependent surveillance broadcast out demands, ahead of the airspace mandates in two regions.",
+    "sections": {
+      "reason": "Airspace mandates in two regions required automatic dependent surveillance broadcast out with a position source meeting a defined integrity containment radius from June 2020. The standalone receiver fitted to the older classic fleet does not publish the integrity figure of merit at the required rate and cannot be made to do so, so an equipment change rather than a software change was unavoidable. Roughly 780 aircraft in the tracked classic population were affected and the mandate date left no room for a phased programme.",
+      "description": "The standalone global positioning receiver is replaced by a multi-mode receiver that also provides the landing system function, so that one line replaceable unit replaces two. The obsolete computer assembly D3450128295476 is removed, the display unit D3450125988160 is renewed to show the integrity figure of merit, and the superseded mounting tray D3450128437161 is replaced by an item with the new connector keying. The receiver runs the application load LF2NDF3D474, which supersedes the parameter load LF5N0045592 withdrawn with the old receiver. The attitude and direction mounting tray FIN 172TR7 hosts the new unit, the position determining tray FIN 32DA is deleted, and the transceiver FIN 4DA1 is re-terminated. Work is done in zones 262 and 263. Drawing D34501177112 issue E carries the tray and the antenna feed.",
+      "effects": "Mass reduction of 4.6 kg per aircraft because two units become one. Electrical load falls by 120 VA. The multi-mode receiver is not interchangeable with the standalone receiver because the tray keying and the antenna feed differ. The aircraft flight manual gains the surveillance capability statement and the minimum equipment list entry for the landing system function has to be rewritten because the two functions now share a unit. AMM, IPC and WDM content for ATA 34-50 and 92-11 will require re-issue.",
+      "embodiment_note": "Production cut-in is planned for the 2018 build and retrofit will be delivered in two bulletins: the receiver and tray installation, then the software load and the surveillance configuration. Together they are estimated at about sixteen hours, and the programme has to be complete across the affected fleet before the mandate date."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450128295476",
+        "D3450125988160",
+        "D3450128437161"
+      ],
+      "fins": [
+        "172TR7",
+        "32DA",
+        "4DA1"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LF2NDF3D474",
+        "LF5N0045592"
+      ],
+      "zones": [
+        "262",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z09673"
+      ]
+    },
+    "references": [],
+    "keywords": [
+      "multi-mode receiver",
+      "surveillance broadcast",
+      "integrity containment",
+      "airspace mandate",
+      "landing system"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 155126,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "AIRWORTHINESS_DIRECTIVE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -4.6,
+      "balance_impact": "Forward mass reduction, CG shift below 0.03 % MAC",
+      "electrical_load_impact_va": -120,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3450125988160"
+      ],
+      "parts_removed": [
+        "D3450128295476",
+        "D3450128437161"
+      ],
+      "parts_modified": [],
+      "fins_affected": [
+        "172TR7",
+        "32DA",
+        "4DA1"
+      ],
+      "software_affected": [
+        "LF2NDF3D474",
+        "LF5N0045592"
+      ],
+      "estimated_manhours": 34,
+      "estimated_cost_keur": 1900,
+      "lead_time_weeks": 38,
+      "production_impact": "Cut-in at MSN Z09673; supplier ramped to 90 units per month to cover the retrofit demand",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-155126",
+    "doc_type": "MOD",
+    "title": "Multi-Mode Receiver Installation for Automatic Dependent Surveillance Broadcast Compliance",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-07",
+      "reason": "The containment monitoring output is declared as an interface that later standards depend on, and the installation is recorded as a post-modification applicability condition on their bulletins.",
+      "raised_by_pawo": "PAWO-157011-02",
+      "raised_by_finding": "F01",
+      "finding_type": "PREREQUISITE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50",
+      "92-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "Z09673",
+      "production_cut_in_date": "2018-09-11",
+      "retrofit_via": [
+        "ZPH-34-1207",
+        "ZPH-34-1211"
+      ]
+    },
+    "dates": {
+      "created": "2016-05-30",
+      "released": "2017-10-24",
+      "revised": "2026-08-07",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Replacement of the standalone global positioning receiver by a multi-mode receiver with the position integrity performance the surveillance mandate demands, and the containment monitoring output that later navigation standards are built on.",
+    "sections": {
+      "reason": "Airspace mandates in two regions required automatic dependent surveillance broadcast out with a position source meeting a defined integrity containment radius from June 2020. The standalone receiver fitted to the older classic fleet does not publish the integrity figure of merit at the required rate and cannot be made to do so, so an equipment change rather than a software change was unavoidable. Roughly 780 aircraft in the tracked classic population were affected and the mandate date left no room for a phased programme.",
+      "description": "The standalone global positioning receiver is replaced by a multi-mode receiver that also provides the landing system function, so that one line replaceable unit replaces two. The obsolete computer assembly D3450128295476 is removed, the display unit D3450125988160 is renewed to show the integrity figure of merit, and the superseded mounting tray D3450128437161 is replaced by an item with the new connector keying. The receiver runs the application load LF2NDF3D474, which supersedes the parameter load LF5N0045592 withdrawn with the old receiver. The attitude and direction mounting tray FIN 172TR7 hosts the new unit, the position determining tray FIN 32DA is deleted, and the transceiver FIN 4DA1 is re-terminated. Work is done in zones 262 and 263. Drawing D34501177112 issue E carries the tray and the antenna feed.",
+      "effects": "Mass reduction of 4.6 kg per aircraft because two units become one. Electrical load falls by 120 VA. The multi-mode receiver is not interchangeable with the standalone receiver because the tray keying and the antenna feed differ. The aircraft flight manual gains the surveillance capability statement and the minimum equipment list entry for the landing system function is rewritten because the two functions now share a unit. AMM, IPC and WDM content for ATA 34-50 and 92-11 required re-issue at revision B. The containment monitoring output published by this receiver is also what later required navigation performance standards read their position integrity from. Every aircraft in the current target population happens to carry it, so nothing is broken today, but the dependency is now declared rather than assumed: it is recorded as a post-modification applicability condition on the bulletins that carry those standards, so that a later effectivity extension cannot reach an aircraft without the receiver and lose the capability without anything reporting it.",
+      "embodiment_note": "Cut in on the production line at MSN Z09673 in September 2018. Retrofit is delivered in two bulletins: the receiver and tray installation, then the software load and the surveillance configuration. Together they take about sixteen hours and were completed across most of the affected fleet before the mandate date."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450128295476",
+        "D3450125988160",
+        "D3450128437161"
+      ],
+      "fins": [
+        "172TR7",
+        "32DA",
+        "4DA1"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LF2NDF3D474",
+        "LF5N0045592"
+      ],
+      "zones": [
+        "262",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z09673"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-34-1207",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "ZPH-34-1211",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "multi-mode receiver",
+      "surveillance broadcast",
+      "integrity containment",
+      "airspace mandate",
+      "landing system"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 155126,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "AIRWORTHINESS_DIRECTIVE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -4.6,
+      "balance_impact": "Forward mass reduction, CG shift below 0.03 % MAC",
+      "electrical_load_impact_va": -120,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3450125988160"
+      ],
+      "parts_removed": [
+        "D3450128295476",
+        "D3450128437161"
+      ],
+      "parts_modified": [],
+      "fins_affected": [
+        "172TR7",
+        "32DA",
+        "4DA1"
+      ],
+      "software_affected": [
+        "LF2NDF3D474",
+        "LF5N0045592"
+      ],
+      "estimated_manhours": 34,
+      "estimated_cost_keur": 1900,
+      "lead_time_weeks": 38,
+      "production_impact": "Cut-in at MSN Z09673; supplier ramped to 90 units per month to cover the retrofit demand",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

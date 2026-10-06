@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "MOD-132480",
+    "doc_type": "MOD",
+    "title": "Engine Oil Filter Housing Bypass Indication and Heat Shield Rework",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-05-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "79",
+      "ata_4d": "79-20",
+      "ata_6d": "79-20-12",
+      "title": "Distribution — Oil Filter Housing"
+    },
+    "secondary_ata": [
+      "71-10",
+      "78-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7720"
+      ],
+      "operators": [
+        "OST",
+        "LDL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION"
+      ],
+      "production_effectivity": "S01696",
+      "production_cut_in_date": "2021-07-09",
+      "retrofit_via": [
+        "SLN-79-1006"
+      ]
+    },
+    "dates": {
+      "created": "2020-01-15",
+      "released": "2021-05-19",
+      "revised": null,
+      "effective": "2021-06-14"
+    },
+    "abstract": "A mechanical bypass indicator on the oil filter housing with a heat shield rework, so that an impending bypass is found at the walk-around instead of at the next scheduled filter change.",
+    "sections": {
+      "reason": "The differential pressure switch fitted at build annunciates only when the bypass has already opened, at which point unfiltered oil has been through the bearings. Shop analysis of eleven engines removed for bearing distress found that in seven cases the bypass had operated on an earlier sector without any record. A mechanical pop-out indicator gives the line engineer a visible warning at about seventy per cent of the bypass differential, which is a full check interval of warning, and it does not depend on the electrical annunciation being serviceable.",
+      "description": "The oil filter housing mount link D7920120683140 is replaced by an item with a boss for the pop-out indicator on the upper face, positioned so that it is visible with the fan cowl open and without a stand. The heat shield kit SAL498770-46 is re-profiled around the boss and the cowl latch VA570633-07 is repositioned by twenty millimetres so that the shield can be removed without disturbing the latch. Barrel nut EN664100-11 replaces the original at four positions to give access with a standard socket. Shroud 1237EO and firewall panel 1EO are refitted with new seals. The indicator resets with a push and records nothing, so the engineering record depends on the technician logging it: the task card is written accordingly. Work is inside the fan cowl in zones 422 and 423, with the engine cold.",
+      "effects": "Mass increase of 0.4 kg per engine. No electrical load change; the indicator is entirely mechanical and the existing differential pressure switch is retained. The mount link is not interchangeable. A new walk-around item is added to the pre-flight external check and the oil filter inspection task gains a step to record the indicator state before the filter is disturbed. Spares provisioning for the heat shield changes because the pre-modification profile is not usable on a post-modification housing.",
+      "embodiment_note": "Cut into production at MSN S01696. Retrofit is available at engine shop visit only, because the housing must come off the gearbox pad; the bulletin gives eleven manhours in the shop and no on-wing option."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7920120683140",
+        "SAL498770-46",
+        "VA570633-07",
+        "EN664100-11",
+        "DUD775751-11"
+      ],
+      "fins": [
+        "1237EO",
+        "1EO"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "422",
+        "423"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01696"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-79-1006",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-S-79-20-12-200-041-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "oil filter housing",
+      "bypass indicator",
+      "heat shield",
+      "walk-around",
+      "bearing distress"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 132480,
+      "mod_class": "MINOR",
+      "change_category": "POWERPLANT",
+      "trigger": "SAFETY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1305"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.8,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "EN664100-11"
+      ],
+      "parts_removed": [
+        "DUD775751-11"
+      ],
+      "parts_modified": [
+        "D7920120683140",
+        "SAL498770-46",
+        "VA570633-07"
+      ],
+      "fins_affected": [
+        "1237EO"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 22,
+      "estimated_cost_keur": 150,
+      "lead_time_weeks": 16,
+      "production_impact": "Cut-in at MSN S01696; supplier housing casting change",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

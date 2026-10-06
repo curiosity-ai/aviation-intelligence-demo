@@ -1,0 +1,178 @@
+[
+  {
+    "doc_id": "AMM-S-33-20-11-400-019-A",
+    "doc_type": "AMM",
+    "title": "Cabin Ceiling and Wall Wash Light Assembly — Installation",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-05-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "33",
+      "ata_4d": "33-20",
+      "ata_6d": "33-20-11",
+      "title": "Passenger Compartment Lighting — Ceiling and Wall Wash Lights"
+    },
+    "secondary_ata": [
+      "44-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-11-14",
+      "released": "2024-05-30",
+      "revised": null,
+      "effective": "2024-06-17"
+    },
+    "abstract": "Installation of a ceiling and wall wash light assembly into its ceiling panel, with the addressing step that has to match the cabin layout table and the scene test that closes the task.",
+    "sections": {
+      "purpose": "This task installs a ceiling and wall wash light assembly into its ceiling panel, addresses it on the cabin bus and proves it across every commanded scene.",
+      "job_setup_note": "Do this task with the cabin lighting isolated and the ceiling panels down. The address is not a free choice: each assembly takes the address given for its position in the cabin layout table, and an assembly addressed out of position will light with its neighbours in the wrong sequence during a scene transition. Check the layout table for the aircraft before the first assembly goes in. Two persons are needed at the ceiling.",
+      "procedure": "1. Isolate the cabin lighting and tag the circuit breakers. 2. Make sure the ceiling panel seat is clean and that the bonding pad is undamaged. 3. Check the assembly part number against the cabin layout table for that position. CAUTION: AN ASSEMBLY ADDRESSED OUT OF POSITION WILL LIGHT IN THE WRONG SEQUENCE DURING A SCENE TRANSITION. 4. Install the light assembly kit D3320112768387 into the ceiling panel and secure it. 5. Where the deeper full spectrum housing is fitted, check the clearance to the inboard partition assembly NY719919-92 before the panel goes up. 6. Connect the cabin bus and the bonding lead. 7. Set the address for the position from the layout table. 8. Repeat for each assembly in the bay. 9. Install the ceiling panels in zones 241, 253 and 265 and check the panel joints for step and gap. 10. Restore the cabin lighting and remove the tags. 11. Command each scene in turn from the cabin attendant panel and check that no segment is dark and that the transition runs front to back in the correct order. WARNING: DO NOT LOOK DIRECTLY INTO THE EMITTER AT FULL WHITE OUTPUT. 12. Check the reading light positions 24RH and 4864LP4 and the trim position 8517LP6 for correct operation after the bus is loaded.",
+      "close_out": "Do a visual check of the whole cabin at each scene from the aisle and confirm there is no visible colour step between adjacent bays. Record the installation, the addresses set and the scene test result in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3320112768387",
+        "NY719919-92",
+        "QUD588949-34"
+      ],
+      "fins": [
+        "24RH",
+        "4864LP4",
+        "9691LP",
+        "8517LP6"
+      ],
+      "drawings": [
+        "D33201109538",
+        "D33201121638"
+      ],
+      "software": [],
+      "zones": [
+        "241",
+        "253",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "SLN-33-1038",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-136140",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "ceiling light assembly",
+      "cabin bus address",
+      "scene transition",
+      "colour step",
+      "ceiling panel"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "33-20-11-400-019-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "SOLANO-38 and SOLANO-39 aircraft; the address table differs pre and post MOD-136140",
+      "manhours": 9.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "241",
+          "253",
+          "265"
+        ],
+        "access_panels": [
+          "241BR",
+          "253BL",
+          "265CR",
+          "265AR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Isolate the cabin lighting and tag the circuit breakers.",
+          "Do not look directly into the emitter at full white output.",
+          "Use the panel lifting aid for the ceiling panels."
+        ],
+        "tooling": [
+          {
+            "reference": "98D33201-064",
+            "description": "Cabin lighting test set"
+          },
+          {
+            "reference": "98D33201-068",
+            "description": "Panel lifting aid"
+          },
+          {
+            "reference": "98D33201-071",
+            "description": "Address setting tool"
+          }
+        ],
+        "consumables": [
+          "Adhesive, cabin panel, low outgassing",
+          "Label set, cabin addressing"
+        ],
+        "expendables": [
+          {
+            "part_number": "QUD588949-34",
+            "qty": 2
+          }
+        ]
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

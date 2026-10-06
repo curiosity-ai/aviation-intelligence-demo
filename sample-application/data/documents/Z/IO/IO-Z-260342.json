@@ -1,0 +1,150 @@
+[
+  {
+    "doc_id": "IO-Z-260342",
+    "doc_type": "IO",
+    "title": "Request to End Repeated APU Auto-Shutdowns on Hot-and-High Turnarounds",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-24N3"
+      ],
+      "msns": [
+        "Z09471",
+        "Z08996",
+        "Z11317"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SOL",
+        "ACL",
+        "PAL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-02",
+      "released": "2026-04-09",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Operator asks for a permanent fix to auxiliary power unit auto-shutdowns that occur on the second and third turnaround of a hot-weather day, leaving aircraft without air conditioning at the gate and delaying push-back.",
+    "sections": {
+      "request": "On our southern network we routinely fly four sectors a day into stations where the ramp temperature is above forty degrees. From about the second turnaround onward the APU starts shutting itself down about ninety seconds after we select the bleed on, and once it has done it twice it will not restart until the aircraft has sat for the best part of an hour. Nothing is wrong with the unit itself as far as our line engineers can see, and the maintenance message we get back points at the control box rather than at the machine. The consequence for us is that the cabin gets hot with passengers on board, we lose the air conditioning we need for the turnaround, and we are pushing back late. We would like a solution that lets the APU run continuously through a full day of short sectors in high ambient temperature, without us having to plan a ground cart at every station.",
+      "background": "The behaviour was first reported in the summer of 2024 on three aircraft and has spread across the sub-fleet as our southern flying has grown. We have changed the unit twice on one aircraft with no improvement, which is why we no longer believe it is a hardware failure. Our line stations report thirty-one events in the last twelve months, twenty-eight of them between June and September and all of them after the aircraft had already flown at least two sectors that day. Dispatch reliability on the affected aircraft is running at 98.4 per cent against a fleet figure of 99.3.",
+      "expected_outcome": "An APU that can be run on the ground for the full turnaround at ambient temperatures above forty degrees on the third and fourth sector of the day, without an auto-shutdown and without a cooling-down period before a restart. We would accept a load restriction in the hottest part of the day if it is published and predictable."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "396"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z09471",
+        "Z08996",
+        "Z11317"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-158520",
+        "doc_type": "MOD",
+        "relation": "CREATED"
+      }
+    ],
+    "keywords": [
+      "apu auto shutdown",
+      "hot and high",
+      "turnaround",
+      "ground air conditioning",
+      "dispatch reliability"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Customer Support Engineering"
+    },
+    "type_data": {
+      "io_number": "IO-Z-260342",
+      "raised_by": {
+        "requester_type": "OPERATOR",
+        "operator_code": "SOL",
+        "contact_role": "Head of Line Maintenance",
+        "oem_focal_department": "EAAM",
+        "oem_focal_site": "Valmont"
+      },
+      "request_category": "SYSTEM",
+      "priority": "HIGH",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {
+        "aircraft_count": 34,
+        "msns": [
+          "Z09471",
+          "Z08996",
+          "Z11317"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ]
+      },
+      "business_justification": "Thirty-one auto-shutdown events in twelve months, each costing on average nineteen minutes of departure delay and a ground air cart hire. The operator estimates the direct cost at 640 thousand euros a year across the sub-fleet, before any allowance for the passenger experience of a hot cabin during boarding.",
+      "commercial": {
+        "funding": "SHARED",
+        "budget_keur": 780,
+        "contract_reference": "CSA-2026-SOL-0912"
+      },
+      "target_dates": {
+        "requested_response": "2026-06-30",
+        "requested_embodiment_start": "2027-04-01"
+      },
+      "created_mod": "MOD-158520",
+      "closure_note": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

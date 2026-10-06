@@ -1,0 +1,175 @@
+[
+  {
+    "doc_id": "AMM-C-24-50-12-000-007-A",
+    "doc_type": "AMM",
+    "title": "Aft Secondary Distribution Box — Removal",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2021-09-08",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-12",
+      "title": "AC Distribution — Secondary Distribution Box"
+    },
+    "secondary_ata": [
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-03-02",
+      "released": "2017-10-19",
+      "revised": "2021-09-08",
+      "effective": "2021-09-29"
+    },
+    "abstract": "Removal of the aft secondary distribution box from the equipment rack, including the strapping record and the ventilation duct disconnection that applies to the ventilated standard only.",
+    "sections": {
+      "purpose": "This task gives the removal of the aft secondary distribution box, and identifies the additional steps that apply where the box is at the ventilated standard.",
+      "job_setup_note": "The aircraft must be de-energised, with external power disconnected and the batteries isolated. The feeder group strapping must be recorded before any termination is disturbed, because the installation task has to restore the same allocation. The ventilated standard carries a duct to the rack extraction plenum which has to be disconnected before the box will come off its mounting.",
+      "procedure": "1. WARNING: DE-ENERGISE THE AIRCRAFT, DISCONNECT EXTERNAL POWER AND ISOLATE THE BATTERIES BEFORE THE BOX COVER IS OPENED. 2. Open the aft equipment rack access and remove the box cover. 3. Photograph and record the strapping of the bus bar 403XU2 and of the feeder contactor 89PC against the allocation table. 4. Confirm with a proving unit that every terminal is dead. 5. CAUTION: DO NOT USE A TERMINAL AS A SUPPORT POINT WHEN THE BOX IS LIFTED. A BENT TERMINAL IS NOT REPAIRABLE IN SITU. 6. Disconnect the connector HAR83831-56 and the harness D2450122851975 terminations, identifying each one as it is released. 7. Where the box is at the ventilated standard, release the duct at the box inlet and cap the plenum end. 8. Remove the feeder relay CIDE636017-51 if it is to be replaced. 9. Recover the spacers AES140047-2A and count them against the installation diagram. 10. Remove the box mounting fasteners and lift the box squarely off the rack. 11. Fit the terminal protection caps and put the box on the padded trolley. 12. Blank the rack aperture if the installation will not follow in the same shift.",
+      "close_out": "Make sure that every disconnected termination is identified and protected and that no loose hardware remains in the rack. Record the strapping arrangement, the removed serial number and whether the box was at the ventilated standard in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450122851975",
+        "HAR83831-56",
+        "CIDE636017-51",
+        "AES140047-2A"
+      ],
+      "fins": [
+        "403XU2",
+        "89PC",
+        "9177PC5"
+      ],
+      "drawings": [
+        "D24501217521"
+      ],
+      "software": [],
+      "zones": [
+        "244",
+        "252",
+        "272"
+      ],
+      "figures": [
+        "FIG-24-50-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-24-50-12-400-007-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-C-92-31-12",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "distribution box removal",
+      "strapping record",
+      "ventilation duct",
+      "terminal protection",
+      "equipment rack"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "24-50-12-000-007-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All aircraft. The ventilation duct steps apply only to aircraft at the ventilated distribution box standard.",
+      "manhours": 7.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.5,
+      "access": {
+        "zones": [
+          "244",
+          "252",
+          "272"
+        ],
+        "access_panels": [
+          "244CL",
+          "252BR",
+          "272CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "De-energise the aircraft and isolate the batteries.",
+          "Prove every terminal dead before work starts.",
+          "Do not use a terminal as a lifting point."
+        ],
+        "tooling": [
+          {
+            "reference": "98D24501-009",
+            "description": "Crimp tool set"
+          },
+          {
+            "reference": "98D24501-013",
+            "description": "Voltage proving unit"
+          },
+          {
+            "reference": "98D24501-016",
+            "description": "Padded equipment trolley"
+          }
+        ],
+        "consumables": [
+          "Contact lubricant, electrical",
+          "Cable ties, self-locking"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-24-50-12-400-007-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

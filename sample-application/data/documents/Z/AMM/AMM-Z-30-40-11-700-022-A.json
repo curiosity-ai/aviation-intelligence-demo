@@ -1,0 +1,194 @@
+[
+  {
+    "doc_id": "AMM-Z-30-40-11-700-022-A",
+    "doc_type": "AMM",
+    "title": "Operational Test of the Windshield Heating Control and Channel Balance",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-02-25",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-40",
+      "ata_6d": "30-40-11",
+      "title": "Windows and Windshields — Windshield Heating Control"
+    },
+    "secondary_ata": [
+      "56-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-06-02",
+      "released": "2016-11-18",
+      "revised": "2022-02-25",
+      "effective": "2022-03-18"
+    },
+    "abstract": "Operational test of the windshield heating control, covering the warm-up rate of each channel, the balance between channels, the overheat protection and the fault annunciation on the overhead panel.",
+    "sections": {
+      "purpose": "This task verifies that each windshield heating channel warms at the correct rate, that the two channels stay balanced, that overheat protection operates at the design threshold, and that a failed channel is correctly annunciated.",
+      "job_setup_note": "The test is best done with the aircraft cold-soaked, because a warm windshield reaches the control temperature before a meaningful warm-up rate can be measured. Surface temperature is measured with the contact probe at the marked positions only; an infra-red reading through the laminate is not acceptable. External power must be stable and within limits for the full test.",
+      "procedure": "1. Apply external power and confirm the voltage is stable and inside limits. 2. Record the windshield surface temperature at the three marked positions with the contact probe. CAUTION: DO NOT USE AN INFRA-RED THERMOMETER. THE LAMINATE SURFACE EMISSIVITY GIVES A READING UP TO TWELVE DEGREES LOW. 3. Select window heat to normal and start the timer. 4. Record the surface temperature every two minutes for twenty minutes and calculate the warm-up rate for each channel. 5. Confirm that the two channels on one windshield stay within the balance limit throughout. 6. Confirm the current drawn by each channel at the sensing point of FIN 1WX. 7. Select the overheat test and confirm that the control removes the supply at the design threshold. WARNING: THE WINDSHIELD SURFACE REACHES A TEMPERATURE THAT WILL BURN SKIN DURING THE OVERHEAT TEST. DO NOT TOUCH THE GLASS WITHOUT GLOVES. 8. Confirm that the overheat caption appears on the overhead panel and that it clears on reset. 9. Simulate a failed channel at the lower termination of FIN 1981WX and confirm the fault annunciation. 10. Restore the termination and confirm the fault clears. 11. Confirm the fault memory of the window heat computer is empty.",
+      "close_out": "Select window heat off and let the windshield cool before you fit any cover. Remove external power and the test equipment. Record the warm-up rate for each channel, the balance figures, the overheat threshold and the annunciation results against the aircraft. Report any channel outside the balance limit before release to service."
+    },
+    "entities": {
+      "part_numbers": [
+        "CIN170502-71",
+        "BE487996-76",
+        "AES963886-66"
+      ],
+      "fins": [
+        "1WX",
+        "1981WX"
+      ],
+      "drawings": [
+        "D30301107659",
+        "D30300040023"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "214",
+        "215"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-159775",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-Z-56-10-11-000-021-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "window heat",
+      "warm-up rate",
+      "channel balance",
+      "overheat protection",
+      "fault annunciation"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "30-40-11-700-022-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "211",
+          "214",
+          "215"
+        ],
+        "access_panels": [
+          "211CR",
+          "214CL",
+          "215AR"
+        ],
+        "doors": [
+          "Flight compartment door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not touch the glass without gloves during the overheat test.",
+          "Confirm the external power voltage is stable before you start.",
+          "Do not use an infra-red thermometer on the laminate.",
+          "Let the windshield cool before you fit any cover."
+        ],
+        "tooling": [
+          {
+            "reference": "98D30301-016",
+            "description": "Contact temperature probe set, windshield"
+          },
+          {
+            "reference": "98D30301-023",
+            "description": "Clamp meter, alternating current"
+          },
+          {
+            "reference": "98D30301-031",
+            "description": "Window heat test harness"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner",
+          "Thermal contact paste",
+          "Marking tape"
+        ],
+        "expendables": [
+          {
+            "part_number": "AES963886-66",
+            "qty": 6
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-Z-56-10-11-000-021-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,186 @@
+[
+  {
+    "doc_id": "AMM-S-34-50-11-400-020-A",
+    "doc_type": "AMM",
+    "title": "Multi-Mode Receiver and Crown Aerial — Installation",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-08-24",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "53-31"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-10-30",
+      "released": "2020-06-11",
+      "revised": "2023-08-24",
+      "effective": "2023-09-08"
+    },
+    "abstract": "Installation of the multi-mode receiver and the crown-mounted aerial, with the insertion loss measurement on each coaxial run and the stationary satellite geometry check that closes the task.",
+    "sections": {
+      "purpose": "This task installs the multi-mode receiver in the avionics bay and its aerial on the crown, and proves the installation by insertion loss measurement and a stationary geometry check.",
+      "job_setup_note": "Do this task in a hangar with the aircraft on ground power and with a crown access platform. The coaxial runs are the item that most often causes a repeat visit: an over-tightened connector or a tight bend radius shows as an insertion loss that is inside limits on the bench and outside them on the aircraft. Measure every run on the aircraft, not on the bench. The geometry check needs a clear view of the sky, so it cannot be done in a closed hangar.",
+      "procedure": "1. Make sure the aircraft is on ground power and that the navigation system is isolated and tagged. 2. Position the crown access platform and drop the ceiling panels in zone 293. 3. Where the aerial is being relocated, install the reinforced crown pad wet with sealant and do an eddy current inspection of each fastener hole. CAUTION: DO NOT INSTALL THE AERIAL BEFORE THE PAD SEALANT HAS CURED. THE PAD WILL MOVE UNDER THE CONNECTOR TORQUE. 4. Install the transceiver D3450007115686 on the pad and torque the retention to the value in the torque table. 5. Restore the external finish around the aerial to aerodynamic smoothness class B. 6. Route the coaxial runs along the existing crown cable route, respecting the minimum bend radius. 7. Make each coaxial connector to the torque given. WARNING: AN OVER-TIGHTENED COAXIAL CONNECTOR WILL PASS A CONTINUITY CHECK AND FAIL IN SERVICE. USE A TORQUE WRENCH. 8. Install the interface unit D3450112668148 and the upper computer sub-assembly D3450113750314 in the avionics bay in zone 162, with the forward circuit card QUD432161-77 fitted. 9. Measure the insertion loss on each coaxial run and record it. 10. Load the parameter database LH4L19EEBC2 through the portable data loader. 11. Restore the navigation system and remove the tags. 12. Move the aircraft to a position with a clear view of the sky and do the satellite geometry check with the aircraft stationary. 13. Confirm on the maintenance terminal that no navigation fault is latched.",
+      "close_out": "Install the ceiling panels and remove the crown access platform. Record the installation, the unit serial numbers, the coaxial insertion loss values, the loaded database part number and the geometry check result in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450112668148",
+        "D3450113750314",
+        "QUD432161-77",
+        "D3450007115686"
+      ],
+      "fins": [],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LH4L19EEBC2"
+      ],
+      "zones": [
+        "162",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "SLN-34-1041",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-134210",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "multi-mode receiver",
+      "crown aerial",
+      "insertion loss",
+      "satellite geometry",
+      "coaxial torque"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "34-50-11-400-020-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All twin-engine aircraft; step 3 applies only where the aerial is being relocated under MOD-134210",
+      "manhours": 24.0,
+      "personnel": 3,
+      "elapsed_time_hours": 14.0,
+      "access": {
+        "zones": [
+          "162",
+          "293"
+        ],
+        "access_panels": [
+          "162BL",
+          "162AL",
+          "293CR",
+          "293BL"
+        ],
+        "doors": [
+          "Avionics bay access door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Isolate and tag the navigation system before any connector is made.",
+          "Use fall protection on the crown access platform.",
+          "Use a torque wrench on every coaxial connector."
+        ],
+        "tooling": [
+          {
+            "reference": "98D34501-201",
+            "description": "Insertion loss test set"
+          },
+          {
+            "reference": "98D34501-205",
+            "description": "Coaxial torque wrench"
+          },
+          {
+            "reference": "98D34501-208",
+            "description": "Crown access platform"
+          },
+          {
+            "reference": "98D34501-212",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [
+          "Sealant, aerodynamic, exterior",
+          "Primer, epoxy, chromate-free",
+          "Coaxial connector set"
+        ],
+        "expendables": [
+          {
+            "part_number": "QUD432161-77",
+            "qty": 2
+          }
+        ]
+      },
+      "referenced_tasks": [],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

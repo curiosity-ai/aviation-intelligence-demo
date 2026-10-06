@@ -1,0 +1,256 @@
+[
+  {
+    "doc_id": "PAWO-132860-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Four-Engine Autothrust Gain Set Against the Quadrant Resolver Proposal",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CANCELLED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-11",
+      "title": "Auto Throttle — Thrust Control Computer"
+    },
+    "secondary_ata": [
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "JTA",
+        "TMK"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-27",
+      "released": "2026-05-09",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed work order checking whether the four-engine autothrust gain set would still be valid if a second resolver channel were added to the quadrant, closed with the gain set found adequate but the interface undocumented.",
+    "sections": {
+      "objective": "Establish whether the four-engine autothrust gain set released in 2021 remains valid if the thrust control quadrant gains a second, independent resolver channel on each lever path. The question came from the quadrant redundancy study and needed answering before that design could be launched.",
+      "findings_summary": "The gain set is valid: the loop takes lever angle as an input and does not care how many sources produced it, provided the selected source is consistent. What is not documented anywhere is which source the computer selects when two are available and what it does when they disagree. That behaviour exists in the computer today because the interface was specified for a possible second channel, but no document states it, and the functional test has no case for it. The gain set strapping is the second finding: the test task verifies the strapping against the number of engines, which is right, but a two-channel installation would need a second strapping dimension and the test would pass a wrong configuration. Neither of these is a reason not to proceed. Both are reasons the quadrant work has to carry a documentation package that nobody had costed.",
+      "next_steps": "Confirm to the quadrant study that the gain set is adequate. Require the source selection and disagreement behaviour to be documented as part of that work. Add a second strapping dimension to the functional test task when the quadrant change is embodied and not before."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL769933-05",
+        "D2230122881931"
+      ],
+      "fins": [
+        "7CE4",
+        "86CE",
+        "16CE"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "141",
+        "192"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-132860",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "AMM-S-22-30-11-700-042-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-134430",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "pre-analysis",
+      "four-engine",
+      "autothrust",
+      "against"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-132860-01",
+      "subject_mod": "MOD-132860",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-09",
+      "outcome": "REJECTED",
+      "raised_date": "2026-04-27",
+      "due_date": "2026-05-09",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "EAAM"
+        ],
+        "estimated_manhours": 160,
+        "spent_manhours": 154
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "VANTOR-64",
+          "VANTOR-68"
+        ],
+        "ata_2d": [
+          "22",
+          "76"
+        ],
+        "ata_4d": [
+          "22-30",
+          "76-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "HOL769933-05",
+            "D2230122881931"
+          ],
+          "fins": [
+            "7CE4",
+            "86CE",
+            "16CE"
+          ],
+          "drawings": [],
+          "zones": [
+            "141",
+            "192"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "thrust lever hunting in turbulence at high cruise weight",
+          "resolver source selection with two channels available"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish what the loop takes as its lever angle input",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Find where the source selection behaviour is written down",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check what the functional test would verify",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-S-22-30-11-700-042-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found by entity linking on the circuit card and data concentrator part numbers the task calls out."
+          },
+          "rationale": "The functional test verifies the gain set strapping against the number of engines. A two-channel resolver installation adds a second strapping dimension that the test does not read, so a wrong configuration would pass.",
+          "resolution": "Add the second strapping dimension to the test when the quadrant change is embodied."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-134430",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by similarity between the two subjects; the documents share no part number and describe the quadrant and the computer respectively."
+          },
+          "rationale": "The friction damper standard changed the quadrant on the twin-engine aircraft and its four-engine equivalent is the vehicle for the resolver redundancy. The gain set and the quadrant standard have to be considered together on the four-engine fleet, which nobody had written down.",
+          "resolution": "State the dependency in the quadrant study."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Cancelled after the quadrant study absorbed the question. The gain set is adequate; the documentation gap is recorded.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

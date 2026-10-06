@@ -1,0 +1,362 @@
+[
+  {
+    "doc_id": "WDM-T-92-21-13",
+    "doc_type": "WDM",
+    "title": "Cargo Door Warning — Latch Position Channels 1 and 2, Forward Fuselage",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2007-11-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-13",
+      "title": "Forward Fuselage Wiring — Door Warning Wiring"
+    },
+    "secondary_ata": [
+      "52-70",
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-141020"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-06-30",
+      "released": "2007-11-11",
+      "revised": "2007-11-11",
+      "effective": "2007-12-16"
+    },
+    "abstract": "Wiring diagram of the two cargo door latch position sensing channels from the latching stations to the door warning computing function, covering the forward and aft door positions on one sheet set.",
+    "sections": {
+      "purpose": "This sheet shows the wiring of the two latch position sensing channels of the forward, aft and bulk cargo doors, from the sensor at each latching station to the door warning computing function in the avionics bay, with one ground point block and one connector list covering all three door positions.",
+      "sheet_note": "Sheet 1 shows channel 1 and sheet 2 shows channel 2. At the forward door position the two channels share no bundle, no clamp and no connector shell between the door station and the avionics bay, which is the segregated standard. At the aft and bulk positions both channels are still carried in the same bundle between the door transition and the avionics bay entry, and that section is shown dashed on sheet 1. The ground point block and the connector list at the foot of sheet 2 are common to all three door positions. The circuit breaker allocation differs between the two standards and is called out at the panel.",
+      "routing_note": "At the forward position, channel 1 runs from the latching station through zone 891 on the lower cable route, crosses to the avionics bay at zone 192 and terminates at the door warning computing function, and channel 2 runs on the opposite side of the frame through zone 834, entering the avionics bay through a separate penetration and terminating at the splice module before the computing function. At the aft and bulk positions both channels leave the door transition in the common bundle and separate only at the avionics bay entry. Neither route passes through the forward cargo compartment lining fixings."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221113867714",
+        "D9221004365569",
+        "HOL285457-83",
+        "EN491538-6A",
+        "AGS573791-88"
+      ],
+      "fins": [
+        "4387VC",
+        "646VU",
+        "85VU4",
+        "3323WT",
+        "2056WV"
+      ],
+      "drawings": [
+        "D92211305618"
+      ],
+      "software": [],
+      "zones": [
+        "834",
+        "891",
+        "192"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146050",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-92-21-13-200-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door warning",
+      "latch position",
+      "common bundle",
+      "avionics bay",
+      "circuit breaker allocation"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Electrical Installation Design"
+    },
+    "type_data": {
+      "sheet_number": "92-21-13",
+      "sheet_title": "CARGO DOOR WARNING — LATCH POSITION CHANNELS 1 AND 2",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1213W",
+        "1214W",
+        "1218W"
+      ],
+      "connectors": [
+        {
+          "reference": "1213VC",
+          "part_number": "HOL285457-83",
+          "location_zone": "891",
+          "contacts": 37
+        },
+        {
+          "reference": "1218VC",
+          "part_number": "D9221004365569",
+          "location_zone": "192",
+          "contacts": 61
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "3323WT",
+          "description": "WARNING SENSOR, CARGO DOOR STRUCTURE, UPPER",
+          "zone": "891"
+        },
+        {
+          "fin": "2056WV",
+          "description": "ACTUATOR, CARGO DOOR STRUCTURE, LH",
+          "zone": "893"
+        },
+        {
+          "fin": "4387VC",
+          "description": "CIRCUIT BREAKER, FORWARD FUSELAGE WIRING, INBD",
+          "zone": "834"
+        },
+        {
+          "fin": "85VU4",
+          "description": "CABLE ASSY, AVIONICS BAY HARNESSES, LH",
+          "zone": "192"
+        }
+      ],
+      "wire_count": 74,
+      "wire_gauge_range": "AWG 24 to AWG 16",
+      "routes": [
+        "Zone 891 to zone 192 on the lower cable route, forward position channel 1",
+        "Zone 834 to zone 192 on the opposite frame side, forward position channel 2",
+        "Aft and bulk positions, both channels in the common bundle from the door transition to the avionics bay entry"
+      ],
+      "related_sheets": [
+        "WDM-T-92-21-12",
+        "WDM-T-92-21-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "WDM-T-92-21-13",
+    "doc_type": "WDM",
+    "title": "Cargo Door Warning — Latch Position Channels 1 and 2, Forward Fuselage",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-01",
+      "reason": "Sheet reissued in one piece with the aft and bulk positions at the segregated standard and the ground point block and connector list split per fuselage section.",
+      "raised_by_pawo": "PAWO-146050-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-13",
+      "title": "Forward Fuselage Wiring — Door Warning Wiring"
+    },
+    "secondary_ata": [
+      "52-70",
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-141020"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-06-30",
+      "released": "2007-11-11",
+      "revised": "2026-08-01",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Wiring diagram of the two cargo door latch position sensing channels from the latching stations to the door warning computing function, showing the segregated routes introduced by the harness rework.",
+    "sections": {
+      "purpose": "This sheet shows the wiring of the two latch position sensing channels of the forward, aft and bulk cargo doors, from the sensor at each latching station to the door warning computing function in the avionics bay.",
+      "sheet_note": "Sheet 1 shows channel 1 and sheet 2 shows channel 2. The two channels are drawn on separate sheets deliberately, because after the harness segregation rework they share no bundle, no clamp and no connector shell anywhere between any door station and the avionics bay. All three door positions are now at that standard: the sheet was held back rather than revised in part, because a partial revision would have left the forward position segregated and the aft position not on the same drawing, with no way for the reader to tell which applied to the aircraft in front of them. The ground point block and the connector list are now given once per fuselage section rather than once for the sheet, so that an aft position can be worked without reading forward data. On aircraft that have not had the aft rework, the aft and bulk positions are covered by the superseded issue of this sheet and this issue must not be used for them. The circuit breaker allocation differs between the two standards and is called out at the panel.",
+      "routing_note": "Channel 1 runs from the latching station through zone 891 on the lower cable route, crosses to the avionics bay at zone 192 and terminates at the door warning computing function. Channel 2 runs on the opposite side of the frame through zone 834, entering the avionics bay through a separate penetration and terminating at the splice module before the computing function. The aft and bulk positions follow the same principle on their own frame sides, with their own penetrations and their own ground studs; the channel names repeat between the sections, so a route is identified by door position first and channel name second. Neither route passes through the forward cargo compartment lining fixings."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221113867714",
+        "D9221004365569",
+        "HOL285457-83",
+        "EN491538-6A",
+        "AGS573791-88"
+      ],
+      "fins": [
+        "4387VC",
+        "646VU",
+        "85VU4",
+        "3323WT",
+        "2056WV"
+      ],
+      "drawings": [
+        "D92211305618"
+      ],
+      "software": [],
+      "zones": [
+        "834",
+        "891",
+        "192"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146050",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-92-21-13-200-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door warning",
+      "channel segregation",
+      "latch position",
+      "avionics bay",
+      "circuit breaker allocation"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Electrical Installation Design"
+    },
+    "type_data": {
+      "sheet_number": "92-21-13",
+      "sheet_title": "CARGO DOOR WARNING — LATCH POSITION CHANNELS 1 AND 2",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1213W",
+        "1214W",
+        "1218W"
+      ],
+      "connectors": [
+        {
+          "reference": "1213VC",
+          "part_number": "HOL285457-83",
+          "location_zone": "891",
+          "contacts": 37
+        },
+        {
+          "reference": "1218VC",
+          "part_number": "D9221004365569",
+          "location_zone": "192",
+          "contacts": 61
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "3323WT",
+          "description": "WARNING SENSOR, CARGO DOOR STRUCTURE, UPPER",
+          "zone": "891"
+        },
+        {
+          "fin": "2056WV",
+          "description": "ACTUATOR, CARGO DOOR STRUCTURE, LH",
+          "zone": "893"
+        },
+        {
+          "fin": "4387VC",
+          "description": "CIRCUIT BREAKER, FORWARD FUSELAGE WIRING, INBD",
+          "zone": "834"
+        },
+        {
+          "fin": "85VU4",
+          "description": "CABLE ASSY, AVIONICS BAY HARNESSES, LH",
+          "zone": "192"
+        }
+      ],
+      "wire_count": 88,
+      "wire_gauge_range": "AWG 24 to AWG 16",
+      "routes": [
+        "Zone 891 to zone 192 on the lower cable route, forward position channel 1",
+        "Zone 834 to zone 192 on the opposite frame side, forward position channel 2",
+        "Aft and bulk positions, channel 1 and channel 2 on opposite frame sides with separate avionics bay penetrations"
+      ],
+      "related_sheets": [
+        "WDM-T-92-21-12",
+        "WDM-T-92-21-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

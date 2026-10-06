@@ -1,0 +1,187 @@
+[
+  {
+    "doc_id": "MOD-111953",
+    "doc_type": "MOD",
+    "title": "Carbon Heat Stack Change and Predictive Brake Wear Reporting for High Cycle Cold Weather Operation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-11",
+      "title": "Wheels and Brakes — Brake Assembly"
+    },
+    "secondary_ata": [
+      "32-40-12",
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "CIRRANE-11"
+      ],
+      "models": [
+        "CRN-11G1"
+      ],
+      "msns": [
+        "C00071",
+        "C00137",
+        "C00205"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "PYR-1519G"
+      ],
+      "operators": [
+        "TJT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-02-09",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposal for a heat stack better suited to short cold sectors together with a computed wear figure published at every landing, so that a brake reaching its limit is visible three or four weeks before it happens.",
+    "sections": {
+      "reason": "One operator flying short sectors onto cold contaminated runways is achieving about a third less brake life than the published figure, and has lost two overnight rotations this winter to a brake found at its limit at an outstation with no spare within four hundred kilometres. The wear pin gives no useful trend: it reads acceptable at one check and out of limits at the next. Across twelve aircraft the operator recorded nineteen unscheduled brake changes in a season against a planned eleven, and none of them were predicted more than a day in advance.",
+      "description": "Two changes are proposed together. The heat stack is replaced by a variant with a higher friction coefficient at low disc temperature, which suits an operation where the brake never reaches its designed working temperature, and the brake manifold D3240114184230 and its kit variant D3240116874031 are re-issued to suit the different stack height. The pump ROD941184-53 and the filter VE268628-67 are retained. On the reporting side the brake control unit configuration load LA5CCE9DE6B and its operational load LH4C830E70C are re-issued so that the unit integrates applied energy per application and publishes a computed remaining-landings figure, which the maintenance system reads at every download. Washers AGS678120-8C are renewed at the stack tie bolts. Functional items 584GB, 210WS9 and 248WS are affected. Work is at the main gear positions in zones 773 and 771 and at the gear door in zone 753. Reference detail is on drawings D32401111305 and D32401138594.",
+      "effects": "Estimated mass increase of 4.4 kg per aircraft. Electrical load unchanged. The heat stack is not interchangeable with the delivered stack and a mixed pair across one axle is prohibited because the braking asymmetry at low temperature would be outside the certified band. The computed wear figure is advisory and does not replace the pin measurement, which is important for the certification argument. The maintenance manual wear check task gains the computed figure as a cross-check, the trouble shooting content for an asymmetric braking report changes, and the crew procedure for a brake temperature indication is unaffected.",
+      "embodiment_note": "Retrofit is intended, with the reporting change offered separately as a load-only embodiment so that operators who do not want the stack can still get the prediction. The stack change is a wheel-off job of about six hours per side; the load takes twenty minutes at a line stop.",
+      "open_points": "Pre-analysis must establish whether the computed wear figure duplicates a reporting capability introduced by another change on the same computer, whether the higher low-temperature friction coefficient invalidates the accelerate-stop data at the certified brake energy limits, whether the gear bay harness has room for the additional download path, and whether the stack change conflicts with the wheel instrumentation already fitted to part of the fleet."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240114184230",
+        "D3240116874031",
+        "ROD941184-53",
+        "VE268628-67",
+        "AGS678120-8C",
+        "UM887929-15"
+      ],
+      "fins": [
+        "584GB",
+        "210WS9",
+        "248WS"
+      ],
+      "drawings": [
+        "D32401111305",
+        "D32401138594"
+      ],
+      "software": [
+        "LA5CCE9DE6B",
+        "LH4C830E70C"
+      ],
+      "zones": [
+        "773",
+        "771",
+        "753"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00071",
+        "C00137"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-260241",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      }
+    ],
+    "keywords": [
+      "carbon heat stack",
+      "brake wear",
+      "remaining landings",
+      "cold weather",
+      "wear pin"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Lorencourt",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111953,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.735",
+          "CS 25.109",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 4.4,
+      "balance_impact": "Distributed at the main gear, no declared effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "UM887929-15"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3240114184230",
+        "D3240116874031"
+      ],
+      "fins_affected": [
+        "584GB",
+        "210WS9"
+      ],
+      "software_affected": [
+        "LA5CCE9DE6B",
+        "LH4C830E70C"
+      ],
+      "estimated_manhours": 420,
+      "estimated_cost_keur": 1650,
+      "lead_time_weeks": 58,
+      "production_impact": "No cut-in proposed; the stack is a customer option for cold weather operations",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

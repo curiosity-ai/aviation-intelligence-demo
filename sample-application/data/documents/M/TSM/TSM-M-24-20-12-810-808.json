@@ -1,0 +1,316 @@
+[
+  {
+    "doc_id": "TSM-M-24-20-12-810-808",
+    "doc_type": "TSM",
+    "title": "AC Generation — Channel Shed on the Ground at High Ambient Temperature",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-12-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-12",
+      "title": "AC Generation — Generator Control Unit"
+    },
+    "secondary_ata": [
+      "24-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-09-19",
+      "released": "2016-12-24",
+      "revised": "2016-12-24",
+      "effective": "2017-01-21"
+    },
+    "abstract": "Fault isolation for the loss of one alternating current channel on the ground at high ambient temperature, distinguishing the thermal protection response from a genuine control unit failure before any unit is removed.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a channel shed that occurs on the ground at high ambient temperature and clears on reset, and separates it from a genuine generator control unit failure.",
+      "fault_description": "The channel drops off line during a turnaround, typically with the aircraft on ground power, the doors open and the ramp temperature above thirty-five degrees. The crew or the ground engineer resets the channel and it recovers. No fault is recorded against the generator itself, and the control unit that is removed on the strength of the event usually passes its bench test. The pattern is seasonal and concentrated between late morning and late afternoon.",
+      "isolation_procedure": "1. Read the maintenance messages and note whether a thermal protection status accompanies the shed; a shed without it is not this fault and this procedure does not apply. 2. Record the configuration standard reported by the control unit. 3. Check the distribution bay ventilation path is clear and that no equipment or ground cart hose obstructs the bay outlet. 4. Reproduce the failure condition: run the aircraft on ground power with the doors open until the bay reaches the temperature recorded at the event, and measure the bay temperature at the probe positions as the channel sheds. 5. Do the functional test in AMM-M-24-20-12-700-032-A and confirm the shed threshold and confirmation window behave as stated for the configuration fitted. 6. If the test passes and the bay ventilation is clear, do not remove the control unit; record the event with the ambient temperature and the bay reading and refer to the applicable service bulletin. 7. If the test fails, replace the control unit.",
+      "dispatch_note": "The aircraft may be dispatched with one channel inoperative under MEL 24-20-01A provided the remaining channel and the auxiliary power unit generator are serviceable and the flight is not extended range. Reset is permitted once per flight cycle; a second shed in the same cycle is not a dispatchable condition."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2420007230862"
+      ],
+      "fins": [
+        "14PC2",
+        "18GX"
+      ],
+      "drawings": [
+        "D24201265226"
+      ],
+      "software": [
+        "LD2NDCE7BA6"
+      ],
+      "zones": [
+        "663",
+        "512"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-24-20-12-700-032-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "channel shed",
+      "thermal protection",
+      "no fault found",
+      "bay ventilation",
+      "reset"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "24-20-12-810-808",
+      "fault_symptom": "ELEC GEN 1(2) OFF displayed on ECAM on the ground, channel recovers after reset",
+      "fault_codes": [
+        "242012001",
+        "242012014"
+      ],
+      "warning_messages": [
+        "ELEC GEN 1 OFF",
+        "ELEC GEN 2 OFF"
+      ],
+      "affected_fins": [
+        "14PC2",
+        "18GX"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Thermal protection response to a local bay temperature rise after shutdown",
+          "probability_pct": 55,
+          "fin": "14PC2"
+        },
+        {
+          "cause": "Distribution bay outlet obstructed by ground equipment or loading",
+          "probability_pct": 20,
+          "fin": "18GX"
+        },
+        {
+          "cause": "Configuration standard in the control unit not the one recorded for the aircraft",
+          "probability_pct": 15,
+          "fin": "14PC2"
+        },
+        {
+          "cause": "Generator control unit internal failure",
+          "probability_pct": 10,
+          "fin": "14PC2"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-M-24-20-12-700-032-A",
+      "dispatch": {
+        "mel_item": "24-20-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One channel inoperative, remaining channel and auxiliary power unit generator serviceable, no extended range operation"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-M-24-20-12-810-808",
+    "doc_type": "TSM",
+    "title": "AC Generation — Channel Shed on the Ground at High Ambient Temperature",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-17",
+      "reason": "Reproduction step corrected so that the ground inhibit of the second issue configuration is read as the expected behaviour instead of as a failure to reproduce.",
+      "raised_by_pawo": "PAWO-168118-01",
+      "raised_by_finding": "F04",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-12",
+      "title": "AC Generation — Generator Control Unit"
+    },
+    "secondary_ata": [
+      "24-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-09-19",
+      "released": "2016-12-24",
+      "revised": "2026-07-17",
+      "effective": "2026-08-06"
+    },
+    "abstract": "Fault isolation for the loss of one alternating current channel on the ground at high ambient temperature, distinguishing the thermal protection response from a genuine control unit failure before any unit is removed.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a channel shed that occurs on the ground at high ambient temperature and clears on reset, and separates it from a genuine generator control unit failure.",
+      "fault_description": "The channel drops off line during a turnaround, typically with the aircraft on ground power, the doors open and the ramp temperature above thirty-five degrees. The crew or the ground engineer resets the channel and it recovers. No fault is recorded against the generator itself, and the control unit that is removed on the strength of the event usually passes its bench test. The pattern is seasonal and concentrated between late morning and late afternoon.",
+      "isolation_procedure": "1. Read the maintenance messages and note whether a thermal protection status accompanies the shed; a shed without it is not this fault and this procedure does not apply. 2. Record the configuration standard reported by the control unit. On the second issue standard the shed is inhibited on the ground with a door open, so a shed under those conditions points at a configuration that is not the one the aircraft record claims. 3. Check the distribution bay ventilation path is clear and that no equipment or ground cart hose obstructs the bay outlet. 4. Measure the bay temperature at the probe positions with the aircraft in the failure condition if it can be reproduced. Do not attempt to reproduce the shed on an aircraft at the second issue standard: the ground inhibit prevents it by design, the channel will stay on line however hot the bay becomes, and an engineer who reads that as a failure to reproduce will spend a turnaround proving nothing. On that standard take the bay temperature reading alone and go to step 5. 5. Do the functional test in AMM-M-24-20-12-700-032-A and confirm the shed threshold and confirmation window behave as stated for the configuration fitted. 6. If the test passes and the bay ventilation is clear, do not remove the control unit; record the event with the ambient temperature and the bay reading and refer to the applicable service bulletin. 7. If the test fails, replace the control unit.",
+      "dispatch_note": "The aircraft may be dispatched with one channel inoperative under MEL 24-20-01A provided the remaining channel and the auxiliary power unit generator are serviceable and the flight is not extended range. Reset is permitted once per flight cycle; a second shed in the same cycle is not a dispatchable condition."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2420007230862"
+      ],
+      "fins": [
+        "14PC2",
+        "18GX"
+      ],
+      "drawings": [
+        "D24201265226"
+      ],
+      "software": [
+        "LD2NDCE7BA6"
+      ],
+      "zones": [
+        "663",
+        "512"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-24-20-12-700-032-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "channel shed",
+      "thermal protection",
+      "ground inhibit",
+      "bay ventilation",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "24-20-12-810-808",
+      "fault_symptom": "ELEC GEN 1(2) OFF displayed on ECAM on the ground, channel recovers after reset",
+      "fault_codes": [
+        "242012001",
+        "242012014"
+      ],
+      "warning_messages": [
+        "ELEC GEN 1 OFF",
+        "ELEC GEN 2 OFF"
+      ],
+      "affected_fins": [
+        "14PC2",
+        "18GX"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Thermal protection response to a local bay temperature rise after shutdown",
+          "probability_pct": 55,
+          "fin": "14PC2"
+        },
+        {
+          "cause": "Distribution bay outlet obstructed by ground equipment or loading",
+          "probability_pct": 20,
+          "fin": "18GX"
+        },
+        {
+          "cause": "Configuration standard in the control unit not the one recorded for the aircraft",
+          "probability_pct": 15,
+          "fin": "14PC2"
+        },
+        {
+          "cause": "Generator control unit internal failure",
+          "probability_pct": 10,
+          "fin": "14PC2"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-M-24-20-12-700-032-A",
+      "dispatch": {
+        "mel_item": "24-20-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One channel inoperative, remaining channel and auxiliary power unit generator serviceable, no extended range operation"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

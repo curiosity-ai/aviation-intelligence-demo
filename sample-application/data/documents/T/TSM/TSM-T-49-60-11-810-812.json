@@ -1,0 +1,158 @@
+[
+  {
+    "doc_id": "TSM-T-49-60-11-810-812",
+    "doc_type": "TSM",
+    "title": "Auxiliary Power Unit Electronic Control Box No Response — Fault Isolation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-09-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Auxiliary Power Unit — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-10-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-04-16",
+      "released": "2018-09-03",
+      "revised": null,
+      "effective": "2018-10-12"
+    },
+    "abstract": "Fault isolation for an auxiliary power unit electronic control box that does not respond to a start request, covering the supply, the firewall penetration harness and the box itself.",
+    "sections": {
+      "purpose": "Fault isolation for an auxiliary power unit that does not respond to a start request, where the electronic control box reports no status to the maintenance system.",
+      "fault_description": "The crew or the ground engineer selects an auxiliary power unit start and nothing happens: no rotation, no start sequence and no status from the electronic control box. The most common cause is not the box but the harness at the firewall penetration, which is disturbed by every mount inspection and is the item most often left unsecured after one. On aircraft where the mount inspection has recently been done, the harness should be checked before anything else, and that is deliberately the first step of this procedure.",
+      "isolation_procedure": "1. Establish from the maintenance record whether the auxiliary power unit mount inspection or any tail cone work has been done since the last successful start. 2. Where it has, open the tail cone access and check the firewall penetration harness for security and correct routing at the electronic control box. 3. Check the supply at the control box input and confirm the associated circuit breaker is closed and not tripped. 4. Read any stored maintenance message from the control box using the maintenance terminal; no stored message with no supply present points at the supply and not at the box. 5. Where the supply is good and no message is stored, do the control box built-in test. 6. Check the start request discrete continuity from the flight deck panel to the control box input. 7. Where the discrete is good and the built-in test fails, replace the control box. 8. Where the built-in test passes and the unit still does not respond, the fault is downstream in the start sequencing and the isolation continues in that section.",
+      "dispatch_note": "Dispatch with the auxiliary power unit inoperative is permitted under the minimum equipment list item, with a ground power and air source required at every station and the associated extended range restrictions applied. Where the cause is an unsecured firewall penetration harness the aircraft must not be dispatched until it is secured, because the harness is inside the fire zone."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4960111928784",
+        "D4960112409246",
+        "D4960112964512",
+        "PEL275395-54"
+      ],
+      "fins": [
+        "442PB",
+        "4PB",
+        "197PB"
+      ],
+      "drawings": [
+        "D49600032161",
+        "D49601244404"
+      ],
+      "software": [
+        "LE1RF968C05",
+        "LG1RE27F8A5"
+      ],
+      "zones": [
+        "361",
+        "352",
+        "313"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-49-10-12-200-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "electronic control box",
+      "no start",
+      "firewall penetration",
+      "harness security",
+      "built-in test"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "49-60-11-810-812",
+      "fault_symptom": "APU does not respond to a start request and reports no control box status",
+      "fault_codes": [
+        "496011007",
+        "496011016"
+      ],
+      "warning_messages": [
+        "APU FAULT"
+      ],
+      "affected_fins": [
+        "442PB",
+        "4PB"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Firewall penetration harness unsecured after tail cone work",
+          "probability_pct": 40,
+          "fin": "442PB"
+        },
+        {
+          "cause": "Control box supply absent or circuit breaker tripped",
+          "probability_pct": 25,
+          "fin": "4PB"
+        },
+        {
+          "cause": "Electronic control box internal failure",
+          "probability_pct": 20,
+          "fin": "197PB"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-T-49-10-12-200-001-A",
+      "dispatch": {
+        "mel_item": "49-60-01A",
+        "dispatchable": true,
+        "dispatch_condition": "APU inoperative, ground power and air source required at every station"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

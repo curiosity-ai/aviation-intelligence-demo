@@ -1,0 +1,292 @@
+[
+  {
+    "doc_id": "PAWO-144610-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Fin Box Lightning Current Path Extension",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-02-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "55",
+      "ata_4d": "55-30",
+      "ata_6d": "55-30-11",
+      "title": "Vertical Stabilizer — Fin Box Structure"
+    },
+    "secondary_ata": [
+      "92-41"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-08-21",
+      "released": "2018-02-08",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the extension of the lightning current path at the vertical stabiliser fin box rib feet, covering the published scarf repair, the bonding resistance check and the qualification argument for strapping across a composite joint.",
+    "sections": {
+      "objective": "Establish whether bonding straps can be added at the fin box rib feet without invalidating the published repair scheme for the fin box skin laminate, and quantify the change to the bonding resistance limits that maintenance works to. The order was raised by the structures office after two lightning attachment events produced more local damage than the certification case assumed, and it had to settle the interaction with the scarf repair before the strap positions were frozen.",
+      "findings_summary": "Three items were recorded and one blocked the strap positions as first drawn. The published scarf repair after a lightning attachment removes plies in exactly the area the extended current path relies on, and because that repair is applied after the events the modification is meant to mitigate, the two will meet on the same aircraft more often than not. The bonding resistance check is the second item: its limits are derived from the present path length and every one of them moves when the strap is added, so a modified aircraft checked to the published limits would be recorded as out of tolerance. The third item is a piece of prior art on strapping across a fastened composite joint, retrieved by similarity from another chapter entirely, which the certification office used to frame the compliance argument.",
+      "next_steps": "Release was authorised with two conditions: the strap positions are to be moved clear of the scarf repair envelope, which cost eleven millimetres of path length and was accepted by the electrical office, and the bonding resistance check is to be reissued with limits per embodiment condition. The repair scheme owner was asked to add a note directing the reader to the strap installation status before a scarf repair is started."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5530119137814",
+        "D5530110749890",
+        "SAD726961-22",
+        "AES932279K1",
+        "LN606161K1"
+      ],
+      "fins": [],
+      "drawings": [
+        "D55301147345",
+        "D55300021986"
+      ],
+      "software": [],
+      "zones": [
+        "313",
+        "321",
+        "322"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-144610",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "fin box",
+      "lightning current path",
+      "bonding strap",
+      "scarf repair"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Alcadara",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-144610-01",
+      "subject_mod": "MOD-144610",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2018-02-08",
+      "outcome": "VALIDATED",
+      "raised_date": "2017-08-21",
+      "due_date": "2018-02-23",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EDSA",
+        "lead_site": "Alcadara",
+        "contributing_departments": [
+          "EVAA",
+          "ELSC"
+        ],
+        "estimated_manhours": 160,
+        "spent_manhours": 214
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "55",
+          "92",
+          "51"
+        ],
+        "ata_4d": [
+          "55-30",
+          "92-41",
+          "51-70"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5530119137814",
+            "D5530110749890",
+            "SAD726961-22",
+            "AES932279K1"
+          ],
+          "fins": [],
+          "drawings": [
+            "D55301147345"
+          ],
+          "zones": [
+            "313",
+            "321",
+            "322"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "lightning attachment damage at a composite fin box",
+          "bonding path across a fastened composite joint"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search fin box repairs and bonding data on the vertical stabiliser",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Recompute the bonding resistance limits for the extended path",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Collect prior art for the composite joint strapping compliance case",
+          "method": "SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-T-55-30-11-005",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "SAD726961-22",
+              "AES932279K1"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "313",
+              "321",
+              "322"
+            ],
+            "shared_ata_6d": [
+              "55-30-11"
+            ],
+            "shared_drawings": [
+              "D55301147345"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The scarf repair after a lightning attachment removes plies over the area the extended current path uses, and it is applied after exactly the events this modification mitigates. The two therefore meet on the same aircraft more often than not, and a strap bonded over a scarf repair has no qualified resistance value.",
+          "resolution": "Move the strap positions clear of the scarf repair envelope, accepted at a cost of eleven millimetres of path length, and add a note to the repair directing the reader to the strap status."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-55-30-11-200-003-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5530119137814",
+              "D5530110749890",
+              "SAD726961-22",
+              "AES932279K1"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "313",
+              "321",
+              "322"
+            ],
+            "shared_ata_6d": [
+              "55-30-11",
+              "92-41"
+            ],
+            "shared_drawings": [
+              "D55301147345"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bonding resistance check states limits derived from the present path length at each rib foot. Every one of those limits moves once the strap is added, and an aircraft checked to the published values after embodiment would be recorded as out of tolerance at three of the five feet.",
+          "resolution": "Reissue the check with limits per embodiment condition, and add the strap resistance as a separate measurement rather than folding it into the foot value."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-T-53-31-12-006",
+          "doc_type": "SRM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "shared_drawings": [],
+            "similarity_note": "Retrieved by similarity from a different chapter and a different structure. The lower shell doubler repair and the fin box strap share no identifier and almost no vocabulary, but the repair carries the only published argument on the type for electrical continuity across a fastened joint in a composite shell."
+          },
+          "rationale": "The certification office used the repair's continuity argument as the precedent for the strap compliance case, which saved a separate test campaign. Recorded here because the link is invisible to any entity search and was the single most useful result of the similarity pass.",
+          "resolution": "Cite the repair's continuity argument in the compliance documentation; no change to either document."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Issued 2018-02-08. One blocking repair interaction resolved by moving the strap positions, and one bonding check reissue. Cleared to proceed on those two conditions.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,166 @@
+[
+  {
+    "doc_id": "TSM-C-32-40-12-810-802",
+    "doc_type": "TSM",
+    "title": "Brake Pressure Transient at Touchdown — Fault Isolation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2023-03-09",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-09-30",
+      "released": "2021-05-24",
+      "revised": "2023-03-09",
+      "effective": "2023-03-30"
+    },
+    "abstract": "Isolation of a brake pressure transient felt at touchdown, separating the anti-skid authority timing case from a genuine wheel speed transducer or regulator fault.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a brake pressure transient reported at touchdown and gives the checks that distinguish the anti-skid authority timing case from a component fault.",
+      "fault_description": "The crew reports a brief release of braking immediately after touchdown, usually on a contaminated runway and usually on the first landing of a sector pair. The transient is felt rather than indicated and no fault message is generated on the flight deck, although the brake and steering control unit records the release event. The condition is more common on aircraft at the earlier configuration standard, where the anti-skid loop takes authority before the second main wheel has spun up.",
+      "isolation_procedure": "1. Read out and record the configuration part number reported by the brake and steering control unit and the recorded release events for the reported landing. 2. If the configuration standard is earlier than 1.5 and the release event is within the first second after weight-on-wheels, the anti-skid authority timing is the probable cause. 3. In that case do not replace any component: raise the configuration retrofit with the operator's engineering department. 4. If the configuration standard is 1.5 or later, or the release event is later than one second, continue with the component checks. 5. Do the anti-skid system test with the wheel spin-up simulation and record the result for each wheel. 6. If one wheel releases early in the simulation, check the wheel speed transducer output for that wheel and its harness continuity. 7. If the transducer output is correct, measure the response time of the pressure regulator and compare it with the tolerance in the task. 8. If the regulator response is outside tolerance, replace the regulator and re-charge the accumulator to the applicable pre-load. 9. If every check passes, replace the brake and steering control unit and repeat the test. 10. Confirm through two full test cycles that no early release occurs.",
+      "dispatch_note": "Dispatch is permitted with one anti-skid channel inoperative under the applicable minimum equipment list item, with the landing distance penalty applied. Dispatch is not permitted with the brake and steering control unit reporting an unknown configuration part number."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240120310957",
+        "D3240121944667",
+        "D3240114184230"
+      ],
+      "fins": [
+        "210WS9",
+        "248WS",
+        "86WS"
+      ],
+      "drawings": [
+        "D32401216639"
+      ],
+      "software": [
+        "LA5CCE9DE6B"
+      ],
+      "zones": [
+        "721",
+        "734",
+        "771"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-32-40-12-700-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-400-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake transient",
+      "anti-skid authority",
+      "spin-up",
+      "wheel speed transducer",
+      "configuration standard"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "32-40-12-810-802",
+      "fault_symptom": "Brief brake pressure release reported at touchdown",
+      "fault_codes": [
+        "324012003",
+        "324012019"
+      ],
+      "warning_messages": [
+        "BRAKES ANTI SKID FAULT"
+      ],
+      "affected_fins": [
+        "210WS9",
+        "248WS",
+        "86WS"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Anti-skid authority taken before second wheel spin-up on the earlier configuration standard",
+          "probability_pct": 58,
+          "fin": "210WS9"
+        },
+        {
+          "cause": "Wheel speed transducer output degraded on one main wheel",
+          "probability_pct": 18,
+          "fin": "86WS"
+        },
+        {
+          "cause": "Pressure regulator response time outside tolerance",
+          "probability_pct": 14,
+          "fin": "210WS9"
+        },
+        {
+          "cause": "Brake and steering control unit internal failure",
+          "probability_pct": 10,
+          "fin": "248WS"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-C-32-40-12-700-002-A",
+      "dispatch": {
+        "mel_item": "32-40-02B",
+        "dispatchable": true,
+        "dispatch_condition": "One anti-skid channel inoperative, landing distance penalty applied"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

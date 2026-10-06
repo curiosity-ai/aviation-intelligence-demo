@@ -1,0 +1,166 @@
+[
+  {
+    "doc_id": "MOD-144610",
+    "doc_type": "MOD",
+    "title": "Vertical Stabiliser Fin Box Lightning Current Path Extension",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-06-03",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "55",
+      "ata_4d": "55-30",
+      "ata_6d": "55-30-11",
+      "title": "Vertical Stabilizer — Fin Box Structure"
+    },
+    "secondary_ata": [
+      "92-41"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "T00156",
+      "production_cut_in_date": "2019-08-27",
+      "retrofit_via": [
+        "TTN-55-1009"
+      ]
+    },
+    "dates": {
+      "created": "2017-06-30",
+      "released": "2018-08-14",
+      "revised": "2021-06-03",
+      "effective": "2021-06-25"
+    },
+    "abstract": "Extension of the conductive mesh and bonding straps in the composite fin box so that a lightning attachment at the leading edge is carried into the fuselage without arcing at the rib feet.",
+    "sections": {
+      "reason": "Three lightning strike investigations found pitting and localised delamination at the fin box rib feet rather than at the attachment point itself, which indicated that the current was jumping the joint rather than being carried through it. The original bonding relied on the fastener path at each rib foot, and in-service measurements on twenty aircraft showed joint resistance rising with age as the sealant aged and the faying surfaces oxidised. None of the events affected controllability, but each one meant a composite repair with an aircraft on ground.",
+      "description": "The conductive mesh in the fin box skin is extended aft to overlap the rib feet, and a woven bonding strap kit D5530119137814 is added between each rib foot and the spar. The forward shear tie D5530110749890 is retained but is re-drilled so that the strap terminates on a dedicated fastener rather than sharing a structural one. The gusset kit SAD726961-22 at the lower rib positions is replaced by an item with an integral conductive land. Attachment is with countersunk screws AES932279K1 through protective sleeving LN606161K1 where the strap crosses an edge. Work is done from inside the fin box through the access panels in zones 313, 321 and 322, with the rudder attached. Revised detail is on drawings D55301147345 and D55300021986.",
+      "effects": "Mass increase of 18 kg per aircraft, all of it above and aft of the centre of gravity, giving a shift of 0.06 per cent mean aerodynamic chord aft. No electrical load change. The strap installation is not interchangeable with the original bonding arrangement, because the fastener pattern at the rib foot changes. The repeat bonding resistance measurement introduced after the second strike investigation can be dropped once the change is embodied. Structure repair content for the fin box skin requires update, since a repair must now restore the mesh continuity as well as the laminate.",
+      "embodiment_note": "Cut in at MSN T00156 in August 2019. Retrofit is a base task of about seven days with the aircraft in the hangar and the fin box opened; it does not require rudder removal. Kits are supplied per aircraft and include the mesh patches and all bonding hardware."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5530119137814",
+        "D5530110749890",
+        "SAD726961-22",
+        "AES932279K1",
+        "LN606161K1"
+      ],
+      "fins": [],
+      "drawings": [
+        "D55301147345",
+        "D55300021986"
+      ],
+      "software": [],
+      "zones": [
+        "313",
+        "321",
+        "322"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00156"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-55-1009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "lightning protection",
+      "fin box",
+      "bonding strap",
+      "conductive mesh",
+      "rib foot"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Alcadara",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 144610,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.581",
+          "CS 25.899"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 18.0,
+      "balance_impact": "0.06 % MAC aft; recorded in the weight and balance manual",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D5530119137814",
+        "AES932279K1",
+        "LN606161K1"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5530110749890",
+        "SAD726961-22"
+      ],
+      "fins_affected": [],
+      "software_affected": [],
+      "estimated_manhours": 390,
+      "estimated_cost_keur": 1050,
+      "lead_time_weeks": 42,
+      "production_impact": "Cut-in at MSN T00156 at the fin box assembly station in Alcadara",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

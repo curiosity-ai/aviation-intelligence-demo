@@ -1,0 +1,201 @@
+[
+  {
+    "doc_id": "MOD-111356",
+    "doc_type": "MOD",
+    "title": "Air Starter Motor Change with a Revised Clutch and Extended Duty Cycle for Hot and High Operations",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2025-11-27",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "36-10",
+      "71-00"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "PYR-1524G",
+        "PYR-1525G"
+      ],
+      "operators": [
+        "KLE",
+        "LVA",
+        "GBA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00680",
+      "production_cut_in_date": "2024-01-31",
+      "retrofit_via": [
+        "CRN-80-2001"
+      ]
+    },
+    "dates": {
+      "created": "2021-09-07",
+      "released": "2023-06-15",
+      "revised": "2025-11-27",
+      "effective": "2025-12-15"
+    },
+    "abstract": "Air starter motor replacement with a revised overrunning clutch and a duty cycle extended from three to five consecutive attempts, driven by starter removals at high altitude airfields in hot conditions.",
+    "sections": {
+      "reason": "Operators flying into airfields above six thousand feet in summer temperatures were exceeding the published duty cycle almost every day, because a hot start abort followed by a cooling period and a second attempt uses two of the three permitted cycles before the aircraft has moved. The starter removal rate at three such operators reached one per four thousand cycles against a fleet average of one per fourteen thousand, and inspection of returned units showed clutch spragging damage consistent with re-engagement above the permitted residual speed rather than with a manufacturing defect.",
+      "description": "The starter is replaced by a unit with a redesigned overrunning clutch that tolerates re-engagement at a higher residual rotor speed, and the duty cycle published in the manual is extended from three to five consecutive attempts with a shorter mandatory cooling period between them. The nozzle assembly HOL790179-18 at the starter air inlet is replaced to suit the higher flow, the clamp PE187919-09 is changed for a wider band and the bolts EN290030-3C are renewed. The cranking shroud ASDE222426-98 is re-issued with a larger inspection aperture so that the clutch witness mark can be read without removing the starter. Functional items 93ES, 5173ES and 517ES are affected. Work is inside the fan cowl in zones 431, 444 and 413. Installation detail is on drawing D80100037770.",
+      "effects": "Mass increase of 2.4 kg per engine. No electrical load change; the bleed demand during cranking rises by four per cent, which is inside the auxiliary power unit capability at the certified airfield limits. The starter is interchangeable with the earlier unit in both directions at the hardware level, but the extended duty cycle may only be used when both engines carry the new starter, and this is stated in the operating limitations. The trouble shooting entry for a starter that will not cut out is superseded. Spares provisioning at hot and high stations changes markedly because the expected removal interval more than triples.",
+      "embodiment_note": "Production cut-in at MSN C00680 at the end of January 2024. Retrofit is by Service Bulletin CRN-80-2001 at any line stop, about four hours per engine, and most operators have taken it at starter replacement rather than as a campaign. Kits available since the third quarter of 2024."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL790179-18",
+        "PE187919-09",
+        "EN290030-3C",
+        "ASDE222426-98",
+        "ZE172964-77"
+      ],
+      "fins": [
+        "93ES",
+        "5173ES",
+        "517ES"
+      ],
+      "drawings": [
+        "D80100037770"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "444",
+        "413"
+      ],
+      "figures": [
+        "FIG-80-10-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00680"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-80-2001",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "FCOM-C-PER-80-10-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-80-10-11-000-022-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-80-10-11-400-022-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-80-10-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "air starter",
+      "duty cycle",
+      "overrunning clutch",
+      "hot and high",
+      "cooling period"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111356,
+      "mod_class": "MAJOR",
+      "change_category": "POWERPLANT",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.903",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 4.8,
+      "balance_impact": "Symmetric, no declared effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "ZE172964-77"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "HOL790179-18",
+        "PE187919-09",
+        "ASDE222426-98"
+      ],
+      "fins_affected": [
+        "93ES",
+        "5173ES"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 330,
+      "estimated_cost_keur": 1600,
+      "lead_time_weeks": 54,
+      "production_impact": "Cut-in at MSN C00680, starter supplied direct to the engine build station",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

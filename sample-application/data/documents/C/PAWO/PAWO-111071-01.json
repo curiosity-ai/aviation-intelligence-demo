@@ -1,0 +1,278 @@
+[
+  {
+    "doc_id": "PAWO-111071-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Forward Cargo Door Surround Lower Corner Fittings, First Round",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-01-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-13",
+      "title": "Fuselage Section 13 — Forward — Door Surround Structure"
+    },
+    "secondary_ata": [
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "CIRRANE-11"
+      ],
+      "models": [
+        "CRN-11G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-06-11",
+      "released": "2020-01-16",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Cancelled first round of pre-analysis on the forward cargo door corner reinforcement, stopped when the freight loading spectrum behind the static shortfall was found to be under revision and the analysis basis was withdrawn.",
+    "sections": {
+      "objective": "Establish what the proposed titanium corner fittings and re-radiused cut-out at the forward cargo door would conflict with on the shorter airframe, and whether the corner repair scheme already in service can remain applicable after embodiment. The work order was raised internally by the forward fuselage office when the static margin shortfall was reported, and was asked to report in time for a design review in the following quarter.",
+      "findings_summary": "Three items were confirmed before the work order was stopped. The gusset replacement repair at the same corner is the significant one: it is dimensioned from the original cut-out radius and its fastener pattern falls inside the new radius, so a repaired aircraft cannot take the reinforcement as drawn. The door warning harness runs through the surround at the lower corner and its bracket picks up one of the fitting holes. Work stopped at that point: the revised freight loading spectrum that produced the static shortfall was itself withdrawn for revision, and continuing to analyse against a basis that was about to change was not defensible.",
+      "next_steps": "Close this work order and raise a second round once the freight loading spectrum is re-issued, rather than leaving it open against a basis that no longer exists. Carry the repair conflict and the harness bracket finding forward as established results so the second round does not spend its budget re-discovering them. Ask the repair office in the meantime for a view on a gusset scheme compatible with the larger radius, and warn the in-service organisation that the corner inspection interval currently in force is the only protection the fleet has until a reinforcement is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5321130372071",
+        "D5321133887188",
+        "D5321132983318",
+        "AES495354-07"
+      ],
+      "fins": [],
+      "drawings": [
+        "D53211308437",
+        "D53211305153"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "113",
+        "891"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111071",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "door surround",
+      "corner fitting",
+      "loading spectrum",
+      "cancelled"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Lorencourt",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111071-01",
+      "subject_mod": "MOD-111071",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2020-01-16",
+      "outcome": "DELEGATED",
+      "raised_date": "2019-06-11",
+      "due_date": "2019-12-13",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Lorencourt",
+        "contributing_departments": [
+          "EDSA"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 37
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11"
+        ],
+        "ata_2d": [
+          "53",
+          "52",
+          "92"
+        ],
+        "ata_4d": [
+          "53-21",
+          "52-30",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "SRM",
+          "WDM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D5321130372071",
+            "D5321132983318"
+          ],
+          "fins": [],
+          "drawings": [
+            "D53211308437"
+          ],
+          "zones": [
+            "111",
+            "113",
+            "891"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "static margin shortfall at a cargo door corner on the shorter airframe",
+          "gusset repair at a door cut-out radius"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search repair schemes at the forward door lower corners",
+          "method": "ENTITY",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check systems installations picking up the fitting holes",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Read across the revised freight loading spectrum",
+          "method": "MANUAL_REVIEW",
+          "owner": "ESZS",
+          "status": "BLOCKED"
+        },
+        {
+          "task_id": "T04",
+          "title": "Assess the manual content at the door surround",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-C-53-21-13-901",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES495354-07",
+              "D5321130372071",
+              "D5321132983318"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "111",
+              "113",
+              "891"
+            ],
+            "shared_ata_6d": [
+              "53-21-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The gusset replacement repair is dimensioned from the original cut-out radius and its fastener pattern falls inside the re-radiused profile. An aircraft carrying the repair cannot take the reinforcement as drawn.",
+          "resolution": "Carried forward to the second round; a gusset scheme compatible with the larger radius requested from the repair office in the meantime."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "WDM-C-92-21-13",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The door warning harness runs through the surround at the lower corner and its support bracket picks up one of the fitting attachment holes. The titanium fitting moves that hole outboard by eleven millimetres.",
+          "resolution": "Carried forward; a bracket change or a harness re-route has to be decided with the wiring owner in the second round."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-111034",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The latch bush change works the same door in the same zone and needs the door off its stops. Doing both in one visit saves a second door removal, which on this airframe is most of the downtime.",
+          "resolution": "Recorded as a scheduling recommendation for whichever round completes."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Cancelled. The loading spectrum that produced the static shortfall was withdrawn for revision and the analysis basis went with it; the scope was handed to a second round.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

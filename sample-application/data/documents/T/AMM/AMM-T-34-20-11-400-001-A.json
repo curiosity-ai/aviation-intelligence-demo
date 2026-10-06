@@ -1,0 +1,180 @@
+[
+  {
+    "doc_id": "AMM-T-34-20-11-400-001-A",
+    "doc_type": "AMM",
+    "title": "Inertial Reference Unit — Installation and Alignment",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-03-08",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-20",
+      "ata_6d": "34-20-11",
+      "title": "Attitude and Direction — Inertial Reference Unit"
+    },
+    "secondary_ata": [
+      "31-60"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-09-03",
+      "released": "2021-04-16",
+      "revised": "2022-03-08",
+      "effective": "2022-03-29"
+    },
+    "abstract": "Installation of one inertial reference unit in the avionics bay, including the shell bonding check, a full alignment on a stationary aircraft and a heading comparison against the other units.",
+    "sections": {
+      "purpose": "This task gives the installation of one inertial reference unit into its mounting tray, the bonding check and the alignment and comparison checks that close the installation.",
+      "job_setup_note": "The aircraft must be stationary for the whole alignment, with no refuelling, no towing and no work that moves the airframe. Tell the other trades before you start; an alignment that is disturbed has to be restarted from the beginning. Confirm the unit standard, because the original and the current production unit report different built-in test message sets.",
+      "procedure": "Put the aircraft on stable ground power and confirm that it will not be moved. Get access to the avionics bay and inspect the mounting tray and the connector faces. Fit the interface card D3420114778684 to the unit if it is supplied separately, and secure the card carrier with rivets EN160138K8. CAUTION: DO NOT FORCE THE UNIT ONTO ITS CONNECTOR. IF IT DOES NOT SEAT WITH HAND PRESSURE, WITHDRAW IT AND CHECK THE TRAY ALIGNMENT, BECAUSE A BENT CONTACT WILL PASS THE POWER-UP CHECK AND FAIL IN FLIGHT. Slide the unit into the tray and engage the retainers. Measure the shell bonding resistance to the rack and confirm that it is inside the limit. Apply power to the unit and confirm that it completes its power-up built-in test with no message. WARNING: DO NOT MOVE THE AIRCRAFT, REFUEL IT OR OPERATE THE LANDING GEAR DURING AN ALIGNMENT. A DISTURBED ALIGNMENT MUST BE RESTARTED AND THE UNIT MAY REPORT A FALSE FAILURE. Start a full alignment from the display page and record the time to alignment complete. Repeat for any other unit that has been disturbed. Do a heading comparison between the three units and the standby attitude indicator and record the differences.",
+      "close_out": "Record the alignment time, the bonding resistance and the heading comparison figures. Update the aircraft configuration list with the unit part numbers fitted, noting where a mixed standard is carried. Confirm that no navigation maintenance message is present before the aircraft is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3420114778684",
+        "GIR577736-25",
+        "XAD347757-62",
+        "EN160138K8"
+      ],
+      "fins": [
+        "2326FE",
+        "2TR3",
+        "708TR",
+        "8DA",
+        "285TR"
+      ],
+      "drawings": [
+        "D34201126638"
+      ],
+      "software": [],
+      "zones": [
+        "164",
+        "192",
+        "241",
+        "253",
+        "272"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-144880",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-44-20-12-400-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "inertial reference unit",
+      "alignment",
+      "shell bonding",
+      "heading comparison",
+      "avionics bay"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "34-20-11-400-001-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. A mixed installation of the original and the current production unit is permitted; the alignment control panel may only be removed when all three units are at the current standard.",
+      "manhours": 5.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "164",
+          "192",
+          "241"
+        ],
+        "access_panels": [
+          "164CR",
+          "192AR",
+          "241CL"
+        ],
+        "doors": [
+          "Avionics bay access door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not move, refuel or jack the aircraft during an alignment.",
+          "Use stable ground power for the whole task.",
+          "Do not force the unit onto its connector."
+        ],
+        "tooling": [
+          {
+            "reference": "98D34201-011",
+            "description": "Avionics rack extraction handle"
+          },
+          {
+            "reference": "98D92211-023",
+            "description": "Bonding resistance meter, four-wire"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, non-residue",
+          "Bonding washer set"
+        ],
+        "expendables": [
+          {
+            "part_number": "EN160138K8",
+            "qty": 12
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-44-20-12-400-002-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,335 @@
+[
+  {
+    "doc_id": "PAWO-161204-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Extension of the Cargo Hold Noise Attenuation Standard to the Aft Compartment",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-10",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "25",
+      "ata_4d": "25-50",
+      "ata_6d": "25-50-11",
+      "title": "Cargo Compartment — Cargo Lining Panels"
+    },
+    "secondary_ata": [
+      "53-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-27",
+      "released": "2026-07-10",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of a proposal to extend the forward cargo hold noise attenuation blanket standard to the aft compartment. The scope was found to be wrong rather than the idea, and the order closed for rework.",
+    "sections": {
+      "objective": "A cabin comfort programme asked for the forward hold blanket standard to be repeated in the aft compartment, on the assumption that the same blanket, the same retention hardware and the same lining panel interface would carry across. The order was scoped to confirm that assumption and to size the documentation change, not to reopen the acoustic case, which had already been made on the forward installation.",
+      "findings_summary": "The assumption is wrong at the level of the panel, which is where it matters. The aft compartment lining belongs to a different panel family with a different retention pitch, so the blanket retention hardware in the forward standard has nothing to attach to. That single fact invalidates the parts content reuse, the installation task reuse and the material list, and it converts the proposal from an effectivity extension into a new installation design. Two further items were confirmed: the cargo floor panel repair scheme shares the compartment and its insert repair pattern would be obstructed by a blanket in the aft position, and the avionics bay zone the aft blanket run passes through already carries the software management module installation. Neither is blocking on its own; both would have to be re-examined against a real aft design.",
+      "next_steps": "Close this order as scoped incorrectly. Recommend that the aft compartment case be raised as a new installation rather than an extension, with the acoustic target restated for the aft panel family. Carry the floor panel repair obstruction and the avionics bay routing forward as inputs. Advise the comfort programme that no part of the forward material list is reusable."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2550113609050",
+        "D2550118482429",
+        "LN181986-9B"
+      ],
+      "fins": [
+        "9911DL"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "111",
+        "113",
+        "116"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-161204",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "cargo hold",
+      "noise attenuation blanket",
+      "lining panel family",
+      "scope rework"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-161204-01",
+      "subject_mod": "MOD-161204",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-10",
+      "outcome": "REJECTED",
+      "raised_date": "2026-04-27",
+      "due_date": "2026-08-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA"
+        ],
+        "estimated_manhours": 50,
+        "spent_manhours": 44
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "25",
+          "53"
+        ],
+        "ata_4d": [
+          "25-50",
+          "53-21",
+          "53-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00470"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2550113609050",
+            "D2550118482429",
+            "LN181986-9B"
+          ],
+          "fins": [
+            "9911DL"
+          ],
+          "drawings": [],
+          "zones": [
+            "111",
+            "113",
+            "116"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "acoustic blanket retention against a cargo lining panel",
+          "lining panel family with a different retention pitch"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare forward and aft cargo lining panel families",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess reuse of the blanket retention hardware",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check repair and routing content in the aft compartment",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "IPC-M-25-50-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2550113609050",
+              "D2550118482429",
+              "LN181986-9B"
+            ],
+            "shared_fins": [
+              "9911DL"
+            ],
+            "shared_zones": [
+              "111",
+              "113",
+              "116"
+            ],
+            "shared_ata_6d": [
+              "25-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The blanket retention hardware is dimensioned to the forward lining panel retention pitch. The aft compartment uses a different panel family with a different pitch, so none of the retention items in this figure can be ordered for an aft installation.",
+          "resolution": "Reject the extension. Any aft installation needs its own retention design and its own parts content."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-25-1130",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2550113609050",
+              "D2550118482429",
+              "LN181986-9B"
+            ],
+            "shared_fins": [
+              "9911DL"
+            ],
+            "shared_zones": [
+              "111",
+              "113",
+              "116"
+            ],
+            "shared_ata_6d": [
+              "25-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation bulletin is written entirely against the forward compartment panel numbers and access. Extending its effectivity to the aft compartment would produce an instruction that cannot be followed on the aircraft it now claims to cover.",
+          "resolution": "Leave the bulletin effectivity unchanged and raise a separate bulletin if an aft design proceeds."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-25-50-11-400-003-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2550113609050",
+              "D2550118482429",
+              "LN181986-9B"
+            ],
+            "shared_fins": [
+              "9911DL"
+            ],
+            "shared_zones": [
+              "111",
+              "113",
+              "116"
+            ],
+            "shared_ata_6d": [
+              "25-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The lining panel installation task carries the blanket fitting sequence inside the forward panel removal order. An aft variant is a new task rather than an effectivity addition, because the panel removal order differs.",
+          "resolution": "Plan a separate task if the aft design proceeds; do not extend this one."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-M-53-50-13-001",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "111",
+              "116"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The cargo floor panel insert repair needs access from above at positions that an aft blanket run would sit across. The forward installation avoided this by routing clear of the repair band; an aft design would have to do the same deliberately.",
+          "resolution": "Carry the repair band clearance forward as a design input to any aft installation."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-164355",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "116"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The blanket run passes the avionics bay zone that the software management module installation occupies. Nothing conflicts today, but any aft routing has to be checked against the module rack clearance rather than assumed.",
+          "resolution": "Record the clearance check as an input to the aft design."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed and rejected as scoped. The aft compartment case is not an effectivity extension and cannot be carried by the forward design; it needs to be raised as a new installation.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,169 @@
+[
+  {
+    "doc_id": "AMM-T-23-70-11-400-002-A",
+    "doc_type": "AMM",
+    "title": "Air Traffic Control Datalink Router — Installation on the Ventilated Shelf",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-12-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-70-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-08-10",
+      "released": "2021-12-02",
+      "revised": null,
+      "effective": "2022-01-13"
+    },
+    "abstract": "Installation of the air traffic control datalink router on the ventilated shelf, including the inlet duct fit, the shelf temperature sensor connection and the datalink functional test.",
+    "sections": {
+      "purpose": "This task gives the procedure to install the air traffic control datalink router on the ventilated shelf, to connect the shelf temperature sensor and to do the datalink functional test that releases the aircraft.",
+      "job_setup_note": "The ventilated tray and the inlet duct are handed and will fit only at the outboard shelf position. The duct must seat against the shelf face without a gap, because the cooling flow is drawn through that joint. The coaxial run fitted with the ventilated shelf is 1.4 metres longer than the original and must be clamped at the intervals given in the installation drawing; an unclamped run chafes against the rack upright.",
+      "procedure": "1. Make sure that electrical power is removed and that the warning notice is in position. 2. Remove the protective cover from the shelf position. 3. Install the ventilated mounting tray at the outboard position and tighten the four retaining screws to 2.5 Nm. 4. Install the inlet duct at the shelf face and confirm that it seats without a gap. CAUTION: DO NOT FORCE THE DUCT INTO POSITION. IF IT DOES NOT SEAT, THE TRAY IS AT THE WRONG SHELF POSITION. 5. Install the shelf temperature sensor and route its harness to the spare rack input. 6. Put the router on the tray and push it home until the rear connector engages, then close the retaining latch. WARNING: USE THE ACCESS PLATFORM AND A SECOND PERSON. THE ROUTER IS INSTALLED ABOVE SHOULDER HEIGHT. 7. Remove the coaxial protective cap and connect the coaxial with the insertion tool, torquing to 1.2 Nm. 8. Clamp the coaxial run at the intervals given in the installation drawing. 9. Install the display interface unit in the vacated position. 10. Restore electrical power. 11. Do the datalink functional test and confirm a session is established on both the terrestrial and the satellite path. 12. Confirm that the shelf temperature sensor reports on the maintenance terminal. 13. Close the upper avionics compartment access.",
+      "close_out": "Remove the warning notice. Record the router part number, the shelf position and the shelf temperature reading at the end of the test. Confirm on the maintenance terminal that no datalink message remains active before the aircraft is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370115362436",
+        "D2370116071238",
+        "HOD93837-98",
+        "EN364032-83"
+      ],
+      "fins": [
+        "295RN",
+        "5RC",
+        "55RC"
+      ],
+      "drawings": [
+        "D23701264936"
+      ],
+      "software": [],
+      "zones": [
+        "163",
+        "273",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-23-70-11-000-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "ventilated shelf",
+      "inlet duct",
+      "temperature sensor",
+      "functional test"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "23-70-11-400-002-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "Aircraft post MOD-146680 only. On earlier aircraft use the inboard shelf procedure in the previous issue of this task.",
+      "manhours": 3.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "163",
+          "273",
+          "242"
+        ],
+        "access_panels": [
+          "163AL",
+          "163BR"
+        ],
+        "doors": [
+          "Upper avionics compartment access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Make sure that electrical power is removed until step 10.",
+          "Use the access platform; the rack is above shoulder height."
+        ],
+        "tooling": [
+          {
+            "reference": "98D23701-062",
+            "description": "Coaxial insertion tool"
+          },
+          {
+            "reference": "98D23701-084",
+            "description": "Torque screwdriver 0.5-5 Nm"
+          }
+        ],
+        "consumables": [
+          "Cable tie, self-locking",
+          "Coaxial clamp block, cushioned"
+        ],
+        "expendables": [
+          {
+            "part_number": "EN364032-83",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-23-70-11-000-002-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

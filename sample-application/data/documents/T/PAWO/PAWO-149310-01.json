@@ -1,0 +1,265 @@
+[
+  {
+    "doc_id": "PAWO-149310-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Approach Phase Inhibit Configuration File",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-60-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-19",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the approach phase inhibit standard, opened to consider a third table adjustment and cancelled when the operator data did not support the proposed change.",
+    "sections": {
+      "objective": "Establish whether a further adjustment to the inhibit table is justified by the crew reports received since the second issue entered service, and what the certification path for a data-only adjustment would be.",
+      "findings_summary": "The work order was cancelled. The reports received since the second issue entered service were reviewed and the great majority came from aircraft that had not yet taken it; once those were excluded, the residual population was seven reports across two years, which does not support a further table adjustment. The analysis did confirm two things that remain useful. The separately loadable configuration file does make a data-only adjustment possible, and the certification path for one was established and documented during this work order even though it was not used. The troubleshooting procedure correctly identifies the standard fitted before it does anything else, which is what allowed the reports to be sorted so cleanly, and that was the single most useful thing produced by the second issue.",
+      "next_steps": "No further table adjustment. Retain the documented certification path for a data-only adjustment so that it does not have to be established again. Continue to monitor the residual report rate through the normal reliability route."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150111745067",
+        "D3150116156104"
+      ],
+      "fins": [
+        "60FW",
+        "7619FP7"
+      ],
+      "drawings": [
+        "D31501271700"
+      ],
+      "software": [
+        "LC7R81E91AB",
+        "LE3RE34FC19"
+      ],
+      "zones": [
+        "292",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149310",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "inhibit table",
+      "data-only change",
+      "cancelled",
+      "historical"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149310-01",
+      "subject_mod": "MOD-149310",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-03-11",
+      "outcome": "REJECTED",
+      "raised_date": "2026-01-19",
+      "due_date": "2026-03-27",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 210,
+        "spent_manhours": 246
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "31"
+        ],
+        "ata_4d": [
+          "31-50",
+          "31-60"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3150116156104",
+            "D3150111745067"
+          ],
+          "fins": [
+            "60FW",
+            "7619FP7"
+          ],
+          "drawings": [
+            "D31501271700"
+          ],
+          "zones": [
+            "292"
+          ],
+          "software": [
+            "LC7R81E91AB"
+          ]
+        },
+        "similarity_seeds": [
+          "caution inhibited during a configuration change on approach",
+          "table adjustment without requalifying the whole load"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Sort the crew reports by the standard fitted",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish the certification path for a data-only adjustment",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Draft the table adjustment",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "BLOCKED"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TSM-T-31-50-11-812-803",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3150111745067",
+              "D3150116156104"
+            ],
+            "shared_fins": [
+              "60FW",
+              "7619FP7"
+            ],
+            "shared_zones": [
+              "292",
+              "183"
+            ],
+            "shared_ata_6d": [
+              "31-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure establishes the standard fitted before anything else, which is what made it possible to sort two years of reports by configuration in a few days rather than a few weeks.",
+          "resolution": "No change. Recorded as the reason the analysis could be closed quickly."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-31-1038",
+          "doc_type": "SB",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3150116156104"
+            ],
+            "shared_fins": [
+              "60FW"
+            ],
+            "shared_zones": [
+              "292"
+            ],
+            "shared_ata_6d": [
+              "31-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The software bulletin is the vehicle by which any data-only adjustment would be delivered, and the certification path documented here assumes it. That assumption is recorded so that the next proposal starts from it.",
+          "resolution": "No change now. Certification path retained for future use."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Cancelled. The residual report rate does not support a further table adjustment.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "doc_id": "TSM-C-32-40-13-810-814",
+    "doc_type": "TSM",
+    "title": "One Wheel Position Does Not Report a Tyre Pressure",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-03-03",
+      "reason": "Original issue of the isolation procedure for a wheel position that does not report a tyre pressure.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-13",
+      "title": "Wheels and Brakes — Tyre Pressure Indicating"
+    },
+    "secondary_ata": [
+      "32-40-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-12-13",
+      "released": "2018-03-03",
+      "revised": "2018-03-03",
+      "effective": "2018-03-31"
+    },
+    "abstract": "Fault isolation for a wheel position that shows no tyre pressure or a value that does not change, separating a transmitter fault from a receiver or harness fault by moving the wheel.",
+    "sections": {
+      "purpose": "To isolate the cause of a wheel position that does not report a tyre pressure, or that reports a value that never changes.",
+      "fault_description": "The wheel page shows a dashed value at one position, or shows a value that stays identical over several sectors while the others move with temperature. A dashed value means the receiver is not hearing the transmitter; a frozen value means it is hearing an old message and not a new one, which is a different fault. The distinction matters because the first is usually the transmitter and the second is usually the receiver or the harness. The system is designed so that a non-reporting position is annunciated rather than shown as normal, and a position showing a plausible but stale value is the one case where that design does not protect the operator.",
+      "isolation_procedure": "Read the transmitter status for the affected position on the maintenance terminal, including the battery state where it is reported. If the transmitter reports a low battery, replace the wheel and close the fault. If no status is returned at all, swap the affected wheel with a wheel from a serviceable position and rerun the operational check. If the fault follows the wheel, the transmitter is at fault and the wheel must be sent for transmitter replacement. If the fault stays at the position, work the receiver and the harness: measure the continuity of the gear leg harness from the receiver connector back to the brake control unit, and inspect the clamp kit D3240128079286 run for chafing where it crosses the leg. If the continuity is good, replace the receiver and rerun. Do the operational check of all six positions as the confirmation task.",
+      "dispatch_note": "Dispatch is permitted with one wheel position not reporting for three days, provided the manual gauge check is done at that position before each departure and the value recorded. Two positions not reporting on the same gear is not dispatchable."
+    },
+    "entities": {
+      "part_numbers": [
+        "ESC959638-52",
+        "D3240128079286",
+        "D3240120310957",
+        "D3240121944667"
+      ],
+      "fins": [
+        "5358WS",
+        "210WS9",
+        "248WS"
+      ],
+      "drawings": [
+        "D32401216639"
+      ],
+      "software": [],
+      "zones": [
+        "763",
+        "771",
+        "773"
+      ],
+      "figures": [
+        "FIG-32-40-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-32-40-13-200-025-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-32-40-11-300-032-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "tyre pressure",
+      "transmitter",
+      "receiver",
+      "wheel swap",
+      "harness chafing"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "32-40-13-810-814",
+      "fault_symptom": "One wheel position shows a dashed tyre pressure value, or a value that does not change over several sectors",
+      "fault_codes": [
+        "324013004",
+        "324013017"
+      ],
+      "warning_messages": [
+        "WHEEL TYRE PRESS SYS"
+      ],
+      "affected_fins": [
+        "5358WS",
+        "210WS9"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Transmitter battery depleted",
+          "probability_pct": 44,
+          "fin": "5358WS"
+        },
+        {
+          "cause": "Transmitter failed in the wheel",
+          "probability_pct": 29,
+          "fin": "5358WS"
+        },
+        {
+          "cause": "Gear leg harness chafed at the clamp run",
+          "probability_pct": 27,
+          "fin": "210WS9"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-C-32-40-13-200-025-A",
+      "dispatch": {
+        "mel_item": "32-40-03A",
+        "dispatchable": true,
+        "dispatch_condition": "One position only, three days, manual gauge check at that position before each departure"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-C-32-40-13-810-814",
+    "doc_type": "TSM",
+    "title": "One Wheel Position Does Not Report a Tyre Pressure",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-06",
+      "reason": "Software standard check kept ahead of any hardware replacement, because an out-of-date load produces the frozen value symptom.",
+      "raised_by_pawo": "PAWO-111388-01",
+      "raised_by_finding": "F04",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-13",
+      "title": "Wheels and Brakes — Tyre Pressure Indicating"
+    },
+    "secondary_ata": [
+      "32-40-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-12-13",
+      "released": "2018-03-03",
+      "revised": "2026-08-06",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Fault isolation for a wheel position that shows no tyre pressure or a value that does not change, separating a transmitter fault from a receiver or harness fault by moving the wheel.",
+    "sections": {
+      "purpose": "To isolate the cause of a wheel position that does not report a tyre pressure, or that reports a value that never changes.",
+      "fault_description": "The wheel page shows a dashed value at one position, or shows a value that stays identical over several sectors while the others move with temperature. A dashed value means the receiver is not hearing the transmitter; a frozen value means it is hearing an old message and not a new one, which is a different fault. The distinction matters because the first is usually the transmitter and the second is usually the receiver or the harness. The system is designed so that a non-reporting position is annunciated rather than shown as normal, and a position showing a plausible but stale value is the one case where that design does not protect the operator.",
+      "isolation_procedure": "Where the reported value is frozen rather than absent, check that the software load LH4C830E70C is at the current standard before anything is touched. This step stays first and is not to be reordered: on the first embodiments an out-of-date load produced a plausible value that never changed, which reads exactly like a receiver fault, and three receivers were replaced before the load was looked at. A frozen value with an out-of-date load is closed by loading the current standard. Where the value is absent, read the transmitter status for the affected position on the maintenance terminal, including the battery state where it is reported. If the transmitter reports a low battery, replace the wheel and close the fault. If no status is returned at all, swap the affected wheel with a wheel from a serviceable position and rerun the operational check. If the fault follows the wheel, the transmitter is at fault and the wheel must be sent for transmitter replacement. If the fault stays at the position, work the receiver and the harness: measure the continuity of the gear leg harness from the receiver connector back to the brake control unit, and inspect the clamp kit D3240128079286 run for chafing where it crosses the leg. If the continuity is good, replace the receiver and rerun. Do the operational check of all six positions as the confirmation task.",
+      "dispatch_note": "Dispatch is permitted with one wheel position not reporting for three days, provided the manual gauge check is done at that position before each departure and the value recorded. Two positions not reporting on the same gear is not dispatchable."
+    },
+    "entities": {
+      "part_numbers": [
+        "ESC959638-52",
+        "D3240128079286",
+        "D3240120310957",
+        "D3240121944667"
+      ],
+      "fins": [
+        "5358WS",
+        "210WS9",
+        "248WS"
+      ],
+      "drawings": [
+        "D32401216639"
+      ],
+      "software": [
+        "LH4C830E70C"
+      ],
+      "zones": [
+        "763",
+        "771",
+        "773"
+      ],
+      "figures": [
+        "FIG-32-40-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-32-40-13-200-025-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-32-40-11-300-032-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111388",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "tyre pressure",
+      "transmitter",
+      "receiver",
+      "frozen value",
+      "wheel swap"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "32-40-13-810-814",
+      "fault_symptom": "One wheel position shows a dashed tyre pressure value, or a value that does not change over several sectors",
+      "fault_codes": [
+        "324013004",
+        "324013017"
+      ],
+      "warning_messages": [
+        "WHEEL TYRE PRESS SYS"
+      ],
+      "affected_fins": [
+        "5358WS",
+        "210WS9"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Transmitter battery depleted",
+          "probability_pct": 36,
+          "fin": "5358WS"
+        },
+        {
+          "cause": "Transmitter failed in the wheel",
+          "probability_pct": 24,
+          "fin": "5358WS"
+        },
+        {
+          "cause": "Gear leg harness chafed at the clamp run",
+          "probability_pct": 22,
+          "fin": "210WS9"
+        },
+        {
+          "cause": "Brake control unit software not at the current standard",
+          "probability_pct": 18,
+          "fin": "248WS"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-C-32-40-13-200-025-A",
+      "dispatch": {
+        "mel_item": "32-40-03A",
+        "dispatchable": true,
+        "dispatch_condition": "One position only, three days, manual gauge check at that position before each departure"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

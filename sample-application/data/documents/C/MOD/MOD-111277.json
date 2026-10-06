@@ -1,0 +1,201 @@
+[
+  {
+    "doc_id": "MOD-111277",
+    "doc_type": "MOD",
+    "title": "Flight Management Computer Navigation Database Capacity Increase and Dual Load Path",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-08-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-11",
+      "title": "Flight Management Computing — Flight Management Computer"
+    },
+    "secondary_ata": [
+      "22-80-12",
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "GVA",
+        "HAT",
+        "SRP"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00479",
+      "production_cut_in_date": "2022-03-24",
+      "retrofit_via": [
+        "CRN-22-2001"
+      ]
+    },
+    "dates": {
+      "created": "2020-10-12",
+      "released": "2021-12-09",
+      "revised": "2024-08-21",
+      "effective": "2024-09-16"
+    },
+    "abstract": "Increase of the navigation database partition in the flight management computer and introduction of a second load path, so that a database cycle can be loaded without taking the aircraft out of the departure sequence.",
+    "sections": {
+      "reason": "The delivered database partition could not hold the worldwide coverage several operators had moved to, and three of them were running trimmed regional databases with a documented restriction on diversion planning. The twenty-eight day database cycle also had to be loaded through a single path with the aircraft powered on the stand, and operators with more than fifteen aircraft were reporting that the load window was the binding constraint on their overnight plan. One operator lost eleven departures in a year to a database load that overran.",
+      "description": "The flight management computer D2280117216234 is replaced by the same part number at a later hardware standard with four times the non-volatile partition, and the mounting tray D2280111910946 is replaced by HES490975-50 to accept the deeper unit. The navigation database load LA7C64D57DF and the operational load LE1C320FA60 are both re-issued at the standard supporting the larger partition. A second load path is provided by wiring the database loading module D2280124326903 to the maintenance connector, so that a load can be started from the forward avionics bay rather than from the flight compartment. Fastener hardware EN462879-3E and collars AGS987591K7 are used at the tray. Functional item 5CC hosts the navigation load and functional item 8488CE is added for the second path in zone 173. Flight compartment work is in zone 263 and the avionics bay work in zone 173.",
+      "effects": "Mass increase of 1.1 kg. No change in electrical load. The computer is one-way interchangeable: a later unit runs the earlier database, an earlier unit will not run the later one. Dispatch with one computer inoperative is unchanged. The database loading procedure in the maintenance manual is replaced, the illustrated parts figure needs the new tray, and the flight crew description of the database page has to note the extended coverage.",
+      "embodiment_note": "Production cut-in at MSN C00479 in March 2022. Retrofit is by Service Bulletin CRN-22-2001 in a single line stop of about five hours, most of which is the tray change. The software loads are supplied with the kit and can be loaded before the tray work."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2280117216234",
+        "D2280111910946",
+        "HES490975-50",
+        "D2280124326903",
+        "EN462879-3E",
+        "AGS987591K7"
+      ],
+      "fins": [
+        "5CC",
+        "8488CE"
+      ],
+      "drawings": [
+        "D22801178992"
+      ],
+      "software": [
+        "LA7C64D57DF",
+        "LE1C320FA60"
+      ],
+      "zones": [
+        "263",
+        "173"
+      ],
+      "figures": [
+        "FIG-22-80-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00479"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-22-2001",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "FCOM-C-DSC-22-80-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-22-80-11-400-014-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-22-80-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "navigation database",
+      "flight management computer",
+      "load path",
+      "database cycle",
+      "partition"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111277,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.1,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "HES490975-50",
+        "D2280124326903"
+      ],
+      "parts_removed": [
+        "D2280111910946"
+      ],
+      "parts_modified": [
+        "D2280117216234"
+      ],
+      "fins_affected": [
+        "5CC",
+        "8488CE"
+      ],
+      "software_affected": [
+        "LA7C64D57DF",
+        "LE1C320FA60"
+      ],
+      "estimated_manhours": 230,
+      "estimated_cost_keur": 1150,
+      "lead_time_weeks": 48,
+      "production_impact": "Cut-in at MSN C00479, tray change absorbed in the avionics installation station",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

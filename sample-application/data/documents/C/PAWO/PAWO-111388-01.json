@@ -1,0 +1,354 @@
+[
+  {
+    "doc_id": "PAWO-111388-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Tyre Pressure Indicating Second Revision and Wheel Balance Step",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-29",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-13",
+      "title": "Wheels and Brakes — Tyre Pressure Indicating"
+    },
+    "secondary_ata": [
+      "32-40-12",
+      "31-30"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00137",
+          "to": "C00796"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-05",
+      "released": "2026-07-29",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the tyre pressure standard, run after the first embodiments produced wheel balance complaints, covering the missing balance step and the interaction with the cold weather brake proposal.",
+    "sections": {
+      "objective": "Establish why the first twenty embodiments produced wheel balance complaints that the design had not predicted, and decide what has to change in the bulletin before the campaign continues.",
+      "findings_summary": "Three items were confirmed and the revision was approved with conditions. The balance complaints were real and the cause was simple: the wheel-mounted transmitter is light but is not fitted on the wheel axis, and the bulletin did not require the wheel to be balanced after installation because the design had judged the mass insignificant. It is insignificant statically and not dynamically. A balance step was added at the second revision. The second finding was the interaction with the cold weather brake proposal, which claims the same download path and which was then in pre-analysis; a caveat was added to the bulletin rather than a resolution, and this analysis recorded that the caveat is a placeholder that has to be closed properly. The third was that the operational check does not tell the technician what to do when a value comes back into tolerance after the taxi, which the crew procedure covers but the maintenance task does not.",
+      "next_steps": "Add the wheel balance step to the bulletin at the second revision. Record that the cold weather caveat is a placeholder to be closed when that change is decided. Add the warmed-tyre caution to the operational check to match the crew procedure."
+    },
+    "entities": {
+      "part_numbers": [
+        "ESC959638-52",
+        "D3240120310957",
+        "D3240128079286",
+        "AES343862-3E",
+        "AGS146031K9",
+        "D3240121944667"
+      ],
+      "fins": [
+        "5358WS",
+        "210WS9"
+      ],
+      "drawings": [
+        "D32401216639",
+        "D32400062341"
+      ],
+      "software": [
+        "LH4C830E70C"
+      ],
+      "zones": [
+        "763",
+        "771",
+        "773"
+      ],
+      "figures": [
+        "FIG-32-40-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00680"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111388",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "wheel balance",
+      "tyre pressure",
+      "placeholder caveat",
+      "operational check"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Lorencourt",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111388-01",
+      "subject_mod": "MOD-111388",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-29",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-05-05",
+      "due_date": "2026-08-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Lorencourt",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 145,
+        "spent_manhours": 187
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "32",
+          "92"
+        ],
+        "ata_4d": [
+          "32-40",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "C00137",
+          "to": "C00796"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "ESC959638-52",
+            "D3240120310957",
+            "D3240128079286",
+            "D3240121944667"
+          ],
+          "fins": [
+            "5358WS",
+            "210WS9"
+          ],
+          "drawings": [
+            "D32401216639"
+          ],
+          "zones": [
+            "763",
+            "771",
+            "773"
+          ],
+          "software": [
+            "LH4C830E70C"
+          ]
+        },
+        "similarity_seeds": [
+          "a small mass added off the axis of a rotating assembly"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Investigate the wheel balance complaints",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the download path claim against work in pre-analysis",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Compare the maintenance and crew guidance on warmed tyres",
+          "method": "SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "CRN-32-2008",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ESC959638-52",
+              "D3240128079286",
+              "AES343862-3E",
+              "AGS146031K9"
+            ],
+            "shared_fins": [
+              "5358WS",
+              "210WS9"
+            ],
+            "shared_zones": [
+              "763",
+              "771",
+              "773"
+            ],
+            "shared_ata_6d": [
+              "32-40-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin did not require the wheel to be balanced after the transmitter was installed, because the design judged the mass insignificant. It is insignificant statically and not dynamically, and the first twenty embodiments produced balance complaints.",
+          "resolution": "Wheel balance step added at the second revision of the bulletin before the campaign continued."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-C-32-40-13-200-025-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ESC959638-52",
+              "D3240120310957",
+              "D3240128079286",
+              "AES343862-3E",
+              "AGS146031K9"
+            ],
+            "shared_fins": [
+              "5358WS",
+              "210WS9"
+            ],
+            "shared_zones": [
+              "763",
+              "771",
+              "773"
+            ],
+            "shared_ata_6d": [
+              "32-40-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The operational check does not tell the technician what to do when a value comes back into tolerance after the taxi, which the crew procedure covers explicitly and the maintenance task does not.",
+          "resolution": "Warmed-tyre caution added to the operational check to match the crew procedure."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-C-92-31-21",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240128079286"
+            ],
+            "shared_fins": [
+              "210WS9",
+              "5358WS"
+            ],
+            "shared_zones": [
+              "771",
+              "773"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The receiver feeds took the pairs that used to be spare on the left-hand gear run, and the sheet was corrected to show a spare count of zero. Anything else wanting that run now has to change the harness.",
+          "resolution": "Spare count corrected on the sheet and recorded as a constraint for the cold weather brake proposal."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-C-32-40-13-810-814",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ESC959638-52",
+              "D3240128079286",
+              "D3240120310957",
+              "D3240121944667"
+            ],
+            "shared_fins": [
+              "5358WS",
+              "210WS9"
+            ],
+            "shared_zones": [
+              "763",
+              "771",
+              "773"
+            ],
+            "shared_ata_6d": [
+              "32-40-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure gained a software standard check as a result of the first embodiments, where an out-of-date load produced a frozen value that looked like a receiver fault.",
+          "resolution": "Software standard check retained ahead of any hardware replacement."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Second revision approved with the wheel balance step. The cold weather caveat remains a placeholder and must be closed when that change is decided.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

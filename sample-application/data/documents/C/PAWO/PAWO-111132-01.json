@@ -1,0 +1,291 @@
+[
+  {
+    "doc_id": "PAWO-111132-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Interim Derating of the Aft Secondary Distribution Box Cabin Outlet Feeders",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-11-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CANCELLED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-12",
+      "title": "AC Distribution — Secondary Distribution Box"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00312"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-05-07",
+      "released": "2018-11-27",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Cancelled pre-analysis of the interim feeder derating, stopped six weeks in when the permanent ventilated box design was launched and the remaining analysis was merged into that work order.",
+    "sections": {
+      "objective": "Establish what a protective derating of the aft cabin outlet feeders would affect while a permanent thermal solution was still being designed, and in particular whether the derating could be applied without re-issuing the cabin load table. The work order was raised internally by the electrical system office as a stop-gap measure and was deliberately given a short deadline, because the value of an interim change falls with every month it takes to release.",
+      "findings_summary": "Three items were confirmed before the work order was stopped. The distribution box removal task and the illustrated part list both carry the feeder termination and the outlet rating, and the rating appears on a placard that the derating makes wrong on the aircraft rather than only in the manual. The gear bay and equipment rack wiring sheet carries the same feeders and would have needed a rating annotation. Work stopped at that point. The permanent ventilated box design was launched six weeks into the analysis with a cut-in only four months behind the interim change, and running two derating standards through the same fleet in that window was not defensible.",
+      "next_steps": "Close this work order and merge the remaining scope into the permanent ventilated box work rather than running two analyses on the same box. Carry the placard finding across, because it applies to the permanent change in the opposite direction: the restored rating makes the derated placard wrong a second time, and an aircraft that takes both changes will have had its rack door placard changed twice in a year. Leave the interim change released for the aircraft that already have it, and give the permanent work order the list of those aircraft so their placard state is known."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450122851975",
+        "HAR83831-56",
+        "EN248527-04"
+      ],
+      "fins": [
+        "403XU2",
+        "9177PC5"
+      ],
+      "drawings": [
+        "D24501217521"
+      ],
+      "software": [],
+      "zones": [
+        "244",
+        "252"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111132",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "feeder derating",
+      "distribution box",
+      "load table",
+      "cancelled"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111132-01",
+      "subject_mod": "MOD-111132",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2018-11-27",
+      "outcome": "DELEGATED",
+      "raised_date": "2018-05-07",
+      "due_date": "2018-09-28",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 45,
+        "spent_manhours": 26
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "24",
+          "92"
+        ],
+        "ata_4d": [
+          "24-50",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "C00001",
+          "to": "C00312"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2450122851975",
+            "HAR83831-56"
+          ],
+          "fins": [
+            "403XU2",
+            "9177PC5"
+          ],
+          "drawings": [
+            "D24501217521"
+          ],
+          "zones": [
+            "244",
+            "252"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "thermal margin lost at an aft equipment rack distribution box",
+          "derating of a cabin outlet feeder as a stop-gap measure"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search content carrying the cabin outlet rating",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check whether the placard is affected on the aircraft",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the permanent design timing against the interim cut-in",
+          "method": "SME_INTERVIEW",
+          "owner": "ELSC",
+          "status": "BLOCKED"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-C-24-50-12-000-007-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450122851975",
+              "HAR83831-56"
+            ],
+            "shared_fins": [
+              "403XU2",
+              "9177PC5"
+            ],
+            "shared_zones": [
+              "244",
+              "252"
+            ],
+            "shared_ata_6d": [
+              "24-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task quotes the cabin outlet rating in its safety precautions and in the isolation step. A derated feeder makes both figures wrong, and the rating is also carried on a placard inside the rack door, so the aircraft itself is wrong until the placard is changed.",
+          "resolution": "Placard change added to the embodiment instructions; carried across to the permanent design work order."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-C-24-50-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450122851975",
+              "EN248527-04",
+              "HAR83831-56"
+            ],
+            "shared_fins": [
+              "403XU2",
+              "9177PC5"
+            ],
+            "shared_zones": [
+              "244",
+              "252"
+            ],
+            "shared_ata_6d": [
+              "24-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure lists the feeder termination and the protective device by rating. A derating changes the device without changing the box, which is exactly the case the figure has no way of expressing without a configuration note.",
+          "resolution": "Configuration note drafted but not issued; transferred with the remaining scope."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-C-92-31-12",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "244",
+              "252"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The aft equipment rack feeder sheet carries the same feeders and their protective device ratings. A derating that is not annotated on the sheet leaves the line with two sources of truth for the same circuit.",
+          "resolution": "Annotation drafted and transferred to the permanent design work order."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Cancelled. The permanent ventilated box design was launched four months ahead of the interim cut-in and the remaining scope was merged into it.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

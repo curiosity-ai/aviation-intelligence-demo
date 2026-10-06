@@ -1,0 +1,331 @@
+[
+  {
+    "doc_id": "MOD-151480",
+    "doc_type": "MOD",
+    "title": "Data Loader Interface Transceiver Change to Remove the Load Abort at High Ambient Temperature",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-06-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z02022",
+          "to": "Z07470"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "ZPH-45-1010"
+      ]
+    },
+    "dates": {
+      "created": "2016-09-12",
+      "released": "2017-06-19",
+      "revised": null,
+      "effective": "2017-07-10"
+    },
+    "abstract": "Replacement of the portable data loader interface transceiver after loads were found to abort when the avionics bay warmed up on the ground, forcing operators to load software at night or with the packs running.",
+    "sections": {
+      "reason": "Operators in warm climates reported that software loading through the portable data loader interface aborted part way through whenever the avionics bay temperature rose above about forty-five degrees, which on a parked aircraft in summer happens within an hour. A failed load leaves the target computer in an indeterminate state and has to be repeated from the beginning, so a load that should take twenty minutes was routinely taking a whole night. Fifty-one aborted loads were reported in the 2016 season across thirty-eight aircraft, and two of them ended with the target computer having to be replaced.",
+      "description": "The transceiver D4545112932616 is replaced by an item of the same form and fit built with an extended temperature range line driver and a revised clock recovery stage. The data concentrator at FIN 78TN keeps its position in the rack and the harness is unchanged, so the change is contained inside the unit. The rack cooling path in zone 252 is checked and the blanking plate above the unit is refitted correctly, because a proportion of the reported aborts were traced to a missing blanking plate diverting the cooling flow. Detail of the rack arrangement is on drawing D45451170573.",
+      "effects": "No mass change and no electrical load change of any consequence. Interchangeable in both directions from an installation point of view, although the earlier unit reintroduces the temperature limitation. The maximum ambient temperature for a load rises from forty-five to seventy degrees, which removes the operational restriction entirely. The data loading procedure loses its temperature caveat and the parts figure requires an alternate item entry until the fleet is converted.",
+      "embodiment_note": "Retrofit only. The unit is a line replaceable item and the change is a thirty minute task at any station, so no bulletin downtime is quoted. Spares were converted as they passed through the repair loop and no separate kit was required."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545112932616"
+      ],
+      "fins": [
+        "78TN"
+      ],
+      "drawings": [
+        "D45451170573"
+      ],
+      "software": [],
+      "zones": [
+        "252"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-45-1010",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-Z-45-45-11-900-026-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "data loader interface",
+      "load abort",
+      "avionics bay temperature",
+      "line driver",
+      "blanking plate"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 151480,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "NO_IMPACT",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.0,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4545112932616"
+      ],
+      "fins_affected": [
+        "78TN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 18,
+      "estimated_cost_keur": 62,
+      "lead_time_weeks": 14,
+      "production_impact": "No cut-in; supplier changed the build standard within the existing part number",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-151480",
+    "doc_type": "MOD",
+    "title": "Data Loader Interface Transceiver Change to Remove the Load Abort at High Ambient Temperature",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-30",
+      "reason": "The transceiver change is recorded as an explicit entry condition for later interface standards rather than as an assumption about how much of the fleet has been converted.",
+      "raised_by_pawo": "PAWO-155690-01",
+      "raised_by_finding": "F01",
+      "finding_type": "PREREQUISITE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z02022",
+          "to": "Z07470"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "ZPH-45-1010"
+      ]
+    },
+    "dates": {
+      "created": "2016-09-12",
+      "released": "2017-06-19",
+      "revised": "2026-06-30",
+      "effective": "2026-07-21"
+    },
+    "abstract": "Replacement of the portable data loader interface transceiver that aborted loads once the avionics bay warmed up, now recorded as the entry condition every later interface standard is built on.",
+    "sections": {
+      "reason": "Operators in warm climates reported that software loading through the portable data loader interface aborted part way through whenever the avionics bay temperature rose above about forty-five degrees, which on a parked aircraft in summer happens within an hour. A failed load leaves the target computer in an indeterminate state and has to be repeated from the beginning, so a load that should take twenty minutes was routinely taking a whole night. Fifty-one aborted loads were reported in the 2016 season across thirty-eight aircraft, and two of them ended with the target computer having to be replaced.",
+      "description": "The transceiver D4545112932616 is replaced by an item of the same form and fit built with an extended temperature range line driver and a revised clock recovery stage. The data concentrator at FIN 78TN keeps its position in the rack and the harness is unchanged, so the change is contained inside the unit. The rack cooling path in zone 252 is checked and the blanking plate above the unit is refitted correctly, because a proportion of the reported aborts were traced to a missing blanking plate diverting the cooling flow. Detail of the rack arrangement is on drawing D45451170573.",
+      "effects": "No mass change and no electrical load change of any consequence. Interchangeable in both directions from an installation point of view, although the earlier unit reintroduces the temperature limitation. The maximum ambient temperature for a load rises from forty-five to seventy degrees, which removes the operational restriction entirely. The data loading procedure loses its temperature caveat and the parts figure requires an alternate item entry until the fleet is converted. Every later interface standard is designed against the extended temperature part: a unit fitted to a rack that never had this change takes its temperature limit from the rack rather than from the unit, and the limitation reappears without anything reporting it.",
+      "embodiment_note": "Retrofit only. The unit is a line replaceable item and the change is a thirty minute task at any station, so no bulletin downtime is quoted. Spares were converted as they passed through the repair loop and no separate kit was required. Because conversion was by attrition rather than by campaign, the population was never formally closed out; later standards therefore state this change as an explicit prerequisite and verify it on the aircraft record instead of assuming it."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545112932616"
+      ],
+      "fins": [
+        "78TN"
+      ],
+      "drawings": [
+        "D45451170573"
+      ],
+      "software": [],
+      "zones": [
+        "252"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-45-1010",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-155690",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "AMM-Z-45-45-11-900-026-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "data loader interface",
+      "load abort",
+      "avionics bay temperature",
+      "line driver",
+      "blanking plate"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 151480,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "NO_IMPACT",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.0,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4545112932616"
+      ],
+      "fins_affected": [
+        "78TN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 18,
+      "estimated_cost_keur": 62,
+      "lead_time_weeks": 14,
+      "production_impact": "No cut-in; supplier changed the build standard within the existing part number",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

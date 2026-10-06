@@ -1,0 +1,425 @@
+[
+  {
+    "doc_id": "TTN-22-1024",
+    "doc_type": "SB",
+    "title": "Auto Flight — Flight Guidance Computer — Install the Isolated Rack and the Long Wipe Interface Unit",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-02-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-10",
+      "ata_6d": "22-10-11",
+      "title": "Auto Flight — Flight Guidance Computer"
+    },
+    "secondary_ata": [
+      "22-80-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00027",
+          "to": "T00218"
+        }
+      ],
+      "excluded_msns": [
+        "T00152"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2023-09-15",
+      "released": "2024-02-21",
+      "revised": "2024-02-21",
+      "effective": "2024-04-02"
+    },
+    "abstract": "Puts both flight guidance computers on elastomerically isolated racks and fits the long wipe interface unit, removing the connector fretting that produces intermittent autopilot disconnects on rough-field operations.",
+    "sections": {
+      "planning_reason": "Operators using unimproved runways reported intermittent autopilot disconnects at roughly four times the fleet average, and every removed computer tested serviceable. Investigation found fretting corrosion on the rack connector contacts, produced by low amplitude relative movement between the computer and the rack under an airframe vibration environment that the original rack was not designed for. Cleaning the contacts fixed it for a few months at a time, which is why the condition persisted for years without a clear cause.",
+      "description": "This Service Bulletin gives the instructions to replace both flight guidance computer racks with elastomerically isolated racks, to fit the mounting plate between the isolators and the shelf, and to replace the interface unit with the long wipe variant that carries a positive rack latch to preload the connector. The cable entry grommets are renewed because the isolated rack moves relative to the structure and the harness must carry controlled slack. The built-in test software is updated so that a contact resistance trend is reported before a disconnect occurs.",
+      "accomplishment_summary": "Remove electrical power and open the avionics compartment. Remove both flight guidance computers and their interface units. Remove the existing racks. Install the mounting plate on the shelf and fit the isolated rack on the four isolators, torquing to the values in the installation drawing. Install the long wipe interface unit and confirm that the rack latch preloads the connector. Renew the cable entry grommets and re-terminate the harness with the service loop length given in the drawing; do not shorten it. Reinstall both computers using AMM-T-22-10-11-700-001-A. Restore power and load the built-in test software. Do the flight guidance system functional test and record the contact resistance readings as the new baseline. Close the compartment. Record the modification and update the loadable software list.",
+      "effectivity_note": "Applicable to TITAN-88 aircraft in the MSN T00027 to T00218 range, excluding MSN T00152 which carries a modified avionics shelf. Both racks must be converted together; a mixed pair is not a supported configuration because the connector datum differs by 6 mm. Aircraft delivered from MSN T00221 have the standard from the production line.",
+      "material_note": "Kit K2210-1024-01 covers one aircraft, both racks. The isolated rack is a sixteen week lead item. The computers themselves are re-used and are not part of the kit. Removed interface units are returned to the vendor for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2210112806118",
+        "D2210114091568",
+        "AES764786K6",
+        "ESC385904-77"
+      ],
+      "fins": [
+        "7CC",
+        "872CE",
+        "897CC"
+      ],
+      "drawings": [
+        "D22801194445"
+      ],
+      "software": [
+        "LG7R957079B"
+      ],
+      "zones": [
+        "124",
+        "223",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00152",
+        "T00221"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149230",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-T-22-10-11-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight guidance computer",
+      "isolated rack",
+      "fretting",
+      "interface unit",
+      "autopilot disconnect"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-22-1024",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 42 months after the date of this Service Bulletin, whichever occurs first. Operators on unimproved surfaces are advised to embody at the earliest opportunity.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-149230",
+      "manpower": {
+        "elapsed_time_hours": 12,
+        "manhours": 22,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K2210-1024-01",
+        "kit_available_from": "2024-07-08",
+        "parts_required": [
+          {
+            "part_number": "D2210114091568",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2210112806118",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "ESC385904-77",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES764786K6",
+            "qty": 16,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2210112806118",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, electronic grade",
+          "Cable tie, self-locking"
+        ],
+        "tooling": [
+          "Torque wrench 2-20 Nm",
+          "Contact resistance meter",
+          "Portable data loader"
+        ]
+      },
+      "weight_change_kg": 3.6,
+      "accomplishment_steps": 13,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2024-02-21",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TTN-22-1024",
+    "doc_type": "SB",
+    "title": "Auto Flight — Flight Guidance Computer — Install the Isolated Rack and the Long Wipe Interface Unit",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-22",
+      "reason": "Closing readings step now points at the per contact recording of the maintenance task; the installation and the material list are unchanged.",
+      "raised_by_pawo": "PAWO-149230-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-10",
+      "ata_6d": "22-10-11",
+      "title": "Auto Flight — Flight Guidance Computer"
+    },
+    "secondary_ata": [
+      "22-80-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00027",
+          "to": "T00218"
+        }
+      ],
+      "excluded_msns": [
+        "T00152"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2023-09-15",
+      "released": "2024-02-21",
+      "revised": "2026-06-22",
+      "effective": "2026-07-20"
+    },
+    "abstract": "Puts both flight guidance computers on elastomerically isolated racks and fits the long wipe interface unit, removing the connector fretting that produces intermittent autopilot disconnects on rough-field operations.",
+    "sections": {
+      "planning_reason": "Operators using unimproved runways reported intermittent autopilot disconnects at roughly four times the fleet average, and every removed computer tested serviceable. Investigation found fretting corrosion on the rack connector contacts, produced by low amplitude relative movement between the computer and the rack under an airframe vibration environment that the original rack was not designed for. Cleaning the contacts fixed it for a few months at a time, which is why the condition persisted for years without a clear cause.",
+      "description": "This Service Bulletin gives the instructions to replace both flight guidance computer racks with elastomerically isolated racks, to fit the mounting plate between the isolators and the shelf, and to replace the interface unit with the long wipe variant that carries a positive rack latch to preload the connector. The cable entry grommets are renewed because the isolated rack moves relative to the structure and the harness must carry controlled slack. The built-in test software is updated so that a contact resistance trend is reported before a disconnect occurs.",
+      "accomplishment_summary": "Remove electrical power and open the avionics compartment. Remove both flight guidance computers and their interface units. Remove the existing racks. Install the mounting plate on the shelf and fit the isolated rack on the four isolators, torquing to the values in the installation drawing. Install the long wipe interface unit and confirm that the rack latch preloads the connector. Renew the cable entry grommets and re-terminate the harness with the service loop length given in the drawing; do not shorten it. Reinstall both computers using AMM-T-22-10-11-700-001-A. Restore power and load the built-in test software. Do the flight guidance system functional test and record the closing contact resistance readings as the new baseline, using the per contact record sheet of AMM-T-22-10-11-700-001-A so that the post-conversion set can be carried forward at the next visit. Close the compartment. Record the modification and update the loadable software list.",
+      "effectivity_note": "Applicable to TITAN-88 aircraft in the MSN T00027 to T00218 range, excluding MSN T00152 which carries a modified avionics shelf. Both racks must be converted together; a mixed pair is not a supported configuration because the connector datum differs by 6 mm. Aircraft delivered from MSN T00221 have the standard from the production line.",
+      "material_note": "Kit K2210-1024-01 covers one aircraft, both racks. The isolated rack is a sixteen week lead item. The computers themselves are re-used and are not part of the kit. Removed interface units are returned to the vendor for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2210112806118",
+        "D2210114091568",
+        "AES764786K6",
+        "ESC385904-77"
+      ],
+      "fins": [
+        "7CC",
+        "872CE",
+        "897CC"
+      ],
+      "drawings": [
+        "D22801194445"
+      ],
+      "software": [
+        "LG7R957079B"
+      ],
+      "zones": [
+        "124",
+        "223",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00152",
+        "T00221"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149230",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-T-22-10-11-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight guidance computer",
+      "isolated rack",
+      "fretting",
+      "interface unit",
+      "autopilot disconnect"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-22-1024",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 42 months after the date of this Service Bulletin, whichever occurs first. Operators on unimproved surfaces are advised to embody at the earliest opportunity.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-149230",
+      "manpower": {
+        "elapsed_time_hours": 12,
+        "manhours": 22,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K2210-1024-01",
+        "kit_available_from": "2024-07-08",
+        "parts_required": [
+          {
+            "part_number": "D2210114091568",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2210112806118",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "ESC385904-77",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES764786K6",
+            "qty": 16,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2210112806118",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, electronic grade",
+          "Cable tie, self-locking"
+        ],
+        "tooling": [
+          "Torque wrench 2-20 Nm",
+          "Contact resistance meter",
+          "Portable data loader"
+        ]
+      },
+      "weight_change_kg": 3.6,
+      "accomplishment_steps": 13,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2024-02-21",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-06-22",
+          "reason": "Closing readings recorded on the per contact sheet of the maintenance task; no technical change"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

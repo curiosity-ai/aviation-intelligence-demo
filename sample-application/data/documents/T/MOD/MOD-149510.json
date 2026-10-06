@@ -1,0 +1,396 @@
+[
+  {
+    "doc_id": "MOD-149510",
+    "doc_type": "MOD",
+    "title": "Extension of the Latching Contactor Standard to the Secondary Distribution Boxes and the Aft Primary Rack",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-08-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-11",
+      "title": "Electrical Load Distribution — Primary Distribution Centre"
+    },
+    "secondary_ata": [
+      "24-50-12",
+      "24-60-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-146420"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00203",
+      "production_cut_in_date": "2022-11-30",
+      "retrofit_via": [
+        "TTN-24-1112"
+      ]
+    },
+    "dates": {
+      "created": "2021-03-08",
+      "released": "2022-08-17",
+      "revised": "2022-08-17",
+      "effective": "2022-09-26"
+    },
+    "abstract": "Second issue of the latching contactor change, taking the standard beyond the forward primary rack into the two secondary distribution boxes and the aft primary rack, and adding the load-shed behaviour the first issue deliberately left out.",
+    "sections": {
+      "reason": "The first issue of this change covered only the three modules in the forward primary distribution centre, because that was where the obsolescence pressure sat and because a wider scope would have delayed the cut-in past the last-time-buy date. Four years of service data has since shown the same contact erosion signature on the secondary distribution box modules, at a slightly lower rate but on twice the population, and the same supplier has now given notice on that coil family as well. Extending the standard is cheaper than qualifying a third source. The operators who took the first issue have also asked for the standing load saving to be realised across the whole distribution architecture rather than one rack.",
+      "description": "The latching contactor module family introduced by the first issue is extended to the two secondary distribution boxes and to the aft primary rack. Module D2450112131298 and auxiliary contact block D2450115910023 are used unchanged at the primary positions; the secondary boxes take the shallower variant D2450122086171 with the support bracket ASD216805-37, because the box depth does not allow the interface bracket used forward. Mounting screws EN575431K5 are renewed at every position. Where the first issue is already embodied, only the aft and secondary positions are worked and the forward rack is left alone. Wiring at FIN 1198GX9, FIN 3102GX and FIN 35GX is re-terminated. The load-shed sequencing that the first issue left to the original logic is re-declared so that a latched contactor is commanded open rather than allowed to drop, which the earlier scope could not do while both coil types were installed. Work is in zones 292, 682 and 254 and is detailed on drawings D24501125799 and D24501284380.",
+      "effects": "Further mass reduction of 3.1 kg per aircraft on top of the first issue. The standing electrical load falls by a further 240 volt-amperes, and the total saving against the original standard is approximately 420 volt-amperes. Load shedding is now deterministic across all four racks rather than only the forward one, which removes the transient the first issue could produce on generator changeover. The change is not interchangeable with the original standard and requires the first issue as a prerequisite because the sequencing declaration assumes latched forward contactors. Maintenance, illustrated parts and the crew description of electrical distribution all require update.",
+      "embodiment_note": "Production cut-in at MSN T00203. Retrofit through the associated service bulletin, about three shifts if the first issue is already embodied and five if it is not. Kits are configured by rack so that an operator can convert the secondary boxes first."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450112131298",
+        "D2450115910023",
+        "D2450122086171",
+        "ASD216805-37",
+        "EN575431K5"
+      ],
+      "fins": [
+        "1198GX9",
+        "3102GX",
+        "35GX"
+      ],
+      "drawings": [
+        "D24501125799",
+        "D24501284380"
+      ],
+      "software": [],
+      "zones": [
+        "292",
+        "682",
+        "254"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00203"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-24-1112",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-146420",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "AMM-T-24-50-12-200-002-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-T-24-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "FCOM-T-DSC-24-50-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "latching contactor",
+      "secondary distribution box",
+      "load shed",
+      "standing load",
+      "aft rack"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149510,
+      "mod_class": "MINOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1351",
+          "CS 25.1357",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -3.1,
+      "balance_impact": "Symmetric, no measurable CG effect",
+      "electrical_load_impact_va": -240,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D2450122086171",
+        "ASD216805-37"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2450112131298",
+        "D2450115910023",
+        "EN575431K5"
+      ],
+      "fins_affected": [
+        "1198GX9",
+        "3102GX",
+        "35GX"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 142,
+      "estimated_cost_keur": 690,
+      "lead_time_weeks": 44,
+      "production_impact": "Cut-in at MSN T00203, no line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-149510",
+    "doc_type": "MOD",
+    "title": "Extension of the Latching Contactor Standard to the Secondary Distribution Boxes and the Aft Primary Rack",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-30",
+      "reason": "Effects text records that the primary positions keep the module of the first issue, so no additional spares state is created at the forward rack.",
+      "raised_by_pawo": "PAWO-146420-01",
+      "raised_by_finding": "F03",
+      "finding_type": "SUPERSESSION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-11",
+      "title": "Electrical Load Distribution — Primary Distribution Centre"
+    },
+    "secondary_ata": [
+      "24-50-12",
+      "24-60-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-146420"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00203",
+      "production_cut_in_date": "2022-11-30",
+      "retrofit_via": [
+        "TTN-24-1112"
+      ]
+    },
+    "dates": {
+      "created": "2021-03-08",
+      "released": "2022-08-17",
+      "revised": "2026-06-30",
+      "effective": "2026-07-28"
+    },
+    "abstract": "Second issue of the latching contactor change, taking the standard beyond the forward primary rack into the two secondary distribution boxes and the aft primary rack, and adding the load-shed behaviour the first issue deliberately left out.",
+    "sections": {
+      "reason": "The first issue of this change covered only the three modules in the forward primary distribution centre, because that was where the obsolescence pressure sat and because a wider scope would have delayed the cut-in past the last-time-buy date. Four years of service data has since shown the same contact erosion signature on the secondary distribution box modules, at a slightly lower rate but on twice the population, and the same supplier has now given notice on that coil family as well. Extending the standard is cheaper than qualifying a third source. The operators who took the first issue have also asked for the standing load saving to be realised across the whole distribution architecture rather than one rack.",
+      "description": "The latching contactor module family introduced by the first issue is extended to the two secondary distribution boxes and to the aft primary rack. Module D2450112131298 and auxiliary contact block D2450115910023 are used unchanged at the primary positions; the secondary boxes take the shallower variant D2450122086171 with the support bracket ASD216805-37, because the box depth does not allow the interface bracket used forward. Mounting screws EN575431K5 are renewed at every position. Where the first issue is already embodied, only the aft and secondary positions are worked and the forward rack is left alone. Wiring at FIN 1198GX9, FIN 3102GX and FIN 35GX is re-terminated. The load-shed sequencing that the first issue left to the original logic is re-declared so that a latched contactor is commanded open rather than allowed to drop, which the earlier scope could not do while both coil types were installed. Work is in zones 292, 682 and 254 and is detailed on drawings D24501125799 and D24501284380.",
+      "effects": "Further mass reduction of 3.1 kg per aircraft on top of the first issue. The standing electrical load falls by a further 240 volt-amperes, and the total saving against the original standard is approximately 420 volt-amperes. Load shedding is now deterministic across all four racks rather than only the forward one, which removes the transient the first issue could produce on generator changeover. The change is not interchangeable with the original standard and requires the first issue as a prerequisite because the sequencing declaration assumes latched forward contactors. It does not, however, introduce a further standard at the forward rack: the primary positions keep the module and the auxiliary contact block of the first issue and only the secondary boxes take the shallow variant, so the forward rack carries two spares states in total and not three. Maintenance, illustrated parts and the crew description of electrical distribution all require update.",
+      "embodiment_note": "Production cut-in at MSN T00203. Retrofit through the associated service bulletin, about three shifts if the first issue is already embodied and five if it is not. Kits are configured by rack so that an operator can convert the secondary boxes first."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450112131298",
+        "D2450115910023",
+        "D2450122086171",
+        "ASD216805-37",
+        "EN575431K5"
+      ],
+      "fins": [
+        "1198GX9",
+        "3102GX",
+        "35GX"
+      ],
+      "drawings": [
+        "D24501125799",
+        "D24501284380"
+      ],
+      "software": [],
+      "zones": [
+        "292",
+        "682",
+        "254"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00203"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-24-1112",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-146420",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "AMM-T-24-50-12-200-002-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-T-24-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "FCOM-T-DSC-24-50-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "latching contactor",
+      "secondary distribution box",
+      "load shed",
+      "standing load",
+      "aft rack"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149510,
+      "mod_class": "MINOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1351",
+          "CS 25.1357",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -3.1,
+      "balance_impact": "Symmetric, no measurable CG effect",
+      "electrical_load_impact_va": -240,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D2450122086171",
+        "ASD216805-37"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2450112131298",
+        "D2450115910023",
+        "EN575431K5"
+      ],
+      "fins_affected": [
+        "1198GX9",
+        "3102GX",
+        "35GX"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 142,
+      "estimated_cost_keur": 690,
+      "lead_time_weeks": 44,
+      "production_impact": "Cut-in at MSN T00203, no line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

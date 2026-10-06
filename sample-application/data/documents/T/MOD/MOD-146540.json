@@ -1,0 +1,213 @@
+[
+  {
+    "doc_id": "MOD-146540",
+    "doc_type": "MOD",
+    "title": "Redesigned Solenoid and Position Feedback for the Wing Anti-Ice Shut-Off Valves",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2021-05-13",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Ice Protection — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "30-10-12",
+      "36-20-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00166"
+        }
+      ],
+      "excluded_msns": [
+        "T00116",
+        "T00118"
+      ],
+      "engine_types": [
+        "AUR-9070",
+        "AUR-9072"
+      ],
+      "operators": [
+        "JTA",
+        "SOL",
+        "TJT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00168",
+      "production_cut_in_date": "2020-04-22",
+      "retrofit_via": [
+        "TTN-30-1021",
+        "TTN-30-1026"
+      ]
+    },
+    "dates": {
+      "created": "2017-11-06",
+      "released": "2019-09-30",
+      "revised": "2021-05-13",
+      "effective": "2021-06-21"
+    },
+    "abstract": "A new solenoid and a resolved position feedback arrangement for the wing anti-ice shut-off valves, removing the slow-to-open condition that operators in northern Europe were seeing on the first anti-ice selection of the day.",
+    "sections": {
+      "reason": "Operators based in northern Europe reported that the wing anti-ice valves were slow to open on the first selection after a cold soak, occasionally taking long enough for the crew to see a fault indication before the valve reached the open position. Sixty-two events were recorded across the fleet in four winter seasons, concentrated on aircraft that had been parked outside overnight. Investigation of eleven removed valves found no fault in the valve body: the solenoid pull-in force at minus forty degrees was marginal against the friction of a cold butterfly seal, and the position switch declared a fault before the valve completed its travel. Two operators had begun selecting anti-ice on the ground purely to avoid the indication.",
+      "description": "The valve solenoid is replaced by the higher-force item D3010110579750, which uses the same electrical interface and the same bolt circle but a longer armature and a revised return spring. The single position switch is replaced by a resolved feedback arrangement built around the sensor assembly D3010113429790 and the non-return valve body D3010119771166, so that the intermediate position is reported rather than treated as a failure to open. The mounting hardware EN906402-5B and the sealing washer AGS997812-2C are renewed. Wiring at FIN 2649WX2, FIN 273HA and FIN 2HA is re-terminated at the valve connector, and the harness support in zone 533 is moved 40 mm inboard so that the longer solenoid clears the piccolo duct flange. Work is through the leading edge access panels in zones 533, 231 and 652, and is detailed on drawing D30101189914. The bleed monitoring computer threshold that declares the valve failed is widened to match the new travel time.",
+      "effects": "Mass increase of 1.8 kg per aircraft for a full set of valves, symmetric about the centre line. Peak solenoid current rises by 90 volt-amperes per valve during the pull-in transient only, with no change to the continuous load. The new solenoid is not interchangeable with the original because the armature length changes the closed position of the butterfly. Dispatch relief for a single valve inoperative is unchanged, but the associated troubleshooting procedure changes because the intermediate position is now a reported state. Maintenance, illustrated parts, troubleshooting and the flight crew procedure for anti-ice selection all require update.",
+      "embodiment_note": "Production cut-in at MSN T00168 in April 2020. Retrofit through the modification bulletin, one shift per wing with the leading edge panels open. An inspection bulletin issued at the same time identifies aircraft whose valves are already at the marginal end of the travel measurement and should be converted first."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010110579750",
+        "D3010113429790",
+        "D3010119771166",
+        "EN906402-5B",
+        "AGS997812-2C"
+      ],
+      "fins": [
+        "2649WX2",
+        "273HA",
+        "2HA"
+      ],
+      "drawings": [
+        "D30101189914"
+      ],
+      "software": [],
+      "zones": [
+        "533",
+        "231",
+        "652"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00116",
+        "T00118",
+        "T00168"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-30-1021",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "TTN-30-1026",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-30-10-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-T-30-10-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "FCOM-T-PRO-30-10-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "wing anti-ice",
+      "shut-off valve",
+      "solenoid",
+      "position feedback",
+      "cold soak"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 146540,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1419",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 1.8,
+      "balance_impact": "Symmetric installation, no measurable CG effect",
+      "electrical_load_impact_va": 90,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3010113429790",
+        "D3010119771166"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3010110579750",
+        "EN906402-5B",
+        "AGS997812-2C"
+      ],
+      "fins_affected": [
+        "2649WX2",
+        "273HA",
+        "2HA"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 260,
+      "estimated_cost_keur": 1180,
+      "lead_time_weeks": 58,
+      "production_impact": "Cut-in at MSN T00168, no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,416 @@
+[
+  {
+    "doc_id": "ZPH-22-1145",
+    "doc_type": "SB",
+    "title": "Auto Flight — Flight Management Computer — Load of Standard L23 and Display Unit Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-11-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-11",
+      "title": "Flight Management Computing — Flight Management Computer"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z12092",
+          "to": "Z12500"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-157011"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-06-02",
+      "released": "2025-11-05",
+      "revised": null,
+      "effective": "2025-11-25"
+    },
+    "abstract": "Load of flight management standard L23 with the faster display units it requires, released against the production cut-in block to give authorisation required approach capability down to 0.1 nautical miles.",
+    "sections": {
+      "planning_reason": "Several operators fly into terrain-constrained airfields where the only published instrument approach without authorisation required capability is a circling procedure with a high minimum, and two of them recorded diversion rates above four per cent at a single airfield over a winter season. Regulators in two regions have signalled that they will withdraw the conventional procedures at the affected airfields. Aircraft that stay on the current standard will lose access to those airfields in instrument conditions.",
+      "description": "This Service Bulletin loads flight management standard L23 into both flight management computers and replaces the two display units with items whose symbol generation rate supports the containment display. The data concentrator is renewed to carry the additional label set.",
+      "accomplishment_summary": "Get access to the avionics bay in zone 151 and the flight compartment in zone 263. Record the current software part numbers from the maintenance page. Replace the display units D2280112713549 and D2280114354601 with the higher rate items and re-terminate the video harness. Renew the data concentrator D2280006212108 and confirm the label set on the maintenance page. Load standard LB3NAB376EB into both flight management computers at FIN 2854CE2 using the portable data loader, and confirm that both report the same part number. Re-configure the data concentrator at FIN 4581CC and leave the database loading rack at FIN 49CE unchanged. Do the flight management functional test including a radius-to-fix leg construction and a containment alert simulation. Insert the aircraft flight manual supplement. Record the embodiment and inform the operator that a specific operational approval is required before the capability may be used.",
+      "effectivity_note": "Applicable to Evo model ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 aircraft from MSN Z12092, the block around the production cut-in of standard L23, where the display harness is already at the higher rate build. Both flight management computers must be brought to the same standard; an aircraft must not be dispatched with one computer at L23 and the other at the previous standard.",
+      "material_note": "Kit K2280-1145-01 contains the two display units, the data concentrator and the data loader media. Lead time is twenty-two weeks and the display unit is the constraint. Removed display units are returned to Aeralis for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2280112713549",
+        "D2280114354601",
+        "D2280006212108"
+      ],
+      "fins": [
+        "2854CE2",
+        "4581CC",
+        "49CE"
+      ],
+      "drawings": [
+        "D22801149726"
+      ],
+      "software": [
+        "LB3NAB376EB"
+      ],
+      "zones": [
+        "151",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z12092"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-157011",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-Z-34-50-11-700-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight management standard",
+      "display unit",
+      "radius to fix",
+      "containment alert",
+      "operational approval"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Avionics In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-22-1145",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, and before operations into airfields where the conventional procedure is withdrawn.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "PERFORMANCE",
+      "embodied_mod": "MOD-157011",
+      "manpower": {
+        "elapsed_time_hours": 14,
+        "manhours": 22,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K2280-1145-01",
+        "kit_available_from": "2026-01-19",
+        "parts_required": [
+          {
+            "part_number": "D2280112713549",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2280114354601",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2280006212108",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2280112713549",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner",
+          "Cable ties, flame retardant"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Avionics extraction tool set",
+          "Flight management test set 98D22801-201"
+        ]
+      },
+      "weight_change_kg": 2.2,
+      "accomplishment_steps": 10,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2025-11-05",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "ZPH-22-1145",
+    "doc_type": "SB",
+    "title": "Auto Flight — Flight Management Computer — Load of Standard L23 and Display Unit Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-07",
+      "reason": "Effectivity is widened from the production cut-in block to the whole delivered population, with the multi-mode receiver installation stated as a post-modification condition.",
+      "raised_by_pawo": "PAWO-157011-02",
+      "raised_by_finding": "F02",
+      "finding_type": "EFFECTIVITY_INVALIDATION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-11",
+      "title": "Flight Management Computing — Flight Management Computer"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-155126"
+        ],
+        "pre_mod": [
+          "MOD-157011"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-06-02",
+      "released": "2025-11-05",
+      "revised": "2026-08-07",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Load of flight management standard L23 with the faster display units it requires, re-issued against the whole delivered in-service population and conditioned on the multi-mode receiver installation.",
+    "sections": {
+      "planning_reason": "Several operators fly into terrain-constrained airfields where the only published instrument approach without authorisation required capability is a circling procedure with a high minimum, and two of them recorded diversion rates above four per cent at a single airfield over a winter season. Regulators in two regions have signalled that they will withdraw the conventional procedures at the affected airfields. Aircraft that stay on the current standard will lose access to those airfields in instrument conditions.",
+      "description": "This Service Bulletin loads flight management standard L23 into both flight management computers and replaces the two display units with items whose symbol generation rate supports the containment display. The data concentrator is renewed to carry the additional label set.",
+      "accomplishment_summary": "Get access to the avionics bay in zone 151 and the flight compartment in zone 263. Record the current software part numbers from the maintenance page. Replace the display units D2280112713549 and D2280114354601 with the higher rate items and re-terminate the video harness. Renew the data concentrator D2280006212108 and confirm the label set on the maintenance page. Load standard LB3NAB376EB into both flight management computers at FIN 2854CE2 using the portable data loader, and confirm that both report the same part number. Re-configure the data concentrator at FIN 4581CC and leave the database loading rack at FIN 49CE unchanged. Do the flight management functional test including a radius-to-fix leg construction and a containment alert simulation. Insert the aircraft flight manual supplement. Record the embodiment and inform the operator that a specific operational approval is required before the capability may be used.",
+      "effectivity_note": "Applicable to Evo model ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 aircraft delivered before the production cut-in of standard L23, and conditioned on the multi-mode receiver installation, because the containment display reads its integrity from that receiver. The first issue was drawn around the production cut-in block and therefore excluded almost every aircraft the retrofit is aimed at; rather than raise a second bulletin on the same standard, the effectivity of this one has been widened and the receiver condition made explicit. Both flight management computers must be brought to the same standard; an aircraft must not be dispatched with one computer at L23 and the other at the previous standard.",
+      "material_note": "Kit K2280-1145-01 contains the two display units, the data concentrator and the data loader media. Lead time is twenty-two weeks and the display unit is the constraint, so the widened population needs to be slotted rather than ordered at once. Removed display units are returned to Aeralis for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2280112713549",
+        "D2280114354601",
+        "D2280006212108"
+      ],
+      "fins": [
+        "2854CE2",
+        "4581CC",
+        "49CE"
+      ],
+      "drawings": [
+        "D22801149726"
+      ],
+      "software": [
+        "LB3NAB376EB"
+      ],
+      "zones": [
+        "151",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z12092"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-157011",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-Z-34-50-11-700-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight management standard",
+      "display unit",
+      "effectivity extension",
+      "containment alert",
+      "operational approval"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Avionics In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-22-1145",
+      "sb_revision": "02",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, and before operations into airfields where the conventional procedure is withdrawn.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "PERFORMANCE",
+      "embodied_mod": "MOD-157011",
+      "manpower": {
+        "elapsed_time_hours": 14,
+        "manhours": 22,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K2280-1145-01",
+        "kit_available_from": "2026-01-19",
+        "parts_required": [
+          {
+            "part_number": "D2280112713549",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2280114354601",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2280006212108",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2280112713549",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner",
+          "Cable ties, flame retardant"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Avionics extraction tool set",
+          "Flight management test set 98D22801-201"
+        ]
+      },
+      "weight_change_kg": 2.2,
+      "accomplishment_steps": 10,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2025-11-05",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-08-07",
+          "reason": "Effectivity widened to the delivered in-service population and the multi-mode receiver installation added as a post-modification condition"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

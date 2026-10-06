@@ -1,0 +1,171 @@
+[
+  {
+    "doc_id": "MOD-149930",
+    "doc_type": "MOD",
+    "title": "Composite Outer Panel for the Fan Cowl Doors on the Auran Powered Fleet",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "54",
+      "ata_4d": "54-10",
+      "ata_6d": "54-10-12",
+      "title": "Nacelle Structure — Fan Cowl Doors"
+    },
+    "secondary_ata": [
+      "54-10-11",
+      "71-10-11"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-9070",
+        "AUR-9072"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-148710"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "PRODUCTION"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-07-20",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposes a composite outer panel for the fan cowl door, recovering the mass added by the stiffened hinge beam and removing the corrosion exposure at the lower door edge on coastal operations.",
+    "sections": {
+      "reason": "The stiffened hinge beam standard solved the door distortion but added nearly thirty-five kilograms per aircraft, which several operators noted at the time. Separately, corrosion at the lower door edge has become the leading finding on aircraft based on the coast, with fourteen doors repaired in three years on one operator alone. A composite outer panel addresses both: it removes the aluminium at the wet edge and recovers most of the added mass. The programme has the material qualified for other applications on this aircraft, so the development is a design and substantiation exercise rather than a materials one.",
+      "description": "The aluminium outer panel of the fan cowl door is replaced by a co-cured composite panel bonded to the existing internal structure. The stiffening spar cap D5410128007885 introduced by the current standard is retained and re-profiled, and the intercostals D5410120303178 and D5410127058517 are retained unchanged. The gusset D5410123630218 is replaced by a composite compatible item, and the interface at the hinge beam takes the titanium fitting FA448290-60 to avoid a galvanic couple. The latch keeper positions and the door outer profile are unchanged, so the door remains interchangeable on the aircraft. The bonded doubler VAL535173-83 closes the lower edge. Work would be at panel level in a composite shop rather than on the aircraft. Zones 443 and 441 are the reference access positions and the arrangement will be detailed on drawing D54101291374.",
+      "effects": "Estimated mass reduction of 26 kg per aircraft against the stiffened aluminium standard, applied symmetrically. No electrical effect. A composite door and an aluminium door are interchangeable at aircraft level but not at detail level, and the two cannot be mixed on one engine. Dispatch is unchanged. Allowable damage limits, repair schemes and the lightning protection substantiation all change completely, because a composite panel behaves nothing like the aluminium one, and the structure repair manual content for the door would be rewritten rather than amended.",
+      "embodiment_note": "Proposal only, and production cut-in is the only embodiment point being considered. Retrofit would require the operator to buy a new door rather than modify the one they have, which is unlikely to be attractive except at a scheduled door replacement.",
+      "open_points": "Pre-analysis must establish whether the composite panel can meet the lightning strike and burn-through requirements at the fire zone boundary, whether the door mass reduction changes the hinge and latch load cases enough to reopen the stiffened beam substantiation, and what happens to the published aluminium door repairs on a fleet that would carry both standards for twenty years."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5410120303178",
+        "D5410123630218",
+        "D5410127058517",
+        "D5410128007885",
+        "FA448290-60",
+        "VAL535173-83"
+      ],
+      "fins": [
+        "6600PP"
+      ],
+      "drawings": [
+        "D54101291374"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "441"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-148710",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "fan cowl door",
+      "composite panel",
+      "mass reduction",
+      "edge corrosion",
+      "lightning protection"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149930,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "WEIGHT_SAVING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.581",
+          "CS 25.603",
+          "CS 25.863",
+          "CS 25.571"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -26.0,
+      "balance_impact": "Symmetric, no meaningful CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "FA448290-60",
+        "VAL535173-83"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5410123630218",
+        "D5410128007885"
+      ],
+      "fins_affected": [
+        "6600PP"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 1450,
+      "estimated_cost_keur": 5600,
+      "lead_time_weeks": 88,
+      "production_impact": "Cut-in only, no retrofit proposed",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,199 @@
+[
+  {
+    "doc_id": "MOD-157240",
+    "doc_type": "MOD",
+    "title": "Engine Electronic Control Unit Standard 9 with Extended Fault Recording and a Revised Configuration Table",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2025-01-20",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-20",
+      "ata_6d": "73-20-11",
+      "title": "Controlling — Engine Electronic Control Unit"
+    },
+    "secondary_ata": [
+      "73-20-12",
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-1226",
+        "VDK-1232",
+        "PYR-1127G",
+        "PYR-1133G"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "Z12264",
+      "production_cut_in_date": "2025-05-28",
+      "retrofit_via": [
+        "ZPH-73-1006",
+        "ZPH-73-1010"
+      ]
+    },
+    "dates": {
+      "created": "2023-02-13",
+      "released": "2025-01-20",
+      "revised": null,
+      "effective": "2025-02-10"
+    },
+    "abstract": "Ninth build standard of the engine electronic control unit, extending fault recording from thirty seconds to eight minutes and moving the engine configuration table out of the maintenance load into protected memory.",
+    "sections": {
+      "reason": "Two thirds of engine control unit removals over the 2022 and 2023 seasons were returned to the operator as no fault found, because the thirty second fault recording window closed before the maintenance crew could capture the event. Separately, the engine configuration table lived in the maintenance load, which meant that a routine software load could silently change the engine trim if the wrong table was selected; three such events were reported in 2023, one of which produced an unexplained exhaust gas temperature margin loss that took four months to diagnose.",
+      "description": "The unit is built to standard 9. The duct D7320110360398 in the cooling path is replaced by an item with a larger inlet so that the additional recording memory stays inside its thermal limit, and the mounting bracket INN739616-21 is changed to carry the heavier unit. Anchor nuts LN953956K3 and grommets AES641639-8C are renewed at the mounting face. The unit at FIN 25EF, the tube assembly at FIN 342EF and the clamp at FIN 18EF are all affected by the revised mounting. The operational load LE2NF49598E and the configuration load LF5N800C79F are both re-issued, and the configuration table now sits in protected memory that a maintenance load cannot reach. Work is in zones 433, 412 and 483 with the fan cowl and the pylon lower fairing open.",
+      "effects": "Mass increase of 1.4 kilograms per engine. Electrical load increases by 35 volt amperes per engine. Not interchangeable: the standard 9 unit needs the larger cooling duct and the revised bracket, and an earlier unit fitted to a modified installation will overheat at high ambient temperature. Recorded fault history extends to eight minutes, which is expected to cut the no fault found return rate by half, and the configuration table can no longer be changed by a maintenance load. The unit removal task, the fault isolation procedure and the data loading instructions all require re-issue.",
+      "embodiment_note": "Production cut-in at MSN Z12264 in May 2025, with the engine build standard changed at the same point. Retrofit is by two bulletins, one for the cooling duct and bracket provision and one for the unit and the software loads, and the provision must be embodied first. Twelve hours per engine is quoted for the provision."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7320110360398",
+        "INN739616-21",
+        "LN953956K3",
+        "AES641639-8C"
+      ],
+      "fins": [
+        "25EF",
+        "342EF",
+        "18EF"
+      ],
+      "drawings": [],
+      "software": [
+        "LE2NF49598E",
+        "LF5N800C79F"
+      ],
+      "zones": [
+        "433",
+        "412",
+        "483"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z12264"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-73-1006",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "ZPH-73-1010",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-Z-73-20-11-000-041-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-Z-73-20-11-810-814",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "engine control unit",
+      "fault recording window",
+      "configuration table",
+      "protected memory",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Powerplant Systems Design"
+    },
+    "type_data": {
+      "mod_number": 157240,
+      "mod_class": "MAJOR",
+      "change_category": "SOFTWARE",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.901",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 1.4,
+      "balance_impact": "Symmetric across both engines",
+      "electrical_load_impact_va": 35,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "INN739616-21",
+        "LN953956K3"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D7320110360398",
+        "AES641639-8C"
+      ],
+      "fins_affected": [
+        "25EF",
+        "342EF",
+        "18EF"
+      ],
+      "software_affected": [
+        "LE2NF49598E",
+        "LF5N800C79F"
+      ],
+      "estimated_manhours": 780,
+      "estimated_cost_keur": 4200,
+      "lead_time_weeks": 80,
+      "production_impact": "Cut-in at MSN Z12264 with the engine build standard changed at the same point",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

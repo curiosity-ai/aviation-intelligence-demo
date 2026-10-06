@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "MOD-159775",
+    "doc_type": "MOD",
+    "title": "Windshield Assembly with Integrated Heater Termination and Improved Lower Edge Seal",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "56",
+      "ata_4d": "56-10",
+      "ata_6d": "56-10-11",
+      "title": "Flight Compartment Windows — Windshield Assembly"
+    },
+    "secondary_ata": [
+      "30-40",
+      "92-11"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-22C4",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA",
+        "HAT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-01-30",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposed windshield standard in which the heater bus bar is terminated inside the laminate instead of at an external block, together with a moulded lower edge seal, to cut the unscheduled removal rate roughly in half.",
+    "sections": {
+      "reason": "Windshields are being removed at about half their design life across several short-haul operators. Of 23 removals reported by the originating operator over three years, fourteen were for an intermittent heating fault and nine for delamination along the lower edge. Both failure modes trace back to the same place: the external heater termination sits in the wettest part of the window frame, its sealing depends on a bead that shrinks with thermal cycling, and once moisture reaches the bus bar it both corrodes the termination and starts the edge delamination. Four winter diversions were caused by a heat fault appearing in the cruise, because dispatch into known icing is not permitted with a failed channel.",
+      "description": "The heater bus bar is terminated inside the laminate and brought out through a moulded connector at the upper inboard corner, away from the frame drain path. The lower edge receives a moulded elastomeric seal instead of the applied bead. The window rib D5610114292590 is unchanged but the splice plate D5610114829453 is re-profiled to accept the deeper seal, and the spar cap D5610115011532 at the lower sill is renewed with a drain slot. Blind rivets AES757493-5D secure the retainer and the vendor splice plate ASH299154-04 closes the upper corner around the new connector. The window heat computer sensing FIN 1WX and the lower channel FIN 1981WX are re-terminated. Work is done in zones 211, 214 and 215 from inside the flight compartment; the glareshield is not disturbed. Drawings D56100044608 issue C and D56100083213 issue D carry the termination and the harness routing.",
+      "effects": "Mass increase of 1.9 kg per windshield, four windows per aircraft, symmetric, with no measurable balance effect. Electrical load is unchanged at the aircraft level but the heater current is redistributed between the two channels, which the window heat computer must be told about. The new windshield is not interchangeable with the previous item because the electrical connector differs, so an aircraft cannot fly with one of each on the same side. The dispatch position for a single failed heater channel is expected to improve. AMM, IPC and WDM content for ATA 56-10 and 92-11 will need re-issue.",
+      "open_points": "Pre-analysis must confirm whether the window heat computer accepts the redistributed channel currents without a software change, whether the existing cockpit panel harness has the spare contacts for the new connector, and whether the published side window frame repair remains valid once the sill spar cap carries a drain slot."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5610114292590",
+        "D5610114829453",
+        "D5610115011532",
+        "AES757493-5D",
+        "ASH299154-04"
+      ],
+      "fins": [
+        "1WX",
+        "1981WX"
+      ],
+      "drawings": [
+        "D56100044608",
+        "D56100083213"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "214",
+        "215"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z04005"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-Z-259144",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      }
+    ],
+    "keywords": [
+      "windshield",
+      "heater termination",
+      "edge seal",
+      "delamination",
+      "unscheduled removal"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 159775,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.773",
+          "CS 25.775",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 7.6,
+      "balance_impact": "Symmetric installation, forward of the reference datum, CG shift below 0.04 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES757493-5D",
+        "ASH299154-04"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5610114829453",
+        "D5610115011532"
+      ],
+      "fins_affected": [
+        "1WX",
+        "1981WX"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 58,
+      "estimated_cost_keur": 1120,
+      "lead_time_weeks": 64,
+      "production_impact": "No production cut-in proposed until the in-service standard is proven",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

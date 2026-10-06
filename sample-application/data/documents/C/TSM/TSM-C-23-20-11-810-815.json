@@ -1,0 +1,165 @@
+[
+  {
+    "doc_id": "TSM-C-23-20-11-810-815",
+    "doc_type": "TSM",
+    "title": "Weak Reception or Repeated Datalink Log-On Failure on One Radio Set",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-08-12",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-20",
+      "ata_6d": "23-20-11",
+      "title": "VHF Communication — VHF Transceiver"
+    },
+    "secondary_ata": [
+      "23-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-02-18",
+      "released": "2025-08-12",
+      "revised": null,
+      "effective": "2025-09-08"
+    },
+    "abstract": "Fault isolation for weak reception or repeated datalink log-on failure on one radio set, working the aerial installation and the coaxial run before the transceiver is removed.",
+    "sections": {
+      "purpose": "To isolate weak reception or repeated log-on failure on one radio set, and in particular to avoid removing a serviceable transceiver.",
+      "fault_description": "The crew reports that one set is noticeably weaker than the other, usually below ten thousand feet and usually worse in rain, and the datalink log-on on that set fails and has to be repeated. There is no indication of reception quality anywhere in the flight compartment, so the report is subjective and the maintenance system records nothing. The unconfirmed removal rate on the affected transceiver across the fleet is close to eighty per cent, which is the strongest evidence that the transceiver is not usually the cause. Work the installation before the box.",
+      "isolation_procedure": "Measure the standing wave ratio at the affected set at three frequencies across the band with the radio test set and record the values. If any value is outside the limit, the fault is in the aerial installation or the coaxial run, and the transceiver must not be removed. Measure the bonding resistance at the antenna land and record it; a high value with an acceptable standing wave ratio still degrades reception and is a finding in its own right. Inspect the sealant fillet around the antenna base for lifting and the blade for erosion. Inspect the coaxial run for chafing where it shares a bundle with another feeder, paying attention to the section aft of the wing, and measure the insertion loss over the run if the equipment is available. Compare the insertion loss with the same measurement on the serviceable set; a difference of more than three decibels is the finding. Only when the standing wave ratio, the bonding value and the insertion loss are all acceptable should the transceiver D2320118505988 be replaced. Do the antenna installation task as the confirmation task after any work at the land.",
+      "dispatch_note": "Dispatch with one radio set inoperative is permitted for three days under the minimum equipment list, provided the remaining set is serviceable and the operator does not plan into airspace requiring datalink on the affected set. Weak reception without a confirmed failure is not a dispatch item and the set must be treated as serviceable or as failed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2320118505988",
+        "D2320128501183",
+        "D2320009698337",
+        "AGS216702-16",
+        "EN561587K4"
+      ],
+      "fins": [
+        "934RN",
+        "143RN",
+        "221RN6"
+      ],
+      "drawings": [
+        "D23200008256"
+      ],
+      "software": [],
+      "zones": [
+        "261",
+        "145",
+        "271"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-23-20-11-400-029-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-23-20-11-000-029-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "weak reception",
+      "log-on failure",
+      "standing wave ratio",
+      "bonding resistance",
+      "insertion loss"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "23-20-11-810-815",
+      "fault_symptom": "Crew report of weak reception on one radio set, with repeated datalink log-on failures on the same set",
+      "fault_codes": [
+        "232011005",
+        "232011022"
+      ],
+      "warning_messages": [],
+      "affected_fins": [
+        "934RN",
+        "143RN",
+        "221RN6"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Coaxial run degraded where it shares a bundle aft of the wing",
+          "probability_pct": 33,
+          "fin": "143RN"
+        },
+        {
+          "cause": "Bonding resistance high at the antenna land",
+          "probability_pct": 26,
+          "fin": "934RN"
+        },
+        {
+          "cause": "Antenna blade eroded or sealant fillet lifted",
+          "probability_pct": 23,
+          "fin": "934RN"
+        },
+        {
+          "cause": "Transceiver receiver section degraded",
+          "probability_pct": 18,
+          "fin": "221RN6"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-C-23-20-11-400-029-A",
+      "dispatch": {
+        "mel_item": "23-20-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One set inoperative, three days, remaining set serviceable and no planned operation requiring datalink on the affected set"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

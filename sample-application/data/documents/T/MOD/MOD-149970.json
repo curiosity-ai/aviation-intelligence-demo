@@ -1,0 +1,166 @@
+[
+  {
+    "doc_id": "MOD-149970",
+    "doc_type": "MOD",
+    "title": "Engine Electronic Control Data Load Standardisation Across the Auran and Corvex Fleets",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-09-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-20",
+      "ata_6d": "73-20-11",
+      "title": "Engine Fuel Control — Electronic Control Unit"
+    },
+    "secondary_ata": [
+      "73-20-12",
+      "45-45-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-09-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Brings the engine electronic control data loads onto a common part numbering and loading procedure across both engine types, so that a line engineer no longer needs a different process depending on which engine is fitted.",
+    "sections": {
+      "reason": "The two engine types on this aircraft carry electronic control data loads that were introduced independently and use different loading procedures, different media and different confirmation steps. Operators running mixed fleets report loading errors at a rate that is entirely explained by the procedural difference: an engineer trained on one type applies the wrong confirmation step on the other and the load is rejected halfway through, leaving the unit in a state that requires a shop visit on eleven occasions in two years. Neither load is at fault. The problem is that they are loaded differently.",
+      "description": "The data load part numbering, the media format and the loading procedure are standardised across both engine types. The database load LA2R3BECA69 is re-issued in the common format and the parameter load LH2R27FA05C is re-issued to match, with the confirmation sequence made identical for both types. The unit bracket AGS860444K6 and the clamp set LN953956K3 are unchanged; only the loading connector cover is modified so that the same portable loader lead fits both types. Wiring at FIN 9EF and FIN 6EF is unchanged. The portable data loader interface used at the aircraft is untouched, but the loader configuration file must be updated before the new format is accepted. Work is at the engine electronic control unit in zones 423 and 462, with the fan cowl doors open, detailed on drawing D73201179350.",
+      "effects": "No mass change beyond the connector cover, and no electrical effect. The re-issued loads are one-way interchangeable: a common format load cannot be applied to a unit that has not had its connector cover changed, because the loader lead will not seat. Dispatch is unchanged. The operational benefit is entirely procedural, and the maintenance manual content for both engine types collapses into a single task, which is itself a significant documentation change. The loadable software list, the maintenance task and the portable loader configuration all require update.",
+      "embodiment_note": "Launched. Production cut-in is planned for both engine types simultaneously so that no aircraft leaves the line with mixed formats. Retrofit is a two hour task per engine plus the loader configuration update, which is done once per operator rather than once per aircraft.",
+      "open_points": "Pre-analysis must establish whether both engine suppliers will accept a common confirmation sequence, whether the re-issued loads can be qualified without a full engine ground run on each type, and whether an operator running a mixed fleet can be left with some aircraft in the old format during the transition without reintroducing the very error the change is meant to remove."
+    },
+    "entities": {
+      "part_numbers": [
+        "AGS860444K6",
+        "LN953956K3"
+      ],
+      "fins": [
+        "9EF",
+        "6EF"
+      ],
+      "drawings": [
+        "D73201179350"
+      ],
+      "software": [
+        "LA2R3BECA69",
+        "LH2R27FA05C"
+      ],
+      "zones": [
+        "423",
+        "462"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-148830",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "engine electronic control",
+      "data load",
+      "standardisation",
+      "loading procedure",
+      "mixed fleet"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149970,
+      "mod_class": "MINOR",
+      "change_category": "SOFTWARE",
+      "trigger": "PRODUCTION_IMPROVEMENT",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.0,
+      "balance_impact": "No mass change",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "AGS860444K6",
+        "LN953956K3"
+      ],
+      "fins_affected": [
+        "9EF",
+        "6EF"
+      ],
+      "software_affected": [
+        "LA2R3BECA69",
+        "LH2R27FA05C"
+      ],
+      "estimated_manhours": 290,
+      "estimated_cost_keur": 1050,
+      "lead_time_weeks": 44,
+      "production_impact": "Simultaneous cut-in on both engine types",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

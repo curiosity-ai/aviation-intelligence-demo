@@ -1,0 +1,187 @@
+[
+  {
+    "doc_id": "MOD-131570",
+    "doc_type": "MOD",
+    "title": "Green System Engine Driven Pump — Case Drain Filtration and Depressurisation Solenoid Rework",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-10-07",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-11",
+      "title": "Main System — Engine Driven Pump"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [
+        "S00453",
+        "S00610",
+        "S00846",
+        "S00929",
+        "S01063",
+        "S01144",
+        "S01254",
+        "S01408"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7720",
+        "CVX-6080"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "SLN-29-1018"
+      ]
+    },
+    "dates": {
+      "created": "2019-02-26",
+      "released": "2020-10-07",
+      "revised": null,
+      "effective": "2020-10-26"
+    },
+    "abstract": "Introduction of a full-flow case drain filter and a redesigned depressurisation solenoid on the green system engine driven pump, following a cluster of pump failures that contaminated the whole circuit on eight aircraft.",
+    "sections": {
+      "reason": "Eight green system engine driven pumps failed between 2018 and 2019 on aircraft belonging to two operators, in every case releasing bearing debris into the return line. Because the original case drain path has no filter, the debris reached the reservoir and from there the whole green circuit, so each event required the system to be flushed and every filter and accumulator downstream to be changed. Average recovery cost per event was 190 kEUR and one aircraft was out of service for nine days. Root cause was traced to a batch of pump bearings, but the investigation concluded that the absence of case drain filtration turned a single component failure into a system-level event.",
+      "description": "A full-flow filter with a differential pressure indicator is installed in the case drain line between the pump and the reservoir return. The non-return valve kit D2910110297925 is relocated downstream of the new filter and the obsolete forward regulator D2910119046146 is deleted from the circuit. The left-hand depressurisation solenoid BE759984-33 is replaced by a unit with a positive detent so that it cannot creep towards the depressurised position under vibration, and the right-hand actuator DU841059-74 is re-shimmed to suit. The inboard pipe FJO107150-27 is replaced by a longer run to reach the new filter position and is supported by two additional loop clamps AGS207234-50. The left-hand clamp position 9247GG is re-secured to the revised bracket. Work is done in the pylon and the main gear bay, zones 433, 443 and 721, with the engine installed. Detail is on drawings D29101105513 and D29101122994.",
+      "effects": "Mass increase of 3.4 kg per aircraft. No electrical load change. The filter installation is not interchangeable with the previous plumbing because the case drain line length changes. A new scheduled task is introduced to check the differential pressure indicator at each transit, which is a visual check requiring no access. The expected effect is to contain a pump failure to the pump itself, taking the recovery from a nine-day system flush to a same-day pump change. Dispatch under the existing green system MMEL items is unaffected.",
+      "embodiment_note": "Retrofit only, through Service Bulletin SLN-29-1018, at a scheduled A-check with the pylon fairings open. The kit contains the filter, the revised pipe and the clamp set; the solenoid is a separately ordered rotable exchange. Elapsed time is nineteen hours per aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2910110297925",
+        "D2910119046146",
+        "BE759984-33",
+        "DU841059-74",
+        "FJO107150-27",
+        "AGS207234-50"
+      ],
+      "fins": [
+        "9247GG"
+      ],
+      "drawings": [
+        "D29101105513",
+        "D29101122994"
+      ],
+      "software": [],
+      "zones": [
+        "433",
+        "443",
+        "721"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00453",
+        "S01408"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-29-1018",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "engine driven pump",
+      "case drain filter",
+      "debris contamination",
+      "depressurisation solenoid",
+      "green system"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Hydraulic Systems"
+    },
+    "type_data": {
+      "mod_number": 131570,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1435",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 3.4,
+      "balance_impact": "Symmetric; no reportable effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AGS207234-50"
+      ],
+      "parts_removed": [
+        "D2910119046146"
+      ],
+      "parts_modified": [
+        "D2910110297925",
+        "BE759984-33",
+        "DU841059-74",
+        "FJO107150-27"
+      ],
+      "fins_affected": [
+        "9247GG"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 96,
+      "estimated_cost_keur": 380,
+      "lead_time_weeks": 24,
+      "production_impact": "No cut-in; the change was released as an in-service item only",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,150 @@
+[
+  {
+    "doc_id": "IO-S-260574",
+    "doc_type": "IO",
+    "title": "Engine Start Valve Overrides and Repeated Hung Starts at High Elevation Airports",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "36-10",
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-39R1"
+      ],
+      "msns": [
+        "S00339",
+        "S01029",
+        "S01232",
+        "S01668"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "VIA",
+        "ACL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-26",
+      "released": "2026-03-16",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Operator report of hung starts and manual start valve overrides at high elevation airports, with crews unsure whether the override has latched and engineering unable to tell from the recorded data.",
+    "sections": {
+      "request": "We fly into three airports above two thousand five hundred metres and we are seeing engine starts that hang, mostly on the second engine and mostly when the auxiliary power unit is doing the work in the middle of the day. The crews follow the procedure and use the manual override, and most of the time the start completes, but they tell us they cannot tell whether the override has actually taken until the rotation picks up. Twice this year a crew has left the override selected after the start and it was only found on the turnaround. We would like a start system that either completes the start or tells the crew clearly why it has not, and an override that cannot be left in by accident. Our engineers would also like to be able to see afterwards what happened, because at the moment we are relying on the crew's memory.",
+      "background": "The current air starter installation was improved by a bulletin in 2020 that changed the duct clamping and improved the summer performance at sea level. It did nothing for the elevation cases. We have logged nineteen hung starts in fourteen months across four aircraft, all at the three airports concerned, and one aborted departure when the second engine would not light within the auxiliary power unit duty cycle.",
+      "expected_outcome": "Starts that complete inside the duty cycle at field elevations up to three thousand metres, a manual override that latches positively and annunciates when it is selected, and a recorded parameter that lets engineering reconstruct a hung start without asking the crew."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [
+        "983ES"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "421",
+        "456"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00339",
+        "S01029"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-139850",
+        "doc_type": "MOD",
+        "relation": "CREATED"
+      }
+    ],
+    "keywords": [
+      "hung start",
+      "start valve override",
+      "high elevation",
+      "apu duty cycle"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Powerplant Customer Engineering"
+    },
+    "type_data": {
+      "io_number": "IO-S-260574",
+      "raised_by": {
+        "requester_type": "OPERATOR",
+        "operator_code": "VIA",
+        "contact_role": "Fleet Technical Manager",
+        "oem_focal_department": "EAAM",
+        "oem_focal_site": "Valmont"
+      },
+      "request_category": "POWERPLANT",
+      "priority": "HIGH",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {
+        "aircraft_count": 4,
+        "msns": [
+          "S00339",
+          "S01029",
+          "S01232",
+          "S01668"
+        ],
+        "aircraft_types": [
+          "SOLANO-39"
+        ]
+      },
+      "business_justification": "Nineteen hung starts in fourteen months on four aircraft, one aborted departure, and an override whose state the crew cannot confirm; the airports concerned carry the operator's highest-yield rotations.",
+      "commercial": {
+        "funding": "SHARED",
+        "budget_keur": 890,
+        "contract_reference": "CSA-2026-VIA-0088"
+      },
+      "target_dates": {
+        "requested_response": "2026-09-15",
+        "requested_embodiment_start": "2027-02-01"
+      },
+      "created_mod": "MOD-139850",
+      "closure_note": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

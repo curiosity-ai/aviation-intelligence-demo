@@ -1,0 +1,192 @@
+[
+  {
+    "doc_id": "AMM-S-42-10-12-400-043-A",
+    "doc_type": "AMM",
+    "title": "Core Processing Module — Installation and Configuration Verification",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-07-06",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20",
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-05-22",
+      "released": "2018-01-15",
+      "revised": "2022-07-06",
+      "effective": "2022-07-25"
+    },
+    "abstract": "Installation of core processing modules into the avionics bay rack with the slot map check, the configuration verification from the maintenance terminal and, on racks with integral ducting, the cooling airflow measurement.",
+    "sections": {
+      "purpose": "This task installs core processing modules into the avionics bay rack and proves the installed configuration and, where the rack carries integral cooling ducting, the airflow at the two high-dissipation slots.",
+      "job_setup_note": "Have the slot map sheet from the removal task. Modules of different standards may be mixed only on a rack with the renewed backplane; on a delivered backplane they may not. Check the rack standard from the aircraft record before you begin, because the slot map alone will not tell you.",
+      "procedure": "1. Fit the wrist strap and connect it to the bay ground point. 2. Confirm the rack standard from the aircraft record and check it against the slot map. 3. Remove the slot blanks. 4. Take each module from its bag and check its part number and serial number against the slot map. CAUTION: A MODULE IN THE WRONG SLOT WILL RUN. THE AIRCRAFT CONFIGURATION RECORD WILL THEN BE WRONG AND NOTHING ON THE AIRCRAFT WILL SAY SO. 5. Offer the module square to the slot and push it home with the extraction tool. Do not force it; a module that will not seat has a bent contact behind it. 6. Close the front latch. 7. Repeat for every module and confirm the finished rack against the slot map. 8. Where the outboard data concentrator 7CP7 has been repositioned by a modification, install it in the slot given by the current slot map and not the one on the removal sheet. 9. Re-face the rack ground stud in zone 183 and install the strap. Measure the bonding resistance. 10. Reset the circuit breaker and remove the tag. 11. From the maintenance terminal, read the installed configuration and compare it with the slot map. 12. Where a loadable configuration table is fitted, confirm the loaded set LF6L52A03E3 by checksum. 13. On a rack with integral ducting, measure the cooling airflow at the two high-dissipation slots with the vane meter and compare it against the limits table. 14. Run the built-in test for the rack and confirm that no report is raised.",
+      "close_out": "Record the finished slot map, the bonding resistance, the configuration read from the terminal, the checksum and the airflow readings. File the slot map sheet with the aircraft record; it is the only place the physical configuration is written down."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "drawings": [
+        "D42101281090"
+      ],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-42-10-12-000-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-45-20-12-700-044-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "module installation",
+      "slot map",
+      "configuration verification",
+      "cooling airflow",
+      "checksum"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "42-10-12-400-043-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft; step 13 applies only to racks with the integral cooling ducting",
+      "manhours": 3.5,
+      "personnel": 1,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "162",
+          "166",
+          "183"
+        ],
+        "access_panels": [
+          "162BL",
+          "166BL",
+          "162AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Connect the wrist strap to the bay ground point.",
+          "Do not force a module that will not seat."
+        ],
+        "tooling": [
+          {
+            "reference": "98D42101-072",
+            "description": "Module extraction tool"
+          },
+          {
+            "reference": "98D42101-075",
+            "description": "Electrostatic discharge mat and wrist strap"
+          },
+          {
+            "reference": "98D42101-084",
+            "description": "Airflow meter, vane type"
+          },
+          {
+            "reference": "98D42101-088",
+            "description": "Bonding meter, four-wire"
+          }
+        ],
+        "consumables": [
+          "Thermal interface pad",
+          "Contact cleaner, electrical"
+        ],
+        "expendables": [
+          {
+            "part_number": "LN727699-25",
+            "qty": 24
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-S-42-10-12-000-043-A"
+      ],
+      "steps": 14,
+      "warnings": 0,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,279 @@
+[
+  {
+    "doc_id": "PAWO-146420-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Latching Contactor Modules in the Forward Primary Distribution Centre",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-11",
+      "title": "Electrical Load Distribution — Primary Distribution Centre"
+    },
+    "secondary_ata": [
+      "24-50-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-30",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the forward primary distribution centre contactor change, carried out to support the spares release of the latching module family after the second issue of the standard entered service.",
+    "sections": {
+      "objective": "Establish, ahead of the spares release for the latching contactor module family, whether any released or candidate item of technical documentation still assumes the original coil standard, and whether an operator holding a mixed rack can be supplied from a single spares catalogue entry without ambiguity.",
+      "findings_summary": "Three items were confirmed. The retrofit bulletin remains valid and its effectivity is correctly bounded against the second issue of the standard, so no change is needed there. The illustrated parts figure carries both module standards as alternates at the same item numbers, which is correct for a rack part way through conversion but produces an ordering ambiguity at the counter when the operator quotes only the aircraft serial; the spares organisation asked for the effectivity column to be reproduced on the pick list and that has been agreed. The removal task still contains a step written for the original module and it was found to be harmless: the step is skipped by effectivity on a latching rack. The second issue of the standard re-uses the same module and does not create a further spares state.",
+      "next_steps": "Publish the spares catalogue entries with the effectivity column reproduced on the pick list. No documentation change is required to the bulletin or to the removal task. Close the work order and record the ordering ambiguity in the lessons learned register for the next alternate-item figure."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450112131298",
+        "D2450115910023",
+        "EN575431K5"
+      ],
+      "fins": [
+        "1198GX9",
+        "3102GX"
+      ],
+      "drawings": [
+        "D24501125799"
+      ],
+      "software": [],
+      "zones": [
+        "292",
+        "682"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146420",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "contactor",
+      "spares release",
+      "alternate items",
+      "historical"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-146420-01",
+      "subject_mod": "MOD-146420",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-12",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-03-30",
+      "due_date": "2026-05-15",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 60,
+        "spent_manhours": 72
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "24"
+        ],
+        "ata_4d": [
+          "24-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00113"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2450112131298",
+            "D2450115910023"
+          ],
+          "fins": [
+            "1198GX9"
+          ],
+          "drawings": [
+            "D24501125799"
+          ],
+          "zones": [
+            "292"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "contactor coil obsolescence and second source qualification",
+          "latching module retained state after power interruption"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Check the retrofit bulletin effectivity against the second issue",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review the illustrated parts alternates for ordering ambiguity",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TTN-24-1105",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450112131298",
+              "D2450115910023"
+            ],
+            "shared_fins": [
+              "1198GX9"
+            ],
+            "shared_zones": [
+              "292"
+            ],
+            "shared_ata_6d": [
+              "24-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The retrofit bulletin is the vehicle by which most of the fleet reaches the latching standard and it had to be checked for a spares statement that would become wrong once both standards were catalogued.",
+          "resolution": "No change required. The effectivity statement is correctly bounded against the second issue."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-T-24-50-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450112131298",
+              "EN575431K5"
+            ],
+            "shared_fins": [
+              "3102GX"
+            ],
+            "shared_zones": [
+              "682"
+            ],
+            "shared_ata_6d": [
+              "24-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Both module standards appear as alternates at the same item numbers. That is correct for a rack part way through conversion but the pick list does not carry the effectivity column, so an order quoting only the aircraft serial is ambiguous.",
+          "resolution": "Reproduce the effectivity column on the spares pick list. Agreed with the spares organisation."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-149510",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "INFORMATIONAL",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450112131298",
+              "D2450115910023",
+              "EN575431K5"
+            ],
+            "shared_fins": [
+              "1198GX9",
+              "3102GX"
+            ],
+            "shared_zones": [
+              "292",
+              "682"
+            ],
+            "shared_ata_6d": [
+              "24-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The second issue re-uses the same module at the primary positions and adds a shallow variant for the secondary boxes. It does not create a third spares state at the forward rack.",
+          "resolution": "No action. Recorded so that the spares catalogue is not split unnecessarily."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Spares release supported with a single pick list change. No documentation change required to the bulletin or the tasks.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

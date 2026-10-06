@@ -1,0 +1,145 @@
+[
+  {
+    "doc_id": "IO-T-260355",
+    "doc_type": "IO",
+    "title": "Datalink Drops on Oceanic Sectors and Slow Uplink Recovery — Request for Router Improvement",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-70-12",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88E1",
+        "TTN-88W2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-06",
+      "released": "2026-05-14",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Emerald Coast Air reports that controller-pilot datalink sessions drop on North Atlantic crossings and take several minutes to re-establish, forcing crews back onto voice at exactly the point where the workload is highest.",
+    "sections": {
+      "request": "Our crews are losing the datalink connection over the ocean and it takes far too long to come back. The usual pattern is that the session drops somewhere past the last radar fix, the crew get a message that the connection is lost, and then nothing happens for four or five minutes even though the satellite link itself is clearly working because the cabin internet keeps running. Eventually it reconnects on its own or the crew cycle the unit from the cockpit and it comes straight back. Nobody is in danger but the crews do not trust it, and the ones who do not trust it log on to voice as soon as they leave coverage, which defeats the purpose of having the equipment. Two of our captains have written it up as a repeat defect and the maintenance organisation cannot find anything wrong with the boxes.",
+      "background": "Forty-one crew reports in eleven months across the six aircraft we operate on the North Atlantic. The units have been swapped on three aircraft with no change in behaviour. Our avionics shop has tested four removed units and all four passed. The one pattern our people did find is that it is worse on the aircraft with the later cabin connectivity installation, which suggests something about how the two share the aerial rather than a fault in the router itself.",
+      "expected_outcome": "A datalink session that survives the handover between coverage areas, or failing that a recovery that takes well under a minute and does not need the crew to cycle anything. We would also like the crew to be told what is actually happening rather than being left with a message that the connection is lost."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [
+        "5RC"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "163"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00124",
+        "T00132",
+        "T00232"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149740",
+        "doc_type": "MOD",
+        "relation": "CREATED"
+      }
+    ],
+    "keywords": [
+      "datalink",
+      "oceanic",
+      "session drop",
+      "router",
+      "crew report"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Avionics Support"
+    },
+    "type_data": {
+      "io_number": "IO-T-260355",
+      "raised_by": {
+        "requester_type": "OPERATOR",
+        "operator_code": "ECA",
+        "contact_role": "Avionics Fleet Specialist",
+        "oem_focal_department": "EGAM",
+        "oem_focal_site": "Valmont"
+      },
+      "request_category": "AVIONICS",
+      "priority": "HIGH",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {
+        "aircraft_count": 6,
+        "msns": [
+          "T00124",
+          "T00132",
+          "T00232"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ]
+      },
+      "business_justification": "Forty-one crew reports in eleven months, three no-fault-found unit removals and a growing crew practice of reverting to voice on every oceanic crossing, which removes the operational benefit the equipment was bought for.",
+      "commercial": {
+        "funding": "CUSTOMER_FUNDED",
+        "budget_keur": 620,
+        "contract_reference": "CSA-2026-ECA-0132"
+      },
+      "target_dates": {
+        "requested_response": "2026-08-14",
+        "requested_embodiment_start": "2027-02-15"
+      },
+      "created_mod": "MOD-149740",
+      "closure_note": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,357 @@
+[
+  {
+    "doc_id": "MOD-130510",
+    "doc_type": "MOD",
+    "title": "Trim Air Pressure Regulating Valve — Torque Motor Regulator in Place of the Diaphragm Unit",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-09-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-20",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01271",
+      "production_cut_in_date": "2018-08-30",
+      "retrofit_via": [
+        "SLN-21-1029"
+      ]
+    },
+    "dates": {
+      "created": "2016-06-02",
+      "released": "2017-09-19",
+      "revised": "2017-09-19",
+      "effective": "2017-10-06"
+    },
+    "abstract": "Replacement of the pneumatically referenced diaphragm regulator in the trim air pressure regulating valve by an electrically commanded torque motor unit, to stop the slow drift that leaves cabin zones out of the commanded temperature band.",
+    "sections": {
+      "reason": "Cabin temperature complaints traced to trim air were the single largest cabin-related pilot report category on the type for four consecutive years, at 1.9 reports per 1 000 flight hours. The diaphragm regulator drifts as the elastomer ages and as the reference line contaminates, and there is no closed loop back to the zone controller, so the drift is invisible until a zone is several degrees out. Shop test of returned units found 38 per cent outside the acceptance band with no fault recorded by the aircraft. A supplier obsolescence notice on the diaphragm material arrived in the same period and made a redesign unavoidable.",
+      "description": "The regulator section of the trim air pressure regulating valve is replaced by a torque motor unit with position feedback to the zone controller. Regulator D2160115682504 is superseded by the torque motor item, and the outboard trim air manifold D2160118677637 is re-worked to carry the new electrical connector boss. The right-hand trim air transmitter DED83110-55 is retained but re-calibrated, the inboard filter sub-assembly KAD437362-51 is replaced by a finer element, and the outboard duct NOD212962-03 is shortened by 40 mm to accommodate the longer valve body. The left-hand trim air switch 2431HM8 is re-wired to the new feedback pair. The zone controller reads the feedback and raises a maintenance message when the commanded and actual positions diverge by more than four degrees for longer than thirty seconds. Work is done from the aft belly fairing in zone 193 and from the cabin ceiling void in zones 241 and 242. Detail is on drawing D21601215648.",
+      "effects": "Mass increase of 2.2 kg per aircraft. Electrical load increases by 65 VA per valve, four valves per aircraft, which is inside the existing generator margin in all flight phases. The torque motor valve is not interchangeable with the diaphragm valve because the electrical interface does not exist on pre-modification aircraft. The scheduled functional check of the regulating valve at each C-check is removed and replaced by the on-condition maintenance message. Dispatch with one trim air valve inoperative remains permitted under the existing MMEL item with no change to the associated procedure.",
+      "embodiment_note": "Cut in on the production line at MSN S01271 in August 2018. Retrofit through Service Bulletin SLN-21-1029, which requires the zone controller parameter set to be re-loaded in the same visit; the SB states that the two cannot be separated. Typical embodiment is two days at an A-check."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160115682504",
+        "D2160118677637",
+        "DED83110-55",
+        "KAD437362-51",
+        "NOD212962-03"
+      ],
+      "fins": [
+        "2431HM8"
+      ],
+      "drawings": [
+        "D21601215648"
+      ],
+      "software": [],
+      "zones": [
+        "193",
+        "241",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01271"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-21-1029",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "trim air valve",
+      "torque motor",
+      "regulator drift",
+      "zone controller",
+      "cabin temperature"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Air Systems"
+    },
+    "type_data": {
+      "mod_number": 130510,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.831",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.2,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 260,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "KAD437362-51"
+      ],
+      "parts_removed": [
+        "NOD212962-03"
+      ],
+      "parts_modified": [
+        "D2160115682504",
+        "D2160118677637",
+        "DED83110-55"
+      ],
+      "fins_affected": [
+        "2431HM8"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 72,
+      "estimated_cost_keur": 410,
+      "lead_time_weeks": 28,
+      "production_impact": "Cut-in at MSN S01271; supplier dual-sourced through the transition",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-130510",
+    "doc_type": "MOD",
+    "title": "Trim Air Pressure Regulating Valve — Torque Motor Regulator in Place of the Diaphragm Unit",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-14",
+      "reason": "The dossier records the standard-dependent acceptance table convention agreed for this change as the wording to be reused wherever a feedback standard splits an acceptance test.",
+      "raised_by_pawo": "PAWO-130940-01",
+      "raised_by_finding": "F03",
+      "finding_type": "OVERLAPPING_SCOPE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-20",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01271",
+      "production_cut_in_date": "2018-08-30",
+      "retrofit_via": [
+        "SLN-21-1029"
+      ]
+    },
+    "dates": {
+      "created": "2016-06-02",
+      "released": "2017-09-19",
+      "revised": "2026-07-14",
+      "effective": "2026-08-01"
+    },
+    "abstract": "Replacement of the pneumatically referenced diaphragm regulator in the trim air pressure regulating valve by an electrically commanded torque motor unit, to stop the slow drift that leaves cabin zones out of the commanded temperature band.",
+    "sections": {
+      "reason": "Cabin temperature complaints traced to trim air were the single largest cabin-related pilot report category on the type for four consecutive years, at 1.9 reports per 1 000 flight hours. The diaphragm regulator drifts as the elastomer ages and as the reference line contaminates, and there is no closed loop back to the zone controller, so the drift is invisible until a zone is several degrees out. Shop test of returned units found 38 per cent outside the acceptance band with no fault recorded by the aircraft. A supplier obsolescence notice on the diaphragm material arrived in the same period and made a redesign unavoidable.",
+      "description": "The regulator section of the trim air pressure regulating valve is replaced by a torque motor unit with position feedback to the zone controller. Regulator D2160115682504 is superseded by the torque motor item, and the outboard trim air manifold D2160118677637 is re-worked to carry the new electrical connector boss. The right-hand trim air transmitter DED83110-55 is retained but re-calibrated, the inboard filter sub-assembly KAD437362-51 is replaced by a finer element, and the outboard duct NOD212962-03 is shortened by 40 mm to accommodate the longer valve body. The left-hand trim air switch 2431HM8 is re-wired to the new feedback pair. The zone controller reads the feedback and raises a maintenance message when the commanded and actual positions diverge by more than four degrees for longer than thirty seconds. Work is done from the aft belly fairing in zone 193 and from the cabin ceiling void in zones 241 and 242. Detail is on drawing D21601215648.",
+      "effects": "Mass increase of 2.2 kg per aircraft. Electrical load increases by 65 VA per valve, four valves per aircraft, which is inside the existing generator margin in all flight phases. The torque motor valve is not interchangeable with the diaphragm valve because the electrical interface does not exist on pre-modification aircraft. The scheduled functional check of the regulating valve at each C-check is removed and replaced by the on-condition maintenance message. Dispatch with one trim air valve inoperative remains permitted under the existing MMEL item with no change to the associated procedure. The acceptance table published for this change carries one column per regulator standard, selected on the modification rather than on an MSN break, with the pre-modification column retained until the last diaphragm valve leaves service. That form of words was agreed with the maintenance documentation office at issue and is the convention to be reused wherever a feedback or sensing standard splits an acceptance test; the wing anti-ice butterfly valve change of MOD-130940 faces the same problem and adopts it rather than inventing a second convention.",
+      "embodiment_note": "Cut in on the production line at MSN S01271 in August 2018. Retrofit through Service Bulletin SLN-21-1029, which requires the zone controller parameter set to be re-loaded in the same visit; the SB states that the two cannot be separated. Typical embodiment is two days at an A-check."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160115682504",
+        "D2160118677637",
+        "DED83110-55",
+        "KAD437362-51",
+        "NOD212962-03"
+      ],
+      "fins": [
+        "2431HM8"
+      ],
+      "drawings": [
+        "D21601215648"
+      ],
+      "software": [],
+      "zones": [
+        "193",
+        "241",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01271"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-21-1029",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-130940",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "trim air valve",
+      "torque motor",
+      "acceptance table",
+      "standard-dependent",
+      "zone controller"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Air Systems"
+    },
+    "type_data": {
+      "mod_number": 130510,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.831",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.2,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 260,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "KAD437362-51"
+      ],
+      "parts_removed": [
+        "NOD212962-03"
+      ],
+      "parts_modified": [
+        "D2160115682504",
+        "D2160118677637",
+        "DED83110-55"
+      ],
+      "fins_affected": [
+        "2431HM8"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 72,
+      "estimated_cost_keur": 410,
+      "lead_time_weeks": 28,
+      "production_impact": "Cut-in at MSN S01271; supplier dual-sourced through the transition",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,265 @@
+[
+  {
+    "doc_id": "PAWO-111277-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Second Load Path Extension to Further Loadable Units",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-12",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-11",
+      "title": "Flight Management Computing — Flight Management Computer"
+    },
+    "secondary_ata": [
+      "22-80-12",
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-03",
+      "released": "2026-05-12",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Cancelled pre-analysis of a proposal to extend the second load path to further loadable units, closed early when the operator request that drove it was superseded by a wider change on the maintenance side.",
+    "sections": {
+      "objective": "Assess a proposal to extend the second load path introduced for the navigation database to the other loadable units on the aircraft, so that any load could be started from the forward avionics bay.",
+      "findings_summary": "Two items were confirmed before the work was stopped. The first was that the second load path is wired to one target and generalising it would need a switching arrangement that nobody had scoped; the proposal as written assumed the path was a bus when it is a point-to-point connection. The second was that the load configuration reporting the operator actually wanted was not a property of the path at all, and would not follow from extending it. Three weeks into the work an internal order from a different operator raised the same underlying need in a much wider form, and a change was launched on the maintenance side that subsumes this proposal entirely. The work order was cancelled and the two findings were handed across.",
+      "next_steps": "Hand both findings to the cabin-side load interface change and close this work order. Record that the second load path is point-to-point so that the assumption is not made again."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2280117216234",
+        "D2280124326903",
+        "HES490975-50",
+        "EN462879-3E"
+      ],
+      "fins": [
+        "5CC",
+        "8488CE"
+      ],
+      "drawings": [
+        "D22801178992"
+      ],
+      "software": [
+        "LA7C64D57DF",
+        "LE1C320FA60"
+      ],
+      "zones": [
+        "263",
+        "173"
+      ],
+      "figures": [
+        "FIG-22-80-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00479"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111277",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "load path",
+      "point to point",
+      "cancelled",
+      "handover"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111277-01",
+      "subject_mod": "MOD-111277",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-12",
+      "outcome": "REJECTED",
+      "raised_date": "2026-02-03",
+      "due_date": "2026-06-05",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ETGC"
+        ],
+        "estimated_manhours": 80,
+        "spent_manhours": 74
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "22",
+          "45"
+        ],
+        "ata_4d": [
+          "22-80",
+          "45-45",
+          "45-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D2280124326903",
+            "D2280117216234"
+          ],
+          "fins": [
+            "5CC",
+            "8488CE"
+          ],
+          "drawings": [
+            "D22801178992"
+          ],
+          "zones": [
+            "173",
+            "263"
+          ],
+          "software": [
+            "LA7C64D57DF"
+          ]
+        },
+        "similarity_seeds": [
+          "starting a load from somewhere other than the flight compartment"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish whether the second path is a bus or point to point",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check what the operator actually asked for",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Scope a switching arrangement",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "BLOCKED"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-C-22-80-11-400-014-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2280117216234",
+              "D2280124326903",
+              "HES490975-50",
+              "EN462879-3E"
+            ],
+            "shared_fins": [
+              "5CC",
+              "8488CE"
+            ],
+            "shared_zones": [
+              "263",
+              "173"
+            ],
+            "shared_ata_6d": [
+              "22-80-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task describes the second load path as a route to one target, which is correct and which contradicted the assumption the proposal was built on.",
+          "resolution": "No action; the point-to-point nature was recorded and handed across."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-111296",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "No shared identifier; both are about being able to establish and act on what the aircraft is carrying, one from the loading side and one from the reporting side."
+          },
+          "rationale": "The configuration reporting the operator wanted is a property of the maintenance application rather than of the load path, so extending the path would not have delivered it.",
+          "resolution": "Finding handed to the maintenance side change that subsumed this proposal."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Work order cancelled three weeks in. The underlying need was taken up in a wider change and both findings were handed across.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

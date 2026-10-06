@@ -1,0 +1,156 @@
+[
+  {
+    "doc_id": "AMM-C-46-40-12-200-005-A",
+    "doc_type": "AMM",
+    "title": "Data Server Module — Store Integrity and Offload Check",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-03-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-40",
+      "ata_6d": "46-40-12",
+      "title": "Maintenance Information — Data Server Module"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-07-19",
+      "released": "2023-03-08",
+      "revised": null,
+      "effective": "2023-03-29"
+    },
+    "abstract": "Periodic check of the data server module store and of the condition monitoring offload path, confirming that closed records are complete and that the store is not overwriting before collection.",
+    "sections": {
+      "purpose": "This task gives the store integrity check of the data server module and verifies that recorded condition monitoring data can be offloaded and is not being overwritten before it is collected.",
+      "job_setup_note": "The aircraft must be on the ground with electrical power available and the maintenance laptop configured for the operator's ground system. The check reads the store fill level and the oldest retained record, so it must be done before any routine offload, otherwise the fill level is not representative of normal operation.",
+      "procedure": "1. WARNING: DO NOT DISCONNECT ELECTRICAL POWER WHILE A RECORD IS BEING WRITTEN OR OFFLOADED. THE OPEN RECORD WILL BE LOST. 2. Apply electrical power and wait for the maintenance system to become available. 3. Read the store fill level of the data server module D4640127537278 and record it. 4. Read the timestamp of the oldest retained record and calculate the retention achieved in days. 5. CAUTION: DO NOT CLEAR THE STORE BEFORE THE OFFLOAD HAS BEEN CONFIRMED COMPLETE. THE RECORDS CANNOT BE RECOVERED. 6. Connect the maintenance laptop at the maintenance interface unit D4640005187792 and start an offload of the closed records. 7. Confirm the record count offloaded against the record count reported on board. 8. Confirm that the condition monitoring application LC6CB8536A6 reports no gap in the record sequence. 9. Run the built-in test load LF2CDCC2FCB and record the result. 10. Confirm that the server computer 1923IU reports no thermal or memory fault. 11. Where the retention achieved is below the operator's target, record the shortfall for the reliability review. 12. Disconnect the laptop and confirm that the store returns to normal recording.",
+      "close_out": "Confirm that the offloaded records are readable in the ground system before the store is allowed to overwrite. Make sure that the rack access is closed and that the module cooling path is not obstructed. Record the store fill level, the retention achieved and the offloaded record count in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4640127537278",
+        "D4640005187792",
+        "D4210120617730"
+      ],
+      "fins": [
+        "1923IU"
+      ],
+      "drawings": [
+        "D46401233203"
+      ],
+      "software": [
+        "LC6CB8536A6",
+        "LF2CDCC2FCB"
+      ],
+      "zones": [
+        "164",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-C-46-40-12-812-802",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "data server module",
+      "store fill level",
+      "record retention",
+      "offload check",
+      "condition monitoring"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "46-40-12-200-005-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. The retention target depends on the operator's condition monitoring programme and is given on the work card.",
+      "manhours": 2.5,
+      "personnel": 1,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "164",
+          "173"
+        ],
+        "access_panels": [
+          "164CR",
+          "173CR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not disconnect power while a record is being written or offloaded.",
+          "Do not clear the store before the offload is confirmed complete.",
+          "Keep the module cooling path clear while the rack is open."
+        ],
+        "tooling": [
+          {
+            "reference": "98D46401-005",
+            "description": "Maintenance laptop with ground system client"
+          },
+          {
+            "reference": "98D46401-007",
+            "description": "Maintenance interface adapter cable"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

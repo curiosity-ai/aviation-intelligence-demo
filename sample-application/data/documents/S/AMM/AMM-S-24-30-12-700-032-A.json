@@ -1,0 +1,158 @@
+[
+  {
+    "doc_id": "AMM-S-24-30-12-700-032-A",
+    "doc_type": "AMM",
+    "title": "Battery Charge Limiter — Functional Test and Leakage Current Measurement",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-11-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-30",
+      "ata_6d": "24-30-12",
+      "title": "DC Generation — Battery Charge Limiter"
+    },
+    "secondary_ata": [
+      "24-60"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-02-19",
+      "released": "2020-11-06",
+      "revised": null,
+      "effective": "2020-11-24"
+    },
+    "abstract": "Functional test of the battery charge limiter with a measurement of the leakage current that the limiter passes when the charge cycle has finished, which is the figure the endurance calculation depends on.",
+    "sections": {
+      "purpose": "This task proves that the charge limiter follows the charge law, that it terminates the charge at the correct voltage, and that the leakage current after termination is inside the limit used in the essential network endurance calculation.",
+      "job_setup_note": "The battery must be at a stable temperature. Do not start within two hours of a flight or of a ground charge. The current clamp must be a direct current type with a resolution of one milliampere; an alternating current clamp will read zero and will pass a defective limiter. Record the ambient temperature at the start and at the end.",
+      "procedure": "1. Put the aircraft on ground power and let the battery stabilise for thirty minutes. 2. Record the battery temperature and the ambient temperature. 3. Open the access panel in zone 115 and gain access to the charge limiter. 4. Fit the direct current clamp around the limiter output lead. Do not break the connection. 5. Select the battery charge on and record the current at one-minute intervals until the charge terminates. 6. Confirm that the termination voltage is inside the band given in the limits table. 7. WARNING: DO NOT SHORT THE LIMITER OUTPUT TO STRUCTURE. THE BATTERY WILL DELIVER SEVERAL HUNDRED AMPERES INTO A SHORT. 8. Fifteen minutes after termination, record the leakage current. The reading must be below the limit in the table. 9. Where the reading is above the limit, examine the contactor 2389GX and the connector 70GX for a bridged contact, and repeat the measurement. 10. Select the battery charge off and confirm that the current falls to zero. 11. Operate the relay 360XU manually and confirm that the shed loads drop. CAUTION: DO NOT OPERATE THE SHED RELAY WITH THE AIRCRAFT ON BATTERY ONLY. THE ESSENTIAL NETWORK WILL BE LOST. 12. Restore the installation and remove the clamp.",
+      "close_out": "Record the charge curve, the termination voltage, the leakage current and both temperatures on the test sheet. Where the leakage current is above the limit, raise a defect against the charge limiter and quote this task number. Close the access panel."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2430126844974",
+        "IB898151-61"
+      ],
+      "fins": [
+        "2389GX",
+        "70GX",
+        "360XU"
+      ],
+      "drawings": [
+        "D24301249210"
+      ],
+      "software": [],
+      "zones": [
+        "115",
+        "122"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-24-30-11-400-031-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "charge limiter",
+      "leakage current",
+      "termination voltage",
+      "direct current clamp",
+      "load shed"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "24-30-12-700-032-A",
+      "task_type": "TEST",
+      "effectivity_note": "Aircraft with the extended diversion battery standard; the limit table differs for the SOLANO-39",
+      "manhours": 3.0,
+      "personnel": 1,
+      "elapsed_time_hours": 3.5,
+      "access": {
+        "zones": [
+          "115",
+          "122"
+        ],
+        "access_panels": [
+          "115CL",
+          "115BR",
+          "122AR"
+        ],
+        "doors": [
+          "Fwd cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not short the limiter output to structure.",
+          "Do not operate the shed relay on battery only."
+        ],
+        "tooling": [
+          {
+            "reference": "98D24301-152",
+            "description": "Direct current clamp, 1 mA resolution"
+          },
+          {
+            "reference": "98D24301-155",
+            "description": "Digital multimeter, calibrated"
+          }
+        ],
+        "consumables": [
+          "Test record sheet"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

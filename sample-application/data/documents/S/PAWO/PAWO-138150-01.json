@@ -1,0 +1,353 @@
+[
+  {
+    "doc_id": "PAWO-138150-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Rudder Travel Limiter and Yaw Damper Coupling Rework",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-20",
+      "ata_6d": "27-20-12",
+      "title": "Rudder — Yaw Damper Coupling"
+    },
+    "secondary_ata": [
+      "27-20-11"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30R3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7720"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-22",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the mechanical rudder travel limiter and yaw damper coupling rework, raised internally without an operator order, focused on the overlap with the flight control software work that addresses the same directional authority from the other side.",
+    "sections": {
+      "objective": "Establish whether a mechanical change to the rudder travel limiter and the yaw damper coupling can be released independently of the flight control configuration work that is re-tabulating the directional authority schedule, and identify the rigging, test and certification content that the tightened lost motion tolerance affects.",
+      "scope_note": "The search covers ATA 27-20 as the primary chapter, with ATA 27-90 flight control computing included deliberately from the start because the pedal feel complaints that drove this change have historically been closed out as computer rigging items. ATA 92-41 empennage wiring was searched and returned nothing: the harness is re-secured on the same route with the same clips. Landing gear and airframe chapters were excluded. Four-engine aircraft are outside the effectivity but were searched anyway, because the fin loading question is open.",
+      "method_note": "This candidate has an unusually small entity seed: seven part numbers, two FIN positions, one drawing and three empennage zones, all of them tightly held inside the rudder installation. Entity linking therefore returns almost nothing outside the rudder itself, which is exactly why the semantic leg carries this pre-analysis. Two of the five findings have no shared identifier at all and were surfaced purely on the description of what the change does to the commanded rudder deflection. Without the similarity leg this pre-analysis would have concluded that the change is self-contained, which it is not.",
+      "findings_summary": "Five items are confirmed and one is blocking. The blocking item is that the flight control configuration data set now in pre-analysis carries a directional authority schedule change that achieves a large part of what this mechanical change achieves. The two are not complementary: each sets a limit on commanded rudder deflection at high speed, and if both are embodied the more restrictive limit applies by accident. One of the two should be withdrawn or explicitly subordinated, and that decision belongs above both design offices. The released configuration standard is a lesser version of the same overlap and is worth recording because it shows the authority limit has been adjusted in software twice already without the mechanical side being consulted. The remaining items are the expected rigging and test consequences: the lost motion measurement task carries the tolerance the change tightens, the flight control load and test task has to run after any coupling work, and the trouble shooting content that attributes flight control faults will need to know which authority standard is installed.",
+      "next_steps": "Escalate the ownership of the directional authority limit to the flight controls chief engineer with both candidates on the table. Confirm whether the tightened lost motion tolerance can be held in service without a new special tool, because the answer decides whether the change is a line item or a shop item. Re-issue the rigging task tolerance table with the candidate standard. Establish whether flight validation can be shared with the configuration data set programme rather than run twice."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2720120349565",
+        "D2720120578855",
+        "D2720122491963",
+        "ORDE923015-91",
+        "JOR552898-79",
+        "EN461118K6"
+      ],
+      "fins": [
+        "13KS",
+        "47KS2"
+      ],
+      "drawings": [
+        "D27201227968"
+      ],
+      "software": [],
+      "zones": [
+        "351",
+        "353",
+        "394"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-138150",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "MOD-139310",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-135520",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "travel limiter",
+      "lost motion",
+      "directional authority",
+      "rigging tolerance"
+    ],
+    "originator": {
+      "department": "EYAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-138150-01",
+      "subject_mod": "MOD-138150",
+      "source_io": null,
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-01-22",
+      "due_date": "2026-05-15",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EYAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ETGC"
+        ],
+        "estimated_manhours": 85,
+        "spent_manhours": 39
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34"
+        ],
+        "ata_2d": [
+          "27",
+          "92"
+        ],
+        "ata_4d": [
+          "27-20",
+          "27-90",
+          "92-41"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "S00003",
+          "to": "S01918"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2720120349565",
+            "D2720120578855",
+            "D2720122491963",
+            "ORDE923015-91",
+            "JOR552898-79",
+            "EN461118K6"
+          ],
+          "fins": [
+            "13KS",
+            "47KS2"
+          ],
+          "drawings": [
+            "D27201227968"
+          ],
+          "zones": [
+            "351",
+            "353",
+            "394"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "limiting the commanded rudder deflection as a function of airspeed",
+          "lost motion in a control run producing inconsistent pedal feel at high speed"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search the rudder installation on ATA 27-20 by entity and by similarity",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EYAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search flight control computing for directional authority content",
+          "method": "SEMANTIC",
+          "owner": "EYAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the rigging and test consequences of the tightened tolerance",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Establish whether the tolerance can be held without a new special tool",
+          "method": "SME_INTERVIEW",
+          "owner": "ETGC",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-139310",
+          "doc_type": "MOD",
+          "finding_type": "DUPLICATE",
+          "severity": "BLOCKING",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "No shared identifier of any kind: different ATA 6D, different parts, different FINs, no common zone and no software on this candidate at all. The two were connected only by the description of what each does to the commanded rudder deflection at high speed, and only after the similarity seed was written around authority rather than around hardware."
+          },
+          "rationale": "The configuration data set candidate re-tabulates the directional authority schedule against airspeed and slat position. This candidate widens the mechanical scheduling range of the travel limiter to achieve substantially the same effect. Embodying both leaves two independent limits on the same quantity, and the aircraft will follow whichever is more restrictive at any given condition, which is not what either substantiation assumes.",
+          "resolution": "Escalate to the flight controls chief engineer. One of the two must own the authority limit and the other must be withdrawn or explicitly subordinated in its reason-for-change and applicability."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-135520",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Also found only by similarity. The released standard replaced the lateral and directional gain tables wholesale, which is the same quantity this candidate addresses mechanically, but the two documents share no identifier and almost no wording."
+          },
+          "rationale": "The released configuration standard already adjusted the yaw authority scheduling once, and the reports that drove this candidate accumulated after it was embodied. That is relevant history: the pedal feel complaints may have a software contribution that has never been separated from the mechanical one, and the candidate reason-for-change does not mention it.",
+          "resolution": "Record the released standard in the candidate reason-for-change and separate the software and mechanical contributions in the instrumented measurement before the design is frozen."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-S-27-20-12-900-022-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2720120349565",
+              "D2720120578855",
+              "D2720122491963",
+              "ORDE923015-91",
+              "JOR552898-79",
+              "EN461118K6"
+            ],
+            "shared_fins": [
+              "13KS",
+              "47KS2"
+            ],
+            "shared_zones": [
+              "351",
+              "353",
+              "394"
+            ],
+            "shared_ata_6d": [
+              "27-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The rigging task carries the lost motion tolerance that the candidate tightens, together with the shim selection table and the three-reading measurement method. Its effectivity note already anticipates a tighter tolerance for a coupling rework, but no value is written, and the task states plainly that a coupling that cannot be brought inside tolerance by shimming is a component change. With the tighter value, that boundary moves.",
+          "resolution": "Write the candidate tolerance and the revised shim selection table into the task, and confirm the measurement method still resolves the tighter value before the task is re-issued."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-S-27-90-11-700-021-A",
+          "doc_type": "AMM",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Reached by traversal from the rigging task, which names the flight control load and test task as a referenced task, rather than by any shared identifier."
+          },
+          "rationale": "The flight control system test with a full surface sweep is the only task that measures actual surface travel against the limits table, and it is therefore the only place where a mechanical authority change and a software authority change would be seen together. The candidate does not currently call it out, so an aircraft could leave a coupling rework without the surface travel ever being measured.",
+          "resolution": "Make the flight control system test a mandatory concurrent step in the candidate work content and in its retrofit bulletin, with the surface travel values recorded."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "TSM-S-27-90-11-810-807",
+          "doc_type": "TSM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Reached by traversal through the flight control load and test task; no identifier is shared with the candidate."
+          },
+          "rationale": "The procedure selects a fault attribution table by loaded configuration standard. If the mechanical authority limit changes independently of the software standard, the installed authority is no longer implied by the loaded standard, and the line station has no way to establish which combination is on the aircraft. That is a configuration control gap rather than a fault isolation gap, but it appears here first.",
+          "resolution": "Add an installed-authority statement to the aircraft configuration record and reference it from the procedure, so that the mechanical and software standards can be read together."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-133020",
+          "doc_type": "MOD",
+          "reason": "Very high similarity rank: it is also a mechanical linkage change with an overcentre or lost motion tolerance, a low temperature dependency, a re-shimmed sensor and a tolerance table, and its text reads almost as a sibling of the candidate. It is landing gear on the four-engine VANTOR-68 only, has no SOLANO effectivity, and shares no part number, FIN, drawing or zone with the candidate."
+        },
+        {
+          "doc_id": "SLN-32-1027",
+          "doc_type": "SB",
+          "reason": "The retrofit vehicle for the four-engine lock link rework. Its accomplishment text about setting a mechanical geometry, re-shimming a sensor and recording an angle at each cycle ranks it in the top five, but it is applicable to VTR-68R2 aircraft only and shares no identifier with the candidate."
+        }
+      ],
+      "conclusion": "Not yet issued. The overlap with the configuration data set candidate is a scope question rather than a technical one and must be settled before the design is frozen; the manual consequences are contained.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

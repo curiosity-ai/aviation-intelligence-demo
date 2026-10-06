@@ -1,0 +1,284 @@
+[
+  {
+    "doc_id": "PAWO-150422-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Hardened Seat and Anti-Rotation Feature for the Trim Air Zone Valve",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-09-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2024-05-14",
+      "released": "2024-09-18",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the hardened trim air valve seat standard opened for a spares release, covering the retrofit bulletin still in the field, the maintenance content that depends on the coarse filter and the acoustic work in the same ceiling void.",
+    "sections": {
+      "objective": "The modification was released in 2016 and the pre-analysis was re-opened eight years later when the spares organisation asked for the hardened seat to be made available as a standalone service item rather than only through the retrofit bulletin. The question put to pre-analysis was narrow: what else in the published set assumes that the hardened seat arrives together with the coarse filter and the revised cover screw torque, and would break if an operator fitted the seat alone.",
+      "findings_summary": "Three items were confirmed and the answer to the question was no, the seat cannot sensibly be released alone. The retrofit bulletin ships the seat, the coarse filter and the screw set as one kit and its accomplishment instructions set the cover torque for the stiffer carrier; releasing the seat as a service item without that torque figure would leave a mechanic with the old value and a distorted flange. The removal task in the maintenance manual calls the filter up as an expendable at a quantity that assumes the kit, and it would have to be re-issued. The third finding is not a conflict at all: the air cycle machine silencer work released for the same ceiling void was surfaced by the similarity search on the strength of the wording alone, shares nothing with this modification, and was retained in the record only because a reviewer would otherwise ask why it was not listed.",
+      "next_steps": "Release the hardened seat as a kit rather than as a bare item, keeping the filter and the screw set with it. Ask technical publications to restate the cover torque in the removal task so that it is available outside the bulletin. Close the analysis; no further design work is required."
+    },
+    "entities": {
+      "part_numbers": [
+        "ASH878362-87",
+        "KAD437362-51",
+        "AES731670-69"
+      ],
+      "fins": [
+        "726HQ",
+        "980HQ"
+      ],
+      "drawings": [
+        "D21601117401"
+      ],
+      "software": [],
+      "zones": [
+        "254",
+        "291"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-150422",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "trim air valve",
+      "spares release",
+      "kit content",
+      "cover torque"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-150422-01",
+      "subject_mod": "MOD-150422",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2024-09-18",
+      "outcome": "REJECTED",
+      "raised_date": "2024-05-14",
+      "due_date": "2024-09-06",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 45,
+        "spent_manhours": 38
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "21"
+        ],
+        "ata_4d": [
+          "21-60",
+          "21-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "ASH878362-87",
+            "KAD437362-51"
+          ],
+          "fins": [
+            "726HQ",
+            "980HQ"
+          ],
+          "drawings": [
+            "D21601117401"
+          ],
+          "zones": [
+            "254"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "hardened valve seat carrier released as a spares item",
+          "ceiling void work in the cabin distribution run"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish what the retrofit bulletin kit content implies for a bare seat release",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search maintenance content that assumes the coarse filter arrives with the seat",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Screen similarity hits in the same ceiling void",
+          "method": "SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-21-1206",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ASH878362-87"
+            ],
+            "shared_fins": [
+              "726HQ"
+            ],
+            "shared_zones": [
+              "254"
+            ],
+            "shared_ata_6d": [
+              "21-60-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin ships the seat, the filter and the screw set as one kit and sets the cover torque for the stiffer carrier. A bare seat release would leave the revised torque figure available only inside the bulletin.",
+          "resolution": "Release the seat as a kit and restate the cover torque outside the bulletin."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-Z-21-60-11-000-023-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "KAD437362-51"
+            ],
+            "shared_fins": [
+              "980HQ"
+            ],
+            "shared_zones": [
+              "291"
+            ],
+            "shared_ata_6d": [
+              "21-60-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task calls the coarse filter up as an expendable at a quantity that assumes the kit is present. A bare seat release makes that quantity wrong.",
+          "resolution": "Re-issue the removal task expendable list if the bare seat release proceeds."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-152860",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by wording about the cabin ceiling void and about a bearing assembly change. Shares no identifier with the trim air work and was retained only so that a reviewer can see it was considered."
+          },
+          "rationale": "The air cycle machine work occupies the same ceiling void but is on a different chapter and shares no part, no FIN and no drawing with the valve seat standard.",
+          "resolution": "No action. Recorded so that the search result is traceable."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-21-1194",
+          "doc_type": "SB",
+          "reason": "Same chapter and almost the same wording about a silencer and bearing assembly change, but it embodies a different modification on the air cycle machine and shares no part number, no FIN and no zone with the trim air valve work."
+        }
+      ],
+      "conclusion": "Closed with a negative recommendation on the question asked. The hardened seat cannot be released as a bare service item without moving the cover torque and the filter quantity out of the bulletin, and the spares organisation accepted the kit as the answer instead.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

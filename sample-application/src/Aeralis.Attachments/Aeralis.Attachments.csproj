@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- A library first — the connector calls it — with a small front-end for looking at what
+         a document renders to without running an ingest. -->
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Aeralis.Attachments</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Reading a rendered PDF back apart — glyph positions, vector paths, images —
+         and writing the searchable scan back out. -->
+    <PackageReference Include="PdfPig" Version="0.1.15" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="4.148.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The dataset read model, the illustration renderer and the S1000D
+         presentation layer. This project is the join between the three. -->
+    <ProjectReference Include="..\Aeralis.Dataset\Aeralis.Dataset.csproj" />
+    <ProjectReference Include="..\Aeralis.Illustrations\Aeralis.Illustrations.csproj" />
+    <ProjectReference Include="..\Aeralis.Presentation\Aeralis.Presentation.csproj" />
+  </ItemGroup>
+
+</Project>

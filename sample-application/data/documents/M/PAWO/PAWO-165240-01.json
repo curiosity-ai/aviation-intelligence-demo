@@ -1,0 +1,354 @@
+[
+  {
+    "doc_id": "PAWO-165240-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Central Maintenance Computer Rack and Flight Deck Display Replacement",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-09-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45",
+      "42-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-164788"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-08-25",
+      "released": "2022-09-27",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the central maintenance computer rack and flight deck display replacement, an obsolescence-driven change with a hard prerequisite on the initial display standard and a large avionics bay access overlap.",
+    "sections": {
+      "objective": "Determine what the rack and display replacement requires to be already embodied, what it invalidates, and how much of the avionics bay work can be shared with other changes queued for the same access. The display supplier had issued a last-time-buy notice, so the timescale was fixed; the value of the order was in preventing a second avionics bay visit rather than in questioning the change itself.",
+      "findings_summary": "Five items were confirmed and two are blocking. The rack replacement assumes the initial flight deck display standard is already installed, because the new display harness terminates on connectors that only exist post that change. Aircraft below the production cut-in still carry the original standard, so the change is conditional rather than universal, and that had not been stated. The bulletin that installs the original standard therefore becomes a prerequisite step rather than an alternative, and its effectivity wording said otherwise. Below that: the removal task carries both display part numbers under one effectivity and needed splitting; the software management module change occupies the same avionics bay zone and shares the loading path; and a warning computer fault isolation reaches the same rack through the floor access in the forward cabin.",
+      "next_steps": "State the post-modification condition on the initial display standard explicitly in the applicability rather than leaving it implied by the harness. Re-issue the earlier bulletin wording as a prerequisite. Split the removal task effectivity by display standard, with a separate disconnection sequence for each. Coordinate an avionics bay embodiment window with the software management module change so the bay is opened once and the loading path validated once. Correct the connector identifiers quoted by the maintenance message fault isolation in the same documentation package."
+    },
+    "entities": {
+      "part_numbers": [
+        "KEDE588674-53",
+        "D4520115601387",
+        "KAD366597-92"
+      ],
+      "fins": [
+        "72TN",
+        "169TN8",
+        "6796TN8"
+      ],
+      "drawings": [
+        "D45201289920"
+      ],
+      "software": [],
+      "zones": [
+        "241",
+        "116"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-165240",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "central maintenance computer",
+      "display replacement",
+      "obsolescence",
+      "avionics bay access"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-165240-01",
+      "subject_mod": "MOD-165240",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2022-09-27",
+      "outcome": "VALIDATED",
+      "raised_date": "2021-08-25",
+      "due_date": "2022-10-14",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "EGAM"
+        ],
+        "estimated_manhours": 175,
+        "spent_manhours": 232
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46",
+          "MERIDIAN-42F"
+        ],
+        "ata_2d": [
+          "45",
+          "42",
+          "31"
+        ],
+        "ata_4d": [
+          "45-20",
+          "45-45",
+          "42-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00470"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "KEDE588674-53",
+            "D4520115601387",
+            "KAD366597-92"
+          ],
+          "fins": [
+            "72TN",
+            "169TN8",
+            "6796TN8"
+          ],
+          "drawings": [
+            "D45201289920"
+          ],
+          "zones": [
+            "241",
+            "116"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "last time buy on a flight deck display unit",
+          "avionics bay access shared between two unrelated retrofits"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Traverse the display standard supersession chain on ATA 45-20-11",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish the harness connector prerequisite",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Identify other work queued for the same avionics bay window",
+          "method": "SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Review forward cabin floor access overlap",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-164788",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4520115601387"
+            ],
+            "shared_fins": [
+              "72TN"
+            ],
+            "shared_zones": [
+              "241"
+            ],
+            "shared_ata_6d": [
+              "45-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The new display harness terminates on connectors introduced by the initial flight deck standard. Aircraft below the production cut-in do not have them, so the rack replacement cannot be embodied on those aircraft without the earlier change first. The applicability as drafted did not say so.",
+          "resolution": "Add the earlier standard as a post-modification applicability condition and state it in the bulletin."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-45-1015",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4520115601387"
+            ],
+            "shared_fins": [
+              "72TN"
+            ],
+            "shared_zones": [
+              "241"
+            ],
+            "shared_ata_6d": [
+              "45-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin that installs the initial standard is worded as an optional improvement. With the rack replacement it becomes a prerequisite step, and an operator reading the current wording would reasonably decide to skip it and then find the rack change unembodiable.",
+          "resolution": "Re-issue the bulletin describing it as a prerequisite to the rack replacement, with a pointer to the new bulletin."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-45-20-11-000-021-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4520115601387",
+              "KEDE588674-53"
+            ],
+            "shared_fins": [
+              "72TN",
+              "169TN8"
+            ],
+            "shared_zones": [
+              "241",
+              "116"
+            ],
+            "shared_ata_6d": [
+              "45-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task covers both display part numbers under a single effectivity statement and a single disconnection sequence. The connector count and the discharge wait differ between them, so a technician following it on the wrong standard risks the unit.",
+          "resolution": "Split the task effectivity by display standard and give each its own disconnection sequence."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-164355",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "116"
+            ],
+            "shared_ata_6d": [
+              "45-45"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The software management module sits in the same avionics bay zone and shares the loading path that the rack change re-terminates. Two separate bay visits would be paid for work that fits in one window, and the loading path has to be re-validated after either change.",
+          "resolution": "Coordinate a single avionics bay embodiment window and one combined loading path validation."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "TSM-M-31-50-11-812-801",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "241"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The fault isolation for maintenance messages the system does not reproduce reaches the rack through the forward cabin floor access and quotes the pre-modification connector identifiers throughout.",
+          "resolution": "Update the connector identifiers and the access instruction in the same documentation package."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-161330",
+          "doc_type": "MOD",
+          "reason": "Shares zone 241 and comes back on any zone-driven search of the forward cabin floor, but it is a corrosion-driven seat track substructure change with no avionics content, no shared part number and no shared functional item."
+        }
+      ],
+      "conclusion": "Closed. The prerequisite on the initial display standard was the significant finding and changed the applicability model of the change before release.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

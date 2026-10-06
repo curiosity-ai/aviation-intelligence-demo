@@ -1,0 +1,197 @@
+[
+  {
+    "doc_id": "AMM-Z-44-30-11-400-018-A",
+    "doc_type": "AMM",
+    "title": "Installation of the Onboard Connectivity Server and Ceiling Wireless Access Points",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-30",
+      "ata_6d": "44-30-11",
+      "title": "External Communication — Onboard Connectivity Server"
+    },
+    "secondary_ata": [
+      "24-30",
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-09-15",
+      "released": "2026-02-04",
+      "revised": null,
+      "effective": "2026-02-25"
+    },
+    "abstract": "Installation of the onboard connectivity server in the ceiling void and of the four cabin wireless access points, including the power take-off from the transformer rectifier unit harness and the coverage survey.",
+    "sections": {
+      "purpose": "This task installs the onboard connectivity server and the four ceiling wireless access points, connects them to the aircraft power and data, and verifies coverage across the cabin by a signal survey.",
+      "job_setup_note": "Confirm the available direct current margin before you connect the server, because the acquisition load is appreciably higher than the cruise load and several aircraft are close to the rating of the rectifier units. The ceiling void is shared with the air distribution ducting; keep the stated clearance from any duct. Electrical power must be off while the harness is re-terminated at the contactor.",
+      "procedure": "1. Remove electrical power and put the warning notices in the flight compartment. WARNING: THE TRANSFORMER RECTIFIER UNIT OUTPUT REMAINS LIVE UNTIL THE BATTERY IS ISOLATED. CONFIRM THE BUS IS DEAD BEFORE YOU TOUCH THE TERMINAL. 2. Lower the ceiling panels in zones 291 and 294 and get access to the ceiling void. 3. Install the stowage assembly D4430002603184 as the server rack at the fitting of FIN 40RM3. 4. Route the power harness to the transformer rectifier unit harness D2430112027785 and re-terminate it at the contactor of FIN 7GX. CAUTION: KEEP AT LEAST 50 MILLIMETRES CLEARANCE FROM THE AIR DISTRIBUTION DUCT. CONTACT WILL CHAFE THE HARNESS WITHIN ONE CHECK INTERVAL. 5. Install the four access points in the partition kit D4430121624211 and the monument fittings D4430125051276. 6. Fit the vendor decor panel JAR899476-98 at each ceiling aperture. 7. Connect the crew control at the cabin attendant panel trim of FIN 313RM. 8. Restore power and load the connectivity server with the operational load LG9NEA81802 and the navigation database LE8N1773245. 9. Configure the announcement interface through the cabin intercommunication director at FIN 3RK using the database LG9N7BD4A16. 10. Measure the direct current load in the acquisition case and record it. 11. Do the coverage survey at nine cabin positions and confirm the signal level at each.",
+      "close_out": "Restore the ceiling panels and confirm the diffuser and decor panel alignment. Record the software part numbers, the measured acquisition load and the nine coverage readings against the aircraft. Report any coverage reading below the limit before the system is released to the cabin crew."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4430002603184",
+        "D4430121624211",
+        "D4430125051276",
+        "JAR899476-98",
+        "D2430112027785"
+      ],
+      "fins": [
+        "40RM3",
+        "3RK",
+        "7GX",
+        "313RM"
+      ],
+      "drawings": [
+        "D44301167656",
+        "D44301273500"
+      ],
+      "software": [
+        "LG9NEA81802",
+        "LE8N1773245",
+        "LG9N7BD4A16"
+      ],
+      "zones": [
+        "291",
+        "294",
+        "274"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-158813",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-Z-24-30-11-000-019-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "connectivity server",
+      "wireless access point",
+      "ceiling void",
+      "acquisition load",
+      "coverage survey"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "44-30-11-400-018-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "Evo model aircraft with the connectivity provision",
+      "manhours": 40.0,
+      "personnel": 3,
+      "elapsed_time_hours": 18.0,
+      "access": {
+        "zones": [
+          "291",
+          "294",
+          "274"
+        ],
+        "access_panels": [
+          "291AR",
+          "294CL",
+          "274AR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Confirm the direct current bus is dead before you touch the terminal.",
+          "Keep the stated clearance from the air distribution duct.",
+          "Support the ceiling panels while they are lowered.",
+          "Do not energise the server before the harness termination is inspected."
+        ],
+        "tooling": [
+          {
+            "reference": "98D44301-102",
+            "description": "Ceiling void access platform"
+          },
+          {
+            "reference": "98D44301-115",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D44301-127",
+            "description": "Wireless coverage survey set"
+          },
+          {
+            "reference": "98D44301-134",
+            "description": "Clamp meter, direct current"
+          }
+        ],
+        "consumables": [
+          "Cable ties, flame retardant",
+          "Contact cleaner",
+          "Heat shrink sleeving"
+        ],
+        "expendables": [
+          {
+            "part_number": "JAR899476-98",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-Z-24-30-11-000-019-A",
+        "AMM-Z-33-20-11-400-017-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

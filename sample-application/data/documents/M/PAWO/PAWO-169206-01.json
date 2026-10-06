@@ -1,0 +1,402 @@
+[
+  {
+    "doc_id": "PAWO-169206-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Auxiliary Power Unit Load Acceptance Schedule Revision",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-9700"
+      ],
+      "operators": [
+        "KLE"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-21",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the auxiliary power unit load acceptance revision, covering the mount standard it depends on, the surge margin it consumes, the test and troubleshooting content it invalidates and the crew expectation it changes.",
+    "sections": {
+      "objective": "Establish what the revised load acceptance schedule depends on, what it consumes, and which in-service content becomes wrong when the stabilisation period is replaced by a measured margin release, before the certification route is chosen.",
+      "scope_note": "The search covers ATA 49-60 as the primary chapter, ATA 49-50 because the surge control valve is changed with the schedule, and ATA 36-10 because the bleed duct between the load compressor and the pack valves carries the load that is being released earlier. ATA 55-30 appeared through the zone seed and was kept, because the compartment work shares access with fin structure repairs. Cabin, avionics and landing gear chapters were excluded after the first pass.",
+      "method_note": "Entity linking was seeded from the three part numbers, the two functional item numbers, the drawing and the two zones, which returned the mount family, the test task and the troubleshooting entry directly, and a fin box repair scheme that shares only the compartment access zone. Similarity was run over the operator complaint text rather than over the engineering description, on the argument that the useful comparison is with other changes that made an aeroplane usable at a station rather than with other bleed hardware. That is what returned the engine start crew procedure, which shares nothing at all with the candidate.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the mount reinforcement standard: the revised schedule raises compartment temperature during the acceptance phase, and the heat shield qualification that the temperature is judged against only exists in the post-reinforcement standard, so the candidate cannot be offered to an aircraft that has not embodied it. The test task is the next most serious: its pass criterion is a fixed time against a table, and a measured margin release makes that criterion meaningless without a new one. The troubleshooting procedure has the same problem in reverse, because its first productive step is to compare the reported delay against the table and close the report if it is inside. The fin box repair scheme was returned by the zone seed alone and turns out to matter: both need the same compartment access and the operator would not accept two separate downtimes. The retrofit bulletin for the mount work carries a compartment temperature statement that the candidate makes untrue, and the parts figure needs the valve nozzle split by effectivity. Finally the crew procedure for engine start describes waiting for the pack transfer without saying how long, which is the behaviour the candidate changes, and it was found by similarity alone.",
+      "next_steps": "Obtain the measured surge margin at the certified altitude limit before the certification route is chosen. Ask the powerplant test owner for a pass criterion that works against a measured release. Agree a single compartment access window with the structures repair owner. Send the crew procedure change to flight operations for comment."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4950123850952",
+        "D4950121625398",
+        "AES689669-90"
+      ],
+      "fins": [
+        "5PB",
+        "244PB3"
+      ],
+      "drawings": [
+        "D49601217089"
+      ],
+      "software": [
+        "LD7PCEB6F22"
+      ],
+      "zones": [
+        "394",
+        "323"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-169206",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-M-260548",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "load acceptance",
+      "surge margin",
+      "compartment temperature",
+      "field elevation"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Port-Rivage",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-169206-01",
+      "subject_mod": "MOD-169206",
+      "source_io": "IO-M-260548",
+      "pawo_status": "RAISED",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-21",
+      "due_date": "2026-08-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Port-Rivage",
+        "contributing_departments": [
+          "EDSA",
+          "EGAM"
+        ],
+        "estimated_manhours": 180,
+        "spent_manhours": 34
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "49",
+          "36",
+          "55"
+        ],
+        "ata_4d": [
+          "49-60",
+          "49-50",
+          "49-10",
+          "36-10",
+          "55-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "SRM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "M00028",
+          "to": "M00475"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4950123850952",
+            "D4950121625398"
+          ],
+          "fins": [
+            "5PB",
+            "244PB3"
+          ],
+          "drawings": [
+            "D49601217089"
+          ],
+          "zones": [
+            "394",
+            "323"
+          ],
+          "software": [
+            "LD7PCEB6F22"
+          ]
+        },
+        "similarity_seeds": [
+          "a station where the aeroplane cannot be turned round in the scheduled time",
+          "a protective delay the crew reads as a fault because nothing tells them it is deliberate"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search the auxiliary power unit family on the entity seeds",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search for comparable turnaround-driven changes on other chapters",
+          "method": "SEMANTIC",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Measure the surge margin at the certified altitude limit",
+          "method": "SME_INTERVIEW",
+          "owner": "EAAM",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T04",
+          "title": "Agree the compartment access window with structures repair",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-168086",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "244PB3"
+            ],
+            "shared_zones": [
+              "394"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The revised schedule raises the compartment temperature during the acceptance phase. The heat shield qualification that the higher temperature is judged against exists only in the reinforced mount standard, so an aircraft without that standard has no substantiation for the condition the candidate creates.",
+          "resolution": "Declare the reinforced mount standard as a post-modification applicability condition and exclude aircraft that have not embodied it."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SRM-M-55-30-11-004",
+          "doc_type": "SRM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "323"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The fin box lightning strike repair works in the same lower vertical stabiliser zone and needs the same access platform and the same compartment opening. The operator has both scheduled at the next base visit and will not accept two separate downtimes for work in one zone.",
+          "resolution": "Agree a single access window with the structures repair owner and offer the two together at the base visit."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-49-60-11-700-042-A",
+          "doc_type": "AMM",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4950123850952"
+            ],
+            "shared_fins": [
+              "5PB",
+              "244PB3"
+            ],
+            "shared_zones": [
+              "394"
+            ],
+            "shared_ata_6d": [
+              "49-60-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The load acceptance test compares a measured time against a table indexed by field elevation and ambient temperature. With the schedule released on a measured margin, the tabulated time is no longer the criterion and the test cannot pass or fail an aircraft. The task is also tied to the control box software standard, which the candidate replaces.",
+          "resolution": "Define a new pass criterion against the measured margin and reissue the task with the software standard it applies to."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-M-49-60-11-810-811",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4950121625398",
+              "D4950123850952"
+            ],
+            "shared_fins": [
+              "5PB",
+              "244PB3"
+            ],
+            "shared_zones": [
+              "394",
+              "323"
+            ],
+            "shared_ata_6d": [
+              "49-60-11"
+            ],
+            "similarity_note": "Both documents are about the same delay between availability and load acceptance, one explaining it as normal and the other removing it."
+          },
+          "rationale": "The first productive step of the isolation procedure is to compare the reported delay against the tabulated limit and close the report if it is inside. On a modified aircraft that comparison is against a limit that no longer applies, and a genuine fault would be closed as normal behaviour.",
+          "resolution": "Rewrite the first three steps against the measured margin release and reissue with the modification."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "FCOM-M-PRO-80-10-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew entry describes the bleed supply for engine start and the effect of a low supply pressure on the motoring phase, in crew vocabulary. The candidate describes releasing the air load earlier. Neither document contains an identifier that appears in the other."
+          },
+          "rationale": "Engine start relies on the bleed supply that the candidate releases on a different schedule. If acceptance is earlier and the margin is thinner, the supply pressure during a start at a high elevation station changes, which is described to the crew only in the start entry.",
+          "resolution": "Ask flight operations whether the start entry needs a note for high elevation stations once the release schedule is fixed."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MRD-49-1017",
+          "doc_type": "SB",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "244PB3"
+            ],
+            "shared_zones": [
+              "394"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The mount reinforcement bulletin states the compartment temperature envelope that the stiffened shield was cleared against, and requires a twenty minute ground run and a hot clearance check to confirm it. The candidate raises the compartment temperature in a phase that run does not cover.",
+          "resolution": "Extend the hot clearance check to cover the acceptance phase, or re-state the envelope in the bulletin once the compartment temperature is measured."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "IPC-M-49-10-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "244PB3"
+            ],
+            "shared_zones": [
+              "394"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The figure shows the mount assembly with the shield and link standards split by effectivity but has no entry for the surge control valve nozzle, which the candidate changes in the same compartment. An engineer ordering parts for the compartment would find one change and not the other.",
+          "resolution": "Add the valve nozzle to the figure with its effectivity, and issue the figure change with the modification rather than after it."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "TSM-M-79-30-11-810-813",
+          "doc_type": "TSM",
+          "reason": "Surfaces on similarity because it is also a procedure about an indication that appears normal in every measurable respect, and both texts spend their length telling the engineer not to change a component. It is engine oil, shares no identifier and no zone with the candidate and is unaffected by the schedule change."
+        },
+        {
+          "doc_id": "MOD-168226",
+          "doc_type": "MOD",
+          "reason": "Close on wording — a start behaviour that varies with ambient conditions and a customer complaint about time at the stand — but it is a fuel metering nozzle on the engine, with no shared part number, no shared zone and no auxiliary power unit content."
+        }
+      ],
+      "conclusion": "Not yet issued. The surge margin measurement decides whether the change is feasible at all, and the mount prerequisite decides who can be offered it.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

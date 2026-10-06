@@ -1,0 +1,173 @@
+[
+  {
+    "doc_id": "MOD-144880",
+    "doc_type": "MOD",
+    "title": "Inertial Reference Unit Replacement on Withdrawal of the Gyro Supply",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-06-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-20",
+      "ata_6d": "34-20-11",
+      "title": "Attitude and Direction — Inertial Reference Unit"
+    },
+    "secondary_ata": [
+      "31-60",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "TTN-34-1029"
+      ]
+    },
+    "dates": {
+      "created": "2020-01-21",
+      "released": "2021-06-08",
+      "revised": null,
+      "effective": "2021-07-02"
+    },
+    "abstract": "Replacement of the inertial reference units by a current-production equivalent after the ring laser gyro used in the original design ceased to be manufactured, with a new interface card to preserve the existing bus behaviour.",
+    "sections": {
+      "reason": "The gyro block used in the original inertial reference unit went out of production in 2019 following the closure of the optical coating line that produced its mirrors. Repair capability was retained only for units returned with a serviceable block, which meant that the repairable population would shrink to nothing by about 2028. Fleet removal rates of 1.7 per thousand flight hours across three units per aircraft made that date credible, and no alternative source for the block existed.",
+      "description": "The unit is replaced by a current-production equivalent using a different gyro technology in the same chassis envelope, with the same connector arrangement and the same mounting tray. The internal circuit card D3420114778684 is a new item carrying the interface logic that keeps the output bus label set and timing identical to the original, so that no other system sees a change. The obsolete control panel sub-assembly D3420118594107 is deleted and the alignment control moves onto the existing display page; the interface unit kit GIR577736-25 and the display unit sub-assembly XAD347757-62 are retained. Rivets EN160138K8 secure the revised card carrier. Units are installed in the avionics bay, zones 164 and 192, with the panel and display interfaces in zones 241, 253 and 272. FIN 2326FE carries the new card, and FINs 2TR3, 708TR, 8DA and 285TR are all disturbed for access. Revised detail is on drawing D34201126638.",
+      "effects": "Mass reduction of 9 kg per aircraft over three units. Electrical load falls by 420 VA and the alignment time at the gate is reduced by roughly ninety seconds, which is the change operators notice. The unit is interchangeable with the original at aircraft level and a mixed installation of two standards is permitted, since each unit is independent. No despatch change. Fault isolation content must be re-issued because the built-in test message set is different, and the alignment procedure changes with the loss of the dedicated control panel.",
+      "embodiment_note": "Retrofit only; no production cut-in was proposed because the affected aircraft were largely delivered. Embodiment is a line task of about five hours per aircraft, covered by a service bulletin, and units are also introduced through attrition as originals become unrepairable."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3420114778684",
+        "D3420118594107",
+        "GIR577736-25",
+        "XAD347757-62",
+        "EN160138K8"
+      ],
+      "fins": [
+        "2326FE",
+        "2TR3",
+        "708TR",
+        "8DA",
+        "285TR"
+      ],
+      "drawings": [
+        "D34201126638"
+      ],
+      "software": [],
+      "zones": [
+        "164",
+        "192",
+        "241",
+        "253",
+        "272"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TTN-34-1029",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "inertial reference unit",
+      "ring laser gyro",
+      "obsolescence",
+      "alignment time",
+      "avionics bay"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 144880,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": -9.0,
+      "balance_impact": "Forward avionics bay, CG shift below 0.03 % MAC",
+      "electrical_load_impact_va": -420,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "D3420114778684",
+        "EN160138K8"
+      ],
+      "parts_removed": [
+        "D3420118594107"
+      ],
+      "parts_modified": [],
+      "fins_affected": [
+        "2326FE",
+        "2TR3"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 58,
+      "estimated_cost_keur": 2900,
+      "lead_time_weeks": 72,
+      "production_impact": "No production cut-in; retrofit and spares only",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

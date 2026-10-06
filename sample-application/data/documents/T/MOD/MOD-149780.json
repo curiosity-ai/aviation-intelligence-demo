@@ -1,0 +1,185 @@
+[
+  {
+    "doc_id": "MOD-149780",
+    "doc_type": "MOD",
+    "title": "Repositioned Flight Bag Arm with Conducted Cooling and Load Shedding Display Control",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-20",
+      "ata_6d": "46-20-11",
+      "title": "Flight Deck Information — Electronic Flight Bag Unit"
+    },
+    "secondary_ata": [
+      "46-20-12",
+      "46-40-12"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88E1"
+      ],
+      "msns": [
+        "T00018",
+        "T00127",
+        "T00149",
+        "T00166",
+        "T00227"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "PYR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-147210"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-06-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Moves the flight bag arm further out of the sun line, conducts heat out of the unit through the arm itself, and lets the display shed brightness in stages instead of shutting down when the enclosure reaches its limit.",
+    "sections": {
+      "reason": "The ventilated arm already in service reduced but did not remove hot turnaround shutdowns at southern bases, where nineteen events were reported in a single summer season on the left hand installation alone. The remaining exposure is radiative rather than convective: the unit is still in the sun line for part of the afternoon and the ventilated arm can only move air that is already at forty degrees. Two departure delays were caused by crews waiting for the unit to return, and the operator's flight operations department will not accept take-off performance being calculated on uncontrolled equipment.",
+      "description": "The mounting arm D4620114030606 is replaced by a longer arm that carries the unit 110 mm further aft and adds a conducted path from the unit rear face into the arm, which is finned along its lower surface. The control panel D4620117513908 is repositioned and the power supply module D4620126779963 is replaced by a version that can command a staged brightness reduction before the thermal limit is reached. The connector assembly DE804651-11 is renewed to carry the additional discrete, and the data server module card D4640122620967 is updated so that the brightness state appears in the maintenance record. Wiring at FIN 510IU is extended and re-clamped in zone 234, and a discrete run is added to FIN 66IU in zone 161. Work is from the flight deck with the side console trim removed. Detail is on drawings D46201194513 and D46401221924.",
+      "effects": "Estimated mass increase of 1.9 kg per side. Average electrical demand falls further because the display dims before it fails. The new arm is not interchangeable with the ventilated arm because the pivot base moves 40 mm aft and the conducted interface requires the matching unit rear face. Dispatch is unchanged and the flight bag remains a non-required item. The crew procedure changes because the display now dims progressively rather than blanking, and that behaviour has to be described so the crew do not treat the dimming as a failure. Maintenance and illustrated parts content require update.",
+      "embodiment_note": "Retrofit only, on top of the ventilated arm standard. Provisional estimate is one shift per flight deck for both sides. No production cut-in is proposed because current production aircraft do not report the condition.",
+      "open_points": "Pre-analysis must establish whether the longer arm intrudes on the escape path clearance from the left hand seat, whether the conducted interface can be qualified without re-opening the unit approval, and whether the staged brightness behaviour needs a flight crew procedure change or only a description change. It must also confirm that the maintenance record entry does not collide with the message suppression rules introduced elsewhere on the central maintenance system."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4620114030606",
+        "D4620117513908",
+        "D4620126779963",
+        "DE804651-11",
+        "D4640122620967"
+      ],
+      "fins": [
+        "510IU",
+        "66IU"
+      ],
+      "drawings": [
+        "D46201194513",
+        "D46401221924"
+      ],
+      "software": [],
+      "zones": [
+        "234",
+        "161"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00018",
+        "T00166"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-T-260401",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-147210",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "flight bag",
+      "conducted cooling",
+      "brightness",
+      "mounting arm",
+      "hot turnaround"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149780,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.789",
+          "CS 25.785"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 3.8,
+      "balance_impact": "Forward of reference station, negligible CG effect",
+      "electrical_load_impact_va": -40,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D4640122620967"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4620114030606",
+        "D4620117513908",
+        "D4620126779963",
+        "DE804651-11"
+      ],
+      "fins_affected": [
+        "510IU",
+        "66IU"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 180,
+      "estimated_cost_keur": 560,
+      "lead_time_weeks": 38,
+      "production_impact": "No production cut-in proposed",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

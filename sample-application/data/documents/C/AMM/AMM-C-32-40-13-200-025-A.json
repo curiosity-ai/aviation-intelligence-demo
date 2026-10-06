@@ -1,0 +1,353 @@
+[
+  {
+    "doc_id": "AMM-C-32-40-13-200-025-A",
+    "doc_type": "AMM",
+    "title": "Tyre Pressure Indicating — Operational Check of All Six Wheel Positions",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-07-26",
+      "reason": "Original issue of the tyre pressure indicating operational check.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-13",
+      "title": "Wheels and Brakes — Tyre Pressure Indicating"
+    },
+    "secondary_ata": [
+      "32-40-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-02-13",
+      "released": "2016-07-26",
+      "revised": "2016-07-26",
+      "effective": "2016-08-19"
+    },
+    "abstract": "Operational check of the tyre pressure indicating system at all six wheel positions, comparing each reported value against a calibrated gauge and confirming that a position that does not report is correctly annunciated.",
+    "sections": {
+      "purpose": "To confirm that each of the six wheel positions reports a pressure, that the reported values agree with a calibrated gauge and that a non-reporting position is annunciated rather than shown as normal.",
+      "job_setup_note": "The aircraft must be on external power and must have been on the ground for at least two hours so that the tyres are at ambient temperature. A calibrated tyre pressure gauge and the maintenance terminal are needed. Two persons are needed, one at the wheels and one reading the wheel page.",
+      "procedure": "Put the safety barriers in position and make sure that the wheel chocks are in place. Make sure that the aircraft has been on the ground for at least two hours. Restore external power and select the wheel page. WARNING: DO NOT STAND IN LINE WITH A WHEEL WHILE PRESSURE IS BEING MEASURED. A DAMAGED WHEEL CAN FAIL WITHOUT WARNING. Record the reported pressure and the reported temperature at each of the six positions. Measure the pressure at each position with the calibrated gauge, taking the reading at the valve after the gauge has settled. CAUTION: DO NOT BLEED PRESSURE TO MAKE A READING AGREE. A DIFFERENCE OUTSIDE THE TOLERANCE IS A SYSTEM FINDING, NOT A TYRE FINDING. Compare each measured value with the reported value and record the difference. Make sure that every difference is inside the tolerance in the acceptance table. Select the maintenance terminal and read the transmitter status for each position, including the battery state where the transmitter reports it. Inhibit one transmitter from the terminal and confirm that the wheel page annunciates the position as not reporting rather than showing the last value. Restore the transmitter and confirm that the position returns to normal within the stated time.",
+      "close_out": "Make sure that every valve cap is refitted and torqued by hand. Make sure that no transmitter is left inhibited. Disconnect the maintenance terminal. Remove the safety barriers. Record the six reported values, the six measured values, the differences and the result of the inhibit check. Report any position outside the tolerance to the engineering department before the next flight."
+    },
+    "entities": {
+      "part_numbers": [
+        "ESC959638-52",
+        "D3240120310957",
+        "D3240128079286",
+        "AES343862-3E",
+        "AGS146031K9"
+      ],
+      "fins": [
+        "5358WS",
+        "210WS9"
+      ],
+      "drawings": [
+        "D32401216639",
+        "D32400062341"
+      ],
+      "software": [
+        "LH4C830E70C"
+      ],
+      "zones": [
+        "763",
+        "771",
+        "773"
+      ],
+      "figures": [
+        "FIG-32-40-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-C-32-40-13-810-814",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-32-40-13-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "tyre pressure",
+      "operational check",
+      "calibrated gauge",
+      "transmitter status",
+      "annunciation"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "32-40-13-200-025-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "Aircraft post MOD-111388",
+      "manhours": 2.0,
+      "personnel": 2,
+      "elapsed_time_hours": 1.4,
+      "access": {
+        "zones": [
+          "763",
+          "771",
+          "773"
+        ],
+        "access_panels": [
+          "771AL",
+          "773BR"
+        ],
+        "doors": [
+          "Main gear door",
+          "Nose gear door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not stand in line with a wheel while pressure is being measured.",
+          "Make sure that the wheel chocks are in place.",
+          "Do not bleed pressure to make a reading agree."
+        ],
+        "tooling": [
+          {
+            "reference": "98C32401-215",
+            "description": "Tyre pressure gauge, calibrated"
+          },
+          {
+            "reference": "98C45201-210",
+            "description": "Maintenance terminal and load media reader"
+          }
+        ],
+        "consumables": [
+          "Valve caps, wheel"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-32-40-11-300-032-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-C-32-40-13-200-025-A",
+    "doc_type": "AMM",
+    "title": "Tyre Pressure Indicating — Operational Check of All Six Wheel Positions",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-04",
+      "reason": "Warmed-tyre caution added so that a value returning into tolerance after taxi is handled the way the crew procedure already handles it.",
+      "raised_by_pawo": "PAWO-111388-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-13",
+      "title": "Wheels and Brakes — Tyre Pressure Indicating"
+    },
+    "secondary_ata": [
+      "32-40-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-02-13",
+      "released": "2016-07-26",
+      "revised": "2026-08-04",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Operational check of the tyre pressure indicating system at all six wheel positions, comparing each reported value against a calibrated gauge at ambient temperature and confirming that a non-reporting position is annunciated.",
+    "sections": {
+      "purpose": "To confirm that each of the six wheel positions reports a pressure, that the reported values agree with a calibrated gauge and that a non-reporting position is annunciated rather than shown as normal.",
+      "job_setup_note": "The aircraft must be on external power and must have been on the ground for at least two hours so that the tyres are at ambient temperature. A calibrated tyre pressure gauge and the maintenance terminal are needed. Two persons are needed, one at the wheels and one reading the wheel page.",
+      "procedure": "Put the safety barriers in position and make sure that the wheel chocks are in place. Make sure that the aircraft has been on the ground for at least two hours. Restore external power and select the wheel page. WARNING: DO NOT STAND IN LINE WITH A WHEEL WHILE PRESSURE IS BEING MEASURED. A DAMAGED WHEEL CAN FAIL WITHOUT WARNING. Record the reported pressure and the reported temperature at each of the six positions. Measure the pressure at each position with the calibrated gauge, taking the reading at the valve after the gauge has settled. CAUTION: DO NOT BLEED PRESSURE TO MAKE A READING AGREE. A DIFFERENCE OUTSIDE THE TOLERANCE IS A SYSTEM FINDING, NOT A TYRE FINDING. CAUTION: A POSITION THAT READS LOW COLD AND COMES BACK INTO TOLERANCE ONCE THE TYRE IS WARM AFTER TAXI HAS NOT PASSED THIS CHECK. THE ACCEPTANCE TOLERANCE APPLIES AT AMBIENT TEMPERATURE AFTER TWO HOURS ON THE GROUND AND AT NO OTHER CONDITION. Compare each measured value with the reported value and record the difference. Make sure that every difference is inside the tolerance in the acceptance table. Where a position was outside the tolerance cold, do not re-run the check on a warmed tyre to obtain a pass: record the cold result, report it, and let the engineering department decide, exactly as the crew procedure requires of a value that recovers in the same way after a taxi. Select the maintenance terminal and read the transmitter status for each position, including the battery state where the transmitter reports it. Inhibit one transmitter from the terminal and confirm that the wheel page annunciates the position as not reporting rather than showing the last value. Restore the transmitter and confirm that the position returns to normal within the stated time.",
+      "close_out": "Make sure that every valve cap is refitted and torqued by hand. Make sure that no transmitter is left inhibited. Disconnect the maintenance terminal. Remove the safety barriers. Record the six reported values, the six measured values, the differences, the tyre condition at the time of measurement and the result of the inhibit check. Report any position outside the tolerance to the engineering department before the next flight, whether or not the value has since recovered."
+    },
+    "entities": {
+      "part_numbers": [
+        "ESC959638-52",
+        "D3240120310957",
+        "D3240128079286",
+        "AES343862-3E",
+        "AGS146031K9"
+      ],
+      "fins": [
+        "5358WS",
+        "210WS9"
+      ],
+      "drawings": [
+        "D32401216639",
+        "D32400062341"
+      ],
+      "software": [
+        "LH4C830E70C"
+      ],
+      "zones": [
+        "763",
+        "771",
+        "773"
+      ],
+      "figures": [
+        "FIG-32-40-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-C-32-40-13-810-814",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-32-40-13-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111388",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "tyre pressure",
+      "operational check",
+      "warmed tyre",
+      "calibrated gauge",
+      "annunciation"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "32-40-13-200-025-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "Aircraft post MOD-111388",
+      "manhours": 2.0,
+      "personnel": 2,
+      "elapsed_time_hours": 1.4,
+      "access": {
+        "zones": [
+          "763",
+          "771",
+          "773"
+        ],
+        "access_panels": [
+          "771AL",
+          "773BR"
+        ],
+        "doors": [
+          "Main gear door",
+          "Nose gear door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not stand in line with a wheel while pressure is being measured.",
+          "Make sure that the wheel chocks are in place.",
+          "Do not bleed pressure to make a reading agree."
+        ],
+        "tooling": [
+          {
+            "reference": "98C32401-215",
+            "description": "Tyre pressure gauge, calibrated"
+          },
+          {
+            "reference": "98C45201-210",
+            "description": "Maintenance terminal and load media reader"
+          }
+        ],
+        "consumables": [
+          "Valve caps, wheel"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-32-40-11-300-032-A"
+      ],
+      "steps": 14,
+      "warnings": 1,
+      "cautions": 2
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

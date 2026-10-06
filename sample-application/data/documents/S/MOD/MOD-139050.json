@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "MOD-139050",
+    "doc_type": "MOD",
+    "title": "Centre Tank Water Scavenge Jet Pump and Sump Profile Change",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-11-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-10",
+      "53-31"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-11-17",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Introduction of a jet pump driven water scavenge at the centre tank low point, together with a re-profiled sump floor, so that free water reaches the drain valve instead of collecting where the boost pump inlet takes it up.",
+    "sections": {
+      "reason": "Operators flying into persistently humid airfields are removing centre tank boost pumps at roughly half the expected life, with shop reports citing corrosion and bearing distress rather than electrical failure. One operator recorded nineteen removals from thirteen aircraft in two years against a plan of six. Sump sampling at that operator finds free water after every overnight even though the drain task is performed daily, which says the water is not reaching the drain point. Tank survey on two aircraft showed a shallow region forward of the low point where water sits at any deck angle between minus one and plus two degrees, which covers most of the time the aircraft is parked. The condition is not seen on the four-engine aircraft because their centre tank feeds through a different sump arrangement.",
+      "description": "A jet pump is added at the forward end of the centre tank, driven from the boost pump motive flow, that continuously sweeps the shallow region towards the low point whenever a boost pump runs. The aft restrictor assembly D2820111551992 is replaced by an item with a motive flow take-off, the outboard restrictor D2820115755380 is re-sized to keep the delivery pressure inside the existing envelope, and the obsolete aft duct assembly D2820113555007 is deleted. The sump floor is re-profiled with a bonded fillet so that the shallow region drains at deck angles down to minus two degrees. Swaged collars LN41340-8C close the new motive flow line. Where that line leaves the tank and crosses into the aft belly fairing, a local skin doubler kit D5331120068647 is installed at the penetration to restore the shell. The lower boost pump non-return valve position 34QA4 is re-plumbed to the new line. Access is through the tank access panels in zone 591 and from the belly fairing in zones 183 and 191, with the tank de-fuelled, purged and entered. Detail is on drawing D28201202725.",
+      "effects": "Estimated mass increase of 6.1 kg per aircraft, close to the centre of gravity, with no reportable balance effect. No electrical load change; the jet pump is driven hydraulically by the existing boost pump. The re-profiled sump is not interchangeable with the original because the fillet is bonded in place and cannot be removed without tank re-sealing. The daily drain task is expected to move to a weekly interval once the scavenge is proved, which is a significant reduction in ramp workload. Predicted boost pump removal rate falls from 0.73 to below 0.3 per aircraft per year. Fuel system schematic, tank entry and drain task content all require update.",
+      "embodiment_note": "Retrofit only at this stage. Provisional estimate is six days inside a scheduled C-check, dominated by tank purge, entry and re-sealing rather than by the installation itself. A production cut-in for the Evo variant will be considered once the retrofit design is frozen.",
+      "open_points": "Pre-analysis must confirm that the belly fairing penetration and its doubler do not clash with structural work already planned in the same bay, that the bonded sump fillet is compatible with the existing tank sealant standard, and whether the revised drain interval can be justified before the scavenge has service experience."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820111551992",
+        "D2820115755380",
+        "D2820113555007",
+        "D5331120068647",
+        "LN41340-8C"
+      ],
+      "fins": [
+        "34QA4"
+      ],
+      "drawings": [
+        "D28201202725"
+      ],
+      "software": [],
+      "zones": [
+        "183",
+        "191",
+        "591"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00688",
+        "S00599"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-S-250742",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      }
+    ],
+    "keywords": [
+      "water scavenge",
+      "jet pump",
+      "centre tank sump",
+      "boost pump removal",
+      "drain interval"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Fuel Systems"
+    },
+    "type_data": {
+      "mod_number": 139050,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.971",
+          "CS 25.981",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 6.1,
+      "balance_impact": "Close to the centre of gravity; no reportable shift",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D5331120068647",
+        "LN41340-8C"
+      ],
+      "parts_removed": [
+        "D2820113555007"
+      ],
+      "parts_modified": [
+        "D2820111551992",
+        "D2820115755380"
+      ],
+      "fins_affected": [
+        "34QA4"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 330,
+      "estimated_cost_keur": 980,
+      "lead_time_weeks": 40,
+      "production_impact": "No cut-in proposed until the retrofit design is frozen",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

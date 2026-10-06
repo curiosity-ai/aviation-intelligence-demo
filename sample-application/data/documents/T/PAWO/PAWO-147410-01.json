@@ -1,0 +1,406 @@
+[
+  {
+    "doc_id": "PAWO-147410-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Upper Deck Seat Power Distribution Uprating and Under-Seat Box Relocation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-13",
+      "title": "Inflight Entertainment — IFE Power Supply"
+    },
+    "secondary_ata": [
+      "44-20-12",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [
+        "T00033",
+        "T00037",
+        "T00053",
+        "T00095",
+        "T00124",
+        "T00232",
+        "T00237"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-27",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the upper deck seat power uprating, focused on how much of the distribution capacity has already been consumed by the head end architecture change and what remains for the cabin as a whole.",
+    "sections": {
+      "objective": "Establish whether the proposed seat power uprating can be carried by the cabin distribution as it stands after the second generation head end architecture, identify the documents whose effectivity or content the uprating would change, and quantify the remaining busbar margin for future cabin equipment.",
+      "scope_note": "The search covers ATA 44-20 as the primary chapter and ATA 25-20 and 33-20 as secondary, because the uprating changes both the seat installation and the load carried by the cabin busbar that the lighting shares. ATA 24 electrical generation was included in the first pass and excluded once the load figures were confirmed: the additional demand is inside generation capacity and only the cabin distribution is at issue. Structural chapters were searched only for the seat track interface.",
+      "method_note": "Entity linking was seeded from the five part numbers, the two FINs, the single drawing and the four zones of the candidate. Semantic similarity was run over titles, abstracts and effects text with two seed phrases about cabin electrical load. The most valuable finding came from the semantic pass alone: a cabin lighting modification that shares no part number, no FIN and no zone with the candidate, but whose 3 100 volt-ampere reduction is the only reason the busbar closes at all. An entity-only search would have ranked it nowhere.",
+      "findings_summary": "Six items have been confirmed and one is blocking. The rack feeder uprating that came with the second generation head end architecture already did part of what this candidate proposes, and the two overlap on the same anchor nut standard, the same galley insert and the same equipment area; the candidate must be rescoped so that it does not re-do work already embodied. The service bulletin that carries the head end architecture is written as pre-modification only, and its material list would become wrong once the seat feeders are uprated, because the conductor sizing it specifies is no longer the largest in the run. The seat track cradle mounting collides with a structural candidate on the same track flange, discovered only through a shared tubular spacer part number. The load budget only closes if the cabin lighting conversion is embodied first, which is a concurrency the candidate does not currently declare and which no shared identifier would ever have revealed.",
+      "next_steps": "Rescope the candidate to exclude the feeder work already delivered by the head end architecture change. Declare the cabin lighting conversion as a concurrency requirement and confirm the busbar margin with the lighting conversion embodied. Agree the seat track flange interface with the structural design office. Re-issue the head end service bulletin material list once the scope is settled."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420134200425",
+        "D4420008271203",
+        "EN258434K3",
+        "EN187472K9",
+        "AES430915-41"
+      ],
+      "fins": [
+        "433RM",
+        "7RK6"
+      ],
+      "drawings": [
+        "D44200016279"
+      ],
+      "software": [],
+      "zones": [
+        "222",
+        "242",
+        "916",
+        "942"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147410",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-T-250487",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "seat power",
+      "cabin busbar",
+      "load margin",
+      "conflict search"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-147410-01",
+      "subject_mod": "MOD-147410",
+      "source_io": "IO-T-250487",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-01-27",
+      "due_date": "2026-04-10",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ELSC",
+          "ESZS"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 68
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "44",
+          "25",
+          "33"
+        ],
+        "ata_4d": [
+          "44-20",
+          "25-20",
+          "33-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00033",
+          "to": "T00237"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4420134200425",
+            "D4420008271203",
+            "EN258434K3",
+            "EN187472K9",
+            "AES430915-41"
+          ],
+          "fins": [
+            "433RM",
+            "7RK6"
+          ],
+          "drawings": [
+            "D44200016279"
+          ],
+          "zones": [
+            "222",
+            "242",
+            "916",
+            "942"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "cabin electrical load growth on a twin deck aircraft",
+          "passenger seat power capacity and device charging demand"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Quantify remaining cabin busbar margin after the head end architecture change",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search released modifications and bulletins on ATA 44-20",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Identify cabin load reductions available elsewhere on the aircraft",
+          "method": "SEMANTIC",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Confirm the seat track flange interface with the structural design office",
+          "method": "SME_INTERVIEW",
+          "owner": "ESZS",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-145110",
+          "doc_type": "MOD",
+          "finding_type": "DUPLICATE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN258434K3"
+            ],
+            "shared_fins": [
+              "7RK6"
+            ],
+            "shared_zones": [
+              "916",
+              "942"
+            ],
+            "shared_ata_6d": [
+              "44-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The second generation head end architecture already replaced the rack distribution tail and moved the protection to a higher rating. The candidate proposes to uprate the feeders again and its scope statement does not distinguish the rack feeder from the seat feeders, so as written it re-does work that is already embodied on every aircraft in the candidate list.",
+          "resolution": "Rescope the candidate to the seat feeders only and reference the rack feeder standard as an assumed precondition rather than as part of the change."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-44-1042",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN258434K3"
+            ],
+            "shared_fins": [
+              "7RK6"
+            ],
+            "shared_zones": [
+              "916",
+              "942"
+            ],
+            "shared_ata_6d": [
+              "44-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The service bulletin specifies the rack feeder conductor as the largest in the cabin run and sizes its protection accordingly. Once the seat feeders are uprated that statement is wrong, and an operator working to the bulletin would install a protection device that no longer coordinates with the downstream seat feeder protection.",
+          "resolution": "Re-issue the material list and the protection coordination note in the bulletin at the same revision as the candidate release, and put an explicit cross reference in both directions."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-147330",
+          "doc_type": "MOD",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN187472K9"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "242"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The under-seat box cradle sets its standoff with a tubular spacer on the seat track flange, and a structural candidate reworks that flange to a drained profile with a moulded panel upstand. The cradle geometry assumes the present flange. The two documents describe the same physical interface in completely different language and neither cites the other.",
+          "resolution": "Agree the flange interface definition with the structural design office and record it as a shared interface control item. Whichever candidate freezes first must publish the profile."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-145340",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents are about how much electrical load the cabin can carry, one by adding 5 800 volt-amperes of seat demand and the other by removing 3 100 volt-amperes of lighting demand. They share no part number, no FIN, no zone and no ATA chapter, and neither mentions the other. The connection is entirely in the effects text."
+          },
+          "rationale": "On the cabin busbar as delivered, the seat power uprating does not close. It closes with margin only on an aircraft that has had the cabin lighting converted to solid state strips, because that conversion is the single largest load reduction available on this aircraft. The candidate does not currently declare that dependency.",
+          "resolution": "Declare the lighting conversion as a concurrency requirement in the candidate applicability, and state the busbar margin with and without it in the effects section."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-T-44-20-13-400-003-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4420134200425",
+              "D4420008271203",
+              "EN258434K3",
+              "EN187472K9",
+              "AES430915-41"
+            ],
+            "shared_fins": [
+              "433RM"
+            ],
+            "shared_zones": [
+              "222",
+              "242",
+              "942"
+            ],
+            "shared_ata_6d": [
+              "44-20-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The seat group installation task already carries the cradle mounting as an alternative and includes the load check. Its allowance figure is the one the candidate raises, so the task cannot be left as it is once the candidate is released, and the two must change together.",
+          "resolution": "Plan the task revision for the candidate release and make the allowance figure a table by seat group position rather than a single number."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-T-44-20-12-FIG-02",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN258434K3",
+              "D4420134200425",
+              "AES430915-41"
+            ],
+            "shared_fins": [
+              "7RK6"
+            ],
+            "shared_zones": [
+              "916",
+              "942"
+            ],
+            "shared_ata_6d": [
+              "44-20-13"
+            ],
+            "similarity_note": "The figure and the candidate both describe the rack front and the seat power distribution items, using the same nomenclature for three of the parts."
+          },
+          "rationale": "The figure carries the seat power distribution fitting and the protective sleeving that the candidate changes, and it already holds one alternate pair for the head end generations. The candidate adds a cradle variant of the seat track cover that has no place in the present item numbering.",
+          "resolution": "Add the cradle variant as a new item rather than as an alternate of the existing cover, and cross reference it from the seat installation figure."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-143680",
+          "doc_type": "MOD",
+          "reason": "Shares the equipment rack, the galley insert FIN and two zones with the candidate and ranks high on an entity search, but it is the superseded interim server standard. No aircraft in the candidate list is still at that standard, so nothing it describes can be in conflict."
+        },
+        {
+          "doc_id": "AMM-T-33-20-11-400-002-A",
+          "doc_type": "AMM",
+          "reason": "Surfaces on the semantic pass because it talks about cabin distribution, addressing and load measurement in language close to the candidate. It is the ceiling lighting strip installation and touches no seat, no seat track and no seat feeder."
+        }
+      ],
+      "conclusion": "Not yet issued. One blocking effectivity conflict and one rescoping action are confirmed; the load budget depends on a concurrency the candidate does not yet declare.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

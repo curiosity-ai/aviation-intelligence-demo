@@ -1,0 +1,353 @@
+[
+  {
+    "doc_id": "WDM-T-92-21-12",
+    "doc_type": "WDM",
+    "title": "Forward Cargo Compartment — Smoke Detection and Compartment Lighting Wiring",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2007-02-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-12",
+      "title": "Forward Fuselage Wiring — Cargo Compartment Wiring"
+    },
+    "secondary_ata": [
+      "26-10",
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2006-12-31",
+      "released": "2007-02-19",
+      "revised": "2007-02-19",
+      "effective": "2007-03-12"
+    },
+    "abstract": "Wiring diagram of the forward cargo compartment, covering the smoke detection sampling loops, the heated bleed supply and the compartment lighting circuits, all carried on the ceiling supports behind the lining panels.",
+    "sections": {
+      "purpose": "This sheet shows the wiring in the forward cargo compartment for the smoke detection sampling loops, the heated bleed at the condensate trap and the compartment lighting circuits.",
+      "sheet_note": "Sheet 1 shows the single loop installation and sheet 2 the dual loop installation, which adds the second detector supply and the heated bleed circuit. Both detection loop harnesses and the compartment lighting harness are drawn together because they are carried on the same ceiling supports; the line styles distinguish them where the run is common.",
+      "routing_note": "The detection harness runs from the detector position in zone 113 along the compartment ceiling support to the terminal position in zone 143, with a break at the compartment boundary. The second loop harness of the dual loop installation follows the first along the same ceiling supports and shares that run with the compartment lighting harness for approximately four metres between zone 113 and the compartment boundary. The heated bleed supply is taken from the compartment heating distribution and enters at the low point in zone 131."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221123902180",
+        "D9221126832456",
+        "EN424241-33",
+        "D2550007254418"
+      ],
+      "fins": [
+        "402VU",
+        "9748VU",
+        "2841WD",
+        "3WF"
+      ],
+      "drawings": [
+        "D26101202565"
+      ],
+      "software": [],
+      "zones": [
+        "113",
+        "131",
+        "143"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-26-10-12-200-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cargo compartment wiring",
+      "smoke detection loop",
+      "heated bleed",
+      "compartment lighting",
+      "ceiling support"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Electrical Installation Design"
+    },
+    "type_data": {
+      "sheet_number": "92-21-12",
+      "sheet_title": "FORWARD CARGO COMPARTMENT — DETECTION AND LIGHTING",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1121W",
+        "1122W",
+        "1131W"
+      ],
+      "connectors": [
+        {
+          "reference": "1121VC",
+          "part_number": "D9221126832456",
+          "location_zone": "113",
+          "contacts": 26
+        },
+        {
+          "reference": "1131VC",
+          "part_number": "D9221123902180",
+          "location_zone": "131",
+          "contacts": 19
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "2841WD",
+          "description": "CLAMP, DETECTION, RH",
+          "zone": "113"
+        },
+        {
+          "fin": "3WF",
+          "description": "SOLENOID, DETECTION, FWD",
+          "zone": "131"
+        },
+        {
+          "fin": "402VU",
+          "description": "HARNESS, CARGO COMPARTMENT WIRING, UPPER",
+          "zone": "143"
+        },
+        {
+          "fin": "9748VU",
+          "description": "TERMINAL BLOCK, FORWARD FUSELAGE WIRING, OUTBD",
+          "zone": "113"
+        }
+      ],
+      "wire_count": 52,
+      "wire_gauge_range": "AWG 22 to AWG 14",
+      "routes": [
+        "Zone 113 to zone 143 on the compartment ceiling support, both detection loops and the lighting harness in common",
+        "Zone 131 low point heated bleed supply from the compartment heating distribution"
+      ],
+      "related_sheets": [
+        "WDM-T-92-21-13",
+        "WDM-T-92-41-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "WDM-T-92-21-12",
+    "doc_type": "WDM",
+    "title": "Forward Cargo Compartment — Smoke Detection and Compartment Lighting Wiring",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2018-05-08",
+      "reason": "Second detection loop redrawn on the port frame line clear of the compartment lighting harness, with the separation distance called out on the sheet.",
+      "raised_by_pawo": "PAWO-143950-01",
+      "raised_by_finding": "F03",
+      "finding_type": "ZONE_CONFLICT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-12",
+      "title": "Forward Fuselage Wiring — Cargo Compartment Wiring"
+    },
+    "secondary_ata": [
+      "26-10",
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2006-12-31",
+      "released": "2007-02-19",
+      "revised": "2018-05-08",
+      "effective": "2018-05-29"
+    },
+    "abstract": "Wiring diagram of the forward cargo compartment, covering the smoke detection sampling loops, the heated bleed supply and the compartment lighting circuits behind the lining panels.",
+    "sections": {
+      "purpose": "This sheet shows the wiring in the forward cargo compartment for the smoke detection sampling loops, the heated bleed at the condensate trap and the compartment lighting circuits.",
+      "sheet_note": "Sheet 1 shows the single loop installation and sheet 2 the dual loop installation, which adds the second detector supply and the heated bleed circuit. On dual loop aircraft the two loop harnesses run on opposite sides of the compartment and are shown in different line styles. The compartment lighting is drawn on the same sheet because its harness shares the ceiling supports with the detection loops and any work on one disturbs the other.",
+      "routing_note": "The detection harness runs from the detector position in zone 113 along the compartment ceiling support to the terminal position in zone 143, with a break at the compartment boundary. The second loop of the dual loop installation no longer follows it: it is carried on the port frame line and rejoins at the terminal position, so that no length of the run puts both detection channels and the lighting supply in one bundle. The separation distance between the second loop and the lighting harness is called out at the two points where the routes come closest. The heated bleed supply is taken from the compartment heating distribution and enters at the low point in zone 131. The lighting harness runs on the ceiling supports but is separated by the minimum distance given in the standard practice."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221123902180",
+        "D9221126832456",
+        "EN424241-33",
+        "D2550007254418"
+      ],
+      "fins": [
+        "402VU",
+        "9748VU",
+        "2841WD",
+        "3WF"
+      ],
+      "drawings": [
+        "D26101202565"
+      ],
+      "software": [],
+      "zones": [
+        "113",
+        "131",
+        "143"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-26-10-12-200-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cargo compartment wiring",
+      "smoke detection loop",
+      "heated bleed",
+      "compartment lighting",
+      "ceiling support"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Electrical Installation Design"
+    },
+    "type_data": {
+      "sheet_number": "92-21-12",
+      "sheet_title": "FORWARD CARGO COMPARTMENT — DETECTION AND LIGHTING",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1121W",
+        "1122W",
+        "1131W"
+      ],
+      "connectors": [
+        {
+          "reference": "1121VC",
+          "part_number": "D9221126832456",
+          "location_zone": "113",
+          "contacts": 26
+        },
+        {
+          "reference": "1131VC",
+          "part_number": "D9221123902180",
+          "location_zone": "131",
+          "contacts": 19
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "2841WD",
+          "description": "CLAMP, DETECTION, RH",
+          "zone": "113"
+        },
+        {
+          "fin": "3WF",
+          "description": "SOLENOID, DETECTION, FWD",
+          "zone": "131"
+        },
+        {
+          "fin": "402VU",
+          "description": "HARNESS, CARGO COMPARTMENT WIRING, UPPER",
+          "zone": "143"
+        },
+        {
+          "fin": "9748VU",
+          "description": "TERMINAL BLOCK, FORWARD FUSELAGE WIRING, OUTBD",
+          "zone": "113"
+        }
+      ],
+      "wire_count": 58,
+      "wire_gauge_range": "AWG 22 to AWG 14",
+      "routes": [
+        "Zone 113 to zone 143 on the compartment ceiling support, first detection loop and the lighting harness",
+        "Zone 113 to zone 143 on the port frame line, second detection loop, segregated from the lighting harness",
+        "Zone 131 low point heated bleed supply from the compartment heating distribution"
+      ],
+      "related_sheets": [
+        "WDM-T-92-21-13",
+        "WDM-T-92-41-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,211 @@
+[
+  {
+    "doc_id": "SLN-92-1003",
+    "doc_type": "SB",
+    "title": "Electrical Power Wiring — Avionics Bay Harness Segregation at the Rack Feedthrough",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-01-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-11",
+      "title": "Forward Fuselage Wiring — Avionics Bay Harnesses"
+    },
+    "secondary_ata": [
+      "20-10",
+      "42-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00131",
+          "to": "S01521"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA",
+        "OST"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-136750"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2023-07-25",
+      "released": "2024-01-19",
+      "revised": null,
+      "effective": "2024-02-09"
+    },
+    "abstract": "Splitting of the avionics bay rack feedthrough into two grommeted apertures with a metallic divider, separating the sensitive route from the power feed that was inducing spurious built-in test reports.",
+    "sections": {
+      "planning_reason": "A long-running population of unexplained built-in test reports was traced to a signal pair running for eleven hundred millimetres alongside a power feed inside the rack feedthrough, where the build standard allowed the two to share a grommet. The noise appears only when a particular high-load item cycles, which is why it took four years and a dedicated flight test to find. Twenty-six of twenty-nine sampled aircraft showed the same routing, so this is a build standard issue and not workmanship.",
+      "description": "The feedthrough is split into two grommeted apertures with a metallic divider between them, and the sensitive route is moved to the upper aperture. The bay harness is re-clipped along its whole run, the cable assembly is re-terminated at the new position, and a ground stud is added on the divider so that the screen terminates at the aperture rather than three hundred millimetres downstream. Cushioned loop clamps replace the original ties at the six support positions.",
+      "accomplishment_summary": "Put the aircraft on ground power and lift the avionics bay floor panels. Do AMM-S-92-21-11-200-048-A to record the as-found routing and photograph the feedthrough before any work. Cut the feedthrough to the two-aperture pattern using the template supplied in the kit and de-burr both apertures. Install the metallic divider and the edging grommets EN491538-6A in both apertures. Install the ground stud kit QUD240612-74 on the divider. Move the harness D9221112074044 to the upper aperture and re-clip it along the run using the cushioned loop clamps AGS958367K4 at the six support positions. Re-terminate the cable assembly D9221113760580 at the new position and terminate the screen on the divider stud. Measure the bonding resistance at the divider stud. Do AMM-S-92-21-11-200-048-A to confirm the finished routing against the wiring sheet. Do a system operational test with the high-load item cycling and confirm that no report is raised.",
+      "effectivity_note": "Applicable to SOLANO-30, SOLANO-34, SOLANO-38 and SOLANO-39 aircraft from MSN S00131 to MSN S01521. Aircraft from MSN S01696 onward are post-modification from build. Aircraft must already carry the backplane and cooling rack standard, because the divider position assumes the rack front introduced with it.",
+      "material_note": "Kit K9221-1003-01 contains the divider, the two grommets, the ground stud kit, the clamp set and the cutting template. Lead time is eight weeks. Nothing is returned."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221112074044",
+        "D9221113760580",
+        "QUD240612-74",
+        "EN491538-6A",
+        "AGS958367K4"
+      ],
+      "fins": [
+        "8127VC",
+        "9000VC9"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "162",
+        "165",
+        "166"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01696",
+        "S01521"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-135180",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-S-92-21-11-200-048-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-S-92-21-11",
+        "doc_type": "WDM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "feedthrough",
+      "segregation divider",
+      "screen termination",
+      "bonding resistance",
+      "built-in test"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-92-1003",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "DESIRABLE",
+      "compliance_time": "At the next scheduled C-check, or at the operator's convenience.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-135180",
+      "manpower": {
+        "elapsed_time_hours": 18,
+        "manhours": 28,
+        "personnel": 2,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K9221-1003-01",
+        "kit_available_from": "2024-05-07",
+        "parts_required": [
+          {
+            "part_number": "QUD240612-74",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "EN491538-6A",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS958367K4",
+            "qty": 6,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Sealant, low adhesion",
+          "Primer, epoxy, chromate-free",
+          "Cable tie, self-locking"
+        ],
+        "tooling": [
+          "Feedthrough cutting template 98D92211-055",
+          "Bonding meter, four-wire",
+          "De-burring tool set"
+        ]
+      },
+      "weight_change_kg": 1.2,
+      "accomplishment_steps": 12,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2024-01-19",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

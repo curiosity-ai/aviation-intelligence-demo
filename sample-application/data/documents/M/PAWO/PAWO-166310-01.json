@@ -1,0 +1,407 @@
+[
+  {
+    "doc_id": "PAWO-166310-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Reprofiled Lug Radius on the Fwd Mount Side Link Fitting",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "54",
+      "ata_4d": "54-50",
+      "ata_6d": "54-50-12",
+      "title": "Pylon Structure — Engine Mount Fittings"
+    },
+    "secondary_ata": [
+      "71-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-9700"
+      ],
+      "operators": [
+        "ACL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-16",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the reprofiled side link fitting lug, covering the two earlier fitting standards, the retrofit bulletin whose effectivity it invalidates, the shop repair scheme on the same lug and the engine mount work it should be combined with.",
+    "sections": {
+      "objective": "Establish what the third fitting standard at the forward engine mount side link conflicts with or supersedes, and in particular whether the existing retrofit bulletin and the existing oversize bush repair scheme can survive it, so that the launch decision is taken with the full configuration picture rather than only the fatigue case.",
+      "scope_note": "The search covers ATA 54-50 as the primary chapter and ATA 71-20 as secondary, because the fitting sits at the interface between the pylon primary structure and the engine mount and the two chapters share access and downtime. Wing and fuselage chapters were excluded: the load path stops at the pylon rear attachment. Documents applicable only to the freighter were excluded because the requesting operator flies passenger aircraft and the freighter pylon build standard is identical, so a separate read-across is not needed.",
+      "method_note": "Entity linking was seeded from the four part numbers, the single functional item number, the two drawing numbers and the two zones on the candidate. Because this is the third standard in a supersession chain, graph traversal was run in addition, following the supersession edges backwards from the current released standard, which is how the withdrawn first standard was recovered. Semantic similarity contributed one finding that entity linking missed entirely, on a different ATA chapter with no shared identifiers.",
+      "findings_summary": "Seven items have been confirmed and two are blocking. The candidate supersedes the current steel fitting standard, so the retrofit bulletin that installs that standard becomes an intermediate step rather than an end state, and its effectivity statement must be re-issued before the candidate is released. Otherwise an operator that has not yet embodied the steel standard will pay for a fitting change that the candidate would have made unnecessary. The withdrawn first standard is still installed on a small number of aircraft and their fittings carry the original tracked life limit, so the retrofit population is not one group but two. Below the blocking level, the shop repair scheme that machines the lug to a first oversize is written for the current lug geometry and will not transfer to the reprofiled radius, and the illustrated parts content and both engine mount tasks will need reissue. One finding came from similarity alone: a released change at the same engine mount that shares no identifiers at all but needs the same access.",
+      "next_steps": "Ask the repair design owner whether the oversize bush scheme can be re-cut for the new radius or must be withdrawn. Raise a change request against the retrofit bulletin effectivity statement. Confirm with the requesting operator whether any of its aircraft still carry the withdrawn first standard. Prepare a combined embodiment proposal with the engine mount sleeving change so that the mount interface is opened once."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5450124639244",
+        "D5450120563050",
+        "D5450124284638",
+        "AES177340K7"
+      ],
+      "fins": [
+        "1756PP"
+      ],
+      "drawings": [
+        "D54501157122",
+        "D54501157594"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "443"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-166310",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-M-260244",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "side link fitting",
+      "supersession chain",
+      "lug repair",
+      "engine mount access"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-166310-01",
+      "subject_mod": "MOD-166310",
+      "source_io": "IO-M-260244",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-03-16",
+      "due_date": "2026-06-12",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EDSA",
+          "ETGC"
+        ],
+        "estimated_manhours": 95,
+        "spent_manhours": 61
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "54",
+          "71"
+        ],
+        "ata_4d": [
+          "54-50",
+          "71-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00478"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5450124639244",
+            "D5450120563050",
+            "D5450124284638",
+            "AES177340K7"
+          ],
+          "fins": [
+            "1756PP"
+          ],
+          "drawings": [
+            "D54501157122"
+          ],
+          "zones": [
+            "431",
+            "443"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "fretting at the side link lug bore of a forward engine mount",
+          "tracked life limit on a pylon fitting that does not match the engine overhaul cycle"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Traverse the supersession chain on ATA 54-50-12",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess the oversize bush repair scheme against the new lug geometry",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review retrofit bulletin effectivity for the steel fitting standard",
+          "method": "MANUAL_REVIEW",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Identify engine mount work that shares the same access",
+          "method": "SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-162044",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5450124639244",
+              "AES177340K7"
+            ],
+            "shared_fins": [
+              "1756PP"
+            ],
+            "shared_zones": [
+              "431",
+              "443"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The candidate reprofiles the lug of the fitting introduced by MOD-162044 and re-machines its interface plate. It therefore supersedes that standard rather than sitting alongside it, and the two cannot coexist on one pylon because the life-limit rules differ.",
+          "resolution": "Declare the supersession explicitly on the candidate, and agree the transition rules for aircraft part way through the earlier retrofit campaign."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-161902",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES177340K7"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "431"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The withdrawn aluminium fitting standard is still installed on a small number of aircraft that never took the steel retrofit. Those fittings carry the original 24 000 flight cycle life limit and reach it sooner, so they are a distinct retrofit population with a different urgency. Entity linking alone did not surface this document; it was found by following the supersession edge backwards.",
+          "resolution": "Split the retrofit population in two in the embodiment plan and give the aluminium-standard aircraft the earlier target date."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MRD-54-1033",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5450124639244"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "431",
+              "443"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The retrofit bulletin installs the steel fitting on pre-modification aircraft. Once the candidate exists, an operator that has not yet embodied that bulletin would be paying for a fitting change that the candidate makes unnecessary, and the bulletin says nothing about it.",
+          "resolution": "Re-issue the bulletin effectivity statement with a note directing operators that have not yet embodied it to wait for the candidate, once the candidate release date is firm."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-M-54-50-12-001",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5450124639244",
+              "AES177340K7"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "431"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The oversize bush repair machines the lug bore to a first oversize dimension that is defined against the current lug geometry. The reprofiled radius changes the surrounding land, so the repair dimensions and the reduced life limit that goes with them do not transfer.",
+          "resolution": "Ask the repair design owner to re-cut the scheme for the new geometry, or to withdraw it and replace the fitting instead, and record the decision before design freeze."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "IPC-M-54-50-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5450120563050",
+              "D5450124284638"
+            ],
+            "shared_fins": [
+              "1756PP"
+            ],
+            "shared_zones": [
+              "431",
+              "443"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries a pre and post item pair for the two existing fitting standards. A third standard needs a third item, and the aft clip and the new intercostal both change with it.",
+          "resolution": "Raise an illustrated parts content change request at design freeze and agree the three-way item numbering with technical publications."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-161477",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both changes are at the forward engine mount interface and both are described in terms of the mount plane, the mount link and the joint that has to be broken to reach them. They share no part number, no functional item number and no zone, and they sit in different ATA chapters."
+          },
+          "rationale": "The sleeving change works on the drain and vent lines that cross the same mount plane, with the engine on the wing. The candidate needs the engine off. An operator that takes them separately opens the mount interface twice for work that could be done in one visit, and the sleeve termination clearance is measured to the fitting the candidate changes.",
+          "resolution": "Propose the two as a concurrent embodiment in the retrofit planning, and re-measure the sleeve termination clearance against the reprofiled boss."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "AMM-M-54-50-12-000-004-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES177340K7"
+            ],
+            "shared_fins": [
+              "1756PP"
+            ],
+            "shared_zones": [
+              "443"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task carries the fastener release sequence and the life-limited part recording steps for both existing standards. A third standard needs a third release sequence and a revised effectivity note, and the task was reached through the modification-to-task impact edge rather than by text similarity.",
+          "resolution": "Include the removal and installation tasks in the documentation change package at design freeze."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-161688",
+          "doc_type": "MOD",
+          "reason": "Scores highly on similarity because it also talks about cold working, interference fit and fatigue quality at a joint, but it is on the wing lower cover spanwise splice, has no shared part number, no shared zone and no relationship to the pylon load path."
+        },
+        {
+          "doc_id": "SRM-M-55-30-11-002",
+          "doc_type": "SRM",
+          "reason": "Another structural repair using stop holes, doublers and a life limit, on a different structure entirely. No shared part number, no shared zone and no access overlap with the pylon."
+        }
+      ],
+      "conclusion": "Not yet issued. The supersession and the bulletin effectivity are both blocking and must be settled before launch; the repair scheme position is the pacing item for the documentation package.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

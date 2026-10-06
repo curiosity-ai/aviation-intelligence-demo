@@ -1,0 +1,162 @@
+[
+  {
+    "doc_id": "TSM-Z-80-10-11-812-815",
+    "doc_type": "TSM",
+    "title": "Starter Duct Joint Leakage or Slow Motoring after an Extended Dry Crank",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-06-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "80-10-12",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-11-06",
+      "released": "2024-06-14",
+      "revised": null,
+      "effective": "2024-07-05"
+    },
+    "abstract": "Fault isolation for starter duct joint leakage or slow engine motoring after an extended dry crank, separating a relaxed duct clamp from a start valve fault and from a bleed supply shortfall.",
+    "sections": {
+      "purpose": "This procedure isolates starter duct joint leakage or slow motoring reported after an extended dry crank, and distinguishes a relaxed duct clamp from a start valve fault and from insufficient bleed supply.",
+      "fault_description": "The symptom is either an audible leak at the starter duct joint after a long motoring run, or a motoring speed that falls short of the value in the procedure. Both appear on aircraft whose operators use the extended dry crank cycle daily, and both develop gradually rather than suddenly. A clamp that has taken a permanent set will hold at ambient temperature and leak once the joint is hot, so a leak check done on a cold engine will pass and the report will be recorded as unconfirmed.",
+      "isolation_procedure": "1. Establish whether the operator uses the extended dry crank cycle and how long the motoring run is. 2. Check the clamp standard at the starter duct joint and record it. An original clamp on an aircraft using the extended cycle is the most likely cause and should be changed before further investigation. 3. Do a dry motoring run of the full duration used by the operator and check the joint for leakage immediately at the end of the run, not after the joint has cooled. 4. Measure the motoring speed and compare it with the value in the instructions. 5. If the speed is low with no leak, measure the bleed supply pressure at the start valve and compare it with the minimum; a low supply from the auxiliary power unit or from a ground cart produces the same symptom as a starter fault. 6. Check the start valve nozzle at FIN 2520ES for correct opening and for a sticking butterfly. 7. Check the heat shield at FIN 293ES and the tube assembly for distortion, which changes the duct alignment and loads the clamp. 8. If the leak persists with a new clamp and correct alignment, remove the starter and inspect the duct flange for distortion. 9. Do the confirmation task after any change and repeat the full duration motoring run.",
+      "dispatch_note": "Dispatch is permitted with the starter duct leaking within the limit given in the minimum equipment list, provided the extended dry crank cycle is not used. Dispatch is not permitted with a confirmed low motoring speed. Rectify within five calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "PE187919-09",
+        "D8010116441198",
+        "EN290030-3C",
+        "D8010127187309"
+      ],
+      "fins": [
+        "293ES",
+        "2520ES"
+      ],
+      "drawings": [
+        "D80101261176"
+      ],
+      "software": [],
+      "zones": [
+        "462",
+        "421"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-80-10-11-400-036-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-80-1003",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "starter duct leakage",
+      "extended dry crank",
+      "clamp permanent set",
+      "motoring speed",
+      "bleed supply"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "80-10-11-812-815",
+      "fault_symptom": "Starter duct joint leakage or low motoring speed after an extended dry crank",
+      "fault_codes": [
+        "801011004",
+        "801011018"
+      ],
+      "warning_messages": [
+        "ENG 1 START VALVE FAULT"
+      ],
+      "affected_fins": [
+        "293ES",
+        "2520ES"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Duct clamp has taken a permanent set at the extended cycle soak temperature",
+          "probability_pct": 48,
+          "fin": "293ES"
+        },
+        {
+          "cause": "Bleed supply pressure below the minimum from the APU or the ground cart",
+          "probability_pct": 22,
+          "fin": "2520ES"
+        },
+        {
+          "cause": "Start valve butterfly sticking or not fully opening",
+          "probability_pct": 18,
+          "fin": "2520ES"
+        },
+        {
+          "cause": "Duct flange distortion loading the clamp",
+          "probability_pct": 12,
+          "fin": "293ES"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-Z-80-10-11-400-036-A",
+      "dispatch": {
+        "mel_item": "80-10-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Starter duct leakage within the published limit and the extended dry crank cycle not used"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

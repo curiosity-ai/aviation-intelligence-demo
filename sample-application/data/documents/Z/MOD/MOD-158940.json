@@ -1,0 +1,175 @@
+[
+  {
+    "doc_id": "MOD-158940",
+    "doc_type": "MOD",
+    "title": "Air Traffic Datalink Router Standard C with Dual Media Arbitration and an Explicit Link Status Annunciation",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "34-50-11",
+      "46-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [
+        "Z09301",
+        "Z08381",
+        "Z06835",
+        "Z12092",
+        "Z11317"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SBW",
+        "SDA",
+        "GVA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-05-04",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposal to arbitrate between the two available datalink media inside the router instead of at the ground network, and to annunciate link loss on the flight deck rather than leaving the crew to discover it from a controller call.",
+    "sections": {
+      "reason": "Operators flying the longest sectors on this variant report that the controller-pilot datalink either fails to log on at the oceanic boundary or drops silently within the first half hour, after which the crew reverts to voice relay and loses the planned track and level. Thirty-six events were logged by one operator in a single quarter across eighteen aircraft. Investigation on two aircraft found the router holding a media selection made at log-on and never revisiting it, so a degraded path is kept until it fails completely. Nothing on the flight deck indicates the loss, which is the part crews object to most strongly: the first sign is a controller asking why a message was not answered.",
+      "description": "The router is built to standard C. Media arbitration moves into the router, which now measures round trip time and error rate on both available paths continuously and switches without dropping the session. The router is secured on its existing tray with titanium bolts AGS119203K9 and no rack change is needed, but the data concentrator D2370128065382 in the same column is replaced because the arbitration function needs a second bus port. The display unit at FIN 252RN gains a link status field and the control panel at FIN 9407RN gains a two-state annunciation, so that link loss is shown without a crew request. Work is in zones 123, 145 and 211. The interface arrangement is on schematic D23701172876.",
+      "effects": "Mass increase of 1.6 kilograms. Electrical load increases by 30 volt amperes for the second bus port. Not interchangeable: a standard C router expects the two-port concentrator and will not arbitrate if the earlier concentrator is fitted, and the earlier router ignores the new annunciation discretes. Continuous datalink availability over an oceanic segment is expected to rise above ninety-nine per cent and the silent loss case is removed. The router test task, the datalink fault isolation procedure and the parts data all require re-issue, and the crew-facing description of how a datalink connection is established and monitored has to be rewritten.",
+      "embodiment_note": "Retrofit only in the first instance, because the affected population is a defined set of long-sector aircraft. Embodiment is a line task of about six hours once the concentrator is available. A production cut-in would follow if the change is extended to the wider fleet.",
+      "open_points": "Pre-analysis must establish whether the annunciation on the control panel falls inside the flight deck alerting philosophy already agreed for this variant, whether the surveillance standard on the same aircraft shares the concentrator port that arbitration now needs, whether the existing datalink certification basis covers in-session media switching, and what the change does to the published dispatch condition for a single datalink path."
+    },
+    "entities": {
+      "part_numbers": [
+        "AGS119203K9",
+        "D2370128065382"
+      ],
+      "fins": [
+        "252RN",
+        "9407RN"
+      ],
+      "drawings": [
+        "D23701172876"
+      ],
+      "software": [],
+      "zones": [
+        "123",
+        "145",
+        "211"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z09301",
+        "Z08381"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-Z-260388",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "media arbitration",
+      "link status annunciation",
+      "oceanic segment",
+      "silent loss"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 158940,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309",
+          "CS 25.1322"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 1.6,
+      "balance_impact": "Forward avionics bay, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 30,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D2370128065382",
+        "AGS119203K9"
+      ],
+      "parts_removed": [],
+      "parts_modified": [],
+      "fins_affected": [
+        "252RN",
+        "9407RN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 410,
+      "estimated_cost_keur": 1880,
+      "lead_time_weeks": 46,
+      "production_impact": "No cut-in proposed at this stage; retrofit population only",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

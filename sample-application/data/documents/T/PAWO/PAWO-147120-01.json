@@ -1,0 +1,254 @@
+[
+  {
+    "doc_id": "PAWO-147120-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Enlarged Fault History and Correlation Rules",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Central Maintenance System — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-18",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the central maintenance computer correlation change, opened to decide whether the troubleshooting content rework should be owned by this programme or by the individual system chapters.",
+    "sections": {
+      "objective": "Decide who owns the rework of the troubleshooting content that the new correlation rules make necessary, and establish the scale of that rework across the affected chapters before it is committed.",
+      "findings_summary": "The work was delegated to the individual system chapters. The correlation change alters what a line engineer sees at the start of a troubleshooting procedure across a wide set of chapters, and the affected procedures are those that begin from a message list rather than from a crew report. Fifty-one procedures were identified. Rewriting them centrally would put the maintenance system programme in the position of editing content it does not own and cannot substantiate, so the decision was to publish a definition of the new message presentation and let each chapter apply it. Two items were confirmed: the maintenance task itself is correct as written, and the archive requirement before the card change is essential and was very nearly omitted from the bulletin.",
+      "next_steps": "Publish the message presentation definition and distribute the list of fifty-one affected procedures to the owning chapters with a target date. Track completion through the documentation programme rather than through this work order. Confirm the archive requirement is prominent in the bulletin before the next revision."
+    },
+    "entities": {
+      "part_numbers": [
+        "KES685215-32",
+        "VA700112-90"
+      ],
+      "fins": [
+        "3971TM",
+        "6TN4"
+      ],
+      "drawings": [
+        "D45201201098"
+      ],
+      "software": [
+        "LA2R9D6C382",
+        "LE2R7E8FEA4"
+      ],
+      "zones": [
+        "225",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147120",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "correlation rules",
+      "troubleshooting rework",
+      "delegation",
+      "historical"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-147120-01",
+      "subject_mod": "MOD-147120",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-30",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-05-18",
+      "due_date": "2026-07-10",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EYIS",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EGAM"
+        ],
+        "estimated_manhours": 70,
+        "spent_manhours": 63
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "45",
+          "42"
+        ],
+        "ata_4d": [
+          "45-20",
+          "42-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00105",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "VA700112-90",
+            "KES685215-32"
+          ],
+          "fins": [
+            "3971TM",
+            "6TN4"
+          ],
+          "drawings": [
+            "D45201201098"
+          ],
+          "zones": [
+            "225"
+          ],
+          "software": [
+            "LA2R9D6C382"
+          ]
+        },
+        "similarity_seeds": [
+          "message list shortened by correlation",
+          "troubleshooting entry point changed by a data change"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Identify the troubleshooting procedures that start from a message list",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Agree ownership of the rework with the chapter owners",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TSM-T-42-20-11-810-811",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The procedure instructs the engineer to read the messages in time order and identify the head of the burst, which is exactly the reasoning the new correlation rules now do automatically."
+          },
+          "rationale": "This is the clearest example of a procedure whose opening steps are made redundant by the correlation change, and it was used as the reference case when the presentation definition was written.",
+          "resolution": "Rework owned by the avionics chapter using the published presentation definition."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-45-1002",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "VA700112-90",
+              "KES685215-32"
+            ],
+            "shared_fins": [
+              "3971TM"
+            ],
+            "shared_zones": [
+              "225"
+            ],
+            "shared_ata_6d": [
+              "45-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The card change clears the fault history and there is no migration path. The archive requirement was present but not prominent, and an operator who missed it would lose the history that motivated the change in the first place.",
+          "resolution": "Confirm the archive requirement is the first accomplishment step at the next revision."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-149850",
+          "doc_type": "MOD",
+          "reason": "Shares the maintenance message subject and would be returned by any semantic search on message noise, but it changes the switch that produces the messages rather than the system that presents them, and the two have no shared identifier or common documentation."
+        }
+      ],
+      "conclusion": "Troubleshooting rework delegated to the chapter owners with a published presentation definition.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "doc_id": "PAWO-111196-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis Review — Recorded Parameter Set Against the Proposed Condition Monitoring Offload",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-30",
+      "ata_6d": "31-30-11",
+      "title": "Recorders — Flight Data Recorder"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-09",
+      "released": "2026-06-18",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed review of the extended recorder parameter set, raised from the operator order on health data offload, to establish which recorded parameters the proposed condition monitoring change would duplicate and what the recorder installation still owns.",
+    "sections": {
+      "objective": "Establish what the extended flight data recorder parameter set still owns once a wireless condition monitoring offload is proposed, and whether the two should share a parameter definition or keep separate ones. The review was raised from the operator order asking for automated health data collection, because the answer decides whether that order needs a new acquisition path or only a new offload path.",
+      "findings_summary": "Four items were confirmed and the overlap is real but shallow. The condition monitoring candidate proposes to record and offload a set of engine and system parameters that the recorder already acquires, but it acquires them for a different purpose, at a different rate and with a retention period set by an operational rule rather than by a maintenance need. Sharing the acquisition is possible; sharing the definition is not, because a mandatory parameter definition cannot be changed to suit a maintenance function. The installation part list and the retrofit bulletin both need a note, and the missing records symptom procedure describes the same failure from the other side.",
+      "next_steps": "Recommend a shared acquisition and separate definitions, and give the condition monitoring work order the parameter list with its rates so it does not re-derive them. Add a note to the recorder part list making clear which items are mandatory fit. Ask the recorder owner for a position on whether the fifty hour retention has to be preserved when the same parameter is offloaded by another system."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3130118235301",
+        "D3130006987696",
+        "AGS103845-6C"
+      ],
+      "fins": [
+        "5347FP",
+        "582FW",
+        "6828FW"
+      ],
+      "drawings": [
+        "D31300014382"
+      ],
+      "software": [],
+      "zones": [
+        "146",
+        "171",
+        "251"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111196",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-260142",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "flight data recorder",
+      "parameter set",
+      "retention period",
+      "condition monitoring"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111196-01",
+      "subject_mod": "MOD-111196",
+      "source_io": "IO-C-260142",
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-18",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-03-09",
+      "due_date": "2026-06-26",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EGAM",
+          "EYIS"
+        ],
+        "estimated_manhours": 100,
+        "spent_manhours": 83
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "31",
+          "45",
+          "46"
+        ],
+        "ata_4d": [
+          "31-30",
+          "45-20",
+          "46-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D3130118235301",
+            "D3130006987696"
+          ],
+          "fins": [
+            "5347FP",
+            "582FW",
+            "6828FW"
+          ],
+          "drawings": [
+            "D31300014382"
+          ],
+          "zones": [
+            "146",
+            "171",
+            "251"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "parameters recorded for later analysis and how long they are kept",
+          "getting health data off the aeroplane without an engineer at the gate"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare the recorded parameter list with the proposed offload set",
+          "method": "SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Take the certification position on a shared definition",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Search installation content on the recorder",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111841",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Reached by similarity alone. The two dossiers share no part number, no functional item number and no zone; they were connected by the language of parameters recorded for later analysis and by the retention period both of them specify."
+          },
+          "rationale": "The condition monitoring candidate proposes to acquire parameters the recorder already acquires, at a different rate and for a different purpose. Sharing the acquisition avoids two sensors reading the same thing; sharing the definition is not possible because a mandatory definition cannot be adjusted for a maintenance function.",
+          "resolution": "Shared acquisition recommended with separate definitions; the parameter list and rates issued to the candidate work order."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-C-31-30-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3130006987696",
+              "D3130118235301",
+              "AGS103845-6C"
+            ],
+            "shared_fins": [
+              "5347FP",
+              "582FW",
+              "6828FW"
+            ],
+            "shared_zones": [
+              "146",
+              "171",
+              "251"
+            ],
+            "shared_ata_6d": [
+              "31-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation figure carries the recorder unit and its mounting tray without saying which items are mandatory fit. If a condition monitoring installation shares the tray, a station has no way of telling from the figure which part it may substitute.",
+          "resolution": "Note added identifying the mandatory fit items and the shared mounting provision."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "CRN-31-1014",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3130006987696",
+              "D3130118235301",
+              "AGS103845-6C"
+            ],
+            "shared_fins": [
+              "5347FP",
+              "582FW",
+              "6828FW"
+            ],
+            "shared_zones": [
+              "146",
+              "171",
+              "251"
+            ],
+            "shared_ata_6d": [
+              "31-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The fifty hour unit bulletin states its compliance against the operational rule and nothing else. If the same parameters begin to be offloaded by another system, operators will ask whether the bulletin is still required, and the bulletin as written gives them no answer.",
+          "resolution": "Compliance statement clarified to say that the mandatory retention is unaffected by any other system offloading the same data."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-C-46-40-12-812-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Shares no identifier with the recorder installation; returned because it describes records missing after a rotation in almost the same terms the recorder dossier uses for a retention gap."
+          },
+          "rationale": "The fault symptom procedure for condition monitoring records missing after a rotation is written for a system that collects at the gate. Once the same data can also be read from the recorder, the procedure has a second place to look and does not know it.",
+          "resolution": "Cross-reference to be added when the candidate defines its offload path."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "AMM-C-46-40-12-200-005-A",
+          "doc_type": "AMM",
+          "reason": "Returned on the shared chapter and on store integrity vocabulary, but it checks the data server module store and has no relationship with the recorder unit, its parameter set or its retention period."
+        }
+      ],
+      "conclusion": "Validated. Shared acquisition with separate parameter definitions, and the mandatory retention statement clarified in the bulletin.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

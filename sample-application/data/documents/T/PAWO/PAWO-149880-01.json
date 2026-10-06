@@ -1,0 +1,423 @@
+[
+  {
+    "doc_id": "PAWO-149880-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Heated Butterfly Seat and Piccolo Duct Drain for the Wing Anti-Ice Valves",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Ice Protection — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "30-10-12",
+      "36-20-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00168",
+          "to": "T00238"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-9070",
+        "AUR-9072"
+      ],
+      "operators": [
+        "SOL",
+        "TJT",
+        "JTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-07-13",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the heated valve seat and duct drain, covering the solenoid standard it depends on, the ground electrical budget, the published wing repair in the same bay and the crew limitations that the new dispatch case touches.",
+    "sections": {
+      "objective": "Establish what the trace heater and the piccolo duct drain conflict with, whether the ground electrical budget can carry the heater at the worst-case configuration, and what a heater failure means for dispatch and for the crew limitations that currently assume a valve is either available or not.",
+      "scope_note": "The search covers ATA 30-10 as the primary chapter and ATA 36-20 as secondary, because the bleed monitoring threshold set by the earlier standard is read against the same valve. ATA 24-50 was included for the ground electrical budget. ATA 57-10 lower wing structure was included through the zone search rather than by chapter, because the drain discharges through the leading edge and the access bay is shared with a published repair. Cabin and avionics chapters were not searched.",
+      "method_note": "Entity linking was seeded from the four part numbers, the three FINs, the two drawings and the three zones. Semantic similarity was run over the winter event reports, the reason-for-change text of every anti-ice change on this aircraft and, separately, over the whole flight crew limitation and performance set. That second pass produced two of the seven findings and neither could have been reached by any identifier: the crew documents describe icing conditions and single-source operation in operational language that shares no vocabulary at all with a valve seat heater. One finding came from the zone search alone and connects the candidate to a wing skin repair.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The candidate cannot be embodied on an aircraft that is not at the high force solenoid standard, because it retains that solenoid and its harness; that is declared and is not contentious. The mandatory bulletin that delivers the solenoid standard is the harder question: it is written against an airworthiness directive and its accomplishment adds a harness that the candidate then extends, so an operator embodying both in one visit is working to two bulletins with overlapping steps. The ground electrical budget is the real risk and it is not yet closed. Three documentation items follow. The published lower wing cover repair sits in the same access bay as the new drain discharge and shares nothing with the candidate except the zone. The leading edge wiring sheet carries the valve FIN and both clamp standards and will need a third. The duct leak and flow check will need the drain confirmed clear before pressurisation. Two crew documents are affected and neither is reachable by any identifier: the icing limitations set the dispatch case for one side unavailable, and the single bleed performance content assumes an electrical load that the heater changes.",
+      "next_steps": "Complete the ground electrical load assessment at the worst-case configuration; nothing else can be committed until it closes. Obtain a repair design position on the drain discharge path against the published wing repair. Agree with the operations documentation owner how a heater failure is expressed in the dispatch case, because the current wording admits only an available or unavailable valve. Coordinate the accomplishment steps with the mandatory bulletin so that an operator doing both in one visit is not asked to fit the same clamp twice."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010110579750",
+        "D3010113429790",
+        "D3010122447896",
+        "NYD606637-44"
+      ],
+      "fins": [
+        "2649WX2",
+        "273HA",
+        "7887WX2"
+      ],
+      "drawings": [
+        "D30101189914",
+        "D30101228874"
+      ],
+      "software": [],
+      "zones": [
+        "533",
+        "231",
+        "652"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149880",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "anti-ice",
+      "trace heater",
+      "electrical budget",
+      "dispatch case"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149880-01",
+      "subject_mod": "MOD-149880",
+      "source_io": null,
+      "pawo_status": "RAISED",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-07-13",
+      "due_date": "2026-11-13",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EDSA"
+        ],
+        "estimated_manhours": 280,
+        "spent_manhours": 34
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "30",
+          "36",
+          "24",
+          "57"
+        ],
+        "ata_4d": [
+          "30-10",
+          "36-20",
+          "24-50",
+          "57-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "T00168",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3010110579750",
+            "D3010113429790",
+            "D3010122447896",
+            "NYD606637-44"
+          ],
+          "fins": [
+            "2649WX2",
+            "273HA",
+            "7887WX2"
+          ],
+          "drawings": [
+            "D30101189914"
+          ],
+          "zones": [
+            "533",
+            "652"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "ice forming in a valve seat after water migrates back on shutdown",
+          "low power heating applied on the ground before the first selection",
+          "dispatch case where a protection system is partially available"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released modifications and bulletins on ATA 30-10",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess the ground electrical budget at the worst-case configuration",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the drain discharge path against published wing repairs",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T04",
+          "title": "Review the crew limitation and performance set for the new dispatch case",
+          "method": "SEMANTIC",
+          "owner": "EVAA",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T05",
+          "title": "Coordinate accomplishment steps with the mandatory bulletin",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-146540",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3010110579750",
+              "D3010113429790"
+            ],
+            "shared_fins": [
+              "2649WX2",
+              "273HA"
+            ],
+            "shared_zones": [
+              "533",
+              "231",
+              "652"
+            ],
+            "shared_ata_6d": [
+              "30-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The candidate retains the high force solenoid and the resolved position sensing introduced by that standard, and extends their harness. On an aircraft with the original solenoid there is no harness to extend and no sensing assembly to add the seat temperature signal to.",
+          "resolution": "Retain the solenoid standard as a declared post-modification condition and state the harness dependency explicitly in the description."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-30-1021",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3010110579750",
+              "D3010113429790"
+            ],
+            "shared_fins": [
+              "2649WX2",
+              "273HA"
+            ],
+            "shared_zones": [
+              "533",
+              "652"
+            ],
+            "shared_ata_6d": [
+              "30-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The mandatory bulletin is written against an airworthiness directive and installs a harness support that the candidate moves again. An operator embodying both in one visit works to two bulletins whose steps overlap, and the second will instruct a clamp position that the first has just established.",
+          "resolution": "Coordinate the accomplishment steps and issue a combined instruction for operators taking both, rather than leaving the technician to resolve the overlap."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-T-57-10-12-004",
+          "doc_type": "SRM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "533"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The published external repair patch on the lower shell sits in the same leading edge access bay that the new drain would discharge through, and its aerodynamic fillet is inspected for adhesion loss because water collects at the patch edge. Nothing in either document reads like the other; only the zone connects them.",
+          "resolution": "Obtain a repair design position on discharging condensate over a repaired panel, and route the drain clear of any patch periphery."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "FCOM-T-LIM-30-10-02",
+          "doc_type": "FCOM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew limitation is written on the assumption that airfoil ice protection on a side is either available or unavailable, and it sets a whole-flight restriction on the unavailable case. The candidate introduces a third state in which the valve works but its seat heater does not. The two documents share no identifier, no chapter code and no word of technical vocabulary."
+          },
+          "rationale": "A heater failure is not a valve failure. The valve still opens, more slowly and only on the first selection of the day, and the current limitation has no way of expressing that. Left unaddressed, an operator will either dispatch with no restriction or ground the aircraft, and both are wrong.",
+          "resolution": "Agree the dispatch case with the operations documentation owner and amend the limitation before the modification is launched, not at release."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "FCOM-T-PER-36-20-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew performance content describes operation with reduced air available and the penalties that follow, in tables and operational language. The candidate adds a substantial ground electrical demand that competes for the same source margin. No identifier, no chapter and no vocabulary is shared."
+          },
+          "rationale": "The performance tables assume a ground electrical demand that the trace heater changes at exactly the phase where the auxiliary power unit or a single bleed source is carrying the aircraft. The interaction is small but it has not been checked and the tables are the place it would show.",
+          "resolution": "Include the heater demand in the ground electrical load assessment and confirm the performance tables are unaffected before the assessment is closed."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "WDM-T-92-51-11",
+          "doc_type": "WDM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "2649WX2"
+            ],
+            "shared_zones": [
+              "533"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The leading edge wiring sheet already shows two clamp standards for the valve branch and carries a dashed branch for a heated seat provision that exists on almost no aircraft. The candidate makes that provision real and adds a third clamp standard.",
+          "resolution": "Update the sheet with the heater feed as a solid branch and a third clamp set, and remove the dashed provision annotation once the standard is released."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "AMM-T-30-10-12-700-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3010122447896",
+              "NYD606637-44"
+            ],
+            "shared_fins": [
+              "7887WX2"
+            ],
+            "shared_zones": [
+              "533",
+              "652"
+            ],
+            "shared_ata_6d": [
+              "30-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The leak and flow check pressurises the duct run, and its effectivity note already anticipates a drain at the low point that does not yet exist. A blocked drain would be pressurised without being noticed, which is the one failure mode the drain introduces.",
+          "resolution": "Add the drain clearance confirmation as a step before pressurisation and remove the anticipatory effectivity note once the standard is released."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-146910",
+          "doc_type": "MOD",
+          "reason": "Returned by the ATA 36 secondary search and it does widen a threshold in the same monitoring path, but that threshold was already widened for this valve by the solenoid standard and the dual sensing change is on the cross-bleed manifold, with no shared part, FIN or zone."
+        },
+        {
+          "doc_id": "SRM-T-56-20-11-003",
+          "doc_type": "SRM",
+          "reason": "Surfaces on a semantic search for water ingress causing damage under a seal, which is very close to the mechanism the drain addresses, but it is a cabin window frame repair in the fuselage with no shared zone, no shared identifier and no connection to the wing leading edge."
+        }
+      ],
+      "conclusion": "Not yet issued. One blocking prerequisite confirmed. The ground electrical budget assessment gates everything else and has only just started.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

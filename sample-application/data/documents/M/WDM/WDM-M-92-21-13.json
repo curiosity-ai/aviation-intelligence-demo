@@ -1,0 +1,175 @@
+[
+  {
+    "doc_id": "WDM-M-92-21-13",
+    "doc_type": "WDM",
+    "title": "Fwd Cargo Door Warning Wiring — LH Sill and Door Crossing",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2023-10-09",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-13",
+      "title": "Forward Fuselage Wiring — Door Warning Wiring"
+    },
+    "secondary_ata": [
+      "52-70",
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-10-16",
+      "released": "2019-05-27",
+      "revised": "2023-10-09",
+      "effective": "2023-11-06"
+    },
+    "abstract": "Wiring diagram for the forward cargo door warning circuit on the left-hand side, covering the sill harness, the door hinge crossing and the support brackets that carry the loom along the door surround.",
+    "sections": {
+      "purpose": "This sheet gives the wiring of the forward cargo door warning circuit on the left-hand side, from the door warning computing rack to the proximity sensing installation at the door.",
+      "sheet_note": "The sheet is drawn looking outboard with the door open. The door hinge crossing is the critical feature: the loom takes the full door travel at that point and the bend radius given in the notes is a minimum, not a target. Support brackets along the door surround are shown with their part numbers because they are frequently disturbed by structural work in the same area and are then refitted in the wrong position, which pulls the loom against the frame edge. The right-hand side is on the companion sheet and is not symmetrically identical: the aft bracket spacing differs.",
+      "routing_note": "The loom leaves the door warning computing rack, runs forward along the frame line at stringer 34, drops to the door sill and crosses to the door at the upper hinge. Support brackets are fitted at every second frame station along the surround. The run through the door surround area is the one most often disturbed by structural repair work, so check the bracket positions against this sheet after any work in that zone."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221132883400",
+        "D9221131018789",
+        "D9221137348844",
+        "D9221131217981"
+      ],
+      "fins": [
+        "3WT6",
+        "23WT",
+        "41VC2",
+        "6082VU"
+      ],
+      "drawings": [
+        "D53211108423"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "113"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-52-70-11-400-008-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-M-52-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door warning wiring",
+      "hinge crossing",
+      "support bracket",
+      "sill harness",
+      "bend radius"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Electrical Installation Design"
+    },
+    "type_data": {
+      "sheet_number": "92-21-13",
+      "sheet_title": "FWD CARGO DOOR WARNING — LH SILL AND DOOR CROSSING",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1210W",
+        "1211W",
+        "1214W"
+      ],
+      "connectors": [
+        {
+          "reference": "1210VC",
+          "part_number": "D9221131018789",
+          "location_zone": "891",
+          "contacts": 37
+        },
+        {
+          "reference": "1211VC",
+          "part_number": "D9221131217981",
+          "location_zone": "113",
+          "contacts": 22
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "3WT6",
+          "description": "WARNING SENSOR, DOOR PROXIMITY SENSING, FWD",
+          "zone": "891"
+        },
+        {
+          "fin": "23WT",
+          "description": "SENSOR TARGET, DOOR WARNING COMPUTING, LH",
+          "zone": "891"
+        },
+        {
+          "fin": "41VC2",
+          "description": "CABLE ASSY, DOOR WARNING WIRING, LH",
+          "zone": "113"
+        },
+        {
+          "fin": "6082VU",
+          "description": "TERMINAL BLOCK, DOOR WARNING WIRING, LH",
+          "zone": "113"
+        }
+      ],
+      "wire_count": 42,
+      "wire_gauge_range": "AWG 24 to AWG 16",
+      "routes": [
+        "Zone 113 to zone 891 along the frame line at stringer 34, support brackets at every second frame station",
+        "Door sill to door structure across the upper hinge, minimum bend radius as noted"
+      ],
+      "related_sheets": [
+        "WDM-M-92-21-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

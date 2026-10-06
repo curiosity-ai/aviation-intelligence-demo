@@ -1,0 +1,143 @@
+[
+  {
+    "doc_id": "IO-C-260142",
+    "doc_type": "IO",
+    "title": "Manual Collection of Aircraft Health Data at the Gate — Request for an Automated Alternative",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-40",
+      "ata_6d": "46-40-12",
+      "title": "Maintenance Information — Data Server Module"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "CIRRANE-13",
+        "CIRRANE-11"
+      ],
+      "models": [
+        "CRN-13G1",
+        "CRN-11G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-18",
+      "released": "2026-02-24",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Operator requests an automated way of getting aircraft health data off the aeroplane, because the current process needs an engineer with a laptop at the gate and is losing data whenever a turnaround runs short.",
+    "sections": {
+      "request": "Getting the health data off our aircraft still needs somebody to walk out with a laptop, plug in and wait. On a thirty-five minute turnaround that does not happen, so we only manage it at night stops and at bases where we have staff. The result is that we are analysing data that is two or three days old, and on the aircraft that spend the week away from base we lose whole days because the store fills up and starts overwriting. Our engineering team has built a good picture of which failures we could predict if we had the data on the day, but they cannot act on it. We would like the aircraft to send the data itself when it is on the ground and connected, without anybody having to go out to it, and we would like enough storage on board that a week away from base does not cost us anything.",
+      "background": "We raised the same point through the customer forum in 2024 and were told to wait for the next avionics standard. Since then our fleet has grown from eighteen to thirty-one aircraft and the proportion that stay away from base overnight has gone from a quarter to just under a half. We estimate we currently capture about 55 per cent of the available health data. Our maintenance provider has offered to fit a third-party box but we would rather not carry a non-standard installation across the fleet.",
+      "expected_outcome": "An installation that offloads recorded health data automatically once the aircraft is on the ground and within coverage, with enough on-board retention to survive at least seven days away from base, and with no change to the flight crew procedure."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "164"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00102",
+        "C00126",
+        "C00219"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111841",
+        "doc_type": "MOD",
+        "relation": "CREATED"
+      }
+    ],
+    "keywords": [
+      "health data",
+      "offload",
+      "turnaround",
+      "storage",
+      "fleet growth"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Customer Support Engineering"
+    },
+    "type_data": {
+      "io_number": "IO-C-260142",
+      "raised_by": {
+        "requester_type": "OPERATOR",
+        "operator_code": "VSL",
+        "contact_role": "Head of Maintenance Engineering",
+        "oem_focal_department": "EYIS",
+        "oem_focal_site": "Valmont"
+      },
+      "request_category": "AVIONICS",
+      "priority": "MEDIUM",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {
+        "aircraft_count": 31,
+        "msns": [
+          "C00102",
+          "C00126",
+          "C00219"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13",
+          "CIRRANE-11"
+        ]
+      },
+      "business_justification": "Roughly 45 per cent of available condition-monitoring data is never recovered, which blocks the operator's predictive maintenance programme and keeps two engineers occupied with gate collection at the main base.",
+      "commercial": {
+        "funding": "CONTRACTUAL",
+        "budget_keur": 620,
+        "contract_reference": "CSA-2026-VSL-0102"
+      },
+      "target_dates": {
+        "requested_response": "2026-06-12",
+        "requested_embodiment_start": "2027-03-01"
+      },
+      "created_mod": "MOD-111841"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

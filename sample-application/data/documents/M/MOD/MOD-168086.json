@@ -1,0 +1,194 @@
+[
+  {
+    "doc_id": "MOD-168086",
+    "doc_type": "MOD",
+    "title": "Auxiliary Power Unit Mount Heat Shield Reinforcement and Link Retention",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-11-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-10",
+      "ata_6d": "49-10-12",
+      "title": "Power Plant — APU Mount Assembly"
+    },
+    "secondary_ata": [
+      "49-10",
+      "53-31"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00028",
+          "to": "M00310"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "KLE",
+        "SRP"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "M00310",
+      "production_cut_in_date": "2021-12-03",
+      "retrofit_via": [
+        "MRD-49-1011",
+        "MRD-49-1017"
+      ]
+    },
+    "dates": {
+      "created": "2020-04-28",
+      "released": "2021-11-09",
+      "revised": null,
+      "effective": "2021-12-03"
+    },
+    "abstract": "Reinforces the auxiliary power unit mount heat shield and changes the retention of the forward mount link, after shield distortion and link fastener relaxation were found at the first scheduled compartment inspections.",
+    "sections": {
+      "reason": "Compartment inspections at the four year interval found heat shield distortion around the forward mount link on twenty-three aircraft, with two of them showing measurable relaxation in the link fastener torque. The distortion is thermal and repeatable: the shield as delivered is unsupported over a span of four hundred millimetres directly above the exhaust duct, and it deflects onto the link during a long ground run, which is where the fastener load comes from.",
+      "description": "A stiffening rib is added to the heat shield across the unsupported span, and the shield is fitted with two additional standoffs that pick up existing holes in the mount frame. The forward mount link is replaced by a variant with a shoulder that carries the shield standoff load directly rather than through the fastener, and the link fastener is changed to a controlled preload type. The shroud around the link is retained. No change is made to the mount geometry, so the auxiliary power unit itself is unaffected and no re-rigging is needed after embodiment.",
+      "effects": "Mass increase of three point two kilograms in the tail cone, with a small aft centre of gravity effect that is inside the loading manual tolerance. No electrical load change. Not interchangeable at part level because the link shoulder is new. The removal and installation tasks change for the fastener preload sequence, and the parts catalogue figure gains a pre and post modification item pair. Compartment inspection interval is unchanged.",
+      "embodiment_note": "Cut in at MSN M00310. Retrofit is by bulletin at a base visit, about twenty-six hours with the auxiliary power unit in place, preceded by an inspection bulletin that records the as-found shield condition."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4910128135522",
+        "D4910128114119",
+        "D4910126147898"
+      ],
+      "fins": [
+        "1PB",
+        "3PB",
+        "244PB3"
+      ],
+      "drawings": [
+        "D49101142926"
+      ],
+      "software": [],
+      "zones": [
+        "394",
+        "396"
+      ],
+      "figures": [
+        "FIG-49-10-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00310"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-49-1017",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MRD-49-1011",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-M-49-10-12-000-041-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-M-49-10-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "auxiliary power unit",
+      "heat shield",
+      "mount link",
+      "fastener preload",
+      "tail cone"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Port-Rivage",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168086,
+      "mod_class": "MAJOR",
+      "change_category": "POWERPLANT",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.865",
+          "CS 25.1193"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 3.2,
+      "balance_impact": "Small aft shift, within the loading manual tolerance",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D4910128135522"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4910128114119",
+        "D4910126147898"
+      ],
+      "fins_affected": [
+        "1PB",
+        "244PB3"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 1240,
+      "estimated_cost_keur": 2100,
+      "lead_time_weeks": 58,
+      "production_impact": "Cut in at MSN M00310, shield supplied pre-stiffened by the vendor",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

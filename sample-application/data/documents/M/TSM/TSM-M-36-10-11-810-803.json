@@ -1,0 +1,330 @@
+[
+  {
+    "doc_id": "TSM-M-36-10-11-810-803",
+    "doc_type": "TSM",
+    "title": "Bleed Overheat Caution in the Descent that Cannot Be Reproduced on the Ground",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-02-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "36-20",
+      "54-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2015-12-06",
+      "released": "2016-02-09",
+      "revised": "2016-02-09",
+      "effective": "2016-03-08"
+    },
+    "abstract": "Fault isolation for a bleed overheat caution raised in the descent in cold wet conditions, which clears on the ground and leaves no evidence of a real duct overtemperature.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a bleed overheat caution raised during descent when no duct overtemperature can be confirmed on the ground.",
+      "fault_description": "A bleed overheat caution appears during descent, most often on the right engine and most often in cold, wet conditions. The caution clears before or shortly after landing and cannot be reproduced during a ground run. Borescope inspection of the affected ducting is clean and there is no thermal discolouration at the duct joints. Component replacement has repeatedly failed to change the behaviour. The events cluster by season and by operating region rather than by aircraft.",
+      "isolation_procedure": "1. Ask the crew whether the caution appeared in the descent and record the outside air temperature and the presence of precipitation. 2. Read the bleed monitoring computer fault memory and record the recorded duct temperature at the moment of the caution. 3. If the recorded temperature is below the trip threshold, the caution came from the comparison logic and not from a real overtemperature; continue with this procedure. 4. Do the confirmation task and record both element resistance readings and the local temperature. 5. Calculate the balance between the two elements of the pair and compare it with the limit. 6. If the balance is outside the limit, replace the sensing element assembly and repeat the confirmation task. 7. If the balance is inside the limit, inspect the element routing at the firewall penetration for a section exposed to a cold air wash. 8. Inspect the sleeving where the drain and vent lines cross the forward mount plane. Sleeving that has lost heat resistance is chalky to the touch and shows the braid through the outer coating; a length in that condition lets local heat reach the element run and is a cause of this symptom. 9. Check the accumulator tapping 26PN and the heat exchanger tapping 2PN for leakage staining that would indicate a genuine local hot spot. 10. Do a borescope inspection of the duct joints in the affected run. 11. Where the balance is inside the limit and the routing is as delivered, record the event as a sensing installation limitation and do not replace any bleed component.",
+      "dispatch_note": "Dispatch is permitted with the caution cleared and the ground run satisfactory. Dispatch with the caution latched is not permitted. The master minimum equipment list allows one engine bleed inoperative with an altitude limitation applied."
+    },
+    "entities": {
+      "part_numbers": [
+        "FJD499716-77",
+        "HAD174896-54",
+        "D3610117518658"
+      ],
+      "fins": [
+        "26PN",
+        "2PN"
+      ],
+      "drawings": [
+        "D36101141546"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-36-10-11-200-019-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bleed overheat",
+      "descent",
+      "cold air wash",
+      "element balance",
+      "nuisance caution"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "36-10-11-810-803",
+      "fault_symptom": "AIR ENG 2 BLEED OVERHEAT displayed in the descent, not reproducible on the ground",
+      "fault_codes": [
+        "361011003",
+        "361011019"
+      ],
+      "warning_messages": [
+        "AIR ENG 2 BLEED OVERHEAT",
+        "AIR ENG 1 BLEED OVERHEAT"
+      ],
+      "affected_fins": [
+        "26PN",
+        "2PN"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Thermal gradient across the sensing element pair at the firewall penetration in a cold air wash",
+          "probability_pct": 52,
+          "fin": "2PN"
+        },
+        {
+          "cause": "Element pair resistance balance drifted outside the limit",
+          "probability_pct": 20,
+          "fin": "26PN"
+        },
+        {
+          "cause": "Chafed element at the penetration grommet giving an intermittent short",
+          "probability_pct": 11,
+          "fin": "2PN"
+        },
+        {
+          "cause": "Degraded sleeving at the forward mount plane, seen as surface chalking and braid exposure",
+          "probability_pct": 10,
+          "fin": "2PN"
+        },
+        {
+          "cause": "Genuine local hot spot at a duct joint",
+          "probability_pct": 7,
+          "fin": "26PN"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-M-36-10-11-200-019-A",
+      "dispatch": {
+        "mel_item": "36-11-02A",
+        "dispatchable": true,
+        "dispatch_condition": "One engine bleed inoperative with the altitude limitation of the master minimum equipment list. Not dispatchable with the caution latched."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-M-36-10-11-810-803",
+    "doc_type": "TSM",
+    "title": "Bleed Overheat Caution in the Descent that Cannot Be Reproduced on the Ground",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2019-11-19",
+      "reason": "Sleeving cause and its visual description corrected so that the silicone-glass material is judged on charring and stiffening rather than on a chalked surface it never develops.",
+      "raised_by_pawo": "PAWO-161477-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "36-20",
+      "54-50",
+      "71-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2015-12-06",
+      "released": "2016-02-09",
+      "revised": "2019-11-19",
+      "effective": "2019-12-17"
+    },
+    "abstract": "Fault isolation for a bleed overheat caution raised in the descent in cold wet conditions, which clears on the ground and leaves no evidence of a real duct overtemperature.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a bleed overheat caution raised during descent when no duct overtemperature can be confirmed on the ground.",
+      "fault_description": "A bleed overheat caution appears during descent, most often on the right engine and most often in cold, wet conditions. The caution clears before or shortly after landing and cannot be reproduced during a ground run. Borescope inspection of the affected ducting is clean and there is no thermal discolouration at the duct joints. Component replacement has repeatedly failed to change the behaviour. The events cluster by season and by operating region rather than by aircraft.",
+      "isolation_procedure": "1. Ask the crew whether the caution appeared in the descent and record the outside air temperature and the presence of precipitation. 2. Read the bleed monitoring computer fault memory and record the recorded duct temperature at the moment of the caution. 3. If the recorded temperature is below the trip threshold, the caution came from the comparison logic and not from a real overtemperature; continue with this procedure. 4. Do the confirmation task and record both element resistance readings and the local temperature. 5. Calculate the balance between the two elements of the pair and compare it with the limit. 6. If the balance is outside the limit, replace the sensing element assembly and repeat the confirmation task. 7. If the balance is inside the limit, inspect the element routing at the firewall penetration for a section exposed to a cold air wash. 8. Inspect the sleeving where the drain and vent lines cross the forward mount plane, and read the indication against the material installed. The original material goes chalky and shows the braid through the outer coating. The silicone-glass material of MOD-161477 does neither: it stiffens and chars locally, so look for a brown to black band on the upper surface of the run and check the sleeve by hand for loss of flexibility. A clean, unchalked silicone-glass sleeve is not evidence that the sleeving is serviceable, and discounting this cause on that basis is the most common way this procedure is run to a dead end. 9. Check the accumulator tapping 26PN and the heat exchanger tapping 2PN for leakage staining that would indicate a genuine local hot spot. 10. Do a borescope inspection of the duct joints in the affected run. 11. Where the balance is inside the limit, the routing is as delivered and the sleeving is serviceable against the correct criteria, record the event as a sensing installation limitation and do not replace any bleed component.",
+      "dispatch_note": "Dispatch is permitted with the caution cleared and the ground run satisfactory. Dispatch with the caution latched is not permitted. The master minimum equipment list allows one engine bleed inoperative with an altitude limitation applied."
+    },
+    "entities": {
+      "part_numbers": [
+        "FJD499716-77",
+        "HAD174896-54",
+        "D3610117518658"
+      ],
+      "fins": [
+        "26PN",
+        "2PN"
+      ],
+      "drawings": [
+        "D36101141546"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-161477",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-36-10-11-200-019-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bleed overheat",
+      "descent",
+      "cold air wash",
+      "sleeving charring",
+      "nuisance caution"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "36-10-11-810-803",
+      "fault_symptom": "AIR ENG 2 BLEED OVERHEAT displayed in the descent, not reproducible on the ground",
+      "fault_codes": [
+        "361011003",
+        "361011019"
+      ],
+      "warning_messages": [
+        "AIR ENG 2 BLEED OVERHEAT",
+        "AIR ENG 1 BLEED OVERHEAT"
+      ],
+      "affected_fins": [
+        "26PN",
+        "2PN"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Thermal gradient across the sensing element pair at the firewall penetration in a cold air wash",
+          "probability_pct": 52,
+          "fin": "2PN"
+        },
+        {
+          "cause": "Element pair resistance balance drifted outside the limit",
+          "probability_pct": 20,
+          "fin": "26PN"
+        },
+        {
+          "cause": "Chafed element at the penetration grommet giving an intermittent short",
+          "probability_pct": 11,
+          "fin": "2PN"
+        },
+        {
+          "cause": "Degraded sleeving at the forward mount plane; surface chalking and braid exposure on the original material, local charring and stiffening with no chalking on the silicone-glass material",
+          "probability_pct": 10,
+          "fin": "2PN"
+        },
+        {
+          "cause": "Genuine local hot spot at a duct joint",
+          "probability_pct": 7,
+          "fin": "26PN"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-M-36-10-11-200-019-A",
+      "dispatch": {
+        "mel_item": "36-11-02A",
+        "dispatchable": true,
+        "dispatch_condition": "One engine bleed inoperative with the altitude limitation of the master minimum equipment list. Not dispatchable with the caution latched."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,163 @@
+[
+  {
+    "doc_id": "AMM-C-49-60-11-700-005-A",
+    "doc_type": "AMM",
+    "title": "Auxiliary Power Unit Electronic Control Box — Functional Test",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-12-03",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-06-05",
+      "released": "2019-02-19",
+      "revised": "2024-12-03",
+      "effective": "2024-12-20"
+    },
+    "abstract": "Functional test of the auxiliary power unit electronic control box through a full start, load and shutdown cycle, with the parameter standard read-out that selects the acceptance criteria.",
+    "sections": {
+      "purpose": "This task gives the functional test of the auxiliary power unit electronic control box through a complete start, load acceptance and shutdown cycle, and the criteria that apply to each parameter standard.",
+      "job_setup_note": "The aircraft must be positioned with the auxiliary power unit exhaust clear of buildings and of other aircraft, and the intake area must be roped off. Record the field elevation and the ambient temperature before the start, because the acceptance criteria for the start time and the peak exhaust gas temperature both depend on them. A fire guard must be posted for the whole test.",
+      "procedure": "1. WARNING: KEEP THE INTAKE AND EXHAUST AREAS CLEAR AND POST A FIRE GUARD BEFORE THE AUXILIARY POWER UNIT IS STARTED. 2. Record the field elevation, the ambient temperature and the parameter standard reported by the control box. 3. Do the built-in test of the control box and confirm that the fault memory is clear. 4. Start the auxiliary power unit and record the start time and the peak exhaust gas temperature. 5. CAUTION: DO NOT ATTEMPT A SECOND START WITHIN THREE MINUTES OF A HUNG OR ABORTED START. THE STARTER DUTY CYCLE MUST BE RESPECTED. 6. Compare the recorded start time and peak temperature with the criteria for the reported parameter standard, corrected for elevation and ambient temperature. 7. Apply the electrical load and confirm that the generator accepts it without a speed excursion. 8. Apply the bleed load and confirm that the surge control valve responds. 9. Confirm the control box mount link 6PA and the start sequencing firewall panel 8121PA9 show no sign of overheating after the run. 10. Shut down the auxiliary power unit and record the run-down time. 11. Confirm that the cooling flow continues for the programmed period after shutdown. 12. Read out and record any fault stored during the cycle.",
+      "close_out": "Let the auxiliary power unit compartment cool before any access door is opened. Confirm that no fault is stored and that no maintenance message remains active. Record the parameter standard, the ambient conditions, the start time, the peak exhaust gas temperature and the run-down time in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4960112246671",
+        "D4960117781398",
+        "D4960118355783"
+      ],
+      "fins": [
+        "6PA",
+        "8121PA9",
+        "62PA"
+      ],
+      "drawings": [
+        "D49601238355"
+      ],
+      "software": [
+        "LG6CA9A3A9B",
+        "LC8C343F033"
+      ],
+      "zones": [
+        "391",
+        "394",
+        "396"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-C-49-60-11-810-806",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "auxiliary power unit test",
+      "start time",
+      "exhaust gas temperature",
+      "parameter standard",
+      "fire guard"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "49-60-11-700-005-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. Select the start acceptance criteria for the parameter standard the control box reports, corrected for field elevation and ambient temperature.",
+      "manhours": 4.5,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "391",
+          "394",
+          "396"
+        ],
+        "access_panels": [
+          "391BL",
+          "394AR",
+          "396BR"
+        ],
+        "doors": [
+          "APU access door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep the intake and exhaust areas clear and roped off.",
+          "Post a fire guard for the whole test.",
+          "Let the compartment cool before an access door is opened."
+        ],
+        "tooling": [
+          {
+            "reference": "98D49601-005",
+            "description": "Portable maintenance terminal"
+          },
+          {
+            "reference": "98D49601-009",
+            "description": "Ambient condition recorder"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,173 @@
+[
+  {
+    "doc_id": "MOD-161688",
+    "doc_type": "MOD",
+    "title": "Interference-Fit Fastener Standard at the Wing Lower Cover Spanwise Joints",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-10-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "57",
+      "ata_4d": "57-10",
+      "ata_6d": "57-10-12",
+      "title": "Wing Box Structure — Lower Cover Panels"
+    },
+    "secondary_ata": [
+      "51-70"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00443",
+          "to": "M00478"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION"
+      ],
+      "production_effectivity": "M00443",
+      "production_cut_in_date": "2024-09-17",
+      "retrofit_via": [
+        "MRD-57-1029"
+      ]
+    },
+    "dates": {
+      "created": "2022-02-08",
+      "released": "2023-10-24",
+      "revised": null,
+      "effective": "2023-11-20"
+    },
+    "abstract": "Spanwise joints in the wing lower cover move to an interference-fit fastener standard with cold-worked holes, lifting the fatigue quality of the joint and supporting the extended design service goal offered on later deliveries.",
+    "sections": {
+      "reason": "The extended design service goal offered from 2024 deliveries onwards could not be substantiated on the wing lower cover spanwise joints with the clearance-fit fastener standard. Full-scale fatigue test results at 1.6 lifetimes showed initiation at three joint locations in the inboard lower cover, all at the first fastener row of a spanwise splice. There is no in-service issue; this is a production standard change made to buy fatigue quality on new-build aircraft rather than to correct anything already flying.",
+      "description": "Fastener holes at the spanwise splices of the inboard and mid lower cover are cold-worked and the fasteners installed to an interference fit, with a controlled squeeze and a mandatory hole quality record. The upper interface frame D5710120386639 and the lower stiffener D5710123576997 are re-machined so that the splice strap sits flat after cold working, and the strap INN928999-53 is replaced by a thicker item. Protective sleeving AGS17834-4B is added where the harness route crosses the reworked joint. Detail is on drawing D57101268761. All of the work is inside the wing box, zones 532 and 633, and is done during panel closure on the production line.",
+      "effects": "Mass increase of 7.6 kg per aircraft, symmetric. No electrical load change. Not interchangeable: a post-modification wing cannot receive a pre-modification splice strap because the hole diameters differ after cold working. The joint inspection threshold in the airworthiness limitations moves from 24 000 to 36 000 flight cycles for post-modification aircraft, which is the whole point of the change. The structure repair scheme for the spanwise splice needs a variant for cold-worked holes.",
+      "embodiment_note": "Production only in practice. Cut in at MSN M00443 in September 2024. Service Bulletin MRD-57-1029 exists for the small number of aircraft that were partly built to the old standard and completed after cut-in; it is not offered as a general retrofit because cold working an assembled wing is not practical."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5710120386639",
+        "D5710123576997",
+        "INN928999-53",
+        "AGS17834-4B"
+      ],
+      "fins": [],
+      "drawings": [
+        "D57101268761"
+      ],
+      "software": [],
+      "zones": [
+        "532",
+        "633"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00443"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-57-1029",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-M-57-10-12-200-015-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "wing lower cover",
+      "spanwise splice",
+      "cold worked hole",
+      "interference fit",
+      "design service goal"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Wing Design Office"
+    },
+    "type_data": {
+      "mod_number": 161688,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "CERTIFICATION",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.571",
+          "CS 25.603"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 7.6,
+      "balance_impact": "Symmetric, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AGS17834-4B"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5710120386639",
+        "D5710123576997",
+        "INN928999-53"
+      ],
+      "fins_affected": [],
+      "software_affected": [],
+      "estimated_manhours": 320,
+      "estimated_cost_keur": 1450,
+      "lead_time_weeks": 64,
+      "production_impact": "Cut-in at MSN M00443 with new cold-working tooling at Kingsmoor and a revised hole quality record",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

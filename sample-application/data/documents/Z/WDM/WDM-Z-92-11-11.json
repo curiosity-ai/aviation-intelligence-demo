@@ -1,0 +1,184 @@
+[
+  {
+    "doc_id": "WDM-Z-92-11-11",
+    "doc_type": "WDM",
+    "title": "Cockpit Panel Harnesses — Window Heat and Navigation Receiver Interfaces",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2021-06-11",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-11",
+      "ata_6d": "92-11-11",
+      "title": "Flight Compartment Wiring — Cockpit Panel Harnesses"
+    },
+    "secondary_ata": [
+      "30-40",
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-03-02",
+      "released": "2016-08-19",
+      "revised": "2021-06-11",
+      "effective": "2021-07-02"
+    },
+    "abstract": "Wiring diagram sheet for the cockpit panel harnesses, showing the window heat supply and sensing runs and the navigation receiver interfaces, with the spare contact allocation at each panel connector.",
+    "sections": {
+      "purpose": "This sheet shows the cockpit panel harnesses that carry the window heat supply and sensing circuits and the navigation receiver interfaces, together with the spare contacts available at each panel connector.",
+      "sheet_note": "The sheet is drawn as an elevation of the flight compartment looking forward, with the glareshield removed. Window heat supply conductors are shown in heavy line because they carry the highest current in the flight compartment and are routed separately from every sensing circuit. The spare contact table on sheet 2 is the reference used when a new interface is added; the two spares at the left window connector are already allocated to the sensing lead and are not available. The navigation receiver interface shown on sheet 3 changed with the multi-mode receiver installation.",
+      "routing_note": "The window heat supply runs from the overhead panel down the left and right cockpit side wall in zones 211 and 214 to the window terminations, and the sensing circuits run in a separate loom on the opposite side of the frame with a minimum separation of 75 millimetres. The navigation receiver interface leaves the avionics rack and enters the flight compartment through the zone 215 penetration. Any new termination at the window frame must use the frame penetration and must not be routed across the sealing land."
+    },
+    "entities": {
+      "part_numbers": [
+        "ASD771229-62",
+        "AGS644012K4",
+        "D9211126163344",
+        "D9211126648738"
+      ],
+      "fins": [
+        "21VC6",
+        "28VC",
+        "156VU2"
+      ],
+      "drawings": [
+        "D92111141247"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "214",
+        "215"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-34-1207",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-159775",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cockpit panel harness",
+      "window heat supply",
+      "sensing loom",
+      "spare contact",
+      "frame penetration"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "sheet_number": "92-11-11",
+      "sheet_title": "COCKPIT PANEL HARNESSES — WINDOW HEAT AND NAVIGATION INTERFACES",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1110W",
+        "1111W",
+        "1126W"
+      ],
+      "connectors": [
+        {
+          "reference": "1110VC",
+          "part_number": "ASD771229-62",
+          "location_zone": "211",
+          "contacts": 26
+        },
+        {
+          "reference": "1126VC",
+          "part_number": "D9211126163344",
+          "location_zone": "215",
+          "contacts": 55
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "21VC6",
+          "description": "CIRCUIT BREAKER, COCKPIT PANEL HARNESSES, FWD",
+          "zone": "211"
+        },
+        {
+          "fin": "28VC",
+          "description": "BACKSHELL, FLIGHT COMPARTMENT WIRING, LH",
+          "zone": "214"
+        },
+        {
+          "fin": "156VU2",
+          "description": "CIRCUIT BREAKER, OVERHEAD PANEL WIRING, OUTBD",
+          "zone": "215"
+        }
+      ],
+      "wire_count": 142,
+      "wire_gauge_range": "AWG 24 to AWG 8",
+      "routes": [
+        "Overhead panel down the left cockpit side wall in zone 211 to the left window terminations",
+        "Overhead panel down the right cockpit side wall in zone 214 to the right window terminations",
+        "Avionics rack to the flight compartment through the zone 215 penetration"
+      ],
+      "related_sheets": [
+        "WDM-Z-92-21-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

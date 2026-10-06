@@ -1,0 +1,186 @@
+[
+  {
+    "doc_id": "MOD-111108",
+    "doc_type": "MOD",
+    "title": "Coarse Mesh Inlet Screen on the Centre Tank Boost Pumps",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-03-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00559"
+        }
+      ],
+      "excluded_msns": [
+        "C00135",
+        "C00171"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "CRN-28-1019"
+      ]
+    },
+    "dates": {
+      "created": "2021-11-02",
+      "released": "2023-03-21",
+      "revised": null,
+      "effective": "2023-04-11"
+    },
+    "abstract": "A coarser inlet screen for the centre tank boost pumps, adopted after fine-mesh screens blinded with tank sealant debris on early-build aircraft and produced low-pressure warnings at high fuel flow.",
+    "sections": {
+      "reason": "Centre tank boost pump low-pressure warnings were reported on nineteen aircraft, all from the first four production batches, and always at high fuel flow shortly after a centre tank refuel. Removed pumps were serviceable; in every case the inlet screen was partly blinded with cured sealant fragments from the tank build. Later production aircraft use a revised tank sealing process and do not show the problem, so the change is offered as a retrofit only and no production cut-in is required.",
+      "description": "The 74 micron inlet screen on each centre tank boost pump is replaced by a 180 micron screen with a larger open area, which passes the sealant fragment size range without blinding while still protecting the impeller. The pump inlet actuator D2820111798703 is retained but the screen carrier is replaced, and the pump outlet heat exchanger D2820117029234 is re-shimmed because the new carrier is 6 mm longer. The inlet manifold CIN652579-17 is unchanged. Pump functional item numbers 23QT6 and 5QT keep their positions. Revised detail is on drawings D28201118443 and D28201141083. The work is done through the wing tank access panels in zones 531, 591 and 633 with the tank drained and purged.",
+      "effects": "Mass change is negligible at 0.1 kg per aircraft. No electrical load change. The screens are interchangeable in both directions, and a mixed installation between the two centre tank pumps is permitted. Minimum equipment list dispatch with one centre tank pump inoperative is unchanged. The pump removal and installation tasks need a revised screen part number and the fuel system trouble shooting content for low pressure warnings gains a screen condition check.",
+      "embodiment_note": "Retrofit only, through Service Bulletin CRN-28-1019, during any visit where the centre tank is already open. Kits contain two screens and the shim set and are available from stock. Aircraft delivered from MSN C00561 onward were built with the revised tank sealing process and are outside the effectivity."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820111798703",
+        "D2820117029234",
+        "CIN652579-17"
+      ],
+      "fins": [
+        "23QT6",
+        "5QT"
+      ],
+      "drawings": [
+        "D28201118443",
+        "D28201141083"
+      ],
+      "software": [],
+      "zones": [
+        "531",
+        "591",
+        "633"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00135",
+        "C00171",
+        "C00561"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-28-1019",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-28-20-11-000-005-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-28-20-11-400-005-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "boost pump",
+      "inlet screen",
+      "sealant debris",
+      "low pressure warning",
+      "centre tank"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Wendmark",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111108,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.951",
+          "CS 25.997"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.1,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2820111798703",
+        "D2820117029234"
+      ],
+      "fins_affected": [
+        "23QT6",
+        "5QT"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 48,
+      "estimated_cost_keur": 140,
+      "lead_time_weeks": 16,
+      "production_impact": "No production cut-in; later aircraft are not affected",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

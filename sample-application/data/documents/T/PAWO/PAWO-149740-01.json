@@ -1,0 +1,399 @@
+[
+  {
+    "doc_id": "PAWO-149740-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Dual Path Session Management and Antenna Sharing for the Datalink",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-28",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-70-12",
+      "46-40-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00095",
+          "to": "T00238"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA",
+        "HKA",
+        "JTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-28",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the datalink dual path and aerial change, covering the relocation standard it builds on, the crown route capacity, the wiring sheet that shares the router FIN and the crew procedure that describes the loss.",
+    "sections": {
+      "objective": "Identify everything in the applicable documentation that the dual path session change and the removal of the aerial splitter would conflict with or invalidate, and establish whether the cabin connectivity installation approval survives the loss of the shared feed.",
+      "scope_note": "The search covers ATA 23-70 as the primary chapter, with ATA 46-40 as secondary because the cabin connectivity installation shares the aerial, and ATA 92 for the crown route capacity. ATA 34 navigation was included in the first pass because the satellite data unit appears in both chapters, and then excluded: the data unit itself is untouched and no shared identifier survived the second pass. Structures chapters were not searched; the only structural interface is the bulkhead penetration, which is a standard fitting.",
+      "method_note": "Entity linking was seeded from the four part numbers, the three FINs, the single drawing and the three zones carried by the candidate. Semantic similarity was run over the crew report text, the abstracts and the reason-for-change sections. The most valuable finding came from semantic similarity alone: a flight crew procedure describing what the crew do when the log-on is lost, written entirely in operational language with no equipment identifier in it, which no entity search would ever return. One finding came from entity linking alone, through a single FIN on a wiring sheet whose subject has nothing to do with datalink.",
+      "findings_summary": "Six items are confirmed and one is blocking. The candidate cannot be embodied on an aircraft that is not already at the ventilated shelf standard, because the deeper interface unit does not fit the plain tray and the thermal margin assumed by the dual path design comes from the ventilated shelf. That is a hard prerequisite and is already declared. The retrofit bulletin for the relocation is written for a router that the candidate replaces, and its material note will name a part that is no longer supplied once the candidate is released. Two documentation items follow directly: the troubleshooting procedure branches on the presence of the aerial splitter, which the candidate removes, and the illustrated parts figure will need a third tray and unit state. The crew procedure for a lost log-on describes a recovery behaviour that the candidate changes fundamentally, and nothing in either document points at the other. Finally the cockpit panel wiring sheet carries the router FIN in its equipment list, which is how the crown route capacity question surfaced.",
+      "next_steps": "Obtain a position from the connectivity supplier and from the certification office on whether removing the splitter invalidates the cabin installation approval. Measure the crown route bundle at the drop station on a representative aircraft before the feed is committed. Raise a change request against the relocation bulletin material note. Draft the crew procedure change in parallel with the design rather than after it, because the crew behaviour change is the operationally visible part of this modification."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370115362436",
+        "D2370116071238",
+        "HOD93837-98",
+        "EN364032-83"
+      ],
+      "fins": [
+        "295RN",
+        "5RC",
+        "55RC"
+      ],
+      "drawings": [
+        "D23701264936"
+      ],
+      "software": [],
+      "zones": [
+        "163",
+        "273",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149740",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-T-260355",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "datalink",
+      "aerial sharing",
+      "crown route",
+      "crew procedure"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149740-01",
+      "subject_mod": "MOD-149740",
+      "source_io": "IO-T-260355",
+      "pawo_status": "RAISED",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-28",
+      "due_date": "2026-08-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 190,
+        "spent_manhours": 42
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "23",
+          "46",
+          "92"
+        ],
+        "ata_4d": [
+          "23-70",
+          "46-40",
+          "92-11"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "T00095",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2370115362436",
+            "D2370116071238"
+          ],
+          "fins": [
+            "295RN",
+            "5RC",
+            "55RC"
+          ],
+          "drawings": [
+            "D23701264936"
+          ],
+          "zones": [
+            "163",
+            "273"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "connection lost at the boundary between coverage areas",
+          "equipment sharing an aerial through a splitter",
+          "session held open across a change of medium"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released modifications and bulletins on ATA 23-70",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess the connectivity installation approval against splitter removal",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Measure the crown route bundle at the drop station",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T04",
+          "title": "Review the crew documentation for the recovery behaviour change",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-146680",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370115362436",
+              "D2370116071238",
+              "HOD93837-98"
+            ],
+            "shared_fins": [
+              "295RN",
+              "5RC"
+            ],
+            "shared_zones": [
+              "163",
+              "273"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The deeper interface unit only fits the ventilated tray, and the thermal margin the dual path design assumes comes from the ventilated shelf position. An aircraft still at the original shelf cannot take the candidate at all.",
+          "resolution": "Retain the relocation standard as a declared post-modification condition and state it in the bulletin effectivity, not only in the applicability block."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-23-1014",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370115362436",
+              "D2370116071238"
+            ],
+            "shared_fins": [
+              "295RN"
+            ],
+            "shared_zones": [
+              "163"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The relocation bulletin lists the current interface unit in its material note. Once the candidate is released that unit is superseded and an operator ordering the relocation kit will receive a part that the candidate immediately replaces.",
+          "resolution": "Raise a change request against the material note before the candidate is launched, and add an ordering caution for operators planning both."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-T-92-11-12",
+          "doc_type": "WDM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "5RC"
+            ],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The overhead panel wiring sheet lists the router FIN in its equipment list, because the router control lines terminate there. Nothing in the sheet mentions datalink and nothing in the candidate mentions the overhead panel; the link is the FIN alone. It matters because the sheet is where the crown route capacity constraint is stated.",
+          "resolution": "Use the sheet as the reference for the crown route capacity check and update its equipment list when the second path is added."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "FCOM-T-PRO-23-70-02",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew procedure describes waiting for an automatic recovery and then reverting to voice reporting. The candidate removes the wait entirely by holding the exchange open across the change of medium. The two documents describe the same event from opposite sides and share no identifier, no chapter code and no vocabulary: one says log-on lost and position report, the other says session teardown and coverage handover."
+          },
+          "rationale": "The crew procedure is written around a recovery that takes minutes. If the candidate works, the crew will never see the not connected state at all, and the procedure as written will teach a behaviour that no longer applies.",
+          "resolution": "Draft the crew procedure change in parallel with the design. Do not leave it to the documentation update after release; the behaviour change is the operationally visible part of this modification."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "TSM-T-23-70-11-810-807",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370116071238",
+              "HOD93837-98"
+            ],
+            "shared_fins": [
+              "5RC",
+              "55RC"
+            ],
+            "shared_zones": [
+              "163",
+              "273"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure branches on whether the aerial splitter is present and uses a return loss measurement at the splitter output as one of its three discriminating steps. The candidate removes the splitter, so that branch becomes unreachable and the isolation loses a third of its coverage.",
+          "resolution": "Rewrite the isolation around the dedicated feed, and keep the splitter branch for unmodified aircraft under an explicit effectivity."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-T-23-70-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370116071238",
+              "EN364032-83"
+            ],
+            "shared_fins": [
+              "55RC"
+            ],
+            "shared_zones": [
+              "163"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries the ventilated and plain trays as alternates. The candidate adds a third state for the interface unit and a new bulkhead penetration item, and the spacer already listed is used at a different quantity.",
+          "resolution": "Add the new items and the third unit state at release. The figure structure supports it without a split."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "FCOM-T-DSC-23-70-01",
+          "doc_type": "FCOM",
+          "reason": "The closest possible match on any semantic search of this subject and it will be returned first every time, but it describes the log-on state and the automatic medium selection in terms that remain correct after the change. Only the abnormal procedure entry needs rewriting."
+        },
+        {
+          "doc_id": "MOD-146050",
+          "doc_type": "MOD",
+          "reason": "Returned through the ATA 92 crown route search and it does touch the same cabin ceiling route, but it concerns cabin wiring segregation and shares no FIN, no equipment and no chapter with the datalink installation."
+        }
+      ],
+      "conclusion": "Not yet issued. One blocking prerequisite confirmed. The connectivity approval question and the crown route capacity measurement are both open.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "MOD-159030",
+    "doc_type": "MOD",
+    "title": "Throttle Control Unit Position Pick-Off Change to a Dual Redundant Contactless Sensor",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-11-10",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-10",
+      "ata_6d": "76-10-12",
+      "title": "Power Control — Throttle Control Unit"
+    },
+    "secondary_ata": [
+      "76-10-11",
+      "73-20"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-1226",
+        "VDK-1232",
+        "PYR-1127G",
+        "PYR-1133G"
+      ],
+      "operators": [
+        "CBS",
+        "HKA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-155845"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-11-10",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Replacement of the wiper-type throttle position pick-off by a dual redundant contactless sensor, removing the wear mechanism that drives thrust lever angle disagreement messages late in the unit's life.",
+    "sections": {
+      "reason": "Thrust lever angle disagreement messages account for eighteen per cent of throttle control unit removals and the rate rises sharply after twenty-five thousand flight hours on the unit. Strip-down consistently shows track wear on the wiper pick-off at the two positions the lever occupies most often, climb and idle. The message is not dispatch-critical in isolation but it generates a maintenance action on every occurrence and it degrades crew confidence in the autothrust. The supplier has a qualified contactless sensor in the same envelope, which makes the change a package rather than a redesign.",
+      "description": "The wiper pick-off is replaced by a dual redundant contactless sensor reading the same shaft. The heat shield D7610127309159 is replaced because the sensor sits deeper in the housing, and the tube assembly D7610128936747 that carries the harness is re-routed around the new sensor body. A protective sleeve LN938888K1 is fitted where the harness crosses the housing edge. The seal at FIN 8EC is renewed and the cowl latch at FIN 9EC7 is disturbed for access. The lever quadrant itself is not changed and the detent standard already released is unaffected, but the unit must be at that standard before this change is embodied because the friction clamp face is the sensor datum. Work is in zones 211 and 215 with the centre pedestal opened. Detail is on drawing D76101247347.",
+      "effects": "Mass increase of 0.3 kilograms. Electrical load increases by 8 volt amperes for the second sensor channel. Not interchangeable: the sensor depth changes the housing and the earlier pick-off cannot be refitted. Thrust lever angle disagreement messages are expected to fall by more than ninety per cent and the unit removal rate should approach the fleet average for a flight deck control. The unit inspection task and the parts figure require re-issue; no flight crew documentation change is expected because the lever feel and the autothrust behaviour are unchanged.",
+      "embodiment_note": "Production cut-in only in the first instance, with spares support so that units passing through the repair loop are converted. A retrofit bulletin will be considered once the production experience is established.",
+      "open_points": "Design is under way. The outstanding pre-analysis question is whether the sensor datum can be taken from the friction clamp face on units that have been through a repair shop more than once, where the face may have been re-machined."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7610127309159",
+        "D7610128936747",
+        "LN938888K1"
+      ],
+      "fins": [
+        "8EC",
+        "9EC7"
+      ],
+      "drawings": [
+        "D76101247347"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "215"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155845",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "throttle position pick-off",
+      "contactless sensor",
+      "lever angle disagreement",
+      "track wear",
+      "sensor datum"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Port-Rivage",
+      "role": "Flight Deck Design Office"
+    },
+    "type_data": {
+      "mod_number": 159030,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1329"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.3,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 8,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "LN938888K1"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D7610127309159",
+        "D7610128936747"
+      ],
+      "fins_affected": [
+        "8EC",
+        "9EC7"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 180,
+      "estimated_cost_keur": 760,
+      "lead_time_weeks": 36,
+      "production_impact": "Cut-in planned with the supplier build standard change",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

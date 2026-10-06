@@ -1,0 +1,331 @@
+[
+  {
+    "doc_id": "AMM-T-21-60-12-700-001-A",
+    "doc_type": "AMM",
+    "title": "Air Conditioning Zone Controller — Operational Test",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2008-03-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "21-60-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-07-20",
+      "released": "2008-03-20",
+      "revised": "2008-03-20",
+      "effective": "2008-04-10"
+    },
+    "abstract": "Operational test of both zone controllers, exercising the trim air valve authority on each cabin zone and confirming that a duct overheat latches the affected valve closed until the controller is power cycled.",
+    "sections": {
+      "purpose": "This task gives the operational test of the air conditioning zone controllers. Use it after a controller replacement, after a software load and as the closing test of a cabin temperature complaint investigation.",
+      "job_setup_note": "The test needs a bleed air source, either the auxiliary power unit or a ground cart, and the cabin doors closed so that the zones can hold a demand. Allow forty minutes of stabilisation before the first reading; a test run on a cold-soaked aircraft gives readings that look like a control fault and are not. Station one person at the cabin attendant panel and one at the maintenance terminal.",
+      "procedure": "WARNING: DO NOT WORK IN A DUCT ACCESS AREA WHILE THE BLEED AIR SOURCE IS RUNNING. DUCT SURFACES REACH TEMPERATURES THAT CAUSE BURNS. Start the bleed air source and let the system stabilise for forty minutes with all doors closed. Select the mid position on every zone from the cabin attendant panel and record the duct temperature and the valve position for each. Select the coldest position on one zone at a time and confirm that the trim air actuator D2160117909333 drives to the commanded position within the time in the illustration. CAUTION: DO NOT SELECT THE COLDEST POSITION ON MORE THAN ONE ZONE AT A TIME DURING THIS PART OF THE TEST. A SIMULTANEOUS DEMAND WILL MASK AN AUTHORITY FAULT ON A SINGLE ZONE. Repeat for the warmest position. Force a duct overheat by the test procedure at the maintenance terminal and confirm that the valve at the zone controller D2160128690391 closes and stays closed. Power cycle the controller and confirm that the valve is released. Return every zone to the mid position and let the cabin stabilise.",
+      "close_out": "Confirm that no zone controller maintenance message is present and that the protection latch set during the test has been cleared by the power cycle. Shut down the bleed air source. Record the duct temperature and the valve position for every zone. Where a valve does not reach the commanded position inside the time, refer to the applicable fault isolation procedure."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160117909333",
+        "D2160128690391",
+        "D2160120235977"
+      ],
+      "fins": [
+        "7982HM",
+        "7HQ5",
+        "521HM"
+      ],
+      "drawings": [
+        "D21601284523"
+      ],
+      "software": [
+        "LA1R2B6A257"
+      ],
+      "zones": [
+        "292",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142870",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-21-60-12-900-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "zone controller",
+      "operational test",
+      "trim air authority",
+      "duct overheat",
+      "protection latch"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "21-60-12-700-001-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. On aircraft with the split upper deck zoning, test the forward and aft upper deck zones separately.",
+      "manhours": 8.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "292",
+          "293"
+        ],
+        "access_panels": [
+          "292CR",
+          "293CR"
+        ],
+        "doors": [
+          "Upper deck passenger door 1 RH"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not work in a duct access area while the bleed air source is running.",
+          "Keep the cabin doors closed for the whole test.",
+          "Allow forty minutes of stabilisation before the first reading."
+        ],
+        "tooling": [
+          {
+            "reference": "98D21601-033",
+            "description": "Maintenance terminal interface cable"
+          },
+          {
+            "reference": "98D21601-041",
+            "description": "Duct temperature probe set"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-21-60-12-900-002-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-T-21-60-12-700-001-A",
+    "doc_type": "AMM",
+    "title": "Air Conditioning Zone Controller — Operational Test",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2017-12-06",
+      "reason": "Stabilisation period restated per loaded operational standard and a read back of that standard added to the test preliminaries.",
+      "raised_by_pawo": "PAWO-142870-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "21-60-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-07-20",
+      "released": "2008-03-20",
+      "revised": "2017-12-06",
+      "effective": "2018-01-15"
+    },
+    "abstract": "Operational test of both zone controllers, exercising the trim air valve authority on each cabin zone and confirming that the duct overheat protection resets rather than latches. The stabilisation period is read from the loaded operational standard.",
+    "sections": {
+      "purpose": "This task gives the operational test of the air conditioning zone controllers. Use it after a controller replacement, after a software load and as the closing test of a cabin temperature complaint investigation.",
+      "job_setup_note": "The test needs a bleed air source, either the auxiliary power unit or a ground cart, and the cabin doors closed so that the zones can hold a demand. The stabilisation period is no longer the same on every aircraft: read the operational standard first and take the period from the preliminaries table, because the pull-down authority limit introduced with ZC_OPS_V4.1 changes how the loop settles. A test run on a cold-soaked aircraft gives readings that look like a control fault and are not. Station one person at the cabin attendant panel and one at the maintenance terminal.",
+      "procedure": "WARNING: DO NOT WORK IN A DUCT ACCESS AREA WHILE THE BLEED AIR SOURCE IS RUNNING. DUCT SURFACES REACH TEMPERATURES THAT CAUSE BURNS. Record the operational software part number reported by each controller at the maintenance terminal before anything else is done, and take the stabilisation period for that standard from the preliminaries table: forty minutes where the controller reports a standard earlier than LB8R1DDEAAF, twenty-six minutes where it reports LB8R1DDEAAF or later. Start the bleed air source and let the system stabilise for that period with all doors closed. Select the mid position on every zone from the cabin attendant panel and record the duct temperature and the valve position for each. Select the coldest position on one zone at a time and confirm that the trim air actuator D2160117909333 drives to the commanded position within the time in the illustration. CAUTION: DO NOT SELECT THE COLDEST POSITION ON MORE THAN ONE ZONE AT A TIME DURING THIS PART OF THE TEST. A SIMULTANEOUS DEMAND WILL MASK AN AUTHORITY FAULT ON A SINGLE ZONE. Repeat for the warmest position. Force a duct overheat by the test procedure at the maintenance terminal and confirm that the valve at the zone controller D2160128690391 closes. Confirm that the protection resets after ninety seconds below threshold and that a maintenance message is recorded. Return every zone to the mid position and let the cabin stabilise.",
+      "close_out": "Confirm that no zone controller maintenance message is present other than the one recorded during the protection test, and clear that one. Shut down the bleed air source. Record the duct temperature and the valve position for every zone and the reported software part numbers. A test sheet that does not carry the operational standard cannot be accepted, because the stabilisation period it was run to cannot then be established. Where a valve does not reach the commanded position inside the time, refer to the applicable fault isolation procedure."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160117909333",
+        "D2160128690391",
+        "D2160120235977"
+      ],
+      "fins": [
+        "7982HM",
+        "7HQ5",
+        "521HM"
+      ],
+      "drawings": [
+        "D21601284523"
+      ],
+      "software": [
+        "LA1R2B6A257",
+        "LB8R1DDEAAF"
+      ],
+      "zones": [
+        "292",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142870",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-21-60-12-900-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "zone controller",
+      "operational test",
+      "trim air authority",
+      "duct overheat",
+      "software standard"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "21-60-12-700-001-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. The stabilisation period is stated per operational software standard in the preliminaries and must be read from the controller, not assumed from the aircraft. On aircraft with the split upper deck zoning, test the forward and aft upper deck zones separately.",
+      "manhours": 8.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "292",
+          "293"
+        ],
+        "access_panels": [
+          "292CR",
+          "293CR"
+        ],
+        "doors": [
+          "Upper deck passenger door 1 RH"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not work in a duct access area while the bleed air source is running.",
+          "Keep the cabin doors closed for the whole test.",
+          "Read the loaded operational standard before the stabilisation period is set."
+        ],
+        "tooling": [
+          {
+            "reference": "98D21601-033",
+            "description": "Maintenance terminal interface cable"
+          },
+          {
+            "reference": "98D21601-041",
+            "description": "Duct temperature probe set"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-21-60-12-900-002-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

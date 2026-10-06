@@ -1,0 +1,140 @@
+[
+  {
+    "doc_id": "IO-M-250912",
+    "doc_type": "IO",
+    "title": "Spurious Brake System Messages After Landing — Request for an Updated Control Unit Standard",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-09-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "KLE"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-09-12",
+      "released": "2025-09-18",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Kalahari Express asks for an updated brake and steering control unit standard after a run of post-landing fault messages that clear on the next power-up and leave nothing useful behind for the line engineer.",
+    "sections": {
+      "request": "Since the beginning of the year our crews have been reporting a brake system message after landing on hot, dusty turnarounds. It goes away when the aircraft is powered down and back up, and the line engineer is then left signing off something he cannot see. On two occasions the message came back on the following sector and the aircraft was taken out of service for a wheel and brake change that turned out not to be needed. We are told by our maintenance provider that the fault memory in the control unit is not keeping enough context to work out what happened, and that a newer software standard is available but not released for our aircraft. We would like that standard, or an equivalent, made available to us. If it needs the aircraft to be on a particular hardware build please tell us early, because we have a mixed delivery batch.",
+      "background": "Twenty-one occurrences since January across nine aircraft, all after landings above thirty-five degrees ambient. Two unnecessary brake changes and one overnight delay. Our maintenance provider has already downloaded the fault memory twice and reports that the recorded snapshot is truncated. We have no evidence of any real braking degradation and the crews report normal deceleration on every occasion.",
+      "expected_outcome": "A control unit standard that records enough information for the line engineer to close the message without removing serviceable equipment, delivered as a loadable update that we can apply at a transit stop rather than in a hangar."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "721"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00087",
+        "M00190",
+        "M00351"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-166630",
+        "doc_type": "MOD",
+        "relation": "CREATED"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "fault memory",
+      "nuisance message",
+      "software standard",
+      "turnaround"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Customer Support Engineering"
+    },
+    "type_data": {
+      "io_number": "IO-M-250912",
+      "raised_by": {
+        "requester_type": "OPERATOR",
+        "operator_code": "KLE",
+        "contact_role": "Line Maintenance Director",
+        "oem_focal_department": "EYIS",
+        "oem_focal_site": "Ashcombe"
+      },
+      "request_category": "SOFTWARE",
+      "priority": "MEDIUM",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {
+        "aircraft_count": 9,
+        "msns": [
+          "M00087",
+          "M00190",
+          "M00351"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-46"
+        ]
+      },
+      "business_justification": "Twenty-one nuisance events in eight months, two unnecessary brake assembly replacements and one overnight delay, on a network with limited spares cover outside the main base.",
+      "commercial": {
+        "funding": "CONTRACTUAL",
+        "budget_keur": 95,
+        "contract_reference": "CSA-2025-KLE-0190"
+      },
+      "target_dates": {
+        "requested_response": "2025-12-05",
+        "requested_embodiment_start": "2026-06-15"
+      },
+      "created_mod": "MOD-166630"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,180 @@
+[
+  {
+    "doc_id": "MOD-139850",
+    "doc_type": "MOD",
+    "title": "Engine Start Valve Latched Override and Start Sequence Protection",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "36-10",
+      "49-50"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-39R1"
+      ],
+      "msns": [
+        "S00339",
+        "S01029",
+        "S01232",
+        "S01668"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7000"
+      ],
+      "operators": [
+        "VIA",
+        "ACL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-132070"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-04-14",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "An electrically latched manual override for the start valve with a protected start sequence and a recorded valve state, aimed at hung starts at high field elevation rather than at the duct leakage the current standard addressed.",
+    "sections": {
+      "reason": "The current duct clamping standard recovered the mass flow lost to joint fretting and made a measurable difference at sea level in warm conditions, but it did nothing at field elevations above two thousand five hundred metres, where nineteen hung starts were recorded on four aircraft in fourteen months and one departure was abandoned. Crews use the manual override as the procedure tells them to, and their consistent report is that they cannot tell whether it has taken until the rotation picks up. Twice this year an override was found still selected on the turnaround, which nothing on the aircraft annunciates.",
+      "description": "The manual override is changed from a spring-loaded lever to an electrically latched solenoid with a discrete annunciation, so that the crew has positive confirmation that the override is in and the aircraft will not accept a start with it left selected. A start sequence protection is added that inhibits a second start attempt until the starter duty timer has expired, and the valve state and the duty timer are both written to the recorded parameter set so that engineering can reconstruct a hung start without asking the crew. The aft clamp D8010119758805 and the titanium bolt set EN290030-3C from the current standard are retained. The nozzle WES955482-79 is re-machined at the solenoid boss. Duct 2788ES3 in the forward position is re-clipped and firewall panel 983ES is refitted with a new grommet at the added cable. Work is inside the fan cowl in zones 421 and 456 and at the thrust reverser interface in zone 481, with the engine cold and the cowls open.",
+      "effects": "Estimated mass increase of 0.9 kg per engine. Electrical load increases by thirty-five volt-amperes while the latch is energised, which is during start only. Not interchangeable with the current standard: the valve body changes and the harness gains three wires. Hung starts at field elevations up to three thousand metres are expected to fall to the sea-level rate. The flight crew start procedure changes because the override now latches and annunciates, and the trouble shooting procedure for a hung start is rewritten around the recorded parameters.",
+      "embodiment_note": "Retrofit only for the target aircraft, at a C-check with the fan cowls open, about eighteen manhours per engine. A production cut-in would be considered if the fleet demand justifies it after the first operator has flown it for a season.",
+      "open_points": "Pre-analysis must establish whether the latch load can be taken from the start bus without reducing the energy available to the starter, whether the recorded parameter addition needs a change to the recording standard already in pre-analysis elsewhere, whether the reverser interface clip positions clash with the blocker link standard embodied on this fleet, and what the crew procedure change means for the operator's own training material."
+    },
+    "entities": {
+      "part_numbers": [
+        "D8010119758805",
+        "EN290030-3C",
+        "WES955482-79"
+      ],
+      "fins": [
+        "983ES",
+        "2788ES3"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "421",
+        "456",
+        "481"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00339",
+        "S01029"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-S-260574",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-132070",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "start valve",
+      "latched override",
+      "hung start",
+      "duty timer",
+      "recorded parameter"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 139850,
+      "mod_class": "MAJOR",
+      "change_category": "POWERPLANT",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1305",
+          "CS 25.1309",
+          "CS 25.1457"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.8,
+      "balance_impact": "Distributed at the nacelles; negligible",
+      "electrical_load_impact_va": 35,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "WES955482-79",
+        "D8010119758805"
+      ],
+      "fins_affected": [
+        "983ES",
+        "2788ES3"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 98,
+      "estimated_cost_keur": 760,
+      "lead_time_weeks": 40,
+      "production_impact": "Retrofit only in the first instance",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

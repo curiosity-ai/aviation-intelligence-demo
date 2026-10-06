@@ -1,0 +1,184 @@
+[
+  {
+    "doc_id": "MOD-162044",
+    "doc_type": "MOD",
+    "title": "Steel Side Link Fitting and Revised Bolt Pattern at the Fwd Engine Mount",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-02-24",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "54",
+      "ata_4d": "54-50",
+      "ata_6d": "54-50-12",
+      "title": "Pylon Structure — Engine Mount Fittings"
+    },
+    "secondary_ata": [
+      "71-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "M00248",
+      "production_cut_in_date": "2020-11-05",
+      "retrofit_via": [
+        "MRD-54-1033"
+      ]
+    },
+    "dates": {
+      "created": "2018-08-07",
+      "released": "2019-12-17",
+      "revised": "2022-02-24",
+      "effective": "2022-03-14"
+    },
+    "abstract": "A high-strength steel side link fitting with a four-bolt pattern replaces the aluminium standard at the forward engine mount, doubling the fretting allowable and lifting the tracked life limit from 24 000 to 60 000 flight cycles.",
+    "sections": {
+      "reason": "The aluminium side link fitting standard did not remove fretting at the lug bore; it slowed it. Across a fleet of about 250 aircraft, fourteen fittings were replaced in four years, eleven of them found during engine shop visits, and the 24 000 flight cycle life limit was forcing pylon work at times that suited nobody. A material change to high-strength steel was substantiated as the only way to lift the life limit far enough to align it with the engine overhaul cycle rather than with a separate counter.",
+      "description": "The forward mount side link fitting is machined from high-strength steel and attaches through a four-bolt pattern instead of the previous three, with the load path spread across a wider footprint on the pylon primary structure. The interface plate D5450124639244 is replaced, the inboard lug D5450125058936 is re-machined to the new bolt spacing, and a new cleat CID666183-16 picks up the additional fastener. Screws AES177340K7 are retained at the fairing interface. Detail is on drawing D54501157122. Access is through the pylon in zones 431 and 443, engine removed. The handle assembly 1756PP used to support the link during removal is relocated 40 mm outboard so that it clears the wider fitting.",
+      "effects": "Mass increase of 4.8 kg per pylon over the aluminium standard, symmetric across the aircraft. No electrical load change. Not interchangeable, because the bolt pattern and the pylon hole positions both change and the pylon cannot be reverted once drilled. The tracked life limit moves from 24 000 to 60 000 flight cycles and the strip inspection of the lug bore at every shop visit is replaced by a general visual check. Illustrated parts content and the mount removal and installation tasks require reissue.",
+      "embodiment_note": "Cut in at MSN M00248 in November 2020. Delivered aircraft are retrofitted through Service Bulletin MRD-54-1033 at an engine change, which adds about a day and a half per pylon because the new bolt pattern has to be drilled with a jig and the holes inspected."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5450124639244",
+        "D5450125058936",
+        "CID666183-16",
+        "AES177340K7"
+      ],
+      "fins": [
+        "1756PP"
+      ],
+      "drawings": [
+        "D54501157122"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "443"
+      ],
+      "figures": [
+        "FIG-54-50-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00248"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-161902",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "MRD-54-1033",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-M-54-50-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-M-54-50-12-400-004-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "engine mount fitting",
+      "steel",
+      "bolt pattern",
+      "life limit",
+      "shop visit"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Valmont",
+      "role": "Pylon Design Office"
+    },
+    "type_data": {
+      "mod_number": 162044,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.571",
+          "CS 25.361",
+          "CS 25.613"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 4.8,
+      "balance_impact": "Symmetric across both pylons, CG shift below 0.03 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "CID666183-16"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5450124639244",
+        "D5450125058936"
+      ],
+      "fins_affected": [
+        "1756PP"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 240,
+      "estimated_cost_keur": 910,
+      "lead_time_weeks": 48,
+      "production_impact": "Cut-in at MSN M00248 with a pylon drilling jig change at Valmont and Mobile",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

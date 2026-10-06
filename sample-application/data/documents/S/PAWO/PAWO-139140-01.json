@@ -1,0 +1,414 @@
+[
+  {
+    "doc_id": "PAWO-139140-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Digital Interphone Amplifier with Zone Routing",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-50",
+      "ata_6d": "23-50-12",
+      "title": "Audio Integrating — Flight Interphone"
+    },
+    "secondary_ata": [
+      "44-20",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3"
+      ],
+      "msns": [
+        "S00688",
+        "S01020",
+        "S01317",
+        "S01466",
+        "S01552"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "AMA",
+        "HKA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-05",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the digital interphone amplifier, covering the supersession of the analogue obsolescence standard, the one point at which the change leaves the cabin, and the crew documentation that zone routing makes out of date.",
+    "sections": {
+      "objective": "Identify every released or candidate item applicable to the five listed aircraft that the digital interphone standard would conflict with, depend on, supersede or invalidate, and establish in particular what happens where the distribution tail is re-terminated at the avionics bay feedthrough, which is the only point at which the change leaves the cabin.",
+      "scope_note": "The search covers ATA 23-50 as the primary chapter, ATA 44-20 for the cabin systems interface and ATA 92-21 for the bay feedthrough and the distribution wiring. ATA 25 furnishings was excluded because no lining is removed and no monument is disturbed. ATA 31 indicating was searched and returned nothing. The MSN list rather than a range was used because the affected aircraft are not contiguous and the standard fitted has to be confirmed per aircraft from the record.",
+      "method_note": "Entity linking was run from the four part numbers, the two equipment positions and the three zones the candidate carries. Semantic similarity was run over titles, abstracts and reason-for-change text with the two seed phrases below and the two result sets merged. The segregation candidate and the distribution wiring sheet were both returned by entity linking alone and share no vocabulary with the candidate at all. The flight crew description was returned by similarity alone with no shared identifier of any kind, and is the finding most likely to have been missed.",
+      "findings_summary": "Six items are confirmed and one is blocking. The blocking item is not in the cabin at all. The candidate re-terminates its distribution tail onto the avionics bay cable assembly at the rack feedthrough, and the harness segregation standard embodied on this fleet fixes what that cable assembly carries, which aperture it runs in and where its screen terminates. Nothing in either document mentions the other; they share one part number and one zone and no vocabulary whatsoever, which is exactly why this was found by entity linking and not by reading. Whether a digital distribution tail may terminate in the sensitive aperture at all is a design input and not an installation detail, and it has to be settled before the design is frozen. Behind that, the supersession of the analogue standard is straightforward and both strategies found it, but the retrofit bulletin for that standard is still open and is actively advising operators to embody before the supplier repair capability ends; that advice becomes wrong the day the candidate is launched. The crew description of the interphone was returned by similarity alone and states that call routing is fixed, which zone routing makes untrue. Finally the distribution wiring sheet becomes a retrofit boundary rather than a live routing, and somebody has to decide whether it is reissued.",
+      "next_steps": "Settle the feedthrough termination with the wiring office before the design is frozen; treat it as blocking. Agree the withdrawal of the analogue bulletin compliance advice and tell the affected operators directly. Ask flight operations what zone routing means for the published call priorities. Decide with the wiring office whether the distribution sheet is reissued or retained as the pre-modification record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2350122256689",
+        "XADE368523-89",
+        "KE27719-48",
+        "D9221113760580"
+      ],
+      "fins": [
+        "2922RC",
+        "95RC"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "133",
+        "165",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00688",
+        "S01317"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-139140",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-260547",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-135180",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-131210",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-23-1012",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "FCOM-S-DSC-23-50-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-S-92-21-12",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-133730",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "interphone",
+      "zone routing",
+      "feedthrough termination",
+      "conflict search"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Vaubranche",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-139140-01",
+      "subject_mod": "MOD-139140",
+      "source_io": "IO-S-260547",
+      "pawo_status": "RAISED",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-06-05",
+      "due_date": "2026-08-14",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ETGC",
+        "lead_site": "Vaubranche",
+        "contributing_departments": [
+          "ELSC",
+          "EGAM",
+          "EYIS"
+        ],
+        "estimated_manhours": 95,
+        "spent_manhours": 18
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34"
+        ],
+        "ata_2d": [
+          "23",
+          "44",
+          "92"
+        ],
+        "ata_4d": [
+          "23-50",
+          "44-20",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D2350122256689",
+            "XADE368523-89",
+            "KE27719-48",
+            "D9221113760580"
+          ],
+          "fins": [
+            "2922RC",
+            "95RC"
+          ],
+          "drawings": [],
+          "zones": [
+            "133",
+            "165",
+            "263"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "hum under the speech on a call from the aft galley",
+          "analogue audio distribution replaced by a packet stream"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released and candidate MODs on ATA 23-50 and 92-21",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish what the segregation standard fixes at the feedthrough",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Determine the fate of the analogue retrofit bulletin",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T04",
+          "title": "Ask flight operations about zone routing and call priority",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T05",
+          "title": "Decide the disposition of the distribution wiring sheet",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-135180",
+          "doc_type": "MOD",
+          "finding_type": "PART_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D9221113760580"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "165"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The candidate re-terminates its distribution tail onto the avionics bay cable assembly at the rack feedthrough, which is the one point outside the cabin that it touches. The harness segregation standard fixes what that cable assembly carries, which aperture it runs in and where its screen terminates. The two documents share nothing else: one is a cabin audio dossier and the other is a wiring segregation dossier, and their titles, abstracts and reason texts have no significant word in common. Only the cable assembly and the bay zone connect them.",
+          "resolution": "Establish with the wiring office whether the digital distribution tail may terminate in the sensitive aperture at all, and if not, where it goes instead. Treat this as a design input rather than an installation detail."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-131210",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2350122256689",
+              "KE27719-48"
+            ],
+            "shared_fins": [
+              "2922RC",
+              "95RC"
+            ],
+            "shared_zones": [
+              "133",
+              "263"
+            ],
+            "shared_ata_6d": [
+              "23-50-12"
+            ],
+            "similarity_note": "Both strategies return it first. The two share the antenna, the rack, both equipment positions, two zones and the ATA 6D, and describe the same amplifier in the same words."
+          },
+          "rationale": "The candidate replaces the analogue obsolescence standard on the same rack with a digital distribution. The two are not mixable within one aircraft because the distribution protocol differs, and the earlier standard is the assumed starting point for most of the target population.",
+          "resolution": "Declare the supersession and state the entry condition for aircraft still at the delivered analogue amplifier."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SLN-23-1012",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "23-50-12"
+            ],
+            "similarity_note": "Found through the applicability chain: the bulletin embodies the modification the candidate supersedes and its effectivity is written against the pre-modification population."
+          },
+          "rationale": "The retrofit bulletin for the analogue standard is still open and its compliance note advises operators to embody before the supplier repair capability ends. That advice becomes wrong once the candidate exists, because the aircraft it addresses would be buying a unit that is itself out of production within a year.",
+          "resolution": "Withdraw the compliance advice or cancel the bulletin at the point the candidate is launched, and tell the affected operators directly rather than through a revision."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "FCOM-S-DSC-23-50-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by similarity alone. The crew entry describes call priorities, sidetone and what the crew hears when a station does not answer; the candidate describes packet audio, distribution tails and rack connectors. No FIN, part number or zone is shared and the two texts have essentially no vocabulary in common."
+          },
+          "rationale": "The crew entry states that call routing is fixed and that priority is the only selection the system makes. The candidate makes routing selectable by zone, which changes what the crew can do with the system and therefore what the entry says. This is precisely the kind of impact an engineer working from a cabin audio dossier would not think to look for.",
+          "resolution": "Confirm with flight operations what the zone routing means for the published call priorities and amend the entry with the candidate."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "WDM-S-92-21-12",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "133",
+              "165",
+              "263"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The distribution wiring sheet carries the analogue pair routing and the screen termination at every break, in the same three zones the candidate works in. The candidate leaves those pairs unused beyond the rack, which makes most of the sheet a retrofit boundary rather than a live routing. The two documents share the zones and nothing else.",
+          "resolution": "Agree with the wiring office whether the sheet is reissued with the unused pairs marked or retained unchanged as the pre-modification record."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-133730",
+          "doc_type": "MOD",
+          "finding_type": "DUPLICATE",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both strategies return it: the two documents describe replacing an interface unit to improve information reaching a person, and the maintenance vocabulary around racks, trays and re-strapping overlaps heavily."
+          },
+          "rationale": "The maintenance terminal correlation standard replaced an interface unit in a rack to improve what an engineer sees, using almost the same physical work and the same words. It is not the same change and it is not on the same system, but the two dossiers read as near-duplicates and an engineer searching by description alone would treat one as the other.",
+          "resolution": "No design action. Record the distinction in the candidate abstract so that the two are separable by title."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-136140",
+          "doc_type": "MOD",
+          "reason": "Ranks high on similarity as a cabin systems change with scene control and zone vocabulary that reads very close to zone routing. It is a lighting modification, it shares no part number, no equipment position and no zone with the candidate, and its effectivity is the production standard rather than the retrofit population."
+        },
+        {
+          "doc_id": "AMM-S-23-50-11-400-035-A",
+          "doc_type": "AMM",
+          "reason": "Returned first by entity linking because it names the rack and the antenna the candidate also carries, and it will indeed need a revision eventually. It is not a pre-analysis finding: the task change follows the design rather than constraining it, and treating installation tasks as conflicts would fill the result set with work that is a consequence rather than a risk."
+        }
+      ],
+      "conclusion": "Not yet issued. The feedthrough termination is blocking and three tasks have not started.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

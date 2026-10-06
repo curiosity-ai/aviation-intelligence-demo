@@ -1,0 +1,212 @@
+[
+  {
+    "doc_id": "MOD-146910",
+    "doc_type": "MOD",
+    "title": "Dual Pressure Sensing and Revised Duct Overheat Threshold for the Bleed Monitoring Computer",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-03-30",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-20",
+      "ata_6d": "36-20-11",
+      "title": "Pneumatic Indicating — Bleed Monitoring Computer"
+    },
+    "secondary_ata": [
+      "36-20-12",
+      "30-10-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00014",
+          "to": "T00186"
+        }
+      ],
+      "excluded_msns": [
+        "T00089"
+      ],
+      "engine_types": [
+        "CVX-7270"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00188",
+      "production_cut_in_date": "2021-09-03",
+      "retrofit_via": [
+        "TTN-36-1009"
+      ]
+    },
+    "dates": {
+      "created": "2018-10-19",
+      "released": "2020-12-04",
+      "revised": "2022-03-30",
+      "effective": "2022-05-09"
+    },
+    "abstract": "Introduces a second independent pressure sensing path to the bleed monitoring computer and widens the duct overheat confirmation, removing single-sensor bleed shutdowns that were leaving aircraft on one pneumatic source.",
+    "sections": {
+      "reason": "A single pressure sensor drift was enough to command a bleed shutdown, and on twenty-nine occasions in two years an aircraft continued to destination on a single bleed source because of a sensor that was later found serviceable on the bench. The duct overheat confirmation was also short enough that a normal transient during engine acceleration could trip it on aircraft with the higher bleed pressure schedule. Operators of the CVX-7270 fleet were disproportionately affected because the schedule runs closer to the threshold. Dispatch reliability for the pneumatic system had fallen to a level the programme could not defend.",
+      "description": "A second pressure sensor D3620117912452 is installed in the cross-bleed manifold and wired to a separate input of the bleed monitoring computer, so that a shutdown requires agreement between two independent paths. The computer input card D3620115643168 is replaced to provide the additional channel and the duct assembly D3620112949513 is modified to carry the second sensor boss. The temperature sensor D3620117993254 is renewed and the clamp set LN276052K6 is replaced at every position because the duct wall thickness changes locally. Wiring is added between FIN 154PU and FIN 4PU9 and re-terminated at FIN 5172PN. The overheat confirmation window is widened and the disagreement logic is declared in the operational load LC8RC1C4C75, with the built-in test load LG2RD2CCF4D updated to report a sensor disagreement as a maintenance message rather than a shutdown. Work is in zones 683, 531 and 141 through the wing root fairing, and is detailed on drawing D36201195418.",
+      "effects": "Mass increase of 4.1 kg per aircraft, symmetric about the centre line, with no measurable centre-of-gravity effect. Electrical load rises by 40 volt-amperes for the additional sensor channel. The modified computer is not interchangeable with the original because the input card carries a different channel map. The minimum equipment list entry for a single bleed inoperative is unchanged, but the dispatch condition for a sensor disagreement is new and appears in the crew documentation. Maintenance, illustrated parts, troubleshooting, wiring and the flight crew performance description of single-bleed operation all require update.",
+      "embodiment_note": "Production cut-in at MSN T00188 in September 2021. Retrofit through the associated service bulletin, about two shifts per side with the wing root fairing open. Kits include the manifold duct, which is the long-lead item at twenty-six weeks."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3620112949513",
+        "D3620115643168",
+        "D3620117912452",
+        "D3620117993254",
+        "LN276052K6"
+      ],
+      "fins": [
+        "154PU",
+        "4PU9",
+        "5172PN"
+      ],
+      "drawings": [
+        "D36201195418"
+      ],
+      "software": [
+        "LC8RC1C4C75",
+        "LG2RD2CCF4D"
+      ],
+      "zones": [
+        "683",
+        "531",
+        "141"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00089",
+        "T00188"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-36-1009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-36-20-11-400-003-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-T-36-20-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "TSM-T-36-20-11-810-810",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-T-PER-36-20-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "bleed monitoring",
+      "pressure sensor",
+      "duct overheat",
+      "cross-bleed",
+      "dispatch reliability"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 146910,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1189",
+          "CS 25.1439"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 4.1,
+      "balance_impact": "Symmetric installation, no measurable CG effect",
+      "electrical_load_impact_va": 40,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3620117912452"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3620112949513",
+        "D3620115643168",
+        "D3620117993254",
+        "LN276052K6"
+      ],
+      "fins_affected": [
+        "154PU",
+        "4PU9",
+        "5172PN"
+      ],
+      "software_affected": [
+        "LC8RC1C4C75",
+        "LG2RD2CCF4D"
+      ],
+      "estimated_manhours": 390,
+      "estimated_cost_keur": 1720,
+      "lead_time_weeks": 64,
+      "production_impact": "Cut-in at MSN T00188, no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

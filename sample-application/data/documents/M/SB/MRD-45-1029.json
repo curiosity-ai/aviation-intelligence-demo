@@ -1,0 +1,192 @@
+[
+  {
+    "doc_id": "MRD-45-1029",
+    "doc_type": "SB",
+    "title": "Central Maintenance System — Data Load Configuration — Install the Extended Record Computer and Load the Aligned Database",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-09-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-12",
+      "title": "Data Loading — Data Load Configuration"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-05-26",
+      "released": "2025-09-15",
+      "revised": null,
+      "effective": "2025-10-13"
+    },
+    "abstract": "Replaces the data load configuration computer with the extended record variant and reissues the maintenance computer database that reads the new record format.",
+    "sections": {
+      "planning_reason": "Operators lost the load record when ground power was interrupted during a data load session, which forced a full configuration read and in three cases a repeat of the entire load. The record store as delivered holds sixteen sessions and writes its confirmation only at the end of a session, so an interruption leaves no trace of what was loaded. Two of the events occurred during a night stop with a partial load left on the aircraft.",
+      "description": "This bulletin replaces the configuration computer with the variant holding one hundred and twenty sessions and writing an entry per item, and loads the reissued maintenance computer database that reads the extended format. The obsolete collars at the harness are replaced by cushioned loop clamps. The loading protocol is unchanged, so existing portable loaders continue to work.",
+      "accomplishment_summary": "Open the avionics bay and remove electrical power from the configuration computer. Read and export the existing load record before removal, because it will not be transferred. Remove the computer, install the extended record variant on the same rack position and reconnect. Replace the obsolete collars on the harness with the supplied cushioned loop clamps. Restore power, connect the portable loader at the maintenance terminal and load the reissued maintenance database, then confirm the reported database part number. Do the data load configuration check in AMM-M-45-45-12-900-053-A and verify the record shows one entry per item for a test load. Close the bay and make the records entry.",
+      "effectivity_note": "Applies to all MERIDIAN Family aircraft delivered before MSN M00464. The computer and the database must be embodied in the same visit: the extended record format is not readable by the delivered maintenance database, and the aircraft would show a configuration the operator cannot interpret.",
+      "material_note": "Kit contains the configuration computer, six cushioned loop clamps and the rack label set. The maintenance database is supplied electronically. The removed computer is returned for credit within sixty days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545120504726",
+        "LN760453-5C",
+        "AES133277-12"
+      ],
+      "fins": [
+        "228TN",
+        "2848TN"
+      ],
+      "drawings": [
+        "D45450007012"
+      ],
+      "software": [
+        "LH4PE007934"
+      ],
+      "zones": [
+        "273",
+        "262"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00464"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168300",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-M-45-45-12-900-053-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-M-45-20-11-812-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-M-DSC-45-20-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "data load configuration",
+      "load record",
+      "maintenance database",
+      "avionics bay",
+      "partial load"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Customer Services"
+    },
+    "type_data": {
+      "sb_number": "MRD-45-1029",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Within 30 months of the date of this Service Bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SOFTWARE_DEFECT",
+      "embodied_mod": "MOD-168300",
+      "manpower": {
+        "elapsed_time_hours": 6,
+        "manhours": 10,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K4545-1029-01",
+        "kit_available_from": "2025-11-24",
+        "parts_required": [
+          {
+            "part_number": "D4545120504726",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "LN760453-5C",
+            "qty": 6,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "AES133277-12",
+            "qty": 6,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Identification label set"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Antistatic wrist strap and mat"
+        ]
+      },
+      "weight_change_kg": 1.2,
+      "accomplishment_steps": 9,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2025-09-15",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

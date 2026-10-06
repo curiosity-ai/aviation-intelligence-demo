@@ -1,0 +1,178 @@
+[
+  {
+    "doc_id": "MOD-111925",
+    "doc_type": "MOD",
+    "title": "VHF Number Two Transceiver and Lower Antenna Installation Change for Reception Margin at Low Level",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-20",
+      "ata_6d": "23-20-11",
+      "title": "VHF Communication — VHF Transceiver"
+    },
+    "secondary_ata": [
+      "23-20-12",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [
+        "C00342",
+        "C00408",
+        "C00479",
+        "C00544"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "PYR-1524G"
+      ],
+      "operators": [
+        "KRA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-04-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposed change to the number two very high frequency installation, replacing the transceiver and the lower blade antenna and re-routing the coaxial run, to recover the reception margin the second set loses below ten thousand feet.",
+    "sections": {
+      "reason": "One operator has reported for fourteen months that the number two set is measurably weaker than the number one set below ten thousand feet, with a datalink log-on failure rate of roughly one flight in six and two dispatch losses this year. Nine transceivers have been removed across thirty-one aircraft and only two faults were confirmed at the shop, which is an unconfirmed removal rate of seventy-eight per cent. Ground measurement on two aircraft showed between four and six decibels of loss in the number two coaxial run that is not present in the number one run, concentrated in the section that shares a bundle with the cabin lighting feeder aft of the wing.",
+      "description": "The number two transceiver sub-assembly D2320118505988 is replaced by a unit with a lower noise figure on receive, and the lower blade antenna module D2320128501183 is replaced by an item with a wider ground plane skirt that seals against the skin rather than against the paint. The coaxial run between the antenna land and the rack is re-routed out of the shared bundle and given its own support line, which is the part of the change with the largest expected effect. The VHF computer D2320009698337 is retained. Fastening at the antenna land uses screws AGS216702-16 and washers EN561587K4 with a wet installation. Functional items 934RN, 143RN and 221RN6 are affected. Work is at the lower fuselage antenna land in zone 261, in the rack area in zone 145 and along the aft cabin ceiling route in zone 271. Reference detail is on drawing D23200008256.",
+      "effects": "Estimated mass increase of 1.1 kg. Electrical load unchanged. The transceiver is expected to be interchangeable in both directions, but the antenna is not, because the ground plane skirt changes the land preparation. No minimum equipment list change is foreseen. Maintenance manual removal and installation content changes for the antenna, the wiring manual sheet for the aft cabin route changes, and the illustrated parts figure needs a pre and post modification item pair for the antenna.",
+      "embodiment_note": "Retrofit only. The provisional estimate is one shift with the aircraft on the ground for the transceiver and the antenna, plus a second shift for the coaxial re-route, which is the part that determines whether this can be done at a line stop at all. No production cut-in is proposed until the coaxial route change is confirmed against the current build standard.",
+      "open_points": "Pre-analysis must establish whether the antenna land preparation conflicts with the surface treatment practice now applied at external antenna lands, whether the re-routed coaxial can be supported in the aft cabin ceiling without disturbing the overhead stowage tie-rod positions on aircraft at the deeper bin standard, and whether the reception problem has already been addressed for the datalink path by a separate change on the router side."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2320118505988",
+        "D2320128501183",
+        "D2320009698337",
+        "AGS216702-16",
+        "EN561587K4"
+      ],
+      "fins": [
+        "934RN",
+        "143RN",
+        "221RN6"
+      ],
+      "drawings": [
+        "D23200008256"
+      ],
+      "software": [],
+      "zones": [
+        "261",
+        "145",
+        "271"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00342",
+        "C00479"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-260218",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      }
+    ],
+    "keywords": [
+      "vhf transceiver",
+      "blade antenna",
+      "coaxial routing",
+      "reception margin",
+      "unconfirmed removal"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111925,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.1,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "D2320128501183",
+        "AGS216702-16",
+        "EN561587K4"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2320118505988"
+      ],
+      "fins_affected": [
+        "934RN",
+        "143RN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 180,
+      "estimated_cost_keur": 640,
+      "lead_time_weeks": 34,
+      "production_impact": "No cut-in proposed until the coaxial route is confirmed against the current build standard",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

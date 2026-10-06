@@ -1,0 +1,205 @@
+[
+  {
+    "doc_id": "CRN-45-2001",
+    "doc_type": "SB",
+    "title": "Onboard Maintenance — Central Maintenance Computer Application Upgrade and Tray Change",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-01-25",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00544"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HKA",
+        "BMA",
+        "OST"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2022-08-11",
+      "released": "2023-01-25",
+      "revised": null,
+      "effective": "2023-02-20"
+    },
+    "abstract": "Retrofit of the wider fault correlation window and the non-volatile fault history in the central maintenance computer, with the deeper mounting tray the later computer standard needs.",
+    "sections": {
+      "planning_reason": "The delivered application correlates a flight deck effect with a maintenance message only inside a four second window, and a study of eleven hundred line events showed a third of genuine correlations falling outside it. The result is a maintenance message the line cannot tie to anything and a component removed on suspicion; two operators measured their unconfirmed removal rate on avionics items at more than sixty per cent. The application also loses its fault history at every power cycle, so an intermittent fault on the first sector of the day is invisible by the time the aircraft reaches a base.",
+      "description": "The bulletin replaces the computer mounting tray, installs the later computer standard and loads the upgraded application and the message-to-chapter navigation table. A load-only partial embodiment is offered for operators who do not want the tray change.",
+      "accomplishment_summary": "Put the aircraft on external power and open the avionics bay. Remove the central maintenance computer D4520114738386. Remove the mounting tray and install the deeper tray GRA258107-86, renewing the collars EN936981-61. Install the computer and connect the rear connector. Load the application LH6CEDA1669 and the navigation table LH3C76AB34D from the maintenance terminal at the maintenance terminal rack D4520128145158. Do the correlation self-test and confirm that the sixteen second window is reported. Do the fault history read task AMM-C-45-20-11-700-016-A and confirm that the history survives a power cycle. Close the avionics bay and record the embodiment.",
+      "effectivity_note": "Applicable to CIRRANE-11 and CIRRANE-13 aircraft from MSN C00001 to MSN C00544. Aircraft from MSN C00544 onward are already at the standard. Operators taking the load-only partial embodiment keep the fault history but not the wider correlation window, and this must be recorded in the aircraft configuration file.",
+      "material_note": "Kit K4520-2001-01 contains the tray, the collar set and the two software loads. Lead time is ten weeks. The removed tray is scrapped locally. Operators taking the load-only embodiment order the software loads separately."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4520114738386",
+        "GRA258107-86",
+        "EN936981-61",
+        "D4520128145158"
+      ],
+      "fins": [
+        "4310TN",
+        "1TM"
+      ],
+      "drawings": [
+        "D45201180284"
+      ],
+      "software": [
+        "LH6CEDA1669",
+        "LH3C76AB34D"
+      ],
+      "zones": [
+        "244",
+        "164"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00544"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111296",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-C-45-20-11-700-016-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-45-20-11-810-812",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-C-DSC-45-20-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "central maintenance computer",
+      "correlation window",
+      "fault history",
+      "mounting tray",
+      "partial embodiment"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Customer Services Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-45-2001",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled A-check, or within twenty-four months of the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-111296",
+      "manpower": {
+        "elapsed_time_hours": 5,
+        "manhours": 8,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K4520-2001-01",
+        "kit_available_from": "2023-03-13",
+        "parts_required": [
+          {
+            "part_number": "GRA258107-86",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "EN936981-61",
+            "qty": 8,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Contact cleaner, electrical"
+        ],
+        "tooling": [
+          "Torque wrench 2-20 Nm",
+          "Maintenance terminal"
+        ]
+      },
+      "weight_change_kg": 0.4,
+      "accomplishment_steps": 9,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-01-25",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

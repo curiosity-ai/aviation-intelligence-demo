@@ -1,0 +1,170 @@
+[
+  {
+    "doc_id": "AMM-S-45-20-12-700-044-A",
+    "doc_type": "AMM",
+    "title": "Onboard Maintenance Terminal — Report Correlation Verification",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-01-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-12",
+      "title": "Onboard Maintenance — Maintenance Terminal"
+    },
+    "secondary_ata": [
+      "42-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-06-30",
+      "released": "2023-01-27",
+      "revised": null,
+      "effective": "2023-02-15"
+    },
+    "abstract": "Verification that the maintenance terminal ranks a known injected fault correctly and that the unfiltered report list is still reachable, which is what stops a correlation error from hiding a real report.",
+    "sections": {
+      "purpose": "This task proves that the report correlation function ranks a known injected failure correctly, and that the raw unfiltered report list remains available to the engineer behind the ranked view.",
+      "job_setup_note": "The injection sequence puts real reports into the aircraft log and they must be cleared afterwards, otherwise the next crew will see them. Do not run this task with an open defect on any system in the injection list, because the injected and the real report will merge and the result will not be interpretable.",
+      "procedure": "1. Confirm that no open defect exists on any system in the injection list. 2. Put the aircraft on ground power and open the terminal at the position in zone 193. 3. Record the terminal configuration and the correlation application standard. 4. Note the report count in the log before injection. 5. Run injection sequence one, which produces a cascade of correlated reports from a single shared bus failure. 6. Confirm that the terminal presents one ranked cause and that the supporting reports are collapsed beneath it. 7. Confirm that the ranked cause is the item named in the expected result for the sequence. CAUTION: A CORRECT RANKING ON SEQUENCE ONE DOES NOT PROVE THE FUNCTION. RUN ALL FOUR SEQUENCES; THEY EXERCISE DIFFERENT CORRELATION RULES. 8. Open the unfiltered list and confirm that every injected report is present and readable. 9. Repeat for sequences two, three and four and record the ranked cause for each. 10. Where a ranked cause does not match the expected result, record the actual ranking in full; the ordering is the diagnostic information, not just the top entry. 11. Check the data concentrator D4520123766196 and the interface unit D4520127216664 for a built-in test report of their own. 12. Clear the injected reports from the log and confirm the report count has returned to the pre-injection value. 13. Check the display unit 585TM and the mounting tray 3805TM for security.",
+      "close_out": "Record the four ranked causes, the correlation application standard and the report count before and after. Confirm in the technical log that the injected reports have been cleared. Where a ranking was wrong, send the full ordering to Aeralis with the aircraft registration; the ranking is tuned against fleet data."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4520123766196",
+        "D4520127216664",
+        "LN563558-5B"
+      ],
+      "fins": [
+        "3805TM",
+        "585TM",
+        "2TM"
+      ],
+      "drawings": [
+        "D45201289920"
+      ],
+      "software": [
+        "LE9L7F7E375"
+      ],
+      "zones": [
+        "116",
+        "193"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-42-10-12-400-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "report correlation",
+      "injection sequence",
+      "ranked cause",
+      "unfiltered list",
+      "terminal"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "45-20-12-700-044-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft; sequences three and four apply only where the correlation application is loaded",
+      "manhours": 2.5,
+      "personnel": 1,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "116",
+          "193"
+        ],
+        "access_panels": [
+          "116CR",
+          "193AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Confirm no open defect on the injected systems.",
+          "Clear all injected reports before the aircraft is released."
+        ],
+        "tooling": [
+          {
+            "reference": "98D45201-046",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D45201-050",
+            "description": "Built-in test injection module"
+          }
+        ],
+        "consumables": [
+          "Test record sheet"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-42-10-12-400-043-A"
+      ],
+      "steps": 13,
+      "warnings": 0,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

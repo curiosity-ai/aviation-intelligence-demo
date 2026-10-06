@@ -1,0 +1,195 @@
+[
+  {
+    "doc_id": "MOD-111159",
+    "doc_type": "MOD",
+    "title": "Probe Heat Monitoring with Temperature Compensated Element Thresholds",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-06-05",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111145"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00569",
+      "production_cut_in_date": "2023-06-11",
+      "retrofit_via": [
+        "CRN-30-1021"
+      ]
+    },
+    "dates": {
+      "created": "2021-06-14",
+      "released": "2022-10-25",
+      "revised": "2024-06-05",
+      "effective": "2024-06-24"
+    },
+    "abstract": "Element health thresholds that follow outside air temperature, replacing the fixed band that had been declaring healthy but cold heating elements as failed on the first sector of a winter day.",
+    "sections": {
+      "reason": "The fixed threshold standard removed the undetected open circuit case but introduced a false declaration of its own. Operators in northern Europe and northern Canada reported a probe heat caution on the first sector after a cold night, clearing during the climb. Thirty-eight occurrences were confirmed across nineteen aircraft in the 2021 winter, and six computers were removed with no fault found. The element resistance at minus thirty degrees sits below the fixed lower threshold even when the element is healthy, so the logic had to become temperature aware.",
+      "description": "The probe heat computer adopts built-in test software LC5C5779B0E, which scales the accept band for each heating element with the total air temperature read at power-up and re-tests once the element has drawn current for twenty seconds. The sense harness is unchanged, but the supply pipe D3030115331360 is replaced by an item with a shorter run so that the temperature reference sensor can be mounted at the probe base rather than in the computer, and the computer accumulator D3030112916343 is retained. Clamp AES270917-26 secures the new sensor lead. The probe heat regulator 4618WX and the element valve 274HA are unchanged. Revised detail is on drawing D30301165123. Work is done in zones 162, 211 and 214.",
+      "effects": "Mass increase of 0.3 kg per aircraft. No electrical load change. The software is interchangeable in both directions, but the temperature reference sensor installation is not, because the harness break-out moves. Minimum equipment list content is unchanged. Maintenance manual content for the probe heat system test and the loadable software part task both need re-issue, and the trouble shooting content is re-written for the two-stage result. Expected reduction in cold-soak false declarations is better than 95 per cent.",
+      "embodiment_note": "Cut in on the production line at MSN C00569 in June 2023. Delivered aircraft are brought to standard through Service Bulletin CRN-30-1021, which is a line-level task on aircraft that already carry the fixed threshold standard. Embodiment on an aircraft that has not had the earlier standard applied is not permitted."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030115331360",
+        "D3030112916343",
+        "AES270917-26"
+      ],
+      "fins": [
+        "4618WX",
+        "274HA"
+      ],
+      "drawings": [
+        "D30301165123"
+      ],
+      "software": [
+        "LC5C5779B0E"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00569"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111145",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "CRN-30-1021",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-700-004-A",
+        "doc_type": "AMM",
+        "relation": "DOCUMENTED_IN"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-900-002-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-30-30-11-810-801",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "probe heat",
+      "temperature compensation",
+      "cold soak",
+      "false declaration",
+      "built-in test"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111159,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1323",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.3,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "AES270917-26"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3030115331360",
+        "D3030112916343"
+      ],
+      "fins_affected": [
+        "4618WX",
+        "274HA"
+      ],
+      "software_affected": [
+        "LC5C5779B0E"
+      ],
+      "estimated_manhours": 40,
+      "estimated_cost_keur": 260,
+      "lead_time_weeks": 22,
+      "production_impact": "Cut-in at MSN C00569, no line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,438 @@
+[
+  {
+    "doc_id": "PAWO-166204-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Internal Load-Diffusion Doubler across the Fwd Cargo Door Surround Frames",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-11",
+      "title": "Fuselage Section 13 — Forward — Frames"
+    },
+    "secondary_ata": [
+      "52-30",
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00139",
+          "to": "M00409"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SIA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-20",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the forward cargo door surround reinforcement, covering released modifications on the same corner, the retrofit bulletin effectivity, two in-service repair schemes, the door warning wiring route and a second candidate on the same door.",
+    "sections": {
+      "objective": "Identify every released or candidate item of Aeralis technical documentation applicable to MRD-46K1 aircraft in the MSN M00139 to M00409 range that the proposed internal load-diffusion doubler at the forward cargo door surround would conflict with, depend on, supersede or invalidate, and establish which of those are blocking for a launch decision.",
+      "scope_note": "The search covers ATA 53-21 as the primary chapter, with ATA 52-30 and 52-70 as secondary because the doubler footprint reaches the door cut-out and the door proximity sensing installation, and ATA 92-21 because the door warning loom crosses the same frame bays. ATA 25-50 cargo lining was included in the first pass and then excluded: the lining panels are removed and refitted unchanged, so no lining content is affected. Powerplant, avionics and cabin chapters were not searched. Freighter aircraft are out of scope and are being assessed separately, because the main deck door surround is a different structure.",
+      "method_note": "Entity linking was run first, seeded from the five part numbers, the single functional item number, the two drawing numbers and the three zones carried by the candidate. Semantic similarity was then run over titles, abstracts and reason-for-change text using the two seed phrases below, and the two result sets were merged. Findings surfaced by only one of the two methods are marked accordingly, because those are the ones a single-method search would have missed. The wiring finding came from entity linking alone and the external skin repair came from similarity alone; neither method would have produced both.",
+      "findings_summary": "Eight items have been confirmed and two of them are blocking. The reinforcement cannot be embodied on an aircraft that is still at the aluminium-lithium corner fitting standard, because the doubler fastener pattern assumes the post-modification frame drilling and on a pre-modification aircraft the hole positions fall inside the edge-distance limit of the existing fitting. That makes the earlier standard a hard prerequisite rather than a recommendation. Separately, the retrofit bulletin that brings aircraft to that standard is written for pre-modification aircraft only, and its effectivity statement will need re-issuing once the reinforcement exists, otherwise an operator can embody the two in an order that leaves the door surround in a configuration that neither substantiation covers. Below the blocking level, two in-service repair schemes occupy part of the area the doubler wants, a second candidate on the same door shares the proximity sensor and the door threshold zone, and the door warning wiring support bracket sits inside the doubler footprint. The wiring bracket is the finding the design office had not anticipated: it shares nothing with the candidate except a part number and a zone.",
+      "next_steps": "Confirm the clearance between the doubler footprint and the door warning wiring support bracket with a three-dimensional mock-up before the design review. Raise a change request against the retrofit bulletin effectivity statement. Obtain a written position from the repair design owner on whether the external patch repair survives embodiment. Coordinate with the owner of the proximity sensing candidate so that the two changes are not designed against each other."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5321117326151",
+        "D5321117734118",
+        "BEL987037-46",
+        "AES495354-07",
+        "D9221132883400"
+      ],
+      "fins": [
+        "3WT6"
+      ],
+      "drawings": [
+        "D53211167819",
+        "D53211108423"
+      ],
+      "software": [],
+      "zones": [
+        "113",
+        "115",
+        "891"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-166204",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-M-260118",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "cargo door surround",
+      "frame reinforcement",
+      "conflict search",
+      "effectivity"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-166204-01",
+      "subject_mod": "MOD-166204",
+      "source_io": "IO-M-260118",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": true,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-02-20",
+      "due_date": "2026-05-15",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA",
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 140,
+        "spent_manhours": 88
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "53",
+          "52",
+          "92"
+        ],
+        "ata_4d": [
+          "53-21",
+          "52-30",
+          "52-70",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "M00139",
+          "to": "M00409"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5321117326151",
+            "D5321117734118",
+            "BEL987037-46",
+            "AES495354-07",
+            "D9221132883400"
+          ],
+          "fins": [
+            "3WT6"
+          ],
+          "drawings": [
+            "D53211167819",
+            "D53211108423"
+          ],
+          "zones": [
+            "113",
+            "115",
+            "891"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "fatigue cracking at the lower corner of a cargo door cut-out",
+          "titanium doubler installed on fuselage frames to diffuse corner load"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released and candidate modifications on ATA 53-21 and 52-30",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check in-service repair schemes on the forward cargo door corner",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the door warning wiring route through the doubler footprint",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Review retrofit bulletin effectivity for the corner fitting standard",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T05",
+          "title": "Interview the door systems design office on the proximity sensing candidate",
+          "method": "SME_INTERVIEW",
+          "owner": "ELSC",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-160142",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES495354-07"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "MOD-160142 introduced the titanium corner fitting standard and with it the current frame drilling pattern. The doubler fastener pattern is laid out on that pattern. On a pre-MOD-160142 aircraft the doubler holes fall inside the edge-distance limit of the aluminium-lithium fitting, so the reinforcement cannot be embodied first.",
+          "resolution": "Declare MOD-160142 as a post-mod applicability condition on the candidate and state the constraint explicitly in the retrofit Service Bulletin when it is written."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-53-1012",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES495354-07"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "MRD-53-1012 is effective only on aircraft that are pre MOD-160142. Once the reinforcement exists, an operator that embodies the reinforcement before the Service Bulletin leaves the door surround in a configuration that neither substantiation covers, and the Service Bulletin gives no warning of it.",
+          "resolution": "Re-issue the Service Bulletin effectivity statement with an explicit ordering note, and record the constraint on both documents so that the operator planning system sees it."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-M-53-21-12-901",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The repair and the candidate describe the same physical corner of the forward cargo door aperture in entirely different vocabulary — 'external patch on the lower shell skin panel' against 'internal load-diffusion doubler on the frame face' — and share no part numbers, no functional item numbers and no zones. Only the descriptive text connects them."
+          },
+          "rationale": "Aircraft that already carry this life-limited patch have titanium sheet on the external face of the skin in the area where the reinforcement adds an internal doubler on the frame. The combined stack has never been substantiated, and the repeat eddy current inspection of the patch perimeter cannot be performed once the internal doubler blocks access to the routed edge.",
+          "resolution": "Obtain a written position from the repair design owner on whether the patch survives embodiment, and add an explicit pre-embodiment check for this repair to the retrofit Service Bulletin."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-166852",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "3WT6"
+            ],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Both candidates describe work at the forward cargo door threshold and both name the door proximity sensing installation, although one is a structural change and the other is a sensing installation change."
+          },
+          "rationale": "The proximity sensing candidate moves the target plate off the door sill and onto a new bracket on the door structure. That bracket lands in the same threshold region that the doubler footprint reaches. Neither candidate references the other and the two design offices are working independently.",
+          "resolution": "Hold a joint review of the two footprints before either design is frozen, and record a concurrency constraint if the two are to be embodied on the same aircraft."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "WDM-M-92-21-13",
+          "doc_type": "WDM",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D9221132883400"
+            ],
+            "shared_fins": [
+              "3WT6"
+            ],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The door warning loom is carried along the door surround on support brackets of part number D9221132883400, and one of those brackets sits inside the doubler footprint. Nothing in the wiring sheet resembles the candidate in wording; the link is the bracket part number and the shared zone. Moving the bracket changes the loom bend radius at the hinge crossing, which the wiring sheet calls out as a minimum.",
+          "resolution": "Confirm the bracket position against the wiring sheet in the mock-up, and raise a wiring documentation change if the bracket has to move."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-M-53-21-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5321117326151",
+              "D5321117734118",
+              "BEL987037-46"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "53-21-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The candidate replaces the frame doubler assembly, retains and re-drills the lower web, and replaces the splice plate at station C40. All three are itemised in this figure and all three need a pre and post item pair once the modification is released.",
+          "resolution": "Raise an illustrated parts content change request against this figure at design freeze, with the pre and post item numbering agreed with technical publications."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "SRM-M-53-21-11-002",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5321117734118"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113"
+            ],
+            "shared_ata_6d": [
+              "53-21-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The interim stop-hole and strap repair is applied to the same lower web that the candidate re-drills, and its strap occupies part of the doubler footprint. An aircraft carrying this repair cannot take the doubler without the repair being removed first, and the repair is life limited so some aircraft will be carrying it at the time of embodiment.",
+          "resolution": "Add an explicit check for this repair to the retrofit Service Bulletin and agree with the repair design owner what is done on an aircraft that carries it."
+        },
+        {
+          "finding_id": "F08",
+          "doc_id": "TSM-M-52-70-11-810-801",
+          "doc_type": "TSM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "3WT6"
+            ],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The fault isolation procedure for the door not locked indication depends on the sensing gap measured at the sensor 3WT6 in zone 891. If the doubler changes the local stiffness of the door surround, the sill deflection assumption behind the procedure changes with it.",
+          "resolution": "Ask the troubleshooting owner to re-assess the sill deflection figure quoted in the procedure once the doubler stiffness is known."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-160560",
+          "doc_type": "MOD",
+          "reason": "Near-identical title and the same ATA 53-21-11, and it is also a frame strengthening at a cargo door surround. It is applicable only to MERIDIAN-42F main deck cargo door structure, has no MSN overlap with the candidate, shares no part numbers, no functional item numbers and no zones, and answers a ground load case rather than a fatigue finding."
+        },
+        {
+          "doc_id": "SRM-M-53-31-12-003",
+          "doc_type": "SRM",
+          "reason": "Uses very similar repair vocabulary — blend-out, protective restoration, skin panel — and will score highly on text similarity, but it is on the aft fuselage lower skin, addresses drainage corrosion rather than cracking, and shares no zone, no part number and no frame station with the candidate."
+        }
+      ],
+      "conclusion": "Not yet issued. Two blocking conflicts are confirmed, one wiring clearance is under assessment and a second candidate on the same door needs a joint review before either design is frozen.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

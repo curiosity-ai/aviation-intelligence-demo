@@ -1,0 +1,155 @@
+[
+  {
+    "doc_id": "AMM-Z-76-10-11-200-037-A",
+    "doc_type": "AMM",
+    "title": "Inspection of the Thrust Lever Quadrant and Measurement of the Detent Breakout Force",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-03-16",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-10",
+      "ata_6d": "76-10-11",
+      "title": "Power Control — Thrust Lever Assembly"
+    },
+    "secondary_ata": [
+      "76-10-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-05-08",
+      "released": "2018-11-27",
+      "revised": "2021-03-16",
+      "effective": "2021-04-06"
+    },
+    "abstract": "Inspection of the thrust lever quadrant and measurement of the detent breakout force at the climb and flex gates, which is the acceptance measurement after a quadrant change and the trigger for one.",
+    "sections": {
+      "purpose": "This task inspects the thrust lever quadrant and measures the detent breakout force at the climb and flex gates in both directions, and compares the readings with the acceptance band.",
+      "job_setup_note": "The measurement is made from the flight deck with the pedestal closed, so it can be done on the line. The autothrust must be disconnected and the engines shut down. The calibrated force gauge and the lever knob adapter must be in date; an out of date gauge invalidates the measurement, and the readings are used as the acceptance evidence for a quadrant change.",
+      "procedure": "1. Make sure that the engines are shut down and that the aircraft is on ground power. 2. Confirm that the autothrust is disconnected. WARNING: DO NOT MOVE THE THRUST LEVERS WITH AN ENGINE RUNNING OR WITH THE AIRCRAFT CONNECTED TO A GROUND START SUPPLY. 3. Get access to the flight deck in zones 211 and 215; the pedestal does not have to be opened. 4. Check the calibration date on the force gauge and record it. 5. Fit the lever knob adapter to the left lever. 6. Move the lever slowly from idle towards the climb gate and record the force at which the detent breaks out. 7. Repeat in the opposite direction. 8. Repeat both directions at the flex gate. CAUTION: MOVE THE LEVER SLOWLY. A FAST MOVEMENT GIVES A HIGH READING THAT HIDES A WORN DETENT. 9. Repeat the full sequence on the right lever. 10. Do a detailed visual inspection of the lever knobs, the gate markings and the pedestal closeout for wear or damage. 11. Check the friction clamp D7610111733252 access cover for security. 12. Compare every reading with the acceptance band in the instructions and report any reading below the lower limit.",
+      "close_out": "Remove the adapter and stow the gauge. Restore the levers to the idle position. Record all eight readings, the gauge calibration date and the acceptance result on the maintenance record. Where any reading is below the lower limit, raise a planning item for the quadrant exchange."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7610111733252",
+        "D7610117147370",
+        "ASH79119-70"
+      ],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "211",
+        "215"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-76-1008",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-76-1011",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "thrust lever quadrant",
+      "detent breakout force",
+      "climb gate",
+      "flex gate",
+      "calibrated gauge"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Port-Rivage",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "76-10-11-200-037-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. The acceptance band differs pre and post MOD-155845.",
+      "manhours": 2.5,
+      "personnel": 1,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "211",
+          "215"
+        ],
+        "access_panels": [
+          "211CR",
+          "215AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not move the thrust levers with an engine running.",
+          "Confirm that the autothrust is disconnected.",
+          "Check the gauge calibration date before the measurement."
+        ],
+        "tooling": [
+          {
+            "reference": "Calibrated force gauge 0-50 N",
+            "description": "Breakout force measurement"
+          },
+          {
+            "reference": "98D76101-008",
+            "description": "Thrust lever knob adapter"
+          }
+        ],
+        "consumables": [
+          "Lint free wipes"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,358 @@
+[
+  {
+    "doc_id": "MOD-159902",
+    "doc_type": "MOD",
+    "title": "Brake and Steering Control Unit Standard 8.5 — Brake Temperature Feedback in the Anti-Skid Law",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-1226",
+        "VDK-1232",
+        "PYR-1127G",
+        "PYR-1133G"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-155471"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-04-17",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposal to feed measured brake temperature into the anti-skid pressure law so that the unit can bias braking towards the cooler brakes, cutting turnaround delays caused by brake temperature limits on short-sector operations.",
+    "sections": {
+      "reason": "Short-sector operators are increasingly held on stand by brake temperature limits rather than by any technical defect. One operator recorded 190 departure delays attributable to brake cooling over a single summer across 26 aircraft. The current pressure law treats all four brakes identically, so a brake that is already hot from the previous landing absorbs the same energy again, and the hottest brake sets the cooling time for the whole aircraft. Brake temperature is already measured and displayed, but the control unit does not use it.",
+      "description": "Software standard 8.5, part number LA8N8A8BCE4, replaces standard 2.6 LG3N06435DD in the brake and steering control unit. The new standard reads the four brake temperature channels and biases the commanded pressure towards the cooler brakes within a bounded authority of fifteen per cent, while leaving the total commanded deceleration unchanged. The unit sensor D3240129735238 is retained, the new brake assembly sensor D3240110655992 is added at each wheel to give the unit a faster temperature signal than the flight deck indication uses, and the regulator D3240112015394 is renewed because the finer pressure modulation exceeds the response of the current item. The load target remains the unit FIN 998GM and the brake clamp FIN 2225WS is disturbed at each wheel. Work is done from zones 754 and 734. Drawing D32401235626 issue G carries the wiring for the new sensors.",
+      "effects": "Estimated mass increase of 1.8 kg per aircraft. Electrical load increases by 16 VA for the four temperature sensors. The software is not interchangeable with the previous standard and the unit will refuse to run standard 8.5 without the new sensors present, so the software and the hardware must be embodied together. Certified stopping distance is unchanged because the total commanded deceleration is preserved, but the effect on the accelerate-stop case has to be demonstrated. Expected reduction in brake cooling delays is 60 per cent on the trial fleet. Troubleshooting and wiring content for ATA 32-40 will require re-issue.",
+      "open_points": "Pre-analysis must confirm that the earlier standard is a hard prerequisite rather than merely the current fleet baseline, whether the accelerate-stop demonstration can reuse the previous flight test campaign, and whether the four new temperature sensors can share the existing harness or need a new run into the gear bay."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240129735238",
+        "D3240110655992",
+        "D3240112015394"
+      ],
+      "fins": [
+        "998GM",
+        "2225WS"
+      ],
+      "drawings": [
+        "D32401235626"
+      ],
+      "software": [
+        "LA8N8A8BCE4",
+        "LG3N06435DD"
+      ],
+      "zones": [
+        "754",
+        "734"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155471",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "brake temperature",
+      "anti-skid law",
+      "turnaround delay",
+      "software standard",
+      "pressure bias"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 159902,
+      "mod_class": "MAJOR",
+      "change_category": "SOFTWARE",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.735",
+          "CS 25.101",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 1.8,
+      "balance_impact": "Symmetric, no measurable CG effect",
+      "electrical_load_impact_va": 16,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3240110655992"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3240112015394",
+        "D3240129735238"
+      ],
+      "fins_affected": [
+        "998GM",
+        "2225WS"
+      ],
+      "software_affected": [
+        "LA8N8A8BCE4",
+        "LG3N06435DD"
+      ],
+      "estimated_manhours": 36,
+      "estimated_cost_keur": 1650,
+      "lead_time_weeks": 58,
+      "production_impact": "Production cut-in to be decided after the accelerate-stop demonstration",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-159902",
+    "doc_type": "MOD",
+    "title": "Brake and Steering Control Unit Standard 8.5 — Brake Temperature Feedback in the Anti-Skid Law",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-06",
+      "reason": "The earlier standard is confirmed as a hard prerequisite and an aircraft at that standard is accepted directly, with no intermediate load.",
+      "raised_by_pawo": "PAWO-155471-01",
+      "raised_by_finding": "F01",
+      "finding_type": "SUPERSESSION"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-1226",
+        "VDK-1232",
+        "PYR-1127G",
+        "PYR-1133G"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-155471"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-04-17",
+      "released": null,
+      "revised": "2026-08-06",
+      "effective": null
+    },
+    "abstract": "Proposal to feed measured brake temperature into the anti-skid pressure law so that the unit biases braking towards the cooler brakes, taking an aircraft at the four-wheel reference standard directly and superseding it.",
+    "sections": {
+      "reason": "Short-sector operators are increasingly held on stand by brake temperature limits rather than by any technical defect. One operator recorded 190 departure delays attributable to brake cooling over a single summer across 26 aircraft. The current pressure law treats all four brakes identically, so a brake that is already hot from the previous landing absorbs the same energy again, and the hottest brake sets the cooling time for the whole aircraft. Brake temperature is already measured and displayed, but the control unit does not use it.",
+      "description": "Software standard 8.5, part number LA8N8A8BCE4, replaces standard 2.6 LG3N06435DD in the brake and steering control unit. The new standard reads the four brake temperature channels and biases the commanded pressure towards the cooler brakes within a bounded authority of fifteen per cent, while leaving the total commanded deceleration unchanged. The unit sensor D3240129735238 is retained, the new brake assembly sensor D3240110655992 is added at each wheel to give the unit a faster temperature signal than the flight deck indication uses, and the regulator D3240112015394 is renewed because the finer pressure modulation exceeds the response of the current item. The load target remains the unit FIN 998GM and the brake clamp FIN 2225WS is disturbed at each wheel. Work is done from zones 754 and 734. Drawing D32401235626 issue G carries the wiring for the new sensors.",
+      "effects": "Estimated mass increase of 1.8 kg per aircraft. Electrical load increases by 16 VA for the four temperature sensors. The software is not interchangeable with the previous standard and the unit will refuse to run standard 8.5 without the new sensors present, so the software and the hardware must be embodied together. Certified stopping distance is unchanged because the total commanded deceleration is preserved, but the effect on the accelerate-stop case has to be demonstrated. Expected reduction in brake cooling delays is 60 per cent on the trial fleet. Troubleshooting and wiring content for ATA 32-40 will require re-issue. An aircraft at the four-wheel reference standard is taken to this standard directly: the weighted estimator is retained unchanged and only the pressure distribution term is added, so there is no intermediate load and nothing embodied for the earlier standard is wasted.",
+      "open_points": "Pre-analysis must confirm whether the accelerate-stop demonstration can reuse the previous flight test campaign, and whether the four new temperature sensors can share the existing harness or need a new run into the gear bay. The prerequisite question is closed: the four-wheel reference standard is a hard entry condition and not merely the current fleet baseline, and this dossier supersedes it rather than running beside it."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240129735238",
+        "D3240110655992",
+        "D3240112015394"
+      ],
+      "fins": [
+        "998GM",
+        "2225WS"
+      ],
+      "drawings": [
+        "D32401235626"
+      ],
+      "software": [
+        "LA8N8A8BCE4",
+        "LG3N06435DD"
+      ],
+      "zones": [
+        "754",
+        "734"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155471",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "brake temperature",
+      "anti-skid law",
+      "direct upgrade path",
+      "software standard",
+      "pressure bias"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 159902,
+      "mod_class": "MAJOR",
+      "change_category": "SOFTWARE",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.735",
+          "CS 25.101",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 1.8,
+      "balance_impact": "Symmetric, no measurable CG effect",
+      "electrical_load_impact_va": 16,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3240110655992"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3240112015394",
+        "D3240129735238"
+      ],
+      "fins_affected": [
+        "998GM",
+        "2225WS"
+      ],
+      "software_affected": [
+        "LA8N8A8BCE4",
+        "LG3N06435DD"
+      ],
+      "estimated_manhours": 36,
+      "estimated_cost_keur": 1650,
+      "lead_time_weeks": 58,
+      "production_impact": "Production cut-in to be decided after the accelerate-stop demonstration",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

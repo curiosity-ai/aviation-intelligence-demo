@@ -1,0 +1,186 @@
+[
+  {
+    "doc_id": "MOD-163460",
+    "doc_type": "MOD",
+    "title": "Brake and Steering Control Unit Operating Software Standard 8.2",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-08-16",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30",
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "M00358",
+      "production_cut_in_date": "2021-09-02",
+      "retrofit_via": [
+        "MRD-32-1110",
+        "MRD-32-1126"
+      ]
+    },
+    "dates": {
+      "created": "2019-11-25",
+      "released": "2021-04-07",
+      "revised": "2023-08-16",
+      "effective": "2023-09-04"
+    },
+    "abstract": "Operating software standard 8.2 for the brake and steering control unit, introducing anti-skid gain scheduling by tyre pressure and a first version of the recorded fault snapshot used by line maintenance.",
+    "sections": {
+      "reason": "Two separate drivers were bundled into one software standard. First, anti-skid performance on wet grooved runways at light landing weights was conservative, giving longer stopping distances than the certified figures required, which several operators had queried. Second, line maintenance could not close brake system messages without a wheel and brake change because the control unit recorded only a fault code and no context. Sixty-two brake assemblies were returned in two years with no fault found.",
+      "description": "Software load LH4PE7117BE introduces anti-skid gain scheduling driven by measured tyre pressure and by wheel speed rate, and adds a fault snapshot that captures forty seconds of brake pressure, wheel speed and pedal position around the triggering event. The snapshot is written to non-volatile memory and is readable through the maintenance terminal. Hardware is largely unchanged: the switch assembly D3240126111041 is replaced by an item with a faster sampling interface and the transmitter D3240127464045 is recalibrated, both to feed the higher-rate sampling the new logic needs. Detail is on drawing D32401260138. Work is in the main gear bay and gear door areas, zones 721 and 755. The brake filter 1GM5 and the solenoid 23GM are unchanged but appear in the revised troubleshooting path.",
+      "effects": "No mass change beyond 0.1 kg for the replaced switch assembly. Electrical load unchanged. Not interchangeable: the software standard requires the faster sampling interface, so it must not be loaded onto an aircraft with the original switch assembly. Certified landing distances are unaffected but the wet runway margin improves. Dispatch relief is unchanged. The brake control unit test task and the illustrated parts content both require reissue.",
+      "embodiment_note": "Cut in at MSN M00358 in September 2021. Service Bulletin MRD-32-1110 covers the hardware change and the software load together for the main fleet; Service Bulletin MRD-32-1126 covers the software load alone for aircraft that already carry the faster interface from a component change."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126111041",
+        "D3240127464045"
+      ],
+      "fins": [
+        "1GM5",
+        "23GM"
+      ],
+      "drawings": [
+        "D32401260138"
+      ],
+      "software": [
+        "LH4PE7117BE"
+      ],
+      "zones": [
+        "721",
+        "755"
+      ],
+      "figures": [
+        "FIG-32-40-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00358"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-32-1110",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MRD-32-1126",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-M-32-40-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-M-32-40-12-700-018-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "anti-skid gain",
+      "fault snapshot",
+      "software standard",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Landing Gear Systems"
+    },
+    "type_data": {
+      "mod_number": 163460,
+      "mod_class": "MAJOR",
+      "change_category": "SOFTWARE",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.109",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0.1,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3240126111041",
+        "D3240127464045"
+      ],
+      "fins_affected": [
+        "1GM5"
+      ],
+      "software_affected": [
+        "LH4PE7117BE"
+      ],
+      "estimated_manhours": 36,
+      "estimated_cost_keur": 780,
+      "lead_time_weeks": 52,
+      "production_impact": "Cut-in at MSN M00358, control unit supplier standard change",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

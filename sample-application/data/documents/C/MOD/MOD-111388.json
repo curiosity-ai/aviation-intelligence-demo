@@ -1,0 +1,214 @@
+[
+  {
+    "doc_id": "MOD-111388",
+    "doc_type": "MOD",
+    "title": "Introduction of Continuous Tyre Pressure Indicating with Flight Deck and Maintenance Reporting",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-07-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-13",
+      "title": "Wheels and Brakes — Tyre Pressure Indicating"
+    },
+    "secondary_ata": [
+      "32-40-12",
+      "31-30"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00137",
+          "to": "C00796"
+        }
+      ],
+      "excluded_msns": [
+        "C00205",
+        "C00273"
+      ],
+      "engine_types": [],
+      "operators": [
+        "TJT",
+        "CKP",
+        "FRR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00680",
+      "production_cut_in_date": "2023-11-17",
+      "retrofit_via": [
+        "CRN-32-2008"
+      ]
+    },
+    "dates": {
+      "created": "2021-08-24",
+      "released": "2023-04-06",
+      "revised": "2025-07-15",
+      "effective": "2025-08-11"
+    },
+    "abstract": "Continuous tyre pressure measurement at all six wheel positions with a flight deck indication and a maintenance report, replacing the manual gauge check that operators were doing daily on short-sector fleets.",
+    "sections": {
+      "reason": "The delivered aircraft has no tyre pressure indication and the maintenance programme requires a manual gauge check every four days, which short-sector operators were doing daily by choice because a deflated tyre found at the gate costs them a rotation. Two operators recorded eleven tyre changes in a year attributable to running a mate tyre under-pressure without knowing it, and one recorded a rejected take-off following a tread separation where the post-event investigation found the tyre had been under-inflated for at least six sectors. The manual check is also the single most common cause of a walk-around overrun on a short turn.",
+      "description": "A pressure sensor is installed in each of the six wheels and reports through a wheel-mounted transmitter to a receiver on the gear leg. The manifold ESC959638-52 is fitted at each axle to carry the sensor and its valve, the regulator D3240120310957 in the brake control unit bay is replaced by an item with the additional input, and the clamp kit D3240128079286 secures the new harness along the leg. Tension bolts AES343862-3E and washers AGS146031K9 are used at the manifold. The brake control unit operational load LH4C830E70C is re-issued so that the pressure values reach both the flight deck page and the maintenance report. Functional items 5358WS and 210WS9 are affected. Work is in the gear bays and doors, zones 763, 771 and 773. Installation detail is on drawings D32401216639 and D32400062341.",
+      "effects": "Mass increase of 5.2 kg. Electrical load increases by 45 volt-amperes. The wheel is not interchangeable with a non-instrumented wheel unless the position is declared inoperative, and a mixed installation is permitted with the indication inhibited for that position. The four-day manual gauge check is deleted and replaced by a pressure review at each transit, which is a net saving of about forty manhours per aircraft per year. The flight crew gain a new page and a new caution, so the operating manual procedures for a low tyre pressure indication are new content. The trouble shooting manual gains an isolation procedure for a transmitter that does not report.",
+      "embodiment_note": "Production cut-in at MSN C00680 in November 2023. Retrofit is by Service Bulletin CRN-32-2008, one shift with the aircraft on jacks, and the wheels can be prepared off the aircraft in advance. Two operators embodied the whole fleet inside nine months."
+    },
+    "entities": {
+      "part_numbers": [
+        "ESC959638-52",
+        "D3240120310957",
+        "D3240128079286",
+        "AES343862-3E",
+        "AGS146031K9",
+        "D3240121944667"
+      ],
+      "fins": [
+        "5358WS",
+        "210WS9"
+      ],
+      "drawings": [
+        "D32401216639",
+        "D32400062341"
+      ],
+      "software": [
+        "LH4C830E70C"
+      ],
+      "zones": [
+        "763",
+        "771",
+        "773"
+      ],
+      "figures": [
+        "FIG-32-40-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00680"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-32-2008",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "FCOM-C-PRO-32-40-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-32-40-13-200-025-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-32-40-13-810-814",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-32-40-13-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "tyre pressure",
+      "wheel sensor",
+      "gauge check",
+      "transit review",
+      "under-inflation"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Lorencourt",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111388,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.729",
+          "CS 25.1301",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 5.2,
+      "balance_impact": "Distributed at the gear positions, no declared effect",
+      "electrical_load_impact_va": 45,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "ESC959638-52",
+        "D3240128079286",
+        "D3240121944667"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3240120310957"
+      ],
+      "fins_affected": [
+        "5358WS",
+        "210WS9"
+      ],
+      "software_affected": [
+        "LH4C830E70C"
+      ],
+      "estimated_manhours": 610,
+      "estimated_cost_keur": 2300,
+      "lead_time_weeks": 64,
+      "production_impact": "Cut-in at MSN C00680, instrumented wheels supplied as a matched set of six",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

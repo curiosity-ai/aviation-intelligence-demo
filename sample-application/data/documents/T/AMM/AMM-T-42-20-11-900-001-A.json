@@ -1,0 +1,338 @@
+[
+  {
+    "doc_id": "AMM-T-42-20-11-900-001-A",
+    "doc_type": "AMM",
+    "title": "Avionics Network Switch — Line Card Replacement and Configuration File Loading",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2009-01-10",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Integrated Modular Avionics — Network Switch"
+    },
+    "secondary_ata": [
+      "42-20-12",
+      "45-20-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2008-07-07",
+      "released": "2009-01-10",
+      "revised": "2009-01-10",
+      "effective": "2009-02-14"
+    },
+    "abstract": "Replacement of the avionics network switch line card and loading of the configuration file, including the warm-up hold behaviour that must be seen before the aircraft is released.",
+    "sections": {
+      "purpose": "This task gives the procedure to replace the line card in an avionics network switch, to load the switch configuration file and to confirm the port initialisation behaviour including the controlled warm-up hold.",
+      "job_setup_note": "The card is static sensitive and must be handled on an antistatic mat with a wrist strap connected to the aircraft structure. The card and the configuration file are a matched pair: a redesigned card with an early configuration file produces port initialisation messages the troubleshooting content does not describe, and an early card rejects the later file. Both switches must be brought to the same standard in the same visit.",
+      "procedure": "1. Remove electrical power and put the warning notice in position. 2. Open the forward avionics compartment in zone 163. 3. Set up the antistatic mat and connect the wrist strap to the aircraft structure. 4. Remove the switch carrier from the rack. 5. Remove the existing line card and the spacer set. CAUTION: DO NOT TOUCH THE HEAT SPREADER FACE. FINGER CONTAMINATION ON THE SPREADER RAISES THE JUNCTION TEMPERATURE AND THE CARD WILL HOLD ITS PORTS. 6. Install the new spacers and put the new line card in position, seating it evenly. 7. Reinstall the carrier in the rack and re-terminate the card status discrete. 8. Repeat for the second switch. 9. Restore electrical power. 10. Connect the portable data loader and load the configuration file into each switch, confirming the part number after each. 11. Let the aircraft stay powered for the warm-up period given in the figure. WARNING: DO NOT DECLARE THE SWITCH SERVICEABLE WHILE ANY PORT IS STILL HELD. A HELD PORT AFTER THE WARM-UP PERIOD MEANS THE CARD AND THE FILE DO NOT MATCH. 12. Confirm that all ports report link and that no port remains held. 13. Do the network integrity check. 14. Close the compartment.",
+      "close_out": "Remove the warning notice. Record both card part numbers and both configuration file part numbers in the loadable software list. Return the removed cards in antistatic bags with the removal reason attached. Confirm that no maintenance message remains active before the aircraft is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "AES271290K2",
+        "D4220115959692",
+        "D4220122248639"
+      ],
+      "fins": [
+        "2029CP1",
+        "423CP4"
+      ],
+      "drawings": [
+        "D42201115709",
+        "D42201186509"
+      ],
+      "software": [
+        "LC9R67A042E"
+      ],
+      "zones": [
+        "163",
+        "161"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-45-20-11-700-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "network switch",
+      "line card",
+      "configuration file",
+      "warm-up hold",
+      "antistatic"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "42-20-11-900-001-A",
+      "task_type": "ADJUSTMENT",
+      "effectivity_note": "All aircraft. The warm-up hold at step 11 applies only to aircraft post MOD-147040.",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "163",
+          "161"
+        ],
+        "access_panels": [
+          "163AL",
+          "161BR"
+        ],
+        "doors": [
+          "Fwd avionics compartment access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Remove electrical power before the carrier is removed.",
+          "Connect the antistatic wrist strap to the aircraft structure.",
+          "Put the warning notice in position."
+        ],
+        "tooling": [
+          {
+            "reference": "98D42201-019",
+            "description": "Antistatic wrist strap and mat"
+          },
+          {
+            "reference": "98D31501-027",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [
+          "Antistatic bag",
+          "Contact cleaner, electronic grade"
+        ],
+        "expendables": [
+          {
+            "part_number": "AES271290K2",
+            "qty": 16
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-45-20-11-700-002-A"
+      ],
+      "steps": 14,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-T-42-20-11-900-001-A",
+    "doc_type": "AMM",
+    "title": "Avionics Network Switch — Line Card Replacement and Configuration File Loading",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-22",
+      "reason": "Configuration file part number is now read back and compared with the aircraft record after any carrier exchange, not only after a load.",
+      "raised_by_pawo": "PAWO-147040-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Integrated Modular Avionics — Network Switch"
+    },
+    "secondary_ata": [
+      "42-20-12",
+      "45-20-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2008-07-07",
+      "released": "2009-01-10",
+      "revised": "2026-07-22",
+      "effective": "2026-08-05"
+    },
+    "abstract": "Replacement of the avionics network switch line card and loading of the configuration file, including the warm-up hold behaviour and the configuration read back that must follow any carrier exchange before the aircraft is released.",
+    "sections": {
+      "purpose": "This task gives the procedure to replace the line card in an avionics network switch, to load the switch configuration file and to confirm the port initialisation behaviour including the controlled warm-up hold.",
+      "job_setup_note": "The card is static sensitive and must be handled on an antistatic mat with a wrist strap connected to the aircraft structure. The card and the configuration file are a matched pair: a redesigned card with an early configuration file produces port initialisation messages the troubleshooting content does not describe, and an early card rejects the later file. A carrier drawn from stores usually holds the file it was last loaded with, which on most spares is the pre-modification file, so an exchange can quietly return one switch position to the earlier behaviour on an aircraft that is otherwise converted. Both switches must be brought to the same standard in the same visit.",
+      "procedure": "1. Remove electrical power and put the warning notice in position. 2. Open the forward avionics compartment in zone 163. 3. Set up the antistatic mat and connect the wrist strap to the aircraft structure. 4. Remove the switch carrier from the rack. 5. Remove the existing line card and the spacer set. CAUTION: DO NOT TOUCH THE HEAT SPREADER FACE. FINGER CONTAMINATION ON THE SPREADER RAISES THE JUNCTION TEMPERATURE AND THE CARD WILL HOLD ITS PORTS. 6. Install the new spacers and put the new line card in position, seating it evenly. 7. Reinstall the carrier in the rack and re-terminate the card status discrete. 8. Repeat for the second switch. 9. Restore electrical power. 10. Where a carrier has been exchanged rather than re-fitted, read the configuration file part number reported by the fitted carrier and compare it with the part number held in the aircraft configuration record; where the two differ, load the recorded file before you go on. 11. Connect the portable data loader and load the configuration file into each switch, confirming the part number after each. 12. Let the aircraft stay powered for the warm-up period given in the figure. WARNING: DO NOT DECLARE THE SWITCH SERVICEABLE WHILE ANY PORT IS STILL HELD. A HELD PORT AFTER THE WARM-UP PERIOD MEANS THE CARD AND THE FILE DO NOT MATCH. 13. Confirm that all ports report link and that no port remains held. 14. Do the network integrity check. 15. Close the compartment.",
+      "close_out": "Remove the warning notice. Record both card part numbers and both configuration file part numbers in the loadable software list, and record the read back taken at step 10 against the carrier serial number where a carrier was exchanged. Return the removed cards in antistatic bags with the removal reason attached. Confirm that no maintenance message remains active before the aircraft is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "AES271290K2",
+        "D4220115959692",
+        "D4220122248639"
+      ],
+      "fins": [
+        "2029CP1",
+        "423CP4"
+      ],
+      "drawings": [
+        "D42201115709",
+        "D42201186509"
+      ],
+      "software": [
+        "LC9R67A042E"
+      ],
+      "zones": [
+        "163",
+        "161"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-45-20-11-700-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "network switch",
+      "line card",
+      "configuration file",
+      "carrier exchange",
+      "warm-up hold"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "42-20-11-900-001-A",
+      "task_type": "ADJUSTMENT",
+      "effectivity_note": "All aircraft. The warm-up hold at step 12 applies only to aircraft post MOD-147040, and on those aircraft the read back at step 10 is required after every carrier exchange, including an exchange made without any card work.",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "163",
+          "161"
+        ],
+        "access_panels": [
+          "163AL",
+          "161BR"
+        ],
+        "doors": [
+          "Fwd avionics compartment access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Remove electrical power before the carrier is removed.",
+          "Connect the antistatic wrist strap to the aircraft structure.",
+          "Put the warning notice in position."
+        ],
+        "tooling": [
+          {
+            "reference": "98D42201-019",
+            "description": "Antistatic wrist strap and mat"
+          },
+          {
+            "reference": "98D31501-027",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [
+          "Antistatic bag",
+          "Contact cleaner, electronic grade"
+        ],
+        "expendables": [
+          {
+            "part_number": "AES271290K2",
+            "qty": 16
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-45-20-11-700-002-A"
+      ],
+      "steps": 15,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

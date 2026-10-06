@@ -1,0 +1,190 @@
+[
+  {
+    "doc_id": "SLN-33-1038",
+    "doc_type": "SB",
+    "title": "Lights — Cabin Ceiling and Wall Wash — Full Spectrum Emitter with Scene Sequencing",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-04-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "33",
+      "ata_4d": "33-20",
+      "ata_6d": "33-20-11",
+      "title": "Passenger Compartment Lighting — Ceiling and Wall Wash Lights"
+    },
+    "secondary_ata": [
+      "44-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-136140"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2023-10-06",
+      "released": "2024-04-19",
+      "revised": null,
+      "effective": "2024-05-13"
+    },
+    "abstract": "Cabin refresh retrofit of the full spectrum ceiling and wall wash emitter with scene sequencing hosted in the cabin data system, replacing the three-colour emitter fitted at build on the Evo variants.",
+    "sections": {
+      "planning_reason": "The three-colour emitter fitted at build cannot reproduce the warm low-colour-temperature scenes that operators now specify as standard, and two Evo customers made the capability a condition of their cabin definition for follow-on deliveries, which leaves their earlier aircraft visibly different. There is a maintenance driver as well: the existing emitter strings fail one segment at a time and a single failed segment is visible from the cabin, so the removal rate on aircraft older than four years is driven by appearance at 0.9 per aircraft per year.",
+      "description": "The ceiling and wall wash light assembly kit is replaced by a full spectrum unit with individually addressable segments and local temperature compensation. The inboard partition is re-cut where the deeper housing fouls it, the stowage bin gets a revised light shield and the obsolete aft panel sub-assembly is deleted. Scene sequencing is hosted in the cabin data system director and commanded from the attendant panel; no new controller is added.",
+      "accomplishment_summary": "Isolate the cabin lighting and tag the circuit breakers. Drop the ceiling panels in zones 241, 253 and 265. CAUTION: THE EMITTER HOUSING IS BONDED TO THE CEILING PANEL. DO NOT LEVER IT OUT. Remove the existing ceiling and wall wash light assembly kit D3320112768387 from each ceiling panel. Remove the obsolete aft panel sub-assembly RO886925-91 and discard it. Re-cut the inboard partition assembly NY719919-92 where the deeper housing fouls it. Install the full spectrum assembly and connect it to the existing cabin bus. Install the revised light shield in the right-hand stowage bin QUD588949-34. Re-address the lower lighting position 24RH, the upper partition position 4864LP4, the left-hand lining position 9691LP and the aft trim position 8517LP6 using the addressing table in the accomplishment instructions. Do AMM-S-33-20-11-400-019-A to install the ceiling panels. Load the scene table into the cabin data system director. Do the cabin lighting functional test at every scene and check that no segment is dark. Record the embodiment.",
+      "effectivity_note": "Applicable to SOLANO-38 and SOLANO-39 aircraft delivered before the production cut-in at MSN S01861. The Service Bulletin is written to be embodied during a cabin refresh, when the ceiling panels are already down; standalone embodiment is permitted but is rarely economic and the Service Bulletin says so.",
+      "material_note": "Kit K3320-1038-01 covers one aircraft in the standard cabin layout; operators with a non-standard layout must order by ceiling panel count. Lead time is twenty-six weeks. The removed emitters are not returned. The scene table is supplied on the data load medium with the kit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3320112768387",
+        "NY719919-92",
+        "QUD588949-34",
+        "RO886925-91"
+      ],
+      "fins": [
+        "24RH",
+        "4864LP4",
+        "9691LP",
+        "8517LP6"
+      ],
+      "drawings": [
+        "D33201109538",
+        "D33201121638"
+      ],
+      "software": [],
+      "zones": [
+        "241",
+        "253",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01861"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-136140",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-S-33-20-11-400-019-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "full spectrum emitter",
+      "scene sequencing",
+      "cabin refresh",
+      "segment failure",
+      "addressing table"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-33-1038",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "OPTIONAL",
+      "compliance_time": "At the operator's discretion, normally at the next cabin refresh.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-136140",
+      "manpower": {
+        "elapsed_time_hours": 180,
+        "manhours": 300,
+        "personnel": 4,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K3320-1038-01",
+        "kit_available_from": "2024-08-01",
+        "parts_required": [
+          {
+            "part_number": "D3320112768387",
+            "qty": 46,
+            "uom": "EA"
+          },
+          {
+            "part_number": "QUD588949-34",
+            "qty": 46,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Adhesive, cabin panel, low outgassing",
+          "Label set, cabin addressing"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Cabin lighting test set 98D33201-064",
+          "Panel lifting aid"
+        ]
+      },
+      "weight_change_kg": 11.0,
+      "accomplishment_steps": 12,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2024-04-19",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

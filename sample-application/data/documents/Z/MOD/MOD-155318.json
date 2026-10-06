@@ -1,0 +1,186 @@
+[
+  {
+    "doc_id": "MOD-155318",
+    "doc_type": "MOD",
+    "title": "Air Starter Motor Clamp and Heat Shield Rework for the Extended Duty Start Cycle",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2025-03-11",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "80-10-12",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-1226",
+        "VDK-1232",
+        "PYR-1127G",
+        "PYR-1133G"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "Z12092",
+      "production_cut_in_date": "2025-07-22",
+      "retrofit_via": [
+        "ZPH-80-1003"
+      ]
+    },
+    "dates": {
+      "created": "2023-09-19",
+      "released": "2025-03-11",
+      "revised": null,
+      "effective": "2025-04-01"
+    },
+    "abstract": "Reworked clamp and heat shield for the air starter motor, released after the extended motoring cycle introduced for engine dry crank left the starter duct joint hot enough to relax the clamp.",
+    "sections": {
+      "reason": "The extended dry motoring cycle adopted across the fleet for engine core conditioning runs the starter for up to ninety seconds against a previous maximum of thirty. Operators using the longer cycle daily reported starter duct joint leakage at a rate five times higher than the rest of the fleet, and the clamps that were removed showed permanent set consistent with a soak temperature well above the qualification figure. Leakage at that joint blows on the pylon lower fairing and had produced eleven fairing skin heat damage findings by the end of 2023.",
+      "description": "The starter duct clamp PE187919-09 is replaced by an item with a stainless band and a compensating spring section that maintains load through the temperature cycle. The tube assembly D8010116441198 gains a formed heat shield tab that protects the clamp from direct radiation off the duct elbow, and the shield is secured with titanium bolts EN290030-3C into the existing bosses. The heat shield at FIN 293ES is unchanged. The start valve nozzle at FIN 2520ES is removed and refitted for access and its seal is renewed. Work is in zones 462 and 421 with the fan cowl open. No pipework is cut and no bracketry is drilled.",
+      "effects": "Mass increase of 0.5 kilograms per engine. No electrical load change. Fully interchangeable in both directions. Starter duct joint leakage on aircraft using the extended motoring cycle is expected to return to fleet average, and the pylon fairing heat damage finding should disappear. The starter removal and installation tasks, the parts figure and the starter fault isolation procedure require re-issue, and the flight crew procedure for engine start is affected only in the note that governs the maximum motoring duration.",
+      "embodiment_note": "Production cut-in at MSN Z12092 in July 2025. Retrofit is a three hour task per engine with the fan cowl open and is normally done at the next scheduled starter inspection. Kits contain the clamp, the shield tab and the bolt set for one engine."
+    },
+    "entities": {
+      "part_numbers": [
+        "PE187919-09",
+        "D8010116441198",
+        "EN290030-3C"
+      ],
+      "fins": [
+        "293ES",
+        "2520ES"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "462",
+        "421"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z12092"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-80-1003",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-Z-80-10-11-400-036-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-Z-80-10-11-FIG-16",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "TSM-Z-80-10-11-812-815",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "air starter motor",
+      "duct clamp",
+      "extended motoring",
+      "heat shield tab",
+      "joint leakage"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Powerplant Design Office"
+    },
+    "type_data": {
+      "mod_number": 155318,
+      "mod_class": "MINOR",
+      "change_category": "POWERPLANT",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1183"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.5,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "EN290030-3C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "PE187919-09",
+        "D8010116441198"
+      ],
+      "fins_affected": [
+        "293ES",
+        "2520ES"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 66,
+      "estimated_cost_keur": 245,
+      "lead_time_weeks": 24,
+      "production_impact": "Cut-in at MSN Z12092, clamp supplier qualified in advance of the change",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

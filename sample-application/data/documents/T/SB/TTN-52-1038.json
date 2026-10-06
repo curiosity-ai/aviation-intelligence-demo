@@ -1,0 +1,188 @@
+[
+  {
+    "doc_id": "TTN-52-1038",
+    "doc_type": "SB",
+    "title": "Cargo Doors — Latching Station Intercostals — Wear Inspection Before Sensor Duplication",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-02-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00113"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-141020"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2016-10-11",
+      "released": "2017-02-08",
+      "revised": null,
+      "effective": "2017-03-01"
+    },
+    "abstract": "Wear inspection of the latching station intercostals on all three cargo doors, to be done before the duplicated latch position sensing standard is embodied, with replacement of any intercostal found outside the wear limit.",
+    "sections": {
+      "planning_reason": "The duplicated latch position sensing standard assumes an intercostal roller face inside its original wear limit. On aircraft that have accumulated a high number of door cycles, the roller face can have worn far enough that the second sensor would be set against a datum that continues to move, which would generate the disagreement indication the duplication is meant to eliminate. Fifteen aircraft inspected during the development of the modification carried at least one intercostal outside the limit, all of them above 9 000 door cycles.",
+      "description": "This Service Bulletin gives the inspection of the roller contact face of the latching intercostal at every latching station of the forward, aft and bulk cargo doors, and the criteria for replacement. Intercostals found outside the limit are replaced by the item DED143603-69, which carries the hardened wear face. The latching rib assembly D5230135992491 is inspected in place and is not removed unless the intercostal replacement requires it.",
+      "accomplishment_summary": "Open the cargo door and put it on ground support. Get access to the latching stations and remove the latch shroud at each station. Clean the roller contact face of each intercostal. Measure the depth of the wear track at three positions across the face using the depth gauge given in the tooling list. Record the measurements against the station identity. Where the wear track is deeper than 0.35 mm, remove the intercostal and install a replacement item DED143603-69. Do a detailed visual inspection of the latching rib assembly D5230135992491 at each station where an intercostal is replaced. Install the latch shrouds. Do the cargo door operational test given in AMM-T-52-30-13-400-001-A and confirm that all latching stations reach the locked position. Record the embodiment and report the wear measurements to Aeralis.",
+      "effectivity_note": "Applicable to aircraft delivered before the production cut-in of the duplicated latch sensing standard, that is up to and including MSN T00113. Aircraft from MSN T00114 onwards were built with the hardened intercostal and are not affected. This Service Bulletin must be accomplished before, or in the same visit as, the modification Service Bulletin for the same door set.",
+      "material_note": "Intercostals are ordered on condition and are not part of a kit. Fifteen weeks lead time applies to orders above six items. Removed intercostals are scrapped locally once the measurement has been reported."
+    },
+    "entities": {
+      "part_numbers": [
+        "DED143603-69",
+        "D5230135992491"
+      ],
+      "fins": [
+        "3323WT"
+      ],
+      "drawings": [
+        "D52301366003"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "143"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00113",
+        "T00114"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-141020",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "TTN-52-1041",
+        "doc_type": "SB",
+        "relation": "PREREQUISITE_OF"
+      },
+      {
+        "doc_id": "AMM-T-52-30-13-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cargo door",
+      "latching intercostal",
+      "wear inspection",
+      "roller face",
+      "door cycles"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-52-1038",
+      "sb_revision": "01",
+      "sb_type": "INSPECTION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Before or at the same time as the accomplishment of the latch sensor duplication Service Bulletin on the same door.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-141020",
+      "manpower": {
+        "elapsed_time_hours": 16,
+        "manhours": 28,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": "2017-03-01",
+        "parts_required": [
+          {
+            "part_number": "DED143603-69",
+            "qty": 6,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Cleaning solvent, aliphatic naphtha",
+          "Corrosion preventive compound"
+        ],
+        "tooling": [
+          "Depth gauge, dial type, 0 to 3 mm",
+          "Borescope, 4 mm"
+        ]
+      },
+      "weight_change_kg": 0,
+      "accomplishment_steps": 10,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2017-02-08",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

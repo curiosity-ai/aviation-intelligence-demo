@@ -1,0 +1,374 @@
+[
+  {
+    "doc_id": "MOD-111056",
+    "doc_type": "MOD",
+    "title": "Two-Piece Aft Engine Mount Shear Tie at the Pylon Interface",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-06-24",
+      "reason": "Original issue of the two-piece aft engine mount shear tie dossier.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "54",
+      "ata_4d": "54-50",
+      "ata_6d": "54-50-12",
+      "title": "Pylon Structure — Engine Mount Fittings"
+    },
+    "secondary_ata": [
+      "71-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00403",
+      "production_cut_in_date": "2021-12-16",
+      "retrofit_via": [
+        "CRN-54-1011"
+      ]
+    },
+    "dates": {
+      "created": "2020-01-22",
+      "released": "2021-06-24",
+      "revised": "2021-06-24",
+      "effective": "2021-07-15"
+    },
+    "abstract": "Splitting the one-piece aft engine mount shear tie into two bolted halves so that a mount change no longer needs the pylon fairing structure to be opened up beyond the access panel.",
+    "sections": {
+      "reason": "Engine changes on the type were taking longer than the planning figure, and the dominant driver was the one-piece aft mount shear tie, which cannot be withdrawn past the pylon rib without removing a fairing section that is not on the engine change access route. Line stations recorded an average of 5.5 additional hours per engine change, and two operators reported damage to the fairing edge during reinstallation. With the fleet approaching its first wave of engine shop visits the cumulative cost of the arrangement was no longer acceptable.",
+      "description": "The one-piece shear tie D5450123089978 is replaced by two bolted halves that meet on the pylon rib centre line, joined through the splice plate D5450121271272 with a doubled fastener row. The forward cleat CID666183-16 is retained but is re-drilled to the new pattern, and washers AES161398-12 are added under each nut on the outboard face. The mount microswitch 152PP and the mount position actuator 498PP5 keep their brackets, but the harness support on the inboard face moves 30 mm aft to clear the new splice. Revised detail is on drawing D54501246440. Work is done in zones 431, 443 and 452 with the fan cowl doors open and the pylon lower access panel removed.",
+      "effects": "Mass increase of 2.4 kg per pylon, so 4.8 kg per aircraft, symmetric. No electrical load change. The two-piece tie is not interchangeable with the one-piece item because the pylon rib drilling changes. The engine change task time reduces by an estimated 5 hours per engine and the fairing edge damage mode is removed. Maintenance manual content for the engine change and for aft mount removal both need re-issue, and the illustrated parts figure needs the two halves listed as a matched pair.",
+      "embodiment_note": "Cut in on the production line at MSN C00403 in December 2021. Retrofit through Service Bulletin CRN-54-1011 is normally combined with a scheduled engine removal, so no dedicated downtime is needed. Kits are available as spares and are supplied per pylon."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5450123089978",
+        "D5450121271272",
+        "CID666183-16",
+        "AES161398-12"
+      ],
+      "fins": [
+        "152PP",
+        "498PP5"
+      ],
+      "drawings": [
+        "D54501246440"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "443",
+        "452"
+      ],
+      "figures": [
+        "FIG-54-50-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00403"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-54-1011",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-54-50-12-000-003-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-54-50-12-400-003-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-54-50-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "aft engine mount",
+      "shear tie",
+      "engine change",
+      "pylon rib",
+      "access"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111056,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "COST_REDUCTION",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.361",
+          "CS 25.571"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 4.8,
+      "balance_impact": "Symmetric, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D5450121271272",
+        "AES161398-12"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5450123089978",
+        "CID666183-16"
+      ],
+      "fins_affected": [
+        "152PP",
+        "498PP5"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 210,
+      "estimated_cost_keur": 640,
+      "lead_time_weeks": 30,
+      "production_impact": "Cut-in at MSN C00403, pylon build sequence unchanged",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-111056",
+    "doc_type": "MOD",
+    "title": "Two-Piece Aft Engine Mount Shear Tie at the Pylon Interface",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-04",
+      "reason": "Manpower consequence of the access opening recorded per shear tie standard, with a concurrency recommendation for aircraft that carry neither standard yet.",
+      "raised_by_pawo": "PAWO-111117-01",
+      "raised_by_finding": "F03",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "54",
+      "ata_4d": "54-50",
+      "ata_6d": "54-50-12",
+      "title": "Pylon Structure — Engine Mount Fittings"
+    },
+    "secondary_ata": [
+      "71-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00403",
+      "production_cut_in_date": "2021-12-16",
+      "retrofit_via": [
+        "CRN-54-1011"
+      ]
+    },
+    "dates": {
+      "created": "2020-01-22",
+      "released": "2021-06-24",
+      "revised": "2026-08-04",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Splitting the one-piece aft engine mount shear tie into two bolted halves so that a mount change no longer needs the pylon fairing structure to be opened up beyond the access panel.",
+    "sections": {
+      "reason": "Engine changes on the type were taking longer than the planning figure, and the dominant driver was the one-piece aft mount shear tie, which cannot be withdrawn past the pylon rib without removing a fairing section that is not on the engine change access route. Line stations recorded an average of 5.5 additional hours per engine change, and two operators reported damage to the fairing edge during reinstallation. With the fleet approaching its first wave of engine shop visits the cumulative cost of the arrangement was no longer acceptable.",
+      "description": "The one-piece shear tie D5450123089978 is replaced by two bolted halves that meet on the pylon rib centre line, joined through the splice plate D5450121271272 with a doubled fastener row. The forward cleat CID666183-16 is retained but is re-drilled to the new pattern, and washers AES161398-12 are added under each nut on the outboard face. The mount microswitch 152PP and the mount position actuator 498PP5 keep their brackets, but the harness support on the inboard face moves 30 mm aft to clear the new splice. Revised detail is on drawing D54501246440. Work is done in zones 431, 443 and 452 with the fan cowl doors open and the pylon lower access panel removed.",
+      "effects": "Mass increase of 2.4 kg per pylon, so 4.8 kg per aircraft, symmetric. No electrical load change. The two-piece tie is not interchangeable with the one-piece item because the pylon rib drilling changes. The engine change task time reduces by an estimated 5 hours per engine and the fairing edge damage mode is removed. Maintenance manual content for the engine change and for aft mount removal both need re-issue, and the illustrated parts figure needs the two halves listed as a matched pair. Beyond the mount itself, the opened access governs any other work in the same pylon volume: on a modified airframe the case drain run is reachable through the pylon lower access panel, and on an unmodified one the same work starts with a fairing removal of about six hours. Any manpower estimate for work in that volume therefore has to be given per shear tie standard rather than as one figure.",
+      "embodiment_note": "Cut in on the production line at MSN C00403 in December 2021. Retrofit through Service Bulletin CRN-54-1011 is normally combined with a scheduled engine removal, so no dedicated downtime is needed. Kits are available as spares and are supplied per pylon. Where an aircraft carries neither this standard nor the case drain relief valve standard, the in-service organisation recommends that the two are planned into the same pylon opening: the fairing removal is common to both and doing them separately pays for it twice."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5450123089978",
+        "D5450121271272",
+        "CID666183-16",
+        "AES161398-12"
+      ],
+      "fins": [
+        "152PP",
+        "498PP5"
+      ],
+      "drawings": [
+        "D54501246440"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "443",
+        "452"
+      ],
+      "figures": [
+        "FIG-54-50-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00403"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-54-1011",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-54-50-12-000-003-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-54-50-12-400-003-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-54-50-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "aft engine mount",
+      "shear tie",
+      "engine change",
+      "pylon access",
+      "concurrency"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111056,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "COST_REDUCTION",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.361",
+          "CS 25.571"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 4.8,
+      "balance_impact": "Symmetric, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D5450121271272",
+        "AES161398-12"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5450123089978",
+        "CID666183-16"
+      ],
+      "fins_affected": [
+        "152PP",
+        "498PP5"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 210,
+      "estimated_cost_keur": 640,
+      "lead_time_weeks": 30,
+      "production_impact": "Cut-in at MSN C00403, pylon build sequence unchanged",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

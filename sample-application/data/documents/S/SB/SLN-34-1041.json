@@ -1,0 +1,209 @@
+[
+  {
+    "doc_id": "SLN-34-1041",
+    "doc_type": "SB",
+    "title": "Navigation — Multi-Mode Receiver and Crown Aerial Relocation for Approach Capability",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-12-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "53-31"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-134210"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2020-05-26",
+      "released": "2020-12-08",
+      "revised": null,
+      "effective": "2021-01-11"
+    },
+    "abstract": "Installation of the augmentation-capable multi-mode receiver together with the reinforced crown pad that carries the aerial 1 400 mm further forward, giving the aircraft authorisation required approach capability.",
+    "sections": {
+      "planning_reason": "Operators flying into terrain-constrained airports need authorisation required approach capability, which the previously fitted receiver cannot support because its vertical protection level is computed from an older augmentation standard. Independently, the aerial fitted at build sits far enough aft on the crown to be shadowed by the vertical stabilizer above 25 degrees of bank, which shows as brief loss of satellite geometry in the turn. Approving the approach capability requires a substantiated aerial position as well as a receiver standard, so the two are done together.",
+      "description": "The receiver interface unit and the upper receiver computer are replaced by units of the new standard and the forward circuit card is superseded by a card carrying the augmentation processing. The transceiver is moved 1 400 mm forward onto a reinforced crown pad between frames 44 and 48. Coaxial runs are re-made along the existing crown cable route and the parameter database is loaded to the new standard.",
+      "accomplishment_summary": "Put the aircraft in a hangar and get access to the crown from a platform. Drop the ceiling panels in zone 293 and open the avionics bay in zone 162. Remove the dependent position determining transceiver D3450007115686 from its existing position and blank the aperture. Install the reinforced crown pad between frames 44 and 48 to the modification drawing, wet with sealant, and do an eddy current inspection of each fastener hole. Install the transceiver on the new pad and restore the external finish to aerodynamic smoothness class B. Re-make the coaxial runs along the existing crown cable route and do an insertion loss measurement on each. Replace the interface unit D3450112668148, the upper computer sub-assembly D3450113750314 and the forward circuit card QUD432161-77. Do AMM-S-34-50-11-400-020-A to install the receiver. Load the parameter database LH4L19EEBC2 through the portable data loader. Do the navigation system operational test including a satellite geometry check with the aircraft stationary. Record the embodiment and apply for the approach capability.",
+      "effectivity_note": "Applicable to twin-engine aircraft delivered before the production cut-in at MSN S01593. The receiver and the aerial position cannot be separated: the receiver is one-way interchangeable with the previous standard only when the aerial has already been moved, and not interchangeable at all if it has not.",
+      "material_note": "Kit K3450-1041-01 contains the crown pad, the receiver units, the circuit card, the coaxial assemblies and the sealant set. The crown pad is the long-lead item at twenty-two weeks. The removed receiver units are returned to the supplier for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450112668148",
+        "D3450113750314",
+        "QUD432161-77",
+        "D3450007115686"
+      ],
+      "fins": [],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LH4L19EEBC2"
+      ],
+      "zones": [
+        "162",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01593"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-134210",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-S-34-50-11-400-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-34-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "crown pad",
+      "multi-mode receiver",
+      "aerial relocation",
+      "approach capability",
+      "insertion loss"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-34-1041",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "OPTIONAL",
+      "compliance_time": "At the operator's discretion, before the approach capability is required for the intended network.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "PERFORMANCE",
+      "embodied_mod": "MOD-134210",
+      "manpower": {
+        "elapsed_time_hours": 96,
+        "manhours": 140,
+        "personnel": 3,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K3450-1041-01",
+        "kit_available_from": "2021-04-19",
+        "parts_required": [
+          {
+            "part_number": "D3450112668148",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D3450113750314",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "QUD432161-77",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D3450112668148",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Sealant, aerodynamic, exterior",
+          "Primer, epoxy, chromate-free",
+          "Coaxial connector set"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Insertion loss test set",
+          "Eddy current probe, 2 MHz",
+          "Crown access platform"
+        ]
+      },
+      "weight_change_kg": 2.7,
+      "accomplishment_steps": 13,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2020-12-08",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

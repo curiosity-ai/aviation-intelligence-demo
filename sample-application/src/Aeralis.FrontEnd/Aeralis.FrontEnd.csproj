@@ -1,0 +1,27 @@
+﻿<Project Sdk="Transpose.Build.Target/26.7.2692">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <!-- CS1998 = async method without await; CA2007 = ConfigureAwait. Both are noise
+         in transpiled front-end code, and the Curiosity projects disable them too. -->
+    <NoWarn>CS1998,CA2007</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Curiosity.FrontEnd.Admin" Version="26.8.3828" />
+    <PackageReference Include="Transpose.BCL" Version="26.7.3303" />
+    <PackageReference Include="Curiosity.FrontEnd" Version="26.8.3828" />
+    <PackageReference Include="Curiosity.FrontEnd.API" Version="26.8.3828" />
+    <PackageReference Include="Curiosity.FrontEnd.Core" Version="26.8.3828" />
+    <!-- Pinned to the same Tesserae the Curiosity packages above were built against, so the
+         pre-transpiled Curiosity modules and this project agree on every component. -->
+    <PackageReference Include="Tesserae" Version="2026.8.69318" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="tps.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

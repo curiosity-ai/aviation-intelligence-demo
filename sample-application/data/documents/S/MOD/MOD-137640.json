@@ -1,0 +1,178 @@
+[
+  {
+    "doc_id": "MOD-137640",
+    "doc_type": "MOD",
+    "title": "Precooler Outlet Manifold and Duct Pressure Sensing Rework in the Bleed Distribution",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-05-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "21-60",
+      "36-20"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30R3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7720"
+      ],
+      "operators": [
+        "JTA",
+        "LDL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-05-27",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Rework of the precooler outlet manifold and relocation of the duct pressure sensing on Auran-powered twin-engine aircraft, to remove the thermal cycling that has been cracking the manifold flange at two operators.",
+    "sections": {
+      "reason": "Two operators flying short high-frequency rotations with these aircraft have found cracking at the precooler outlet manifold flange, seven aircraft between them, the earliest at 19 400 flight cycles. Both operate a pattern of six or more sectors a day, which puts the manifold through many more thermal cycles per flight hour than the long-haul population the design case assumed. The duct pressure sensing tapping sits in the flange itself, which makes a stress concentration exactly where the thermal gradient is steepest. Neither operator has had a bleed leak in service; the cracking is being found at scheduled borescope inspection, but the growth rate on two aircraft would not have survived to the next interval.",
+      "description": "The manifold is re-worked with a thicker flange, a larger fillet radius at the duct joint and a machined thermal relief slot that lets the flange grow without loading the joint. The aft bleed manifold D3610110634925 is replaced by the re-worked item and the obsolete left-hand bleed sensor D3610118045317 is deleted from the flange. The pressure sensing tapping is moved 180 mm downstream onto a plain section of duct, where the new inboard filter PE873965-99 and a swaged collar AGS689720-32 close the joint. The left-hand distribution heat exchanger sub-assembly D3610009086881 is retained but its mounting is re-shimmed to suit the longer manifold. The upper duct restrictor position 918PU is re-rated and the lower isolation valve transmitter position 978PN is re-calibrated to the new tapping location. Work is in the pylon and the wing leading edge, zones 433, 443 and 571, with the pylon fairings open and the engine installed. Detail is on drawings D36101147611 and D36101168339.",
+      "effects": "Estimated mass increase of 3.6 kg per aircraft. No electrical load change. Not interchangeable: the manifold length changes, so the sensing tapping and the duct downstream must change with it. The scheduled borescope inspection of the flange is expected to be deleted once a revised damage tolerance assessment is complete. Bleed system indication is unchanged in the flight compartment, but the trim air supply pressure at the manifold outlet rises by about 4 kPa, which is inside the range the trim air regulating valve is qualified for and which the torque motor regulator standard handles without adjustment. Bleed schematic content and the trouble shooting procedure for a bleed leak indication require update.",
+      "embodiment_note": "Launched, with a retrofit service bulletin planned for the two affected operators first and general availability afterwards. Provisional estimate is two days at an A-check with the pylon fairings open. No production cut-in is proposed because the affected build standard is no longer delivered.",
+      "open_points": "Pre-analysis must confirm the revised inspection interval with the damage tolerance owner, whether the raised outlet pressure has any effect on aircraft still fitted with the diaphragm trim air regulator, and whether the two operators can be covered by a single effectivity statement."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3610110634925",
+        "D3610118045317",
+        "PE873965-99",
+        "AGS689720-32",
+        "D3610009086881"
+      ],
+      "fins": [
+        "918PU",
+        "978PN"
+      ],
+      "drawings": [
+        "D36101147611",
+        "D36101168339"
+      ],
+      "software": [],
+      "zones": [
+        "433",
+        "443",
+        "571"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00801",
+        "S00846"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-130510",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "precooler manifold",
+      "flange cracking",
+      "pressure tapping",
+      "thermal cycling",
+      "bleed ducting"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Air Systems"
+    },
+    "type_data": {
+      "mod_number": 137640,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1103",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 3.6,
+      "balance_impact": "Symmetric about the centre line; no reportable effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "PE873965-99",
+        "AGS689720-32"
+      ],
+      "parts_removed": [
+        "D3610118045317"
+      ],
+      "parts_modified": [
+        "D3610110634925",
+        "D3610009086881"
+      ],
+      "fins_affected": [
+        "918PU",
+        "978PN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 86,
+      "estimated_cost_keur": 540,
+      "lead_time_weeks": 38,
+      "production_impact": "No cut-in; the affected build standard is out of production",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

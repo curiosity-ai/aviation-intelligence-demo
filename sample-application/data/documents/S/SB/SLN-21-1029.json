@@ -1,0 +1,209 @@
+[
+  {
+    "doc_id": "SLN-21-1029",
+    "doc_type": "SB",
+    "title": "Air Conditioning — Trim Air Pressure Regulating Valve — Torque Motor Regulator Installation",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-05-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-130510"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2017-11-06",
+      "released": "2018-05-14",
+      "revised": null,
+      "effective": "2018-06-01"
+    },
+    "abstract": "Replacement of the four pneumatically referenced trim air regulators by torque motor units with position feedback, together with the zone controller parameter re-load that the feedback requires.",
+    "sections": {
+      "planning_reason": "Cabin temperature complaints traced to trim air were the largest cabin-related pilot report category on the type for four consecutive years, at 1.9 reports per 1 000 flight hours. The diaphragm regulator drifts as the elastomer ages and the reference line contaminates, and because there is no feedback to the zone controller the drift stays invisible until a zone is several degrees out of band. Thirty-eight per cent of units returned to the shop were outside the acceptance band with no fault recorded by the aircraft. The diaphragm material is also subject to a supplier obsolescence notice.",
+      "description": "The regulator section of each of the four trim air pressure regulating valves is replaced by a torque motor unit with position feedback. The outboard manifold is re-worked for the electrical connector boss, the transmitter is re-calibrated, the filter element is replaced by a finer item and the outboard duct is shortened by 40 mm. The zone controller parameter set is re-loaded so that it reads the feedback and raises a maintenance message on divergence.",
+      "accomplishment_summary": "Open the aft belly fairing and get access to the cabin ceiling void in zones 241 and 242 with the ceiling panels dropped. Do AMM-S-21-60-11-000-010-A to remove each trim air pressure regulating valve. Remove the regulator section and install the torque motor unit. Re-work the outboard manifold D2160118677637 for the connector boss. Install the finer filter sub-assembly KAD437362-51 and shorten the outboard duct NOD212962-03 to the dimension on the modification drawing. Re-calibrate the right-hand transmitter DED83110-55 on the bench and record the calibration. Do AMM-S-21-60-11-400-010-A to install each valve. Re-wire the left-hand switch position 2431HM8 to the feedback pair. Re-load the zone controller parameter set; the aircraft must not be released with the old parameter set and the new valves. Do the trim air functional test at all four zones and confirm that no divergence message is raised. Record the embodiment.",
+      "effectivity_note": "Applicable to twin-engine and four-engine aircraft delivered before the production cut-in at MSN S01271. The valve and the zone controller parameter set cannot be separated: an aircraft with the torque motor valve and the previous parameter set has no feedback path and will raise a permanent maintenance message.",
+      "material_note": "Kit K2160-1029-01 covers one aircraft and contains four torque motor units, the filters, the shortened ducts and the connector hardware. Lead time is twenty weeks. The removed regulator sections are returned to the supplier for credit under the obsolescence agreement."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160115682504",
+        "D2160118677637",
+        "DED83110-55",
+        "KAD437362-51",
+        "NOD212962-03"
+      ],
+      "fins": [
+        "2431HM8"
+      ],
+      "drawings": [
+        "D21601215648"
+      ],
+      "software": [],
+      "zones": [
+        "193",
+        "241",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01271"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-130510",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-S-21-60-11-000-010-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-21-60-11-400-010-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-21-60-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "trim air valve",
+      "torque motor",
+      "parameter re-load",
+      "regulator drift",
+      "zone temperature"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-21-1029",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled A-check, or within 36 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-130510",
+      "manpower": {
+        "elapsed_time_hours": 34,
+        "manhours": 62,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K2160-1029-01",
+        "kit_available_from": "2018-09-10",
+        "parts_required": [
+          {
+            "part_number": "D2160115682504",
+            "qty": 4,
+            "uom": "EA"
+          },
+          {
+            "part_number": "KAD437362-51",
+            "qty": 4,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "NOD212962-03",
+            "qty": 4,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Thread locking compound, medium strength",
+          "Contact grease, electrical"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Torque wrench 2-25 Nm",
+          "Trim air test set 98D21601-071"
+        ]
+      },
+      "weight_change_kg": 2.2,
+      "accomplishment_steps": 11,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2018-05-14",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

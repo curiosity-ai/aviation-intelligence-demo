@@ -1,0 +1,319 @@
+[
+  {
+    "doc_id": "PAWO-111117-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis Review — Case Drain Relief Valve Before the Retrofit Campaign Opens",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-31",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-11",
+      "title": "Main System — Engine Driven Pump"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "PYR-1524G",
+        "PYR-1525G"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-05",
+      "released": "2026-07-31",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed review of the in-production anti-cavitation relief valve, raised to check the retrofit bulletin effectivity and the pylon access sequence before the in-service campaign opens.",
+    "sections": {
+      "objective": "Check the retrofit bulletin, the pump tasks and the pylon access sequence for the anti-cavitation relief valve before the in-service campaign opens, and establish whether the engine type restriction carried by the production standard is still the right one. The review was raised internally by the hydraulic system office once the bulletin was issued and the first operators began planning the work into engine changes.",
+      "findings_summary": "Four items were confirmed. The bulletin restricts effectivity to the two engine types on the production standard, which is correct for the valve setting but excludes a small operator population that has since taken a thrust rating change and now sits outside any bulletin at all. That is an effectivity gap rather than an error, and it was closed by a second effectivity block. The pump removal and installation tasks both need the case drain line broken and re-torqued, and the two-piece shear tie standard governs how the pylon is opened for that work, which decides whether the valve can be reached in one shift or three.",
+      "next_steps": "Issue a second effectivity block covering the re-rated aircraft rather than leaving them outside the campaign. Re-issue the pump installation task with the relief valve torque sequence and a note on the case drain line routing. Recommend to the in-service organisation that the valve is planned into a scheduled engine change wherever the aircraft already carries the two-piece shear tie standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2910110251872",
+        "D2910004303006",
+        "AES818405K5"
+      ],
+      "fins": [
+        "280GG8",
+        "469GG"
+      ],
+      "drawings": [
+        "D29100090713",
+        "D29101319946"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "721",
+        "734"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111117",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "case drain",
+      "relief valve",
+      "cavitation",
+      "effectivity gap"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111117-01",
+      "subject_mod": "MOD-111117",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-31",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-05-05",
+      "due_date": "2026-08-14",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "EDSA"
+        ],
+        "estimated_manhours": 95,
+        "spent_manhours": 121
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "29",
+          "54",
+          "71"
+        ],
+        "ata_4d": [
+          "29-10",
+          "29-30",
+          "54-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D2910110251872",
+            "D2910004303006",
+            "AES818405K5"
+          ],
+          "fins": [
+            "280GG8",
+            "469GG"
+          ],
+          "drawings": [
+            "D29100090713"
+          ],
+          "zones": [
+            "431",
+            "721",
+            "734"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "transient depression in a pump case drain during rapid thrust reduction",
+          "pump bearing life on high cycle short sector operation"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Review the bulletin effectivity against the current fleet",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search pump tasks carrying the case drain line",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the pylon access sequence for the valve position",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "CRN-29-1012",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES818405K5",
+              "D2910004303006",
+              "D2910110251872"
+            ],
+            "shared_fins": [
+              "280GG8",
+              "469GG"
+            ],
+            "shared_zones": [
+              "431",
+              "721",
+              "734"
+            ],
+            "shared_ata_6d": [
+              "29-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin inherits the engine type restriction of the production standard. A small operator population has since taken a thrust rating change and now matches neither type, so those aircraft are outside every vehicle that carries the valve, although they have the same case drain behaviour.",
+          "resolution": "Second effectivity block issued covering the re-rated aircraft, with the same valve setting and a revised installation note."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-C-29-10-11-400-006-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES818405K5",
+              "D2910004303006",
+              "D2910110251872"
+            ],
+            "shared_fins": [
+              "280GG8",
+              "469GG"
+            ],
+            "shared_zones": [
+              "431",
+              "721",
+              "734"
+            ],
+            "shared_ata_6d": [
+              "29-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task torques the case drain line as a single run. With the valve in the line there are two joints and an orientation that matters, and a valve fitted backwards passes every ground check and fails only in service.",
+          "resolution": "Task re-issued with the two-joint sequence, an orientation check and a flow direction marking call-out."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-111056",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "431"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "How far the pylon has to be opened to reach the case drain line depends on whether the aircraft carries the two-piece shear tie standard. On a modified airframe the valve is reachable through the access panel; on an unmodified one it is a fairing removal.",
+          "resolution": "Manpower estimate split by shear tie standard and a concurrency recommendation issued for aircraft carrying neither."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-111085",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "721",
+              "734"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The brake control installation occupies the same gear bay volume that the case drain line runs through. Nothing moves, but the clearance to the control unit bracket falls to eight millimetres with the valve fitted.",
+          "resolution": "Clearance recorded on the installation drawing; no change to either installation."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111108",
+          "doc_type": "MOD",
+          "reason": "Ranked high by similarity because pump inlet starvation and cavitation are described in nearly identical language, but it is a fuel boost pump screen on a different system with no shared identifier and no common installation."
+        }
+      ],
+      "conclusion": "Validated. The campaign opens with a second effectivity block and a manpower estimate split by pylon access standard.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

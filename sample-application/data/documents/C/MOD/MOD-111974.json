@@ -1,0 +1,190 @@
+[
+  {
+    "doc_id": "MOD-111974",
+    "doc_type": "MOD",
+    "title": "Weather Radar Predictive Windshear Extension and Approach Clutter Map Update",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-40",
+      "ata_6d": "34-40-11",
+      "title": "Independent Position Determining — Weather Radar Transceiver"
+    },
+    "secondary_ata": [
+      "34-50",
+      "22-80"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "NVT",
+        "CDW"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111263"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-05-06",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Third issue of the radar standard, adding predictive windshear alerting on the approach and a terrain-referenced clutter map, on aircraft already carrying the stabilised antenna drive.",
+    "sections": {
+      "reason": "One operator flying heavily convective routes has filed two crew reports of go-arounds flown on visual cues because the radar picture was not usable, and its crews came from a type where predictive windshear alerting was standard. The stabilised drive introduced by the previous issue improved the picture but did not add alerting, and the clutter map it uses is generic rather than terrain-referenced, which limits how much ground return can be subtracted at the airfields the operator actually uses. The operator's training department is currently teaching two techniques for the same weather across one airline.",
+      "description": "The transceiver D3440119270001 is retained and its operational load LA3C9E7BDD5 is replaced by a standard that computes the windshear hazard factor from the radial velocity field and issues the alert on the approach. The display unit assembly D3440008623827 is re-loaded so that the alert is annunciated with the required aural and visual prominence. The computer DUD963936-57 gains a terrain-referenced clutter map derived from the navigation database, which is what allows ground return to be subtracted at a known airfield rather than estimated. The interface unit D3440005921121 is re-instated as the path for the terrain reference. Washers AES311855K5 and AGS393059-2A are renewed at the tray. Functional items 282TR7, 2FE and 580DA are affected. Work is at the nose in zone 111, at the flight compartment rack in zone 216 and at the shelf position in zone 251. Reference detail is on drawings D34401154303 and D34400093148.",
+      "effects": "Estimated mass increase of 0.6 kg. Electrical load increases by 20 volt-amperes. The change is one-way interchangeable and only applies to aircraft already carrying the stabilised drive. Dispatch with predictive windshear inoperative would be permitted for ten days with an operational restriction the operator has to accept, and a new minimum equipment list entry is needed. The flight crew description of the radar controls and the approach procedures both change substantially, and the training package has to be re-issued. Trouble shooting content for a stabilisation fault gains a branch for a failed terrain reference.",
+      "embodiment_note": "Retrofit only, aimed at a single campaign across one operator's fleet so that every aircraft behaves the same way for the crews. One shift with the radome closed, since the change is a load and a shelf card rather than an antenna job. Kit definition depends on whether the terrain reference can be taken from the existing navigation database partition.",
+      "open_points": "Pre-analysis must establish whether the terrain-referenced clutter map can be held in the current navigation database partition or needs the enlarged partition, whether the alert prominence required on the approach conflicts with any existing aural priority, whether the clutter map and the shelf position it needs are already claimed, and whether the flight crew limitation on radar use in the flare has to be revised."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3440119270001",
+        "D3440008623827",
+        "DUD963936-57",
+        "D3440005921121",
+        "AES311855K5",
+        "AGS393059-2A"
+      ],
+      "fins": [
+        "282TR7",
+        "2FE",
+        "580DA"
+      ],
+      "drawings": [
+        "D34401154303",
+        "D34400093148"
+      ],
+      "software": [
+        "LA3C9E7BDD5"
+      ],
+      "zones": [
+        "111",
+        "216",
+        "251"
+      ],
+      "figures": [
+        "FIG-34-40-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00750",
+        "C00796"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-260255",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-111263",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "predictive windshear",
+      "clutter map",
+      "terrain reference",
+      "approach alerting",
+      "hazard factor"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111974,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309",
+          "CS 25.1322"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0.6,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 20,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "D3440005921121"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3440008623827",
+        "DUD963936-57"
+      ],
+      "fins_affected": [
+        "282TR7",
+        "580DA"
+      ],
+      "software_affected": [
+        "LA3C9E7BDD5"
+      ],
+      "estimated_manhours": 380,
+      "estimated_cost_keur": 1980,
+      "lead_time_weeks": 56,
+      "production_impact": "No cut-in proposed; the change is scoped as a single operator campaign",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

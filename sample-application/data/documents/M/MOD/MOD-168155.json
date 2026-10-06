@@ -1,0 +1,195 @@
+[
+  {
+    "doc_id": "MOD-168155",
+    "doc_type": "MOD",
+    "title": "Multi-Mode Receiver Feed Reroute and Navigation Database Alignment — Issue 2",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-02-09",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50",
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168048"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "M00329",
+      "production_cut_in_date": "2021-08-11",
+      "retrofit_via": [
+        "MRD-34-1036"
+      ]
+    },
+    "dates": {
+      "created": "2020-01-20",
+      "released": "2021-07-14",
+      "revised": "2023-02-09",
+      "effective": "2023-03-06"
+    },
+    "abstract": "Second issue of the receiver feed work, extending the reroute to the larger variant, and aligning the receiver navigation database with the augmentation service definition that the first issue left untouched.",
+    "sections": {
+      "reason": "The first issue removed the interference path but operators continued to report a slow first fix after a long power-down, which was traced to a database definition that predates the current augmentation service and forces a full almanac search. The larger variant was never covered by the first issue and carries the same feed routing, so the two were combined rather than issued separately.",
+      "description": "The routing introduced at the first issue is applied to the larger variant, using the same revised mounting tray and the same two hundred millimetre separation rule from the switched bundle. In addition the receiver navigation database is replaced by the current definition, which carries the augmentation service parameters and shortens the cold start search. The interface unit at the rack is unchanged, but its identification plate is restamped because the database part number is called out there. The receiver detail drawing is reissued at the same time to fold in the first issue routing, so that only one drawing issue is current across the fleet.",
+      "effects": "Mass change is negligible. No electrical load change. Interchangeable at aircraft level, but the database and the routing must be embodied together: an aircraft with the new database and the old routing shows a slower reacquisition than either standard alone. Maintenance manual check and test tasks both require reissue, and the troubleshooting entry for slow acquisition is withdrawn and replaced.",
+      "embodiment_note": "Cut in at MSN M00329. Retrofit bulletin covers both variants and includes the database load, which can be done at the gate with the portable loader once the routing work is complete."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450118136339",
+        "D3450119360685"
+      ],
+      "fins": [
+        "1038DA",
+        "3TR"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LA4PCFC53E5",
+        "LE4PC90617C"
+      ],
+      "zones": [
+        "183",
+        "222"
+      ],
+      "figures": [
+        "FIG-34-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00329"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-34-1036",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-168048",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "IPC-M-34-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "TSM-M-34-50-11-810-810",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-M-34-50-11-200-036-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "multi-mode receiver",
+      "navigation database",
+      "cold start",
+      "augmentation",
+      "reroute"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168155,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1431",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.3,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "D3450119360685"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3450118136339"
+      ],
+      "fins_affected": [
+        "1038DA",
+        "3TR"
+      ],
+      "software_affected": [
+        "LE4PC90617C"
+      ],
+      "estimated_manhours": 320,
+      "estimated_cost_keur": 540,
+      "lead_time_weeks": 30,
+      "production_impact": "Cut in at MSN M00329 across both variants, no line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,238 @@
+[
+  {
+    "doc_id": "PAWO-168048-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Closed) — Multi-Mode Receiver Feed Reroute, First Issue",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-02-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42"
+      ],
+      "models": [
+        "MRD-42K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00165"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-02-24",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis re-opened in 2025 to decide whether the first issue routing bulletin should stay on offer once the second issue covered both variants, concluding that it should be withdrawn and the work delegated to bulletin management.",
+    "sections": {
+      "objective": "Decide whether the first issue routing bulletin should remain available to operators after the second issue was released covering both variants and including the same routing.",
+      "findings_summary": "Two items were confirmed. The second issue repeats the routing work for the smaller variant only by reference, so withdrawing the first issue would leave an operator with no accomplishment text for that variant unless the second issue were re-issued to include it. That was the whole question and it turned on documentation rather than engineering. The operational check task was found to state acceptance times for both standards clearly and needed no change either way. The work order was closed and handed to bulletin management to decide between withdrawal with a re-issue and leaving both bulletins live.",
+      "next_steps": "Delegated to bulletin management. No engineering action; the recommendation was to leave both bulletins live until the smaller variant population falls below fifty aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450118136339",
+        "D3450119360685"
+      ],
+      "fins": [
+        "1038DA"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LA4PCFC53E5"
+      ],
+      "zones": [
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168048",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "closed pre-analysis",
+      "bulletin withdrawal",
+      "routing",
+      "variant coverage",
+      "acceptance time"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-168048-01",
+      "subject_mod": "MOD-168048",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2025-06-18",
+      "outcome": "DELEGATED",
+      "raised_date": "2025-02-24",
+      "due_date": "2025-06-30",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 60,
+        "spent_manhours": 55
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42"
+        ],
+        "ata_2d": [
+          "34"
+        ],
+        "ata_4d": [
+          "34-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00165"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3450118136339",
+            "D3450119360685"
+          ],
+          "fins": [
+            "1038DA"
+          ],
+          "drawings": [
+            "D34501177112"
+          ],
+          "zones": [
+            "183"
+          ],
+          "software": [
+            "LA4PCFC53E5"
+          ]
+        },
+        "similarity_seeds": [
+          "an older bulletin whose content survives only inside a newer one"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare the two bulletin accomplishments for variant coverage",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the operational check acceptance times",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MRD-34-1022",
+          "doc_type": "SB",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "34-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The later bulletin includes the routing for the smaller variant by reference only, so withdrawing the earlier one leaves an operator on that variant with no accomplishment text.",
+          "resolution": "Leave both live, or re-issue the later bulletin with the full routing text for both variants."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-M-34-50-11-200-036-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "34-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The operational check already states the acceptance time for both standards and needs no change whichever way the bulletin question is decided.",
+          "resolution": "No action."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed and delegated to bulletin management with a recommendation to keep both bulletins live for now.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

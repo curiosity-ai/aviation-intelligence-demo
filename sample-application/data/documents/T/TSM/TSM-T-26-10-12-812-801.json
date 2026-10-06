@@ -1,0 +1,325 @@
+[
+  {
+    "doc_id": "TSM-T-26-10-12-812-801",
+    "doc_type": "TSM",
+    "title": "SMOKE CARGO FWD Warning With No Smoke Found on Inspection",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2007-11-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-04-07",
+      "released": "2007-11-06",
+      "revised": "2007-11-06",
+      "effective": "2007-11-27"
+    },
+    "abstract": "Fault isolation for a cargo smoke warning that is not confirmed by inspection, concentrating on condensation in the sampling line, which is the dominant cause of the symptom on humid route structures.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a cargo compartment smoke warning that is not confirmed by inspection of the compartment. Use it after every unconfirmed warning, including those that led to a diversion.",
+      "fault_description": "An unconfirmed smoke warning is almost always caused by condensation forming in the sampling line during descent into a humid destination and scattering light in the detector chamber. The detection logic reads one sampling channel per compartment and cannot distinguish that scattering from smoke, so the warning is raised on the strength of a single reading. Record the destination, the humidity and the point in the flight at which the warning occurred; those three facts resolve most events without any hardware work.",
+      "isolation_procedure": "Confirm that the compartment has been inspected and that no smoke source was found. Record the flight phase, the destination and the reported humidity. Read the maintenance store and record the fault code. Do the sampling line flow and integrity check on the affected compartment and record the flow at every sampling point. Where the flow is below the band, do the sampling line cleaning task and repeat the flow check. Inspect the condensate trap at the low point and record whether standing water is present. Where the flow and the trap are correct, remove the detection sensor assembly and inspect the optical chamber for deposit. Where the chamber is clean and the event occurred in humid conditions, close the event as a sampling line condensation event and no further work is required.",
+      "dispatch_note": "Despatch is permitted with one loop inoperative in a single compartment for ten days on a dual loop aircraft. Despatch is not permitted with the detection function inoperative in any compartment, because the compartment fire protection depends on it and there is no alternative means of detection."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610001304989",
+        "UMD917763-33",
+        "RO713090-77"
+      ],
+      "fins": [
+        "2841WD",
+        "3WF"
+      ],
+      "drawings": [
+        "D26101202565",
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "115",
+        "131",
+        "151"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-26-10-12-200-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "smoke warning",
+      "unconfirmed",
+      "condensation",
+      "sampling line",
+      "diversion"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "26-10-12-812-801",
+      "fault_symptom": "SMOKE CARGO FWD warning with no smoke source found on inspection",
+      "fault_codes": [
+        "261012009",
+        "261012031"
+      ],
+      "warning_messages": [
+        "SMOKE CARGO FWD",
+        "SMOKE CARGO AFT",
+        "SMOKE CARGO BULK"
+      ],
+      "affected_fins": [
+        "2841WD",
+        "3WF"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Condensation in the sampling line during descent into a humid destination",
+          "probability_pct": 63,
+          "fin": "2841WD"
+        },
+        {
+          "cause": "Deposit in the sampling line reducing flow below the detection band",
+          "probability_pct": 21,
+          "fin": "2841WD"
+        },
+        {
+          "cause": "Optical chamber deposit in the detection sensor",
+          "probability_pct": 16,
+          "fin": "3WF"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-T-26-10-12-200-001-A",
+      "dispatch": {
+        "mel_item": "26-10-02A",
+        "dispatchable": false,
+        "dispatch_condition": "Detection function must be available in every compartment; there is no alternative means of detection"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-T-26-10-12-812-801",
+    "doc_type": "TSM",
+    "title": "SMOKE CARGO FWD Warning With No Smoke Found on Inspection",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2018-05-22",
+      "reason": "Isolation logic split by embodiment condition and a channel disagreement branch added ahead of the sampling line conclusion.",
+      "raised_by_pawo": "PAWO-143950-01",
+      "raised_by_finding": "F01",
+      "finding_type": "EFFECTIVITY_INVALIDATION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-04-07",
+      "released": "2007-11-06",
+      "revised": "2018-05-22",
+      "effective": "2018-06-19"
+    },
+    "abstract": "Fault isolation for a cargo smoke warning that is not confirmed by inspection, concentrating on condensation in the sampling line, which is the dominant cause on humid route structures.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a cargo compartment smoke warning that is not confirmed by inspection of the compartment. Use it after every unconfirmed warning, including those that led to a diversion.",
+      "fault_description": "An unconfirmed smoke warning is almost always caused by condensation forming in the sampling line during descent into a humid destination and scattering light in the detector chamber. On a single loop installation the detection logic cannot distinguish that scattering from smoke. On a dual loop installation the two loops must agree, which removes almost all of these events, so an unconfirmed warning on a dual loop aircraft is a stronger indication of a real line or detector problem than the same warning on a single loop aircraft. Record the destination, the humidity and the point in the flight at which the warning occurred; those three facts resolve most events without any hardware work.",
+      "isolation_procedure": "Confirm that the compartment has been inspected and that no smoke source was found. Record the flight phase, the destination and the reported humidity. Establish the detection standard of the aircraft before anything else, because the two standards close this event differently. Read the maintenance store and record the fault code and, on a dual loop aircraft, the state of each loop at the time of the warning. Where the two loops disagreed, stop here: the disagreement is the finding. Identify the loop that reported and do not close the event as a sampling line fault; carry out the flow and integrity check on the reporting loop with the other isolated, and raise an engineering assessment on the loop that did not report. Where both loops agreed, or the aircraft carries the single loop standard, do the sampling line flow and integrity check on the affected compartment and record the flow at every sampling point. Where the flow is below the band, do the sampling line cleaning task and repeat the flow check. Inspect the condensate trap at the low point and record whether standing water is present; on a dual loop aircraft confirm that the heated bleed is energised and measure its current. Where the flow and the trap are correct, remove the detection sensor assembly and inspect the optical chamber for deposit. Where the chamber is clean and the event occurred on a single loop aircraft in humid conditions, close the event as condensation and recommend the dual loop standard. Where the aircraft already has the dual loop standard and both loops agreed, treat the warning as genuine and do not close it without an engineering assessment.",
+      "dispatch_note": "Despatch is permitted with one loop inoperative in a single compartment for ten days on a dual loop aircraft. Despatch is not permitted with the detection function inoperative in any compartment, because the compartment fire protection depends on it and there is no alternative means of detection."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610001304989",
+        "UMD917763-33",
+        "RO713090-77"
+      ],
+      "fins": [
+        "2841WD",
+        "3WF"
+      ],
+      "drawings": [
+        "D26101202565",
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "115",
+        "131",
+        "151"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-26-10-12-200-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "smoke warning",
+      "unconfirmed",
+      "condensation",
+      "sampling line",
+      "diversion"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "26-10-12-812-801",
+      "fault_symptom": "SMOKE CARGO FWD warning with no smoke source found on inspection",
+      "fault_codes": [
+        "261012009",
+        "261012031"
+      ],
+      "warning_messages": [
+        "SMOKE CARGO FWD",
+        "SMOKE CARGO AFT",
+        "SMOKE CARGO BULK"
+      ],
+      "affected_fins": [
+        "2841WD",
+        "3WF"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Condensation in the sampling line during descent into a humid destination",
+          "probability_pct": 58,
+          "fin": "2841WD"
+        },
+        {
+          "cause": "Deposit in the sampling line reducing flow below the detection band",
+          "probability_pct": 19,
+          "fin": "2841WD"
+        },
+        {
+          "cause": "Optical chamber deposit in the detection sensor",
+          "probability_pct": 14,
+          "fin": "3WF"
+        },
+        {
+          "cause": "Heated bleed not energised at the condensate trap on a dual loop installation",
+          "probability_pct": 9,
+          "fin": "3WF"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-T-26-10-12-200-001-A",
+      "dispatch": {
+        "mel_item": "26-10-02A",
+        "dispatchable": true,
+        "dispatch_condition": "One loop inoperative in one compartment on a dual loop aircraft, ten day limit; detection function must remain available in every compartment"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

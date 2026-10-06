@@ -1,0 +1,121 @@
+[
+  {
+    "doc_id": "FCOM-M-DSC-24-20-01",
+    "doc_type": "FCOM",
+    "title": "Electrical Power — AC Generation and Automatic Load Management",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-10-02",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-00",
+      "title": "AC Generation — General"
+    },
+    "secondary_ata": [
+      "24-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-05-15",
+      "released": "2018-02-05",
+      "revised": "2023-10-02",
+      "effective": "2023-10-30"
+    },
+    "abstract": "Flight crew description of the alternating current generation system, how the aeroplane manages generator availability on the ground and in flight, and what the crew sees when a channel is taken off line automatically.",
+    "sections": {
+      "purpose": "This entry describes the alternating current generation system to the flight crew, the automatic management of generator availability, and the indications associated with a channel that is not supplying.",
+      "description": "Each engine drives one main generator, and the auxiliary power unit drives a further generator that can supply the aeroplane on the ground and in flight within its published envelope. The system manages availability automatically: if a channel cannot supply, the aeroplane transfers its busbars without crew action and the loss is annunciated on the electrical page. Non-essential services may be shed automatically in the order shown on the page while the transfer completes. On the ground, with the aeroplane on external power or on the auxiliary power unit, a channel may be taken off line by the aeroplane and restored by the crew with the generator pushbutton. This is normal system behaviour and does not by itself indicate a failed generator. In flight, a channel taken off line is annunciated and remains off until the crew resets it once, in accordance with the electrical procedure.",
+      "crew_procedure": "When GEN 1 OFF or GEN 2 OFF is displayed, check the electrical page for the busbar configuration and confirm that the transfer has completed. One reset attempt with the generator pushbutton is permitted. If the channel does not restore, leave the pushbutton off and continue with the remaining sources. On the ground, if the channel drops off line during a turnaround at a hot station, one reset is permitted before departure; a second loss in the same turnaround is a technical log entry and the aeroplane must not depart without engineering agreement."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-M-DSC-45-20-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "ac generation",
+      "generator pushbutton",
+      "load shedding",
+      "busbar transfer",
+      "reset"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Operations"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Systems Description — Electrical Power",
+      "entry_number": "DSC-24-20-01",
+      "flight_phase": "ALL_PHASES",
+      "operational_impact": "NONE",
+      "crew_action": "Monitor the electrical page; one reset attempt with the generator pushbutton.",
+      "affects_qrh": false,
+      "affects_mel": true,
+      "mel_items": [
+        "24-20-01A"
+      ],
+      "systems": [
+        "AC Generation",
+        "Automatic Load Management",
+        "Auxiliary Power Unit Generator"
+      ],
+      "related_entries": [
+        "FCOM-M-DSC-45-20-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,358 @@
+[
+  {
+    "doc_id": "PAWO-163460-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Brake and Steering Control Unit Software Baseline Ahead of the Next Standard",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30",
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-13",
+      "released": "2026-07-16",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis establishing what the released brake and steering control unit software baseline constrains, run as an input to the candidate change that retains landing fault context in the unit.",
+    "sections": {
+      "objective": "Before the candidate change that retains landing fault context is launched, establish precisely what the current released software standard fixes: which interface it owns, which bulletins deliver it, which fault isolation content depends on its message behaviour, and which hardware standards it is bound to. The candidate team asked for the baseline rather than for conflicts, so the order was written to produce a constraint list that the candidate could be designed against.",
+      "findings_summary": "Five items were confirmed and one is blocking for the candidate rather than for the baseline. The candidate proposes to retain fault context across a power cycle, which changes what the unit reports after landing, and the current standard defines that reporting behaviour as part of the certified interface with the maintenance system. Any change to it is a certified interface change, not a software content change, and the candidate had been scoped as the latter. Below that: the software load bulletin defines the standard by part number and would need reissue rather than revision; the after-landing fault isolation procedure is built entirely around the current message behaviour; the earlier interface change bulletin has to be embodied first; and the landing gear bay wiring sheet carries the connector identifiers the reporting path uses.",
+      "next_steps": "Give the candidate team the constraint list and flag the certified interface point immediately, since it changes the classification of their change. Confirm with certification whether retained context can be presented as an extension of the current interface or requires a new one. Hold the fault isolation rewrite until that is settled, and keep the wiring sheet update in the same package."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126111041",
+        "D3240127464045"
+      ],
+      "fins": [
+        "1GM5",
+        "23GM"
+      ],
+      "drawings": [
+        "D32401260138"
+      ],
+      "software": [
+        "LH4PE7117BE"
+      ],
+      "zones": [
+        "721",
+        "755"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163460",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "brake control unit",
+      "software standard",
+      "certified interface",
+      "fault reporting"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-163460-01",
+      "subject_mod": "MOD-163460",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-16",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-04-13",
+      "due_date": "2026-07-31",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EYIS",
+        "lead_site": "Ashcombe",
+        "contributing_departments": [
+          "ELSC",
+          "EVAA"
+        ],
+        "estimated_manhours": 95,
+        "spent_manhours": 121
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "32",
+          "45"
+        ],
+        "ata_4d": [
+          "32-40",
+          "32-30",
+          "45-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00500"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3240126111041",
+            "D3240127464045"
+          ],
+          "fins": [
+            "1GM5",
+            "23GM"
+          ],
+          "drawings": [
+            "D32401260138"
+          ],
+          "zones": [
+            "721",
+            "755"
+          ],
+          "software": [
+            "LH4PE7117BE"
+          ]
+        },
+        "similarity_seeds": [
+          "fault context retained across a power cycle in a control unit",
+          "brake system message after landing that clears on the ground"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the certified interface owned by the current standard",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search delivery bulletins and dependent hardware standards",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Map fault isolation content dependent on message behaviour",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Check the landing gear bay wiring connector identifiers",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-166630",
+          "doc_type": "MOD",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126111041"
+            ],
+            "shared_fins": [
+              "1GM5"
+            ],
+            "shared_zones": [
+              "721"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Retaining fault context across a power cycle changes what the unit reports to the maintenance system after landing. The current standard defines that reporting behaviour as part of a certified interface, so the candidate is an interface change and not a software content change as it had been scoped.",
+          "resolution": "Reclassify the candidate and confirm with certification whether retained context extends the current interface or requires a new one."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-32-1126",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126111041"
+            ],
+            "shared_fins": [
+              "1GM5"
+            ],
+            "shared_zones": [
+              "721"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The software load bulletin identifies the standard by loadable part number rather than by function. A successor standard cannot be delivered by revising it, because the part number is the thing operators check against their configuration record.",
+          "resolution": "Plan a new load bulletin for the successor standard and close this one on embodiment."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-M-32-40-12-810-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126111041",
+              "D3240127464045"
+            ],
+            "shared_fins": [
+              "1GM5",
+              "23GM"
+            ],
+            "shared_zones": [
+              "721",
+              "755"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The after-landing fault isolation is built around a message that clears on the ground. If context is retained the message will persist, and every branch of the procedure that keys on the message clearing becomes wrong.",
+          "resolution": "Hold the rewrite until the interface question is settled, then reissue the procedure with the candidate."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MRD-32-1110",
+          "doc_type": "SB",
+          "finding_type": "PREREQUISITE",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126111041",
+              "D3240127464045"
+            ],
+            "shared_fins": [
+              "1GM5",
+              "23GM"
+            ],
+            "shared_zones": [
+              "721",
+              "755"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The interface change bulletin has to be embodied before any software standard from this family will load. It is already mandatory, but the candidate scope did not carry it as a prerequisite and would have discovered it at first load.",
+          "resolution": "Add it explicitly to the candidate prerequisite list."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "WDM-M-92-31-12",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "721",
+              "755"
+            ],
+            "shared_ata_6d": [
+              "32-30"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The landing gear bay wiring sheet carries the connector identifiers on the reporting path. They are correct today, but any interface change makes the sheet the place where the mismatch will first be noticed by a line technician.",
+          "resolution": "Keep the wiring sheet inside the candidate documentation package rather than treating it as unaffected."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "TSM-M-31-50-11-812-801",
+          "doc_type": "TSM",
+          "reason": "Shares the ATA 45-20 secondary chapter and reads as a maintenance message that cannot be reproduced, which is close to the candidate subject in wording, but it concerns the flight warning computer reporting path with no brake control content, no shared part number, functional item or zone."
+        }
+      ],
+      "conclusion": "Closed. The baseline constraint list was delivered and the certified interface finding changed the classification of the candidate change before it was launched.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

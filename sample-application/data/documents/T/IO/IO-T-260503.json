@@ -1,0 +1,148 @@
+[
+  {
+    "doc_id": "IO-T-260503",
+    "doc_type": "IO",
+    "title": "Avionics Network Switch Resets During Climb — Request for Investigation and Correction",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Integrated Modular Avionics — Network Switch"
+    },
+    "secondary_ata": [
+      "42-20-12",
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "JTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-16",
+      "released": "2026-06-24",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Jutland Air reports short avionics network interruptions in the climb that produce a burst of maintenance messages and occasional transient cockpit indications, and asks for the cause to be found and removed.",
+    "sections": {
+      "request": "Somewhere between two and six thousand feet on the climb our aircraft produce a short burst of maintenance messages and then everything settles down again. Most of the time the crew see nothing at all. Occasionally a display flickers or a system indication goes blank for a second and comes back, and when that happens the crew write it up and we have to work out whether anything real happened. Our maintenance control gets between two and five of these a week across the fleet and every one of them has to be looked at because we cannot tell in advance which ones matter. Our engineering team believe it is one of the network switches restarting rather than a set of independent faults, because the messages always arrive together and always in the same order. We would like this understood and removed, because at the moment we are spending a great deal of time proving that nothing is wrong.",
+      "background": "Roughly one hundred and eighty events in fourteen months across our eleven aircraft. Downloaded maintenance data shows the same switch identifier at the head of every message burst. Three switch units have been replaced and the events continued on those aircraft. The events are noticeably more frequent on cold days and on the aircraft that spend the night outside, which our people think points at something warming up rather than a software problem.",
+      "expected_outcome": "An avionics network that does not interrupt in the climb, and a maintenance message set that reflects the real state of the aircraft rather than the aftermath of a restart. We would accept an interim inspection or a software change while a permanent answer is developed."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [
+        "2029CP1"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "163"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00139",
+        "T00160",
+        "T00197",
+        "T00198"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149850",
+        "doc_type": "MOD",
+        "relation": "CREATED"
+      }
+    ],
+    "keywords": [
+      "network switch",
+      "climb",
+      "reset",
+      "maintenance message",
+      "transient indication"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Avionics Support"
+    },
+    "type_data": {
+      "io_number": "IO-T-260503",
+      "raised_by": {
+        "requester_type": "OPERATOR",
+        "operator_code": "JTA",
+        "contact_role": "Maintenance Control Manager",
+        "oem_focal_department": "EGAM",
+        "oem_focal_site": "Valmont"
+      },
+      "request_category": "AVIONICS",
+      "priority": "HIGH",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {
+        "aircraft_count": 11,
+        "msns": [
+          "T00139",
+          "T00160",
+          "T00197",
+          "T00198"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ]
+      },
+      "business_justification": "One hundred and eighty events in fourteen months, each requiring a maintenance assessment before dispatch, and three unit replacements that did not change the behaviour.",
+      "commercial": {
+        "funding": "WARRANTY",
+        "budget_keur": 510,
+        "contract_reference": "CSA-2026-JTA-0160"
+      },
+      "target_dates": {
+        "requested_response": "2026-09-30",
+        "requested_embodiment_start": "2027-06-01"
+      },
+      "created_mod": "MOD-149850",
+      "closure_note": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

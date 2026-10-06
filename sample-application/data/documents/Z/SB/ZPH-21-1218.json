@@ -1,0 +1,440 @@
+[
+  {
+    "doc_id": "ZPH-21-1218",
+    "doc_type": "SB",
+    "title": "Air Conditioning — Trim Air System — Conversion to the Standard 2 Zone Regulation Configuration",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-02-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-60-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-150422"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2019-06-24",
+      "released": "2020-02-11",
+      "revised": null,
+      "effective": "2020-03-03"
+    },
+    "abstract": "Conversion of in-service aircraft to the standard 2 trim air regulation configuration, closing the zone loop on a duct-mounted sensor and adding an accumulator to damp the pressure transient that follows a pack change.",
+    "sections": {
+      "planning_reason": "Even with the hardened valve seat, cabin zone temperature overshoot on descent averages four degrees and the aft zone of a full aircraft regularly exceeds the selected temperature by more than that. The cause is the position of the sensing element: the loop closes on returned cabin air with a transport delay of two to three minutes, so the valve chases a temperature that is already out of date. Crews on the longest sectors respond by leaving the zone selectors at the extremes, which removes any benefit from the system. Aircraft that are not converted will continue to generate cabin comfort complaints that no valve change can resolve.",
+      "description": "This Service Bulletin converts the trim air regulation to standard 2. Each zone valve is replaced by the switched assembly that carries a sensor boss on its outlet flange, an accumulator is installed upstream of each valve to damp pack transients, and the zone controller parameter set is re-scaled to the new loop gains. On ZEPHYR-24 aircraft a third sensing point is added for the forward zone. The distribution ducting itself is not replaced.",
+      "accomplishment_summary": "Confirm that the aircraft is at the hardened valve seat standard before you start; if it is not, this bulletin must not be embodied. Make sure that the air conditioning system is depressurised. Get access through the ceiling and lateral panels in zones 254, 291 and 273. Remove the existing valves following task AMM-Z-21-60-11-000-023-A. Install the switched assembly D2160114404059 at the forward valve FIN 726HQ and at the aft valve FIN 980HQ. On ZEPHYR-24 aircraft install the third assembly at FIN 872HQ. Install the accumulator KAE541402-61 on the new bracket and secure it with the clevis pins AES510897-5A. Install the valves following task AMM-Z-21-60-11-400-023-A. Connect the sensor harness at the duct boss and do a continuity check. Load the revised zone controller parameter set. Do the trim air system operational test with the packs running and record the zone response time. Restore the ceiling and lateral panels.",
+      "effectivity_note": "Applicable to ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 aircraft already at the hardened valve seat standard and not built to the standard 2 configuration. Aircraft delivered from the production cut-in are excluded.",
+      "material_note": "Kit K2160-1218-01 contains two switched assemblies, two accumulators, the bracket and pin set and the sensor harness for a two-zone aircraft; kit K2160-1218-02 adds the third channel for ZEPHYR-24 aircraft. The switched assembly is a long-lead item at twenty-eight weeks. Removed valves are returned to Aeralis for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160114404059",
+        "KAE541402-61",
+        "AES510897-5A",
+        "KAD437362-51"
+      ],
+      "fins": [
+        "726HQ",
+        "980HQ",
+        "872HQ"
+      ],
+      "drawings": [
+        "D21601147555"
+      ],
+      "software": [],
+      "zones": [
+        "254",
+        "291",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-153140",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "ZPH-21-1224",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-Z-21-60-11-000-023-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-Z-21-60-11-400-023-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-Z-21-60-11-FIG-11",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "trim air standard 2",
+      "duct sensor boss",
+      "accumulator",
+      "zone overshoot",
+      "parameter set"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-21-1218",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, normally at a base maintenance visit. Operators reporting cabin comfort complaints are advised to embody within 24 months.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-153140",
+      "manpower": {
+        "elapsed_time_hours": 26,
+        "manhours": 58,
+        "personnel": 3,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K2160-1218-01",
+        "kit_available_from": "2020-03-16",
+        "parts_required": [
+          {
+            "part_number": "D2160114404059",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "KAE541402-61",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES510897-5A",
+            "qty": 8,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "KAD437362-51",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Grease, high temperature, silicone free",
+          "Sealant, polysulphide, class B"
+        ],
+        "tooling": [
+          "Torque wrench 3-20 Nm",
+          "Portable data loader"
+        ]
+      },
+      "weight_change_kg": 3.4,
+      "accomplishment_steps": 13,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2020-02-11",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "ZPH-21-1218",
+    "doc_type": "SB",
+    "title": "Air Conditioning — Trim Air System — Conversion to the Standard 2 Zone Regulation Configuration",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-07",
+      "reason": "The sensor boss alignment is now gauged and dimensioned in the accomplishment instructions, and no further change to the boss is released until the candidate third standard is decided.",
+      "raised_by_pawo": "PAWO-153140-02",
+      "raised_by_finding": "F01",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-60-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-150422"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2019-06-24",
+      "released": "2020-02-11",
+      "revised": "2026-08-07",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Conversion of in-service aircraft to the standard 2 trim air regulation configuration, closing the zone loop on a duct-mounted sensor, damping the pack transient with an accumulator, and controlling the sensor boss alignment that no other document sets.",
+    "sections": {
+      "planning_reason": "Even with the hardened valve seat, cabin zone temperature overshoot on descent averages four degrees and the aft zone of a full aircraft regularly exceeds the selected temperature by more than that. The cause is the position of the sensing element: the loop closes on returned cabin air with a transport delay of two to three minutes, so the valve chases a temperature that is already out of date. Crews on the longest sectors respond by leaving the zone selectors at the extremes, which removes any benefit from the system. Aircraft that are not converted will continue to generate cabin comfort complaints that no valve change can resolve.",
+      "description": "This Service Bulletin converts the trim air regulation to standard 2. Each zone valve is replaced by the switched assembly that carries a sensor boss on its outlet flange, an accumulator is installed upstream of each valve to damp pack transients, and the zone controller parameter set is re-scaled to the new loop gains. On ZEPHYR-24 aircraft a third sensing point is added for the forward zone. The distribution ducting itself is not replaced.",
+      "accomplishment_summary": "Confirm that the aircraft is at the hardened valve seat standard before you start; if it is not, this bulletin must not be embodied. Make sure that the air conditioning system is depressurised. Get access through the ceiling and lateral panels in zones 254, 291 and 273. Remove the existing valves following task AMM-Z-21-60-11-000-023-A. Install the switched assembly D2160114404059 at the forward valve FIN 726HQ and at the aft valve FIN 980HQ. On ZEPHYR-24 aircraft install the third assembly at FIN 872HQ. Set the sensor boss on each outlet flange with the alignment gauge and check it at two positions before the flange is torqued: the boss angular position and its offset from the flange datum are controlled here and in no other document, and a boss set outside the stated band puts the sensing element in the wall boundary layer. Install the accumulator KAE541402-61 on the new bracket and secure it with the clevis pins AES510897-5A. Install the valves following task AMM-Z-21-60-11-400-023-A. Connect the sensor harness at the duct boss and do a continuity check. Load the revised zone controller parameter set. Do the trim air system operational test with the packs running and record the zone response time. Restore the ceiling and lateral panels.",
+      "effectivity_note": "Applicable to ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 aircraft already at the hardened valve seat standard and not built to the standard 2 configuration. Aircraft delivered from the production cut-in are excluded. The boss standard itself is under review: a candidate configuration deletes the duct boss altogether, and no further revision affecting the boss geometry will be released until that configuration is decided, so that operators are not asked to absorb two changes to the same weld.",
+      "material_note": "Kit K2160-1218-01 contains two switched assemblies, two accumulators, the bracket and pin set and the sensor harness for a two-zone aircraft; kit K2160-1218-02 adds the third channel for ZEPHYR-24 aircraft. The switched assembly is a long-lead item at twenty-eight weeks. Removed valves are returned to Aeralis for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160114404059",
+        "KAE541402-61",
+        "AES510897-5A",
+        "KAD437362-51"
+      ],
+      "fins": [
+        "726HQ",
+        "980HQ",
+        "872HQ"
+      ],
+      "drawings": [
+        "D21601147555"
+      ],
+      "software": [],
+      "zones": [
+        "254",
+        "291",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-153140",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "ZPH-21-1224",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-Z-21-60-11-000-023-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-Z-21-60-11-400-023-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-Z-21-60-11-FIG-11",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "trim air standard 2",
+      "duct sensor boss",
+      "boss alignment",
+      "accumulator",
+      "zone overshoot"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-21-1218",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, normally at a base maintenance visit. Operators reporting cabin comfort complaints are advised to embody within 24 months.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-153140",
+      "manpower": {
+        "elapsed_time_hours": 26,
+        "manhours": 58,
+        "personnel": 3,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K2160-1218-01",
+        "kit_available_from": "2020-03-16",
+        "parts_required": [
+          {
+            "part_number": "D2160114404059",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "KAE541402-61",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES510897-5A",
+            "qty": 8,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "KAD437362-51",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Grease, high temperature, silicone free",
+          "Sealant, polysulphide, class B"
+        ],
+        "tooling": [
+          "Duct boss alignment gauge 98D21601-218",
+          "Torque wrench 3-20 Nm",
+          "Portable data loader"
+        ]
+      },
+      "weight_change_kg": 3.4,
+      "accomplishment_steps": 13,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2020-02-11",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-08-07",
+          "reason": "Sensor boss alignment gauged and dimensioned in the accomplishment instructions; further boss changes held pending the candidate third standard"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "doc_id": "AMM-C-27-50-11-900-001-A",
+    "doc_type": "AMM",
+    "title": "Flap Position Sensor — Rigging and Zero Setting",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2024-04-09",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [
+      "27-80"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-01-30",
+      "released": "2017-08-14",
+      "revised": "2024-04-09",
+      "effective": "2024-04-30"
+    },
+    "abstract": "Rigging of the flap position sensors against the mechanical stops and setting of the electrical zero, done whenever a sensor, a drive component or a loadable software part has been changed.",
+    "sections": {
+      "purpose": "This task gives the mechanical rigging of the flap position sensors against the retracted and extended stops and the setting of the electrical zero in the slat flap control computer.",
+      "job_setup_note": "The flap must be driven to each rigging position under power and then locked with the rigging pin before any measurement is taken. The rigging pin set must be complete at the end of the task; a pin left in a track is a serious hazard on the next flight. Electrical power is needed at the flight deck to read the sensor output during the zero setting.",
+      "procedure": "1. WARNING: DO NOT DRIVE THE FLAPS WITH A RIGGING PIN INSTALLED. THE DRIVE WILL DAMAGE THE TRACK. 2. Apply electrical power and pressurise the hydraulic system. 3. Drive the flaps to the fully retracted position and install the rigging pins at the marked positions. 4. Measure the surface position at the reference station on each side and record both values. 5. Adjust the position pick-off of the actuator D2750008004169 until the reported position matches the measured value inside the tolerance in the task. 6. CAUTION: DO NOT STRAIN THE SENSOR LEAD WHILE THE PICK-OFF IS ADJUSTED. A STRAINED LEAD FAILS INTERMITTENTLY IN SERVICE. 7. Check the routing of the sensor hose AS721224-40 and re-clip it clear of the pick-off lead. 8. Remove the rigging pins and drive the flaps to the fully extended position. 9. Install the rigging pins and repeat the measurement and the adjustment at the extended stop. 10. Set the electrical zero in the slat flap control computer and confirm that the reported position agrees at both stops. 11. Confirm the flap sensor 6803KS4 and the drive pump 345EV2 report consistently. 12. Remove all rigging pins and account for the complete set against the tool list.",
+      "close_out": "Do the flap drive system test through one full cycle after the rigging is complete. Account for every rigging pin against the tool list before the aircraft is released. Record the measured surface positions, the adjustments made and the rigging pin count in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750008004169",
+        "AS721224-40",
+        "D2750116570759"
+      ],
+      "fins": [
+        "345EV2",
+        "6803KS4"
+      ],
+      "drawings": [
+        "D27501270713"
+      ],
+      "software": [
+        "LC8C8E906FE"
+      ],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [
+        "FIG-27-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-27-50-11-700-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flap rigging",
+      "position sensor",
+      "electrical zero",
+      "rigging pin",
+      "pick-off adjustment"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "27-50-11-900-001-A",
+      "task_type": "ADJUSTMENT",
+      "effectivity_note": "All aircraft. The rigging is required after any change of a position sensor, a drive component or the built-in test loadable software part.",
+      "manhours": 7.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.5,
+      "access": {
+        "zones": [
+          "522",
+          "561",
+          "661"
+        ],
+        "access_panels": [
+          "522AL",
+          "561CR",
+          "661AR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not drive the flaps with a rigging pin installed.",
+          "Make sure that no person is in the path of the flaps.",
+          "Account for the complete rigging pin set before the aircraft is released."
+        ],
+        "tooling": [
+          {
+            "reference": "98D27501-021",
+            "description": "Flap rigging pin set"
+          },
+          {
+            "reference": "98D27501-024",
+            "description": "Surface position measuring rig"
+          },
+          {
+            "reference": "98D27501-019",
+            "description": "Portable maintenance terminal"
+          }
+        ],
+        "consumables": [
+          "Cleaning solvent, aviation grade",
+          "Cable ties, self-locking"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-27-50-11-700-003-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

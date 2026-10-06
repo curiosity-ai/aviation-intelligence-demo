@@ -1,0 +1,352 @@
+[
+  {
+    "doc_id": "AMM-S-76-10-12-900-046-A",
+    "doc_type": "AMM",
+    "title": "Thrust Control Quadrant — Friction Setting and Resolver Output Check",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1994-05-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-10",
+      "ata_6d": "76-10-12",
+      "title": "Power Control — Throttle Control Unit"
+    },
+    "secondary_ata": [
+      "22-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1994-03-16",
+      "released": "1994-05-14",
+      "revised": "1994-05-14",
+      "effective": "1994-06-02"
+    },
+    "abstract": "Setting of the thrust lever friction to the specified breakout and hold values and verification of the resolver output against lever angle at five positions, done on wing where the access latch allows it.",
+    "sections": {
+      "purpose": "This task sets the friction of each thrust lever path to the specified breakout and hold values and confirms that the resolver output follows the lever angle within tolerance across the range.",
+      "job_setup_note": "Friction is measured at the lever knob with a calibrated gauge pulled square to the arc; a gauge pulled at an angle reads high and the lever will then be set too loose. On aircraft without the access latch the quadrant must be removed to reach the friction pack, which turns a line task into a shop task; check the aircraft record before promising a turnaround.",
+      "procedure": "1. Put the aircraft on ground power with the engines shut down and the fuel shut-off levers off. 2. Open the pedestal in accordance with the maintenance manual. 3. Confirm from the aircraft record whether the access latch HED768198-70 is fitted. Where it is not, remove the quadrant using the applicable removal task. 4. Where the latch is fitted, release it and lift the shroud kit INDE893867-87 clear. CAUTION: SUPPORT THE SHROUD. IT WILL FALL ONTO THE RESOLVER TAIL AND BEND IT. 5. Measure the breakout friction at each lever knob with the gauge pulled square to the arc, and record it. 6. Measure the hold friction at mid travel on each path and record it. 7. Compare both against the limits table. 8. Where a value is outside limits, add or remove shims at the friction pack in steps of one shim and re-measure after each step. 9. Do not exceed the maximum shim stack in the table; a pack that needs more than that is worn out. 10. Check the resolver output against lever angle at idle, at four intermediate positions and at the forward stop, and record all five. 11. Confirm that the protective sleeve LN938888K1 is in place over the resolver tail. 12. Renew the seal VAL944782-67 at the quadrant base if it was disturbed. 13. Refit the shroud and close the access latch. 14. Do the autothrust engagement test and confirm smooth lever movement over the full range.",
+      "close_out": "Record the breakout and hold friction for all lever paths before and after adjustment, the shim count added or removed, and the five resolver readings. Where the shim stack is at maximum, raise the quadrant for a friction pack change at the next opportunity."
+    },
+    "entities": {
+      "part_numbers": [
+        "HED768198-70",
+        "INDE893867-87",
+        "VAL944782-67",
+        "LN938888K1"
+      ],
+      "fins": [
+        "10EC",
+        "76EC",
+        "83EC"
+      ],
+      "drawings": [
+        "D76101238743"
+      ],
+      "software": [],
+      "zones": [
+        "413",
+        "432",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-22-30-11-700-042-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "friction setting",
+      "breakout",
+      "shim stack",
+      "resolver output",
+      "access latch"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Port-Rivage",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "76-10-12-900-046-A",
+      "task_type": "ADJUSTMENT",
+      "effectivity_note": "All aircraft; the on-wing route applies only where the access latch is fitted",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.5,
+      "access": {
+        "zones": [
+          "413",
+          "432",
+          "433"
+        ],
+        "access_panels": [
+          "413BR",
+          "432AL",
+          "433BR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Confirm the fuel shut-off levers are off.",
+          "Support the shroud when the latch is released."
+        ],
+        "tooling": [
+          {
+            "reference": "98D76101-201",
+            "description": "Friction gauge, calibrated"
+          },
+          {
+            "reference": "98D76101-205",
+            "description": "Resolver alignment fixture"
+          },
+          {
+            "reference": "98D76101-209",
+            "description": "Lever angle protractor"
+          }
+        ],
+        "consumables": [
+          "Shim stock, stainless, 0.05 mm to 0.5 mm",
+          "Thread locking compound"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-22-30-11-700-042-A"
+      ],
+      "steps": 14,
+      "warnings": 0,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-S-76-10-12-900-046-A",
+    "doc_type": "AMM",
+    "title": "Thrust Control Quadrant — Friction Setting and Resolver Output Check",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-09",
+      "reason": "The route selection at step 3 is confirmed as sufficient for the four-engine quadrant and the reason it will never carry the access latch is recorded in the job set-up.",
+      "raised_by_pawo": "PAWO-134430-01",
+      "raised_by_finding": "F01",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-10",
+      "ata_6d": "76-10-12",
+      "title": "Power Control — Throttle Control Unit"
+    },
+    "secondary_ata": [
+      "22-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1994-03-16",
+      "released": "1994-05-14",
+      "revised": "2026-07-09",
+      "effective": "2026-07-27"
+    },
+    "abstract": "Setting of the thrust lever friction to the specified breakout and hold values and verification of the resolver output against lever angle at five positions, done on wing where the access latch allows it.",
+    "sections": {
+      "purpose": "This task sets the friction of each thrust lever path to the specified breakout and hold values and confirms that the resolver output follows the lever angle within tolerance across the range.",
+      "job_setup_note": "Friction is measured at the lever knob with a calibrated gauge pulled square to the arc; a gauge pulled at an angle reads high and the lever will then be set too loose. On aircraft without the access latch the quadrant must be removed to reach the friction pack, which turns a line task into a shop task; check the aircraft record before promising a turnaround. The four-engine quadrant is always in that second category and always will be: it carries four lever paths in the same pedestal envelope, the side face the latch swings into is occupied by the outboard lever guide, and there is no plan to change the housing. The selection at step 3 is made on the presence of the latch and needs no separate four-engine branch, which is why this task was left as written when the quadrant access change was studied.",
+      "procedure": "1. Put the aircraft on ground power with the engines shut down and the fuel shut-off levers off. 2. Open the pedestal in accordance with the maintenance manual. 3. Confirm from the aircraft record whether the access latch HED768198-70 is fitted. Where it is not, remove the quadrant using the applicable removal task. 4. Where the latch is fitted, release it and lift the shroud kit INDE893867-87 clear. CAUTION: SUPPORT THE SHROUD. IT WILL FALL ONTO THE RESOLVER TAIL AND BEND IT. 5. Measure the breakout friction at each lever knob with the gauge pulled square to the arc, and record it. 6. Measure the hold friction at mid travel on each path and record it. 7. Compare both against the limits table. 8. Where a value is outside limits, add or remove shims at the friction pack in steps of one shim and re-measure after each step. 9. Do not exceed the maximum shim stack in the table; a pack that needs more than that is worn out. 10. Check the resolver output against lever angle at idle, at four intermediate positions and at the forward stop, and record all five. 11. Confirm that the protective sleeve LN938888K1 is in place over the resolver tail. 12. Renew the seal VAL944782-67 at the quadrant base if it was disturbed. 13. Refit the shroud and close the access latch. 14. Do the autothrust engagement test and confirm smooth lever movement over the full range.",
+      "close_out": "Record the breakout and hold friction for all lever paths before and after adjustment, the shim count added or removed, the route used, and the five resolver readings. Where the shim stack is at maximum, raise the quadrant for a friction pack change at the next opportunity; on a four-engine aircraft that is a shop visit and the planning lead is longer."
+    },
+    "entities": {
+      "part_numbers": [
+        "HED768198-70",
+        "INDE893867-87",
+        "VAL944782-67",
+        "LN938888K1"
+      ],
+      "fins": [
+        "10EC",
+        "76EC",
+        "83EC"
+      ],
+      "drawings": [
+        "D76101238743"
+      ],
+      "software": [],
+      "zones": [
+        "413",
+        "432",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-22-30-11-700-042-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "friction setting",
+      "breakout",
+      "access latch",
+      "off-wing route",
+      "resolver output"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Port-Rivage",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "76-10-12-900-046-A",
+      "task_type": "ADJUSTMENT",
+      "effectivity_note": "All aircraft; the on-wing route applies only where the access latch is fitted, which excludes every four-engine aircraft",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.5,
+      "access": {
+        "zones": [
+          "413",
+          "432",
+          "433"
+        ],
+        "access_panels": [
+          "413BR",
+          "432AL",
+          "433BR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Confirm the fuel shut-off levers are off.",
+          "Support the shroud when the latch is released."
+        ],
+        "tooling": [
+          {
+            "reference": "98D76101-201",
+            "description": "Friction gauge, calibrated"
+          },
+          {
+            "reference": "98D76101-205",
+            "description": "Resolver alignment fixture"
+          },
+          {
+            "reference": "98D76101-209",
+            "description": "Lever angle protractor"
+          }
+        ],
+        "consumables": [
+          "Shim stock, stainless, 0.05 mm to 0.5 mm",
+          "Thread locking compound"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-22-30-11-700-042-A"
+      ],
+      "steps": 14,
+      "warnings": 0,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

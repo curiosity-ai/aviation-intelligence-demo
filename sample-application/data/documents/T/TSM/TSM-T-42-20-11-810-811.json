@@ -1,0 +1,158 @@
+[
+  {
+    "doc_id": "TSM-T-42-20-11-810-811",
+    "doc_type": "TSM",
+    "title": "Avionics Network Message Burst After a Cold Start — Fault Isolation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-09-28",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Integrated Modular Avionics — Network Switch"
+    },
+    "secondary_ata": [
+      "42-20-12",
+      "45-20-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-06-29",
+      "released": "2021-11-18",
+      "revised": "2023-09-28",
+      "effective": "2023-11-02"
+    },
+    "abstract": "Fault isolation for a burst of unrelated maintenance messages in the early climb after a cold night stop, distinguishing a switch restart from a set of independent system faults.",
+    "sections": {
+      "purpose": "Fault isolation for a burst of maintenance messages appearing together in the early climb, typically after a cold night stop, with no crew report or with a transient display indication only.",
+      "fault_description": "Between two and five events a week are reported across a typical fleet. The messages arrive together and in the same order, which is the signature of a single upstream event rather than several independent faults. The cause is almost always a network switch restarting: the line card power supply draws a higher inrush at low junction temperature and the resulting rail dip restarts the card. The messages that follow describe the effect on every system that lost its network path, which is why the list looks alarming and why an untrained assessment can produce several unnecessary removals.",
+      "isolation_procedure": "1. Read the maintenance messages for the affected flight in time order, not in system order. 2. Identify the first message in the burst and note the reporting equipment. 3. Where a network switch identifier heads the burst, treat the remaining messages as consequential and do not action them individually. 4. Establish the line card standard and the configuration file part number from the maintenance terminal. 5. Where the card is at the original standard, the condition is explained by the cold start inrush and the modification bulletin applies. 6. Where the card is at the redesigned standard, confirm the configuration file is the matching one; a redesigned card with the earlier file produces port initialisation messages that look similar but are not the same signature. 7. Where both are current and the burst persists, read the supply rail recording for the event and confirm whether a dip occurred. 8. Where no dip occurred, the burst is not a switch restart and each message must be assessed in its own chapter.",
+      "dispatch_note": "No dispatch restriction results from a message burst that has been identified as a switch restart, provided the switch is currently operational and all ports report link. A switch that is holding ports after the warm-up period is a dispatch item and the associated minimum equipment list entry applies."
+    },
+    "entities": {
+      "part_numbers": [
+        "AES271290K2",
+        "D4220115959692",
+        "D4220122248639"
+      ],
+      "fins": [
+        "2029CP1",
+        "423CP4",
+        "75CP"
+      ],
+      "drawings": [
+        "D42201115709",
+        "D42201186509"
+      ],
+      "software": [
+        "LC9R67A042E",
+        "LE7RC1DE5E9"
+      ],
+      "zones": [
+        "163",
+        "161"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-42-20-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "message burst",
+      "cold start",
+      "switch restart",
+      "consequential messages",
+      "rail dip"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "42-20-11-810-811",
+      "fault_symptom": "Burst of unrelated maintenance messages in the early climb after a cold night stop",
+      "fault_codes": [
+        "422011006",
+        "422011023"
+      ],
+      "warning_messages": [
+        "AVIONICS NETWORK FAULT"
+      ],
+      "affected_fins": [
+        "2029CP1",
+        "423CP4",
+        "75CP"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Line card power supply inrush at low junction temperature",
+          "probability_pct": 50,
+          "fin": "2029CP1"
+        },
+        {
+          "cause": "Redesigned card with the earlier configuration file",
+          "probability_pct": 25,
+          "fin": "423CP4"
+        },
+        {
+          "cause": "Supply rail dip from an unrelated electrical transient",
+          "probability_pct": 15,
+          "fin": "75CP"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-T-42-20-11-900-001-A",
+      "dispatch": {
+        "mel_item": "42-20-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One network switch inoperative, associated system redundancy verified"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

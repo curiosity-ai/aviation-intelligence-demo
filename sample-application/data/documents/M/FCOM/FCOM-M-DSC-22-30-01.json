@@ -1,0 +1,124 @@
+[
+  {
+    "doc_id": "FCOM-M-DSC-22-30-01",
+    "doc_type": "FCOM",
+    "title": "Auto Flight — Autothrust Description and Disconnect Behaviour",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2023-09-04",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-00",
+      "title": "Auto Throttle — General"
+    },
+    "secondary_ata": [
+      "22-10",
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-04-03",
+      "released": "2017-12-18",
+      "revised": "2023-09-04",
+      "effective": "2023-10-02"
+    },
+    "abstract": "Flight crew description of the autothrust function, the thrust lever positions it works with, and what the crew sees and does when the function disconnects with or without a crew input.",
+    "sections": {
+      "purpose": "This entry describes the autothrust function to the flight crew, its engagement conditions and the indications and actions associated with a disconnect.",
+      "description": "Autothrust commands engine thrust with the thrust levers held in a detent, moving the levers only where the aeroplane variant provides moving levers. Engagement, mode and target are shown on the flight mode annunciator. The function disconnects when the crew presses the instinctive disconnect pushbutton on either lever, when the levers are moved out of the detent, or when the aeroplane detects a condition that prevents it from controlling thrust accurately. A disconnect that the crew did not command is annunciated with a caution and the levers stay where they are; thrust does not change at the moment of disconnect. Repeated uncommanded disconnects on the same sector are a technical log item, because the aeroplane is telling the crew that it cannot guarantee thrust control, not that thrust has been lost.",
+      "crew_procedure": "On an uncommanded A/THR OFF caution, confirm the thrust lever position, set thrust manually for the phase of flight and cancel the caution. Re-engage autothrust once, if the conditions for engagement are met. If the function disconnects again without crew input, leave it off, control thrust manually and record both events in the technical log with the phase of flight and the outside air temperature."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-M-DSC-34-50-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "autothrust",
+      "instinctive disconnect",
+      "detent",
+      "flight mode annunciator",
+      "uncommanded disconnect"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Operations"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Systems Description — Auto Flight",
+      "entry_number": "DSC-22-30-01",
+      "flight_phase": "ALL_PHASES",
+      "operational_impact": "NONE",
+      "crew_action": "Set thrust manually, cancel the caution and re-engage once; record repeated disconnects.",
+      "affects_qrh": true,
+      "affects_mel": true,
+      "mel_items": [
+        "22-30-01A"
+      ],
+      "systems": [
+        "Autothrust",
+        "Thrust Levers",
+        "Flight Mode Annunciator"
+      ],
+      "related_entries": [
+        "FCOM-M-DSC-34-50-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

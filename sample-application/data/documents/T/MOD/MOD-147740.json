@@ -1,0 +1,197 @@
+[
+  {
+    "doc_id": "MOD-147740",
+    "doc_type": "MOD",
+    "title": "Main Landing Gear Brake Assembly with Extended Life Carbon Heat Stack",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-11",
+      "title": "Wheels and Brakes — Brake Assembly"
+    },
+    "secondary_ata": [
+      "32-40-12",
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2"
+      ],
+      "msns": [
+        "T00018",
+        "T00127",
+        "T00149",
+        "T00166",
+        "T00184",
+        "T00209",
+        "T00227"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "PYR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-142240"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-05-04",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "A brake assembly built on a denser carbon heat stack, offered to operators whose sector length has fallen far enough that the original wear assumption no longer holds, and available through spares rather than as a fleet campaign.",
+    "sections": {
+      "reason": "One operator has seen its average sector length fall from 3.9 hours to 2.6 hours over four years, and with it the mean brake change interval from 1 480 to 1 010 landings. The wear is uniform, the shop finds nothing wrong with the units, and the control units have never been implicated. The problem is that the heat stack was sized on a duty cycle that the network no longer flies. Two further operators moving towards regional patterns have asked the same question, and the component support contracts written on the original assumption are becoming difficult for both sides.",
+      "description": "The heat stack is rebuilt from a denser carbon with a revised rotor and stator count, giving roughly forty per cent more wear volume in the same envelope and the same maximum energy rating. The filter kit D3240117630916 in the brake hydraulic supply is retained; the accumulator kit D3240119425378 is replaced by an item with a larger gas volume so that the higher thermal mass does not change the parking brake decay. Swaged collars LN606496-25 secure the revised torque tube interface, and the superseded countersunk washer AGS646986-7C is replaced by the standard item AGS146031K9 already used on the control unit mounting. Wear pin geometry changes, so the wear check reads on a new scale. The brake sensor at FIN 1WS, the accumulator at FIN 7GM, the clamp at FIN 2644GM8 and the lower pipe at FIN 3278WS are all unchanged. Parameter set LF1R11939FF supersedes LD8R083EA4E in the control unit, because the anti-skid modulation is retuned for the higher thermal mass. Installation is in zones 721, 734, 754 and 771. Electrical interface detail remains as drawing D32401274246.",
+      "effects": "Estimated mass increase of 96 kg per aircraft across all brake positions, symmetric and with no reportable centre-of-gravity effect. No electrical load change. The new assembly is not interchangeable with the original because the anti-skid parameter set differs, and an aircraft must carry one standard across all positions. Predicted benefit is a change interval of about 1 620 landings at the operator's present sector length. Despatch is unchanged. Wear check content, the brake removal and installation tasks and the illustrated parts content all require update, and the fault isolation content changes with the new parameter set.",
+      "embodiment_note": "Retrofit through spares rather than as a campaign: units are introduced as the existing ones come due, with the control unit parameter set applied at the same visit. Provisional estimate is fourteen hours for a full aircraft conversion. No production cut-in is proposed.",
+      "open_points": "Pre-analysis must confirm whether the retuned anti-skid parameter set can be applied to an aircraft still carrying original brake assemblies during the transition period, whether the parking brake decay stays inside limits with the larger accumulator, and what the mixed-standard configuration means for the published despatch conditions."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240117630916",
+        "D3240119425378",
+        "LN606496-25",
+        "AGS646986-7C",
+        "AGS146031K9"
+      ],
+      "fins": [
+        "3278WS",
+        "1WS",
+        "7GM",
+        "2644GM8"
+      ],
+      "drawings": [
+        "D32401274246"
+      ],
+      "software": [
+        "LF1R11939FF",
+        "LD8R083EA4E"
+      ],
+      "zones": [
+        "721",
+        "734",
+        "754",
+        "771"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00127",
+        "T00227"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-T-260208",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-142240",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "brake assembly",
+      "carbon heat stack",
+      "wear volume",
+      "anti-skid parameter",
+      "sector length"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Ashcombe",
+      "role": "Landing Gear Systems"
+    },
+    "type_data": {
+      "mod_number": 147740,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.735",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 96.0,
+      "balance_impact": "Symmetric across all brake positions, no reportable CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AGS146031K9",
+        "LN606496-25"
+      ],
+      "parts_removed": [
+        "AGS646986-7C"
+      ],
+      "parts_modified": [
+        "D3240119425378"
+      ],
+      "fins_affected": [
+        "3278WS",
+        "1WS"
+      ],
+      "software_affected": [
+        "LF1R11939FF",
+        "LD8R083EA4E"
+      ],
+      "estimated_manhours": 120,
+      "estimated_cost_keur": 4200,
+      "lead_time_weeks": 58,
+      "production_impact": "No production cut-in proposed",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "doc_id": "TSM-M-29-30-11-810-806",
+    "doc_type": "TSM",
+    "title": "Hydraulic System Pressure Indication Disagrees with the Standby Gauge",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-04-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-30",
+      "ata_6d": "29-30-11",
+      "title": "Indicating — Pressure Transmitters"
+    },
+    "secondary_ata": [
+      "29-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-09-11",
+      "released": "2020-04-21",
+      "revised": null,
+      "effective": "2020-05-18"
+    },
+    "abstract": "Fault isolation for a hydraulic system pressure indication that disagrees with the standby gauge, distinguishing a transmitter fault from a genuine pressure loss or an accumulator problem.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a disagreement between the hydraulic system pressure indication and the standby gauge reading.",
+      "fault_description": "The flight deck hydraulic pressure indication for one system reads outside the normal band while the standby gauge in the equipment bay reads normally, or the reverse. The disagreement can be steady or can appear only above a particular pressure. A steady offset is usually a transmitter calibration problem. A disagreement that grows with pressure points at the transmitter itself, while a disagreement that appears only after a period on the ground usually turns out to be accumulator pre-charge rather than an indication fault at all.",
+      "isolation_procedure": "1. Record both readings and the system temperature. 2. Pressurise the system on the ground rig and compare the two readings at four pressure points. 3. If the offset is constant across all four points, do a calibration check of the pressure transmitter. 4. If the disagreement grows with pressure, isolate the transmitter and check it against the reference gauge on the bench. 5. Check the transmitter mounting manifold for a restricted sensing port. 6. Check the regulator setting against the maintenance documentation before concluding that the indication is at fault. 7. Where the disagreement appears only after a period on the ground, read the accumulator pre-charge with the system cold and do the confirmation task. 8. Check the indicating hose run 171GA3 for a restriction and the heat exchanger position 60GG for leakage staining. 9. Do a continuity and insulation check of the transmitter harness back to the indicating rack. 10. Where every check is satisfactory, replace the pressure transmitter and repeat the four-point comparison.",
+      "dispatch_note": "Dispatch is permitted with one system pressure indication inoperative provided the system quantity indication is serviceable and the standby gauge is read before each departure. Dispatch is not permitted where a genuine pressure loss has not been ruled out."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2930114501584",
+        "D2930116373218"
+      ],
+      "fins": [
+        "60GG",
+        "171GA3"
+      ],
+      "drawings": [
+        "D29300015304"
+      ],
+      "software": [],
+      "zones": [
+        "151",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-29-20-12-200-024-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "hydraulic pressure",
+      "transmitter calibration",
+      "standby gauge",
+      "accumulator pre-charge",
+      "four point check"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "29-30-11-810-806",
+      "fault_symptom": "HYD system pressure indication disagrees with the standby gauge",
+      "fault_codes": [
+        "293011004",
+        "293011026"
+      ],
+      "warning_messages": [
+        "HYD G SYS LO PR",
+        "HYD Y SYS LO PR"
+      ],
+      "affected_fins": [
+        "60GG",
+        "171GA3"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Pressure transmitter calibration drift",
+          "probability_pct": 40,
+          "fin": "60GG"
+        },
+        {
+          "cause": "Restricted sensing port in the transmitter mounting manifold",
+          "probability_pct": 25,
+          "fin": "60GG"
+        },
+        {
+          "cause": "Low accumulator pre-charge giving a genuine pressure decay on the ground",
+          "probability_pct": 22,
+          "fin": "171GA3"
+        },
+        {
+          "cause": "High resistance in the transmitter harness",
+          "probability_pct": 13,
+          "fin": "171GA3"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-M-29-20-12-200-024-A",
+      "dispatch": {
+        "mel_item": "29-31-02A",
+        "dispatchable": true,
+        "dispatch_condition": "One system pressure indication inoperative with the quantity indication serviceable and the standby gauge read before each departure."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

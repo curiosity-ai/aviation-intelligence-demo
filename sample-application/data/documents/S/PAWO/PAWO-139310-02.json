@@ -1,0 +1,427 @@
+[
+  {
+    "doc_id": "PAWO-139310-02",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis Round Two — Flight Control Guidance Configuration Data Set Standard 11.0",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-90",
+      "ata_6d": "27-90-11",
+      "title": "Flight Control Computing — Flight Control Primary Computer"
+    },
+    "secondary_ata": [
+      "45-45",
+      "27-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-14",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Second round of pre-analysis for the successor flight control configuration data set, re-run after the first round closed without assessing the mechanical rudder work that was raised in parallel and that shares the same directional authority question.",
+    "sections": {
+      "objective": "Re-assess the successor configuration data set now that a mechanical rudder travel limiter change is in pre-analysis on the same aircraft, confirm the software supersession and its configuration index consequences, and establish what the re-mapped fault reporting words do to the manual content that reads them.",
+      "scope_note": "The search covers ATA 27-90 as the primary chapter and ATA 45-45 data loading for the load medium and the configuration index. ATA 27-20 was added for this round only, because the first round did not search it and that omission is why this round exists: the rudder work was raised through a different route and never appeared. Airframe and cabin chapters were not searched; the change is a data load with no hardware content and no mass or electrical effect.",
+      "method_note": "Entity linking was seeded from the two part numbers, the three FIN positions, the single software load and the two rack zones, which returns the rack cluster densely and reliably. The first round stopped there and found nothing outside the rack. This round added a similarity pass with a seed phrase written around directional authority rather than around configuration data, and that single change surfaced the mechanical rudder candidate, which shares no identifier with this one and would never have appeared through entity linking. The lesson has been recorded for the pre-analysis method guidance.",
+      "findings_summary": "Six items are confirmed and two are blocking. The software supersession itself is clean: the successor load supersedes the present one in the configuration control record and the earlier standard is already marked superseded. The two blocking items are the consequences. The retrofit software load bulletin for the present standard remains open against a large part of the fleet and its accomplishment instructions load a part that will be withdrawn from the licence catalogue; leaving it open would let an operator load a superseded standard on an aircraft after the successor is available. Separately, the fault reporting word re-map extends from word 68 to word 74, which reaches three positions rather than the two the first round assumed, so the fault attribution table in the trouble shooting content and the rack parts figure both need re-issue. The item this round exists to find is the mechanical rudder candidate: it changes the directional authority by moving a mechanical stop while this one changes it by re-tabulating a schedule, and no one has yet decided which of the two owns the authority limit.",
+      "next_steps": "Close the retrofit software load bulletin at successor release and withdraw the superseded load from the licence catalogue on the same date. Re-issue the fault attribution table and the rack parts figure with the extended word range. Convene a joint review with the rudder team to decide whether the authority limit is set mechanically or in the data set; the two cannot both own it. Confirm whether the four-engine aircraft need a separate directional schedule before the flight validation programme is fixed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2790113238523",
+        "D2790119440485"
+      ],
+      "fins": [
+        "435EV",
+        "52CE",
+        "78CE"
+      ],
+      "drawings": [
+        "D27901146283"
+      ],
+      "software": [
+        "LD6LAC15C11"
+      ],
+      "zones": [
+        "162",
+        "216"
+      ],
+      "figures": [
+        "FIG-27-90-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-139310",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-250518",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-135520",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-138150",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-27-1063",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "configuration data set",
+      "supersession",
+      "fault reporting word",
+      "directional authority"
+    ],
+    "originator": {
+      "department": "EYAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-139310-02",
+      "subject_mod": "MOD-139310",
+      "source_io": "IO-S-250518",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-01-14",
+      "due_date": "2026-04-24",
+      "analysis_round": 2,
+      "assigned": {
+        "lead_department": "EYAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "ETGC"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 72
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34",
+          "VANTOR-64",
+          "VANTOR-68"
+        ],
+        "ata_2d": [
+          "27",
+          "45"
+        ],
+        "ata_4d": [
+          "27-90",
+          "27-20",
+          "45-45"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "S00003",
+          "to": "S01918"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2790113238523",
+            "D2790119440485"
+          ],
+          "fins": [
+            "435EV",
+            "52CE",
+            "78CE"
+          ],
+          "drawings": [
+            "D27901146283"
+          ],
+          "zones": [
+            "162",
+            "216"
+          ],
+          "software": [
+            "LD6LAC15C11"
+          ]
+        },
+        "similarity_seeds": [
+          "configuration data set superseding an obsolete supplier baseline",
+          "limiting the commanded rudder authority as a function of airspeed"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Confirm the software supersession and the configuration index entries",
+          "method": "ENTITY",
+          "owner": "EYAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Re-run the similarity pass with a directional authority seed",
+          "method": "SEMANTIC",
+          "owner": "EYAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Trace the fault reporting word range through the manual content",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Joint review with the rudder team on ownership of the authority limit",
+          "method": "SME_INTERVIEW",
+          "owner": "ETGC",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-135520",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2790113238523"
+            ],
+            "shared_fins": [
+              "435EV",
+              "52CE"
+            ],
+            "shared_zones": [
+              "162",
+              "216"
+            ],
+            "shared_ata_6d": [
+              "27-90-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The successor load supersedes the present configuration data set in the software configuration record, and the present standard cannot remain loadable once the successor is certified because the supplier baseline underneath it will no longer be maintained. The supersession is declared on both documents but the licence catalogue entry for the present load has no withdrawal date.",
+          "resolution": "Set a withdrawal date on the present load in the licence catalogue that coincides with successor release, and record it in the software configuration index."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SLN-27-1063",
+          "doc_type": "SB",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2790113238523"
+            ],
+            "shared_fins": [
+              "435EV",
+              "52CE"
+            ],
+            "shared_zones": [
+              "162",
+              "216"
+            ],
+            "shared_ata_6d": [
+              "27-90-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The retrofit software load bulletin for the present standard is open against every aircraft below the production cut-in and its accomplishment instructions load the part that is being withdrawn. Its own effectivity note already tells operators to check whether a successor is available, which is advice rather than a control. An operator following the bulletin as written after successor release would load a superseded standard.",
+          "resolution": "Close the bulletin at successor release rather than leaving it open with an advisory note, and issue the successor through a new software load bulletin."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-S-27-90-11-700-021-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2790113238523",
+              "D2790119440485"
+            ],
+            "shared_fins": [
+              "435EV",
+              "52CE",
+              "78CE"
+            ],
+            "shared_zones": [
+              "162",
+              "216"
+            ],
+            "shared_ata_6d": [
+              "27-90-11"
+            ],
+            "similarity_note": "Reached by traversal from the superseded modification through its retrofit bulletin to the load and test task both call out."
+          },
+          "rationale": "The task checks the solenoid rigging tolerance against a table selected by loaded standard and verifies the fault attribution for three positions. The successor tightens the sensor bias acceptance band and extends the word range, so both the tolerance table and the verification step change, and the task currently has no entry for the successor standard.",
+          "resolution": "Add the successor standard to the rigging tolerance table and extend the fault attribution verification step to the full word range, released with the successor."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-S-27-90-11-810-807",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2790113238523",
+              "D2790119440485"
+            ],
+            "shared_fins": [
+              "435EV",
+              "52CE",
+              "78CE"
+            ],
+            "shared_zones": [
+              "162",
+              "216"
+            ],
+            "shared_ata_6d": [
+              "27-90-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure is built around selecting a fault attribution table by loaded standard and it warns explicitly that the word numbering is the same across standards while the meaning is not. The successor adds a third table for a wider word range, which is exactly the situation the procedure warns about, and the procedure has no entry for it.",
+          "resolution": "Re-issue the procedure with the successor attribution table and a revised probability distribution, in the same change package as the data set."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "IPC-S-27-90-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2790113238523",
+              "D2790119440485"
+            ],
+            "shared_fins": [
+              "435EV",
+              "52CE",
+              "78CE"
+            ],
+            "shared_zones": [
+              "162",
+              "216"
+            ],
+            "shared_ata_6d": [
+              "27-90-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The rack figure calls out the loadable configuration data set at rack level for configuration control and states that the applicable rigging tolerance table is given in the loading task. With two live standards that reference is unambiguous; with three it is not, and the figure carries no standard identifier at all.",
+          "resolution": "Re-issue the figure with the loaded standard identified explicitly at rack level and a pointer to the correct tolerance table per standard."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-138150",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced only by the similarity pass added for this round, and only when the seed phrase was written around directional authority rather than around configuration data. The two documents share no part number, FIN, drawing, software load or zone, sit on different ATA 6D codes, and use entirely different vocabulary: mechanical stop, lost motion and pedal feel against gain table, schedule and data load."
+          },
+          "rationale": "Both changes alter how much rudder deflection is available at high speed. One does it by replacing a mechanical travel limiter with a wider scheduling range, the other by re-tabulating the directional authority schedule in the computers. If both are embodied without a joint decision, the aircraft ends up with two independent authority limits and the more restrictive one wins by accident rather than by design.",
+          "resolution": "Hold a joint review to decide which change owns the authority limit, and make the other one explicitly subordinate to it in its own reason-for-change and applicability."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-133020",
+          "doc_type": "MOD",
+          "reason": "Ranks high on similarity because it is also a certification-significant change on a four-engine aircraft with an interface unit, a proximity sensing re-target and a tolerance table, and because its text shares the words schedule, tolerance and acceptance band. It is landing gear hardware on the VANTOR-68 with no software content, and shares no part number, FIN, software load or zone with the candidate."
+        },
+        {
+          "doc_id": "MOD-134210",
+          "doc_type": "MOD",
+          "reason": "Also an avionics change carrying a loadable parameter database in the same avionics bay, which puts it in the top ranks on both legs of the search. Its database is a navigation parameter set on a different host with a different certification basis; it shares no part number, FIN, software load or fault reporting word with the candidate, and its rack position is not disturbed."
+        }
+      ],
+      "conclusion": "Not yet issued. Round two found the item that round one missed. Two blocking configuration control items are straightforward to close; the ownership of the directional authority limit is the real open question.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

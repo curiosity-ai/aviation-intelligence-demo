@@ -1,0 +1,186 @@
+[
+  {
+    "doc_id": "MOD-137250",
+    "doc_type": "MOD",
+    "title": "Engine and Auxiliary Power Unit Fire Detection Loop Routing and Connector Sealing",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-02-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-11",
+      "title": "Detection — Engine Fire Detection Loops"
+    },
+    "secondary_ata": [
+      "26-10-13",
+      "49-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7000"
+      ],
+      "operators": [
+        "SRP",
+        "OEA",
+        "KLE"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION"
+      ],
+      "production_effectivity": "S01741",
+      "production_cut_in_date": "2024-04-18",
+      "retrofit_via": [
+        "SLN-26-1022",
+        "SLN-26-1023"
+      ]
+    },
+    "dates": {
+      "created": "2022-08-30",
+      "released": "2024-02-06",
+      "revised": null,
+      "effective": "2024-02-26"
+    },
+    "abstract": "Rerouting of the fire detection loops away from the hot duct crossing and a sealed connector standard at every loop break, after moisture ingress produced a run of false fire warnings on wet turnarounds.",
+    "sections": {
+      "reason": "Seventeen false engine fire warnings were recorded in a single wet season across the Auran 7000 fleet, every one of them on the first flight after a heavy rain turnaround and every one of them clearing after the loop dried. Investigation found water tracking into the loop connector at the pylon break, where the connector sits directly under a drain path, and a second contributor at the auxiliary power unit loop where the routing passes within forty millimetres of a hot duct and the resulting thermal cycling had opened the seal. A false fire warning is an air turnback and a full inspection, so the operational cost is high even though nothing is on fire.",
+      "description": "The loop break at the pylon is moved one hundred and eighty millimetres inboard and up, out of the drain path, and every connector on the loop is changed to a sealed standard with a rear grommet and a moulded boot. Transmitter D2610111824651 in the right-hand position is refitted on a new bracket and shear head bolts EN557658-57 secure the revised routing clips. In the auxiliary power unit compartment the loop is re-clipped clear of the hot duct with a minimum standoff of one hundred millimetres and the regulator 25WD is refitted. Manifold 126WF, sensor 939WF3 and filter 90WF are retained. Work is in the auxiliary power unit compartment in zone 393, at the engine pylon in zone 431 and at the reverser interface in zone 472. Detail is on drawing D26101127238.",
+      "effects": "Mass increase of 1.4 kg per aircraft. No electrical load change. Not interchangeable at the loop level because the harness length changes, but the detection units themselves are unaffected. False warnings in the trial population fall to none over two wet seasons. The loop continuity check gains an insulation resistance measurement at each connector, and the trouble shooting procedure for a fire loop fault is rewritten around it. Loop replacement content in the maintenance manual changes.",
+      "embodiment_note": "Cut into production at MSN S01741. Retrofit is offered in two bulletins: a connector sealing bulletin that can be done overnight and a full rerouting bulletin that needs the pylon fairing off at a C-check. Operators in wet climates are asked to do both."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610111824651",
+        "EN557658-57",
+        "AGS49442-85"
+      ],
+      "fins": [
+        "126WF",
+        "939WF3",
+        "90WF",
+        "25WD"
+      ],
+      "drawings": [
+        "D26101127238"
+      ],
+      "software": [],
+      "zones": [
+        "393",
+        "431",
+        "472"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01741"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-26-1022",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "SLN-26-1023",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-S-26-10-11-200-052-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "fire detection loop",
+      "false warning",
+      "connector sealing",
+      "drain path",
+      "standoff"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 137250,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1203",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.4,
+      "balance_impact": "Distributed; no reportable shift",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AGS49442-85"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2610111824651",
+        "EN557658-57"
+      ],
+      "fins_affected": [
+        "25WD",
+        "939WF3"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 140,
+      "estimated_cost_keur": 560,
+      "lead_time_weeks": 28,
+      "production_impact": "Cut-in at MSN S01741",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "MOD-112004",
+    "doc_type": "MOD",
+    "title": "Start Valve Position Feedback and Repositioned Manual Override Access",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-12",
+      "title": "Cranking — Start Valve"
+    },
+    "secondary_ata": [
+      "80-10-11",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "GBA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "PRODUCTION"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-06-16",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Idea captured for a start valve with a discrete position feedback and a manual override handle reachable without opening the fan cowl, so that a valve that fails to close can be dealt with at the gate.",
+    "sections": {
+      "reason": "A start valve that fails to close is currently detected only by its secondary effects, and the manual override is behind the fan cowl, which means the crew cannot deal with it and the aircraft has to be handed to maintenance with the cowl opened. Twenty-eight events were recorded across the fleet in two years, of which nineteen produced a departure delay of more than forty minutes. Two operators have asked whether the override can be brought out to a point reachable from the ground, and the line stations that support this type at outstations have made the same request through the maintenance liaison meeting.",
+      "description": "The proposal is to fit a start valve with a discrete position feedback wired to the cranking control, so that a valve not fully closed is annunciated directly rather than inferred, and to bring the manual override out to a captive handle behind the access panel in the lower cowl. The firewall panel assembly D8010129326094 is reworked for the handle pass-through, the clamp ZE172964-77 is replaced by a longer item that also supports the override cable, the bracket kit NOR449057-32 carries the cable at the cowl frame and the spacer LN981919K4 sets the handle standoff. Functional items 517ES and 820ES are affected. Work is in the nacelle at zones 413 and 471. Reference detail is on drawing D80100082042.",
+      "effects": "Estimated mass increase of 1.3 kg per engine. Electrical load increases by 10 volt-amperes for the two feedback circuits. The valve would not be interchangeable with the delivered item because of the override cable attachment. A new minimum equipment list entry would be needed for the feedback inoperative, and the crew procedure for a start valve that does not close would be re-written around a direct indication. Manual content for the start valve would change in three places.",
+      "embodiment_note": "Nothing is committed. If it proceeds it would be a production cut-in with no retrofit, because the cowl aperture for the handle cannot sensibly be cut in service. Supplier engagement has not started.",
+      "open_points": "Before any commitment the proposal must be checked against the extended starter duty cycle already released, since a valve that stays open for longer is exactly the case that change relies on, and against the position sensing already added elsewhere in the bleed system so that two different feedback schemes are not introduced on adjacent equipment."
+    },
+    "entities": {
+      "part_numbers": [
+        "D8010129326094",
+        "ZE172964-77",
+        "NOR449057-32",
+        "LN981919K4",
+        "PE187919-09"
+      ],
+      "fins": [
+        "517ES",
+        "820ES"
+      ],
+      "drawings": [
+        "D80100082042"
+      ],
+      "software": [],
+      "zones": [
+        "413",
+        "471"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111356",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "start valve",
+      "position feedback",
+      "manual override",
+      "fan cowl access",
+      "departure delay"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Lorencourt",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 112004,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.6,
+      "balance_impact": "Symmetric, no declared effect",
+      "electrical_load_impact_va": 10,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "NOR449057-32",
+        "LN981919K4"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D8010129326094",
+        "ZE172964-77"
+      ],
+      "fins_affected": [
+        "517ES",
+        "820ES"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 120,
+      "estimated_cost_keur": 380,
+      "lead_time_weeks": 40,
+      "production_impact": "Cut-in only if launched; the cowl aperture cannot be cut in service",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

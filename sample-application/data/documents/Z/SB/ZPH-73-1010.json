@@ -1,0 +1,198 @@
+[
+  {
+    "doc_id": "ZPH-73-1010",
+    "doc_type": "SB",
+    "title": "Engine Fuel and Control — Control Unit — Exchange for Standard 9 and Load of the Revised Software",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-06-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-20",
+      "ata_6d": "73-20-11",
+      "title": "Controlling — Engine Electronic Control Unit"
+    },
+    "secondary_ata": [
+      "73-20-12",
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-1226",
+        "VDK-1232",
+        "PYR-1127G",
+        "PYR-1133G"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [
+          "ZPH-73-1006"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-11-25",
+      "released": "2025-06-09",
+      "revised": null,
+      "effective": "2025-06-30"
+    },
+    "abstract": "Exchange of the engine electronic control unit for the standard 9 build and load of the revised operational and configuration software, extending fault recording to eight minutes and protecting the engine configuration table.",
+    "sections": {
+      "planning_reason": "The thirty second fault recording window closes before a maintenance crew can capture an event, which is why two thirds of control unit removals are returned as no fault found. Separately, the engine configuration table lives in the maintenance load, so a routine software load can silently change the engine trim if the wrong table is selected. Three such events were reported in 2023, one of which produced an unexplained exhaust gas temperature margin loss that took four months to diagnose. Aircraft that are not converted keep both exposures.",
+      "description": "This Service Bulletin exchanges the engine electronic control unit for the standard 9 build and loads the revised operational and configuration software. Fault history extends to eight minutes and the engine configuration table moves into protected memory that a maintenance load cannot reach. The cooling duct and bracket provision must already be installed.",
+      "accomplishment_summary": "Confirm that the cooling duct and bracket provision bulletin has been embodied on the engine to be modified; if it has not, this bulletin must not be started. Make sure that the engine is cool. Open the fan cowl and the pylon lower fairing to reach zones 433, 412 and 483. Disconnect and remove the existing control unit at FIN 25EF following task AMM-Z-73-20-11-000-041-A. Install the standard 9 unit on the bracket INN739616-21 and re-connect the harness through the grommets AES641639-8C. Confirm the clearance to the cooling duct D7320110360398 and to the tube assembly at FIN 342EF. Restore power and load the operational software LE2NF49598E followed by the configuration software LF5N800C79F. Verify that the configuration table reported by the unit matches the engine data plate. Do an engine ground run through idle, approach idle and a stabilised power point, and confirm that eight minutes of fault history is recorded and retrievable. Repeat for the second engine and record the embodiment.",
+      "effectivity_note": "Applicable per engine to ZEPHYR-22 and ZEPHYR-24 Evo model aircraft on which the cooling duct and bracket provision has been embodied. Engines delivered from the shop at the standard 9 build are excluded. An earlier unit must not be fitted to a modified installation.",
+      "material_note": "Units are supplied on exchange with a thirty week lead time and the kit includes the software media. Removed units are returned to Aeralis and are converted through the repair loop. The configuration software must be loaded after the operational software or the table will not be written to protected memory."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7320110360398",
+        "INN739616-21",
+        "AES641639-8C"
+      ],
+      "fins": [
+        "25EF",
+        "342EF",
+        "18EF"
+      ],
+      "drawings": [],
+      "software": [
+        "LE2NF49598E",
+        "LF5N800C79F"
+      ],
+      "zones": [
+        "433",
+        "412",
+        "483"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-157240",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "ZPH-73-1006",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-Z-73-20-11-000-041-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-Z-73-20-11-810-814",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "standard 9 control unit",
+      "fault recording window",
+      "configuration table",
+      "protected memory",
+      "software load order"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-73-1010",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Within 36 months after the date of this Service Bulletin, or at the next engine shop visit, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-157240",
+      "manpower": {
+        "elapsed_time_hours": 10,
+        "manhours": 18,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K7320-1010-01",
+        "kit_available_from": "2025-09-15",
+        "parts_required": [
+          {
+            "part_number": "AES641639-8C",
+            "qty": 8,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Contact cleaner, non residue",
+          "Lockwire, corrosion resistant, 0.8 mm"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Torque wrench 5-50 Nm"
+        ]
+      },
+      "weight_change_kg": 0.4,
+      "accomplishment_steps": 13,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2025-06-09",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "doc_id": "AMM-Z-49-60-11-700-028-A",
+    "doc_type": "AMM",
+    "title": "Operational Test of the Auxiliary Power Unit Electronic Control Box after a Software Load or Exchange",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-08-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50",
+      "49-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-05-14",
+      "released": "2019-12-03",
+      "revised": "2024-08-27",
+      "effective": "2024-09-17"
+    },
+    "abstract": "Operational test of the auxiliary power unit electronic control box after a software load or a unit exchange, including the load compressor schedule check and the protection threshold verification.",
+    "sections": {
+      "purpose": "This task tests the auxiliary power unit electronic control box after a software load or a unit exchange, and confirms that the load compressor schedule and the protection thresholds match the loaded configuration.",
+      "job_setup_note": "The test includes an auxiliary power unit run with bleed extraction, so the aircraft must be in a position where the exhaust and the inlet are clear and where the noise is acceptable. Record the ambient temperature before the run: the protection threshold check is only valid inside the ambient band given in the instructions, and a test done outside that band must be repeated.",
+      "procedure": "1. Record the ambient temperature and confirm that it is inside the band given in the instructions. 2. Make sure that the auxiliary power unit inlet and exhaust are clear and that the area is roped off. WARNING: KEEP CLEAR OF THE AUXILIARY POWER UNIT INLET AND EXHAUST DURING THE RUN. THE EXHAUST GAS TEMPERATURE AND VELOCITY ARE HAZARDOUS AT MORE THAN THREE METRES. 3. Read the loaded software part numbers at the firewall panel unit FIN 47PA and compare them with the aircraft software list. 4. Start the auxiliary power unit and let it stabilise at no load. 5. Read the reported exhaust gas temperature and the speed on the maintenance page and record them. 6. Select the bleed on and record the load compressor inlet guide vane position and the surge margin reported by the control box. 7. Compare the schedule with the table for the loaded configuration. CAUTION: DO NOT SELECT BLEED AND ELECTRICAL LOAD TOGETHER DURING THE SCHEDULE CHECK. THE COMBINED LOAD MASKS THE SURGE MARGIN READING. 8. Select the bleed off and let the unit stabilise. 9. Apply the electrical load and record the generator load and the exhaust gas temperature. 10. Read the fault memory at the tube assembly unit FIN 5366PA and confirm that no new fault has been logged. 11. Check the shroud at FIN 9992PB for correct seating after the run. 12. Shut the auxiliary power unit down and record the run-down time.",
+      "close_out": "Clear the fault memory only after the readings are recorded. Remove the ropes and restore the area. Record the exhaust gas temperature margin, the surge margin and the run-down time on the maintenance record; they are the acceptance evidence for the software load or the unit exchange."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4960115159645",
+        "D4960118355783",
+        "ESC601932-18"
+      ],
+      "fins": [
+        "47PA",
+        "5366PA",
+        "9992PB"
+      ],
+      "drawings": [
+        "D49601121167"
+      ],
+      "software": [
+        "LA4N61F1A35",
+        "LE1N58BD890",
+        "LG7N7AE7E40"
+      ],
+      "zones": [
+        "396",
+        "391",
+        "321"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-49-10-11-400-027-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-Z-49-60-11-810-811",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "electronic control box",
+      "surge margin",
+      "protection threshold",
+      "exhaust gas temperature",
+      "fault memory"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "49-60-11-700-028-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. The protection threshold table differs by loaded configuration.",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "396",
+          "391",
+          "321"
+        ],
+        "access_panels": [
+          "396CL",
+          "391AL"
+        ],
+        "doors": [
+          "APU compartment doors"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep clear of the inlet and exhaust during the run.",
+          "Rope off the area before starting.",
+          "Record the ambient temperature before the test."
+        ],
+        "tooling": [
+          {
+            "reference": "Calibrated thermometer, -20 to 120 C",
+            "description": "Ambient temperature"
+          },
+          {
+            "reference": "Portable data loader",
+            "description": "Software part number verification"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-Z-49-10-11-400-027-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

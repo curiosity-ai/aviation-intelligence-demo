@@ -1,0 +1,125 @@
+[
+  {
+    "doc_id": "FCOM-S-PRO-80-10-01",
+    "doc_type": "FCOM",
+    "title": "Engine Start — Normal and Abnormal",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-04-04",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-00",
+      "title": "Cranking — General"
+    },
+    "secondary_ata": [
+      "49-10",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-11-19",
+      "released": "2020-06-09",
+      "revised": "2023-04-04",
+      "effective": "2023-04-22"
+    },
+    "abstract": "Flight crew procedure for engine start covering the normal sequence, the hung start and the abandoned start, with the starter duty cycle the crew has to respect at high field elevation.",
+    "sections": {
+      "purpose": "This entry gives the crew procedure for a normal engine start and for the abnormal cases of a hung start, an abandoned start and a start with the manual override selected.",
+      "description": "The start is automatic once the master switch is selected: the start valve opens, the rotor accelerates, fuel is introduced at the scheduled speed and the start completes without further crew action. The crew monitors rotor speed, exhaust gas temperature and oil pressure, and the ECAM annunciates any parameter that leaves its schedule. A hung start is a rotor that stops accelerating short of the light-up speed and is most likely at high field elevation on a warm day, particularly on the second engine when the auxiliary power unit has already done one start. It is not a failure of the engine and it is not corrected by trying harder; the correct response is to abandon the start, respect the starter duty cycle and either allow the auxiliary power unit to recover or use a cross-bleed start from the running engine. The manual override of the start valve is available and is described on the panel; on aircraft where the override latches, a caption shows that it is selected and the start will not be accepted with it left in.",
+      "crew_procedure": "Normal start: MASTER SWITCH ON and monitor. If the rotor speed stops rising short of the light-up speed: MASTER SWITCH OFF, note the rotor speed reached and the exhaust gas temperature, and observe the starter duty cycle before any further attempt. At a field elevation above the figure on the panel, use a cross-bleed start from the running engine in preference to a second auxiliary power unit start. If the manual override has been used, confirm afterwards that it is deselected; on aircraft with the latching override a caption remains displayed until it is."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [
+        "983ES",
+        "2788ES3"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-S-DSC-49-10-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "engine start",
+      "hung start",
+      "starter duty cycle",
+      "cross-bleed start",
+      "manual override"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "PRO",
+      "section_title": "Normal and Abnormal Procedures — Engine Start",
+      "entry_number": "PRO-80-10-01",
+      "flight_phase": "PREFLIGHT",
+      "operational_impact": "PROCEDURE_CHANGE",
+      "crew_action": "Monitor the start; abandon on a hung start and respect the duty cycle; prefer a cross-bleed start at elevation.",
+      "affects_qrh": true,
+      "affects_mel": true,
+      "mel_items": [
+        "80-10-01A"
+      ],
+      "systems": [
+        "Engine Start",
+        "Air Starter",
+        "Bleed Air"
+      ],
+      "related_entries": [
+        "FCOM-S-DSC-49-10-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

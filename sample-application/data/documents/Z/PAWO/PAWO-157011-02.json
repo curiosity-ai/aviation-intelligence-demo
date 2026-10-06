@@ -1,0 +1,322 @@
+[
+  {
+    "doc_id": "PAWO-157011-02",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Round 2) — Retrofit Release of Flight Management Computer Standard L23 to the In-Service Evo Fleet",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-08-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-11",
+      "title": "Flight Management Computing — Flight Management Computer"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-13",
+      "released": "2026-08-03",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Second-round pre-analysis covering the release of the L23 computer standard to aircraft already in service, after the first round was closed without a position when the supplier baseline moved.",
+    "sections": {
+      "objective": "Establish whether the computer standard already cut into the production line can be offered to the in-service Evo population without further design work, and identify every published item whose effectivity, part list or fault-isolation logic assumes the earlier standard. The round was asked specifically to close the two questions the first attempt left open: whether the position source installed on the earlier aircraft is adequate for the new performance capability, and whether the display format changes reach the flight crew documentation through the bulletin or through a separate publication route.",
+      "findings_summary": "Four items were confirmed and none of them blocks the retrofit. The position source question resolved cleanly: every aircraft in the target population already carries the multi-mode receiver installation, so the containment monitoring the new capability depends on is present and no additional installation is needed. The retrofit bulletin issued for the production standard was written against a narrower effectivity than the one now proposed and has to be revised rather than re-used; that is a publication action, not a design one. The receiver operational test and the surveillance rejection fault-isolation procedure both call the earlier display format in their result criteria, and an engineer following either of them on a converted aircraft would read a pass as a failure. Nothing in the search suggested that the change interacts with the brake, structure or cabin work currently in the retrofit queue.",
+      "next_steps": "Revise the retrofit bulletin effectivity to the full Evo population and re-issue it at the next quarterly batch. Raise publication change requests against the receiver operational test and the surveillance fault-isolation procedure so that both carry pre and post standard result criteria before the first aircraft is converted. Confirm with the avionics standards office that the flight crew documentation change is routed through the operational approval package and not through the bulletin. No further pre-analysis round is required."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2280112713549",
+        "D2280114354601",
+        "D2280006212108"
+      ],
+      "fins": [
+        "2854CE2",
+        "4581CC",
+        "49CE"
+      ],
+      "drawings": [
+        "D22801149726"
+      ],
+      "software": [
+        "LB3NAB376EB"
+      ],
+      "zones": [
+        "151",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-157011",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "flight management computer",
+      "retrofit effectivity",
+      "navigation performance",
+      "previous analysis"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-157011-02",
+      "subject_mod": "MOD-157011",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-08-03",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-04-13",
+      "due_date": "2026-07-31",
+      "analysis_round": 2,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 140,
+        "spent_manhours": 168
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "22",
+          "34"
+        ],
+        "ata_4d": [
+          "22-80",
+          "34-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D2280112713549",
+            "D2280114354601"
+          ],
+          "fins": [
+            "2854CE2",
+            "49CE"
+          ],
+          "drawings": [
+            "D22801149726"
+          ],
+          "zones": [
+            "151",
+            "263"
+          ],
+          "software": [
+            "LB3NAB376EB"
+          ]
+        },
+        "similarity_seeds": [
+          "required navigation performance authorisation capability on a narrow body",
+          "position source integrity containment for a computer standard change",
+          "flight deck display format change reaching crew documentation"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Confirm the position source installed on the in-service Evo population",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Re-check the retrofit bulletin effectivity against the proposed population",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Sweep the navigation manual content for the earlier display format",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Interview the avionics standards office on the operational approval route",
+          "method": "SME_INTERVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-155126",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "263"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The new performance capability depends on the containment monitoring output of the multi-mode receiver installation. Every aircraft in the target population already carries it, so the dependency is satisfied, but it has to be declared or a later effectivity extension will silently break it.",
+          "resolution": "Record the receiver installation as a post-mod applicability condition on the retrofit bulletin."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "ZPH-22-1145",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2280112713549",
+              "D2280114354601",
+              "D2280006212108"
+            ],
+            "shared_fins": [
+              "2854CE2",
+              "4581CC",
+              "49CE"
+            ],
+            "shared_zones": [
+              "151",
+              "263"
+            ],
+            "shared_ata_6d": [
+              "22-80-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The existing bulletin was written for the production cut-in population only. Re-using it for the wider in-service population would leave operators reading an effectivity statement that excludes the very aircraft the retrofit is aimed at.",
+          "resolution": "Revise the bulletin effectivity and re-issue it rather than raising a second bulletin on the same standard."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-Z-34-50-11-810-805",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "263"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The fault-isolation procedure for a rejected surveillance broadcast reads the position source status from a display page whose layout changes with the new standard. On a converted aircraft the stated indication no longer appears where the procedure says it does.",
+          "resolution": "Raise a publication change request adding pre and post standard indications to the procedure."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-Z-34-50-11-700-020-A",
+          "doc_type": "AMM",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "263"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The receiver operational test result criteria are written against the earlier format. The test is called up by the retrofit bulletin itself as the closing check, so the two changes have to reach the operator in the same revision batch or the closing check cannot be passed.",
+          "resolution": "Synchronise the manual revision batch with the bulletin re-issue date."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-34-1207",
+          "doc_type": "SB",
+          "reason": "Sits in the navigation chapter the search covered and shares the surveillance broadcast vocabulary almost word for word, but it is the receiver installation bulletin. It shares no part number, no software load and no zone with the computer standard, and every aircraft in the target population has already embodied it."
+        }
+      ],
+      "conclusion": "Closed with a positive position. The dependency on the receiver installation is satisfied across the whole target population, and the three remaining items are publication actions that can be scheduled without holding the retrofit.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

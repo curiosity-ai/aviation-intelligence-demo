@@ -1,0 +1,194 @@
+[
+  {
+    "doc_id": "TTN-45-1002",
+    "doc_type": "SB",
+    "title": "Central Maintenance System — Install the Enlarged Fault History Store and the Revised Correlation Rules",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-08-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Central Maintenance System — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00105",
+          "to": "T00232"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-03-06",
+      "released": "2025-08-19",
+      "revised": null,
+      "effective": "2025-09-29"
+    },
+    "abstract": "Replaces the central maintenance computer processing card and interface unit, taking the fault history from ten legs to sixty and applying correlation rules that suppress the downstream noise from a single upstream failure.",
+    "sections": {
+      "planning_reason": "Line engineers routinely see twenty or more maintenance messages from a single upstream event, because the correlation rules were written when the message population was much smaller and do not recognise the newer avionics message set. The ten leg history is not enough to investigate a condition that appears once a week, and three operators reported being unable to correlate a repeat crew report with any recorded data. The consequence is unnecessary component removals, which cost more per event than the modification costs per aircraft.",
+      "description": "This Service Bulletin gives the instructions to replace the processing card and the interface unit in the central maintenance computer, and to load the revised built-in test software and fault database. The new card carries four times the non-volatile storage, giving a sixty leg history, and the fault database carries correlation rules that suppress a message when a declared upstream cause is present in the same processing cycle. Suppressed messages are retained in the history rather than discarded. The maintenance terminal presentation is unchanged so that no retraining is required.",
+      "accomplishment_summary": "Download and archive the existing fault history before starting, because the card change clears it. Remove electrical power and open the avionics compartment. Remove the central maintenance computer. Replace the processing card and the interface unit, observing the antistatic precautions. Reinstall the computer and re-terminate the rack connections. Restore power and load the built-in test software and the fault database in that order, using AMM-T-45-20-11-700-002-A. Confirm both part numbers on the maintenance terminal. Do the central maintenance system functional test and confirm that a deliberately induced upstream fault produces a correlated message set rather than a full list. Confirm that the history depth reports sixty legs. Close the compartment. Record the modification and update the loadable software list.",
+      "effectivity_note": "Applicable to TITAN-88 aircraft in the MSN T00105 to T00232 range. Earlier aircraft carry a computer rack that does not accept the new card without a further change and are not covered. Aircraft delivered from MSN T00235 have the standard from the production line.",
+      "material_note": "Kit K4520-1002-01 covers one aircraft and includes the software media. The processing card is a vendor item with a twenty-two week lead time. The removed card is returned to the vendor for credit. Operators should archive the fault history before embodiment; there is no way to migrate it."
+    },
+    "entities": {
+      "part_numbers": [
+        "KES685215-32",
+        "VA700112-90"
+      ],
+      "fins": [
+        "3971TM",
+        "6TN4"
+      ],
+      "drawings": [
+        "D45201201098"
+      ],
+      "software": [
+        "LA2R9D6C382",
+        "LE2R7E8FEA4"
+      ],
+      "zones": [
+        "225",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00235"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147120",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-T-45-20-11-700-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "central maintenance computer",
+      "fault history",
+      "correlation",
+      "processing card",
+      "message suppression"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-45-1002",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "DESIRABLE",
+      "compliance_time": "At the operator's convenience, at any scheduled avionics compartment access.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-147120",
+      "manpower": {
+        "elapsed_time_hours": 6,
+        "manhours": 9,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K4520-1002-01",
+        "kit_available_from": "2025-11-10",
+        "parts_required": [
+          {
+            "part_number": "VA700112-90",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "KES685215-32",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "VA700112-90",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Antistatic bag"
+        ],
+        "tooling": [
+          "Antistatic wrist strap and mat",
+          "Portable data loader",
+          "Maintenance terminal"
+        ]
+      },
+      "weight_change_kg": 0.2,
+      "accomplishment_steps": 11,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2025-08-19",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "doc_id": "MOD-158190",
+    "doc_type": "MOD",
+    "title": "Transformer Rectifier Unit Uprating and Direct Current Feeder Rerouting for Increased Cabin Load",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-07-29",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-30",
+      "ata_6d": "24-30-11",
+      "title": "DC Generation — Transformer Rectifier Unit"
+    },
+    "secondary_ata": [
+      "24-60",
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-07-29",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Higher rated transformer rectifier units and a re-routed direct current feeder, launched to recover the electrical margin that successive cabin equipment additions have consumed on Evo aircraft.",
+    "sections": {
+      "reason": "An electrical margin study across the Evo fleet found that the installed direct current capacity has been progressively absorbed by cabin equipment added since entry into service, and that on the densest layouts the calculated worst-case load leaves less than eight per cent margin against the rating of the units. Three customers have had a proposed cabin equipment fitment refused on load grounds in the last two years. There is no in-service failure history; the driver is that the aircraft can no longer accept the equipment customers want to buy.",
+      "description": "The transformer rectifier units are replaced by items of higher continuous rating in the same envelope, and the feeder from the unit to the essential bus is re-routed with a shorter run and a larger conductor. The harness D2430112027785 is replaced, the upper cable assembly D2430112037168 is renewed to the larger gauge, and the superseded backshell D2430118219105 is deleted in favour of the vendor item PE30449-35 at the unit connector. Titanium bolts AGS708559-04 secure the enlarged terminal lugs. The unit contactor FIN 7GX is uprated in place, the generation harness FIN 28PC is re-terminated, and the lower cable assembly FIN 846GX is deleted where the shorter run makes it redundant. Work is done in zones 274, 244 and 222 with the cabin floor panels lifted along the feeder run. Drawings D24300067492 issue A and D24301260705 issue F carry the feeder routing and the terminal detail.",
+      "effects": "Estimated mass increase of 21 kg per aircraft, principally in the forward half, with a centre-of-gravity shift of 0.08 per cent MAC forward. Continuous direct current capacity increases by 30 per cent and the worst-case margin returns to about 28 per cent. The uprated unit is interchangeable with the current item as a line replaceable unit, but the feeder and the terminal lugs are not, so an aircraft cannot be part converted. The electrical load analysis and the load shed logic tables must be re-issued at aircraft level. WDM content for ATA 92-31 and AMM removal and installation content for ATA 24-30 will require re-issue.",
+      "open_points": "Pre-analysis must establish which cabin equipment programmes are already counting on this margin, whether the feeder can be re-routed without lifting the cabin floor along its full length, and whether the load shed tables can be revised without a change to the generator control unit software."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2430112027785",
+        "D2430112037168",
+        "D2430118219105",
+        "AGS708559-04",
+        "PE30449-35"
+      ],
+      "fins": [
+        "7GX",
+        "28PC",
+        "846GX"
+      ],
+      "drawings": [
+        "D24300067492",
+        "D24301260705"
+      ],
+      "software": [],
+      "zones": [
+        "274",
+        "244",
+        "222"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [],
+    "keywords": [
+      "transformer rectifier unit",
+      "direct current feeder",
+      "electrical margin",
+      "load shed",
+      "terminal lug"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Electrical Systems Design"
+    },
+    "type_data": {
+      "mod_number": 158190,
+      "mod_class": "MAJOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1351",
+          "CS 25.1353",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 21.0,
+      "balance_impact": "Forward mass addition, CG shift 0.08 % MAC forward",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "PE30449-35",
+        "AGS708559-04"
+      ],
+      "parts_removed": [
+        "D2430118219105"
+      ],
+      "parts_modified": [
+        "D2430112027785",
+        "D2430112037168"
+      ],
+      "fins_affected": [
+        "7GX",
+        "28PC",
+        "846GX"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 240,
+      "estimated_cost_keur": 1580,
+      "lead_time_weeks": 42,
+      "production_impact": "Production cut-in planned once the load shed tables are approved",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

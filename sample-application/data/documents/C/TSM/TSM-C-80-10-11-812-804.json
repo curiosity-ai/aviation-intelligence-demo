@@ -1,0 +1,345 @@
+[
+  {
+    "doc_id": "TSM-C-80-10-11-812-804",
+    "doc_type": "TSM",
+    "title": "Air Starter Does Not Cut Out at the Scheduled Speed",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-10-23",
+      "reason": "Original issue of the isolation procedure for an air starter that does not cut out at the scheduled speed.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "80-10-12",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-08-06",
+      "released": "2018-10-23",
+      "revised": "2018-10-23",
+      "effective": "2018-11-20"
+    },
+    "abstract": "Fault isolation for an air starter that does not disengage at the scheduled speed, separating a start valve fault from a clutch fault and taking account of the three attempts already permitted.",
+    "sections": {
+      "purpose": "To isolate the cause of an air starter that does not cut out at the scheduled speed, and to establish whether the clutch has been damaged by the event.",
+      "fault_description": "The crew or the technician reports that the starter stays engaged past the scheduled cut-out speed, or that the start valve indication remains open after cut-out is commanded. This is a time-critical symptom because a starter driven above its rated speed will fail, and because every abandoned attempt consumes one of the three permitted duty cycles.",
+      "isolation_procedure": "Establish and record how many start attempts have been made since the last full cooling period, and stop if three have been made. Read the fault history and note whether the start valve reported an open state after cut-out was commanded. If it did, the fault is at the start valve rather than at the starter: inspect the valve for a jammed butterfly, check the manual override position and confirm that the clamp ZE172964-77 has not been overtightened onto the valve body, which is a known cause of a slow closing valve. If the valve closed correctly, the clutch is suspect and the starter must be removed to inspect the clutch witness mark. Do a dry motoring run and record the peak speed, the time to cut-out and the residual speed, and compare with the acceptance table. Do the installation task as the confirmation task after any starter replacement.",
+      "dispatch_note": "Dispatch is not permitted with a starter that does not cut out. Dispatch is permitted with the auxiliary power unit start capability inoperative on one engine for one sector where a cross-bleed start can be used, provided fewer than three attempts have been made since the last cooling period and the crew is briefed."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL790179-18",
+        "PE187919-09",
+        "ASDE222426-98",
+        "ZE172964-77",
+        "D8010129326094"
+      ],
+      "fins": [
+        "93ES",
+        "5173ES",
+        "517ES",
+        "820ES"
+      ],
+      "drawings": [
+        "D80100037770",
+        "D80100082042"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "444",
+        "413"
+      ],
+      "figures": [
+        "FIG-80-10-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-80-10-11-400-022-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-80-10-11-000-022-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "air starter",
+      "cut-out speed",
+      "start valve",
+      "clutch",
+      "duty cycle"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "80-10-11-812-804",
+      "fault_symptom": "Starter remains engaged past the scheduled cut-out speed, or start valve indication remains open after cut-out is commanded",
+      "fault_codes": [
+        "801011007",
+        "801011018"
+      ],
+      "warning_messages": [
+        "ENG START VALVE"
+      ],
+      "affected_fins": [
+        "93ES",
+        "517ES",
+        "820ES"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Start valve slow to close or jammed part open",
+          "probability_pct": 35,
+          "fin": "517ES"
+        },
+        {
+          "cause": "Start valve clamp overtightened onto the valve body",
+          "probability_pct": 25,
+          "fin": "820ES"
+        },
+        {
+          "cause": "Clutch re-engaged above the permitted residual speed",
+          "probability_pct": 24,
+          "fin": "93ES"
+        },
+        {
+          "cause": "Cut-out speed signal degraded",
+          "probability_pct": 16,
+          "fin": "5173ES"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-C-80-10-11-400-022-A",
+      "dispatch": {
+        "mel_item": "80-10-01A",
+        "dispatchable": false,
+        "dispatch_condition": "Not dispatchable with a starter that does not cut out; one sector relief for a cross-bleed start only, with the duty cycle unconsumed"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-C-80-10-11-812-804",
+    "doc_type": "TSM",
+    "title": "Air Starter Does Not Cut Out at the Scheduled Speed",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-03",
+      "reason": "Duty cycle figures given for both clutch standards with the mixed aircraft rule, and the witness mark read through the shroud where the aperture allows it.",
+      "raised_by_pawo": "PAWO-111356-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "80-10-12",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-08-06",
+      "released": "2018-10-23",
+      "revised": "2026-08-03",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Fault isolation for an air starter that does not disengage at the scheduled speed, separating a start valve fault from a clutch fault and taking account of the duty cycle already used.",
+    "sections": {
+      "purpose": "To isolate the cause of an air starter that does not cut out at the scheduled speed, and to establish whether the clutch has been damaged by the event.",
+      "fault_description": "The crew or the technician reports that the starter stays engaged past the scheduled cut-out speed, or that the start valve indication remains open after cut-out is commanded. This is a time-critical symptom because a starter driven above its rated speed will fail, and because every abandoned attempt consumes one of the permitted duty cycles. On the delivered starter three attempts are permitted; on the revised clutch standard five are, and only when both engines carry it. Establish which standard is fitted before the aircraft is dispatched on a duty cycle it is not entitled to.",
+      "isolation_procedure": "Establish and record how many start attempts have been made since the last full cooling period, and stop if the permitted number has been reached. Read the fault history and note whether the start valve reported an open state after cut-out was commanded. If it did, the fault is at the start valve rather than at the starter: inspect the valve for a jammed butterfly, check the manual override position and confirm that the clamp ZE172964-77 has not been overtightened onto the valve body, which is a known cause of a slow closing valve. If the valve closed correctly, the clutch is suspect. Read the clutch witness mark through the shroud aperture where the larger aperture is fitted; a witness mark past the second line means the clutch has been re-engaged above the permitted residual speed and the starter must be removed. Where the smaller aperture is fitted the mark cannot be read and the starter must be removed to inspect it. Do a dry motoring run and record the peak speed, the time to cut-out and the residual speed, and compare with the acceptance table for the standard fitted. Do the installation task as the confirmation task after any starter replacement.",
+      "dispatch_note": "Dispatch is not permitted with a starter that does not cut out. Dispatch is permitted with the auxiliary power unit start capability inoperative on one engine for one sector where a cross-bleed start can be used, provided the duty cycle for the standard fitted has not been consumed and the crew is briefed. Establish the standard from the shroud aperture at both engines and not from one: the permitted count is three on the delivered standard and five on the revised one, and an aircraft with one of each is entitled to three. Dispatching against five on a mixed aircraft is the error this procedure exists to prevent."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL790179-18",
+        "PE187919-09",
+        "ASDE222426-98",
+        "ZE172964-77",
+        "D8010129326094"
+      ],
+      "fins": [
+        "93ES",
+        "5173ES",
+        "517ES",
+        "820ES"
+      ],
+      "drawings": [
+        "D80100037770",
+        "D80100082042"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "444",
+        "413"
+      ],
+      "figures": [
+        "FIG-80-10-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-80-10-11-400-022-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-80-10-11-000-022-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111356",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "air starter",
+      "cut-out speed",
+      "start valve",
+      "clutch witness mark",
+      "duty cycle"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "80-10-11-812-804",
+      "fault_symptom": "Starter remains engaged past the scheduled cut-out speed, or start valve indication remains open after cut-out is commanded",
+      "fault_codes": [
+        "801011007",
+        "801011018"
+      ],
+      "warning_messages": [
+        "ENG START VALVE"
+      ],
+      "affected_fins": [
+        "93ES",
+        "517ES",
+        "820ES"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Start valve slow to close or jammed part open",
+          "probability_pct": 35,
+          "fin": "517ES"
+        },
+        {
+          "cause": "Start valve clamp overtightened onto the valve body",
+          "probability_pct": 25,
+          "fin": "820ES"
+        },
+        {
+          "cause": "Clutch re-engaged above the permitted residual speed",
+          "probability_pct": 24,
+          "fin": "93ES"
+        },
+        {
+          "cause": "Cut-out speed signal degraded",
+          "probability_pct": 16,
+          "fin": "5173ES"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-C-80-10-11-400-022-A",
+      "dispatch": {
+        "mel_item": "80-10-01A",
+        "dispatchable": false,
+        "dispatch_condition": "Not dispatchable with a starter that does not cut out; one sector relief for a cross-bleed start only, with the duty cycle unconsumed"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

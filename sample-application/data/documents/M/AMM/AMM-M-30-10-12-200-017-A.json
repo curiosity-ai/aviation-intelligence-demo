@@ -1,0 +1,342 @@
+[
+  {
+    "doc_id": "AMM-M-30-10-12-200-017-A",
+    "doc_type": "AMM",
+    "title": "Position and Leak Check of the Slat Piccolo Ducts",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-07-29",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-12",
+      "title": "Airfoil Anti-Ice — Slat Piccolo Ducts"
+    },
+    "secondary_ata": [
+      "57-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-01-14",
+      "released": "2017-07-29",
+      "revised": "2017-07-29",
+      "effective": "2017-08-26"
+    },
+    "abstract": "Position and leak check of the slat piccolo ducts in the fixed leading edge, measuring the duct displacement at each support and doing a pressure decay test on the duct run.",
+    "sections": {
+      "purpose": "This task gives the position check of the slat piccolo ducts at each support bracket and the pressure decay leak check of the duct run in the fixed leading edge.",
+      "job_setup_note": "Do this task with the ducts cold. A hot duct is displaced by thermal growth and the position reading will not compare with the recorded nominal. The slats must be extended and locked at the maintenance position and the anti-ice system must be isolated at the maintenance panel. Record the duct position at every bracket even where it is nominal, because the fleet trend is built from the whole set and not only from the findings. The nominal positions are in the table in the illustration and are measured from the datum mark on the sliding bracket flange.",
+      "procedure": "1. Make sure that the ducts are cold and that the anti-ice system is isolated. 2. Extend the slats to the maintenance position and install the ground lock. WARNING: DO NOT WORK IN THE LEADING EDGE WITHOUT THE SLAT GROUND LOCK INSTALLED. THE SLAT CAN RETRACT AND TRAP A LIMB. 3. Remove the fixed leading edge panels in zones 551, 553 and 512, one bay at a time. 4. Clean the duct and the support brackets locally. 5. Measure the duct position at each support bracket against the datum mark and record it. CAUTION: DO NOT MOVE THE DUCT TO TAKE THE MEASUREMENT. THE READING IS THE AS-FOUND POSITION AND IS LOST IF THE DUCT IS DISTURBED. 6. Do a detailed visual inspection of each bracket foot for cracking. 7. Do a detailed visual inspection of the non-return valve D3010128666060 and of the heat exchanger D3010120571398 mounting. 8. Check the duct hose 203WX for chafing at the bracket. 9. Connect the leak test rig and do the pressure decay test on the duct run. 10. Compare the decay rate with the limit in the illustration. 11. Install the fixed leading edge panels.",
+      "close_out": "Record every duct position reading, the bracket condition and the pressure decay rate on the aircraft work card. Where a duct has moved more than the limit, report it before the aircraft is released. Remove the slat ground lock, restore the anti-ice system and do a wing anti-ice functional test."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010128666060",
+        "D3010120571398",
+        "AGS212130-5E"
+      ],
+      "fins": [
+        "203WX"
+      ],
+      "drawings": [
+        "D30101276854"
+      ],
+      "software": [],
+      "zones": [
+        "551",
+        "553",
+        "512"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163208",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "piccolo duct",
+      "position check",
+      "pressure decay",
+      "leading edge",
+      "bracket cracking"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Wendmark",
+      "role": "Ice Protection Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "30-10-12-200-017-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. One position table applies and it is given in the illustration.",
+      "manhours": 18.0,
+      "personnel": 2,
+      "elapsed_time_hours": 11.0,
+      "access": {
+        "zones": [
+          "551",
+          "553",
+          "512"
+        ],
+        "access_panels": [
+          "551CR",
+          "553AR",
+          "512AR"
+        ],
+        "doors": [
+          "Fixed leading edge panel"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Install the slat ground lock before working in the leading edge.",
+          "Isolate the wing anti-ice system at the maintenance panel.",
+          "Do this task with the ducts cold."
+        ],
+        "tooling": [
+          {
+            "reference": "98D30101-190",
+            "description": "Duct alignment fixture"
+          },
+          {
+            "reference": "98D3610-021",
+            "description": "Leak test rig"
+          },
+          {
+            "reference": "DG-025",
+            "description": "Depth gauge 0-25 mm"
+          }
+        ],
+        "consumables": [
+          "Cleaning agent, aqueous, general",
+          "High temperature anti-seize compound"
+        ],
+        "expendables": [
+          {
+            "part_number": "AGS212130-5E",
+            "qty": 32
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-M-36-10-11-200-019-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-M-30-10-12-200-017-A",
+    "doc_type": "AMM",
+    "title": "Position and Leak Check of the Slat Piccolo Ducts",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-13",
+      "reason": "Second position table added for the bellows-compensated supports, whose datum and acceptance figures are not those of the sliding bracket geometry.",
+      "raised_by_pawo": "PAWO-163208-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-12",
+      "title": "Airfoil Anti-Ice — Slat Piccolo Ducts"
+    },
+    "secondary_ata": [
+      "57-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-01-14",
+      "released": "2017-07-29",
+      "revised": "2026-07-13",
+      "effective": "2026-08-05"
+    },
+    "abstract": "Position and leak check of the slat piccolo ducts in the fixed leading edge, measuring the duct displacement or the bellows free length at each support according to the support standard, and doing a pressure decay test on the duct run.",
+    "sections": {
+      "purpose": "This task gives the position check of the slat piccolo ducts at each support bracket and the pressure decay leak check of the duct run in the fixed leading edge.",
+      "job_setup_note": "Do this task with the ducts cold. A hot duct is displaced by thermal growth and the reading will not compare with the recorded nominal. Establish the support standard before you start and take the right table with you. Table 1 applies to the sliding bracket: the reading is the duct displacement from the datum mark on the bracket flange, and the acceptance limit is a displacement figure. Table 2 applies to the bellows-compensated fixed foot of MOD-163208: there is no sliding datum mark and no displacement to measure, because the duct is clamped and the growth is taken in the bellows; the reading is the bellows free length between the two collars and the acceptance limit is a length band. The table 1 figures do not correspond to anything on a retrofitted wing. The slats must be extended and locked at the maintenance position and the anti-ice system must be isolated at the maintenance panel. Record the reading at every bracket even where it is nominal, because the fleet trend is built from the whole set and not only from the findings.",
+      "procedure": "1. Make sure that the ducts are cold and that the anti-ice system is isolated. 2. Extend the slats to the maintenance position and install the ground lock. WARNING: DO NOT WORK IN THE LEADING EDGE WITHOUT THE SLAT GROUND LOCK INSTALLED. THE SLAT CAN RETRACT AND TRAP A LIMB. 3. Remove the fixed leading edge panels in zones 551, 553 and 512, one bay at a time. 4. Clean the duct and the support brackets locally. 5. On a pre MOD-163208 aircraft, measure the duct position at each sliding bracket against the datum mark and record it against table 1. On a post MOD-163208 aircraft, measure the bellows free length between the collars at each fixed foot and record it against table 2. CAUTION: DO NOT MOVE THE DUCT TO TAKE THE MEASUREMENT. THE READING IS THE AS-FOUND CONDITION AND IS LOST IF THE DUCT IS DISTURBED. 6. Do a detailed visual inspection of each bracket foot for cracking, and on a post MOD-163208 aircraft of the bellows convolutions and the guard for impact damage. 7. Do a detailed visual inspection of the non-return valve D3010128666060 and of the heat exchanger D3010120571398 mounting. 8. Check the duct hose 203WX for chafing at the bracket. 9. Connect the leak test rig and do the pressure decay test on the duct run. 10. Compare the decay rate with the limit in the illustration. 11. Install the fixed leading edge panels.",
+      "close_out": "Record every reading against the table used, the bracket or bellows condition and the pressure decay rate on the aircraft work card. Where a duct has moved more than the table 1 limit, or a bellows free length is outside the table 2 band, report it before the aircraft is released. Remove the slat ground lock, restore the anti-ice system and do a wing anti-ice functional test."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010128666060",
+        "D3010120571398",
+        "AGS212130-5E"
+      ],
+      "fins": [
+        "203WX"
+      ],
+      "drawings": [
+        "D30101276854"
+      ],
+      "software": [],
+      "zones": [
+        "551",
+        "553",
+        "512"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163208",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "piccolo duct",
+      "position table",
+      "bellows free length",
+      "pressure decay",
+      "leading edge"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Wendmark",
+      "role": "Ice Protection Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "30-10-12-200-017-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "Pre MOD-163208 aircraft: duct displacement measured at every sliding bracket against table 1, at every heavy visit. Post MOD-163208 aircraft: no displacement measurement, bellows free length measured against table 2 and the leak check done as before.",
+      "manhours": 18.0,
+      "personnel": 2,
+      "elapsed_time_hours": 11.0,
+      "access": {
+        "zones": [
+          "551",
+          "553",
+          "512"
+        ],
+        "access_panels": [
+          "551CR",
+          "553AR",
+          "512AR"
+        ],
+        "doors": [
+          "Fixed leading edge panel"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Install the slat ground lock before working in the leading edge.",
+          "Isolate the wing anti-ice system at the maintenance panel.",
+          "Do this task with the ducts cold."
+        ],
+        "tooling": [
+          {
+            "reference": "98D30101-190",
+            "description": "Duct alignment fixture"
+          },
+          {
+            "reference": "98D3610-021",
+            "description": "Leak test rig"
+          },
+          {
+            "reference": "DG-025",
+            "description": "Depth gauge 0-25 mm"
+          }
+        ],
+        "consumables": [
+          "Cleaning agent, aqueous, general",
+          "High temperature anti-seize compound"
+        ],
+        "expendables": [
+          {
+            "part_number": "AGS212130-5E",
+            "qty": 32
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-M-36-10-11-200-019-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

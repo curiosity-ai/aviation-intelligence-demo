@@ -1,0 +1,374 @@
+[
+  {
+    "doc_id": "PAWO-138870-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Broadband Cabin Connectivity Crown Installation, Evo Variants",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-25",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-30",
+      "ata_6d": "44-30-11",
+      "title": "External Communication — Onboard Connectivity Server"
+    },
+    "secondary_ata": [
+      "53-31",
+      "44-10",
+      "92-41"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7000"
+      ],
+      "operators": [
+        "CGA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-25",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the crown-mounted broadband connectivity installation on the Evo variants, concentrating on the crown structure already occupied by the navigation aerial and on the equipment competing for the same rack and bus capacity.",
+    "sections": {
+      "objective": "Establish whether the connectivity adapter plate and the navigation aerial pad can be substantiated as a single crown structure, confirm what the displacement of the navigation transceiver does to the released navigation standard and its retrofit vehicle, and identify the equipment already committed to the same rack space and electrical bus.",
+      "scope_note": "The search covers ATA 44-30 as the primary chapter and ATA 53-31 for the crown structure, because the adapter plate is a structural item on a pressurised shell and is the reason this pre-analysis exists at all. ATA 34-50 was added after the first pass when the navigation transceiver appeared in the entity results. ATA 92-41 wiring was searched and returned nothing of consequence, because the coaxial runs follow an existing route. Cabin furnishing chapters were excluded: no seat, monument or lining item is removed.",
+      "method_note": "Entity linking was seeded from the five part numbers, the three FIN positions, the two software loads and the three zones. The navigation transceiver is the pivot: it appears in the candidate entity list because the installation displaces it, and every navigation finding follows from that single shared part number rather than from any shared wording. Semantic similarity was run over titles, abstracts and reason-for-change text and returned one item that entity linking did not, an unrelated recorder installation competing for rack volume, which is the kind of result only the similarity leg can produce.",
+      "findings_summary": "Five items are confirmed and one is blocking. The blocking item is structural rather than avionic: the adapter plate footprint overlaps the reinforced pad installed for the navigation aerial between the same frames, and the two cannot be substantiated sequentially because each assumes the shell around it is unmodified. The candidate already declares the navigation modification as a post-mod condition and carries a concurrency reference, but the concurrency is currently expressed as a sequencing note rather than as a single structural substantiation, which is not the same thing. The three consequential items are all downstream of the same displacement: the parts figure shows the transceiver at one crown position, the retrofit bulletin for the navigation standard installs it there, and the installation task torques it there. All three become wrong on an aircraft that takes the connectivity installation. The fifth item came only from similarity: a recorder installation launched for the same fleet needs a deeper rack in an adjacent bay, and the two have never been assessed against each other for volume or for cooling.",
+      "next_steps": "Ask the crown structures owner for a single combined substantiation of the adapter plate and the navigation pad rather than two sequential ones. Re-issue the navigation parts figure, retrofit bulletin and installation task with a connectivity-standard variant. Model the rack volume and cooling against the recorder installation before either design is frozen. Confirm the galley load-shed constraint with the operator, because the answer decides whether the electrical case closes without a further change."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4430115773572",
+        "D4430003711226",
+        "D3450007115686",
+        "INDE528543-55"
+      ],
+      "fins": [
+        "61RM",
+        "6RK",
+        "5RK"
+      ],
+      "drawings": [
+        "D44300045182"
+      ],
+      "software": [
+        "LB9L26864CA",
+        "LH1L158FBA9"
+      ],
+      "zones": [
+        "293",
+        "971",
+        "974"
+      ],
+      "figures": [
+        "FIG-34-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-138870",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-260331",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-134210",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-139720",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "crown adapter plate",
+      "connectivity",
+      "aerial displacement",
+      "rack volume"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-138870-01",
+      "subject_mod": "MOD-138870",
+      "source_io": "IO-S-260331",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-03-25",
+      "due_date": "2026-07-10",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ELSC",
+          "ESZS"
+        ],
+        "estimated_manhours": 130,
+        "spent_manhours": 44
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-38",
+          "SOLANO-39"
+        ],
+        "ata_2d": [
+          "44",
+          "34",
+          "53",
+          "92"
+        ],
+        "ata_4d": [
+          "44-30",
+          "44-10",
+          "34-50",
+          "53-31",
+          "92-41"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "S00131",
+          "to": "S01918"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4430115773572",
+            "D4430003711226",
+            "D3450007115686",
+            "INDE528543-55"
+          ],
+          "fins": [
+            "61RM",
+            "6RK",
+            "5RK"
+          ],
+          "drawings": [
+            "D44300045182"
+          ],
+          "zones": [
+            "293",
+            "971",
+            "974"
+          ],
+          "software": [
+            "LB9L26864CA",
+            "LH1L158FBA9"
+          ]
+        },
+        "similarity_seeds": [
+          "low profile fuselage mounted antenna on a machined crown adapter plate",
+          "cabin equipment installed in an existing overhead rack without removing revenue seats"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Assess the crown adapter plate against the navigation aerial pad",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Trace every document that places the navigation transceiver",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Model rack volume and cooling against other launched installations",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Confirm the galley load-shed constraint with the operator",
+          "method": "SME_INTERVIEW",
+          "owner": "EVAA",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-134210",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3450007115686"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "293"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The navigation modification installs a reinforced crown pad between frames 44 and 48 and puts the transceiver on it. The connectivity installation puts a machined adapter plate on the same crown between the same frames and displaces the transceiver 700 mm aft. Each substantiation assumes the shell around its own pad is unmodified, so the two cannot be assessed one after the other; the combination has to be one structural case. The candidate declares the navigation modification as a post-mod condition, which fixes the sequence but not the substantiation.",
+          "resolution": "Ask the crown structures owner for a single combined substantiation covering both pads and the displaced coaxial run, and upgrade the sequencing note to a concurrency requirement on both documents."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-S-34-50-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3450007115686"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "293"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Reached by traversal from the shared transceiver part number to every document that places it."
+          },
+          "rationale": "The figure note says explicitly that the transceiver is common to both aerial positions and that only the pad and the coaxial run differ, with the pad excluded because it is installed to a structural drawing. The connectivity installation creates a third position with a third coaxial length, and the note as written cannot express it.",
+          "resolution": "Re-issue the figure with the connectivity position as a further effectivity and a revised note that names all three positions and their coaxial assemblies."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SLN-34-1041",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3450007115686"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "293"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The navigation retrofit bulletin installs the reinforced pad and the transceiver on it, and its effectivity covers every twin-engine aircraft below the production cut-in, including Evo aircraft that will take the connectivity installation. An operator that does both in the wrong order installs a pad, then cuts an adapter plate footprint across it, and the bulletin gives no warning.",
+          "resolution": "Add an exclusion to the bulletin effectivity for aircraft scheduled for the connectivity installation, and state the required order in both documents."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-S-34-50-11-400-020-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3450007115686"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "293"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Returned by both legs: the transceiver part number matches and the task text about crown access, coaxial torque and insertion loss is close to the candidate work content."
+          },
+          "rationale": "The installation task carries the pad sealant cure caution and the coaxial torque values for the navigation pad position. On a connectivity aircraft the transceiver sits 700 mm aft on a different structure with a different coaxial length, so the insertion loss acceptance value changes and the pad step does not apply.",
+          "resolution": "Add a connectivity-standard variant to the task with its own coaxial length, insertion loss acceptance value and access description."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-139720",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by similarity alone on the shared framing of a launched equipment installation for the same Evo fleet that needs rack volume and cooling. No part number, FIN, drawing, software load or zone is shared, and the two documents have no technical vocabulary in common."
+          },
+          "rationale": "The recorder installation replaces its rack with a deeper envelope and improved cooling in an adjacent bay, and its own open points already ask whether it conflicts with connectivity equipment. Neither team has modelled the combined rack volume or the combined cooling demand, and both are committed to the same delivery window on the same aircraft.",
+          "resolution": "Run a combined rack volume and cooling assessment for the two installations before either design is frozen, and record the result on both documents."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-136140",
+          "doc_type": "MOD",
+          "reason": "Same Evo fleet, same cabin, and it ranks high because both documents describe equipment addressed on the cabin bus and commanded from the cabin attendant panel. It is a ceiling lighting change in the cabin void between frames well aft of the crown installation, shares no part number, FIN, software load or zone with the candidate, and its electrical load sits on a different bus."
+        },
+        {
+          "doc_id": "MOD-138990",
+          "doc_type": "MOD",
+          "reason": "Ranks in the top five on similarity because both describe a bonded external addition to the aircraft with a quantified performance claim and a drag or acoustic argument. It is on the engine fan cowl, applies to the SOLANO-39 only and not to the SOLANO-38, and shares no zone, part number or FIN with the crown installation."
+        }
+      ],
+      "conclusion": "Not yet issued. One blocking structural item needs a combined substantiation before the design review; the three navigation documentation items are understood and can be packaged together.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

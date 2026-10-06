@@ -1,0 +1,385 @@
+[
+  {
+    "doc_id": "SLN-42-1009",
+    "doc_type": "SB",
+    "title": "Integrated Modular Avionics — Core Processing Module Replacement, Standard 2",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-04-23",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00029",
+          "to": "S00801"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "CKP",
+        "ZCT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2017-11-27",
+      "released": "2018-04-23",
+      "revised": "2018-04-23",
+      "effective": "2018-05-14"
+    },
+    "abstract": "Replacement of the six unsupported core processing modules by interface units on the same connector and cooling path, with renewed rack guide rails, so that the delivered avionics standard can be maintained beyond the last-time-buy.",
+    "sections": {
+      "planning_reason": "The module family delivered on the early aircraft went out of supplier support in 2018 with no repair route and a last-time-buy covering about four years of attrition. Two hundred and twenty aircraft carried the standard. The replacement had to be transparent to every hosted function and had to fit the delivered rack, because changing the rack opens the avionics bay floor.",
+      "description": "This Service Bulletin replaces the delivered module in each of the six slots with an interface unit HE750421-36 that uses the same connector footprint and the same cooling path, so that no hosted function sees a change and no bay floor work is needed. The rack guide rails EN873313K4 are renewed at the same time because the delivered rails were found bent on aircraft that had been through several module changes. The captive rack screws LN727699-25 are replaced at every position. The backplane is not touched and the rack remains the delivered item, which is what keeps the work inside a normal C-check.",
+      "accomplishment_summary": "Put the aircraft on ground power and isolate the integrated modular avionics rack. CAUTION: THE MODULES ARE ELECTROSTATIC SENSITIVE. USE THE DISCHARGE MAT AND THE WRIST STRAP. Do AMM-S-42-10-12-000-043-A to remove the six delivered modules and record the position of each. Remove the rack guide rails and examine the backplane connectors for bent or recessed contacts. Install the renewed guide rails EN873313K4 and set the slot alignment with the extraction tool. Install the six interface units HE750421-36 one slot at a time, checking the insertion force at each. Secure every unit with the captive screws LN727699-25. Restore the cooling duct and confirm the flow at the rack outlet. Load the configuration file for the new modules from the maintenance terminal and do the integrated modular avionics self-test. Confirm that every hosted function reports serviceable and record the embodiment.",
+      "effectivity_note": "Applicable to SOLANO-30 and SOLANO-34 aircraft from MSN S00029 to MSN S00801 that carry the delivered core processing standard. Aircraft outside that range were built with a later module family and are not affected. The bulletin may be embodied one rack at a time.",
+      "material_note": "Kit K4210-1009-01 contains the six interface units, the guide rail set and the screw set for one rack. Lead time is twenty weeks. The removed modules have no repair route and are scrapped locally after the configuration record is updated; they are not returned to Aeralis and carry no exchange credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2"
+      ],
+      "drawings": [
+        "D42101237654"
+      ],
+      "software": [],
+      "zones": [
+        "162",
+        "166"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-133290",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-S-42-10-12-000-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "core processing",
+      "module replacement",
+      "interface unit",
+      "guide rail",
+      "last time buy"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-42-1009",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 60 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-133290",
+      "manpower": {
+        "elapsed_time_hours": 24,
+        "manhours": 32,
+        "personnel": 2,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K4210-1009-01",
+        "kit_available_from": "2018-09-10",
+        "parts_required": [
+          {
+            "part_number": "HE750421-36",
+            "qty": 6,
+            "uom": "EA"
+          },
+          {
+            "part_number": "LN727699-25",
+            "qty": 24,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Anti-static packaging",
+          "Contact cleaner, electrical"
+        ],
+        "tooling": [
+          "Electrostatic discharge mat",
+          "Module extraction tool 98D42101-072"
+        ]
+      },
+      "weight_change_kg": -2.8,
+      "accomplishment_steps": 8,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2018-04-23",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "SLN-42-1009",
+    "doc_type": "SB",
+    "title": "Integrated Modular Avionics — Core Processing Module Replacement, Standard 2",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-15",
+      "reason": "The bulletin is cancelled and the accomplishment instructions are replaced by the kit conversion and part-embodiment instructions.",
+      "raised_by_pawo": "PAWO-133290-01",
+      "raised_by_finding": "F03",
+      "finding_type": "SUPERSESSION"
+    },
+    "status": "CANCELLED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00029",
+          "to": "S00801"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "CKP",
+        "ZCT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2017-11-27",
+      "released": "2018-04-23",
+      "revised": "2026-06-15",
+      "effective": "2026-07-03"
+    },
+    "abstract": "Cancelled bulletin for the first core processing module replacement standard, withdrawn in favour of the backplane and cooling standard which is now the recommended entry point for every unmodified aircraft.",
+    "sections": {
+      "planning_reason": "The module family delivered on the early aircraft went out of supplier support in 2018 with no repair route and a last-time-buy covering about four years of attrition. Two hundred and twenty aircraft carried the standard. The replacement had to be transparent to every hosted function and had to fit the delivered rack, because changing the rack opens the avionics bay floor.",
+      "description": "The bulletin replaced the delivered module in each of the six slots with an interface unit using the same connector and the same cooling path, and renewed the rack guide rails. The backplane was not touched. It is cancelled because in-service data showed the delivered backplane reaching its qualified connector insertion count on aircraft that had been through several module changes, so fitting new modules into it is not a configuration Aeralis is prepared to release. The successor bulletin renews the backplane and the cooling path in the same visit and is now the only entry point for an unmodified aircraft.",
+      "accomplishment_summary": "This Service Bulletin is cancelled and must not be accomplished. Operators who have already embodied it need take no action: the configuration is valid and supported, and the aircraft may be brought to the later standard whenever convenient. Operators who have ordered kits should contact their Aeralis customer support representative, who will convert the order to the replacement bulletin at no charge. Operators part way through an embodiment should complete the work as written and then plan the later bulletin, since a partially modified rack is not an approved configuration. The accomplishment instructions are retained in this issue for reference only and are not to be used for new embodiments.",
+      "effectivity_note": "The effectivity is retained for record purposes only. It covered SOLANO-30 and SOLANO-34 aircraft from MSN S00029 to MSN S00801 at the delivered core processing standard. No aircraft may be modified under this Service Bulletin after the cancellation date.",
+      "material_note": "Kit K4210-1009-01 is withdrawn from sale. Kits held by operators may be returned for full credit or exchanged against the replacement kit. Interface units already installed remain supported and remain procurable as spares."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2"
+      ],
+      "drawings": [
+        "D42101237654"
+      ],
+      "software": [],
+      "zones": [
+        "162",
+        "166"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-133290",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "SLN-42-1016",
+        "doc_type": "SB",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "AMM-S-42-10-12-000-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cancelled bulletin",
+      "core processing",
+      "module replacement",
+      "last time buy",
+      "kit credit"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-42-1009",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "OPTIONAL",
+      "compliance_time": "Cancelled. This Service Bulletin must not be accomplished after 15 June 2026.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-133290",
+      "manpower": {
+        "elapsed_time_hours": 24,
+        "manhours": 32,
+        "personnel": 2,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K4210-1009-01",
+        "kit_available_from": "2018-09-10",
+        "parts_required": [
+          {
+            "part_number": "HE750421-36",
+            "qty": 6,
+            "uom": "EA"
+          },
+          {
+            "part_number": "LN727699-25",
+            "qty": 24,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Anti-static packaging",
+          "Contact cleaner, electrical"
+        ],
+        "tooling": [
+          "Electrostatic discharge mat",
+          "Module extraction tool 98D42101-072"
+        ]
+      },
+      "weight_change_kg": -2.8,
+      "accomplishment_steps": 8,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2018-04-23",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-06-15",
+          "reason": "Cancelled on issue of the backplane and cooling standard bulletin; kit orders converted at no charge and part-embodied aircraft instructed to complete and then plan the successor"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

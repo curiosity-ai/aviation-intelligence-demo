@@ -1,0 +1,332 @@
+[
+  {
+    "doc_id": "PAWO-157240-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Engine Electronic Control Unit Standard 9 Retrofit",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-08-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-20",
+      "ata_6d": "73-20-11",
+      "title": "Controlling — Engine Electronic Control Unit"
+    },
+    "secondary_ata": [
+      "73-20-12",
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-1226",
+        "VDK-1232",
+        "PYR-1127G",
+        "PYR-1133G"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-14",
+      "released": "2026-08-04",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the standard 9 control unit retrofit, opened to plan the campaign against the engine shop visit cycle, covering the provision coupling, the software load order and the recording that removals depend on.",
+    "sections": {
+      "objective": "The retrofit is available in two bulletins and the engine shop visit cycle is the natural vehicle for it. The round was opened to establish whether the provision and the unit can be separated in time without penalty, what the software load order actually requires, and whether the fleet gains anything before the units are fitted.",
+      "findings_summary": "Four items were confirmed and the campaign plan was handed to the powerplant fleet team, which is why the outcome is recorded as delegated. The provision bulletin can be embodied long before the unit and there is no penalty in leaving the existing unit on the new bracket, which makes it the right thing to do at the next cowl opening regardless of unit availability. The unit bulletin requires the operational load before the configuration load, and if that order is reversed the configuration table is not written to protected memory; the bulletin says so but the sequence is easy to lose in a shop environment. The trouble shooting procedure and the removal task both now open with the fault history download, which is the single change that will reduce the no fault found rate before any hardware moves. That is the finding worth acting on first.",
+      "next_steps": "Embody the provision at the next cowl opening across the fleet, independent of unit availability. Issue an operator communication about the software load order and about the fault history download, which delivers most of the benefit immediately. Hand the campaign plan to the powerplant fleet team."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7320110360398",
+        "INN739616-21",
+        "LN953956K3",
+        "AES641639-8C"
+      ],
+      "fins": [
+        "25EF",
+        "342EF",
+        "18EF"
+      ],
+      "drawings": [],
+      "software": [
+        "LE2NF49598E",
+        "LF5N800C79F"
+      ],
+      "zones": [
+        "433",
+        "412",
+        "483"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-157240",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "provision decoupling",
+      "software load order",
+      "fault history download",
+      "shop visit cycle"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-157240-01",
+      "subject_mod": "MOD-157240",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-08-04",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-04-14",
+      "due_date": "2026-07-31",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "EGAM"
+        ],
+        "estimated_manhours": 135,
+        "spent_manhours": 189
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "73",
+          "76"
+        ],
+        "ata_4d": [
+          "73-20",
+          "76-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D7320110360398",
+            "INN739616-21",
+            "AES641639-8C"
+          ],
+          "fins": [
+            "25EF",
+            "342EF",
+            "18EF"
+          ],
+          "drawings": [],
+          "zones": [
+            "433",
+            "412",
+            "483"
+          ],
+          "software": [
+            "LE2NF49598E",
+            "LF5N800C79F"
+          ]
+        },
+        "similarity_seeds": [
+          "fault recording window closing before a maintenance crew can capture an event",
+          "configuration table written to protected memory by a load order"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish whether the provision can be decoupled from the unit",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm the software load order requirement",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Identify what the fleet gains before the units are fitted",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-73-1010",
+          "doc_type": "SB",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D7320110360398"
+            ],
+            "shared_fins": [
+              "25EF"
+            ],
+            "shared_zones": [
+              "433"
+            ],
+            "shared_ata_6d": [
+              "73-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The unit bulletin requires the operational load before the configuration load. If the order is reversed the configuration table is not written to protected memory, and the sequence is easy to lose in a shop environment.",
+          "resolution": "Issue an operator communication about the load order and restate it in the shop instruction."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "ZPH-73-1006",
+          "doc_type": "SB",
+          "finding_type": "PREREQUISITE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "LN953956K3",
+              "INN739616-21"
+            ],
+            "shared_fins": [
+              "342EF"
+            ],
+            "shared_zones": [
+              "412"
+            ],
+            "shared_ata_6d": [
+              "73-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The provision bulletin can be embodied long before the unit with no penalty in leaving the existing unit on the new bracket, which makes it the right thing to do at the next cowl opening.",
+          "resolution": "Embody the provision fleet wide independent of unit availability."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-Z-73-20-11-810-814",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "INN739616-21"
+            ],
+            "shared_fins": [
+              "25EF",
+              "18EF"
+            ],
+            "shared_zones": [
+              "483"
+            ],
+            "shared_ata_6d": [
+              "73-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure now opens with the fault history download, which is the single change that reduces the no fault found rate before any hardware moves.",
+          "resolution": "Communicate the download step to operators immediately rather than with the retrofit."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-Z-73-20-11-000-041-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES641639-8C"
+            ],
+            "shared_fins": [
+              "342EF"
+            ],
+            "shared_zones": [
+              "483"
+            ],
+            "shared_ata_6d": [
+              "73-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task carries the same download step as its first action and records the bracket inspection that the provision bulletin depends on.",
+          "resolution": "No change required; the task is already correct."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-32-1240",
+          "doc_type": "SB",
+          "reason": "Returned by the shared vocabulary of a control unit standard change and a calibration table load, but it is the brake and steering control unit on a different chapter with no shared part, FIN or zone."
+        }
+      ],
+      "conclusion": "Closed by delegation of the campaign plan. The most valuable outcome was recognising that the fault history download delivers most of the benefit before any unit is exchanged.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

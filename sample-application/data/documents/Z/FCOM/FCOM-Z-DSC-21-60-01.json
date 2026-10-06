@@ -1,0 +1,120 @@
+[
+  {
+    "doc_id": "FCOM-Z-DSC-21-60-01",
+    "doc_type": "FCOM",
+    "title": "Air Conditioning — Cabin Temperature Selection and Zone Response",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-04-17",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-00",
+      "title": "Temperature Control — General"
+    },
+    "secondary_ata": [
+      "21-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-08-19",
+      "released": "2020-03-02",
+      "revised": "2023-04-17",
+      "effective": "2023-05-08"
+    },
+    "abstract": "Flight crew description of how cabin temperature is selected and how quickly each zone responds, including what the crew should expect after a selector change and when a zone should be reported as unserviceable.",
+    "sections": {
+      "purpose": "This entry describes to the flight crew how cabin temperature is selected for each zone, what the selector actually commands and how long a zone takes to reach the selected value.",
+      "description": "Each cabin zone has its own temperature selector on the overhead panel. The selector sets a target for that zone rather than a valve position, and the system decides how much hot air to add to the cold air the packs deliver. In normal operation the crew selects the temperature the cabin crew asks for and does nothing else. A zone will take a few minutes to settle after a selection is changed, and it will always take longer when the cabin is full, because the passengers themselves are a large part of the heat load. On aircraft at the later system standard the response is noticeably quicker and the zone settles without the overshoot that the crew may be used to on older aircraft in the fleet. Selecting an extreme position does not make a zone reach its target sooner; it only changes the target, and it commonly leaves the zone too hot or too cold once the system has caught up. The cockpit zone is independent of the cabin zones and is selected separately.",
+      "crew_procedure": "Select the temperature requested by the cabin crew and allow the zone to settle before making a further change. Do not use the extremes of the selector range to speed up a change. If a zone does not move towards the selected value after several minutes, select the zone to the mid position and report it to maintenance; on the ground, note whether the aircraft has recently had air conditioning work, because that is the most common history behind an unresponsive zone. Trim air may be selected off for a single zone without affecting the others."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-Z-DSC-49-10-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cabin temperature selector",
+      "zone response",
+      "trim air",
+      "overhead panel",
+      "heat load"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Description — Air Conditioning and Temperature Control",
+      "entry_number": "DSC-21-60-01",
+      "flight_phase": "ALL_PHASES",
+      "operational_impact": "NONE",
+      "crew_action": "Select the requested temperature and allow the zone to settle. Report an unresponsive zone to maintenance.",
+      "affects_qrh": false,
+      "affects_mel": true,
+      "mel_items": [
+        "21-60-01A"
+      ],
+      "systems": [
+        "Zone Temperature Control",
+        "Trim Air",
+        "Air Conditioning Packs"
+      ],
+      "related_entries": [
+        "FCOM-Z-DSC-49-10-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

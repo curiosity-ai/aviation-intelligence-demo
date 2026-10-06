@@ -1,0 +1,181 @@
+[
+  {
+    "doc_id": "MOD-139310",
+    "doc_type": "MOD",
+    "title": "Flight Control Guidance Configuration Data Set, Standard 11.0",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-08-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-90",
+      "ata_6d": "27-90-11",
+      "title": "Flight Control Computing — Flight Control Primary Computer"
+    },
+    "secondary_ata": [
+      "45-45",
+      "27-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-135520"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-08-05",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Successor configuration data set for the flight control primary computers, replacing a baseline whose supplier support ends in 2027 and carrying three in-service changes that cannot be released against the present standard.",
+    "sections": {
+      "reason": "The supplier has given notice that the toolchain baseline underneath the present configuration data set will not be maintained beyond December 2027, which means no further change can be certified against it. Three items are queued behind that wall. The first is a directional authority scheduling change that two operators have requested in writing and that one has made a condition of a follow-on order. The second is a parameter correction that flight test has carried as a deviation since 2023. The third is an alignment of the computer fault reporting words with the current maintenance system standard, without which the central maintenance system continues to attribute two faults to the wrong item. Issuing them as three sequential loads would cost operators three hangar visits, so they are combined.",
+      "description": "The configuration data set is re-issued as standard 11.0 and loaded as software part LD6LAC15C11, which supersedes the present load in the configuration control record. The directional authority schedule is re-tabulated against airspeed and slat position; the control law structure is untouched. The parameter correction affects the pitch trim rate limit only in the transition between normal and alternate law. Fault reporting words 41 through 74 are re-mapped so that failures of the heat exchanger position 435EV, the non-return valve position 52CE and the restrictor position 78CE are each attributed to the correct item. The primary computer solenoid kit D2790113238523 and the inboard sensor sub-assembly D2790119440485 are unchanged in hardware, but their acceptance tolerances are re-stated in the loading procedure because the revised schedule is more sensitive to sensor bias. Loading is through the portable data loader interface in the avionics bay, zone 162, with both computers powered and the aircraft on ground; the flight compartment loading panel in zone 216 is used to confirm the load. Detail is on drawing D27901146283.",
+      "effects": "No mass change. No electrical load change. The data set is not interchangeable with the present standard and the aircraft is not dispatchable with a mixed pair of computers. Handling qualities in normal law are unchanged. The directional authority schedule change alters the maximum commanded surface deflection at high speed, which is a certification-significant item and requires flight validation before release. Two central maintenance system fault attributions change, which forces a re-issue of the fault list and the associated trouble shooting content. No flight crew procedure changes.",
+      "embodiment_note": "Production cut-in is proposed for the twin-engine line at the first available delivery block after certification, with retrofit through a new software load service bulletin. The load itself takes four hours at a line station on ground power; no rack access is required.",
+      "open_points": "Pre-analysis must confirm that the directional authority schedule in this data set is consistent with the mechanical travel limit change being studied in parallel on the rudder, that the earlier configuration standard is properly recorded as superseded in the software configuration index, and whether the four-engine aircraft need a separate schedule because of their different fin loading."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2790113238523",
+        "D2790119440485"
+      ],
+      "fins": [
+        "435EV",
+        "52CE",
+        "78CE"
+      ],
+      "drawings": [
+        "D27901146283"
+      ],
+      "software": [
+        "LD6LAC15C11"
+      ],
+      "zones": [
+        "162",
+        "216"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "IO-S-250518",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-135520",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "configuration data set",
+      "directional authority schedule",
+      "fault reporting word",
+      "supplier baseline",
+      "data load"
+    ],
+    "originator": {
+      "department": "EYAA",
+      "site": "Valmont",
+      "role": "Flight Control Systems"
+    },
+    "type_data": {
+      "mod_number": 139310,
+      "mod_class": "MAJOR",
+      "change_category": "SOFTWARE",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.671",
+          "CS 25.1309",
+          "CS 25.143"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2790113238523",
+        "D2790119440485"
+      ],
+      "fins_affected": [
+        "435EV",
+        "52CE",
+        "78CE"
+      ],
+      "software_affected": [
+        "LD6LAC15C11"
+      ],
+      "estimated_manhours": 24,
+      "estimated_cost_keur": 1250,
+      "lead_time_weeks": 54,
+      "production_impact": "Cut-in proposed at the first delivery block after certification",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

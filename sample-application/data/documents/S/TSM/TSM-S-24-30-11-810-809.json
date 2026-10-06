@@ -1,0 +1,331 @@
+[
+  {
+    "doc_id": "TSM-S-24-30-11-810-809",
+    "doc_type": "TSM",
+    "title": "Transformer Rectifier Unit Fault on the Ground Only",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1996-03-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-30",
+      "ata_6d": "24-30-11",
+      "title": "DC Generation — Transformer Rectifier Unit"
+    },
+    "secondary_ata": [
+      "24-60"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1996-01-12",
+      "released": "1996-03-13",
+      "revised": "1996-03-13",
+      "effective": "1996-04-01"
+    },
+    "abstract": "Fault isolation for a transformer rectifier unit fault that appears only during long ground power periods and clears in flight, which points at a joint rather than at the unit.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a transformer rectifier unit fault that appears during ground power operation and clears once the aircraft is airborne.",
+      "fault_description": "The crew or the ground engineer sees the unit fault raised after twenty minutes or more on ground power, typically with the cabin loaded and the galleys running, and it clears within a few minutes of the load reducing. In flight the fault does not appear at all. The behaviour is characteristic of a terminal joint that has relaxed: at low load the joint carries the current with an acceptable drop, and at full rectifier output the local temperature rise takes the sensing above its threshold. Replacing the unit does not fix it and the removed unit tests serviceable, which is why this procedure starts at the bus bar rather than at the unit.",
+      "isolation_procedure": "1. Establish whether the fault has ever appeared in flight. Where it has, this procedure does not apply; use the general unit fault procedure instead. 2. Put the aircraft on ground power and load the galleys to reproduce the condition. 3. Do a thermographic survey of the output bus bar terminals after thirty minutes at full output. WARNING: DO NOT TOUCH THE BUS BAR DURING THE SURVEY. IT MAY BE ABOVE ONE HUNDRED DEGREES WITH NO VISIBLE SIGN. 4. Where any terminal exceeds the ambient by more than the figure in the limits table, that joint is the fault. Do the bus bar removal and installation tasks and re-torque the joint. 5. Where all terminals are inside limits, measure the voltage drop across the relay assembly at full output. 6. Where the drop exceeds the limit, replace the relay assembly D2430113213358. 7. Where both are inside limits, check the ground stud 1GX3 bonding resistance. 8. Where the bonding resistance is high, re-face the stud and re-measure. 9. Only where all four checks pass should the unit itself be replaced. 10. After any action, repeat the thirty-minute loaded run and confirm the fault does not return.",
+      "dispatch_note": "The aircraft may be dispatched with one transformer rectifier unit inoperative under the applicable minimum equipment list item, provided the remaining units carry the essential load. Dispatch is not permitted where a thermographic survey has found a terminal above limits, because that is a joint condition and not a unit condition."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2430110204063",
+        "D2430113213358"
+      ],
+      "fins": [
+        "169XU",
+        "17XU",
+        "1GX3"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "121",
+        "272"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-24-30-11-400-031-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "transformer rectifier fault",
+      "ground power",
+      "thermographic",
+      "terminal joint",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "24-30-11-810-809",
+      "fault_symptom": "TR FAULT displayed on the electrical system page during ground power operation only",
+      "fault_codes": [
+        "243011001",
+        "243011014"
+      ],
+      "warning_messages": [
+        "ELEC TR 1 FAULT",
+        "ELEC TR 2 FAULT"
+      ],
+      "affected_fins": [
+        "169XU",
+        "17XU",
+        "1GX3"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Relaxed output bus bar terminal joint",
+          "probability_pct": 55,
+          "fin": "169XU"
+        },
+        {
+          "cause": "High resistance across the relay assembly contacts",
+          "probability_pct": 25,
+          "fin": "17XU"
+        },
+        {
+          "cause": "Degraded ground stud bonding",
+          "probability_pct": 12,
+          "fin": "1GX3"
+        },
+        {
+          "cause": "Transformer rectifier unit internal failure",
+          "probability_pct": 8,
+          "fin": "169XU"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-S-24-30-11-400-031-A",
+      "dispatch": {
+        "mel_item": "24-30-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One unit inoperative, remaining units carry the essential load, no terminal above the thermographic limit"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-S-24-30-11-810-809",
+    "doc_type": "TSM",
+    "title": "Transformer Rectifier Unit Fault on the Ground Only",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-28",
+      "reason": "Step 6 now describes the relay item by its position and aircraft standard instead of quoting the withdrawn pre-modification part number.",
+      "raised_by_pawo": "PAWO-130310-01",
+      "raised_by_finding": "F01",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-30",
+      "ata_6d": "24-30-11",
+      "title": "DC Generation — Transformer Rectifier Unit"
+    },
+    "secondary_ata": [
+      "24-60"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1996-01-12",
+      "released": "1996-03-13",
+      "revised": "2026-07-28",
+      "effective": "2026-08-06"
+    },
+    "abstract": "Fault isolation for a transformer rectifier unit fault that appears only during long ground power periods and clears in flight, which points at a joint rather than at the unit.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a transformer rectifier unit fault that appears during ground power operation and clears once the aircraft is airborne.",
+      "fault_description": "The crew or the ground engineer sees the unit fault raised after twenty minutes or more on ground power, typically with the cabin loaded and the galleys running, and it clears within a few minutes of the load reducing. In flight the fault does not appear at all. The behaviour is characteristic of a terminal joint that has relaxed: at low load the joint carries the current with an acceptable drop, and at full rectifier output the local temperature rise takes the sensing above its threshold. Replacing the unit does not fix it and the removed unit tests serviceable, which is why this procedure starts at the bus bar rather than at the unit. Two relay standards are in service and both behave the same way under this fault, so the procedure does not branch on them; only the replacement item differs and that is handled at step 6.",
+      "isolation_procedure": "1. Establish whether the fault has ever appeared in flight. Where it has, this procedure does not apply; use the general unit fault procedure instead. 2. Put the aircraft on ground power and load the galleys to reproduce the condition. 3. Do a thermographic survey of the output bus bar terminals after thirty minutes at full output. WARNING: DO NOT TOUCH THE BUS BAR DURING THE SURVEY. IT MAY BE ABOVE ONE HUNDRED DEGREES WITH NO VISIBLE SIGN. 4. Where any terminal exceeds the ambient by more than the figure in the limits table, that joint is the fault. Do the bus bar removal and installation tasks and re-torque the joint. 5. Where all terminals are inside limits, measure the voltage drop across the relay assembly at full output. 6. Where the drop exceeds the limit, replace the relay assembly at the outboard position. Order it against the aircraft configuration and not against a part number quoted in an earlier issue of this procedure: the assembly fitted at build is withdrawn from the catalogue and is no longer procurable, and the silver-plated relay kit is the only item now supplied for either standard. 7. Where both are inside limits, check the ground stud 1GX3 bonding resistance. 8. Where the bonding resistance is high, re-face the stud and re-measure. 9. Only where all four checks pass should the unit itself be replaced. 10. After any action, repeat the thirty-minute loaded run and confirm the fault does not return.",
+      "dispatch_note": "The aircraft may be dispatched with one transformer rectifier unit inoperative under the applicable minimum equipment list item, provided the remaining units carry the essential load. Dispatch is not permitted where a thermographic survey has found a terminal above limits, because that is a joint condition and not a unit condition."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2430110204063",
+        "D2430113213358",
+        "GIDE140223-63"
+      ],
+      "fins": [
+        "169XU",
+        "17XU",
+        "1GX3"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "121",
+        "272"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-24-30-11-400-031-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "transformer rectifier fault",
+      "ground power",
+      "thermographic",
+      "terminal joint",
+      "spares withdrawal"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "24-30-11-810-809",
+      "fault_symptom": "TR FAULT displayed on the electrical system page during ground power operation only",
+      "fault_codes": [
+        "243011001",
+        "243011014"
+      ],
+      "warning_messages": [
+        "ELEC TR 1 FAULT",
+        "ELEC TR 2 FAULT"
+      ],
+      "affected_fins": [
+        "169XU",
+        "17XU",
+        "1GX3"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Relaxed output bus bar terminal joint",
+          "probability_pct": 55,
+          "fin": "169XU"
+        },
+        {
+          "cause": "High resistance across the relay assembly contacts",
+          "probability_pct": 25,
+          "fin": "17XU"
+        },
+        {
+          "cause": "Degraded ground stud bonding",
+          "probability_pct": 12,
+          "fin": "1GX3"
+        },
+        {
+          "cause": "Transformer rectifier unit internal failure",
+          "probability_pct": 8,
+          "fin": "169XU"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-S-24-30-11-400-031-A",
+      "dispatch": {
+        "mel_item": "24-30-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One unit inoperative, remaining units carry the essential load, no terminal above the thermographic limit"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

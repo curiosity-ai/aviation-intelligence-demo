@@ -1,0 +1,360 @@
+[
+  {
+    "doc_id": "PAWO-166744-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Acoustic Insulation Lining in the Fwd Cabin Divider Bays",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "25",
+      "ata_4d": "25-20",
+      "ata_6d": "25-20-13",
+      "title": "Passenger Compartment — Cabin Dividers"
+    },
+    "secondary_ata": [
+      "33-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [
+        "M00256",
+        "M00258",
+        "M00263",
+        "M00310",
+        "M00441"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "AMA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-27",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the forward divider bay acoustic lining, covering an existing acoustic treatment elsewhere on the aircraft, the escape path marking that runs through the same void, a cancelled cabin weight change and the cleaning task that has to change.",
+    "sections": {
+      "objective": "Establish whether an equivalent acoustic treatment already exists that could simply be extended, whether the proposed lining interferes with the certified escape path marking that runs through the same ceiling void, and what cabin maintenance content changes on embodiment.",
+      "scope_note": "The search covers ATA 25-20 as the primary chapter and ATA 33-20 as secondary, because the floor proximity marking and its distributed battery harness run through the divider bays. ATA 21-20 was included in the first pass, on the theory that cabin air distribution ducting shares the void, and then excluded: the ducting runs above the ceiling panel line and does not enter the divider bay. Cargo compartment chapters were deliberately kept in scope even though the candidate is a cabin change, and that decision produced the most interesting finding.",
+      "method_note": "Entity linking was seeded from the three part numbers, the two functional item numbers and the three zones on the candidate, and produced only maintenance content and one cancelled change. Semantic similarity was seeded on the acoustic intent rather than on the hardware, which is what recovered a released treatment in the forward cargo hold that shares no identifier with the candidate at all. Without that seed the search would have concluded that no comparable treatment exists.",
+      "findings_summary": "Six items have been confirmed and one is blocking. The blocking item is not a conflict but a certification interface: the light-emitting diode escape path marking and its distributed battery harness run through the same ceiling void, and the lining frame has to be proven clear of the marking run before the change can be certified. Below that, a released treatment already exists in the forward cargo hold that addresses the same acoustic objective by the same principle, using entirely different vocabulary and entirely different hardware. The design office had not seen it and the two teams should agree whether one part family can serve both applications before a second one is created. A cancelled cabin weight change shares the fastener family and the aft divider zone and its cancellation reasoning, which turned on flammability substantiation, applies directly here. Finally the cabin cleaning task has to change because the void must not be wetted once an absorbent lining is fitted.",
+      "next_steps": "Prove the clearance between the lining frame and the escape path marking run before the design review. Ask the cabin definition office whether the existing cargo hold blanket family can be extended rather than a new lining created. Read across the flammability position from the cancelled weight change before committing to a material. Update the cabin cleaning task in the same documentation package."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2520138833226",
+        "D2520000645001",
+        "AES161226K4"
+      ],
+      "fins": [
+        "280DL",
+        "39DL9"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "221",
+        "291",
+        "222"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-166744",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-M-251188",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "acoustic lining",
+      "cabin divider",
+      "escape path marking",
+      "flammability"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-166744-01",
+      "subject_mod": "MOD-166744",
+      "source_io": "IO-M-251188",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-01-27",
+      "due_date": "2026-04-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EAAM"
+        ],
+        "estimated_manhours": 60,
+        "spent_manhours": 38
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "25",
+          "33"
+        ],
+        "ata_4d": [
+          "25-20",
+          "25-50",
+          "33-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM"
+        ],
+        "msn_range": {
+          "from": "M00139",
+          "to": "M00478"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2520138833226",
+            "D2520000645001",
+            "AES161226K4"
+          ],
+          "fins": [
+            "280DL",
+            "39DL9"
+          ],
+          "drawings": [],
+          "zones": [
+            "221",
+            "291",
+            "222"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "absorbent treatment added behind a lining panel to reduce cabin noise",
+          "measured sound level step between adjacent seat rows in the same cabin"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search cabin and cargo chapters for existing acoustic treatments",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the escape path marking run through the divider void",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EAAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Read across the flammability position from the cancelled weight change",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Identify cabin maintenance content affected by an absorbent lining",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-161204",
+          "doc_type": "MOD",
+          "finding_type": "DUPLICATE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents describe an absorbent treatment added in the void behind a lining panel to remove a measured sound level step in adjacent seat rows, and both quote a decibel figure and a customer complaint history. One says 'noise attenuation blanket' and the other says 'acoustic insulation lining'. They share no part number, no functional item number, no zone and no ATA code below the chapter."
+          },
+          "rationale": "The released cargo hold treatment answers the same objective by the same principle in a different part of the aircraft. Creating a second part family for the divider bays without first asking whether the existing blanket family can be extended is the kind of duplication that the pre-analysis step exists to catch.",
+          "resolution": "Ask the cabin definition office whether the existing blanket family can be qualified for this application, and record the answer in the design justification before a new part family is opened."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-164122",
+          "doc_type": "MOD",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "291"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The light-emitting diode escape path marking and its distributed battery harness run through the ceiling void in zone 291, which is exactly where the lining frame sits. The marking is a certification item and its installation cannot be obstructed or its harness re-routed without a certification assessment.",
+          "resolution": "Prove the clearance between the lining frame and the marking run in a mock-up, and obtain a written position from the cabin safety office before the design review."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-164560",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES161226K4"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "222"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The cancelled lightweight latch change used the same floating barrel nut family in the same aft divider zone, and it was cancelled because the flammability substantiation for its material could not be funded and the corrosion case in the presence of galley spillage could not be closed. Both arguments read across directly to an absorbent lining in a bay next to a galley.",
+          "resolution": "Read the cancellation file before selecting a lining material and state in the design justification how the flammability and spillage arguments are answered here."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-M-25-20-13-100-022-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2520138833226"
+            ],
+            "shared_fins": [
+              "280DL"
+            ],
+            "shared_zones": [
+              "291",
+              "221"
+            ],
+            "shared_ata_6d": [
+              "25-20-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The cleaning task already carries a step that says an absorbent lining must be vacuumed and not wetted, but it is written as a conditional for aircraft that happen to have one. Once the lining is a released standard the step becomes mandatory and the drying check before the panels go back has to be part of the sign-off.",
+          "resolution": "Reissue the cleaning task with the lining step made unconditional for post-modification aircraft."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-163890",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "INFORMATIONAL",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "291"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The superseded photoluminescent marking standard is still installed on a small number of aircraft. Those aircraft have no battery harness in the void, so the clearance case is easier for them, but the candidate must not be written in a way that assumes one standard or the other. The document was reached by following the supersession edge from the current marking standard.",
+          "resolution": "State in the candidate applicability that both marking standards are covered, and give the clearance figure for each."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MRD-33-1064",
+          "doc_type": "SB",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "291"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents describe work in the same ceiling void at a cabin visit, with panels removed and the carpet lifted, and both are written for a scheduled cabin refresh."
+          },
+          "rationale": "Three of the five candidate aircraft have the marking retrofit bulletin open in their work plan. Doing the two separately means opening the same void twice at two cabin visits, and doing the lining first would mean disturbing it again a few months later to route the battery harness.",
+          "resolution": "Propose the two as a concurrent embodiment at the same cabin visit and tell the operator before it schedules either."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-166852",
+          "doc_type": "MOD",
+          "reason": "Another open candidate that also talks about brackets, clearance and a relocation inside an existing installation, and will score on similarity. It is a door proximity sensing change in the cargo door threshold, with no shared zone, no shared part number and no cabin content."
+        },
+        {
+          "doc_id": "SRM-M-53-50-13-001",
+          "doc_type": "SRM",
+          "reason": "Mentions panels, inserts and bonded repairs in cabin-adjacent language, but it is a cargo floor panel repair driven by loading equipment damage, with no shared zone, no shared part number and no acoustic or cabin interior content."
+        }
+      ],
+      "conclusion": "Not yet issued. The escape path marking clearance is blocking, and the duplication question against the existing cargo hold treatment must be answered before a new part family is opened.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,324 @@
+[
+  {
+    "doc_id": "PAWO-130510-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Torque Motor Regulator in the Trim Air Pressure Regulating Valve",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-09-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-20",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-08-30",
+      "released": "2017-09-05",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Original pre-analysis for the replacement of the pneumatically referenced diaphragm regulator by an electrically commanded torque motor unit in the trim air pressure regulating valve, closed clean with two manual actions.",
+    "sections": {
+      "objective": "Confirm that replacing the diaphragm regulator by a torque motor unit in the trim air pressure regulating valve creates no conflict with released work on the trim air distribution, and identify the maintenance and troubleshooting content that assumes a pneumatic reference. The zone controllers see a different actuation characteristic after the change and the work order had to establish whether any acceptance criterion, dispatch condition or test currently depends on the diaphragm behaviour.",
+      "findings_summary": "Nothing structural or systemic came out of the search, which was the expected result for a valve internal change, but three documentation items are real. The fault isolation procedure for a cabin zone out of band with no trim air fault raised is built entirely around the diaphragm reference: it walks the mechanic through a static pressure check that the torque motor unit does not respond to, and on a modified valve the procedure terminates without a conclusion. The parts figure lists the regulator as a non-separable part of the valve body and will need an alternate row so that the two standards can be told apart at the shelf. The installation task ends in a rigging step whose acceptance is a pressure decay time; the torque motor unit reaches its commanded position by a different route and the decay figures no longer describe a healthy valve.",
+      "next_steps": "Raise troubleshooting and maintenance change requests for the isolation procedure and the installation acceptance, both keyed to the modification rather than an MSN break. Ask the illustrated parts owner for an alternate row for the modified valve. Confirm with the air conditioning system office that no dispatch condition quotes the decay time before the changes are issued. No design constraint is carried forward."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160115682504",
+        "D2160118677637",
+        "KAD437362-51",
+        "NOD212962-03"
+      ],
+      "fins": [
+        "2431HM8"
+      ],
+      "drawings": [
+        "D21601215648"
+      ],
+      "software": [],
+      "zones": [
+        "193",
+        "241",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-130510",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "TSM-S-21-60-11-810-804",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-21-60-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-21-60-11-400-010-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "trim air valve",
+      "torque motor",
+      "regulator drift",
+      "zone controller"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-130510-01",
+      "subject_mod": "MOD-130510",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2017-09-05",
+      "outcome": "VALIDATED",
+      "raised_date": "2016-08-30",
+      "due_date": "2017-08-31",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ETGC"
+        ],
+        "estimated_manhours": 70,
+        "spent_manhours": 58
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34",
+          "VANTOR-64",
+          "VANTOR-68"
+        ],
+        "ata_2d": [
+          "21",
+          "36"
+        ],
+        "ata_4d": [
+          "21-60",
+          "21-20",
+          "36-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "S00003",
+          "to": "S01500"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2160115682504",
+            "D2160118677637",
+            "KAD437362-51",
+            "NOD212962-03"
+          ],
+          "fins": [
+            "2431HM8"
+          ],
+          "drawings": [
+            "D21601215648"
+          ],
+          "zones": [
+            "193",
+            "241",
+            "242"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "slow regulator drift leaving a cabin zone out of the commanded temperature band",
+          "pneumatic reference replaced by an electrically commanded torque motor"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released trim air distribution work for regulator dependencies",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review acceptance criteria that assume a pneumatic reference",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check for dispatch conditions quoting the decay time",
+          "method": "SME_INTERVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TSM-S-21-60-11-810-804",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2160115682504",
+              "D2160118677637",
+              "KAD437362-51"
+            ],
+            "shared_fins": [
+              "2431HM8"
+            ],
+            "shared_zones": [
+              "193",
+              "241",
+              "242"
+            ],
+            "shared_ata_6d": [
+              "21-60-11",
+              "21-20"
+            ],
+            "similarity_note": "Returned by the entity link on the valve and its FIN position and independently by similarity on the out-of-band symptom text."
+          },
+          "rationale": "The procedure resolves through a static pressure check against the diaphragm reference. A torque motor unit does not respond to that check, so on a modified valve the isolation branch runs out without reaching a conclusion and the mechanic falls back to unit replacement.",
+          "resolution": "Split the branch by regulator standard and give the modified valve a command-response check instead."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-S-21-60-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2160115682504",
+              "D2160118677637",
+              "KAD437362-51",
+              "NOD212962-03"
+            ],
+            "shared_fins": [
+              "2431HM8"
+            ],
+            "shared_zones": [
+              "193",
+              "241",
+              "242"
+            ],
+            "shared_ata_6d": [
+              "21-60-11",
+              "21-20"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The regulator is listed as a non-separable part of the valve body, so the two standards appear as one item. Without an alternate row the shelf cannot distinguish them and a modified valve can be fitted to an unmodified control law.",
+          "resolution": "Request an alternate row with its own effectivity for the modified valve."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-S-21-60-11-400-010-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2160115682504",
+              "D2160118677637",
+              "KAD437362-51",
+              "NOD212962-03"
+            ],
+            "shared_fins": [
+              "2431HM8"
+            ],
+            "shared_zones": [
+              "193",
+              "241",
+              "242"
+            ],
+            "shared_ata_6d": [
+              "21-60-11",
+              "21-20"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation ends in a rigging step accepted on a pressure decay time. The modified unit reaches its commanded position electrically and the decay figures no longer describe a healthy valve, so a correctly installed unit can fail the acceptance.",
+          "resolution": "Rewrite the acceptance with a standard-dependent column."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "No design conflict. Two manual change requests and one parts figure alternate are required; the modification proceeds without conditions on the design.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

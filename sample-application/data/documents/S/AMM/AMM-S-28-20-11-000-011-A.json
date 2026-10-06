@@ -1,0 +1,181 @@
+[
+  {
+    "doc_id": "AMM-S-28-20-11-000-011-A",
+    "doc_type": "AMM",
+    "title": "Centre Tank Boost Pump — Removal",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-10-14",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-03-22",
+      "released": "2018-12-06",
+      "revised": "2022-10-14",
+      "effective": "2022-11-02"
+    },
+    "abstract": "Removal of a centre tank boost pump through the tank access panel, with the electrical isolation, the fuel spill containment and the pump inlet condition record used by the reliability programme.",
+    "sections": {
+      "purpose": "This task removes a centre tank boost pump so that it can be replaced, and records the condition of the pump inlet and the surrounding sump because that condition feeds the water contamination investigation.",
+      "job_setup_note": "Do this task with the aircraft on the ground, electrically isolated at the pump contactor and with the centre tank de-fuelled to below the pump level. Full tank entry is not required for the pump itself but the access panel is in the tank boundary, so the spill kit and the earthing arrangement apply. Do not do this task with a fuel bowser connected.",
+      "procedure": "1. De-fuel the centre tank to below the pump level and record the quantity remaining. 2. Isolate the pump at the contactor and tag it. WARNING: CONFIRM ZERO VOLTS AT THE PUMP CONNECTOR BEFORE IT IS DISCONNECTED. FUEL VAPOUR MAY BE PRESENT. 3. Earth the aircraft and lay out the spill containment under the access panel in zone 591. 4. Open the tank access panel and let the vapour clear for the time given in the standard practice. 5. Disconnect the pump electrical connector and stow it clear of the aperture. CAUTION: DO NOT LET THE CONNECTOR FALL INTO THE TANK. TIE IT OFF. 6. Release the pump retaining ring and break the pump free of its housing. 7. Withdraw the pump slowly and let the trapped fuel drain into the containment tray. 8. Record the condition of the pump inlet screen and photograph it with a scale in frame. 9. Look into the sump and record whether free water is visible, and where. 10. Check the aft restrictor assembly D2820111551992 and the outboard restrictor D2820115755380 for debris on the inlet side. 11. Check the lower non-return valve position 34QA4 for free movement. 12. Cap the pump housing.",
+      "close_out": "Put the pump in the transit container with the inlet capped and the condition record attached. Send the inlet photograph and the sump observation to the operator reliability department; these two records are the basis of the water contamination assessment. Record the removal in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820111551992",
+        "D2820115755380",
+        "D2820113555007",
+        "LN41340-8C"
+      ],
+      "fins": [
+        "34QA4"
+      ],
+      "drawings": [
+        "D28201202725"
+      ],
+      "software": [],
+      "zones": [
+        "183",
+        "591"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-28-20-11-800-012-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-139050",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "boost pump",
+      "tank access panel",
+      "inlet screen",
+      "free water",
+      "spill containment"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "28-20-11-000-011-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All twin-engine aircraft including the Evo variants",
+      "manhours": 7.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "183",
+          "591"
+        ],
+        "access_panels": [
+          "591BR",
+          "591CR",
+          "183CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Confirm zero volts at the pump connector before it is disconnected.",
+          "Earth the aircraft before the access panel is opened.",
+          "Do not do this task with a fuel bowser connected."
+        ],
+        "tooling": [
+          {
+            "reference": "98D28201-160",
+            "description": "Pump retaining ring tool"
+          },
+          {
+            "reference": "98D28201-162",
+            "description": "Fuel spill containment set"
+          },
+          {
+            "reference": "98D28201-165",
+            "description": "Pump transit container"
+          }
+        ],
+        "consumables": [
+          "O-ring set, boost pump",
+          "Absorbent pad, fuel",
+          "Bonding lead, temporary"
+        ],
+        "expendables": [
+          {
+            "part_number": "LN41340-8C",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-S-28-20-11-800-012-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

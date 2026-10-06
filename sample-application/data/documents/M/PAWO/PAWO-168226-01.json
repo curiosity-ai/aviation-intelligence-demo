@@ -1,0 +1,274 @@
+[
+  {
+    "doc_id": "PAWO-168226-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Closed) — Fuel Metering Nozzle, Proposed Extension to the Lower Rated Installation",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-10",
+      "ata_6d": "73-10-11",
+      "title": "Distribution — Fuel Metering Unit"
+    },
+    "secondary_ata": [
+      "73-10",
+      "71-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-9700"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-13",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of a proposal to fit the revised delivery nozzle to the lower rated installation as well, rejected because the cold start problem it solves does not exist there and the latch clearance issue is specific to the larger engine.",
+    "sections": {
+      "objective": "Establish whether the revised delivery nozzle and relocated cowl latch bracket should be extended to the lower rated installation, as suggested at the powerplant review to simplify the spares range.",
+      "findings_summary": "Three items were confirmed and the proposal was rejected. Start data from the lower rated installation shows no spread problem at any fuel temperature recorded in service, so the nozzle change would be solving a problem that population does not have. The latch clearance stack-up that justified the bracket relocation is created by a cowl line specific to the larger engine and does not exist on the smaller one; relocating the bracket there would introduce a clearance question rather than close one. The only argument in favour was spares simplification, and the parts figure shows the two nozzles are already handled cleanly by effectivity. The installation task would have needed a third clearance case, which nobody wanted.",
+      "next_steps": "Proposal rejected. The spares range question was passed to procurement, who confirmed the two-nozzle range is not a cost driver."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7310110750967",
+        "D7310113951172",
+        "D7310116605804"
+      ],
+      "fins": [
+        "26EF",
+        "4EF",
+        "5486EF"
+      ],
+      "drawings": [
+        "D73101148245"
+      ],
+      "software": [],
+      "zones": [
+        "462",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168226",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "closed pre-analysis",
+      "nozzle extension",
+      "cold start",
+      "latch clearance",
+      "spares range"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-168226-01",
+      "subject_mod": "MOD-168226",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-27",
+      "outcome": "REJECTED",
+      "raised_date": "2026-04-13",
+      "due_date": "2026-07-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 130,
+        "spent_manhours": 121
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "73",
+          "71"
+        ],
+        "ata_4d": [
+          "73-10",
+          "73-20",
+          "71-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00475"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D7310110750967",
+            "D7310113951172"
+          ],
+          "fins": [
+            "26EF",
+            "4EF"
+          ],
+          "drawings": [
+            "D73101148245"
+          ],
+          "zones": [
+            "462",
+            "433"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "a fix extended to a population that does not have the problem"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare start data across both installations",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the latch clearance stack-up on the smaller engine",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Ask procurement whether the two-nozzle range is a cost driver",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MRD-73-1013",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "73-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin effectivity is written against the higher rated installation and its clearance check value is specific to that cowl line. Extending it would require a second clearance value in the same document.",
+          "resolution": "Reject the extension; keep the bulletin as issued."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-M-73-10-11-400-046-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "73-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task already carries two clearance cases and would need a third if the bracket were relocated on the smaller engine.",
+          "resolution": "No change; recorded as a reason for rejection."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-M-73-20-11-810-812",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents concern the start temperature spread and the nozzle standards behind it, one as a fault isolation and one as the change that produced the standards."
+          },
+          "rationale": "The procedure warns against a mixed nozzle standard across the two engines of one aircraft. Extending the nozzle to the other installation would create a fleet-level mixed standard that the procedure does not address.",
+          "resolution": "No change; the situation is avoided by rejecting the extension."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-168240",
+          "doc_type": "MOD",
+          "reason": "Returned on the engine access and cowl-open language, and because it is also a customer-driven powerplant change, but it is the oil filter housing drain with no fuel system content and no shared identifier."
+        }
+      ],
+      "conclusion": "Closed. Extension rejected; the spares range question was answered separately by procurement.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

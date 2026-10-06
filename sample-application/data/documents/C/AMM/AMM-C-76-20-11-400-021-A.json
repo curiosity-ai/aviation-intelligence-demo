@@ -1,0 +1,179 @@
+[
+  {
+    "doc_id": "AMM-C-76-20-11-400-021-A",
+    "doc_type": "AMM",
+    "title": "Engine Fire Handle Assembly — Installation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-20",
+      "ata_6d": "76-20-11",
+      "title": "Emergency Shutdown — Fire Handle Assembly"
+    },
+    "secondary_ata": [
+      "76-10",
+      "26-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-08-14",
+      "released": "2026-01-19",
+      "revised": null,
+      "effective": "2026-02-16"
+    },
+    "abstract": "Installation of an engine fire handle assembly in the flight compartment pedestal, with the bottle inhibit safety, the discharge circuit separation check and the legend illumination test.",
+    "sections": {
+      "purpose": "To install an engine fire handle assembly in the flight compartment pedestal and to prove the discharge circuits and the legend illumination without discharging a bottle.",
+      "job_setup_note": "Both fire extinguishing bottles must be safetied with the discharge inhibit pins before the pedestal is opened, and the pins must stay in until the installation is proven. The aircraft must be de-powered for the mechanical work and on external power for the checks. Two persons are needed, one at the pedestal and one at the bottles.",
+      "procedure": "WARNING: FIT THE DISCHARGE INHIBIT PINS AT BOTH FIRE EXTINGUISHING BOTTLES AND HAVE THEM WITNESSED BEFORE THE PEDESTAL IS OPENED. AN UNINHIBITED CIRCUIT CAN FIRE A BOTTLE DURING THE INSTALLATION. Remove the electrical power and put the warning notices in position. Fit and witness the discharge inhibit pins. Open the flight compartment pedestal. Examine the firewall panel CID171471-49 cut-out and re-protect any machined area. Install the seal HOD830120-93 behind the escutcheon. Put the handle assembly in the aperture and align it with the pedestal face. Install the bolts AES254025-97 and torque to 6 Nm in a diagonal sequence. CAUTION: DO NOT FORCE THE HANDLE THROUGH ITS DETENT DURING INSTALLATION. THE DETENT IS SET AT BUILD AND CANNOT BE ADJUSTED IN SERVICE. Connect the two discharge circuits separately at functional items 47EC and 596EC and make sure that neither shares a return with the other. Connect the position feedback at functional item 33EC. Restore the electrical power. Do a continuity check on each discharge circuit with the bottles still inhibited and record the two values. Do the legend illumination check at the first and second discharge positions and confirm that each legend lights independently. Move the handle through both detents and confirm that the second position is felt distinctly.",
+      "close_out": "Remove the discharge inhibit pins and have the removal witnessed. Restore both bottles to the armed condition and confirm the bottle pressure indication. Close the pedestal. Make sure that no tools remain in the pedestal. Remove the warning notices. Record the installation, the two continuity values, the legend check result and the witness names for the pin fit and removal."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOD830120-93",
+        "AES254025-97",
+        "CID171471-49",
+        "VED464294-23"
+      ],
+      "fins": [
+        "47EC",
+        "596EC",
+        "33EC"
+      ],
+      "drawings": [
+        "D76101142635"
+      ],
+      "software": [],
+      "zones": [
+        "413",
+        "483",
+        "453"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-C-76-20-11-810-813",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-71-10-12-400-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "fire handle",
+      "discharge inhibit",
+      "circuit separation",
+      "legend illumination",
+      "detent"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "76-20-11-400-021-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "Aircraft post MOD-111349",
+      "manhours": 6.2,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "413",
+          "483",
+          "453"
+        ],
+        "access_panels": [
+          "413AL"
+        ],
+        "doors": [
+          "Flight compartment pedestal"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Fit and witness the discharge inhibit pins at both bottles before the pedestal is opened.",
+          "Do not force the handle through its detent during installation.",
+          "Keep the inhibit pins fitted until the installation is proven."
+        ],
+        "tooling": [
+          {
+            "reference": "98C76201-090",
+            "description": "Discharge inhibit pin set"
+          },
+          {
+            "reference": "98C00000-050",
+            "description": "Torque wrench 2-20 Nm"
+          },
+          {
+            "reference": "98C76201-115",
+            "description": "Continuity tester, fire circuit"
+          }
+        ],
+        "consumables": [
+          "Primer, epoxy, chromate-free",
+          "Lockwire, corrosion resistant"
+        ],
+        "expendables": [
+          {
+            "part_number": "AES254025-97",
+            "qty": 8
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-C-71-10-12-400-020-A"
+      ],
+      "steps": 17,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,193 @@
+[
+  {
+    "doc_id": "MOD-169118",
+    "doc_type": "MOD",
+    "title": "Generator Control Unit Protection Rework for Hot Turnaround Operation — Issue 3",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-12",
+      "title": "AC Generation — Generator Control Unit"
+    },
+    "secondary_ata": [
+      "24-50",
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00028",
+          "to": "M00456"
+        }
+      ],
+      "excluded_msns": [
+        "M00263"
+      ],
+      "engine_types": [
+        "AUR-8400",
+        "AUR-9700"
+      ],
+      "operators": [
+        "CKP",
+        "GBA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168118"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-05-04",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Third issue of the generator control unit protection work, proposed to remove the remaining hot-turnaround channel losses by taking the shed decision from a bay probe pair and moving it to a winding temperature model, with the ground inhibit widened to any door open condition.",
+    "sections": {
+      "reason": "Two issues of protection change have reduced but not stopped the ground channel losses. One operator counts thirty-one events over two summers on aircraft that already carry the second issue, and four control units have been returned with no shop finding in the same period. The remaining events all occur with the aircraft on ground power and at least one door open, in the window between the second issue inhibit conditions, which require no engine running and a specific door set. The bay probe pair is measuring a local air temperature that is not what the protection is meant to protect.",
+      "description": "The proposal replaces the temperature source used by the protection with a model of winding temperature derived from load, elapsed running time and the existing bay probes, held in the control unit configuration load. The shed decision is taken from the model rather than from an instantaneous reading, and the ground inhibit introduced by the second issue is widened to any condition in which the aircraft is on ground power with a door open. The relay assembly in the distribution bay is retained; a shear-head bolt set is added at the mounting rail to carry the additional bonding required by the revised sensing return. The wiring drawing is reissued for the sensing return only.",
+      "effects": "Mass increase below half a kilogram. No change in electrical load. The change is not interchangeable with the second issue configuration because the sensing return differs. If the model proves acceptable the flight deck caution for this condition disappears entirely on the ground, which is a crew documentation change as well as a maintenance one. Maintenance manual test and troubleshooting content for the channel loss both require reissue for the third time in six years, which the documentation owner has raised as a concern in its own right.",
+      "embodiment_note": "Retrofit only. Embodiment is a configuration load plus a bonding change in the distribution bay, about one shift at a line station, and would be offered to the operators carrying the second issue first.",
+      "open_points": "Pre-analysis must establish whether the winding model is acceptable to the authority as a protection source, whether the widened ground inhibit conflicts with the ground servicing case that the second issue deliberately excluded, and whether a third reissue of the same maintenance content in six years is proportionate or whether the tasks should be rewritten once against the model."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2420007230862",
+        "AES937741K2"
+      ],
+      "fins": [
+        "14PC2",
+        "1468GX"
+      ],
+      "drawings": [
+        "D24201265226"
+      ],
+      "software": [
+        "LD2NDCE7BA6",
+        "LE9PB857871"
+      ],
+      "zones": [
+        "663",
+        "543"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00263"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-M-260512",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-168118",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "MOD-168118",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "generator control unit",
+      "winding temperature model",
+      "ground inhibit",
+      "hot turnaround",
+      "protection"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "mod_number": 169118,
+      "mod_class": "MINOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1351",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.4,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES937741K2"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2420007230862"
+      ],
+      "fins_affected": [
+        "14PC2"
+      ],
+      "software_affected": [
+        "LD2NDCE7BA6"
+      ],
+      "estimated_manhours": 520,
+      "estimated_cost_keur": 980,
+      "lead_time_weeks": 40,
+      "production_impact": "No production cut-in proposed; the line already builds to the second issue",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

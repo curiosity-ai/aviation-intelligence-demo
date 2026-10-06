@@ -1,0 +1,407 @@
+[
+  {
+    "doc_id": "PAWO-139050-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Centre Tank Water Scavenge Jet Pump and Sump Profile",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-12-01",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-10",
+      "53-31"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-12-01",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the centre tank water scavenge and sump re-profile, covering the shell penetration into the aft belly fairing, the drain task interval that the change is meant to relax and the parts and trouble shooting content that follow from it.",
+    "sections": {
+      "objective": "Confirm that the scavenge line penetration and its local doubler can be installed without clashing with structural work planned in the same bay, and establish what has to change in the drain task, the parts figure and the fault isolation content before the revised drain interval can be claimed.",
+      "scope_note": "The search covers ATA 28-20 as the primary chapter and ATA 28-10 storage for the sump geometry. ATA 53-31 was added after the first pass because the scavenge line crosses the shell into the aft belly fairing, and that decision is what surfaced the structural conflict. ATA 26-20 cargo extinguishing was picked up through a shared zone and kept. Air conditioning and electrical chapters were searched and returned nothing, which is expected because the jet pump is driven hydraulically from the existing boost pump and adds no electrical load.",
+      "method_note": "Entity linking was seeded from the five part numbers, the single FIN and the three zones. Adding ATA 53-31 to the scope was a deliberate widening after the doubler kit appeared in the seed set; without it the structural conflict would not have been found, because the two documents share no vocabulary at all. Semantic similarity was run over titles, abstracts and reason-for-change text and contributed one finding on the aft lower shell that entity linking did not return and that has no shared identifiers.",
+      "findings_summary": "Six items are confirmed and one is blocking. The blocking item is the shell penetration: a structural candidate now in pre-analysis is renewing frame feet in the same belly fairing bay and uses the same skin doubler kit at its own penetrations, and the two designs are currently unaware of each other. If both proceed independently, the bay ends up with two separately substantiated doublers within a short distance of each other and neither substantiation accounts for the other. The remaining items are the expected consequences of the change: the parts figure needs the scavenge items and the deleted duct, the drain servicing task carries an acceptance criterion that the change is meant to relax and cannot be relaxed on the strength of the design alone, and the fault isolation procedure leans on the drain record history that the new interval would thin out. One further item is a zone-level interaction with the cargo suppression distribution in the forward belly fairing, which is informational but should be checked before the routing is frozen.",
+      "next_steps": "Open the coordination item with the structural candidate team and agree a single doubler installation. Ask the fuel certification owner what service evidence is needed before the drain interval can move from daily to weekly. Re-issue the parts figure and the fault isolation cause list in the same change package as the modification, not afterwards. Check the scavenge line routing against the suppression distribution pipework before the design is frozen."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820111551992",
+        "D2820115755380",
+        "D2820113555007",
+        "D5331120068647",
+        "LN41340-8C"
+      ],
+      "fins": [
+        "34QA4"
+      ],
+      "drawings": [
+        "D28201202725"
+      ],
+      "software": [],
+      "zones": [
+        "183",
+        "191",
+        "591"
+      ],
+      "figures": [
+        "FIG-28-20-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-139050",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-250742",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-138620",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-132640",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "water scavenge",
+      "shell penetration",
+      "drain interval",
+      "fuel distribution"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-139050-01",
+      "subject_mod": "MOD-139050",
+      "source_io": "IO-S-250742",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2025-12-01",
+      "due_date": "2026-03-20",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ESZS",
+          "ETGC"
+        ],
+        "estimated_manhours": 95,
+        "spent_manhours": 61
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34",
+          "SOLANO-39"
+        ],
+        "ata_2d": [
+          "28",
+          "53",
+          "26"
+        ],
+        "ata_4d": [
+          "28-20",
+          "28-10",
+          "53-31",
+          "26-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "S00003",
+          "to": "S01918"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2820111551992",
+            "D2820115755380",
+            "D2820113555007",
+            "D5331120068647",
+            "LN41340-8C"
+          ],
+          "fins": [
+            "34QA4"
+          ],
+          "drawings": [
+            "D28201202725"
+          ],
+          "zones": [
+            "183",
+            "191",
+            "591"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "free water collecting in a fuel tank sump where the drain valve cannot reach it",
+          "jet pump driven from boost pump motive flow to sweep a tank low point"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search fuel distribution and storage content on the affected chapters",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Widen the scope to the aft belly fairing shell and re-run entity linking",
+          "method": "ENTITY",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Establish the evidence needed for the revised drain interval",
+          "method": "SME_INTERVIEW",
+          "owner": "EAAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Check the scavenge line routing against the suppression pipework",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-138620",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331120068647"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "191"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "A structural candidate is renewing frame feet and re-cutting water escape routes in the same aft belly fairing bay, using the same skin doubler kit at its stringer penetrations that this candidate uses at the scavenge line penetration. Neither document refers to the other and their vocabularies do not overlap: this one talks about motive flow, sump profile and drain intervals, the other about frame feet, inhibitor coverage and corrosion. The connection is the shared zone and the shared part number alone.",
+          "resolution": "Open a joint design review with the structural team, agree one doubler installation covering both penetrations, and record which modification owns it. Neither design should be frozen until this is settled."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-S-28-20-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2820111551992",
+              "D2820115755380",
+              "D2820113555007",
+              "D5331120068647",
+              "LN41340-8C"
+            ],
+            "shared_fins": [
+              "34QA4"
+            ],
+            "shared_zones": [
+              "183",
+              "191",
+              "591"
+            ],
+            "shared_ata_6d": [
+              "28-20-11"
+            ],
+            "similarity_note": "Reached by traversal from the candidate through the removal task to the parts figure that carries the sump items."
+          },
+          "rationale": "The figure already carries a note that the two restrictors set the motive flow balance and must be changed as a pair, and a note that the duct assembly is deleted on aircraft with the scavenge. Those notes were written in anticipation and are now out of step with the actual design: the restrictor part numbers are retained but re-sized, which the figure does not express, and the shell doubler is shown as an item without an effectivity.",
+          "resolution": "Re-issue the figure with the re-sized restrictor pair as an effectivity-split alternate and the shell doubler carrying a post-modification effectivity, in the same change package as the modification."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-S-28-20-11-800-012-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2820111551992",
+              "D2820115755380"
+            ],
+            "shared_fins": [
+              "34QA4"
+            ],
+            "shared_zones": [
+              "183",
+              "591"
+            ],
+            "shared_ata_6d": [
+              "28-20-11"
+            ],
+            "similarity_note": "Both methods return it: the part and FIN seeds match and the task text already anticipates the change with a standard-dependent acceptance note."
+          },
+          "rationale": "The servicing task already carries an effectivity note saying that the acceptance criterion changes for aircraft with the water scavenge, but no criterion has been written. The whole operator benefit of the candidate is the move from a daily drain to a weekly one, and that move lives in this task and nowhere else. Releasing the modification without the criterion delivers no benefit to the operator.",
+          "resolution": "Write the post-modification acceptance criterion and the revised interval into the task, and gate the interval change on the service evidence agreed with the certification owner."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-S-28-20-11-810-803",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2820111551992",
+              "D2820115755380",
+              "LN41340-8C"
+            ],
+            "shared_fins": [
+              "34QA4"
+            ],
+            "shared_zones": [
+              "183",
+              "591"
+            ],
+            "shared_ata_6d": [
+              "28-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure asks the line station to review the drain record for the previous thirty days and treats three or more positive samples as evidence of bearing distress. If the drain interval moves to weekly, thirty days is four samples rather than thirty and the threshold no longer means what it did. The dominant cause probability also changes once the scavenge is working.",
+          "resolution": "Re-issue the procedure with a standard-dependent record window and a revised probability table, released with the interval change rather than with the modification."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "SRM-S-53-31-12-004",
+          "doc_type": "SRM",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by similarity alone on the shared idea of restoring the aft lower shell after material has been removed. No part number, FIN, drawing or zone is common, and the two documents have no significant vocabulary in common."
+          },
+          "rationale": "The external patch repair covers the same region of the aft lower shell that the scavenge line penetration passes through. A patch already installed within the penetration footprint would have to be assessed before the penetration is cut, and the repair boundary is not currently a pre-embodiment check anywhere in the candidate work content.",
+          "resolution": "Add a pre-embodiment check for an existing external patch in the penetration area to the retrofit service bulletin. No design change is expected."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-134860",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "183"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The extended-duration suppression distribution runs its re-balanced manifold and its third metering stage through the same forward belly fairing zone that the scavenge line uses. There is no functional interaction, but the two pipework runs compete for the same routing space and the suppression pipework was itself re-routed when the third stage was added.",
+          "resolution": "Check the scavenge line routing against the suppression pipework installation drawing before the routing is frozen. No document change is expected."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-132640",
+          "doc_type": "MOD",
+          "reason": "Same ATA 28 chapter, and the words transfer, valve, line routing and cold soak give it a high similarity rank against the candidate. The tail trim tank it addresses exists only on the four-engine VTR-64C3 and VTR-68R2, which are not in the candidate effectivity at all; the two share no part number, FIN, drawing or zone, and the systems are not connected."
+        },
+        {
+          "doc_id": "SLN-28-1034",
+          "doc_type": "SB",
+          "reason": "The retrofit vehicle for the four-engine trim tank rework. Its accomplishment text about de-fuelling, purging, tank entry and leak checking reads almost identically to the candidate work content and it ranks in the top three on similarity, but it is applicable to VANTOR aircraft only and shares no identifier with the candidate."
+        }
+      ],
+      "conclusion": "Not yet issued. One blocking coordination item with a parallel structural candidate; the manual and parts consequences are understood and can be packaged with the modification.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

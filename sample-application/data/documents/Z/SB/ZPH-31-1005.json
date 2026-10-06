@@ -1,0 +1,200 @@
+[
+  {
+    "doc_id": "ZPH-31-1005",
+    "doc_type": "SB",
+    "title": "Indicating and Recording — Flight Warning Computer — Conversion to the Standard H2 Build",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-11-12",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-50-12",
+      "31-60"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-04-22",
+      "released": "2024-11-12",
+      "revised": null,
+      "effective": "2024-12-03"
+    },
+    "abstract": "Conversion of the flight warning computer installation to the standard H2 build, which re-orders aural alert priority and extends the take-off and go-around inhibit windows so that fewer alerts compete during a rejected take-off.",
+    "sections": {
+      "planning_reason": "Line operational safety audits across eleven operators recorded ninety-four events in which more than three aural alerts sounded within ten seconds during a rejected take-off or a go-around. Crews consistently reported that the sequence made it harder to identify the governing failure. The existing priority table dates from a period when fewer alerting functions were installed and the inhibit windows were never widened to match the alerts added by later navigation and surveillance standards. Aircraft that are not converted keep the older priority behaviour, which is now inconsistent with the crew training material being issued.",
+      "description": "This Service Bulletin converts the flight warning computer installation to standard H2. The aural generation interface unit is replaced to carry the additional discrete inputs, the rack receives a new backplane connector position, and the control panel lamp driver mapping is revised. The resident boot load is re-issued so that the priority table sits in protected memory. The computer itself is exchanged for a standard H2 unit.",
+      "accomplishment_summary": "De-energise the avionics rack and confirm that the aircraft is on external power only. Get access to the flight compartment rack in zones 211 and 214. Remove the flight warning computer at FIN 7462FW. Remove the aural generation interface unit and install the item D3150128195373. Install the new backplane connector position in the rack DE823727-50 and check continuity against drawing D31501108484. Re-map the control panel IBE53464-77 lamp drivers to the table in the instructions. Install the standard H2 flight warning computer and secure it. Load the boot software LB6NE4646B3 with the portable data loader. Check the data concentrator at FIN 2993FW and the rack position at FIN 668FP2 for correct seating. Do the warning system test following task AMM-Z-31-50-11-700-033-A and confirm the revised priority order on the alert list. Record the embodiment and notify the operator training department.",
+      "effectivity_note": "Applicable to ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 Evo model aircraft delivered before the production cut-in. Operators must not embody this bulletin on part of a fleet without a plan for the associated crew briefing, because the alert order differs from the earlier standard.",
+      "material_note": "Kit K3150-1005-01 contains the interface unit, the backplane connector, the boot software media and the lamp driver mapping sheet. The flight warning computer itself is supplied on exchange and is a twenty-four week item. Removed units are returned to Aeralis."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150128195373",
+        "DE823727-50",
+        "IBE53464-77"
+      ],
+      "fins": [
+        "7462FW",
+        "2993FW",
+        "668FP2"
+      ],
+      "drawings": [
+        "D31501108484"
+      ],
+      "software": [
+        "LB6NE4646B3"
+      ],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-154310",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-Z-31-50-11-700-033-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-Z-31-50-11-810-813",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-Z-DSC-31-50-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "flight warning computer",
+      "standard h2",
+      "aural alert priority",
+      "inhibit window",
+      "crew briefing"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Avionics In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-31-1005",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "DESIRABLE",
+      "compliance_time": "At the operator's convenience, aligned with a recurrent crew training cycle. Not to be embodied on part of a fleet without a briefing plan.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SAFETY",
+      "embodied_mod": "MOD-154310",
+      "manpower": {
+        "elapsed_time_hours": 12,
+        "manhours": 20,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K3150-1005-01",
+        "kit_available_from": "2025-02-10",
+        "parts_required": [
+          {
+            "part_number": "D3150128195373",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "IBE53464-77",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, non residue",
+          "Lint free wipes"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Continuity tester",
+          "Torque screwdriver 0.5-5 Nm"
+        ]
+      },
+      "weight_change_kg": 0.8,
+      "accomplishment_steps": 12,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2024-11-12",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

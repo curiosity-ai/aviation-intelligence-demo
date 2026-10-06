@@ -1,0 +1,311 @@
+[
+  {
+    "doc_id": "PAWO-142590-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Extension of the Green Reservoir Seal and Sight Glass Rework",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-08-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-12",
+      "title": "Main System — Reservoir Assembly"
+    },
+    "secondary_ata": [
+      "29-10-13"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00168"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-26",
+      "released": "2026-08-04",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of a proposed revision extending the green reservoir pressurisation seal and sight glass rework to the yellow system reservoir and to aircraft beyond the current effectivity block.",
+    "sections": {
+      "objective": "Assess a proposed revision that would extend the reservoir pressurisation seal and sight glass rework to the yellow system reservoir head and to the aircraft above the current production cut in, and establish what the extension would do to the retrofit bulletin and to the published servicing data. The request came from the in service engineering review rather than from an operator, on the argument that the two reservoir heads are similar enough to share one standard.",
+      "findings_summary": "The extension was not supported. The retrofit bulletin is written with an effectivity block that stops at the production cut in and with a pre modification statement that only holds below it; extending the standard upwards would leave the bulletin describing a condition that no longer exists on part of its own effectivity, and the bulletin would have to be withdrawn and reissued rather than revised. More decisively, the published fault isolation procedure for a low level indication with no leak found already carries the sight glass misreading as a known cause with a documented workaround, and the reliability data behind the extension turned out to be that workaround being applied on aircraft the original change never covered. The servicing task change is small and follows the rework wherever it is applied.",
+      "next_steps": "The proposed revision was rejected as scoped and returned to the in service engineering review. The yellow system reservoir head is a different casting with a different sight glass boss and cannot inherit the green system qualification, so any extension has to be raised as its own change with its own qualification plan. The effectivity extension above the production cut in was separated from the yellow system question and passed to the bulletin owner to handle as a straightforward effectivity amendment."
+    },
+    "entities": {
+      "part_numbers": [
+        "KE634291-03",
+        "LN745829-02",
+        "NO46703-01"
+      ],
+      "fins": [
+        "8893GA1"
+      ],
+      "drawings": [
+        "D29101228651",
+        "D29101262441"
+      ],
+      "software": [],
+      "zones": [
+        "162",
+        "723"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142590",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "hydraulic reservoir",
+      "sight glass",
+      "pressurisation seal",
+      "effectivity extension"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-142590-01",
+      "subject_mod": "MOD-142590",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-08-04",
+      "outcome": "REJECTED",
+      "raised_date": "2026-05-26",
+      "due_date": "2026-08-14",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 80,
+        "spent_manhours": 61
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "29"
+        ],
+        "ata_4d": [
+          "29-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00206"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "KE634291-03",
+            "LN745829-02",
+            "NO46703-01"
+          ],
+          "fins": [
+            "8893GA1"
+          ],
+          "drawings": [
+            "D29101228651"
+          ],
+          "zones": [
+            "162",
+            "723"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "reservoir sight glass misreading and false low level",
+          "pressurisation seal rework on a hydraulic reservoir head"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search hydraulic reservoir data across the green and yellow systems",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Trace the reliability data behind the extension request",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the retrofit bulletin effectivity against the proposed scope",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TTN-29-1017",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "KE634291-03",
+              "LN745829-02",
+              "NO46703-01"
+            ],
+            "shared_fins": [
+              "8893GA1"
+            ],
+            "shared_zones": [
+              "162",
+              "723"
+            ],
+            "shared_ata_6d": [
+              "29-10-12",
+              "29-10-13"
+            ],
+            "shared_drawings": [
+              "D29101228651",
+              "D29101262441"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin's effectivity stops at the production cut in and its accomplishment instructions rest on a pre modification condition that only holds below that point. Extending the standard upwards would leave the bulletin describing a condition that does not exist on part of its own effectivity block.",
+          "resolution": "Withdraw and reissue the bulletin rather than revise it, if the effectivity extension goes ahead separately."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-T-29-10-12-810-806",
+          "doc_type": "TSM",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "NO46703-01"
+            ],
+            "shared_fins": [
+              "8893GA1"
+            ],
+            "shared_zones": [
+              "162",
+              "723"
+            ],
+            "shared_ata_6d": [
+              "29-10-12"
+            ],
+            "shared_drawings": [
+              "D29101228651"
+            ],
+            "similarity_note": "The procedure and the proposed revision describe the same symptom in nearly the same words, a low level indication with no leak found and a sight glass that reads short."
+          },
+          "rationale": "The procedure already carries the sight glass misreading as a known cause with a documented workaround. Tracing the reliability figures behind the extension showed they are that workaround being applied on aircraft outside the original effectivity, not a new failure mode.",
+          "resolution": "Reject the extension on this evidence and handle the affected aircraft through the existing bulletin effectivity amendment."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-T-29-10-12-800-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "KE634291-03",
+              "LN745829-02"
+            ],
+            "shared_fins": [
+              "8893GA1"
+            ],
+            "shared_zones": [
+              "162",
+              "723"
+            ],
+            "shared_ata_6d": [
+              "29-10-12",
+              "29-10-13"
+            ],
+            "shared_drawings": [
+              "D29101228651"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The replenishment task reads the level against a graduation on the sight glass that the rework changes. The impact is real but small and follows the rework wherever it is applied, so it does not depend on the outcome of the extension request.",
+          "resolution": "No action from this work order; the task change is already scheduled with the original modification."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "AMM-T-52-30-12-700-001-A",
+          "doc_type": "AMM",
+          "reason": "Retrieved by similarity because it discusses hydraulic pressure, reservoir level and slow operation in cold conditions in language close to the request. It is the aft cargo door actuation test, it reads no reservoir instrument and it is unaffected by any reservoir head standard."
+        }
+      ],
+      "conclusion": "Issued 2026-08-04. The extension was rejected: the yellow system head cannot inherit the green system qualification and the reliability evidence resolved to an existing documented workaround.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

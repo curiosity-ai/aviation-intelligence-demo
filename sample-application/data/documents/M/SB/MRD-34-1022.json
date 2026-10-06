@@ -1,0 +1,170 @@
+[
+  {
+    "doc_id": "MRD-34-1022",
+    "doc_type": "SB",
+    "title": "Navigation — Multi-Mode Receiver — Reroute the Antenna Feed Clear of the Switched Bundle",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-11-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42"
+      ],
+      "models": [
+        "MRD-42K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00165"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-168155"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-06-25",
+      "released": "2018-11-13",
+      "revised": null,
+      "effective": "2018-12-10"
+    },
+    "abstract": "Reroutes the multi-mode receiver antenna feed along the opposite side of the rack and fits the revised mounting tray, removing the interference path that slowed satellite acquisition during ground manoeuvring.",
+    "sections": {
+      "planning_reason": "Two operators reported slow satellite acquisition and occasional loss of the augmented position solution while taxiing, always at the same airports. Bench work reproduced the effect when the antenna feed runs parallel to a switched bundle for more than one and a half metres, which is the delivered routing between the receiver rack and the bay wall penetration. The effect is operational rather than structural and shows up as crew reports rather than as maintenance messages.",
+      "description": "This bulletin reroutes the antenna feed along the opposite side of the rack, giving a minimum separation of two hundred millimetres from the switched bundle, and fits a revised mounting tray with an additional feed-through grommet to support the new route. The receiver, its database and the data concentrator are unchanged.",
+      "accomplishment_summary": "Open the avionics bay, remove power from the receiver and note the existing feed route with a photograph for the records. Disconnect the antenna feed at both ends, remove the delivered mounting tray and install the revised tray on the existing holes. Route the feed along the opposite side of the rack through the new grommet, keeping the bend radius above the value in the bulletin and the separation above two hundred millimetres over the whole run. Reconnect and do the receiver check in AMM-M-34-50-11-200-036-A, including a satellite acquisition check with the aircraft on ground power only. Close the bay and make the records entry.",
+      "effectivity_note": "Applies to MERIDIAN-42 aircraft between MSN M00001 and M00165 that have not embodied MOD-168155. On aircraft carrying the second issue the routing is already included and this bulletin has no effect; embodying it there would only repeat work already done.",
+      "material_note": "Kit contains the revised mounting tray, the feed-through grommet and the clamp set. The antenna feed itself is reused and must be inspected for cover damage before refitting; a replacement feed is available separately if damage is found."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450119360685",
+        "D3450118136339"
+      ],
+      "fins": [
+        "1038DA"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [],
+      "zones": [
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00165"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168048",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-M-34-50-11-200-036-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "multi-mode receiver",
+      "antenna feed",
+      "routing separation",
+      "mounting tray",
+      "acquisition"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Customer Services"
+    },
+    "type_data": {
+      "sb_number": "MRD-34-1022",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "OPTIONAL",
+      "compliance_time": "At the operator's convenience.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "PERFORMANCE",
+      "embodied_mod": "MOD-168048",
+      "manpower": {
+        "elapsed_time_hours": 8,
+        "manhours": 12,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K3450-1022-01",
+        "kit_available_from": "2019-01-14",
+        "parts_required": [
+          {
+            "part_number": "D3450119360685",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Cable ties, self-locking",
+          "Identification sleeve set"
+        ],
+        "tooling": [
+          "Torque wrench 2-20 Nm",
+          "Satellite signal simulator"
+        ]
+      },
+      "weight_change_kg": 0.3,
+      "accomplishment_steps": 8,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2018-11-13",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

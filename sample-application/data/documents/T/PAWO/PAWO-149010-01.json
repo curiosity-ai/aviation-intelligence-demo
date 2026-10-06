@@ -1,0 +1,261 @@
+[
+  {
+    "doc_id": "PAWO-149010-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — High Temperature Aft Seal for the Translating Sleeve",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "78",
+      "ata_4d": "78-30",
+      "ata_6d": "78-30-11",
+      "title": "Thrust Reverser — Translating Sleeve"
+    },
+    "secondary_ata": [
+      "78-30-12"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "CVX-7270"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-22",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the translating sleeve seal standard, opened to consider an on-wing conversion route and rejected because the blocker door land machining cannot be done on the aircraft.",
+    "sections": {
+      "objective": "Establish whether the seal standard can be embodied with the reverser on wing, which several operators asked for, and identify what would have to change in the shop and on-wing documentation if it could.",
+      "findings_summary": "The on-wing route was rejected. The land reshaping is a machining operation carried out against a shop fixture, and the profile tolerance cannot be held with the sleeve on the aircraft. A partial route was considered, in which the seal is replaced on wing and the land is left at the original profile, and it was rejected too: an unreshaped land with the new seal gives contact only at the ends of the sleeve travel, which is worse than either complete standard. Two items were confirmed. The shop task correctly requires the liner survey before any work and that survey is the gate that sends a damaged sleeve to repair. The illustrated parts figure lists the shim set as a selection, which is essential because the shim choice depends on measurements taken at removal and cannot be pre-kitted.",
+      "next_steps": "Do not offer an on-wing route. Confirm in the bulletin that a partial embodiment is not permitted and state the reason, because operators will otherwise ask again. No documentation change beyond that statement."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7830110928662",
+        "D7830119921493",
+        "ORD935602-47"
+      ],
+      "fins": [
+        "1815ET",
+        "3973ET1"
+      ],
+      "drawings": [
+        "D78101230413"
+      ],
+      "software": [],
+      "zones": [
+        "483",
+        "482"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149010",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "translating sleeve",
+      "on-wing route",
+      "partial embodiment",
+      "historical"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149010-01",
+      "subject_mod": "MOD-149010",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-08-03",
+      "outcome": "REJECTED",
+      "raised_date": "2026-06-22",
+      "due_date": "2026-08-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EDSA"
+        ],
+        "estimated_manhours": 150,
+        "spent_manhours": 187
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "78",
+          "54"
+        ],
+        "ata_4d": [
+          "78-30",
+          "54-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "T00090",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D7830110928662",
+            "D7830119921493"
+          ],
+          "fins": [
+            "1815ET",
+            "3973ET1"
+          ],
+          "drawings": [
+            "D78101230413"
+          ],
+          "zones": [
+            "483"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "hot gas leakage path opening as a seal takes compression set",
+          "machining operation that cannot be done on the aircraft"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Assess the land machining tolerance achievable on wing",
+          "method": "SME_INTERVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Evaluate a partial embodiment with the original land profile",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-T-78-30-11-000-003-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D7830110928662",
+              "D7830119921493"
+            ],
+            "shared_fins": [
+              "1815ET",
+              "3973ET1"
+            ],
+            "shared_zones": [
+              "483",
+              "482"
+            ],
+            "shared_ata_6d": [
+              "78-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The liner survey in the removal task is the gate that sends a damaged sleeve to repair before conversion. An on-wing route would have removed that gate, because the survey cannot be done properly with the sleeve installed.",
+          "resolution": "No change. The survey requirement is the reason the on-wing route cannot be offered."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-T-78-30-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D7830110928662",
+              "ORD935602-47"
+            ],
+            "shared_fins": [
+              "1815ET"
+            ],
+            "shared_zones": [
+              "483"
+            ],
+            "shared_ata_6d": [
+              "78-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The shim set is listed as a selection rather than as a fixed quantity, which is correct: the shim choice depends on measurements taken at removal and a pre-kitted quantity would be wrong on most sleeves.",
+          "resolution": "No change. Confirmed correct."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-148710",
+          "doc_type": "MOD",
+          "reason": "Returned by a semantic search on nacelle structure work done off the aircraft, and it does share the shop-visit character, but it concerns a door hinge beam on a different engine variant with no shared part, zone or ATA chapter."
+        }
+      ],
+      "conclusion": "On-wing and partial routes both rejected. A statement will be added to the bulletin.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

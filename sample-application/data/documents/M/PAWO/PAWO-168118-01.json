@@ -1,0 +1,298 @@
+[
+  {
+    "doc_id": "PAWO-168118-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Closed) — Generator Control Unit Ground Inhibit, Second Issue Retrofit Extension",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-12",
+      "title": "AC Generation — Generator Control Unit"
+    },
+    "secondary_ata": [
+      "24-50",
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-02",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis carried out in 2026 to support extending the second issue retrofit to the remaining operators, revisiting the standard three years after it entered service with the field data that had since accumulated.",
+    "sections": {
+      "objective": "Establish whether the second issue retrofit could be offered to the operators who had declined it, and whether the three years of field data since production cut-in changed any of the assumptions made when it was released.",
+      "findings_summary": "Four items were confirmed. The field data supported the change: the operators who embodied it reported a fall of roughly eighty per cent in ground channel losses, which is what the original analysis predicted. Against that, six events were still recorded on embodied aircraft, all in a door configuration the inhibit does not cover, and that residual population was the reason the work order recommended proceeding with conditions rather than proceeding. The first issue remains a prerequisite because the sensing pair identification was introduced there, and the parts figure needed the splice module split by effectivity before any further retrofit is offered. The troubleshooting entry was found to be describing the pre-inhibit behaviour in one step that had been missed at the original release.",
+      "next_steps": "Retrofit extension approved with conditions. The residual event population was passed to the design office and became the starting point for the third issue work order raised in May 2026."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2420009863177",
+        "D2420007230862"
+      ],
+      "fins": [
+        "14PC2",
+        "18GX"
+      ],
+      "drawings": [
+        "D24201265226"
+      ],
+      "software": [
+        "LD2NDCE7BA6"
+      ],
+      "zones": [
+        "663",
+        "512"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168118",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "closed pre-analysis",
+      "retrofit extension",
+      "ground inhibit",
+      "field data",
+      "residual events"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-168118-01",
+      "subject_mod": "MOD-168118",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-09",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-04-02",
+      "due_date": "2026-07-17",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "EYIS",
+          "EGAM"
+        ],
+        "estimated_manhours": 120,
+        "spent_manhours": 148
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "24",
+          "31"
+        ],
+        "ata_4d": [
+          "24-20",
+          "24-50",
+          "31-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00456"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2420009863177",
+            "D2420007230862"
+          ],
+          "fins": [
+            "14PC2",
+            "18GX"
+          ],
+          "drawings": [
+            "D24201265226"
+          ],
+          "zones": [
+            "663",
+            "512"
+          ],
+          "software": [
+            "LD2NDCE7BA6"
+          ]
+        },
+        "similarity_seeds": [
+          "a change that worked for most of the fleet and left a residual population behind"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Analyse three years of field data on embodied aircraft",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search the generator control family on the entity seeds",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the troubleshooting entry against the inhibited behaviour",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-168012",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "24-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The sensing pair identification assumed by the second issue configuration was introduced by the first issue. An aircraft that never embodied it cannot take the second issue load without the identification work being done first.",
+          "resolution": "Keep the first issue as a post-modification condition on the retrofit bulletin."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-24-1058",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "24-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin effectivity was written before the larger variant entered the retrofit population, and the revision that extended it did not restate the prerequisite for that variant.",
+          "resolution": "Restate the prerequisite in the next bulletin revision."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-M-24-20-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "24-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The splice module was shown as a single item although two standards were in service, so an operator ordering from the figure could receive the wrong footprint.",
+          "resolution": "Split the splice module item by effectivity before further retrofit is offered."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-M-24-20-12-810-808",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "24-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "One step still described the pre-inhibit behaviour and would send an engineer to reproduce a shed that a modified aircraft will not produce.",
+          "resolution": "Correct the step in the next issue of the procedure."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-168264",
+          "doc_type": "MOD",
+          "reason": "Returned on the hot-region reliability narrative and the no-fault-found return rate, but it is a throttle actuation card with no electrical generation content and no shared identifier."
+        }
+      ],
+      "conclusion": "Closed. Retrofit extension approved with conditions; the residual event population was carried into a new work order.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

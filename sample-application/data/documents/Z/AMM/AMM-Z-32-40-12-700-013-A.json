@@ -1,0 +1,352 @@
+[
+  {
+    "doc_id": "AMM-Z-32-40-12-700-013-A",
+    "doc_type": "AMM",
+    "title": "Functional Test of the Brake and Steering Control Unit After a Software Load",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1991-09-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-01-19",
+      "released": "1991-09-17",
+      "revised": null,
+      "effective": "1991-10-08"
+    },
+    "abstract": "Functional test of the brake and steering control unit after a software load, covering the part number verification, the anti-skid built-in test, the pressure feedback check and the taxi verification.",
+    "sections": {
+      "purpose": "This task verifies that the brake and steering control unit has accepted a software load correctly, that the anti-skid channels respond to the built-in test and that the brake pressure feedback reads inside the expected band.",
+      "job_setup_note": "The test requires the yellow hydraulic system pressurised, the aircraft on its wheels with chocks in place and the parking brake released for part of the sequence. The loaded software part number is checked against the fixed list of accepted standards in the referenced data; a part number that is not on that list is treated as a failed load. Confirm the part number from the maintenance page before you start, because a partial load will pass the built-in test but fail the pressure feedback check. Two people are required and the wheel area must be kept clear.",
+      "procedure": "1. Chock the aircraft and confirm that the towbar is disconnected. WARNING: THE PARKING BRAKE IS RELEASED DURING PART OF THIS TEST. MAKE SURE THE CHOCKS ARE IN POSITION AND THAT NOBODY IS IN FRONT OF OR BEHIND THE WHEELS. 2. Get access to the unit in zone 754 and confirm the connector locking. 3. Apply electrical power and select the maintenance page. 4. Record the software part number reported by the unit at FIN 998GM and check it against the list of accepted standards in the referenced data. CAUTION: A PART NUMBER THAT IS NOT ON THE ACCEPTED LIST MEANS THE LOAD DID NOT COMPLETE. REPEAT THE LOAD BEFORE YOU CONTINUE. 5. Pressurise the yellow hydraulic system. 6. Run the anti-skid built-in test and confirm that all four channels report serviceable. 7. Apply the brakes progressively and confirm that the pressure reported by the transmitter D3240125686751 tracks the pedal within the band given in the referenced data. 8. Check the regulator D3240121994833 response by applying and releasing the brakes ten times and confirm no pressure creep. 9. Confirm the calibration table checksum reported for the sensor D3240129735238. 10. Do a taxi test with at least two autobrake applications and confirm no fault message appears. 11. Return to stand and confirm that the fault memory is empty.",
+      "close_out": "Remove electrical and hydraulic power. Record the software part number, the built-in test result, the pressure feedback readings and the taxi test outcome against the aircraft. Enter the software part number in the aircraft configuration record. Report any fault message before release to service."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240129735238",
+        "D3240121994833",
+        "D3240125686751"
+      ],
+      "fins": [
+        "998GM",
+        "2225WS"
+      ],
+      "drawings": [
+        "D32401235626",
+        "D32401274246"
+      ],
+      "software": [],
+      "zones": [
+        "754",
+        "744"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-32-1240",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-155471",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "software part number",
+      "anti-skid built-in test",
+      "pressure feedback",
+      "taxi test"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "32-40-12-700-013-A",
+      "task_type": "TEST",
+      "effectivity_note": "Aircraft with the two-wheel anti-skid reference standard",
+      "manhours": 7.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "754",
+          "744"
+        ],
+        "access_panels": [
+          "754CL",
+          "744CR"
+        ],
+        "doors": [
+          "Main gear doors"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Chock the aircraft before you release the parking brake.",
+          "Keep the wheel area clear during the test.",
+          "Confirm the towbar is disconnected before the taxi test.",
+          "Do not open the unit connector with power applied."
+        ],
+        "tooling": [
+          {
+            "reference": "98D32401-129",
+            "description": "Brake system test set"
+          },
+          {
+            "reference": "98D32401-137",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D32401-145",
+            "description": "Pressure gauge set, brake line"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Contact cleaner"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-Z-32-10-11-400-010-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-Z-32-40-12-700-013-A",
+    "doc_type": "AMM",
+    "title": "Functional Test of the Brake and Steering Control Unit After a Software Load",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-04",
+      "reason": "The list of accepted software part numbers is extended with the four-wheel reference standard so that the closing check of the retrofit passes on a correctly converted aircraft.",
+      "raised_by_pawo": "PAWO-155471-01",
+      "raised_by_finding": "F04",
+      "finding_type": "SOFTWARE_CONFLICT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-01-19",
+      "released": "1991-09-17",
+      "revised": "2026-08-04",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Functional test of the brake and steering control unit after a software load, covering part number verification against the accepted standards list, the anti-skid built-in test, the pressure feedback check and the taxi verification.",
+    "sections": {
+      "purpose": "This task verifies that the brake and steering control unit has accepted a software load correctly, that the anti-skid channels respond to the built-in test and that the brake pressure feedback reads inside the expected band.",
+      "job_setup_note": "The test requires the yellow hydraulic system pressurised, the aircraft on its wheels with chocks in place and the parking brake released for part of the sequence. The loaded software part number is checked against the list of accepted standards in the referenced data, which now carries the four-wheel reference standard LG3N06435DD alongside the earlier entries; the list is the closing check of the retrofit bulletin, so a standard missing from it fails a correctly converted aircraft. Confirm the part number from the maintenance page before you start, because a partial load will pass the built-in test but fail the pressure feedback check. Two people are required and the wheel area must be kept clear.",
+      "procedure": "1. Chock the aircraft and confirm that the towbar is disconnected. WARNING: THE PARKING BRAKE IS RELEASED DURING PART OF THIS TEST. MAKE SURE THE CHOCKS ARE IN POSITION AND THAT NOBODY IS IN FRONT OF OR BEHIND THE WHEELS. 2. Get access to the unit in zone 754 and confirm the connector locking. 3. Apply electrical power and select the maintenance page. 4. Record the software part number reported by the unit at FIN 998GM and compare it with the load record. CAUTION: A PART NUMBER THAT DOES NOT MATCH THE LOAD RECORD MEANS THE LOAD DID NOT COMPLETE. REPEAT THE LOAD BEFORE YOU CONTINUE. 5. Pressurise the yellow hydraulic system. 6. Run the anti-skid built-in test and confirm that all four channels report serviceable. 7. Apply the brakes progressively and confirm that the pressure reported by the transmitter D3240125686751 tracks the pedal within the band given in the referenced data. 8. Check the regulator D3240121994833 response by applying and releasing the brakes ten times and confirm no pressure creep. 9. Confirm the calibration table checksum reported for the sensor D3240129735238. 10. Do a taxi test with at least two autobrake applications and confirm no fault message appears. 11. Return to stand and confirm that the fault memory is empty.",
+      "close_out": "Remove electrical and hydraulic power. Record the software part number, the built-in test result, the pressure feedback readings and the taxi test outcome against the aircraft. Enter the software part number in the aircraft configuration record. Report any fault message before release to service."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240129735238",
+        "D3240121994833",
+        "D3240125686751"
+      ],
+      "fins": [
+        "998GM",
+        "2225WS"
+      ],
+      "drawings": [
+        "D32401235626",
+        "D32401274246"
+      ],
+      "software": [
+        "LG3N06435DD"
+      ],
+      "zones": [
+        "754",
+        "744"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-32-1240",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-155471",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "accepted standards list",
+      "anti-skid built-in test",
+      "pressure feedback",
+      "taxi test"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "32-40-12-700-013-A",
+      "task_type": "TEST",
+      "effectivity_note": "Aircraft with the two-wheel or the four-wheel anti-skid reference standard",
+      "manhours": 7.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "754",
+          "744"
+        ],
+        "access_panels": [
+          "754CL",
+          "744CR"
+        ],
+        "doors": [
+          "Main gear doors"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Chock the aircraft before you release the parking brake.",
+          "Keep the wheel area clear during the test.",
+          "Confirm the towbar is disconnected before the taxi test.",
+          "Do not open the unit connector with power applied."
+        ],
+        "tooling": [
+          {
+            "reference": "98D32401-129",
+            "description": "Brake system test set"
+          },
+          {
+            "reference": "98D32401-137",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D32401-145",
+            "description": "Pressure gauge set, brake line"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Contact cleaner"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-Z-32-10-11-400-010-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

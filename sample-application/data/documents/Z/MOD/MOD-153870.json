@@ -1,0 +1,183 @@
+[
+  {
+    "doc_id": "MOD-153870",
+    "doc_type": "MOD",
+    "title": "External Bonded Doubler Strap over the Fwd Lower Shell Lap Joint between STA 1080 and STA 1360",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2022-04-26",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-12",
+      "title": "Fuselage Section 13 — Forward — Skin Panels"
+    },
+    "secondary_ata": [
+      "51-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z00051",
+          "to": "Z03884"
+        }
+      ],
+      "excluded_msns": [
+        "Z00947"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "ZPH-53-1118",
+        "ZPH-53-1121"
+      ]
+    },
+    "dates": {
+      "created": "2018-05-14",
+      "released": "2019-10-02",
+      "revised": "2022-04-26",
+      "effective": "2022-05-16"
+    },
+    "abstract": "Installation of an externally bonded and riveted aluminium strap across the forward lower shell lap joint, which lowers the bearing stress at the outer fastener row and restores the damage tolerance rating after corrosion blend-out.",
+    "sections": {
+      "reason": "The re-sealing standard introduced earlier restored the corrosion protection but did not change the load path, and cracking continued to be reported from the outer fastener row of the same joint on the highest-cycle aircraft. Between 2017 and 2019, seventeen crack findings were recorded, eleven of them on aircraft that had already been re-sealed. Fatigue re-analysis under the revised short-sector loading spectrum showed that a joint thinned by an earlier blend-out no longer met the damage tolerance rating that the inspection programme assumes, which is why an inspection-only answer was rejected.",
+      "description": "An aluminium alloy strap MOD50333-97 is bonded and riveted externally over the lap joint on each side of the aircraft, spanning stations 1080 to 1360 and overlapping the joint by four fastener pitches above and below. The strap is installed wet with a structural adhesive film and mechanically fastened with rivets AES645587-2A through the existing pattern, which is oversized by one nominal diameter after removal of the original fasteners. The internal stiffener D5321121753099 is retained. Where an earlier splice plate ORV288354-46 has been fitted, it stays in place and the strap footprint steps over it. External surfaces are re-treated and the aerodynamic fairing compound is restored. Drawings D53211223480 issue H and D53211263552 issue F carry the strap layout and the revised fastener pattern; access is from outside on jacks, with internal support from zones 113 and 121.",
+      "effects": "Mass increase of 7.6 kg per aircraft, symmetric, with a centre-of-gravity shift below 0.03 per cent MAC. No electrical load change. The strap is not interchangeable with the pre-modification joint because the fastener holes are oversized during embodiment and cannot be restored. The repeat high-frequency eddy current inspection of the outer fastener row is replaced by a general visual inspection of the strap perimeter at each structural check. Structure Repair Manual content for this panel needed re-issue at revision C because the previously published external doubler repair no longer fits over the strap.",
+      "embodiment_note": "Retrofit only, in two bulletins: a pre-embodiment eddy current inspection of the joint, then the strap installation itself. Elapsed time is about six days on jacks. Kits are held as spares and lead time is sixteen weeks."
+    },
+    "entities": {
+      "part_numbers": [
+        "MOD50333-97",
+        "AES645587-2A",
+        "D5321121753099",
+        "ORV288354-46"
+      ],
+      "fins": [],
+      "drawings": [
+        "D53211223480",
+        "D53211263552"
+      ],
+      "software": [],
+      "zones": [
+        "113",
+        "121"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z03884"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-150214",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "ZPH-53-1118",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "ZPH-53-1121",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "bonded strap",
+      "lap joint",
+      "damage tolerance",
+      "oversized fastener",
+      "lower shell"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 153870,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.571",
+          "CS 25.613"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 7.6,
+      "balance_impact": "Symmetric installation, CG shift below 0.03 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "MOD50333-97",
+        "AES645587-2A"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5321121753099",
+        "ORV288354-46"
+      ],
+      "fins_affected": [],
+      "software_affected": [],
+      "estimated_manhours": 264,
+      "estimated_cost_keur": 880,
+      "lead_time_weeks": 26,
+      "production_impact": "No production cut-in proposed; the affected build standard is out of production",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

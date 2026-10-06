@@ -1,0 +1,297 @@
+[
+  {
+    "doc_id": "PAWO-111238-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Extension of the Cold Weather Actuator to the Whole Fleet",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-12",
+      "title": "Distribution — Isolation Valves"
+    },
+    "secondary_ata": [
+      "36-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00342"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-11-18",
+      "released": "2026-02-17",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the first cold weather actuator standard, run on a proposal to extend the retrofit to operators outside cold climates, which the analysis rejected on the evidence available.",
+    "sections": {
+      "objective": "Assess a proposal to extend the retrofit of the first low-temperature actuator standard from cold climate operators to the whole delivered fleet, on the argument that the actuator is more reliable in general and not only in the cold.",
+      "findings_summary": "The proposal was not supported. Three items were confirmed. The removal data showed no reliability difference between the two actuators outside cold operation: the confirmed removal rate on warm climate aircraft was within the noise band of the delivered actuator and the proposed benefit did not exist. Second, extending the retrofit would have created a second population at the intermediate standard, because the four-position change was already in work and would have re-touched every valve anyway, and the line would have had three actuator standards to support instead of two. Third, the illustrated part list would have needed a third effectivity note behind one part number. The analysis recommended waiting for the four-position change rather than embodying an interim standard twice.",
+      "next_steps": "Reject the extension and record the removal data comparison so that the question is not re-opened without new evidence. Advise the two requesting operators to wait for the four-position standard. Keep the existing cold climate effectivity unchanged."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3610120750241",
+        "D3610116310629",
+        "EN984959K3",
+        "GIR634074-45"
+      ],
+      "fins": [
+        "57PN6",
+        "198PU"
+      ],
+      "drawings": [
+        "D36201159645"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "444"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00205"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111238",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "actuator retrofit",
+      "effectivity extension",
+      "removal rate",
+      "interim standard"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111238-01",
+      "subject_mod": "MOD-111238",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-02-17",
+      "outcome": "REJECTED",
+      "raised_date": "2025-11-18",
+      "due_date": "2026-02-27",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 60,
+        "spent_manhours": 88
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "36"
+        ],
+        "ata_4d": [
+          "36-10",
+          "36-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "C00001",
+          "to": "C00342"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3610120750241",
+            "D3610116310629",
+            "GIR634074-45"
+          ],
+          "fins": [
+            "57PN6",
+            "198PU"
+          ],
+          "drawings": [
+            "D36201159645"
+          ],
+          "zones": [
+            "443",
+            "444"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "is the low temperature actuator more reliable in general or only in the cold"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare removal rates by climate band",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check interaction with the four-position change in work",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111244",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3610120750241",
+              "GIR634074-45",
+              "EN984959K3"
+            ],
+            "shared_fins": [
+              "57PN6",
+              "198PU"
+            ],
+            "shared_zones": [
+              "443",
+              "444"
+            ],
+            "shared_ata_6d": [
+              "36-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The four-position change was already in work and would re-touch every valve on the aircraft, so extending this retrofit would have meant opening the same pylon twice within two years for the same actuator.",
+          "resolution": "Extension rejected; the two requesting operators were advised to wait for the four-position standard."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-C-36-10-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3610120750241",
+              "D3610116310629",
+              "GIR634074-45"
+            ],
+            "shared_fins": [
+              "57PN6",
+              "198PU"
+            ],
+            "shared_zones": [
+              "443",
+              "444"
+            ],
+            "shared_ata_6d": [
+              "36-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "A third effectivity note behind the same regulator part number would have made the figure unusable on the line, which was already carrying two.",
+          "resolution": "Noted as a further reason not to extend."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-C-36-10-12-400-012-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3610120750241",
+              "D3610116310629",
+              "EN984959K3"
+            ],
+            "shared_fins": [
+              "57PN6",
+              "198PU"
+            ],
+            "shared_zones": [
+              "443",
+              "444"
+            ],
+            "shared_ata_6d": [
+              "36-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task would have needed a third acceptance band for the travel test, which nobody had costed into the proposal.",
+          "resolution": "Recorded; no action taken because the extension was rejected."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Extension rejected. The claimed reliability benefit outside cold operation could not be shown in the removal data, and the four-position change made an interim embodiment wasteful.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

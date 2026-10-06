@@ -1,0 +1,422 @@
+[
+  {
+    "doc_id": "PAWO-166852-02",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis Round Two — Relocation of the Fwd Cargo Door Proximity Sensor Target Plate",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-12",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-70",
+      "ata_6d": "52-70-11",
+      "title": "Door Warning — Door Proximity Sensing"
+    },
+    "secondary_ata": [
+      "52-30",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00104",
+          "to": "M00419"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-12",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Second round of pre-analysis on the door proximity sensor relocation, re-run after a structural candidate on the same door surround was opened and closed the first round with an unresolved footprint question.",
+    "sections": {
+      "objective": "Re-assess the proximity sensor relocation against the documentation set as it stands in May 2026, after the first round was closed with the bracket footprint unresolved and a structural candidate on the same door surround has since been opened. Establish in particular whether the two candidates can be designed independently or whether a joint footprint has to be agreed.",
+      "scope_note": "The search covers ATA 52-70 as the primary chapter, ATA 52-30 because the bracket lands on the door structure next to the latching installation, and ATA 92-21 because the sensor tail is part of the door warning loom. The first round did not include ATA 92-21 and that is the main reason it is being re-run. Fuselage structure was searched this time, which it was not in the first round; that decision produced the blocking finding.",
+      "method_note": "Entity linking was seeded from the three part numbers, the two functional item numbers, the drawing number and the two zones on the candidate. The functional item number for the forward sensor is the strongest link in the whole dataset for this area and carries most of the result set. Semantic similarity was run separately over repair and structural text and produced one finding with no shared identifiers. Applicability filtering on the retrofit bulletin population produced one more that neither method found on its own.",
+      "findings_summary": "Eight items have been confirmed and one is blocking. The blocking item is the structural candidate opened since the first round: it puts a load-diffusion doubler on the frames behind the same door threshold and its footprint reaches the region where the new sensor bracket is to be mounted. The two candidates were raised by different design offices, neither references the other, and both are currently sized on the assumption that the region is free. Below that, the released latching change occupies the same threshold zone, the wiring sheet for the door warning loom shows support brackets that move with the sensor, the fault isolation procedure quotes a sill deflection figure that the relocation makes obsolete, and the illustrated parts figure and the installation task both carry the sill mounting as the delivered standard. A repair scheme on the door outer skin was surfaced by similarity alone and turns out to be relevant because it is applied in the same threshold area. Finally the retrofit bulletin for the latching change is effective on part of the same population and needs an ordering note.",
+      "next_steps": "Convene a joint footprint review with the structural design office before either candidate is frozen. Add ATA 92-21 to the standing search scope for door installation changes. Ask the troubleshooting owner for a revised sill deflection figure. Prepare the documentation change list for the sensing installation and agree it with technical publications."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5270117831041",
+        "D5270114205406",
+        "LN209430K7"
+      ],
+      "fins": [
+        "3WT6",
+        "23WT"
+      ],
+      "drawings": [
+        "D52701117658"
+      ],
+      "software": [],
+      "zones": [
+        "811",
+        "891"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-166852",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "second round",
+      "door proximity sensing",
+      "bracket footprint",
+      "joint review"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-166852-02",
+      "subject_mod": "MOD-166852",
+      "source_io": null,
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-12",
+      "due_date": "2026-07-31",
+      "analysis_round": 2,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ESZS",
+          "EDSA"
+        ],
+        "estimated_manhours": 85,
+        "spent_manhours": 33
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "52",
+          "92",
+          "53"
+        ],
+        "ata_4d": [
+          "52-70",
+          "52-30",
+          "92-21",
+          "53-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "M00104",
+          "to": "M00419"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5270117831041",
+            "D5270114205406",
+            "LN209430K7"
+          ],
+          "fins": [
+            "3WT6",
+            "23WT"
+          ],
+          "drawings": [
+            "D52701117658"
+          ],
+          "zones": [
+            "811",
+            "891"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "target plate mounted on a door sill that deflects under a loaded pallet",
+          "spurious door not locked indication during cargo loading"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Re-run the entity search with ATA 92-21 added to the scope",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search fuselage structure candidates on the same door surround",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess repair schemes applied in the door threshold area",
+          "method": "SEMANTIC",
+          "owner": "EDSA",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Check retrofit bulletin populations for an ordering constraint",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-166204",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "3WT6"
+            ],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Both candidates are described in terms of the forward cargo door threshold and both name the forward door proximity sensor and its mounting, one from the structural side and one from the sensing side."
+          },
+          "rationale": "The structural candidate installs a load-diffusion doubler on the frames behind the same door threshold and its footprint reaches within twenty millimetres of the sensor mounting. The new bracket introduced by this candidate lands in the same region. Neither candidate references the other and both are sized on the assumption that the region is free.",
+          "resolution": "Hold a joint footprint review with the structural design office and agree a single arrangement before either candidate is frozen. Record a concurrency or a prerequisite constraint depending on the outcome."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-160915",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The released latching change re-clipped the latch beam harness in the same threshold zone and set the routing that the sensor tail follows. Moving the sensor to the door structure changes where the tail leaves that routing, so the clipping arrangement introduced by the earlier change no longer holds the loom the way it was substantiated.",
+          "resolution": "Check the sensor tail routing against the latch beam clipping arrangement and update the wiring documentation for both if it changes."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-M-92-21-13",
+          "doc_type": "WDM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "3WT6",
+              "23WT"
+            ],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The wiring sheet carries the sensor and the sensor target as equipment on the loom, and it defines the support bracket positions and the minimum bend radius at the hinge crossing. Moving the sensor to the door structure moves the loom termination and the bracket positions with it.",
+          "resolution": "Raise a wiring documentation change against this sheet in the same package as the modification, with the revised bracket positions and the recalculated bend radius."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-M-52-70-11-810-801",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5270117831041"
+            ],
+            "shared_fins": [
+              "3WT6",
+              "23WT"
+            ],
+            "shared_zones": [
+              "811",
+              "891"
+            ],
+            "shared_ata_6d": [
+              "52-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The fault isolation procedure is built around measuring the sensing gap with and without a loaded pallet on the sill, and it quotes a sill deflection figure of up to 1.9 millimetres. Once the target plate is on the door structure the sill deflection no longer enters the gap and the whole diagnostic branch becomes wrong.",
+          "resolution": "Rewrite the procedure for the post-modification geometry and keep the existing branch as a pre-modification effectivity."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "IPC-M-52-70-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5270114205406",
+              "LN209430K7"
+            ],
+            "shared_fins": [
+              "3WT6",
+              "23WT"
+            ],
+            "shared_zones": [
+              "811",
+              "891"
+            ],
+            "shared_ata_6d": [
+              "52-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure note states that the target plate is mounted on the sill on all delivered aircraft, and the outboard plate is itemised at its current size. The candidate replaces the outboard plate with a shorter item and moves the target plate, so both the item list and the note become wrong.",
+          "resolution": "Raise an illustrated parts content change with a pre and post item pair for the outboard plate and a revised figure note."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "AMM-M-52-70-11-400-008-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5270117831041"
+            ],
+            "shared_fins": [
+              "3WT6"
+            ],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [
+              "52-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task sets the sensing gap against the sill mounting and carries a caution about setting the gap at the edge of the range because of sill deflection. That caution becomes meaningless once the target is on the door, and the shim procedure changes with it. The task was reached from the modification impact edge rather than by text similarity.",
+          "resolution": "Reissue the installation task with a post-modification shim procedure and remove the sill deflection caution for those aircraft."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "SRM-M-52-30-11-001",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The repair describes ground handling damage in the cargo door threshold area in the language of dents, blending and contour restoration, with nothing in common with the sensing installation vocabulary. No shared part number, functional item number or zone."
+          },
+          "rationale": "Ground handling dents are repaired with filler in the same threshold region where the new bracket is to be mounted. A bracket landing on a filled area has no substantiated attachment, and the repair does not record its own position in a way that a bracket installation could check against.",
+          "resolution": "Add a pre-installation surface check to the modification instructions, and ask the repair design owner whether repair positions in this area can be recorded against the aircraft."
+        },
+        {
+          "finding_id": "F08",
+          "doc_id": "MRD-52-1024",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The latching retrofit bulletin is effective over most of the same aircraft population and works in the same threshold zone with the door open on its stay. An operator that embodies this candidate first will find the bulletin harness clipping instructions no longer match what is on the aircraft, and the bulletin gives no warning of it.",
+          "resolution": "Add an ordering note to the bulletin, or re-issue its harness clipping step with a post-modification variant once the candidate is released."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-160560",
+          "doc_type": "MOD",
+          "reason": "A frame strengthening at a cargo door surround with very similar structural vocabulary, but on the freighter main deck door, applicable only to MERIDIAN-42F, with no MSN overlap, no shared part number, no shared functional item number and no sensing content."
+        },
+        {
+          "doc_id": "AMM-M-53-21-13-000-001-A",
+          "doc_type": "AMM",
+          "reason": "Shares the forward cargo door context and much of the access language, and mentions the same compartment, but it is a structural fitting removal task on a different ATA chapter with no shared functional item number, no shared part number and no relationship to the sensing installation."
+        }
+      ],
+      "conclusion": "Not yet issued. The first round closed without the footprint question answered and a structural candidate has since appeared on the same door surround; that is now the blocking item and it needs a joint review rather than a documentation change.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

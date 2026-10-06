@@ -1,0 +1,187 @@
+[
+  {
+    "doc_id": "MOD-149880",
+    "doc_type": "MOD",
+    "title": "Heated Butterfly Seat and Piccolo Duct Drain for the Wing Anti-Ice Shut-Off Valves",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Ice Protection — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "30-10-12",
+      "36-20-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00168",
+          "to": "T00238"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-9070",
+        "AUR-9072"
+      ],
+      "operators": [
+        "SOL",
+        "TJT",
+        "JTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-146540"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-07-06",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Heats the butterfly seat of the wing anti-ice shut-off valve and drains the piccolo duct at its low point, addressing a residual slow-open condition traced to water freezing in the seat rather than to solenoid force.",
+    "sections": {
+      "reason": "Aircraft already carrying the higher-force solenoid standard have continued to report an occasional slow-open condition, at a much lower rate but from the same northern European operators. Nine events were recorded last winter on modified aircraft. Borescope examination of two valves after an event found ice in the butterfly seat rather than a mechanical restriction, and duct inspection found standing water at the piccolo duct low point that had migrated back to the valve after shutdown. The higher-force solenoid overcomes cold seal friction but it cannot break an ice bond, so the earlier change addressed the wrong mechanism for this residual population.",
+      "description": "The valve body seat is given a low-power trace heater energised whenever the aircraft is on the ground with the wing anti-ice armed, so that the seat is above freezing before the first selection. The solenoid D3010110579750 introduced by the earlier standard is retained. The sensor assembly D3010113429790 is replaced with a version reporting seat temperature as well as position. A drain is added at the piccolo duct low point using the restrictor D3010122447896 and the drain fitting NYD606637-44, discharging overboard through the existing leading edge drain path. Wiring at FIN 2649WX2 and FIN 273HA is re-terminated at the valve connector and a heater feed is added at FIN 7887WX2. Work is through the leading edge access panels in zones 533, 231 and 652, detailed on drawings D30101189914 and D30101228874. The bleed monitoring computer threshold set by the earlier standard is unchanged.",
+      "effects": "Estimated mass increase of 2.3 kg per aircraft, symmetric. Electrical load rises by 320 volt-amperes while the trace heater is energised on the ground, which is the largest single electrical effect of any change in this area and needs a load analysis against the ground electrical budget. The heated seat valve is not interchangeable with the current standard because the heater feed does not exist on an unmodified harness. Dispatch relief for one valve inoperative is unchanged, but a heater failure is a new dispatch condition that must be assessed. Maintenance, illustrated parts, troubleshooting, wiring and the crew limitation on anti-ice use all require update.",
+      "embodiment_note": "Retrofit only, on aircraft already at the higher-force solenoid standard. Provisional estimate is one shift per wing with the leading edge panels open. Production cut-in will be considered once the ground electrical load question is closed.",
+      "open_points": "Pre-analysis must establish whether the ground electrical budget can carry the trace heater at the worst-case configuration, whether the added drain path conflicts with any published leading edge repair, and whether the seat temperature signal can be added to the existing sensor without re-opening the valve qualification. It must also confirm that the crew limitation wording for anti-ice selection on the ground remains correct."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010110579750",
+        "D3010113429790",
+        "D3010122447896",
+        "NYD606637-44"
+      ],
+      "fins": [
+        "2649WX2",
+        "273HA",
+        "7887WX2"
+      ],
+      "drawings": [
+        "D30101189914",
+        "D30101228874"
+      ],
+      "software": [],
+      "zones": [
+        "533",
+        "231",
+        "652"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00168",
+        "T00175"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146540",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "wing anti-ice",
+      "butterfly seat",
+      "trace heater",
+      "piccolo duct drain",
+      "slow open"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149880,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1419",
+          "CS 25.1309",
+          "CS 25.1351"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 2.3,
+      "balance_impact": "Symmetric installation, no measurable CG effect",
+      "electrical_load_impact_va": 320,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3010122447896",
+        "NYD606637-44"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3010113429790"
+      ],
+      "fins_affected": [
+        "2649WX2",
+        "273HA",
+        "7887WX2"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 470,
+      "estimated_cost_keur": 1740,
+      "lead_time_weeks": 56,
+      "production_impact": "Production cut-in pending electrical load assessment",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

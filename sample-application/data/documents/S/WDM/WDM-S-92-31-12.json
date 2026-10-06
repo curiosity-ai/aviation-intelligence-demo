@@ -1,0 +1,157 @@
+[
+  {
+    "doc_id": "WDM-S-92-31-12",
+    "doc_type": "WDM",
+    "title": "Landing Gear Bay Wiring — Downlock Sensing and Bay Ground Points",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-10-05",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-31",
+      "ata_6d": "92-31-12",
+      "title": "Centre Fuselage Wiring — Landing Gear Bay Wiring"
+    },
+    "secondary_ata": [
+      "32-10",
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56C",
+        "AUR-5560"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-11-12",
+      "released": "2019-06-17",
+      "revised": "2022-10-05",
+      "effective": "2022-10-21"
+    },
+    "abstract": "Wiring sheet for the wing-mounted main gear bay, covering the downlock sensing pairs, their routing across the retraction envelope and the bay ground points on the four-engine aircraft.",
+    "sections": {
+      "purpose": "This sheet shows the landing gear bay wiring for the wing-mounted main gear, including the downlock sensing pairs and the clearance envelope they must respect through the full retraction cycle.",
+      "sheet_note": "The sensing pairs on this sheet move with the gear and the sheet gives the clearance envelope rather than a fixed routing dimension. On aircraft with the overcentre rework the sensor brackets move onto the link itself, which shortens the flexing length by about 90 mm and changes the clip positions; both routings are shown and the applicable one is selected by the aircraft standard. The bay ground points are shown with their bonding limits because the bay is washed at every heavy check.",
+      "routing_note": "Each sensing pair leaves its sensor on the link, runs up the side stay in a protected sleeve, and enters the fixed structure at the bay roof through a bulkhead connector. The sleeve is clipped at three points and the middle clip position is the one that changes with the rework. Check the clearance to the side stay through a full retraction cycle after any work in the bay, not with the gear down only."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL252427-99"
+      ],
+      "fins": [
+        "15VU",
+        "3061VC"
+      ],
+      "drawings": [
+        "D92310016892"
+      ],
+      "software": [],
+      "zones": [
+        "721",
+        "731",
+        "752"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-S-32-10-12-812-806",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-133020",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "downlock sensing",
+      "clearance envelope",
+      "bay ground point",
+      "protected sleeve",
+      "retraction cycle"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Ashcombe",
+      "role": "Wiring Data"
+    },
+    "type_data": {
+      "sheet_number": "92-31-12",
+      "sheet_title": "LANDING GEAR BAY WIRING — DOWNLOCK SENSING AND BAY GROUND POINTS",
+      "diagram_type": "SCHEMATIC",
+      "harnesses": [
+        "7210W",
+        "7310W"
+      ],
+      "connectors": [
+        {
+          "reference": "7211VC",
+          "part_number": "HOL252427-99",
+          "location_zone": "721",
+          "contacts": 19
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "15VU",
+          "description": "CABLE ASSY, LANDING GEAR BAY WIRING",
+          "zone": "721"
+        },
+        {
+          "fin": "3061VC",
+          "description": "BACKSHELL, LANDING GEAR BAY WIRING, INBD",
+          "zone": "731"
+        }
+      ],
+      "wire_count": 38,
+      "wire_gauge_range": "AWG 24 to AWG 16",
+      "routes": [
+        "Sensor on the lock link up the side stay in a protected sleeve to the bay roof bulkhead connector",
+        "Bay roof connector inboard to the centre fuselage junction in zone 752"
+      ],
+      "related_sheets": [
+        "WDM-S-92-41-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

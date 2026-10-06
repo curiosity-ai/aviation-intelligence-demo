@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_6/xml_schema_flat/crew.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="TTN" systemDiffCode="A" systemCode="23" subSystemCode="7" subSubSystemCode="0" assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="130" infoCodeVariant="A" itemLocationCode="A" />
+        <language languageIsoCode="en" countryIsoCode="GB" />
+        <issueInfo issueNumber="003" inWork="00" />
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2024" month="08" day="08" />
+        <dmTitle>
+          <techName>Communications — Datalink</techName>
+          <infoName>Datalink Communications — System Description</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="revised">
+      <security securityClassification="01" />
+      <responsiblePartnerCompany enterpriseCode="U8025">
+        <enterpriseName>AERALIS S.A.S.</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="U8025">
+        <enterpriseName>AERALIS S.A.S. — Flight Operations Support, Valmont</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>TITAN-88, all aircraft</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <firstVerification verificationType="tabtop" />
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <crew>
+      <crewRefCard>
+        <title>Applicability and conditions</title>
+        <para>Describes for the flight crew how datalink communications are presented, how a log-on is established with an air traffic service unit and what the crew see when the medium changes.</para>
+        <table>
+          <title>Entry</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*" />
+            <colspec colname="c2" colwidth="2.2*" />
+            <tbody>
+              <row>
+                <entry>
+                  <para>Section</para>
+                </entry>
+                <entry>
+                  <para>DSC — Communications — Datalink System Description</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>Entry number</para>
+                </entry>
+                <entry>
+                  <para>DSC-COM-23-70-01</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>Flight phase</para>
+                </entry>
+                <entry>
+                  <para>All phases</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>Operational impact</para>
+                </entry>
+                <entry>
+                  <para>None</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>Systems</para>
+                </entry>
+                <entry>
+                  <para>Datalink Communications, Satellite Communications</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>Affects QRH</para>
+                </entry>
+                <entry>
+                  <para>No</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>Affects MEL</para>
+                </entry>
+                <entry>
+                  <para>No</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+        <figure>
+          <title>Communications — Datalink — location, side view</title>
+          <graphic infoEntityIdent="ICN-TTN-A-237000-A-U8025-4896017F01-A-001-01" />
+        </figure>
+      </crewRefCard>
+      <crewRefCard>
+        <title>Description</title>
+        <para>Datalink allows the crew to exchange messages with an air traffic service unit without using voice. Messages are composed and read on the communication page, and an incoming message is announced by a chime and by an attention indication on the primary display. The crew establish a log-on with the service unit before entering the airspace where datalink is used, and the log-on state is shown on the communication page as connected, connecting or not connected. The aircraft selects the medium automatically.</para>
+        <para>Close to the ground station the exchange uses the short range medium, and beyond it the exchange uses the satellite medium. The change is made by the aircraft without crew action and, in normal circumstances, without any interruption to an open exchange. Where the aircraft cannot maintain the log-on through a change of medium, the communication page shows not connected and the crew must log on again. Cabin communication services use a separate path and their availability says nothing about the availability of datalink.</para>
+      </crewRefCard>
+      <crewDrill>
+        <title>Datalink Communications — System Description</title>
+        <crewDrillStep>
+          <crewDrillAction>ACTION</crewDrillAction>
+          <crewDrillResponse>Establish the log-on with the air traffic service unit before entering the airspace where datalink is required, and confirm connected on the communication page.</crewDrillResponse>
+        </crewDrillStep>
+        <crewDrillStep>
+          <crewDrillAction>ACTION</crewDrillAction>
+          <crewDrillResponse>Monitor the log-on state through any change of medium.</crewDrillResponse>
+        </crewDrillStep>
+        <crewDrillStep>
+          <crewDrillAction>ACTION</crewDrillAction>
+          <crewDrillResponse>If the page shows not connected, wait for the automatic re-connection for the period given in the operations manual, then log on again manually.</crewDrillResponse>
+        </crewDrillStep>
+        <crewDrillStep>
+          <crewDrillAction>ACTION</crewDrillAction>
+          <crewDrillResponse>If the log-on cannot be re-established, revert to voice communication and advise the service unit.</crewDrillResponse>
+        </crewDrillStep>
+        <crewDrillStep>
+          <crewDrillAction>ACTION</crewDrillAction>
+          <crewDrillResponse>Do not assume datalink is available because cabin services are working; the two use different paths.</crewDrillResponse>
+        </crewDrillStep>
+      </crewDrill>
+      <crewRefCard>
+        <title>Crew action</title>
+        <para>Monitor the log-on state on the communication page.</para>
+      </crewRefCard>
+    </crew>
+  </content>
+</dmodule>

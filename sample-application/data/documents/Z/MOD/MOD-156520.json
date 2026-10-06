@@ -1,0 +1,199 @@
+[
+  {
+    "doc_id": "MOD-156520",
+    "doc_type": "MOD",
+    "title": "Electronic Flight Bag Unit Standard 3 with Integrated Airline Data Antenna and Faster Chart Rendering",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2025-08-19",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-20",
+      "ata_6d": "46-20-11",
+      "title": "Flight Deck Information — Electronic Flight Bag Unit"
+    },
+    "secondary_ata": [
+      "46-20-12",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "NCA",
+        "BCA",
+        "HKA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "Z11628",
+      "production_cut_in_date": "2023-12-04",
+      "retrofit_via": [
+        "ZPH-46-1005",
+        "ZPH-46-1009"
+      ]
+    },
+    "dates": {
+      "created": "2021-06-22",
+      "released": "2023-04-27",
+      "revised": "2025-08-19",
+      "effective": "2025-09-09"
+    },
+    "abstract": "Third build standard of the electronic flight bag unit, adding an integrated airline data antenna and a graphics stage that renders a terminal chart in under two seconds instead of eleven.",
+    "sections": {
+      "reason": "Chart rendering time on the installed electronic flight bag had become an operational irritation rather than a technical one: eleven seconds to redraw an approach plate is long enough that crews revert to paper on a busy arrival, which defeats the purpose of the installation. In parallel, operators using the unit for airline data exchange were fitting a separate portable antenna with a cabin window mount, which is an unapproved installation that several regulators had begun to challenge. Eleven operators asked for both problems to be solved in one change during the 2021 operators conference.",
+      "description": "The unit is built to standard 3. The transceiver D4620114957774 is replaced by an item with a dedicated graphics stage and four times the display memory, and the antenna D4620116309716 is integrated into the unit face so that the airline data link no longer requires a separate installation. The rack D4620121177406 receives a revised mounting position to accommodate the antenna clearance and a new grounding strap. The display at FIN 2IS8 is retained, and the aircraft condition monitoring interface at FIN 37IS6 is unchanged but its data rate is raised. The parameter load LE3NF0F3C1D and the built-in test load LF2N1D4CB64 are both re-issued. Work is in zones 211 and 214 with the flight compartment sidewall panel removed. The installation is on drawing D46201115557.",
+      "effects": "Mass increase of 1.9 kilograms per aircraft, distributed between the two flight deck positions. Electrical load increases by 90 volt amperes. Not interchangeable: the standard 3 unit needs the revised rack position and its antenna will foul the earlier mounting. Chart rendering falls to under two seconds and the unapproved portable antenna installation can be removed. The installation task, the fault isolation procedure and the parts figure require re-issue, and the flight crew description of the electronic flight bag application set is affected.",
+      "embodiment_note": "Production cut-in at MSN Z11628 in December 2023. Retrofit is by two bulletins: the rack and antenna provision, which needs an overnight stop, and the unit change itself, which is a line task once the provision is in place. Operators are strongly advised to embody the provision at the next available opportunity even if the units follow later."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4620114957774",
+        "D4620116309716",
+        "D4620121177406"
+      ],
+      "fins": [
+        "2IS8",
+        "37IS6"
+      ],
+      "drawings": [
+        "D46201115557"
+      ],
+      "software": [
+        "LE3NF0F3C1D",
+        "LF2N1D4CB64"
+      ],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z11628"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-46-1005",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "ZPH-46-1009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-Z-46-20-11-400-039-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-Z-46-20-11-810-816",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "electronic flight bag",
+      "chart rendering",
+      "integrated antenna",
+      "display memory",
+      "portable antenna"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Deck Design Office"
+    },
+    "type_data": {
+      "mod_number": 156520,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.9,
+      "balance_impact": "Distributed between the two flight deck positions",
+      "electrical_load_impact_va": 90,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D4620114957774",
+        "D4620116309716"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4620121177406"
+      ],
+      "fins_affected": [
+        "2IS8",
+        "37IS6"
+      ],
+      "software_affected": [
+        "LE3NF0F3C1D",
+        "LF2N1D4CB64"
+      ],
+      "estimated_manhours": 380,
+      "estimated_cost_keur": 1720,
+      "lead_time_weeks": 52,
+      "production_impact": "Cut-in at MSN Z11628, flight deck harness build standard changed together",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

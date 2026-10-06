@@ -1,0 +1,375 @@
+[
+  {
+    "doc_id": "AMM-T-52-30-13-400-001-A",
+    "doc_type": "AMM",
+    "title": "Cargo Door Latching Station Position Sensor — Installation and Rigging",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2008-01-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-05-19",
+      "released": "2008-01-18",
+      "revised": "2008-01-18",
+      "effective": "2008-02-15"
+    },
+    "abstract": "Installation of the latch position sensor at a cargo door latching station, setting the sensor gap against the latch shaft target to the station tolerance and proving the indication through a full door cycle.",
+    "sections": {
+      "purpose": "This task gives the installation and the rigging of one latch position sensor at a latching station of the forward, aft or bulk cargo door, and the operational check that follows it.",
+      "job_setup_note": "The door must be open on the ground support strut with the latching mechanism pinned in the unlatched position. Use the shim pack that was removed with the sensor unless the bracket plate has been changed, in which case build a new shim pack from the set. One tolerance applies at every latching station. The feeler gauge set must be clean and dry; a wet gauge gives a reading that is optimistic by about a tenth of a millimetre.",
+      "procedure": "Confirm that the safety pins are in place and that the maintenance notice is on the door control panel. Install the bracket plate CAL808635-46 on the latching rib assembly D5230135992491 if it was removed, and torque the fasteners to the value in the illustration. Fit the shim pack and install the sensor on the bracket plate. Connect the sensor connector and secure the cable to the door harness with cable ties LN309661K1 at the pitch given. Do the continuity and insulation check of the sensor circuit from the station connector to the door warning terminal. Install the cover plate with screws LN143422-1C. CAUTION: DO NOT ADJUST THE SENSOR BY BENDING THE BRACKET PLATE. ADJUST THE GAP WITH THE SHIM PACK ONLY. A BENT BRACKET WILL NOT HOLD THE SETTING. Move the latching mechanism to the latched position by hand and measure the gap between the sensor face and the latch shaft target with the feeler gauge. Add or remove shims until the gap is inside the station tolerance in the illustration. WARNING: REMOVE THE SAFETY PINS AND CLEAR ALL PERSONNEL FROM THE DOOR AREA BEFORE THE FIRST POWERED DOOR CYCLE. Remove the safety pins, remove the maintenance notice and do three complete door cycles. Confirm that the locked indication is given at every station.",
+      "close_out": "Remove the ground support strut and close the cargo door. Confirm that no maintenance message related to door warning is present. Record the measured sensor gap for each station worked, because the trend of that figure is what shows intercostal wear. Close the technical log entry made at removal."
+    },
+    "entities": {
+      "part_numbers": [
+        "CAL808635-46",
+        "D5230135992491",
+        "LN143422-1C",
+        "LN309661K1"
+      ],
+      "fins": [
+        "3323WT",
+        "2056WV"
+      ],
+      "drawings": [
+        "D52301366003",
+        "D52301387215"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "143"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-52-30-13-000-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-141020",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "latch position sensor",
+      "rigging",
+      "sensor gap",
+      "shim pack",
+      "door cycle"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "52-30-13-400-001-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. One sensor per latching station; the gap tolerance of the illustration applies at every station.",
+      "manhours": 6.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "891",
+          "893",
+          "143"
+        ],
+        "access_panels": [
+          "891AL",
+          "893BR",
+          "143BR"
+        ],
+        "doors": [
+          "Fwd cargo door",
+          "Aft cargo door",
+          "Bulk cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep the ground support strut installed until the rigging is complete.",
+          "Clear all personnel from the door area before the first powered cycle.",
+          "Do not use a wet feeler gauge."
+        ],
+        "tooling": [
+          {
+            "reference": "98D52301-140",
+            "description": "Cargo door ground support strut"
+          },
+          {
+            "reference": "98D52301-152",
+            "description": "Latching mechanism safety pin set"
+          },
+          {
+            "reference": "98D52301-168",
+            "description": "Feeler gauge set, sensor gap"
+          }
+        ],
+        "consumables": [
+          "Sealant, polysulphide, class B",
+          "Contact cleaner, non-residue"
+        ],
+        "expendables": [
+          {
+            "part_number": "LN143422-1C",
+            "qty": 12
+          },
+          {
+            "part_number": "LN309661K1",
+            "qty": 24
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-52-30-13-000-001-A",
+        "AMM-T-52-30-12-700-001-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 2
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-T-52-30-13-400-001-A",
+    "doc_type": "AMM",
+    "title": "Cargo Door Latching Station Position Sensor — Installation and Rigging",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2016-10-17",
+      "reason": "Rigging tolerance restated as a table per sensing channel and an isolation step added so that the second channel is inhibited while the first is proved.",
+      "raised_by_pawo": "PAWO-141020-01",
+      "raised_by_finding": "F01",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-05-19",
+      "released": "2008-01-18",
+      "revised": "2016-10-17",
+      "effective": "2016-11-14"
+    },
+    "abstract": "Installation of a latch position sensor at a cargo door latching station, setting the sensor gap against the latch shaft target and proving the indication through a full door cycle.",
+    "sections": {
+      "purpose": "This task gives the installation and the rigging of one latch position sensor at a latching station of the forward, aft or bulk cargo door, and the operational check that follows it.",
+      "job_setup_note": "The door must be open on the ground support strut with the latching mechanism pinned in the unlatched position. Use the shim pack that was removed with the sensor unless the bracket plate has been changed, in which case build a new shim pack from the set. On a duplicated station the two channels do not share a tolerance: the second channel sits on a longer standoff and its band is given on its own row of the rigging table, so read the table row for the channel being set and not the station heading. The feeler gauge set must be clean and dry; a wet gauge gives a reading that is optimistic by about a tenth of a millimetre.",
+      "procedure": "Confirm that the safety pins are in place and that the maintenance notice is on the door control panel. Install the bracket plate CAL808635-46 on the latching rib assembly D5230135992491 if it was removed, and torque the fasteners to the value in the illustration. Fit the shim pack and install the sensor on the bracket plate. Connect the sensor connector and secure the cable to the door harness with cable ties LN309661K1 at the pitch given. On a duplicated station, inhibit the channel that is not being worked at the door warning terminal before the continuity check, because the voting logic will otherwise mask an open circuit on the channel under test. Do the continuity and insulation check of the sensor circuit from the station connector to the door warning terminal, then release the inhibit, inhibit the other channel and repeat the check on it. Install the cover plate with screws LN143422-1C. CAUTION: DO NOT ADJUST THE SENSOR BY BENDING THE BRACKET PLATE. ADJUST THE GAP WITH THE SHIM PACK ONLY. A BENT BRACKET WILL NOT HOLD THE SETTING. Move the latching mechanism to the latched position by hand and measure the gap between the sensor face and the latch shaft target with the feeler gauge. Add or remove shims until the gap is inside the band given on the rigging table row for that channel. WARNING: REMOVE THE SAFETY PINS AND CLEAR ALL PERSONNEL FROM THE DOOR AREA BEFORE THE FIRST POWERED DOOR CYCLE. Confirm that no inhibit remains applied. Remove the safety pins, remove the maintenance notice and do three complete door cycles. Confirm that the locked indication is given at every station and, on aircraft with duplicated sensing, that both channels agree.",
+      "close_out": "Remove the ground support strut and close the cargo door. Confirm that no channel inhibit has been left applied and that no maintenance message related to door warning is present. Record the measured sensor gap for each station worked, per channel where the station is duplicated, because the trend of that figure is what shows intercostal wear. Close the technical log entry made at removal."
+    },
+    "entities": {
+      "part_numbers": [
+        "CAL808635-46",
+        "D5230135992491",
+        "LN143422-1C",
+        "LN309661K1"
+      ],
+      "fins": [
+        "3323WT",
+        "2056WV"
+      ],
+      "drawings": [
+        "D52301366003",
+        "D52301387215"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "143"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-52-30-13-000-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-141020",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "latch position sensor",
+      "rigging",
+      "sensor gap",
+      "shim pack",
+      "door cycle"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "52-30-13-400-001-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. On aircraft with duplicated sensing, set both sensors of a station against their own rigging table rows before the door cycle, inhibit the channel not under test during each continuity check, and confirm channel agreement at the end.",
+      "manhours": 6.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "891",
+          "893",
+          "143"
+        ],
+        "access_panels": [
+          "891AL",
+          "893BR",
+          "143BR"
+        ],
+        "doors": [
+          "Fwd cargo door",
+          "Aft cargo door",
+          "Bulk cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep the ground support strut installed until the rigging is complete.",
+          "Clear all personnel from the door area before the first powered cycle.",
+          "Do not use a wet feeler gauge.",
+          "Confirm that no channel inhibit remains applied before the door is cycled."
+        ],
+        "tooling": [
+          {
+            "reference": "98D52301-140",
+            "description": "Cargo door ground support strut"
+          },
+          {
+            "reference": "98D52301-152",
+            "description": "Latching mechanism safety pin set"
+          },
+          {
+            "reference": "98D52301-168",
+            "description": "Feeler gauge set, sensor gap"
+          }
+        ],
+        "consumables": [
+          "Sealant, polysulphide, class B",
+          "Contact cleaner, non-residue"
+        ],
+        "expendables": [
+          {
+            "part_number": "LN143422-1C",
+            "qty": 12
+          },
+          {
+            "part_number": "LN309661K1",
+            "qty": 24
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-52-30-13-000-001-A",
+        "AMM-T-52-30-12-700-001-A"
+      ],
+      "steps": 15,
+      "warnings": 1,
+      "cautions": 2
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,173 @@
+[
+  {
+    "doc_id": "MOD-161204",
+    "doc_type": "MOD",
+    "title": "Noise Attenuation Blanket Installation in the Fwd Cargo Hold",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-04-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "25",
+      "ata_4d": "25-50",
+      "ata_6d": "25-50-11",
+      "title": "Cargo Compartment — Cargo Lining Panels"
+    },
+    "secondary_ata": [
+      "53-21"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "M00276",
+      "production_cut_in_date": "2020-02-13",
+      "retrofit_via": [
+        "MRD-25-1130"
+      ]
+    },
+    "dates": {
+      "created": "2018-05-30",
+      "released": "2019-08-22",
+      "revised": "2023-04-18",
+      "effective": "2023-05-15"
+    },
+    "abstract": "Quilted attenuation blankets are added behind the forward cargo hold lining panels to cut the structure-borne noise that reaches the cabin floor above the compartment on aircraft with a premium cabin over the forward hold.",
+    "sections": {
+      "reason": "Cabin sound surveys on the first thirty aircraft showed a 3 to 5 dBA step in the seat rows directly above the forward cargo hold compared with the equivalent rows further aft. The path was traced to structure-borne excitation of the lower shell reaching the cabin floor through the hold ceiling, with almost no absorbing material in the void behind the lining. Three launch customers raised the same observation independently within a year of entry into service, and it was carried as a customer satisfaction item rather than a defect.",
+      "description": "Quilted attenuation blankets are fitted in the void behind the forward hold ceiling and upper sidewall lining across zones 111, 113 and 116. The blankets are held by the existing lining fasteners and by additional blind rivets LN181986-9B into the lining rails, so no new structural attachment is created. The lining panel D2550113609050 is replaced by a version with a moulded return that traps the blanket edge, and the compartment light assembly D2550118482429 gains a longer standoff so that the lens stays flush with the new lining line. The upper trim item 9911DL is refitted unchanged. No drainage path is obstructed and the smoke detection air path is unaffected; that was confirmed by a dedicated flow test before release.",
+      "effects": "Mass increase of 34 kg per aircraft, distributed along the forward hold and slightly forward of the reference datum, which is recorded in the weight and balance manual. No electrical load change. Interchangeable, provided the whole compartment is done at once, because a partial fit leaves an unsupported blanket edge. Cargo volume is reduced by 0.11 cubic metres, which operators must reflect in their load planning. The lining removal and installation task and the illustrated parts content both require reissue.",
+      "embodiment_note": "Cut in at MSN M00276 in February 2020. Retrofit is available through Service Bulletin MRD-25-1130 and is normally combined with a cabin refresh because the hold has to be emptied of linings anyway. Two shifts with three people is the typical figure reported by operators."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2550113609050",
+        "D2550118482429",
+        "LN181986-9B"
+      ],
+      "fins": [
+        "9911DL"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "111",
+        "113",
+        "116"
+      ],
+      "figures": [
+        "FIG-25-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00276"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-25-1130",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-M-25-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-M-25-50-11-400-003-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "noise attenuation blanket",
+      "cargo hold lining",
+      "cabin sound level",
+      "structure-borne noise"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Neuhafen",
+      "role": "Cabin Definition"
+    },
+    "type_data": {
+      "mod_number": 161204,
+      "mod_class": "MINOR",
+      "change_category": "CABIN",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.853",
+          "CS 25.857"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 34.0,
+      "balance_impact": "Distributed along the fwd hold, forward CG shift of 0.08 % MAC recorded in the WBM",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "LN181986-9B"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2550113609050",
+        "D2550118482429"
+      ],
+      "fins_affected": [
+        "9911DL"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 128,
+      "estimated_cost_keur": 310,
+      "lead_time_weeks": 26,
+      "production_impact": "Cut-in at MSN M00276, blanket set delivered with the lining shipset",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

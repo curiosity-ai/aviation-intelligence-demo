@@ -1,0 +1,216 @@
+[
+  {
+    "doc_id": "ZPH-33-1102",
+    "doc_type": "SB",
+    "title": "Lights — Cabin and Cargo Compartment — Conversion to Solid State Lighting with Scene Control",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-04-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "33",
+      "ata_4d": "33-20",
+      "ata_6d": "33-20-11",
+      "title": "Passenger Compartment Lighting — Ceiling and Wall Wash Lights"
+    },
+    "secondary_ata": [
+      "44-10",
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-156345"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2020-08-11",
+      "released": "2021-04-22",
+      "revised": null,
+      "effective": "2021-05-13"
+    },
+    "abstract": "Conversion of the cabin ceiling, wall wash and cargo compartment lighting to light-emitting diode strips with tunable colour temperature, driven from the cabin intercommunication system for operator-defined scenes.",
+    "sections": {
+      "planning_reason": "Fluorescent tubes for this application are going obsolete as the supplier consolidates its European lamp production, and operators refreshing their cabins want the scene lighting they already have on their newer aircraft. The electronic ballast retrofit solved the flicker complaint but did not change the tube supply position and offers no colour control. Operators who do not convert will face a shrinking tube supply and rising unit prices from 2027.",
+      "description": "This Service Bulletin replaces the fluorescent tubes and their ballasts with light-emitting diode strips carrying independently driven warm and cool channels, mounted in the existing stowage envelope and behind the same diffuser aperture. The same driver family feeds the cargo compartment lights, which are converted in the same operation. Colour scene control is provided by a cabin intercommunication database load addressed through the system director.",
+      "accomplishment_summary": "Isolate the cabin and cargo lighting circuits. Lower the ceiling panels in zones 265, 271 and 291 and remove the cargo lining panels in zone 131. Remove the tubes, the ballasts and the cargo light assemblies. Install the light-emitting diode strips in the stowage envelope D3320117509271 and secure with the shear head bolts LN983579-8C. Install the drivers on the curtain rail sub-assembly D3320000585452. Convert the cargo compartment lights at the latch D2550114658909 and re-terminate the light at FIN 3596DQ. Load the cabin intercommunication database LG9N7BD4A16 through the director FIN 3RK and enter the operator scene definitions from the configuration sheet. Do the lighting functional test at every defined scene and the emergency lighting proof test. Restore the ceiling and cargo lining panels and record the embodiment.",
+      "effectivity_note": "Applicable to ZEPHYR-18, ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 classic aircraft not yet at the solid state standard, whether they carry the original magnetic ballast or the electronic ballast retrofit. Aircraft delivered after the production cut-in already have solid state lighting. A cabin zone must be converted in full because the dimming protocol differs.",
+      "material_note": "Kit K3320-1102-01 contains the strips, the drivers, the cargo light assemblies and the database media for one aircraft. Lead time is fourteen weeks. The scene configuration sheet is produced per operator from the cabin layout and must be ordered at least six weeks before the embodiment slot."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3320117509271",
+        "D2550114658909",
+        "D3320000585452",
+        "LN983579-8C"
+      ],
+      "fins": [
+        "9RH",
+        "3596DQ",
+        "3RK"
+      ],
+      "drawings": [
+        "D33201360941"
+      ],
+      "software": [
+        "LG9N7BD4A16"
+      ],
+      "zones": [
+        "265",
+        "271",
+        "291",
+        "131"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z11105"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-156345",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "IPC-Z-25-50-11-FIG-06",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-Z-33-20-11-400-017-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "solid state lighting",
+      "scene control",
+      "cargo compartment lights",
+      "database load",
+      "colour temperature"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Cabin In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-33-1102",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "OPTIONAL",
+      "compliance_time": "At the operator's convenience, normally alongside a cabin refresh.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-156345",
+      "manpower": {
+        "elapsed_time_hours": 48,
+        "manhours": 180,
+        "personnel": 4,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K3320-1102-01",
+        "kit_available_from": "2021-08-30",
+        "parts_required": [
+          {
+            "part_number": "D3320117509271",
+            "qty": 24,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D3320000585452",
+            "qty": 24,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2550114658909",
+            "qty": 8,
+            "uom": "EA"
+          },
+          {
+            "part_number": "LN983579-8C",
+            "qty": 96,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Cable ties, flame retardant",
+          "Contact cleaner",
+          "Adhesive tape, aluminium foil"
+        ],
+        "tooling": [
+          "Ceiling panel support set",
+          "Portable data loader",
+          "Light meter",
+          "Colour meter, tristimulus"
+        ]
+      },
+      "weight_change_kg": -11.8,
+      "accomplishment_steps": 11,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2021-04-22",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

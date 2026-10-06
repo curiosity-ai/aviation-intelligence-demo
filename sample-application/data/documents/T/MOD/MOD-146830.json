@@ -1,0 +1,186 @@
+[
+  {
+    "doc_id": "MOD-146830",
+    "doc_type": "MOD",
+    "title": "Improved Retention of the Chemical Oxygen Generators in the Passenger Service Units",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-04-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "35",
+      "ata_4d": "35-20",
+      "ata_6d": "35-20-11",
+      "title": "Passenger Oxygen — Chemical Oxygen Generators"
+    },
+    "secondary_ata": [
+      "35-20",
+      "25-20-12"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2"
+      ],
+      "msns": [
+        "T00033",
+        "T00049",
+        "T00063",
+        "T00085",
+        "T00107",
+        "T00141",
+        "T00156",
+        "T00171"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA",
+        "ELB",
+        "ZCT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "TTN-35-1006"
+      ]
+    },
+    "dates": {
+      "created": "2018-06-05",
+      "released": "2019-04-11",
+      "revised": null,
+      "effective": "2019-05-20"
+    },
+    "abstract": "Adds a positive secondary retention to the chemical oxygen generator in the passenger service unit after generators were found displaced in their cradles during scheduled cabin inspections on high-cycle aircraft.",
+    "sections": {
+      "reason": "During a cabin refresh on one operator's aircraft, four chemical oxygen generators were found sitting proud of their cradles with the retaining strap still fastened. The strap had relaxed rather than failed, and the generator had walked forward under repeated pressurisation cycles and cabin vibration. A fleet sampling of one hundred and sixty units found eleven at or beyond the displacement limit, all on aircraft above nine thousand cycles. A displaced generator will still fire, but the lanyard geometry that initiates it is outside the qualified range, and that is not acceptable for an emergency system.",
+      "description": "A positive secondary retention is added at the aft end of each generator cradle. The retention bracket D3520117585166 is fastened to the existing cradle through the two spare holes already present, using screws AES260727K2 and the captive collar LN551613K3. The original strap is retained and re-tensioned to a defined torque rather than by feel. The moulded end cap XAN326870-64 is replaced by a version with a machined recess that engages the bracket, which gives a mechanical stop rather than relying on friction. Wiring at FIN 957HD, the generator firing loop, is disconnected and reconnected but not modified. Work is inside the passenger service units in zones 981 and 963 with the service unit dropped on its hinge, and is detailed on drawing D35200029961. The generator itself, its lanyard and its mask stowage are unchanged.",
+      "effects": "Mass increase of 6.4 kg on a full cabin, distributed along the cabin length with no meaningful centre-of-gravity effect. No electrical load change. The retention bracket is not interchangeable with the plain cradle because the end cap recess is required for it to work, and the two must be embodied together. Dispatch is unaffected. The cabin inspection task that measures generator displacement can be extended from every heavy check to every second heavy check once the modification is embodied, which is where most of the operator benefit lies. Illustrated parts and the cabin inspection task both require update.",
+      "embodiment_note": "Retrofit only; no production cut-in is proposed because the affected aircraft are all in service and the production standard already carries a different cradle. Work is done service unit by service unit and can be spread across several night stops, roughly forty minutes per unit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3520117585166",
+        "AES260727K2",
+        "LN551613K3",
+        "XAN326870-64"
+      ],
+      "fins": [
+        "957HD"
+      ],
+      "drawings": [
+        "D35200029961"
+      ],
+      "software": [],
+      "zones": [
+        "981",
+        "963"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00033",
+        "T00107"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-35-1006",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-35-20-11-200-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "oxygen generator",
+      "passenger service unit",
+      "retention bracket",
+      "displacement",
+      "cabin inspection"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Vaubranche",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 146830,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "SAFETY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1441",
+          "CS 25.1447",
+          "CS 25.561"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 6.4,
+      "balance_impact": "Distributed along cabin length, no meaningful CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3520117585166",
+        "AES260727K2",
+        "LN551613K3"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "XAN326870-64"
+      ],
+      "fins_affected": [
+        "957HD"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 180,
+      "estimated_cost_keur": 540,
+      "lead_time_weeks": 32,
+      "production_impact": "No production cut-in proposed",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

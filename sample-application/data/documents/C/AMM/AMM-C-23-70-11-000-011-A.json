@@ -1,0 +1,167 @@
+[
+  {
+    "doc_id": "AMM-C-23-70-11-000-011-A",
+    "doc_type": "AMM",
+    "title": "ATC Datalink Router Display Unit — Removal",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-10-25",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-07-19",
+      "released": "2019-01-14",
+      "revised": "2021-10-25",
+      "effective": "2021-11-12"
+    },
+    "abstract": "Removal of the air traffic control datalink router display unit from the lower forward rack position, including the message store safeguard that has to be done before power is removed.",
+    "sections": {
+      "purpose": "To remove the datalink router display unit from the lower forward rack position for replacement or for access to the units behind it.",
+      "job_setup_note": "The aircraft must be on external power for the message store safeguard and then fully de-powered before the unit is disconnected. The forward avionics bay access panel must be open and the bay lighting on. Two persons are needed, one at the maintenance terminal and one at the rack. Electrostatic protection is required at the rack.",
+      "procedure": "Put the safety barriers in position around the nose landing gear. Make sure that the aircraft is on external power. WARNING: MAKE SURE THAT THE DATALINK IS LOGGED OFF BEFORE YOU START. A LIVE CONNECTION CAN SEND A POSITION REPORT DURING MAINTENANCE. At the maintenance terminal, do the message store safeguard and wait for the terminal to show STORE SAFE. Remove the electrical power from the aircraft. Put the warning notices in position. Open the access panel to the forward avionics bay. Put on the electrostatic wrist strap and connect it to the rack bonding stud. CAUTION: DO NOT PULL THE UNIT BY ITS FRONT HANDLE BEFORE THE FOUR CAPTIVE FASTENERS ARE FULLY RELEASED. THE REAR CONNECTOR PINS BEND EASILY. Loosen the four captive fasteners on the front face of the unit until they turn freely. Hold the unit at each side and pull it straight out of the rack for the first 30 mm without lifting it. Disconnect the rear connector when it is accessible. Remove the unit from the bay and put it in an electrostatic bag. Install the blanking plate in the rack position if the unit is not being replaced immediately.",
+      "close_out": "Make sure that the rack position is clean and that no loose hardware remains in the bay. Remove the electrostatic wrist strap. Close the access panel if no further work is planned. Remove the warning notices and the safety barriers. Record the removal and the unit serial number in the aircraft configuration file."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370118700860",
+        "AGS119203K9"
+      ],
+      "fins": [
+        "218RN"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165"
+      ],
+      "figures": [
+        "FIG-23-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-23-70-11-400-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-23-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "display unit",
+      "removal",
+      "message store",
+      "avionics rack"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "23-70-11-000-011-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "Aircraft post MOD-111212",
+      "manhours": 1.8,
+      "personnel": 2,
+      "elapsed_time_hours": 1.2,
+      "access": {
+        "zones": [
+          "165"
+        ],
+        "access_panels": [
+          "165AL"
+        ],
+        "doors": [
+          "Forward avionics bay access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Put the safety barriers in position around the nose landing gear.",
+          "Make sure that the datalink is logged off before you start.",
+          "Put the warning notices in position after the power is removed."
+        ],
+        "tooling": [
+          {
+            "reference": "98C23701-201",
+            "description": "Electrostatic wrist strap and bonding lead"
+          },
+          {
+            "reference": "98C23701-204",
+            "description": "Avionics unit extraction handle"
+          }
+        ],
+        "consumables": [
+          "Electrostatic bag, avionics unit"
+        ],
+        "expendables": [
+          {
+            "part_number": "AGS119203K9",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-C-23-70-11-400-011-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

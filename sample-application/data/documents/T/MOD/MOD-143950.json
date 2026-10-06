@@ -1,0 +1,187 @@
+[
+  {
+    "doc_id": "MOD-143950",
+    "doc_type": "MOD",
+    "title": "Cargo Smoke Detection — Dual Sampling Loop with Cross-Channel Voting",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-02-25",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "25-50",
+      "21-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00160",
+      "production_cut_in_date": "2019-03-19",
+      "retrofit_via": [
+        "TTN-26-1018",
+        "TTN-26-1021"
+      ]
+    },
+    "dates": {
+      "created": "2017-08-22",
+      "released": "2018-10-30",
+      "revised": "2021-02-25",
+      "effective": "2021-03-18"
+    },
+    "abstract": "Second sampling loop and cross-channel voting for the cargo compartment smoke detection function, introduced to end the diversion rate caused by single-loop alarms on humid sectors.",
+    "sections": {
+      "reason": "Between 2014 and 2017 operators recorded 63 cargo smoke warnings that were found on inspection to be false, of which 19 led to a diversion. Condensation forming in the sampling line during descent into humid destinations was scattering light in the detector chamber in a way the single loop could not distinguish from smoke. Each diversion cost an operator between 180 and 400 thousand euro, and the pattern was concentrated on a small number of routes, which made it very visible to the operators concerned.",
+      "description": "A second, independently routed sampling loop is added in each of the forward, aft and bulk compartments, and the detection function only raises a flight deck warning when both loops agree within a twenty second window. The obsolete regulator RO713090-77 is deleted from the sampling line and replaced by the valve kit UMD917763-33, which carries an integral condensate trap and a heated bleed at the low point of the run. The upper detection sensor assembly D2610001304989 is retained but is remounted 120 mm inboard so that its inlet no longer sits in the condensate path; the clamp at FIN 2841WD is repositioned to suit. Screws AES545422-2C attach the new trap bracket and tension bolts EN830228K3 secure the relocated sensor mount. Routing is through zones 111, 115, 131 and 151 on the existing loom supports. Revised detail is on drawings D26101202565 and D26101223994.",
+      "effects": "Mass increase of 21 kg per aircraft across the three compartments. Electrical load rises by 180 VA because of the heated bleed. The dual loop installation is not interchangeable with the single loop because the detection logic is different and a mixed compartment is not permitted. Despatch with one loop inoperative in a single compartment becomes available for ten days, which was not possible before. Fault isolation content for cargo smoke warnings must be re-issued in full, and the illustrated parts content for the sampling line changes.",
+      "embodiment_note": "Cut in on the production line at MSN T00160 in March 2019. In service the change is done in two steps: a borescope inspection service bulletin establishes the condition of the existing sampling line, and the modification service bulletin follows. Total elapsed time is about six days for all three compartments."
+    },
+    "entities": {
+      "part_numbers": [
+        "RO713090-77",
+        "UMD917763-33",
+        "D2610001304989",
+        "AES545422-2C",
+        "EN830228K3"
+      ],
+      "fins": [
+        "2841WD"
+      ],
+      "drawings": [
+        "D26101202565",
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "115",
+        "131",
+        "151"
+      ],
+      "figures": [
+        "FIG-26-10-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00160"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-26-1021",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "TTN-26-1018",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-T-26-10-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "cargo smoke detection",
+      "sampling loop",
+      "false warning",
+      "diversion",
+      "condensate trap"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 143950,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.858",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 21.0,
+      "balance_impact": "Distributed along the compartment length, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 180,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "UMD917763-33",
+        "AES545422-2C",
+        "EN830228K3"
+      ],
+      "parts_removed": [
+        "RO713090-77"
+      ],
+      "parts_modified": [
+        "D2610001304989"
+      ],
+      "fins_affected": [
+        "2841WD"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 340,
+      "estimated_cost_keur": 1150,
+      "lead_time_weeks": 40,
+      "production_impact": "Cut-in at MSN T00160, sampling line pre-routed on the fuselage section before join",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "doc_id": "TSM-Z-44-30-11-810-808",
+    "doc_type": "TSM",
+    "title": "Cabin Connectivity Unavailable with the Server Reporting No Fault",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-30",
+      "ata_6d": "44-30-11",
+      "title": "External Communication — Onboard Connectivity Server"
+    },
+    "secondary_ata": [
+      "44-10",
+      "24-30"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-02",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Preliminary fault isolation for cabin connectivity reported unavailable while the onboard server reports no fault, covering the power supply margin, the access point coverage and the cabin interface configuration.",
+    "sections": {
+      "purpose": "This preliminary procedure isolates a report of cabin connectivity unavailable while the onboard connectivity server itself reports no fault, and separates a power supply condition from a coverage or configuration problem.",
+      "fault_description": "Cabin crew report that passengers cannot connect, or that the service drops at a particular point in the cabin, while the server status page shows the system serviceable and the satellite link established. Two very different conditions produce this picture: an access point that has dropped off because the direct current supply has been shed under a high cabin load, and a coverage hole caused by an access point installed at a position that does not match the cabin layout. The procedure is issued in draft alongside the modification pre-analysis and will be re-issued when the installation standard is frozen.",
+      "isolation_procedure": "1. Obtain the cabin report and record the seat rows affected and the flight phase. 2. Read the server status page and record which access points are present and which have dropped. 3. Where an access point has dropped, measure the direct current supply at the contactor FIN 7GX during the reported phase and compare it with the unit rating. 4. A supply that falls under high cabin load points at a load shed condition, not at the access point: report the measured load to engineering. 5. Where every access point is present, do the coverage survey at nine cabin positions and record the signal level at each. 6. Compare the measured positions with the operator configuration sheet, because a position moved during a cabin refresh will leave a hole that the server cannot detect. 7. Where coverage is adequate, check the announcement interface configuration at the cabin intercommunication director FIN 3RK. 8. Where the crew control at FIN 313RM is unresponsive, check the interface wiring before the panel is changed. 9. Read the loaded software part numbers and compare them with the configuration record. 10. Replace the server only after the supply, the coverage and the configuration have all been shown to be correct.",
+      "dispatch_note": "Connectivity has no dispatch impact and the aircraft may be released with the system inoperative. The circuit breaker must be collared where an access point is left disconnected. Rectify at the operator's convenience."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4430002603184",
+        "D4430125051276",
+        "D2430112027785"
+      ],
+      "fins": [
+        "40RM3",
+        "3RK",
+        "7GX",
+        "313RM"
+      ],
+      "drawings": [
+        "D44301273782"
+      ],
+      "software": [
+        "LG9NEA81802",
+        "LG9N7BD4A16"
+      ],
+      "zones": [
+        "215",
+        "274",
+        "291",
+        "294"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-158813",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-Z-44-30-11-400-018-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cabin connectivity",
+      "access point",
+      "load shed",
+      "coverage survey",
+      "configuration sheet"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "44-30-11-810-808",
+      "fault_symptom": "Cabin connectivity unavailable or dropping at a cabin position, server reporting no fault",
+      "fault_codes": [
+        "443011001",
+        "443011012"
+      ],
+      "warning_messages": [],
+      "affected_fins": [
+        "40RM3",
+        "3RK"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Access point supply shed under high cabin electrical load",
+          "probability_pct": 36,
+          "fin": "7GX"
+        },
+        {
+          "cause": "Access point position moved during a cabin refresh leaving a coverage hole",
+          "probability_pct": 27,
+          "fin": "40RM3"
+        },
+        {
+          "cause": "Announcement interface configuration mismatch at the cabin intercommunication director",
+          "probability_pct": 21,
+          "fin": "3RK"
+        },
+        {
+          "cause": "Crew control interface wiring open at the cabin attendant panel",
+          "probability_pct": 16,
+          "fin": "313RM"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-44-30-11-400-018-A",
+      "dispatch": {
+        "mel_item": "44-31-01D",
+        "dispatchable": true,
+        "dispatch_condition": "No dispatch impact; circuit breaker collared where an access point is left disconnected"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

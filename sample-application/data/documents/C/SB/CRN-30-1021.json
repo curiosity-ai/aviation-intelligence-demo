@@ -1,0 +1,427 @@
+[
+  {
+    "doc_id": "CRN-30-1021",
+    "doc_type": "SB",
+    "title": "Ice and Rain Protection — Probe Heat Computer — Temperature Compensated Threshold Standard",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-05-23",
+      "reason": "Initial issue of the temperature compensated threshold standard bulletin.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00566"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111145"
+        ],
+        "pre_mod": [
+          "MOD-111159"
+        ],
+        "post_sb": [
+          "CRN-30-1007"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2022-11-08",
+      "released": "2023-05-23",
+      "revised": "2023-05-23",
+      "effective": "2023-06-13"
+    },
+    "abstract": "Installation of the probe base temperature reference and the compensated threshold software, removing the cold-soak caution that the fixed threshold standard produces on the first sector of a winter day.",
+    "sections": {
+      "planning_reason": "The fixed threshold standard removed the undetected open circuit case but introduced a false declaration of its own. Operators in northern Europe and northern Canada report a probe heat caution on the first sector after a cold night, clearing during the climb. Thirty-eight occurrences were confirmed across nineteen aircraft in one winter and six computers were removed with no fault found. The element resistance at minus thirty degrees sits below the fixed lower threshold even when the element is healthy.",
+      "description": "The supply pipe is replaced by a shorter item so that the temperature reference sensor can be mounted at the probe base rather than in the computer, a clamp secures the new sensor lead, and the computer is loaded with the temperature compensated built-in test standard.",
+      "accomplishment_summary": "De-energise the aircraft and apply the electrical safety precautions. Open the avionics compartment access in zone 162 and the flight compartment floor panels in zones 211 and 214. Remove the supply pipe D3030115331360 and install the shorter item. Mount the temperature reference sensor at the probe base using the bracket supplied in the kit and secure the sensor lead with clamp AES270917-26 at the pitch given in the accomplishment instructions. Confirm the computer accumulator D3030112916343 is at the standard introduced by the earlier bulletin and do not continue if it is not. Terminate the sensor lead at the computer connector and do the continuity and insulation resistance checks. Load the built-in test standard LC5C5779B0E into the probe heat computer through the maintenance port. Do the probe heat system test at ambient and confirm that the compensated band is reported. Check the element valve 274HA and the regulator 4618WX read correctly. Install the access panels and record the embodiment.",
+      "effectivity_note": "Applicable to aircraft MSN C00001 through C00566 that are at the per-element monitoring standard and not yet at the temperature compensated standard. Aircraft delivered from MSN C00569 onward carry the compensated standard from build. Embodiment on an aircraft that has not had the per-element sense harness fitted is not permitted, because the compensated logic reads a per-element return.",
+      "material_note": "Kit K3030-1021-01 contains the supply pipe, the temperature reference sensor, the mounting bracket, the clamps and the loadable part media. Lead time is sixteen weeks. Removed pipes are not returned."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030115331360",
+        "D3030112916343",
+        "AES270917-26"
+      ],
+      "fins": [
+        "4618WX",
+        "274HA"
+      ],
+      "drawings": [
+        "D30301165123"
+      ],
+      "software": [
+        "LC5C5779B0E"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00566",
+        "C00569"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111159",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "CRN-30-1007",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-700-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-900-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-30-30-11-810-801",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "temperature compensation",
+      "probe base sensor",
+      "cold soak caution",
+      "threshold standard",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-30-1021",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Before the start of the next winter season, or within 24 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-111159",
+      "manpower": {
+        "elapsed_time_hours": 16,
+        "manhours": 28,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K3030-1021-01",
+        "kit_available_from": "2023-08-14",
+        "parts_required": [
+          {
+            "part_number": "D3030115331360",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES270917-26",
+            "qty": 8,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Cable ties, self-locking",
+          "Thermal compound, sensor grade"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Insulation resistance tester"
+        ]
+      },
+      "weight_change_kg": 0.3,
+      "accomplishment_steps": 11,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-05-23",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "CRN-30-1021",
+    "doc_type": "SB",
+    "title": "Ice and Rain Protection — Probe Heat Computer — Temperature Compensated Threshold Standard",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-03",
+      "reason": "Effectivity information extended with a forward note stating which parts of this embodiment are kept by the standard expected to follow it.",
+      "raised_by_pawo": "PAWO-111159-01",
+      "raised_by_finding": "F02",
+      "finding_type": "EFFECTIVITY_INVALIDATION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00566"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111145"
+        ],
+        "pre_mod": [
+          "MOD-111159"
+        ],
+        "post_sb": [
+          "CRN-30-1007"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2022-11-08",
+      "released": "2023-05-23",
+      "revised": "2026-08-03",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Installation of the probe base temperature reference and the compensated threshold software, removing the cold-soak caution that the fixed threshold standard produces on the first sector of a winter day.",
+    "sections": {
+      "planning_reason": "The fixed threshold standard removed the undetected open circuit case but introduced a false declaration of its own. Operators in northern Europe and northern Canada report a probe heat caution on the first sector after a cold night, clearing during the climb. Thirty-eight occurrences were confirmed across nineteen aircraft in one winter and six computers were removed with no fault found. The element resistance at minus thirty degrees sits below the fixed lower threshold even when the element is healthy.",
+      "description": "The supply pipe is replaced by a shorter item so that the temperature reference sensor can be mounted at the probe base rather than in the computer, a clamp secures the new sensor lead, and the computer is loaded with the temperature compensated built-in test standard.",
+      "accomplishment_summary": "De-energise the aircraft and apply the electrical safety precautions. Open the avionics compartment access in zone 162 and the flight compartment floor panels in zones 211 and 214. Remove the supply pipe D3030115331360 and install the shorter item. Mount the temperature reference sensor at the probe base using the bracket supplied in the kit and secure the sensor lead with clamp AES270917-26 at the pitch given in the accomplishment instructions. Confirm the computer accumulator D3030112916343 is at the standard introduced by the earlier bulletin and do not continue if it is not. Terminate the sensor lead at the computer connector and do the continuity and insulation resistance checks. Load the built-in test standard LC5C5779B0E into the probe heat computer through the maintenance port. Do the probe heat system test at ambient and confirm that the compensated band is reported. Check the element valve 274HA and the regulator 4618WX read correctly. Install the access panels and record the embodiment.",
+      "effectivity_note": "Applicable to aircraft MSN C00001 through C00566 that are at the per-element monitoring standard and not yet at the temperature compensated standard. Aircraft delivered from MSN C00569 onward carry the compensated standard from build. Embodiment on an aircraft that has not had the per-element sense harness fitted is not permitted, because the compensated logic reads a per-element return. Operators have asked whether the standard this bulletin installs is the end of the line, and the answer belongs here: a further standard is in pre-analysis that judges element health from the warm-up rate instead of from a compensated resistance band. That standard replaces the judgement logic only. The shorter supply pipe D3030115331360, the probe base temperature sensor and its bracket, the clamp AES270917-26 and the per-element sense harness are all retained and read by it. An operator running this campaign should complete it: the hardware fitted here is not undone by what comes next, and an aircraft left at the per-element standard will need this embodiment first in any case.",
+      "material_note": "Kit K3030-1021-01 contains the supply pipe, the temperature reference sensor, the mounting bracket, the clamps and the loadable part media. Lead time is sixteen weeks. Removed pipes are not returned."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030115331360",
+        "D3030112916343",
+        "AES270917-26"
+      ],
+      "fins": [
+        "4618WX",
+        "274HA"
+      ],
+      "drawings": [
+        "D30301165123"
+      ],
+      "software": [
+        "LC5C5779B0E"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00566",
+        "C00569"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111159",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "CRN-30-1007",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-700-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-900-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-30-30-11-810-801",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "temperature compensation",
+      "probe base sensor",
+      "forward note",
+      "cold soak caution",
+      "threshold standard"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-30-1021",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Before the start of the next winter season, or within 24 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-111159",
+      "manpower": {
+        "elapsed_time_hours": 16,
+        "manhours": 28,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K3030-1021-01",
+        "kit_available_from": "2023-08-14",
+        "parts_required": [
+          {
+            "part_number": "D3030115331360",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES270917-26",
+            "qty": 8,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Cable ties, self-locking",
+          "Thermal compound, sensor grade"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Insulation resistance tester"
+        ]
+      },
+      "weight_change_kg": 0.3,
+      "accomplishment_steps": 11,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-05-23",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-08-03",
+          "reason": "Forward note added to the effectivity information naming the hardware retained by the standard in pre-analysis; accomplishment instructions unchanged"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

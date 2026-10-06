@@ -1,0 +1,156 @@
+[
+  {
+    "doc_id": "WDM-Z-92-21-13",
+    "doc_type": "WDM",
+    "title": "Door Warning Wiring — Proximity Sensor Loops and Cargo Door Warning Interfaces",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-06-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-13",
+      "title": "Forward Fuselage Wiring — Door Warning Wiring"
+    },
+    "secondary_ata": [
+      "52-70",
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-11-14",
+      "released": "2018-06-02",
+      "revised": null,
+      "effective": "2018-06-23"
+    },
+    "abstract": "Wiring diagram sheet for the door warning system, showing the proximity sensor loops at each door station, the cargo door warning interfaces and the loop resistance values used for fault isolation.",
+    "sections": {
+      "purpose": "This sheet shows the door warning wiring, the proximity sensor loops at each door station and the cargo door warning interfaces, for all ZEPHYR-22 family aircraft.",
+      "sheet_note": "The sheet is drawn as a loop diagram rather than as a physical route, because fault isolation on this system is done by loop resistance and not by continuity. Each door station loop has a nominal resistance value and a tolerance stated on the sheet, and a loop measured outside tolerance identifies the station without any need to open a panel. The cargo door interfaces on sheet 2 differ between the forward and the aft door because the aft door carries an additional latch sensor.",
+      "routing_note": "The loops leave the door warning computing position and run to each door station through zones 233, 891 and 893, following the door surround structure rather than the shortest path so that the loop is disturbed if the surround is worked on. A loop must never be extended or spliced to accommodate a repair; a disturbed loop is replaced end to end so that the nominal resistance value on the sheet stays valid."
+    },
+    "entities": {
+      "part_numbers": [
+        "CAD972395-68",
+        "D9221139391165",
+        "HE105584-15",
+        "SA842327-52",
+        "VER700922-31"
+      ],
+      "fins": [
+        "77VU"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "233",
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-52-30-11-400-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-Z-92-21-12",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door warning",
+      "proximity sensor loop",
+      "loop resistance",
+      "cargo door interface",
+      "door surround"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "sheet_number": "92-21-13",
+      "sheet_title": "DOOR WARNING WIRING — PROXIMITY SENSOR LOOPS",
+      "diagram_type": "SCHEMATIC",
+      "harnesses": [
+        "1231W",
+        "1233W"
+      ],
+      "connectors": [
+        {
+          "reference": "1231VC",
+          "part_number": "HE105584-15",
+          "location_zone": "233",
+          "contacts": 22
+        },
+        {
+          "reference": "1233VC",
+          "part_number": "SA842327-52",
+          "location_zone": "891",
+          "contacts": 37
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "77VU",
+          "description": "BUS BAR, DOOR WARNING WIRING, UPPER",
+          "zone": "233"
+        }
+      ],
+      "wire_count": 88,
+      "wire_gauge_range": "AWG 24 to AWG 16",
+      "routes": [
+        "Door warning computing position to each door station via the door surround structure",
+        "Forward cargo door interface in zone 891 to the aft door interface in zone 893"
+      ],
+      "related_sheets": [
+        "WDM-Z-92-21-11",
+        "WDM-Z-92-21-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

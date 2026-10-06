@@ -1,0 +1,284 @@
+[
+  {
+    "doc_id": "PAWO-137250-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Fire Detection Loop Rerouting Against the Auxiliary Power Unit Compartment Work",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-09-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-11",
+      "title": "Detection — Engine Fire Detection Loops"
+    },
+    "secondary_ata": [
+      "49-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SRP",
+        "KLE"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2024-08-12",
+      "released": "2024-09-18",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed work order coordinating the fire loop rerouting with other work in the auxiliary power unit compartment, delegated to the compartment owner as a standing coordination item.",
+    "sections": {
+      "objective": "Establish whether the fire detection loop rerouting conflicts with any other work planned in the auxiliary power unit compartment, since the rerouting fixes a minimum standoff from the hot duct and anything else installed in that compartment has to respect it afterwards.",
+      "findings_summary": "One live conflict and one latent one. The live conflict is with the intake flap installation, which sits in the same compartment and whose actuator mounting occupies part of the envelope the rerouted loop needs; the two were designed by different offices in the same year and neither knew about the other. It is resolvable by moving two clip positions and was resolved during this work order. The latent conflict is more interesting: the standoff the rerouting establishes is a constraint on every future change in that compartment, and there is nowhere that constraint is written down other than in the modification itself, which nobody consults when designing something unrelated. The wiring and maintenance documents record the routing but not the reason for it. That is the kind of gap that produces the same conflict again in five years.",
+      "next_steps": "Delegate the standoff constraint to the compartment owner as a standing item so that it is visible to any future design. Move the two clip positions as agreed with the intake flap office. Add the reason for the standoff to the insulation resistance task so that it survives in a document people actually open."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610111824651",
+        "EN557658-57",
+        "AGS49442-85"
+      ],
+      "fins": [
+        "126WF",
+        "939WF3",
+        "25WD"
+      ],
+      "drawings": [
+        "D26101127238"
+      ],
+      "software": [],
+      "zones": [
+        "393",
+        "431"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-137250",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "MOD-130680",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-26-10-11-200-052-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-26-1022",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "pre-analysis",
+      "detection",
+      "rerouting",
+      "against"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-137250-01",
+      "subject_mod": "MOD-137250",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2024-09-18",
+      "outcome": "DELEGATED",
+      "raised_date": "2024-08-12",
+      "due_date": "2024-09-18",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EAAM",
+          "ELSC"
+        ],
+        "estimated_manhours": 85,
+        "spent_manhours": 92
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-38",
+          "SOLANO-39"
+        ],
+        "ata_2d": [
+          "26",
+          "49"
+        ],
+        "ata_4d": [
+          "26-10",
+          "49-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D2610111824651",
+            "EN557658-57",
+            "AGS49442-85"
+          ],
+          "fins": [
+            "126WF",
+            "939WF3",
+            "25WD"
+          ],
+          "drawings": [
+            "D26101127238"
+          ],
+          "zones": [
+            "393",
+            "431"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "false fire warning after heavy rain clearing as the loop dries",
+          "minimum standoff from a hot duct in a confined compartment"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Survey everything installed in the compartment envelope",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Coordinate the clip positions with the intake flap office",
+          "method": "SME_INTERVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Find where the standoff constraint would be recorded",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-130680",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found by entity linking on the compartment zones alone; the two documents share no vocabulary and describe a fire loop and an intake flap respectively."
+          },
+          "rationale": "The intake flap actuator mounting occupies part of the envelope the rerouted loop needs at the forward end of the compartment. Two clip positions have to move and neither design office knew about the other.",
+          "resolution": "Move the two clip positions as agreed; record the agreement against both modifications."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-S-26-10-11-200-052-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found by entity linking on the transmitter and rivet part numbers the task calls out."
+          },
+          "rationale": "The insulation resistance task records the standoff measurement but not why the standoff exists. The reason is the only thing that will stop a future change eroding it, and it belongs in a document people open rather than in a modification dossier.",
+          "resolution": "Add the reason for the standoff to the task."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SLN-26-1022",
+          "doc_type": "SB",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Reached from the modification to its companion connector sealing bulletin."
+          },
+          "rationale": "The rerouting bulletin assumes the sealed connector shells are already fitted. Operators doing them in the wrong order would reroute a loop and then have to break every connector again.",
+          "resolution": "State the order explicitly in both bulletins."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed and delegated. One conflict resolved; the standoff constraint needs an owner.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

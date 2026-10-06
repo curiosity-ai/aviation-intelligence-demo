@@ -1,0 +1,339 @@
+[
+  {
+    "doc_id": "PAWO-162044-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Steel Side Link Fitting and Revised Bolt Pattern at the Fwd Engine Mount",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-05-29",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "54",
+      "ata_4d": "54-50",
+      "ata_6d": "54-50-12",
+      "title": "Pylon Structure — Engine Mount Fittings"
+    },
+    "secondary_ata": [
+      "71-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-8400",
+        "AUR-9700"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-08-20",
+      "released": "2019-05-29",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the second side link fitting standard at the forward mount. The order had to settle the supersession transition for aircraft part way through the first retrofit campaign.",
+    "sections": {
+      "objective": "Settle the transition rules for the change from the aluminium side link fitting to the steel standard with a revised bolt pattern. The engineering case was made on removal rate; the open questions were commercial and configurational. Which aircraft are part way through the first retrofit campaign, what happens to the bulletin that installs the standard being replaced, and whether the existing lug repair scheme transfers to the new bolt pattern.",
+      "findings_summary": "Five items were confirmed, two of them blocking. The supersession itself is the first: the two fittings cannot coexist on one pylon because the bolt patterns differ and the tracked life rules differ, so the transition has to be declared rather than left to the retrofit sequence. The second blocking item is the bulletin that installs the aluminium standard. Twelve aircraft were mid-campaign and four operators had ordered kits, so simply superseding the bulletin would have stranded that material. The lug repair scheme carries a first oversize dimension referenced to the aluminium lug and did not transfer. Below that, the parts figure needed a three-way effectivity rather than a substitution, and the sleeving change at the same mount plane became worth combining once the joint has to be broken anyway.",
+      "next_steps": "Declare the supersession explicitly and publish the transition rule for mid-campaign aircraft, with a concession route for the ordered kits. Ask the repair owner to re-cut the oversize scheme to the steel lug and to publish the two variants under separate effectivity rather than as a note. Agree the three-way parts figure effectivity with technical publications before parts content freeze. Offer the combined embodiment with the mount sleeving change to the operators that have embodied neither, and give fleet planning the mid-campaign aircraft list so the transition can be sequenced by aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5450124639244",
+        "D5450125058936",
+        "CID666183-16",
+        "AES177340K7"
+      ],
+      "fins": [
+        "1756PP"
+      ],
+      "drawings": [
+        "D54501157122"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "443"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-162044",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "side link fitting",
+      "supersession",
+      "bolt pattern",
+      "retrofit campaign"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-162044-01",
+      "subject_mod": "MOD-162044",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2019-05-29",
+      "outcome": "VALIDATED",
+      "raised_date": "2018-08-20",
+      "due_date": "2019-06-28",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EDSA",
+          "ETGC",
+          "EYIS"
+        ],
+        "estimated_manhours": 120,
+        "spent_manhours": 133
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "54",
+          "71"
+        ],
+        "ata_4d": [
+          "54-50",
+          "71-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00300"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5450124639244",
+            "D5450125058936",
+            "AES177340K7"
+          ],
+          "fins": [
+            "1756PP"
+          ],
+          "drawings": [
+            "D54501157122"
+          ],
+          "zones": [
+            "431",
+            "443"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "transition rules for aircraft part way through a fitting retrofit campaign",
+          "oversize lug repair referenced to a superseded fitting geometry"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Traverse the ATA 54-50-12 fitting supersession chain",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Quantify mid-campaign aircraft and ordered kit exposure",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the oversize bush scheme against the steel lug",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Identify mount work sharing the same joint break",
+          "method": "SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-161902",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES177340K7"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "431"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The two fitting standards use different bolt patterns and different tracked life rules and cannot coexist on one pylon. Leaving the transition to the retrofit sequence would have produced mixed-standard aircraft with no life rule that covers them.",
+          "resolution": "Declare the supersession on the new standard and publish an explicit transition rule for aircraft with one fitting of each standard installed."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-54-1019",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES177340K7"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "431"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin installs the standard being replaced. Twelve aircraft were part way through it and four operators had already taken delivery of kits, so withdrawing it outright would have stranded serviceable material and left those aircraft in an undefined configuration.",
+          "resolution": "Re-issue the bulletin with a closing effectivity statement and a concession route allowing delivered kits to be consumed."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-M-54-50-12-001",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES177340K7",
+              "D5450124639244"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "431"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The first oversize dimension and the reduced life that goes with it are referenced to the aluminium lug wall thickness. The steel lug has a different wall and a different residual stress state after machining, so neither the dimension nor the reduced life transfers.",
+          "resolution": "Re-cut the oversize scheme for the steel lug and publish the two variants under separate effectivity."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "IPC-M-54-50-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5450124639244",
+              "D5450125058936",
+              "CID666183-16",
+              "AES177340K7"
+            ],
+            "shared_fins": [
+              "1756PP"
+            ],
+            "shared_zones": [
+              "431",
+              "443"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries a pre and post pair for the first standard. A second standard makes it a three-way effectivity, and the interface plate and bolt set change with it rather than staying common.",
+          "resolution": "Agree the three-way item numbering and the interface plate split with technical publications before parts content freeze."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-161477",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both are described as work at the forward mount plane requiring the joint to be broken, one in structural fitting language and one in fluid line sleeving language. No shared part number, functional item, zone or ATA chapter."
+          },
+          "rationale": "The sleeving change needs the same joint opened. Where an operator has embodied neither, doing them separately means two engine removals for work that fits in one.",
+          "resolution": "Offer a combined embodiment package and re-measure the sleeve termination clearance against the steel fitting boss."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed. The two blocking items were resolved before release: the supersession was declared with a published transition rule and the earlier bulletin was re-issued with a concession route for delivered kits.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

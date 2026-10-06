@@ -1,0 +1,185 @@
+[
+  {
+    "doc_id": "MOD-148830",
+    "doc_type": "MOD",
+    "title": "Segregated Routing and Fire-Rated Sleeving for the Engine Electronic Control Harness",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-05-12",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-20",
+      "ata_6d": "73-20-11",
+      "title": "Engine Fuel Control — Electronic Control Unit"
+    },
+    "secondary_ata": [
+      "73-20-12",
+      "76-10-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00090",
+          "to": "T00232"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [
+        "CVX-7270"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "T00237",
+      "production_cut_in_date": "2025-09-30",
+      "retrofit_via": [
+        "TTN-73-1012"
+      ]
+    },
+    "dates": {
+      "created": "2023-06-19",
+      "released": "2025-05-12",
+      "revised": null,
+      "effective": "2025-06-23"
+    },
+    "abstract": "Separates the two channels of the engine electronic control harness onto different sides of the fan case and re-sleeves both in fire-rated material, removing a common-mode exposure identified during a zonal safety re-assessment.",
+    "sections": {
+      "reason": "A zonal safety re-assessment of the fan case found both channels of the engine electronic control harness running in the same bundle over a 900 mm length at the four o'clock position, inside the fire zone and adjacent to a fuel line flange. A single fire or a single chafe event could affect both channels. No in-service event has occurred, and the original installation was accepted, but the finding is not defensible against the current interpretation of the segregation requirement and the programme chose to correct it rather than argue it.",
+      "description": "Channel B of the engine electronic control harness is re-routed from the four o'clock position to the eight o'clock position on the fan case, giving physical separation from channel A over the whole exposed length. Both channels are re-sleeved in fire-rated sleeving over the section inside the designated fire zone. The bracket set AGS860444K6 is added at six new support positions on the left side of the fan case and the existing clamps LN953956K3 are replaced by the fire-rated equivalent. The connector backshell EN25879-6A is renewed at both control unit connectors because the sleeving increases the bundle diameter. Wiring at FIN 6EF and FIN 9EF is re-terminated and the harness identification is changed to reflect the new route. Work is in zones 462 and 423 with the fan cowl doors open and the core cowl unlatched, and is detailed on drawing D73201179350. The control unit itself and its software are unchanged.",
+      "effects": "Mass increase of 3.4 kg per engine, giving 13.6 kg per aircraft, symmetric. No electrical load change. The harness is not interchangeable: a re-routed harness cannot be fitted to an unmodified fan case because the support brackets do not exist, and this must be checked before an engine change between modified and unmodified aircraft. Dispatch is unaffected. Wiring manual content, the removal and installation tasks and the illustrated parts breakdown all require update, and the engine build-up documentation must state the routing standard.",
+      "embodiment_note": "Production cut-in at MSN T00237 in September 2025. Retrofit through the associated service bulletin during an engine shop visit or with the engine on wing and the cowls open, roughly one and a half shifts per engine. Aircraft must be modified engine by engine and mixed standards are acceptable in service."
+    },
+    "entities": {
+      "part_numbers": [
+        "EN25879-6A",
+        "LN953956K3",
+        "AGS860444K6"
+      ],
+      "fins": [
+        "6EF",
+        "9EF"
+      ],
+      "drawings": [
+        "D73201179350"
+      ],
+      "software": [
+        "LC6RC2CC12D"
+      ],
+      "zones": [
+        "462",
+        "423"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00237"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-73-1012",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-73-20-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "WDM-T-92-51-12",
+        "doc_type": "WDM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "engine electronic control",
+      "harness routing",
+      "segregation",
+      "fire-rated sleeving",
+      "fan case"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 148830,
+      "mod_class": "MAJOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "CERTIFICATION",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1707",
+          "CS 25.863"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 13.6,
+      "balance_impact": "Symmetric, no measurable CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AGS860444K6"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "EN25879-6A",
+        "LN953956K3"
+      ],
+      "fins_affected": [
+        "6EF",
+        "9EF"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 460,
+      "estimated_cost_keur": 1830,
+      "lead_time_weeks": 54,
+      "production_impact": "Cut-in at MSN T00237, no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,576 @@
+[
+  {
+    "__note": "EXEMPLAR — documentation only. This file is NOT under build/authored/ and is never emitted. The doc_ids used here (MOD-1699xx, IO-M-2699xx, MRD-53-99xx, PAWO-1699xx-xx) are RESERVED: never author a document with these identifiers. Every reference-data identifier below is real and resolves for program P. Agents write JSONL — one object per line, no __note key.",
+
+    "doc_id": "IO-M-269901",
+    "doc_type": "IO",
+    "title": "Repeat Cracking Around Forward Cargo Door — Request for Permanent Fix",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-11",
+      "title": "Fuselage Section 13 — Forward — Frames"
+    },
+    "secondary_ata": ["52-30"],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": ["MERIDIAN-46"],
+      "models": ["MRD-46K1"],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": ["SIA"],
+      "embodiment_condition": {"post_mod": [], "pre_mod": [], "post_sb": [], "pre_sb": []}
+    },
+    "embodiment": null,
+    "dates": {"created": "2026-02-27", "released": "2026-03-02", "revised": null, "effective": null},
+    "abstract": "Operator request for a permanent structural solution to recurring cracking found around the forward cargo door on high-utilisation MERIDIAN-46 aircraft, after three temporary repairs in eighteen months.",
+    "sections": {
+      "request": "We are finding cracks again around the front cargo door on our long-haul MERIDIAN-46 fleet. Three of our aircraft have now been through the same corner area twice, and on the last one the crack had grown past what our repair scheme allows, so the aircraft went out of service for six days waiting for an engineering answer. Our line stations are treating this as a known problem area and inspecting it at every opportunity, which is not sustainable. We would like a permanent design solution rather than another repair, and we would like it to be embodiable during a normal C-check without needing to remove cargo linings across the whole compartment.",
+      "background": "The area was first raised with us by our MRO in late 2024. Since then we have carried out three temporary repairs on two aircraft, all in the same lower corner region. Our reliability data shows an average of 4.2 unscheduled maintenance events per 1000 flight cycles on this zone, against a fleet baseline of 0.8. We have already embodied the door surround fitting standard that Aeralis recommended, and the cracking continued afterwards.",
+      "expected_outcome": "A design change that removes the need for repeat inspection of this area, applicable to our delivered aircraft, with a retrofit path that fits inside a scheduled C-check and does not require a dedicated aircraft-on-ground event."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": ["113"],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": ["M00210"]
+    },
+    "references": [
+      {"doc_id": "MOD-169901", "doc_type": "MOD", "relation": "CREATED"}
+    ],
+    "keywords": ["cargo door", "cracking", "repeat repair", "operator request", "downtime"],
+    "originator": {"department": "EYIS", "site": "Valmont", "role": "Customer Support Engineering"},
+    "type_data": {
+      "io_number": "IO-M-269901",
+      "raised_by": {
+        "requester_type": "OPERATOR",
+        "operator_code": "SIA",
+        "contact_role": "Fleet Engineering Manager",
+        "oem_focal_department": "EYIS",
+        "oem_focal_site": "Valmont"
+      },
+      "request_category": "STRUCTURE",
+      "priority": "HIGH",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {"aircraft_count": 14, "msns": ["M00210"], "aircraft_types": ["MERIDIAN-46"]},
+      "business_justification": "Unscheduled downtime on this zone cost the operator an estimated 38 aircraft-days over eighteen months across a fourteen-aircraft sub-fleet.",
+      "commercial": {"funding": "SHARED", "budget_keur": 900, "contract_reference": "CSA-2025-SIA-0210"},
+      "target_dates": {"requested_response": "2026-05-15", "requested_embodiment_start": "2027-01-10"},
+      "created_mod": "MOD-169901"
+    },
+    "_meta": {"synthetic": true, "generator": "authored", "dataset_version": "1.0"}
+  },
+
+  {
+    "doc_id": "MOD-169900",
+    "doc_type": "MOD",
+    "title": "Standardisation of Fwd Cargo Door Surround Frame Fittings to Titanium Alloy",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-13",
+      "title": "Fuselage Section 13 — Forward — Door Surround Structure"
+    },
+    "secondary_ata": ["52-30"],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": ["MERIDIAN-46"],
+      "models": ["MRD-46K1"],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {"post_mod": [], "pre_mod": [], "post_sb": [], "pre_sb": []}
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": ["PRODUCTION", "RETROFIT", "SPARES"],
+      "production_effectivity": "M00398",
+      "production_cut_in_date": "2024-06-10",
+      "retrofit_via": ["MRD-53-9901"]
+    },
+    "dates": {"created": "2019-03-12", "released": "2020-07-08", "revised": "2022-01-19", "effective": "2022-02-01"},
+    "abstract": "Replacement of the aluminium-lithium door surround fittings at the forward cargo door with machined titanium alloy items, to raise the fatigue allowable at the lower corner load path.",
+    "sections": {
+      "reason": "Fatigue substantiation of the MERIDIAN-46 forward cargo door surround identified a reserve factor shortfall at the lower corner fitting under the revised freight loading spectrum introduced for high-density cargo operations. The existing aluminium-lithium fitting met the original spectrum but not the revised one, and analysis predicted crack initiation between 32 000 and 41 000 flight cycles rather than the target design service goal. No in-service cracking had been reported at the time of launch; the change was driven by analysis rather than by findings.",
+      "description": "The four aluminium-lithium fittings at the lower forward and lower aft corners of the cargo door cut-out are replaced by machined Ti-6Al-4V items of equivalent external geometry but increased flange thickness and a larger fillet radius at the load introduction point. The web assembly of frame station C40, part number D5321003375416, is retained but is re-drilled to the new fastener pattern, with bolts AES495354-07 and washers AES963502K7 replacing the previous protruding-head set. Drawing D53211167819 issue F carries the revised detail. Access is through the forward cargo compartment, zones 113 and 115, with the cargo lining panels of the lower shell removed locally. No change is made to the door itself or to the door actuation system.",
+      "effects": "Mass increase of 2.9 kg per aircraft, distributed symmetrically about the aircraft centre line; the centre-of-gravity shift is below the reporting threshold. No electrical load change. The fittings are not interchangeable with the previous standard because the fastener pattern differs, so a mixed installation is not permitted on a single door surround. The change removes the repeat inspection introduced by the original fatigue substantiation and therefore reduces scheduled maintenance content. AMM and IPC content for ATA 53-21 requires update.",
+      "embodiment_note": "Cut in on the production line at MSN M00398 in June 2024. Retrofit for delivered aircraft is available through Service Bulletin MRD-53-9901 and takes approximately four days inside a scheduled C-check. Kits are held as spares from the same reference."
+    },
+    "entities": {
+      "part_numbers": ["D5321003375416", "AES495354-07", "AES963502K7"],
+      "fins": [],
+      "drawings": ["D53211167819"],
+      "software": [],
+      "zones": ["113", "115"],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": ["M00398"]
+    },
+    "references": [
+      {"doc_id": "MRD-53-9901", "doc_type": "SB", "relation": "EMBODIED_BY"}
+    ],
+    "keywords": ["cargo door surround", "titanium fitting", "fatigue allowable", "frame station"],
+    "originator": {"department": "ESZS", "site": "Neuhafen", "role": "Design Office"},
+    "type_data": {
+      "mod_number": 169900,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "CERTIFICATION",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": ["EASA", "FAA"],
+        "cs25_paragraphs": ["CS 25.571", "CS 25.365"],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.9,
+      "balance_impact": "Symmetric installation, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": ["AES495354-07", "AES963502K7"],
+      "parts_removed": [],
+      "parts_modified": ["D5321003375416"],
+      "fins_affected": [],
+      "software_affected": [],
+      "estimated_manhours": 96,
+      "estimated_cost_keur": 410,
+      "lead_time_weeks": 28,
+      "production_impact": "Cut-in at MSN M00398, absorbed within the existing station 40 build sequence",
+      "risk_level": "LOW"
+    },
+    "_meta": {"synthetic": true, "generator": "authored", "dataset_version": "1.0"}
+  },
+
+  {
+    "doc_id": "MRD-53-9901",
+    "doc_type": "SB",
+    "title": "Fuselage — Fwd Cargo Door Surround — Replacement of Frame Fittings by Titanium Items",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "02",
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-13",
+      "title": "Fuselage Section 13 — Forward — Door Surround Structure"
+    },
+    "secondary_ata": ["52-30"],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": ["MERIDIAN-46"],
+      "models": ["MRD-46K1"],
+      "msns": [],
+      "msn_ranges": [{"from": "M00044", "to": "M00398"}],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {"post_mod": [], "pre_mod": ["MOD-169900"], "post_sb": [], "pre_sb": []}
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": ["RETROFIT"],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {"created": "2020-08-03", "released": "2021-02-14", "revised": "2023-06-30", "effective": "2023-07-15"},
+    "abstract": "In-service replacement of the four aluminium-lithium fittings at the forward cargo door surround by machined titanium items, restoring the fatigue allowable at the lower corner load path on pre-MOD aircraft.",
+    "sections": {
+      "planning_reason": "Aircraft delivered before the production cut-in of MOD-169900 carry aluminium-lithium fittings at the forward cargo door surround. Under the revised high-density freight loading spectrum these fittings do not meet the design service goal, and the fatigue substantiation requires a repeat detailed visual inspection of the lower corner region every 3 000 flight cycles. This Service Bulletin removes that repeat inspection by bringing the aircraft to the post-MOD standard.",
+      "description": "The four fittings at the lower forward and lower aft corners of the cargo door cut-out are removed and replaced by machined titanium items. The frame web assembly is re-drilled to the new fastener pattern and the joint is re-fastened with titanium bolts and countersunk washers. Protective treatment and sealing are restored to the standard practice of ATA 51-20.",
+      "accomplishment_summary": "Get access to the forward cargo compartment and remove the lower shell lining panels in zones 113 and 115. Remove the cargo floor panels local to the door cut-out. Do a detailed visual inspection of the frame web at station C40 before removal and record any finding. Remove the four existing fittings and retain the frame web assembly D5321003375416. Ream the fastener holes to the new pattern using the drill jig, and do an eddy current inspection of each reamed hole. Install the four titanium fittings with bolts AES495354-07 and washers AES963502K7 to the torque values given in the accomplishment instructions. Apply sealant to the faying surfaces and restore the protective treatment. Install the cargo floor panels and the lining panels. Do the door operational test and record the embodiment.",
+      "effectivity_note": "Applicable to MRD-46K1 aircraft MSN M00044 through M00398 that have not already been brought to the MOD-169900 standard in production. Aircraft delivered from MSN M00398 onward are already post-MOD and are not affected.",
+      "material_note": "Kit K5321-9901-01 contains the four fittings, the fastener set and the consumables. Lead time is sixteen weeks from order. The removed aluminium-lithium fittings are not returned and may be scrapped locally after the embodiment is recorded."
+    },
+    "entities": {
+      "part_numbers": ["D5321003375416", "AES495354-07", "AES963502K7"],
+      "fins": [],
+      "drawings": ["D53211167819"],
+      "software": [],
+      "zones": ["113", "115"],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": ["M00398"]
+    },
+    "references": [
+      {"doc_id": "MOD-169900", "doc_type": "MOD", "relation": "EMBODIES"}
+    ],
+    "keywords": ["service bulletin", "cargo door surround", "titanium fitting", "retrofit", "repeat inspection"],
+    "originator": {"department": "ESZS", "site": "Neuhafen", "role": "In-Service Engineering"},
+    "type_data": {
+      "sb_number": "MRD-53-9901",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 48 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "FATIGUE",
+      "embodied_mod": "MOD-169900",
+      "manpower": {"elapsed_time_hours": 96, "manhours": 138, "personnel": 3, "downtime_category": "C_CHECK"},
+      "material": {
+        "kit_number": "K5321-9901-01",
+        "kit_available_from": "2021-06-01",
+        "parts_required": [
+          {"part_number": "AES495354-07", "qty": 96, "uom": "EA"},
+          {"part_number": "AES963502K7", "qty": 96, "uom": "EA"}
+        ],
+        "parts_returned": [],
+        "consumables": ["Sealant PR-1440 Class B", "Primer, epoxy, chromate-free"],
+        "tooling": ["Drill jig 98D53211-401", "Torque wrench 5-50 Nm", "Eddy current probe, 2 MHz"]
+      },
+      "weight_change_kg": 2.9,
+      "accomplishment_steps": 11,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {"revision": "01", "date": "2021-02-14", "reason": "Initial issue"},
+        {"revision": "02", "date": "2023-06-30", "reason": "Eddy current inspection of reamed holes made mandatory; torque values corrected in step 8"}
+      ]
+    },
+    "_meta": {"synthetic": true, "generator": "authored", "dataset_version": "1.0"}
+  },
+
+  {
+    "doc_id": "MOD-169901",
+    "doc_type": "MOD",
+    "title": "Reinforcement of Fwd Cargo Door Surround Frames C38 to C42",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-11",
+      "title": "Fuselage Section 13 — Forward — Frames"
+    },
+    "secondary_ata": ["52-30", "52-70"],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": ["MERIDIAN-46"],
+      "models": ["MRD-46K1"],
+      "msns": [],
+      "msn_ranges": [{"from": "M00139", "to": "M00409"}],
+      "excluded_msns": ["M00210"],
+      "engine_types": [],
+      "operators": ["SIA"],
+      "embodiment_condition": {"post_mod": ["MOD-169900"], "pre_mod": [], "post_sb": [], "pre_sb": []}
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": ["RETROFIT"],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {"created": "2026-03-19", "released": null, "revised": null, "effective": null},
+    "abstract": "Local reinforcement of the forward cargo door surround between frames C38 and C42 by a machined titanium doubler, in answer to repeated in-service cracking at the lower door corner on high-cycle aircraft.",
+    "sections": {
+      "reason": "Since late 2024, four operators have reported cracking in the lower forward corner of the forward cargo door cut-out on MERIDIAN-46 aircraft in high-utilisation cargo-heavy operation. Eleven findings have been recorded across a population of roughly 240 aircraft, with the earliest at 19 800 flight cycles. Three findings exceeded the allowable damage limits of the applicable Structure Repair Manual scheme and required an engineering repair with a life limit attached. The titanium fitting standard introduced earlier did not remove the cracking, which indicates that the load path itself, and not the fitting material, is the driver.",
+      "description": "A machined Ti-6Al-4V doubler is installed on the internal face of the fuselage frames between stations C38 and C42, spanning the lower corner of the forward cargo door cut-out. The doubler diffuses the corner load into the adjacent frame bays and reduces the peak stress at the cut-out radius by an estimated 22 per cent. The frame rib D5321005304351 is retained and locally re-drilled; the splice plate BEL987037-46 at station C40 is replaced by a thicker item, and a new stiffener CIN650686-39 is added at the lower flange. The joint is fastened with titanium bolts AES495354-07. Access is through the forward cargo compartment, zones 113 and 115, with the lower shell lining panels removed between the two frames. The doubler footprint approaches the mounting bracket of the forward cargo door proximity sensor 3WT6 in zone 811, and the clearance to that bracket is one of the items to be confirmed. Revised detail is on drawings D53211167819 and D53211108423.",
+      "effects": "Estimated mass increase of 6.4 kg per aircraft, symmetric about the centre line, with a centre-of-gravity shift below 0.05 per cent MAC. No electrical load change. The modification is not interchangeable with the pre-modification standard, because the frame drilling pattern changes and the doubler cannot be removed without replacing the frame rib. The repeat detailed visual inspection of the corner region can be removed once the modification is embodied, subject to a revised fatigue substantiation. AMM, IPC and SRM content for ATA 53-21 will need updating, and at least one existing repair scheme will need re-issuing because the doubler occupies the area it uses.",
+      "embodiment_note": "Retrofit only at this stage. Provisional estimate is six days inside a scheduled C-check, on the assumption that the cargo compartment is already open for other work. A production cut-in is not proposed until the retrofit design is frozen.",
+      "open_points": "Pre-analysis must confirm the clearance between the new doubler footprint and the forward cargo door proximity sensor bracket, whether the existing Structure Repair Manual scheme for this panel remains valid after embodiment, and whether the modification can be embodied on aircraft that have not had the titanium fitting standard applied."
+    },
+    "entities": {
+      "part_numbers": ["D5321005304351", "BEL987037-46", "CIN650686-39", "AES495354-07"],
+      "fins": ["3WT6"],
+      "drawings": ["D53211167819", "D53211108423"],
+      "software": [],
+      "zones": ["113", "115", "811"],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": ["M00409"]
+    },
+    "references": [
+      {"doc_id": "IO-M-269901", "doc_type": "IO", "relation": "RAISED_BY"},
+      {"doc_id": "MOD-169900", "doc_type": "MOD", "relation": "REQUIRES"}
+    ],
+    "keywords": ["cargo door", "frame reinforcement", "fatigue crack", "doubler", "load diffusion"],
+    "originator": {"department": "ESZS", "site": "Neuhafen", "role": "Design Office"},
+    "type_data": {
+      "mod_number": 169901,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": ["EASA", "FAA"],
+        "cs25_paragraphs": ["CS 25.571", "CS 25.365", "CS 25.613"],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 6.4,
+      "balance_impact": "Symmetric installation, CG shift below 0.05 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": ["CIN650686-39", "AES495354-07"],
+      "parts_removed": ["BEL987037-46"],
+      "parts_modified": ["D5321005304351"],
+      "fins_affected": ["3WT6"],
+      "software_affected": [],
+      "estimated_manhours": 168,
+      "estimated_cost_keur": 720,
+      "lead_time_weeks": 42,
+      "production_impact": "No production cut-in proposed at this stage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {"synthetic": true, "generator": "authored", "dataset_version": "1.0"}
+  },
+
+  {
+    "doc_id": "SRM-M-53-21-12-904",
+    "doc_type": "SRM",
+    "title": "Fwd Cargo Door Lower Corner Skin Panel — External Doubler Repair",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "C",
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-12",
+      "title": "Fuselage Section 13 — Forward — Skin Panels"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": ["MERIDIAN-46"],
+      "models": ["MRD-46K1"],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {"post_mod": [], "pre_mod": [], "post_sb": [], "pre_sb": []}
+    },
+    "embodiment": null,
+    "dates": {"created": "2021-05-04", "released": "2022-03-11", "revised": "2025-02-18", "effective": "2025-03-01"},
+    "abstract": "Permanent external doubler repair for cracking and corrosion damage in the lower corner skin panel adjacent to the forward cargo door cut-out, with an attached fatigue life limit and repeat inspection.",
+    "sections": {
+      "purpose": "This repair restores the static strength and the residual fatigue capability of the lower corner skin panel next to the forward cargo door cut-out after removal of crack or corrosion damage.",
+      "damage_assessment": "Establish the extent of the damage by detailed visual inspection followed by eddy current inspection of the surrounding area to a radius of at least 150 mm. Damage that stays inside the allowable limits below may be blended out and left unrepaired. Damage that crosses a fastener row, that reaches the cut-out radius, or that lies within 40 mm of an existing repair, is outside the scope of this repair and requires an engineering assessment. Record the damage position relative to the nearest frame station and stringer before removal, because the repair layout depends on it.",
+      "repair_procedure": "Remove the damaged material by routing to a smooth oval with a minimum corner radius of 12 mm and blend the edges. Do a dye penetrant inspection of the routed edge. Cut the external doubler from 1.6 mm titanium sheet to the layout of repair drawing RD-53-21-12-904 and drill the fastener pattern using the doubler as a template. Deburr and apply the surface protection of ATA 51-20 to all new surfaces. Install the doubler wet with sealant, using rivets AES645587-2A on the two outer rows and to the pitch and edge distance given on the repair drawing. Restore the external finish to aerodynamic smoothness class B. Where the repair crosses the web assembly D5321003375416, add the local packer shown on sheet 2 of the repair drawing.",
+      "inspection_requirements": "The repair is life limited to 15 000 flight cycles from the date of embodiment. Do a repeat eddy current inspection of the doubler perimeter and of the routed edge every 4 000 flight cycles. Any new indication inside the repair boundary makes the repair invalid and requires a new engineering assessment. Report the repair to Aeralis so that it is recorded against the aircraft."
+    },
+    "entities": {
+      "part_numbers": ["AES645587-2A", "D5321003375416"],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": ["116"],
+      "figures": [],
+      "repair_drawings": ["RD-53-21-12-904"],
+      "msn_mentions": []
+    },
+    "references": [
+      {"doc_id": "MOD-169900", "doc_type": "MOD", "relation": "REFERENCES"}
+    ],
+    "keywords": ["skin panel repair", "external doubler", "cargo door corner", "life limited repair"],
+    "originator": {"department": "EDSA", "site": "Ashcombe", "role": "Repair Design"},
+    "type_data": {
+      "repair_number": "53-21-12-904",
+      "repair_category": "PERMANENT",
+      "damage_type": "CRACK",
+      "allowable_damage_limits": "Cracks up to 20 mm in length that do not cross a fastener row, are not closer than 15 mm to a fastener centre, and are not closer than 40 mm to the door cut-out radius. One crack per skin bay.",
+      "repair_drawings": [
+        {"reference": "RD-53-21-12-904", "title": "External doubler, fwd cargo door lower corner", "sheets": 2}
+      ],
+      "materials": [
+        {"part_number": "AES645587-2A", "description": "RIVET, SOLID, COUNTERSUNK HEAD", "qty": 64, "uom": "EA"}
+      ],
+      "fastener_pattern": "Two rows of 32 rivets AES645587-2A, 22 mm pitch, 16 mm edge distance, staggered",
+      "ndt_method": "EDDY_CURRENT",
+      "static_strength_restored_pct": 100,
+      "fatigue_life_note": "Repair is life limited to 15 000 flight cycles; repeat eddy current inspection every 4 000 flight cycles.",
+      "weight_penalty_kg": 1.4,
+      "aerodynamic_smoothness": "Class B",
+      "requires_oem_approval": false
+    },
+    "_meta": {"synthetic": true, "generator": "authored", "dataset_version": "1.0"}
+  },
+
+  {
+    "__note": "This PAWO shows three expected_findings for brevity. Real PAWOs must carry 5 to 9, each on a DISTINCT target document, at least one BLOCKING, and exactly two expected_non_findings.",
+
+    "doc_id": "PAWO-169901-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Reinforcement of Fwd Cargo Door Surround Frames C38 to C42",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-11",
+      "title": "Fuselage Section 13 — Forward — Frames"
+    },
+    "secondary_ata": ["52-30", "52-70"],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": ["MERIDIAN-46"],
+      "models": ["MRD-46K1"],
+      "msns": [],
+      "msn_ranges": [{"from": "M00139", "to": "M00409"}],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {"post_mod": [], "pre_mod": [], "post_sb": [], "pre_sb": []}
+    },
+    "embodiment": null,
+    "dates": {"created": "2026-03-20", "released": null, "revised": null, "effective": null},
+    "abstract": "Pre-analysis of the forward cargo door surround reinforcement, covering released modifications, in-service repairs, service bulletin effectivity and wiring routing in the forward cargo compartment.",
+    "sections": {
+      "objective": "Identify every released or candidate item of Aeralis technical documentation applicable to MRD-46K1 aircraft in the MSN M00139 to M00409 range that the proposed forward cargo door surround reinforcement would conflict with, depend on, supersede or invalidate.",
+      "scope_note": "The search covers ATA 53-21 as the primary chapter and ATA 52-30 and 52-70 as secondary, because the doubler footprint reaches the door cut-out and the door proximity sensing installation. ATA 25-50 cargo lining was included in the first pass and then excluded: the lining panels are removed and refitted unchanged, so no lining content is affected. Powerplant and avionics chapters were not searched.",
+      "method_note": "Entity linking was run first, seeded from the four part numbers, the single FIN, the two drawing numbers and the three zones carried by the candidate modification. Semantic similarity was then run over titles, abstracts and reason-for-change text, using the two seed phrases below, and the two result sets were merged. Findings surfaced by only one of the two methods are marked accordingly, because they are the ones that a single-method search would have missed.",
+      "findings_summary": "Three conflicts have been confirmed so far and two of them are blocking. The reinforcement cannot be embodied on aircraft that are still at the pre-titanium fitting standard, because the doubler fastener pattern assumes the post-modification frame drilling; this makes the earlier modification a hard prerequisite rather than a recommendation. Separately, the Service Bulletin that brings aircraft to that standard is written for pre-modification aircraft only, and its effectivity statement will need re-issuing once the reinforcement exists, otherwise an operator can embody the two in an order that leaves the door surround in an unsubstantiated configuration. The third finding is a clearance issue against the forward cargo door proximity sensor installation: it shares no part numbers with the candidate and was found only through the shared zone and the shared FIN.",
+      "next_steps": "Confirm the sensor bracket clearance with a three-dimensional mock-up before the design review. Raise a change request against the Service Bulletin effectivity statement. Obtain a position from the Structure Repair Manual owner on whether the existing corner repair scheme survives embodiment."
+    },
+    "entities": {
+      "part_numbers": ["D5321005304351", "BEL987037-46", "AES495354-07"],
+      "fins": ["3WT6"],
+      "drawings": ["D53211167819"],
+      "software": [],
+      "zones": ["113", "115", "811"],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {"doc_id": "MOD-169901", "doc_type": "MOD", "relation": "PRE_ANALYSIS_OF"},
+      {"doc_id": "IO-M-269901", "doc_type": "IO", "relation": "REFERENCES"}
+    ],
+    "keywords": ["pre-analysis", "cargo door", "frame reinforcement", "conflict search", "effectivity"],
+    "originator": {"department": "ESZS", "site": "Neuhafen", "role": "Pre-Analysis"},
+    "type_data": {
+      "pawo_number": "PAWO-169901-01",
+      "subject_mod": "MOD-169901",
+      "source_io": "IO-M-269901",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": true,
+      "raised_date": "2026-03-20",
+      "due_date": "2026-05-08",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": ["EDSA", "ELSC"],
+        "estimated_manhours": 120,
+        "spent_manhours": 74
+      },
+      "search_scope": {
+        "programs": ["M"],
+        "aircraft_types": ["MERIDIAN-46"],
+        "ata_2d": ["53", "52"],
+        "ata_4d": ["53-21", "52-30", "52-70"],
+        "doc_types": ["MOD", "SB", "AMM", "IPC", "SRM", "TSM", "WDM"],
+        "msn_range": {"from": "M00139", "to": "M00409"},
+        "entity_seeds": {
+          "part_numbers": ["D5321005304351", "BEL987037-46", "AES495354-07"],
+          "fins": ["3WT6"],
+          "drawings": ["D53211167819"],
+          "zones": ["113", "115", "811"],
+          "software": []
+        },
+        "similarity_seeds": [
+          "fatigue cracking at the lower corner of a cargo door cut-out",
+          "titanium doubler installed on fuselage frames to diffuse corner load"
+        ]
+      },
+      "tasks": [
+        {"task_id": "T01", "title": "Search released and candidate MODs on ATA 53-21 and 52-30", "method": "ENTITY_AND_SEMANTIC", "owner": "ESZS", "status": "DONE"},
+        {"task_id": "T02", "title": "Check in-service repair schemes on the forward cargo door corner panel", "method": "ENTITY", "owner": "EDSA", "status": "DONE"},
+        {"task_id": "T03", "title": "Assess door warning installation clearance in zone 811", "method": "ENTITY_AND_SEMANTIC", "owner": "ELSC", "status": "IN_PROGRESS"}
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-169900",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": ["AES495354-07"],
+            "shared_fins": [],
+            "shared_zones": ["113", "115"],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The doubler fastener pattern is drilled on the assumption that the frame already carries the titanium fitting standard introduced by MOD-169900. On a pre-modification aircraft the hole positions fall inside the edge-distance limit of the aluminium-lithium fitting, so the reinforcement cannot be embodied first.",
+          "resolution": "Declare MOD-169900 as a post-mod applicability condition on the candidate, and state the constraint explicitly in the retrofit Service Bulletin."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-53-9901",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": ["AES495354-07"],
+            "shared_fins": [],
+            "shared_zones": ["113", "115"],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The Service Bulletin is effective only on aircraft that are pre MOD-169900. Once the reinforcement exists, an operator that embodies the reinforcement before the Service Bulletin leaves the door surround in a configuration that neither substantiation covers, and the Service Bulletin gives no warning of it.",
+          "resolution": "Re-issue the Service Bulletin effectivity statement with an explicit concurrent-requirement note, and record the ordering constraint on both documents."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-M-53-21-12-904",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The repair and the candidate modification describe the same physical corner of the forward cargo door cut-out in entirely different vocabulary — 'external doubler on the lower corner skin panel' against 'load diffusion doubler on the internal frame face' — and share no part numbers, no FINs and no zones. Only the descriptive text connects them."
+          },
+          "rationale": "Aircraft that already carry this life-limited repair have a titanium doubler on the external face of the skin panel in the area where the reinforcement adds an internal doubler on the frame. The combined stack has never been substantiated, and the repair's repeat eddy current inspection cannot be performed once the internal doubler blocks access to the routed edge.",
+          "resolution": "Obtain a position from the repair design owner on whether the repair survives embodiment, and add an explicit pre-embodiment check for this repair to the retrofit Service Bulletin."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MRD-53-9901",
+          "doc_type": "SB",
+          "reason": "Illustrative only — in a real PAWO an expected_non_finding must be a document that the search will surface but that is genuinely unrelated, for example a modification with a near-identical title on a different aircraft type with no MSN overlap and no shared parts."
+        }
+      ],
+      "conclusion": "Not yet issued. Two blocking conflicts are confirmed and a third is under assessment.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {"synthetic": true, "generator": "authored", "dataset_version": "1.0"}
+  }
+]

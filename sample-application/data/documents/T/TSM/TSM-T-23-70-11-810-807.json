@@ -1,0 +1,304 @@
+[
+  {
+    "doc_id": "TSM-T-23-70-11-810-807",
+    "doc_type": "TSM",
+    "title": "Datalink Connection Lost After Coverage Change — Fault Isolation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2009-05-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-70-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2009-01-24",
+      "released": "2009-05-18",
+      "revised": "2009-05-18",
+      "effective": "2009-06-25"
+    },
+    "abstract": "Fault isolation for a reported loss of the controller-pilot datalink connection at a coverage change, separating a router thermal condition from an aerial sharing problem and from a genuine radio failure.",
+    "sections": {
+      "purpose": "Fault isolation for a crew report of datalink connection lost, with or without an automatic recovery, following a change between terrestrial and satellite coverage.",
+      "fault_description": "The crew report the datalink connection lost, usually shortly after leaving terrestrial coverage, with recovery taking several minutes or requiring the unit to be cycled. The maintenance record most often shows an over-temperature report from the router at the same time, and on aircraft with the later cabin connectivity installation it may show nothing at all. A no-fault-found removal rate above one in three has been recorded on this equipment, so the isolation deliberately puts the two non-router causes ahead of the unit itself.",
+      "isolation_procedure": "1. Read the maintenance messages for the affected flight and note whether a router over-temperature was recorded. 2. Where an over-temperature was recorded, check whether the aircraft carries the ventilated shelf standard; if it does not, the router is in the unventilated position and the condition is expected. Do not remove the unit. 3. Check the shelf temperature sensor reading where the ventilated shelf is fitted. A reading above the caution level with the aircraft on ground power points at a blocked inlet duct rather than at the unit, and an absent reading is a failed sensor. 4. Where no over-temperature was recorded, check whether the cabin connectivity installation is fitted and whether the aerial splitter is present. 5. Do the aerial return loss measurement at the splitter output with the connectivity system powered and again with it unpowered. A difference above the stated value confirms the splitter as the cause. 6. Where neither condition is confirmed, do the router built-in test and read the session log. 7. Only where the session log shows the router tearing down the session with the radio path available should the unit be removed.",
+      "dispatch_note": "Dispatch with the datalink inoperative is permitted under the minimum equipment list item, with the operational procedures for voice communication applied. The shelf temperature sensor is not itself a dispatch item and a sensor failure does not prevent dispatch, but it removes the pre-emptive indication and the crew should be told."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370115362436",
+        "D2370116071238",
+        "HOD93837-98"
+      ],
+      "fins": [
+        "295RN",
+        "5RC",
+        "55RC"
+      ],
+      "drawings": [
+        "D23701264936"
+      ],
+      "software": [],
+      "zones": [
+        "163",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-23-70-11-400-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink",
+      "connection lost",
+      "over-temperature",
+      "aerial splitter",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "23-70-11-810-807",
+      "fault_symptom": "ATC DATALINK CONNECTION LOST reported by the crew after a coverage change",
+      "fault_codes": [
+        "237011001",
+        "237011014"
+      ],
+      "warning_messages": [
+        "COM DATALINK FAULT"
+      ],
+      "affected_fins": [
+        "295RN",
+        "5RC",
+        "55RC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Router over-temperature in the unventilated shelf position",
+          "probability_pct": 40,
+          "fin": "295RN"
+        },
+        {
+          "cause": "Aerial splitter mismatch with the cabin connectivity installation",
+          "probability_pct": 30,
+          "fin": "55RC"
+        },
+        {
+          "cause": "Router session layer failure",
+          "probability_pct": 20,
+          "fin": "5RC"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-T-23-70-11-400-002-A",
+      "dispatch": {
+        "mel_item": "23-70-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Datalink inoperative, voice communication procedures applied"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-T-23-70-11-810-807",
+    "doc_type": "TSM",
+    "title": "Datalink Connection Lost After Coverage Change — Fault Isolation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-14",
+      "reason": "Provisioning check added ahead of the shelf sensor reading so that an unconnected input is not isolated as a failed sensor.",
+      "raised_by_pawo": "PAWO-146680-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-70-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2009-01-24",
+      "released": "2009-05-18",
+      "revised": "2026-07-14",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Fault isolation for a reported loss of the controller-pilot datalink connection at a coverage change, separating a router thermal condition from an aerial sharing problem and from a genuine radio failure.",
+    "sections": {
+      "purpose": "Fault isolation for a crew report of datalink connection lost, with or without an automatic recovery, following a change between terrestrial and satellite coverage.",
+      "fault_description": "The crew report the datalink connection lost, usually shortly after leaving terrestrial coverage, with recovery taking several minutes or requiring the unit to be cycled. The maintenance record most often shows an over-temperature report from the router at the same time, and on aircraft with the later cabin connectivity installation it may show nothing at all. Not every ventilated shelf has a working sensor: on part of the fleet the rack input was provisioned at conversion and the sensor harness was never fitted, so the absence of a reading says nothing about the sensor and must not be treated as a fault. A no-fault-found removal rate above one in three has been recorded on this equipment, so the isolation deliberately puts the two non-router causes ahead of the unit itself.",
+      "isolation_procedure": "1. Read the maintenance messages for the affected flight and note whether a router over-temperature was recorded. 2. Where an over-temperature was recorded, check whether the aircraft carries the ventilated shelf standard; if it does not, the router is in the unventilated position and the condition is expected. Do not remove the unit. 3. Before any sensor reading is used, establish from the aircraft configuration record whether the shelf temperature sensor was connected at conversion. Where the input was provisioned but the harness was never fitted, there is no reading to take and no sensor fault to raise; go to step 5. 4. Check the shelf temperature sensor reading where the sensor is fitted. A reading above the caution level with the aircraft on ground power points at a blocked inlet duct rather than at the unit. 5. Where no over-temperature was recorded, check whether the cabin connectivity installation is fitted and whether the aerial splitter is present. 6. Do the aerial return loss measurement at the splitter output with the connectivity system powered and again with it unpowered. A difference above the stated value confirms the splitter as the cause. 7. Where neither condition is confirmed, do the router built-in test and read the session log. 8. Only where the session log shows the router tearing down the session with the radio path available should the unit be removed.",
+      "dispatch_note": "Dispatch with the datalink inoperative is permitted under the minimum equipment list item, with the operational procedures for voice communication applied. The shelf temperature sensor is not itself a dispatch item and a sensor failure does not prevent dispatch, but it removes the pre-emptive indication and the crew should be told. On an aircraft where the sensor was never connected there is no indication to lose and no entry is required."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370115362436",
+        "D2370116071238",
+        "HOD93837-98"
+      ],
+      "fins": [
+        "295RN",
+        "5RC",
+        "55RC"
+      ],
+      "drawings": [
+        "D23701264936"
+      ],
+      "software": [],
+      "zones": [
+        "163",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-23-70-11-400-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink",
+      "connection lost",
+      "over-temperature",
+      "aerial splitter",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "23-70-11-810-807",
+      "fault_symptom": "ATC DATALINK CONNECTION LOST reported by the crew after a coverage change",
+      "fault_codes": [
+        "237011001",
+        "237011014"
+      ],
+      "warning_messages": [
+        "COM DATALINK FAULT"
+      ],
+      "affected_fins": [
+        "295RN",
+        "5RC",
+        "55RC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Router over-temperature in the unventilated shelf position",
+          "probability_pct": 40,
+          "fin": "295RN"
+        },
+        {
+          "cause": "Aerial splitter mismatch with the cabin connectivity installation",
+          "probability_pct": 30,
+          "fin": "55RC"
+        },
+        {
+          "cause": "Router session layer failure",
+          "probability_pct": 20,
+          "fin": "5RC"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-T-23-70-11-400-002-A",
+      "dispatch": {
+        "mel_item": "23-70-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Datalink inoperative, voice communication procedures applied"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,161 @@
+[
+  {
+    "doc_id": "MOD-111833",
+    "doc_type": "MOD",
+    "title": "Form-Fit Successor for the Obsolete Avionics Network Switch",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-10-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Network Components — AFDX Switch"
+    },
+    "secondary_ata": [
+      "42-10",
+      "42-40"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-10-06",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "A drop-in replacement for the avionics network switch whose controller silicon goes out of production in 2028, keeping the existing rack, cooling and cable plan while the internal architecture changes completely.",
+    "sections": {
+      "reason": "The supplier has issued a last-time-buy notice for the switching controller used in both network switches, with final deliveries in the third quarter of 2028. Current spares cover projected removals to 2031 at the present rate, which leaves no margin for the fleet growth already contracted. Nothing is wrong with the equipment: this is a pure obsolescence case, and the programme's policy is to introduce a successor before the last-time-buy window closes rather than to buy a lifetime stock of a part whose test equipment is also going out of support.",
+      "description": "The switch is replaced by a successor unit of identical external form, connector layout and cooling requirement, built around a current-generation switching controller with the same port count and the same configuration table format. The data concentrator D4220115537484 is replaced, the network computer D4220003425395 is retained without change, and the rack mounting tray D4210120617730 is re-used, which is why the rack cut-out and the cooling plenum are untouched. Anchor nuts AES1492K6 secure the revised earth strap. The network control panel 4624CP and the network circuit card 549CP3 keep their identifiers. Revised installation detail is on drawings D42200067340 and D42101283111. Both switches sit in the avionics compartment, zones 162 and 164, and are reached through the forward equipment access.",
+      "effects": "Mass reduction of 0.9 kg per aircraft for the pair. Electrical load falls by 55 VA on the essential bus. The successor is interchangeable with the obsolete unit at aircraft level, but a mixed pair is not permitted because the two units negotiate the redundancy role at power-up and the negotiation protocol differs. Minimum equipment list dispatch with one switch inoperative is unchanged. Illustrated parts content needs the new unit and the loadable software configuration task changes because the configuration table is loaded through the network rather than through the maintenance port.",
+      "embodiment_note": "Intended as a production cut-in with a retrofit path for delivered aircraft, embodied as a pair at line level in about four hours. Spares provisioning switches to the successor unit at cut-in and the obsolete unit remains repairable until the test equipment support ends.",
+      "open_points": "Pre-analysis must establish whether any other change already claims space or cooling in the same avionics rack bay, whether the network configuration table produced by the current loading process is accepted unchanged by the successor, and whether the redundancy negotiation change affects any dispatch condition that the minimum equipment list currently allows."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4220115537484",
+        "D4220003425395",
+        "D4210120617730",
+        "AES1492K6"
+      ],
+      "fins": [
+        "4624CP",
+        "549CP3"
+      ],
+      "drawings": [
+        "D42200067340",
+        "D42101283111"
+      ],
+      "software": [],
+      "zones": [
+        "162",
+        "164"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [],
+    "keywords": [
+      "network switch",
+      "obsolescence",
+      "last-time-buy",
+      "form fit",
+      "avionics rack"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Avionics Design"
+    },
+    "type_data": {
+      "mod_number": 111833,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -0.9,
+      "balance_impact": "Forward avionics compartment, no reportable shift",
+      "electrical_load_impact_va": -55,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "AES1492K6"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4220115537484"
+      ],
+      "fins_affected": [
+        "4624CP",
+        "549CP3"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 70,
+      "estimated_cost_keur": 1450,
+      "lead_time_weeks": 62,
+      "production_impact": "Cut-in proposed once the successor unit is qualified; no line rework expected",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

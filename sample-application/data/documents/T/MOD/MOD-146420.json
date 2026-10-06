@@ -1,0 +1,192 @@
+[
+  {
+    "doc_id": "MOD-146420",
+    "doc_type": "MOD",
+    "title": "Replacement of the Primary Electrical Distribution Centre Contactor Modules in the Forward Avionics Bay",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2018-06-14",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-11",
+      "title": "Electrical Load Distribution — Primary Distribution Centre"
+    },
+    "secondary_ata": [
+      "24-50-12",
+      "92-11-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00113"
+        }
+      ],
+      "excluded_msns": [
+        "T00073"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00114",
+      "production_cut_in_date": "2016-02-19",
+      "retrofit_via": [
+        "TTN-24-1105"
+      ]
+    },
+    "dates": {
+      "created": "2016-01-18",
+      "released": "2016-11-04",
+      "revised": "2018-06-14",
+      "effective": "2018-07-20"
+    },
+    "abstract": "Introduction of a second-source contactor module family in the forward primary distribution centre, closing out the discontinuation notice on the original supplier's coil assembly and removing a growing spares exposure across the delivered fleet.",
+    "sections": {
+      "reason": "The supplier of the original primary distribution centre contactor coil issued a discontinuation notice with a last-time-buy date that would have left the fleet without a supported source from 2018. A last-time-buy was priced and rejected: the quantity required to cover the delivered fleet to end of life exceeded the cost of qualifying a second source by a factor of four, and the stored coils would have needed periodic re-certification. Independently, thirty-one unscheduled removals across the fleet in thirty months had been attributed to contact erosion on the same coil family, at a mean time between unscheduled removals well below the design figure.",
+      "description": "The three contactor modules in the forward primary distribution centre are replaced by a redesigned module of the same envelope and the same mounting pattern. The new module D2450112131298 carries a sealed coil with a magnetic latch rather than a continuously energised coil, and the auxiliary contact block D2450115910023 is repositioned so that the status wiring is accessible without removing the module from its rack. The rack bus bar is unchanged. Mounting screws EN575431K5 are renewed at every position because the new module is slightly deeper in the flange. The interface bracket JAD147611-76 is added at the two outboard positions to pick up the extra depth. Wiring at FIN 1198GX9 and FIN 3102GX is re-terminated but not re-routed, and the module identification plates are replaced. Work is carried out from the forward avionics bay in zones 292 and 682 with the aircraft on external power removed. The installation is detailed on drawing D24501125799.",
+      "effects": "Mass reduction of 2.4 kg per aircraft, distributed between the two racks, with no measurable centre-of-gravity effect. Continuous coil current is removed, which reduces the standing electrical load by approximately 180 volt-amperes on the ground and in flight. The new module is one-way interchangeable: a post-modification rack accepts the original module only if the interface bracket is removed first, and this is called out in the maintenance manual. Dispatch is unaffected and the minimum equipment list entry for the distribution centre is unchanged. Illustrated parts content and the removal and installation tasks require update, and the spares catalogue carries both standards until the fleet is converted.",
+      "embodiment_note": "Production cut-in at MSN T00114 in February 2016. Retrofit is available through the associated service bulletin and takes about two shifts on a line stop with the aircraft on ground power removed; no dedicated downtime is required if it is combined with an A-check."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450112131298",
+        "D2450115910023",
+        "EN575431K5",
+        "JAD147611-76"
+      ],
+      "fins": [
+        "1198GX9",
+        "3102GX"
+      ],
+      "drawings": [
+        "D24501125799"
+      ],
+      "software": [],
+      "zones": [
+        "292",
+        "682"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00073",
+        "T00114"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-24-1105",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-149510",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "AMM-T-24-50-11-000-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-T-24-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "contactor",
+      "primary distribution centre",
+      "obsolescence",
+      "second source",
+      "avionics bay"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 146420,
+      "mod_class": "MINOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1351",
+          "CS 25.1357"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -2.4,
+      "balance_impact": "Negligible, no measurable CG effect",
+      "electrical_load_impact_va": -180,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "D2450112131298",
+        "D2450115910023",
+        "JAD147611-76"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "EN575431K5"
+      ],
+      "fins_affected": [
+        "1198GX9",
+        "3102GX"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 86,
+      "estimated_cost_keur": 410,
+      "lead_time_weeks": 38,
+      "production_impact": "Cut-in at MSN T00114, no line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

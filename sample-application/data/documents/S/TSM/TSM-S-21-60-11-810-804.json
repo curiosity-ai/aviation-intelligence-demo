@@ -1,0 +1,331 @@
+[
+  {
+    "doc_id": "TSM-S-21-60-11-810-804",
+    "doc_type": "TSM",
+    "title": "Cabin Zone Temperature Out of Band with No Trim Air Fault Raised",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1994-12-29",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-20",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1994-05-22",
+      "released": "1994-12-29",
+      "revised": "1994-12-29",
+      "effective": "1995-01-15"
+    },
+    "abstract": "Fault isolation for a cabin zone that sits several degrees away from its selected temperature while the system reports no fault, the classic signature of a drifted diaphragm trim air regulator.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a cabin zone temperature that is persistently away from the selected value while the air conditioning system reports no fault.",
+      "fault_description": "Cabin crew report one zone consistently warmer or cooler than the others, usually by three to six degrees, and the flight crew find no fault message and a normal selected temperature. The condition is stable rather than intermittent and does not change with flight phase. The cause is almost always regulator drift: the diaphragm regulator has no feedback path to the zone controller, so the controller believes the valve is where it commanded it and raises nothing. The drift is confirmed by a static pressure check on the pneumatic reference line, which is the only way to see where the regulator has settled.",
+      "isolation_procedure": "1. Record the selected and the measured temperature for every zone over a full cruise segment, not a single reading. 2. Check the zone controller for a latched fault at position 7250HQ and clear the maintenance memory. 3. Check the trim air pressure at the manifold against the schedule; a low supply affects every zone and is not a single-zone fault. 4. Connect the pressure gauge to the reference line tapping at the affected valve and read the static reference pressure with the zone commanded fully closed and then fully open. A reading that does not move between the two commands, or that sits outside the band in the limits table, confirms regulator drift. 5. Inspect the pneumatic reference line at the affected valve for contamination or restriction; this is the usual root cause of the drift. 6. Check the filter element at position 2431HM8 and replace it if discoloured. 7. Replace the regulator under AMM-S-21-60-11-400-010-A and re-test all four zones.",
+      "dispatch_note": "Dispatch is permitted with one trim air valve inoperative under the applicable MMEL item, with the affected zone temperature reverting to the pack outlet value. No performance penalty applies. Crew should be advised so that the cabin can be managed on the remaining zones."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160115682504",
+        "D2160118677637",
+        "KAD437362-51"
+      ],
+      "fins": [
+        "2431HM8",
+        "7250HQ"
+      ],
+      "drawings": [
+        "D21601215648"
+      ],
+      "software": [],
+      "zones": [
+        "193",
+        "241",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-21-60-11-400-010-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "zone temperature",
+      "regulator drift",
+      "reference line",
+      "no fault raised",
+      "trim air"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "21-60-11-810-804",
+      "fault_symptom": "Cabin zone temperature three to six degrees from the selected value with no fault message",
+      "fault_codes": [
+        "216011005",
+        "216011031"
+      ],
+      "warning_messages": [
+        "COND ZONE REGUL FAULT"
+      ],
+      "affected_fins": [
+        "2431HM8",
+        "7250HQ"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Diaphragm regulator drift with no feedback path to the zone controller",
+          "probability_pct": 52,
+          "fin": "2431HM8"
+        },
+        {
+          "cause": "Contaminated or restricted pneumatic reference line",
+          "probability_pct": 27,
+          "fin": "2431HM8"
+        },
+        {
+          "cause": "Discoloured trim air filter element restricting flow",
+          "probability_pct": 13,
+          "fin": "2431HM8"
+        },
+        {
+          "cause": "Zone controller channel fault with no latched message",
+          "probability_pct": 8,
+          "fin": "7250HQ"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-S-21-60-11-400-010-A",
+      "dispatch": {
+        "mel_item": "21-60-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One trim air valve inoperative, affected zone reverts to pack outlet temperature, no performance penalty"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-S-21-60-11-810-804",
+    "doc_type": "TSM",
+    "title": "Cabin Zone Temperature Out of Band with No Trim Air Fault Raised",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2017-11-14",
+      "reason": "The isolation branch is split by regulator standard and the static reference pressure check is replaced by a command-response check on the torque motor valve.",
+      "raised_by_pawo": "PAWO-130510-01",
+      "raised_by_finding": "F01",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-20",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1994-05-22",
+      "released": "1994-12-29",
+      "revised": "2017-11-14",
+      "effective": "2017-12-01"
+    },
+    "abstract": "Fault isolation for a cabin zone that sits several degrees away from its selected temperature while the system reports no fault, the classic signature of a drifted diaphragm trim air regulator.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a cabin zone temperature that is persistently away from the selected value while the air conditioning system reports no fault.",
+      "fault_description": "Cabin crew report one zone consistently warmer or cooler than the others, usually by three to six degrees, and the flight crew find no fault message and a normal selected temperature. The condition is stable rather than intermittent and does not change with flight phase. On aircraft still fitted with the diaphragm trim air regulator this is almost always regulator drift: there is no feedback path to the zone controller, so the controller believes the valve is where it commanded it and raises nothing. On aircraft with the torque motor regulator the same symptom raises a divergence message and this procedure is not the applicable one.",
+      "isolation_procedure": "1. Confirm the aircraft standard. If the aircraft has the torque motor regulator with position feedback, go to the divergence message procedure instead; the static reference pressure check below has no meaning on that unit, because there is no diaphragm reference to read and a serviceable valve will fail it. 2. Record the selected and the measured temperature for every zone over a full cruise segment, not a single reading. 3. Check the zone controller for a latched fault at position 7250HQ and clear the maintenance memory. 4. Check the trim air pressure at the manifold against the schedule; a low supply affects every zone and is not a single-zone fault. 5. On the diaphragm standard, connect the pressure gauge to the reference line tapping and read the static reference pressure with the zone commanded fully closed and then fully open. On the torque motor standard, connect the trim air test set instead and command the affected zone valve from fully closed to fully open, reading the actual valve position by hand at the body: a valve that does not follow the command inside four degrees confirms the fault. 6. Inspect the pneumatic reference line at the affected valve for contamination or restriction; this is the usual root cause of the drift on the diaphragm standard. 7. Check the filter element at position 2431HM8 and replace it if discoloured. 8. Replace the regulator under AMM-S-21-60-11-400-010-A and re-test all four zones.",
+      "dispatch_note": "Dispatch is permitted with one trim air valve inoperative under the applicable MMEL item, with the affected zone temperature reverting to the pack outlet value. No performance penalty applies. Crew should be advised so that the cabin can be managed on the remaining zones."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160115682504",
+        "D2160118677637",
+        "KAD437362-51"
+      ],
+      "fins": [
+        "2431HM8",
+        "7250HQ"
+      ],
+      "drawings": [
+        "D21601215648"
+      ],
+      "software": [],
+      "zones": [
+        "193",
+        "241",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-21-60-11-400-010-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-130510",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "zone temperature",
+      "regulator drift",
+      "reference line",
+      "no fault raised",
+      "trim air"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "21-60-11-810-804",
+      "fault_symptom": "Cabin zone temperature three to six degrees from the selected value with no fault message",
+      "fault_codes": [
+        "216011005",
+        "216011031"
+      ],
+      "warning_messages": [
+        "COND ZONE REGUL FAULT"
+      ],
+      "affected_fins": [
+        "2431HM8",
+        "7250HQ"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Diaphragm regulator drift with no feedback path to the zone controller",
+          "probability_pct": 49,
+          "fin": "2431HM8"
+        },
+        {
+          "cause": "Contaminated or restricted pneumatic reference line",
+          "probability_pct": 26,
+          "fin": "2431HM8"
+        },
+        {
+          "cause": "Discoloured trim air filter element restricting flow",
+          "probability_pct": 15,
+          "fin": "2431HM8"
+        },
+        {
+          "cause": "Zone controller channel fault with no latched message",
+          "probability_pct": 10,
+          "fin": "7250HQ"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-S-21-60-11-400-010-A",
+      "dispatch": {
+        "mel_item": "21-60-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One trim air valve inoperative, affected zone reverts to pack outlet temperature, no performance penalty"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

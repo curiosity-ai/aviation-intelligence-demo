@@ -1,0 +1,362 @@
+[
+  {
+    "doc_id": "MOD-158055",
+    "doc_type": "MOD",
+    "title": "Trim Air Zone Regulation Standard 3 with Valve-Integrated Sensing and Deletion of the Duct Sensor Boss",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-60-12",
+      "21-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MTA",
+        "OST",
+        "FKA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-153140"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-01-19",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposal to move the zone sensing element inside the valve body and delete the external duct boss, ending the boss land cracking that the previous standard introduced and cutting the sensor channel count by one third.",
+    "sections": {
+      "reason": "The duct-mounted sensing introduced with the previous standard fixed the control problem but created a structural one that nobody anticipated. The boss welded into the duct outlet flange has now produced twenty-nine crack findings across the modified population, all of them at the weld toe on the downstream side, and every finding grounds the aircraft until the duct section is replaced because there is no approved repair for a pressurised bleed duct weld. The rate is rising with fleet hours and the affected duct is a long-lead item. In parallel, three operators have asked for the sensor channel count to be reduced because each channel is an additional item on their component reliability report and each carries its own no-fault-found history.",
+      "description": "The sensing element is moved inside the valve body, immediately downstream of the metering seat, so that the external boss is deleted entirely and the duct outlet flange returns to a plain machined face. The switched assembly D2160114404059 is replaced by a valve carrying the element internally and reporting on the existing digital bus, and the accumulator KAE541402-61 is retained unchanged. The regulator body ASH878362-87 is common to the earlier standard and is not disturbed, and the cover screws AES731670-69 are reused at the same torque. The valve at FIN 726HQ, the valve at FIN 980HQ and the forward switch at FIN 2431HM8 are all replaced; the third ZEPHYR-24 sensing point is deleted because the internal element gives the same information. Work is in zones 254, 291 and 273 through the ceiling and lateral panels. Detail is on drawing D21601147555.",
+      "effects": "Mass reduction of 2.2 kilograms per aircraft. Electrical load falls by 40 volt amperes as three sensor channels are deleted. Not interchangeable in either direction: the duct flange is machined flat at embodiment and the earlier valve has no internal element, so a mixed installation would leave a zone unsensed. The duct weld crack inspection is deleted for modified aircraft, which removes a repeat item from the maintenance planning document, and the sensor channel count on the reliability report falls by three. Trim air maintenance tasks, the parts figure and the zone temperature trouble shooting procedure all require re-issue, and the crew-facing description of how quickly a zone responds is unaffected because the loop performance is deliberately unchanged.",
+      "embodiment_note": "Both production cut-in and retrofit are proposed. Retrofit needs the ceiling panels down in three zones and the duct outlet flange machined in situ, which is the operation that decides whether this can be an overnight task or a base maintenance task. No kit is defined yet.",
+      "open_points": "Pre-analysis must establish whether the duct outlet flange can be machined on the aircraft or whether the duct section has to be replaced, what happens to the inspection obligation on aircraft that have already had a boss crack repaired by duct replacement, whether the aft cabin service bulletins that call up the duct boss remain valid, and whether the deleted third sensing point on ZEPHYR-24 aircraft changes any published dispatch condition."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160114404059",
+        "KAE541402-61",
+        "ASH878362-87",
+        "AES731670-69"
+      ],
+      "fins": [
+        "726HQ",
+        "980HQ",
+        "2431HM8"
+      ],
+      "drawings": [
+        "D21601147555"
+      ],
+      "software": [],
+      "zones": [
+        "254",
+        "291",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-153140",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "trim air standard 3",
+      "internal sensing element",
+      "duct boss deletion",
+      "weld toe cracking",
+      "sensor channel count"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 158055,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.831",
+          "CS 25.1309",
+          "CS 25.365"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -2.2,
+      "balance_impact": "Distributed along the ceiling duct run, no measurable CG effect",
+      "electrical_load_impact_va": -40,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D2160114404059"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "KAE541402-61"
+      ],
+      "fins_affected": [
+        "726HQ",
+        "980HQ",
+        "2431HM8"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 260,
+      "estimated_cost_keur": 1150,
+      "lead_time_weeks": 44,
+      "production_impact": "Cut-in proposed once the flange machining question is answered",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-158055",
+    "doc_type": "MOD",
+    "title": "Trim Air Zone Regulation Standard 3 with Valve-Integrated Sensing and Deletion of the Duct Sensor Boss",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-07",
+      "reason": "All trim air publication changes arising from the previous standard are sequenced behind this dossier so that the maintenance content is written once.",
+      "raised_by_pawo": "PAWO-153140-02",
+      "raised_by_finding": "F04",
+      "finding_type": "SUPERSESSION"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-60-12",
+      "21-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MTA",
+        "OST",
+        "FKA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-153140"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-01-19",
+      "released": null,
+      "revised": "2026-08-07",
+      "effective": null
+    },
+    "abstract": "Proposal to move the zone sensing element inside the valve body and delete the external duct boss, ending the boss land cracking the previous standard introduced and taking over the publication changes that standard still owes.",
+    "sections": {
+      "reason": "The duct-mounted sensing introduced with the previous standard fixed the control problem but created a structural one that nobody anticipated. The boss welded into the duct outlet flange has now produced twenty-nine crack findings across the modified population, all of them at the weld toe on the downstream side, and every finding grounds the aircraft until the duct section is replaced because there is no approved repair for a pressurised bleed duct weld. The rate is rising with fleet hours and the affected duct is a long-lead item. In parallel, three operators have asked for the sensor channel count to be reduced because each channel is an additional item on their component reliability report and each carries its own no-fault-found history.",
+      "description": "The sensing element is moved inside the valve body, immediately downstream of the metering seat, so that the external boss is deleted entirely and the duct outlet flange returns to a plain machined face. The switched assembly D2160114404059 is replaced by a valve carrying the element internally and reporting on the existing digital bus, and the accumulator KAE541402-61 is retained unchanged. The regulator body ASH878362-87 is common to the earlier standard and is not disturbed, and the cover screws AES731670-69 are reused at the same torque. The valve at FIN 726HQ, the valve at FIN 980HQ and the forward switch at FIN 2431HM8 are all replaced; the third ZEPHYR-24 sensing point is deleted because the internal element gives the same information. Work is in zones 254, 291 and 273 through the ceiling and lateral panels. Detail is on drawing D21601147555.",
+      "effects": "Mass reduction of 2.2 kilograms per aircraft. Electrical load falls by 40 volt amperes as three sensor channels are deleted. Not interchangeable in either direction: the duct flange is machined flat at embodiment and the earlier valve has no internal element, so a mixed installation would leave a zone unsensed. The duct weld crack inspection is deleted for modified aircraft, which removes a repeat item from the maintenance planning document, and the sensor channel count on the reliability report falls by three. Trim air maintenance tasks, the parts figure and the zone temperature trouble shooting procedure all require re-issue, and the crew-facing description of how quickly a zone responds is unaffected because the loop performance is deliberately unchanged.",
+      "embodiment_note": "Both production cut-in and retrofit are proposed. Retrofit needs the ceiling panels down in three zones and the duct outlet flange machined in situ, which is the operation that decides whether this can be an overnight task or a base maintenance task. No kit is defined yet. The publication changes that the previous standard still owes are held against this dossier rather than issued separately: the conversion bulletin, the valve installation task and the zone temperature trouble shooting procedure all describe the duct boss that this proposal deletes, so re-issuing them now would mean writing them twice.",
+      "open_points": "Pre-analysis must establish whether the duct outlet flange can be machined on the aircraft or whether the duct section has to be replaced, what happens to the inspection obligation on aircraft that have already had a boss crack repaired by duct replacement, whether the aft cabin service bulletins that call up the duct boss remain valid, and whether the deleted third sensing point on ZEPHYR-24 aircraft changes any published dispatch condition. It must also confirm the publication sequencing, because three trim air documents are now waiting on the outcome and each of them has an operator asking when it will be re-issued."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160114404059",
+        "KAE541402-61",
+        "ASH878362-87",
+        "AES731670-69"
+      ],
+      "fins": [
+        "726HQ",
+        "980HQ",
+        "2431HM8"
+      ],
+      "drawings": [
+        "D21601147555"
+      ],
+      "software": [],
+      "zones": [
+        "254",
+        "291",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-153140",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "trim air standard 3",
+      "internal sensing element",
+      "duct boss deletion",
+      "publication sequencing",
+      "weld toe cracking"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 158055,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.831",
+          "CS 25.1309",
+          "CS 25.365"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -2.2,
+      "balance_impact": "Distributed along the ceiling duct run, no measurable CG effect",
+      "electrical_load_impact_va": -40,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D2160114404059"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "KAE541402-61"
+      ],
+      "fins_affected": [
+        "726HQ",
+        "980HQ",
+        "2431HM8"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 260,
+      "estimated_cost_keur": 1150,
+      "lead_time_weeks": 44,
+      "production_impact": "Cut-in proposed once the flange machining question is answered",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

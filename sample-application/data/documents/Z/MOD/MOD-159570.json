@@ -1,0 +1,187 @@
+[
+  {
+    "doc_id": "MOD-159570",
+    "doc_type": "MOD",
+    "title": "Roller and Track Pairing Change on the Inboard Flap Carriage to Delete the Repeat Wear Check",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-13",
+      "title": "Flaps — Flap Track and Carriage"
+    },
+    "secondary_ata": [
+      "57-30",
+      "92-51"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z01080",
+          "to": "Z09673"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-154120"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-02-03",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposed nitrided track surface and a crowned roller with a sealed bearing on the inboard flap carriage, so that the wear interval matches short-haul utilisation and the repeat mirror check can be deleted rather than relaxed.",
+    "sections": {
+      "reason": "A maintenance organisation looking after ninety aircraft opened 47 work orders against inboard flap carriage rollers in two years, nine of which escalated to track replacement. Roller life on aircraft flown at more than four sectors a day is around 4000 flight cycles against a nominal 9000. The wear mechanism is edge loading: the cylindrical roller runs on a track whose surface hardness falls away at the edge of the induction-hardened band, so the contact stress rises exactly where the material is weakest. The repeat mirror check that manages the problem consumes an A check slot and fails more often than it passes on high-utilisation aircraft.",
+      "description": "The carriage roller is replaced by a crowned item with a sealed and greased-for-life bearing, and the track running surface is nitrided over its full width so that hardness no longer falls away at the edge. The obsolete clamp D2750134424647 is deleted and the carriage is retained by the heat exchanger bracket D2750134493366 re-used as a spacer, with the vendor hose GR458189-31 re-routed clear of the new roller envelope. Titanium bolts AGS968429-4D replace the previous steel items at the carriage pivot and the screws LN714541-64 secure the sealed bearing cover. The flap position sensing valve FIN 3416KS4 sits within 40 millimetres of the new roller envelope and its bracket must be checked for clearance. Access is through the trailing edge panels in zones 525, 562, 565 and 662 with the flap at full extension. Drawings D27500077491 issue A and D27501286380 issue A carry the roller profile and the track nitriding specification.",
+      "effects": "Estimated mass reduction of 0.8 kg per wing. No electrical load change. The crowned roller is not interchangeable with the cylindrical item because the track profile differs, so a nitrided track must not be run with an old roller or the reverse. If the wear substantiation holds, the repeat mirror check is deleted and the roller becomes an on-condition item at the scheduled track lubrication. AMM, IPC and TSM content for ATA 27-50 will require re-issue, and the flap rigging tolerances change slightly because the crowned roller sits 1.2 millimetres higher in the track.",
+      "open_points": "Pre-analysis must establish whether the reinforced flap track rib standard is a hard prerequisite for the nitrided track, whether the flap position sensing bracket clears the new roller envelope, and whether the existing wear inspection bulletin has to be cancelled or re-issued once the check is deleted."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750134424647",
+        "D2750134493366",
+        "GR458189-31",
+        "AGS968429-4D",
+        "LN714541-64"
+      ],
+      "fins": [
+        "3416KS4"
+      ],
+      "drawings": [
+        "D27500077491",
+        "D27501286380"
+      ],
+      "software": [],
+      "zones": [
+        "525",
+        "562",
+        "565",
+        "662"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z03000",
+        "Z05215"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-Z-259031",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-154120",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "flap carriage roller",
+      "nitrided track",
+      "crowned roller",
+      "edge loading",
+      "wear check"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 159570,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.697",
+          "CS 25.571"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -1.6,
+      "balance_impact": "Symmetric mass reduction, no measurable CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AGS968429-4D",
+        "LN714541-64"
+      ],
+      "parts_removed": [
+        "D2750134424647"
+      ],
+      "parts_modified": [
+        "D2750134493366",
+        "GR458189-31"
+      ],
+      "fins_affected": [
+        "3416KS4"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 64,
+      "estimated_cost_keur": 620,
+      "lead_time_weeks": 34,
+      "production_impact": "No production cut-in proposed; the current build standard already uses a wider hardened band",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

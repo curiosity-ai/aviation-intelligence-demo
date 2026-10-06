@@ -1,0 +1,186 @@
+[
+  {
+    "doc_id": "MOD-146050",
+    "doc_type": "MOD",
+    "title": "Forward Fuselage Door Warning Harness Segregation Rework",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-12-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-13",
+      "title": "Forward Fuselage Wiring — Door Warning Wiring"
+    },
+    "secondary_ata": [
+      "52-70",
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00193"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-141020"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "T00193",
+      "production_cut_in_date": "2022-05-17",
+      "retrofit_via": [
+        "TTN-92-1004"
+      ]
+    },
+    "dates": {
+      "created": "2020-07-14",
+      "released": "2021-12-02",
+      "revised": null,
+      "effective": "2022-01-10"
+    },
+    "abstract": "Separation of the two door warning channels onto physically distinct harness routes in the forward fuselage, so that a single chafe or connector failure can no longer disable both channels of a door station.",
+    "sections": {
+      "reason": "When the second latch position sensor was introduced, both sensing channels of each cargo door station were carried in the same harness bundle for part of their run through the forward fuselage. A chafe finding on one aircraft in 2020 exposed conductors from both channels at the same clamp position, which would have removed the whole benefit of the duplication had it progressed. A wiring segregation review then found five further positions where the two channels shared a bundle, a support or a connector shell.",
+      "description": "The two door warning channels are re-routed so that they share no bundle, no clamp and no connector between the door station and the door warning computing function. A new avionics bay cable assembly D9221113867714 carries the second channel on the opposite side of the frame, and a splice module D9221004365569 is added at the transition into the avionics bay so that the second channel can be broken out without disturbing the first. Connector HOL285457-83 replaces the shared shell at the forward fuselage transition, and grommets EN491538-6A protect the new penetrations. Plain washers AGS573791-88 are used at the bonding points. The circuit breaker at FIN 4387VC is re-allocated to the second channel, the backshell at FIN 646VU is renewed and the avionics bay cable assembly at FIN 85VU4 is re-terminated. Work is in zones 834, 891 and 192. Revised detail is on drawing D92211305618.",
+      "effects": "Mass increase of 7.4 kg per aircraft. No net electrical load change. The reworked harness is not interchangeable with the original, and an aircraft may not be left part-way through the rework because the intermediate state has both channels partially disconnected. The change is a prerequisite for any further work on cargo door actuation, since the segregated route is what makes an independent second channel meaningful. Wiring manual content for the forward fuselage door warning sheets must be re-issued, and the door rigging task references the new breaker allocation.",
+      "embodiment_note": "Cut in on the production line at MSN T00193 in May 2022. Retrofit is by service bulletin, is applicable only to aircraft already carrying the duplicated latch sensing standard, and takes about four days with the forward cargo compartment lining and the avionics bay racks opened."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221113867714",
+        "D9221004365569",
+        "HOL285457-83",
+        "EN491538-6A",
+        "AGS573791-88"
+      ],
+      "fins": [
+        "4387VC",
+        "646VU",
+        "85VU4"
+      ],
+      "drawings": [
+        "D92211305618"
+      ],
+      "software": [],
+      "zones": [
+        "834",
+        "891",
+        "192"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00193"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-92-1004",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-141020",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "harness segregation",
+      "door warning",
+      "chafe",
+      "channel separation",
+      "avionics bay"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Electrical Installation Design"
+    },
+    "type_data": {
+      "mod_number": 146050,
+      "mod_class": "MAJOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "SAFETY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1707"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 7.4,
+      "balance_impact": "Forward fuselage, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D9221004365569",
+        "HOL285457-83",
+        "EN491538-6A",
+        "AGS573791-88"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D9221113867714"
+      ],
+      "fins_affected": [
+        "4387VC",
+        "646VU",
+        "85VU4"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 220,
+      "estimated_cost_keur": 580,
+      "lead_time_weeks": 30,
+      "production_impact": "Cut-in at MSN T00193 in the forward fuselage harness build",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,189 @@
+[
+  {
+    "doc_id": "MOD-149850",
+    "doc_type": "MOD",
+    "title": "Second Issue of the Network Switch Standard with Redundant Supply Rail and Revised Port Initialisation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-29",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Integrated Modular Avionics — Network Switch"
+    },
+    "secondary_ata": [
+      "42-20-12",
+      "45-20-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00080",
+          "to": "T00238"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "JTA",
+        "GBA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-147040"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-06-29",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Gives the avionics network switch a redundant supply rail and a port initialisation order that tolerates a rail dip, closing out the residual cold-start restarts the thermal redesign left behind.",
+    "sections": {
+      "reason": "The thermal redesign of the line card reduced cold-start restarts by roughly seventy per cent but did not remove them. One operator still logs between two and five message bursts a week across eleven aircraft, each of which has to be assessed before the next dispatch. Analysis of the remaining events shows they occur when a rail dip coincides with the port initialisation sequence, which is a different mechanism from the inrush the first issue addressed. The residual rate is low enough that no operator would fund a hardware change on its own, but the assessment workload is not falling and the maintenance data is being polluted by messages that describe a restart rather than a fault.",
+      "description": "The line card D4220115959692 is retained at the current standard and the card carrier is given a second supply rail fed from the opposite bus, with automatic transfer at the card edge. The spacer set AES271290K2 is renewed and the rack assembly D4220122248639 is modified to route the second feed. The port initialisation order is changed so that ports are brought up in dependency order with a hold at each stage, and the state is reported rather than treated as a transient. The configuration load LC9R67A042E is superseded by an issue that declares the new order and the transfer logic, and the navigation partition load LE7RC1DE5E9 is re-qualified against it. Wiring at FIN 2029CP1 is re-terminated at the rack and a new run is added to FIN 423CP4 in zone 161. Work is in the forward avionics compartment in zones 163 and 161, detailed on drawings D42201115709 and D42201260575.",
+      "effects": "Estimated mass increase of 1.4 kg per aircraft for the second feed and the modified rack. Electrical load is unchanged in the steady state. The modified rack is not interchangeable with the current standard because the second feed connector is new, and a first-issue configuration load must not be applied to a modified rack. Dispatch is unchanged. The maintenance message set changes again, which means the troubleshooting content written for the first issue has to be reworked rather than extended. Illustrated parts, wiring and the loadable software list all require update.",
+      "embodiment_note": "Retrofit only at this stage. Provisional estimate is one shift with the forward avionics compartment open, followed by a data load. Production cut-in will be reconsidered once the residual event rate on modified aircraft is confirmed.",
+      "open_points": "Pre-analysis must establish whether the second supply rail can be taken from the opposite bus without breaking the electrical segregation argument, whether the revised port initialisation order affects any partition that assumes the current order, and whether the configuration load supersession leaves any aircraft in an unsupported combination. It must also confirm that the added rack feed does not obstruct the datalink equipment sharing the same compartment."
+    },
+    "entities": {
+      "part_numbers": [
+        "AES271290K2",
+        "D4220115959692",
+        "D4220122248639"
+      ],
+      "fins": [
+        "2029CP1",
+        "423CP4"
+      ],
+      "drawings": [
+        "D42201115709",
+        "D42201260575"
+      ],
+      "software": [
+        "LC9R67A042E",
+        "LE7RC1DE5E9"
+      ],
+      "zones": [
+        "163",
+        "161"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00139",
+        "T00160",
+        "T00197"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-T-260503",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-147040",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "network switch",
+      "supply rail",
+      "port initialisation",
+      "configuration load",
+      "cold start"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149850,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1351",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.4,
+      "balance_impact": "Forward of reference station, negligible CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4220115959692",
+        "D4220122248639",
+        "AES271290K2"
+      ],
+      "fins_affected": [
+        "2029CP1",
+        "423CP4"
+      ],
+      "software_affected": [
+        "LC9R67A042E",
+        "LE7RC1DE5E9"
+      ],
+      "estimated_manhours": 430,
+      "estimated_cost_keur": 1690,
+      "lead_time_weeks": 54,
+      "production_impact": "Production cut-in to be reconsidered",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

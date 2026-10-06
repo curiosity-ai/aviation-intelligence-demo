@@ -1,0 +1,159 @@
+[
+  {
+    "doc_id": "AMM-T-24-50-12-200-002-A",
+    "doc_type": "AMM",
+    "title": "Secondary Distribution Box — Detailed Inspection of the Contactor Positions and Bus Bar Terminations",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-09-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-12",
+      "title": "Electrical Load Distribution — Secondary Distribution Box"
+    },
+    "secondary_ata": [
+      "24-50-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-05-30",
+      "released": "2022-09-19",
+      "revised": null,
+      "effective": "2022-10-24"
+    },
+    "abstract": "Detailed inspection of the contactor positions, support brackets and bus bar terminations inside a secondary distribution box, used as the acceptance step after a module conversion and as a scheduled check.",
+    "sections": {
+      "purpose": "This task gives the procedure for a detailed inspection of the contactor positions, the support brackets and the bus bar terminations inside a secondary distribution box, and the acceptance criteria for contact erosion and terminal discolouration.",
+      "job_setup_note": "The box must be de-energised and the feeder isolated at the primary distribution centre before the cover is removed. Inspection is by unaided vision with a torch and a mirror; a borescope is not required. The bus bar terminal torque check is a check only and a terminal found loose must be reported rather than simply retightened, because a loose terminal indicates a thermal history that has to be assessed.",
+      "procedure": "1. Isolate the secondary distribution box feeder at the primary distribution centre and put the warning notice in position. 2. Open the access in zone 254 and remove the box cover. WARNING: DO NOT ASSUME THE BOX IS DEAD BECAUSE THE FEEDER IS ISOLATED. PROVE IT DEAD AT THE BUS BAR WITH AN APPROVED TESTER. 3. Examine each contactor module face for discolouration, cracking or displacement of the support bracket. 4. Examine the contact faces at each position through the inspection aperture. Contact erosion is acceptable up to the wear mark; below the wear mark the module must be replaced. 5. Examine each bus bar termination for discolouration extending more than 10 mm from the terminal. CAUTION: DO NOT CLEAN A DISCOLOURED TERMINAL BEFORE IT HAS BEEN RECORDED. THE EXTENT OF THE DISCOLOURATION IS THE ACCEPTANCE CRITERION. 6. Do the torque check on each bus bar terminal with the calibrated wrench, in the sequence given in the figure. 7. Record any terminal that moves before the check torque is reached and report it. 8. Examine the support brackets for cracking at the mounting feet. 9. Examine the cable entry grommets for chafe. 10. Install the box cover and close the access.",
+      "close_out": "Restore the secondary distribution box feeder and remove the warning notice. Do the electrical load distribution functional test. Record the inspection result, the number of positions inspected and any terminal reported, in the aircraft maintenance record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450122086171",
+        "ASD216805-37",
+        "EN575431K5"
+      ],
+      "fins": [
+        "35GX",
+        "3921GX",
+        "3PC"
+      ],
+      "drawings": [
+        "D24501284380"
+      ],
+      "software": [],
+      "zones": [
+        "254",
+        "253"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-24-50-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "secondary distribution box",
+      "inspection",
+      "bus bar",
+      "contact erosion",
+      "torque check"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "24-50-12-200-002-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. Step 4 acceptance criterion differs for aircraft post MOD-149510; use the wear mark on the latching module.",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "254",
+          "253"
+        ],
+        "access_panels": [
+          "254AR",
+          "253BL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Isolate the feeder at the primary distribution centre.",
+          "Prove the bus bar dead with an approved tester.",
+          "Put the warning notice in position."
+        ],
+        "tooling": [
+          {
+            "reference": "98D24501-093",
+            "description": "Torque screwdriver 0.5-5 Nm"
+          },
+          {
+            "reference": "98D24501-104",
+            "description": "Inspection mirror and torch set"
+          }
+        ],
+        "consumables": [
+          "Lint free cloth"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-24-50-11-400-001-A"
+      ],
+      "steps": 10,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "doc_id": "WDM-C-92-11-21",
+    "doc_type": "WDM",
+    "title": "Flight Compartment Wiring — Audio Management and Cabin Interphone Loop Returns",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-01-13",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-11",
+      "ata_6d": "92-11-11",
+      "title": "Flight Compartment Wiring — Cockpit Panel Harnesses"
+    },
+    "secondary_ata": [
+      "23-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2024-06-11",
+      "released": "2026-01-13",
+      "revised": null,
+      "effective": "2026-02-09"
+    },
+    "abstract": "Wiring sheet for the audio management unit interface, showing the cabin interphone loop pairs, the flight interphone pairs and the return stud allocation that differs between the delivered and the separated-return standards.",
+    "sections": {
+      "purpose": "To show the wiring between the audio management unit, the flight interphone control panels and the cabin interphone loop, with particular attention to the return stud allocation.",
+      "sheet_note": "The sheet is drawn as a single-line diagram with the return studs shown explicitly, which is unusual for this manual and is done here because the return allocation is the whole point of the sheet. On the delivered standard the cabin loop return and the cabin lighting dimmer return share stud two; on the separated-return standard the cabin loop is moved to stud four and the dimmer keeps stud two. The allocation is not consistent across the delivered fleet because two build standards of the rack were fitted, so the technician must record what is actually installed before disconnecting anything. Sheet 2 shows the aft cabin control panel connections and the protective sleeving added over the re-routed cabin loop pair.",
+      "routing_note": "The cabin loop pairs run from the ceiling rack at zone 234 forward along the upper cable route to the flight compartment, crossing the ceiling void at zone 265. The dimmer feeder shares the same route for about four metres and is separated from the loop pairs by the protective sleeve at the crossing. The flight interphone pairs run separately down the right-hand side to the aft cabin control panel at zone 111. No pair in this sheet may be re-routed through the lighting bundle."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9211004004740",
+        "D9211124779348",
+        "D9211005400269",
+        "D2350002635675",
+        "D2350120530307",
+        "LN112642-3C"
+      ],
+      "fins": [
+        "6383RC",
+        "509RC",
+        "7RN1"
+      ],
+      "drawings": [
+        "D92111168570"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "234",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-23-50-11-000-023-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "audio management",
+      "cabin interphone loop",
+      "return stud",
+      "dimmer feeder",
+      "protective sleeve"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "sheet_number": "92-11-11",
+      "sheet_title": "AUDIO MANAGEMENT AND CABIN INTERPHONE LOOP RETURNS",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "2340W",
+        "2341W",
+        "1112W"
+      ],
+      "connectors": [
+        {
+          "reference": "2340VC",
+          "part_number": "D9211004004740",
+          "location_zone": "234",
+          "contacts": 37
+        },
+        {
+          "reference": "2650VC",
+          "part_number": "D9211124779348",
+          "location_zone": "265",
+          "contacts": 19
+        },
+        {
+          "reference": "1110VC",
+          "part_number": "D9211005400269",
+          "location_zone": "111",
+          "contacts": 26
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "6383RC",
+          "description": "DATA CONCENTRATOR, AUDIO INTEGRATING, AFT",
+          "zone": "111"
+        },
+        {
+          "fin": "509RC",
+          "description": "RECEIVER, AUDIO INTEGRATING, LH",
+          "zone": "234"
+        },
+        {
+          "fin": "7RN1",
+          "description": "CIRCUIT CARD, AUDIO INTEGRATING, INBD",
+          "zone": "265"
+        }
+      ],
+      "wire_count": 58,
+      "wire_gauge_range": "AWG 24 to AWG 16",
+      "routes": [
+        "Zone 234 → Zone 265 → flight compartment via the upper cable route",
+        "Zone 234 → Zone 111 via the right-hand lower route for the flight interphone pairs"
+      ],
+      "related_sheets": [
+        "WDM-C-92-21-31"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

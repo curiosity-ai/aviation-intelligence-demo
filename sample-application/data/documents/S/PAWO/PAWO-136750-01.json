@@ -1,0 +1,260 @@
+[
+  {
+    "doc_id": "PAWO-136750-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Backplane Standard Against the Partition Memory Request",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "CKP",
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-16",
+      "released": "2026-04-08",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed work order testing whether the backplane standard could absorb a partition memory increase without a further module change, closed with the answer that it could not.",
+    "sections": {
+      "objective": "Establish whether the backplane and cooling standard could absorb an increase in module partition memory by a data change alone, as an operator had asked, or whether a further module change would be required. The commercial attraction of a data-only answer was obvious and the work order existed to test it rather than to assume it.",
+      "findings_summary": "It cannot. Partition memory is a property of the module, not of the backplane or of the configuration table, and the current module family has no headroom at two of the six slots. A data change can move an allocation between partitions but cannot create memory that is not there, and the two slots at ninety-four per cent are exactly the ones the next tranche of functions would land in. The backplane standard does help in one respect that had not been recognised: the cooling ducting it introduced creates enough thermal margin at those two slots to accept a higher-dissipation module later, which a delivered-backplane rack would not. That makes this standard a prerequisite for whatever comes next rather than a dead end. The installation task already reads the configuration from the terminal and would need to read a loadable table as well.",
+      "next_steps": "Answer the operator that a data-only route does not exist. Record the cooling margin as the reason this standard is a prerequisite for any successor. Hand the loadable table question to the successor definition."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "drawings": [
+        "D42101281090"
+      ],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-136750",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "AMM-S-42-10-12-400-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-42-1016",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "pre-analysis",
+      "backplane",
+      "standard",
+      "against"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-136750-01",
+      "subject_mod": "MOD-136750",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-04-08",
+      "outcome": "REJECTED",
+      "raised_date": "2026-03-16",
+      "due_date": "2026-04-08",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 45,
+        "spent_manhours": 39
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34",
+          "SOLANO-39"
+        ],
+        "ata_2d": [
+          "42",
+          "45"
+        ],
+        "ata_4d": [
+          "42-10",
+          "45-20",
+          "45-45"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "HE750421-36",
+            "LN727699-25"
+          ],
+          "fins": [
+            "493CP2",
+            "7CP7"
+          ],
+          "drawings": [
+            "D42101281090"
+          ],
+          "zones": [
+            "162",
+            "166"
+          ],
+          "software": [
+            "LF6L52A03E3"
+          ]
+        },
+        "similarity_seeds": [
+          "partition memory allocation at a hosted function boundary",
+          "cooling margin at a high dissipation slot"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish where partition memory is a property of",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Measure the thermal margin created by the new ducting",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-S-42-10-12-400-043-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found by entity linking on the interface unit and rail screw part numbers the task calls out."
+          },
+          "rationale": "The installation task reads the installed configuration from the maintenance terminal and compares it against the slot map. A loadable configuration table would add a second thing to verify, by checksum rather than by part number.",
+          "resolution": "Hand the requirement to the successor definition."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SLN-42-1016",
+          "doc_type": "SB",
+          "finding_type": "PREREQUISITE",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Reached from the modification to its retrofit bulletin and then forward to what a successor would need."
+          },
+          "rationale": "The cooling ducting this bulletin installs is what creates the thermal margin a higher-dissipation module would need. That makes the bulletin a prerequisite for any successor rather than a step that a successor makes redundant.",
+          "resolution": "State the prerequisite relationship explicitly when the successor bulletin is issued."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed. No data-only route exists; this standard is a prerequisite for the successor.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

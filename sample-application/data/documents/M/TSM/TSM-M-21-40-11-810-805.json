@@ -1,0 +1,161 @@
+[
+  {
+    "doc_id": "TSM-M-21-40-11-810-805",
+    "doc_type": "TSM",
+    "title": "Cargo Compartment Low Temperature Indication After a Cold Soak",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-01-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-40",
+      "ata_6d": "21-40-11",
+      "title": "Heating — Cargo Compartment Heating"
+    },
+    "secondary_ata": [
+      "26-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-06-16",
+      "released": "2021-01-13",
+      "revised": null,
+      "effective": "2021-02-10"
+    },
+    "abstract": "Fault isolation for an erroneous low cargo compartment temperature indication seen after a cold soak, which clears within twenty minutes of the heating system running.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an erroneous low cargo compartment temperature indication after a cold soak, and separates a transmitter fault from a genuine heating fault.",
+      "fault_description": "The cargo compartment temperature indication reads well below the actual compartment temperature after an overnight cold soak, and normalises within about twenty minutes of the heating system running. The behaviour is repeatable on the same aircraft and absent on others in the same fleet. Where live animals are carried the indication forces the shipment to be refused at the gate, so the operational consequence is out of proportion to the technical fault. There is no correlation with compartment loading.",
+      "isolation_procedure": "1. Record the compartment temperature indication, the ambient temperature and the time since the aircraft was last powered. 2. Measure the actual compartment temperature with a calibrated thermometer at the transmitter position. 3. If the two agree, the indication is correct and the fault is in the heating system; go to step 7. 4. If the indication reads low, isolate the transmitter and measure its resistance at the connector. 5. Compare the resistance with the temperature reference table and record both values. 6. Inspect the transmitter body and its connector for moisture, and check whether the vent is present on the installed transmitter standard. 7. Do the confirmation task and record the stabilisation time. 8. Check the loop actuator 181HM drive time and the solenoid 9469HM energisation against the values in the maintenance documentation. 9. Where moisture is found at the transmitter vent or in the connector, dry the installation, re-seal the connector and repeat the confirmation task. 10. Where the fault repeats after drying, replace the transmitter with the sealed standard and record the aircraft as modified.",
+      "dispatch_note": "Dispatch is permitted with the cargo temperature indication inoperative provided no temperature-sensitive cargo is carried. Dispatch with the compartment heating itself inoperative is subject to the route and cargo restrictions of the master minimum equipment list."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2140118706760",
+        "EN889198-3B"
+      ],
+      "fins": [
+        "181HM",
+        "9469HM"
+      ],
+      "drawings": [
+        "D21401127591"
+      ],
+      "software": [],
+      "zones": [
+        "172",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-21-40-11-700-016-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-162530",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cargo temperature",
+      "cold soak",
+      "moisture ingress",
+      "transmitter",
+      "live animal shipment"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "21-40-11-810-805",
+      "fault_symptom": "CARGO TEMP LO displayed after a cold soak, clearing within twenty minutes of heating",
+      "fault_codes": [
+        "214011002",
+        "214011017"
+      ],
+      "warning_messages": [
+        "CARGO AFT TEMP LO",
+        "CARGO AFT HEAT FAULT"
+      ],
+      "affected_fins": [
+        "181HM",
+        "9469HM"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Moisture ingress at the vented transmitter body",
+          "probability_pct": 52,
+          "fin": "9469HM"
+        },
+        {
+          "cause": "Water in the transmitter connector from a harness drip loop above the connector",
+          "probability_pct": 24,
+          "fin": "9469HM"
+        },
+        {
+          "cause": "Heating loop actuator slow to drive from cold",
+          "probability_pct": 15,
+          "fin": "181HM"
+        },
+        {
+          "cause": "Genuine loss of heating airflow to the compartment",
+          "probability_pct": 9,
+          "fin": "181HM"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-M-21-40-11-700-016-A",
+      "dispatch": {
+        "mel_item": "21-43-01B",
+        "dispatchable": true,
+        "dispatch_condition": "Cargo temperature indication inoperative, no temperature-sensitive cargo carried."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

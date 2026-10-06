@@ -1,0 +1,177 @@
+[
+  {
+    "doc_id": "WDM-C-92-41-21",
+    "doc_type": "WDM",
+    "title": "Aft Fuselage Wiring — Aft Cargo and Lower Antenna Feeder Runs",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-01-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-41",
+      "ata_6d": "92-41-11",
+      "title": "Aft Fuselage Wiring — Aft Cargo Wiring"
+    },
+    "secondary_ata": [
+      "23-20",
+      "53-31"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2024-08-06",
+      "released": "2025-01-27",
+      "revised": null,
+      "effective": "2025-02-23"
+    },
+    "abstract": "Wiring sheet for the aft cargo compartment runs and the lower antenna feeders, showing the shared bundle aft of the wing that carries both the cabin lighting feeder and the number two radio coaxial run.",
+    "sections": {
+      "purpose": "To show the aft cargo compartment wiring and the lower antenna feeder runs, including the shared bundle aft of the wing.",
+      "sheet_note": "The section of interest on this sheet is the shared bundle between the wing rear spar penetration and the aft cargo compartment, where the cabin lighting feeder and the number two radio coaxial run are supported on the same line for about four metres. That arrangement meets the segregation requirement as built, but the measured insertion loss on the coaxial run is consistently higher on aircraft where the bundle has been re-clipped during a repair, and this sheet is the reference for restoring the original support positions. Sheet 2 shows the antenna land terminations at zone 261 with the bonding stud positions marked.",
+      "routing_note": "The coaxial run leaves the rack area at zone 145 and runs aft along the shared support line to the antenna land at zone 261. The aft cargo compartment lighting and door warning runs branch off at the frame shown on sheet 1 and continue into zone 271. The coaxial run must be supported at every marked position and must not be tie-wrapped to the lighting feeder at any point."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9241121926327",
+        "KADE340734-42",
+        "D9241008503387",
+        "D2320128501183",
+        "AGS216702-16"
+      ],
+      "fins": [
+        "934RN",
+        "143RN",
+        "221RN6"
+      ],
+      "drawings": [
+        "D92411158930"
+      ],
+      "software": [],
+      "zones": [
+        "145",
+        "261",
+        "271"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-23-20-11-400-029-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-23-20-11-000-029-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "aft cargo wiring",
+      "antenna feeder",
+      "shared bundle",
+      "support position",
+      "insertion loss"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "sheet_number": "92-41-11",
+      "sheet_title": "AFT CARGO AND LOWER ANTENNA FEEDER RUNS",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1450W",
+        "2610W",
+        "2710W"
+      ],
+      "connectors": [
+        {
+          "reference": "1450VC",
+          "part_number": "D9241121926327",
+          "location_zone": "145",
+          "contacts": 26
+        },
+        {
+          "reference": "2610VC",
+          "part_number": "KADE340734-42",
+          "location_zone": "261",
+          "contacts": 12
+        },
+        {
+          "reference": "2710VC",
+          "part_number": "D9241008503387",
+          "location_zone": "271",
+          "contacts": 19
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "934RN",
+          "description": "ANTENNA, VHF TRANSCEIVER, LOWER",
+          "zone": "261"
+        },
+        {
+          "fin": "143RN",
+          "description": "COMPUTER, VHF TRANSCEIVER, FWD",
+          "zone": "145"
+        },
+        {
+          "fin": "221RN6",
+          "description": "DISPLAY UNIT, VHF ANTENNA, UPPER",
+          "zone": "271"
+        }
+      ],
+      "wire_count": 94,
+      "wire_gauge_range": "AWG 24 to AWG 14",
+      "routes": [
+        "Zone 145 → Zone 261 along the shared support line aft of the wing rear spar penetration",
+        "Branch at the frame on sheet 1 into zone 271 for the cargo lighting and door warning runs"
+      ],
+      "related_sheets": [
+        "WDM-C-92-31-21"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

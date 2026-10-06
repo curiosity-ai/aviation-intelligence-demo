@@ -1,0 +1,173 @@
+[
+  {
+    "doc_id": "MOD-155471",
+    "doc_type": "MOD",
+    "title": "Brake and Steering Control Unit Standard 2.6 with Revised Anti-Skid Reference Speed",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-07-31",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "Z11917",
+      "production_cut_in_date": "2024-11-26",
+      "retrofit_via": [
+        "ZPH-32-1240"
+      ]
+    },
+    "dates": {
+      "created": "2022-03-15",
+      "released": "2024-07-31",
+      "revised": null,
+      "effective": "2024-08-20"
+    },
+    "abstract": "New brake and steering control unit software standard that derives the anti-skid reference speed from all four wheels instead of two, reducing the tyre wear reported on contaminated runways without changing the certified stopping distance.",
+    "sections": {
+      "reason": "Operators flying into airfields with frequently contaminated runways reported tyre wear rates roughly a third above the fleet average, together with occasional locked-wheel events at low ground speed during autobrake operation. Investigation of quick access recorder data from 41 aircraft showed that the anti-skid reference speed, derived from two wheels only, lags the true ground speed when both reference wheels are on the same contaminated patch. The unit then releases pressure late on the remaining wheels. No safety issue arises because the certified stopping distance retains its margin, but the tyre cost is real and the locked-wheel events are unpopular with crews.",
+      "description": "The brake and steering control unit is loaded with software standard 2.6, part number LG3N06435DD, which derives the anti-skid reference speed from all four main wheel tachometers with a weighted estimator and rejects any wheel whose deceleration exceeds a physical bound. The sensor D3240129735238 is unchanged but its calibration table is rewritten, the regulator kit D3240121994833 is fitted with a tighter pressure hysteresis, and the transmitter D3240125686751 is added to give the unit a brake pressure feedback it did not previously have. The unit FIN 998GM is the load target. Work is done from zone 754 for the unit itself and from zone 744 for the pressure transmitter. Drawings D32401235626 issue G and D32401274246 issue C carry the wiring change and the transmitter installation.",
+      "effects": "Mass increase of 0.6 kg per aircraft. Electrical load increases by 8 VA for the pressure transmitter. The software standard is not interchangeable with the previous one because the calibration table format changed, so a unit must not be moved between a pre-modification and a post-modification aircraft without reloading. Certified stopping distance is unchanged and no flight manual amendment is required. Measured tyre wear in the trial fleet fell by 22 per cent on contaminated runway operations. A new troubleshooting procedure for the four-wheel reference logic was added to ATA 32-40.",
+      "embodiment_note": "Cut in on the production line at MSN Z11917 in November 2024. In service the change is delivered as a software load bulletin taking about three hours, plus a four-hour installation for the pressure transmitter that must be done at the same time."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240129735238",
+        "D3240121994833",
+        "D3240125686751"
+      ],
+      "fins": [
+        "998GM"
+      ],
+      "drawings": [
+        "D32401235626",
+        "D32401274246"
+      ],
+      "software": [
+        "LG3N06435DD"
+      ],
+      "zones": [
+        "754",
+        "744"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z11917"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-32-1240",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "anti-skid",
+      "reference speed",
+      "tyre wear",
+      "software standard"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 155471,
+      "mod_class": "MAJOR",
+      "change_category": "SOFTWARE",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.735",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0.6,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 8,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3240125686751"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3240129735238",
+        "D3240121994833"
+      ],
+      "fins_affected": [
+        "998GM"
+      ],
+      "software_affected": [
+        "LG3N06435DD"
+      ],
+      "estimated_manhours": 14,
+      "estimated_cost_keur": 980,
+      "lead_time_weeks": 40,
+      "production_impact": "Cut-in at MSN Z11917, software loaded at the flight line station",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

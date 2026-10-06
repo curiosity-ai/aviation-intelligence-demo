@@ -1,0 +1,171 @@
+[
+  {
+    "doc_id": "AMM-C-52-30-12-700-001-A",
+    "doc_type": "AMM",
+    "title": "Cargo Door Operational and Warning System Test",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "D",
+    "issue": {
+      "letter": "D",
+      "supersedes": "C",
+      "date": "2024-02-27",
+      "reason": "Issue D. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-12",
+      "title": "Cargo Doors — Cargo Door Actuation"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-09-05",
+      "released": "2017-03-21",
+      "revised": "2024-02-27",
+      "effective": "2024-03-18"
+    },
+    "abstract": "Functional test of a cargo door through a full open and close cycle together with the warning system checks, including the deliberate single-sensor failure that proves the warning logic.",
+    "sections": {
+      "purpose": "This task gives the operational test of one cargo door and the test of the associated door warning system, including the response of the flight deck indication to a single sensor failure.",
+      "job_setup_note": "The aircraft must be electrically powered and the hydraulic system pressurised for a powered door. The area below and around the door must be clear and a second person must be at the flight deck to read the indication. The test disconnects one warning sensor deliberately, so the aircraft must not be released until the sensor is reconnected and the test repeated.",
+      "procedure": "1. WARNING: MAKE SURE THAT NO PERSON AND NO EQUIPMENT IS BELOW THE DOOR OR IN ITS PATH BEFORE THE DOOR IS OPERATED. 2. Apply electrical power and pressurise the hydraulic system. 3. Operate the door to the fully open position and record the time taken. 4. Examine the latch actuator 331WT4 travel at both end positions. 5. Operate the door to the fully closed and latched position and confirm the flight deck indication goes out. 6. CAUTION: DO NOT FORCE THE DOOR CONTROL HANDLE. A HANDLE THAT DOES NOT MOVE FREELY INDICATES A LATCH THAT IS NOT FULLY HOME. 7. Disconnect the door warning sensor 8511WT at its connector. 8. Confirm that the flight deck indication comes on and that the maintenance message is recorded. 9. Reconnect the sensor and confirm the indication goes out. 10. Repeat steps 7 to 9 for the warning sensor 3323WT. 11. Operate the door through one further complete cycle with all sensors connected. 12. Remove electrical power and depressurise the hydraulic system.",
+      "close_out": "Make sure that both warning sensors are reconnected and that the connectors are locked. Confirm that no maintenance message remains active. Record the door cycle times, the indication responses and the sensor checks in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230120703508",
+        "D5230129687429"
+      ],
+      "fins": [
+        "331WT4",
+        "8511WT",
+        "3323WT"
+      ],
+      "drawings": [
+        "D52301252750"
+      ],
+      "software": [],
+      "zones": [
+        "831",
+        "832",
+        "891"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-52-30-13-400-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-C-92-21-13",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door operational test",
+      "warning system test",
+      "sensor disconnect",
+      "flight deck indication",
+      "latch travel"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Lorencourt",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "52-30-12-700-001-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. On aircraft with a manually operated aft door the hydraulic steps do not apply.",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "831",
+          "832",
+          "891"
+        ],
+        "access_panels": [
+          "831CL",
+          "832AR",
+          "891BR"
+        ],
+        "doors": [
+          "Forward cargo door",
+          "Aft cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Make sure that no person or equipment is in the path of the door.",
+          "Put the warning notices in the flight compartment.",
+          "Do not leave the door unattended while it is powered."
+        ],
+        "tooling": [
+          {
+            "reference": "98D52301-012",
+            "description": "Door cycle timer"
+          },
+          {
+            "reference": "98D52301-014",
+            "description": "Connector blanking cap set"
+          }
+        ],
+        "consumables": [
+          "Contact lubricant, electrical"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-52-30-13-400-002-A",
+        "AMM-C-52-30-13-000-002-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

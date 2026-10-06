@@ -1,0 +1,204 @@
+[
+  {
+    "doc_id": "TTN-32-1055",
+    "doc_type": "SB",
+    "title": "Wheels and Brakes — Replacement of the Brake and Steering Control Units and Their Software",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-11-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00150"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-142240"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2018-03-27",
+      "released": "2018-11-08",
+      "revised": null,
+      "effective": "2018-12-03"
+    },
+    "abstract": "Replacement of both brake and steering control units by the redesigned standard and application of the matching software, on aircraft delivered before the redesigned unit was cut into production.",
+    "sections": {
+      "planning_reason": "The signal conditioning devices used in the original brake and steering control unit went out of production, and the stock secured at last-time-buy covers repair demand only to approximately 2027. Aircraft left on the original unit will become unsupportable well before the end of their service life. The redesigned unit restores an open repair route and, as a side benefit, removes the mechanical damping restrictor that has its own removal history.",
+      "description": "Both control units are replaced by the redesigned standard, which keeps the connector layout, the mounting tray and the cooling arrangement unchanged. In the hydraulic interface the servo valve sub-assembly D3240126923160 is replaced, the solenoid manifold D3240129015656 is retained and reworked, and the superseded restrictor D3240129963184 is deleted, its damping function moving into software. Operational software LA7RED5A42D and parameter set LD8R083EA4E are re-issued for the new hardware and are applied as part of this Service Bulletin. Washers AGS146031K9 are renewed at the unit mounting.",
+      "accomplishment_summary": "Make the hydraulic system safe and depressurise the brake accumulator. Get access to the units in the left and right main gear bays. Disconnect and remove both control units. Remove the restrictor D3240129963184 from the hydraulic interface and blank the port to the standard practice. Replace the servo valve sub-assembly D3240126923160 and rework the solenoid manifold D3240129015656 to the dimensions in the accomplishment instructions. Install both redesigned units on new washers AGS146031K9 and torque to the values given. Reconnect the hydraulic and electrical interfaces and do a leak check. Load the operational software LA7RED5A42D and the parameter set LD8R083EA4E to both units and confirm that the part number reported by each unit matches. Do the brake control system test of AMM-T-32-40-12-700-002-A, including an anti-skid functional and a parking brake decay check. Record the embodiment and return the removed units.",
+      "effectivity_note": "Applicable to TITAN-88 aircraft up to and including MSN T00150. Aircraft from MSN T00152 onwards were built with the redesigned unit. Both units on an aircraft must be changed in the same visit, because the software standards of the original and the redesigned unit are mutually exclusive and a mixed pair will not pass the cross-channel comparison.",
+      "material_note": "Kit K3240-1055-01 contains both units, the servo valve, the mounting hardware and the blanking set. Kit lead time is thirty-four weeks, driven by unit build. Removed units are returned to the supplier for credit and are the property of the supplier once received."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126923160",
+        "D3240129015656",
+        "D3240129963184",
+        "AGS146031K9"
+      ],
+      "fins": [
+        "2GM2"
+      ],
+      "drawings": [
+        "D32401274246"
+      ],
+      "software": [
+        "LA7RED5A42D",
+        "LD8R083EA4E"
+      ],
+      "zones": [
+        "734",
+        "754"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00150",
+        "T00152"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142240",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-T-32-40-12-700-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-T-32-40-12-810-801",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "software load",
+      "restrictor deletion",
+      "obsolescence",
+      "main gear bay"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-32-1055",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled base maintenance visit, or within 84 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-142240",
+      "manpower": {
+        "elapsed_time_hours": 36,
+        "manhours": 94,
+        "personnel": 3,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K3240-1055-01",
+        "kit_available_from": "2019-04-15",
+        "parts_required": [
+          {
+            "part_number": "D3240126923160",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS146031K9",
+            "qty": 24,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D3240129963184",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Lockwire, corrosion resistant steel"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Hydraulic test rig adapter set",
+          "Torque wrench 5-50 Nm"
+        ]
+      },
+      "weight_change_kg": -1.6,
+      "accomplishment_steps": 11,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2018-11-08",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

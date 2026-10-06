@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "TSM-S-49-10-11-810-810",
+    "doc_type": "TSM",
+    "title": "Auxiliary Power Unit Air Intake Flap Not Open",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-09-12",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-10",
+      "ata_6d": "49-10-11",
+      "title": "Power Plant — APU Installation"
+    },
+    "secondary_ata": [
+      "26-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-05-29",
+      "released": "2019-01-14",
+      "revised": "2023-09-12",
+      "effective": "2023-10-01"
+    },
+    "abstract": "Fault isolation for an intake flap that does not indicate open and inhibits the auxiliary power unit start, separating a genuine mechanical restriction from a sensing problem.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an intake flap that does not reach or does not indicate the open position, and which therefore inhibits the auxiliary power unit start.",
+      "fault_description": "The start is commanded and does not proceed, with the flap indication staying at not open. Two very different conditions produce the same symptom. In the first the flap really is stuck, usually because dust or de-icing residue has packed the output bearing or the anti-rotation slot, and the flap will be visibly short of the fully open position. In the second the flap opens normally and only the indication is wrong, because the sensing gap has drifted or because the target face is dirty. The distinction takes thirty seconds to make by looking at the flap, and getting it wrong costs an actuator change that fixes nothing.",
+      "isolation_procedure": "1. Command the start and observe the flap from outside before doing anything else. 2. Where the flap is visibly short of fully open, the fault is mechanical: go to step 5. 3. Where the flap reaches fully open and the indication does not appear, the fault is in the sensing: go to step 8. 4. Where the flap does not move at all, check the actuator supply and the circuit breaker first. 5. Isolate the auxiliary power unit and safety the fire bottle. WARNING: DO NOT ENTER THE COMPARTMENT UNTIL THE FIRE BOTTLE IS SAFETIED. 6. Do the flap travel and seal condition check and record the opening times. 7. Where the times are outside limits, remove the actuator and examine the output bearing and the anti-rotation slot for packing. 8. Where the sensing is suspect, clean the target face and re-measure the sensing gap with the non-magnetic feeler gauge. 9. Where the gap is outside limits, reset it and repeat the cycle test. 10. Where the gap is correct and the indication is still absent, check the cowl latch 52PB position and the harness at the bracket 64PA for chafe. 11. Where nothing is found, replace the proximity sensor and repeat the cycle test.",
+      "dispatch_note": "The aircraft may be dispatched with the auxiliary power unit inoperative under the applicable minimum equipment list item, subject to the ground power and air start provisions at the departure and destination airports. Dispatch with the flap locked open is not permitted."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4910119498267",
+        "AGS522879K5",
+        "D4910120418494"
+      ],
+      "fins": [
+        "52PB",
+        "5135PB",
+        "64PA",
+        "3PA"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "393",
+        "394"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-49-10-11-200-034-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "intake flap",
+      "not open",
+      "sensing gap",
+      "dust packing",
+      "start inhibit"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "49-10-11-810-810",
+      "fault_symptom": "APU FLAP NOT OPEN displayed and the start sequence inhibited",
+      "fault_codes": [
+        "491011002",
+        "491011017"
+      ],
+      "warning_messages": [
+        "APU FLAP NOT OPEN",
+        "APU START FAULT"
+      ],
+      "affected_fins": [
+        "52PB",
+        "5135PB",
+        "64PA"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Output bearing or anti-rotation slot packed with dust or de-icing residue",
+          "probability_pct": 40,
+          "fin": "5135PB"
+        },
+        {
+          "cause": "Proximity sensing gap drifted or target face contaminated",
+          "probability_pct": 33,
+          "fin": "52PB"
+        },
+        {
+          "cause": "Harness chafe at the actuator bracket",
+          "probability_pct": 15,
+          "fin": "64PA"
+        },
+        {
+          "cause": "Actuator internal failure",
+          "probability_pct": 12,
+          "fin": "3PA"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-S-49-10-11-200-034-A",
+      "dispatch": {
+        "mel_item": "49-10-02B",
+        "dispatchable": true,
+        "dispatch_condition": "Auxiliary power unit inoperative, ground power and air start available at departure and destination"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

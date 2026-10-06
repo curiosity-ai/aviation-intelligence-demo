@@ -1,0 +1,164 @@
+[
+  {
+    "doc_id": "MOD-158720",
+    "doc_type": "MOD",
+    "title": "Crew Mask Regulator Change to a Quick-Donning Assembly with an Integrated Demand Sensor",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "35",
+      "ata_4d": "35-10",
+      "ata_6d": "35-10-12",
+      "title": "Crew Oxygen — Crew Mask Regulator"
+    },
+    "secondary_ata": [
+      "35-10-11",
+      "25-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-06-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Early proposal to replace the crew mask regulator with a quick-donning assembly carrying an integrated demand sensor, so that the pre-flight oxygen check becomes an automatic report instead of a manual sequence.",
+    "sections": {
+      "reason": "The pre-flight crew oxygen check is one of the longest remaining manual items on the flight deck preparation, and it is also the one most often reported as done incorrectly during line audits, because the sequence depends on the crew hearing and feeling the regulator respond. Five operators have asked for an automated check. In parallel, the current regulator has a growing obsolescence exposure: the supplier has announced end of manufacture for the demand diaphragm assembly in 2029 and holds no more than four years of forward cover at the current consumption.",
+      "description": "The regulator is replaced by a quick-donning assembly with an integrated demand sensor that reports mask pressure, flow and stowage state on the existing discrete lines. The manifold D3510121814548 is replaced to carry the sensor port, and the filter D3510124105324 is renewed at the same interface. The heat exchanger in the supply line is unchanged. Tension head bolts EN436848-89 secure the assembly to the existing stowage box, which is not moved. The actuator at FIN 9HD and the accumulator at FIN 77HE are both affected because the demand characteristic changes. Work is in zones 211 and 223 with the flight deck sidewall stowage opened. Detail is on drawing D35101279146.",
+      "effects": "Mass increase of 1.1 kilograms per flight deck. Electrical load increases by 12 volt amperes for the sensor. Interchangeability is expected to be one way, but this has not yet been established because the stowage box interface is shared with a supplier item that may itself change. The pre-flight oxygen check becomes an automatic report, removing an estimated ninety seconds from flight deck preparation and closing the line audit finding. The oxygen system test task, the parts figure and the flight crew pre-flight procedure would all require re-issue.",
+      "embodiment_note": "Nothing is committed. If launched, production cut-in and retrofit would both be offered, with retrofit as a two hour flight deck task. Kit content and lead time cannot be estimated until the supplier position on the stowage box interface is known.",
+      "open_points": "The proposal has not yet entered pre-analysis. Before it can, the obsolescence date for the current diaphragm assembly has to be confirmed with the supplier, and a position is needed on whether an automated check can replace the crew action that the operating rules currently require."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3510121814548",
+        "D3510124105324",
+        "EN436848-89"
+      ],
+      "fins": [
+        "9HD",
+        "77HE"
+      ],
+      "drawings": [
+        "D35101279146"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "223"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-153315",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "crew mask regulator",
+      "quick donning",
+      "demand sensor",
+      "pre-flight check",
+      "diaphragm obsolescence"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Neuhafen",
+      "role": "Cabin Systems Design"
+    },
+    "type_data": {
+      "mod_number": 158720,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1439",
+          "CS 25.1441"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.1,
+      "balance_impact": "Flight deck installation, no measurable effect",
+      "electrical_load_impact_va": 12,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "EN436848-89"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3510121814548",
+        "D3510124105324"
+      ],
+      "fins_affected": [
+        "9HD",
+        "77HE"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 210,
+      "estimated_cost_keur": 880,
+      "lead_time_weeks": 50,
+      "production_impact": "Not assessed; proposal stage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

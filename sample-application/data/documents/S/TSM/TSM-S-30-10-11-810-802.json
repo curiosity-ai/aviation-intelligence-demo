@@ -1,0 +1,341 @@
+[
+  {
+    "doc_id": "TSM-S-30-10-11-810-802",
+    "doc_type": "TSM",
+    "title": "WING ANTI ICE FAULT in the Climb with No Fault on the Ground",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1994-04-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Airfoil Anti-Ice — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1993-07-07",
+      "released": "1994-04-08",
+      "revised": "1994-04-08",
+      "effective": "1994-04-26"
+    },
+    "abstract": "Fault isolation for a wing anti-ice fault message that appears between flight level 180 and flight level 280 and cannot be reproduced on the ground, driven by valve stiction under an uneven duct temperature gradient.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an intermittent wing anti-ice fault message that appears in the climb and does not reproduce during a ground test at ambient temperature.",
+      "fault_description": "The message appears in the climb, typically between flight level 180 and flight level 280, and usually clears when the system is cycled. On the ground the valve tests serviceable and shop acceptance testing passes in roughly two thirds of removals. The signature is a valve that binds against its housing as the duct heats unevenly, together with a feedback track that has worn at the two positions the valve actually uses in service. Because both effects need a temperature gradient, an ambient ground test is not a valid means of clearing the fault.",
+      "isolation_procedure": "1. Read and record the fault codes and the flight phase from the maintenance terminal. Confirm from the flight data whether the message appeared in the climb. 2. Do the wing anti-ice operational test of AMM-S-30-10-11-700-015-A, including the cold sweep in ten per cent steps with the feedback recorded. 3. If the cold sweep is inside the acceptance band, do not stop; continue to the warm sweep. Warm the duct to the temperature in the test schedule and repeat the sweep. 4. Compare the two sweeps. A hysteresis above the limit at any intermediate step, even with both end points correct, confirms butterfly binding. 5. If both sweeps are inside the band, check the feedback wiring back to the switch position 6HA for intermittent resistance, flexing the harness during the measurement. 6. Check the bleed supply pressure at the valve inlet against the schedule; a low supply produces the same message from a serviceable valve. 7. If no cause is found, replace the valve with the reprofiled standard and re-test both sweeps.",
+      "dispatch_note": "Dispatch is permitted with one wing anti-ice valve inoperative under the applicable MMEL item, provided the affected side is deactivated in the open position and the operation is not in known or forecast icing conditions. The dispatch condition is unchanged by the reprofiled valve standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010115902013",
+        "EN229422-9A",
+        "PE873965-99"
+      ],
+      "fins": [
+        "6HA",
+        "918PU"
+      ],
+      "drawings": [
+        "D30100042160"
+      ],
+      "software": [],
+      "zones": [
+        "512",
+        "551",
+        "611"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-30-10-11-700-015-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-130940",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "anti-ice fault",
+      "valve stiction",
+      "hysteresis",
+      "no fault found",
+      "climb phase"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "30-10-11-810-802",
+      "fault_symptom": "WING ANTI ICE FAULT displayed in the climb, not reproducible on the ground",
+      "fault_codes": [
+        "301011007",
+        "301011022"
+      ],
+      "warning_messages": [
+        "ANTI ICE WING FAULT",
+        "ANTI ICE WING L VALVE"
+      ],
+      "affected_fins": [
+        "6HA",
+        "918PU"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Butterfly binding against the housing under an uneven duct temperature gradient",
+          "probability_pct": 46,
+          "fin": "6HA"
+        },
+        {
+          "cause": "Wiper track feedback worn at the commanded positions",
+          "probability_pct": 28,
+          "fin": "6HA"
+        },
+        {
+          "cause": "Intermittent resistance in the feedback harness",
+          "probability_pct": 15,
+          "fin": "6HA"
+        },
+        {
+          "cause": "Low bleed supply pressure at the valve inlet",
+          "probability_pct": 11,
+          "fin": "918PU"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-S-30-10-11-700-015-A",
+      "dispatch": {
+        "mel_item": "30-10-02B",
+        "dispatchable": true,
+        "dispatch_condition": "One valve inoperative and deactivated open, not in known or forecast icing conditions"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-S-30-10-11-810-802",
+    "doc_type": "TSM",
+    "title": "WING ANTI ICE FAULT in the Climb with No Fault on the Ground",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-20",
+      "reason": "The isolation branch is split by feedback standard and a duty cycle check is given for the non-contact sensor, which has no resistance track to sweep.",
+      "raised_by_pawo": "PAWO-130940-01",
+      "raised_by_finding": "F01",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Airfoil Anti-Ice — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1993-07-07",
+      "released": "1994-04-08",
+      "revised": "2026-07-20",
+      "effective": "2026-08-06"
+    },
+    "abstract": "Fault isolation for a wing anti-ice fault message that appears between flight level 180 and flight level 280 and cannot be reproduced on the ground, with separate branches for the potentiometric and the non-contact feedback standards.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an intermittent wing anti-ice fault message that appears in the climb and does not reproduce during a ground test at ambient temperature.",
+      "fault_description": "The message appears in the climb, typically between flight level 180 and flight level 280, and usually clears when the system is cycled. On the ground the valve tests serviceable and shop acceptance testing passes in roughly two thirds of removals. On the delivered standard the signature is a valve that binds against its housing as the duct heats unevenly, together with a wiper track that has worn at the two positions the valve actually uses in service. The reprofiled standard has no wiper track: position is reported as the duty cycle of a non-contact sensor, so track wear cannot occur and a resistance sweep of the feedback line reads open at every position on a perfectly serviceable valve. Binding can still occur on either standard, because both need a temperature gradient, and an ambient ground test is not a valid means of clearing the fault on either.",
+      "isolation_procedure": "1. Read and record the fault codes and the flight phase from the maintenance terminal. Confirm from the flight data whether the message appeared in the climb. 2. Establish the feedback standard of the installed valve from the aircraft configuration record. Steps 3 to 5 apply to the potentiometric standard and steps 6 to 8 to the non-contact standard; do not run a resistance sweep on a non-contact sensor. 3. Do the wing anti-ice operational test of AMM-S-30-10-11-700-015-A, including the cold sweep in ten per cent steps with the feedback resistance recorded. 4. If the cold sweep is inside the acceptance band, continue to the warm sweep. Warm the duct to the temperature in the test schedule and repeat. A hysteresis above the limit at any intermediate step, even with both end points correct, confirms butterfly binding. 5. If both sweeps are inside the band, check the feedback wiring back to the switch position 6HA for intermittent resistance, flexing the harness during the measurement. 6. On the non-contact standard, command the valve in ten per cent steps and record the reported duty cycle at each. The acceptance is a monotonic response with no step greater than three per cent of commanded travel and no dropout of the pulse train. 7. Repeat the duty cycle sweep with the duct warmed. A step change that appears only warm confirms binding; a dropout that appears on both confirms the sensor or its wiring. 8. Check the sensor supply and the pulse train continuity back to position 6HA. 9. On either standard, check the bleed supply pressure at the valve inlet against the schedule; a low supply produces the same message from a serviceable valve. 10. If no cause is found, replace the valve with the reprofiled standard and re-test.",
+      "dispatch_note": "Dispatch is permitted with one wing anti-ice valve inoperative under the applicable MMEL item, provided the affected side is deactivated in the open position and the operation is not in known or forecast icing conditions. The dispatch condition is the same on both feedback standards; only the means of confirming the valve position before deactivation differs, and the duty cycle reading is used where the non-contact sensor is fitted."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010115902013",
+        "EN229422-9A",
+        "PE873965-99"
+      ],
+      "fins": [
+        "6HA",
+        "918PU"
+      ],
+      "drawings": [
+        "D30100042160"
+      ],
+      "software": [],
+      "zones": [
+        "512",
+        "551",
+        "611"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-30-10-11-700-015-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-130940",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "anti-ice fault",
+      "valve stiction",
+      "duty cycle",
+      "feedback standard",
+      "climb phase"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "30-10-11-810-802",
+      "fault_symptom": "WING ANTI ICE FAULT displayed in the climb, not reproducible on the ground",
+      "fault_codes": [
+        "301011007",
+        "301011022"
+      ],
+      "warning_messages": [
+        "ANTI ICE WING FAULT",
+        "ANTI ICE WING L VALVE"
+      ],
+      "affected_fins": [
+        "6HA",
+        "918PU"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Butterfly binding against the housing under an uneven duct temperature gradient",
+          "probability_pct": 44,
+          "fin": "6HA"
+        },
+        {
+          "cause": "Wiper track feedback worn at the commanded positions, potentiometric standard only",
+          "probability_pct": 24,
+          "fin": "6HA"
+        },
+        {
+          "cause": "Duty cycle dropout from the non-contact sensor or its supply",
+          "probability_pct": 12,
+          "fin": "6HA"
+        },
+        {
+          "cause": "Intermittent resistance in the feedback harness",
+          "probability_pct": 10,
+          "fin": "6HA"
+        },
+        {
+          "cause": "Low bleed supply pressure at the valve inlet",
+          "probability_pct": 10,
+          "fin": "918PU"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-S-30-10-11-700-015-A",
+      "dispatch": {
+        "mel_item": "30-10-02B",
+        "dispatchable": true,
+        "dispatch_condition": "One valve inoperative and deactivated open, not in known or forecast icing conditions"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "doc_id": "MRD-32-1110",
+    "doc_type": "SB",
+    "title": "Landing Gear — Brake Control Unit — Interface Change and Software Standard 8.2 Load",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-12-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00358"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-163460"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-05-31",
+      "released": "2021-12-15",
+      "revised": "2021-12-15",
+      "effective": "2022-01-12"
+    },
+    "abstract": "Combined hardware and software retrofit for the brake and steering control unit: the faster sampling interface is installed and software standard 8.2 is loaded, giving anti-skid gain scheduling and the first fault snapshot.",
+    "sections": {
+      "planning_reason": "Two problems are addressed together. Anti-skid performance on wet grooved runways at light landing weights was conservative against the certified figures, which several operators queried. Separately, line maintenance could not close brake system messages without a wheel and brake change because the control unit recorded a fault code and no context: sixty-two brake assemblies were returned in two years with no fault found. The software that solves both needs a faster sampling interface, so the hardware and the load are issued as one Service Bulletin.",
+      "description": "The switch assembly is replaced by an item with a faster sampling interface and the pressure transmitter is recalibrated to the new sampling rate. Software standard 8.2 is then loaded through the data loading interface. The load introduces anti-skid gain scheduling driven by measured tyre pressure and wheel speed rate, and writes a forty second fault snapshot to non-volatile memory on a clean shutdown.",
+      "accomplishment_summary": "Make the aircraft safe and set the parking brake off with the gear pins installed. Get access to the control unit and the switch assembly in zones 721 and 755. Do the removal steps needed to reach the switch assembly and install the replacement D3240126111041. Recalibrate the pressure transmitter D3240127464045 on the aircraft using the calibration set. Load software standard 8.2 through the flight deck data loading interface and confirm the part number reads back correctly. Do the test task AMM-M-32-40-12-700-018-A in full. Confirm that the fault snapshot is written by triggering the built-in test and reading the record on the maintenance terminal. Do a taxi test if the operator maintenance programme requires one. Record the embodiment and the loaded software standard against the aircraft.",
+      "effectivity_note": "Applicable to MRD-42K1 and MRD-46K1 aircraft from MSN M00001 through M00358 that are still pre MOD-163460. Aircraft from the production cut-in onward already carry both the interface and the software. The software must not be loaded onto an aircraft that still has the original switch assembly, which is why the hardware step is not optional in this Service Bulletin.",
+      "material_note": "Kit K3240-1110-01 contains the two switch assemblies and the calibration reference. The software load is supplied through the operator software distribution channel and is not part of the kit. Lead time on the kit is twelve weeks."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126111041",
+        "D3240127464045"
+      ],
+      "fins": [
+        "1GM5",
+        "23GM"
+      ],
+      "drawings": [
+        "D32401260138"
+      ],
+      "software": [
+        "LH4PE7117BE"
+      ],
+      "zones": [
+        "721",
+        "755"
+      ],
+      "figures": [
+        "FIG-32-40-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00358"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163460",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-M-32-40-12-700-018-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-M-32-40-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-M-32-40-12-810-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "software load",
+      "anti-skid gain",
+      "fault snapshot",
+      "sampling interface"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Landing Gear In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "MRD-32-1110",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled A-check, or within 36 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-163460",
+      "manpower": {
+        "elapsed_time_hours": 14,
+        "manhours": 24,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K3240-1110-01",
+        "kit_available_from": "2022-03-21",
+        "parts_required": [
+          {
+            "part_number": "D3240126111041",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Connector sealing compound"
+        ],
+        "tooling": [
+          "Brake calibration set 98D32401-260",
+          "Portable data loader",
+          "Maintenance terminal interface cable"
+        ]
+      },
+      "weight_change_kg": 0.1,
+      "accomplishment_steps": 9,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2021-12-15",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MRD-32-1110",
+    "doc_type": "SB",
+    "title": "Landing Gear — Brake Control Unit — Interface Change and Software Standard 8.2 Load",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-03",
+      "reason": "Stated as the prerequisite for every load in the brake control unit software family, present and future, rather than for standard 8.2 alone.",
+      "raised_by_pawo": "PAWO-163460-01",
+      "raised_by_finding": "F04",
+      "finding_type": "PREREQUISITE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00358"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-163460"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-05-31",
+      "released": "2021-12-15",
+      "revised": "2026-08-03",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Combined hardware and software retrofit for the brake and steering control unit: the faster sampling interface is installed and software standard 8.2 is loaded. The interface it installs is the prerequisite for every load in this software family.",
+    "sections": {
+      "planning_reason": "Two problems are addressed together. Anti-skid performance on wet grooved runways at light landing weights was conservative against the certified figures, which several operators queried. Separately, line maintenance could not close brake system messages without a wheel and brake change because the control unit recorded a fault code and no context: sixty-two brake assemblies were returned in two years with no fault found. The software that solves both needs a faster sampling interface, so the hardware and the load are issued as one Service Bulletin.",
+      "description": "The switch assembly is replaced by an item with a faster sampling interface and the pressure transmitter is recalibrated to the new sampling rate. Software standard 8.2 is then loaded through the data loading interface. The load introduces anti-skid gain scheduling driven by measured tyre pressure and wheel speed rate, and writes a forty second fault snapshot to non-volatile memory on a clean shutdown.",
+      "accomplishment_summary": "Make the aircraft safe and set the parking brake off with the gear pins installed. Get access to the control unit and the switch assembly in zones 721 and 755. Do the removal steps needed to reach the switch assembly and install the replacement D3240126111041. Recalibrate the pressure transmitter D3240127464045 on the aircraft using the calibration set. Load software standard 8.2 through the flight deck data loading interface and confirm the part number reads back correctly. Do the test task AMM-M-32-40-12-700-018-A in full. Confirm that the fault snapshot is written by triggering the built-in test and reading the record on the maintenance terminal. Do a taxi test if the operator maintenance programme requires one. Record the embodiment and the loaded software standard against the aircraft.",
+      "effectivity_note": "Applicable to MRD-42K1 and MRD-46K1 aircraft from MSN M00001 through M00358 that are still pre MOD-163460. Aircraft from the production cut-in onward already carry both the interface and the software. The software must not be loaded onto an aircraft that still has the original switch assembly, which is why the hardware step is not optional in this Service Bulletin. The point generalises and is stated here because it has been missed: no load in this software family, standard 8.2 or any successor, will accept an aircraft that has not had the faster sampling interface installed. A candidate load scoped without this Service Bulletin as a prerequisite discovers the fact at the first attempted load, on the aircraft, with the terminal connected. Aircraft that received the interface through component replacement rather than through this Service Bulletin are covered by the load-only route of MRD-32-1126.",
+      "material_note": "Kit K3240-1110-01 contains the two switch assemblies and the calibration reference. The software load is supplied through the operator software distribution channel and is not part of the kit. Lead time on the kit is twelve weeks. Revision 02 adds no material content; it states the prerequisite relationship to the software family and changes nothing in the accomplishment."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126111041",
+        "D3240127464045"
+      ],
+      "fins": [
+        "1GM5",
+        "23GM"
+      ],
+      "drawings": [
+        "D32401260138"
+      ],
+      "software": [
+        "LH4PE7117BE"
+      ],
+      "zones": [
+        "721",
+        "755"
+      ],
+      "figures": [
+        "FIG-32-40-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00358"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163460",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "MRD-32-1126",
+        "doc_type": "SB",
+        "relation": "PREREQUISITE_OF"
+      },
+      {
+        "doc_id": "AMM-M-32-40-12-700-018-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-M-32-40-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-M-32-40-12-810-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "sampling interface",
+      "prerequisite",
+      "software family",
+      "anti-skid gain"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Landing Gear In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "MRD-32-1110",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled A-check, or within 36 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-163460",
+      "manpower": {
+        "elapsed_time_hours": 14,
+        "manhours": 24,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K3240-1110-01",
+        "kit_available_from": "2022-03-21",
+        "parts_required": [
+          {
+            "part_number": "D3240126111041",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Connector sealing compound"
+        ],
+        "tooling": [
+          "Brake calibration set 98D32401-260",
+          "Portable data loader",
+          "Maintenance terminal interface cable"
+        ]
+      },
+      "weight_change_kg": 0.1,
+      "accomplishment_steps": 9,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2021-12-15",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-08-03",
+          "reason": "Stated as the prerequisite for every load in the brake control unit software family"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

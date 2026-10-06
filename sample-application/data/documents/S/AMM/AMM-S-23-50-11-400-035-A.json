@@ -1,0 +1,171 @@
+[
+  {
+    "doc_id": "AMM-S-23-50-11-400-035-A",
+    "doc_type": "AMM",
+    "title": "Audio Management Unit — Installation and Call Test",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-09-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-50",
+      "ata_6d": "23-50-11",
+      "title": "Audio Integrating — Audio Management Unit"
+    },
+    "secondary_ata": [
+      "44-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-02-08",
+      "released": "2019-09-17",
+      "revised": null,
+      "effective": "2019-10-05"
+    },
+    "abstract": "Installation of the audio management unit and its rack, followed by the call and sidetone test from every station that proves the installation before the aircraft is released.",
+    "sections": {
+      "purpose": "This task installs the audio management unit and, where it was removed, its rack, and proves the installation by a call test from every cabin and flight compartment station.",
+      "job_setup_note": "The call test needs two people with handsets and takes about forty minutes on a full cabin layout. Plan it before you start, because a unit installed and not tested cannot be released. Confirm from the aircraft record which amplifier standard is fitted; the sidetone levels of the two standards are not the same.",
+      "procedure": "1. Clean the rack mounting face and check it for damage. 2. Where the rack was removed, install the rack KE27719-48 with the countersunk washers AES832388-10 at the four attachment points and torque them to the value given. 3. Install the protective sleeve LN112642-3C at the feedthrough and route the harness through it without a sharp bend. 4. Offer the unit into the rack and support both connector shells until they are engaged. 5. Connect both shells and confirm the retention with the gauge. 6. Push the unit fully home and close the front latch. 7. Reset the circuit breaker and remove the tag. 8. CAUTION: DO NOT MIX AMPLIFIER STANDARDS IN ONE AIRCRAFT. THE SIDETONE LEVELS DIFFER AND THE CREW WILL REPORT IT AS A FAULT. 9. Make a call from the flight compartment to each cabin station in turn and confirm that speech is intelligible in both directions. 10. Make a call from the aft galley station in zone 263 to the flight compartment and listen for hum under the speech. 11. Check the sidetone at each handset against the acceptance in the limits table. 12. Do a passenger address announcement to all zones and confirm coverage. 13. Confirm that the transceiver 95RC in the aft position is secure.",
+      "close_out": "Record the sidetone readings and note any station where the speech was less than fully intelligible. Tell the cabin crew that the system is available. Close the access panel and make the maintenance entry with the removed and installed serial numbers."
+    },
+    "entities": {
+      "part_numbers": [
+        "KE27719-48",
+        "AES832388-10",
+        "LN112642-3C",
+        "D2350122256689"
+      ],
+      "fins": [
+        "2922RC",
+        "95RC"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "133",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-23-50-11-000-035-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-23-50-11-812-811",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "call test",
+      "sidetone",
+      "audio management unit",
+      "passenger address",
+      "intelligibility"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "23-50-11-400-035-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "SOLANO-30 and SOLANO-34 aircraft; the sidetone acceptance differs between the analogue and the replacement amplifier",
+      "manhours": 3.5,
+      "personnel": 2,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "133",
+          "263"
+        ],
+        "access_panels": [
+          "133CR",
+          "133BR"
+        ],
+        "doors": [
+          "Aft cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Tell the cabin crew before the announcement test.",
+          "Do not force a connector shell that will not engage."
+        ],
+        "tooling": [
+          {
+            "reference": "98D23501-041",
+            "description": "Contact retention gauge"
+          },
+          {
+            "reference": "98D23501-046",
+            "description": "Audio test set"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, electrical",
+          "Cable tie, self-locking"
+        ],
+        "expendables": [
+          {
+            "part_number": "AES832388-10",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-S-23-50-11-000-035-A"
+      ],
+      "steps": 13,
+      "warnings": 0,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

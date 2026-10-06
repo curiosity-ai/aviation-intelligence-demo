@@ -1,0 +1,397 @@
+[
+  {
+    "doc_id": "MOD-111854",
+    "doc_type": "MOD",
+    "title": "Higher Rated In-Seat Power Supply and Revised Aft Cabin Feeder Allocation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-12",
+      "reason": "Original issue of the higher rated in-seat power supply proposal dossier.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-13",
+      "title": "Inflight Entertainment — IFE Power Supply"
+    },
+    "secondary_ata": [
+      "24-50-12",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [
+        "C00001",
+        "C00165",
+        "C00186",
+        "C00339",
+        "C00404",
+        "C00523",
+        "C00544"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111138"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-03-10",
+      "released": null,
+      "revised": "2026-03-12",
+      "effective": null
+    },
+    "abstract": "A larger in-seat power supply for refitted cabins, together with a feeder reallocation in the aft distribution, ending the block dropouts that appear on ground power when every seat socket is connected.",
+    "sections": {
+      "reason": "An operator that has doubled its in-seat socket count during a cabin refit reports the aft third of the cabin losing socket power in blocks during boarding on ground power, recovering unattended after a few minutes. Eleven aircraft are affected and the fault is written up on almost every rotation. Measurement on two aircraft confirms that the supply is entering current limit rather than failing: the fitted socket count exceeds the design assumption of the supply by roughly 40 per cent, and the aft feeder group carries the galley at the same time. Nothing is broken, but the installation as refitted is outside the case it was sized for.",
+      "description": "The in-seat power supply is replaced by a unit rated for the full fitted socket count with 25 per cent margin, and the aft cabin feeder allocation is revised so that the seat sockets and the aft galley no longer draw from the same group. The supply mounting trim D4420139171185 is replaced by a deeper item and the overhead housing D4420139649717 is re-profiled to clear it. The aft distribution harness D2450122851975 is re-terminated at two positions and spacers AES140047-2A set the new lug standoff. The supply panel 1RM and its decor panel 335RM keep their identifiers, and the distribution bus bar 403XU2 is re-strapped, which is why the aircraft must already carry the ventilated distribution box standard. Revised detail is on drawing D24501217521. Work is done in the aft cabin and at the aft equipment rack, zones 252, 272 and 922.",
+      "effects": "Mass increase of 5.4 kg per aircraft. Continuous cabin electrical load rises by 2400 VA with every socket connected, which the ventilated distribution box standard can carry but the derated standard cannot. The supply is not interchangeable with the current unit because the mounting depth and the feeder allocation both change. No dispatch impact. Illustrated parts content for the seat power installation and the wiring content for the aft cabin distribution both need re-issue, and the installation task for the supply is replaced.",
+      "embodiment_note": "Retrofit only, for aircraft that have been through the cabin refit. Provisional estimate is one night stop per aircraft with the aft cabin sidewall opened at three positions. Kits are per aircraft and include the feeder reallocation hardware.",
+      "open_points": "Pre-analysis must confirm that the additional continuous load is inside the ventilated distribution box thermal case rather than merely inside its rating, whether the embodiment must be simultaneous with the distribution box standard on aircraft that have neither, and whether the deeper supply housing clears the overhead stowage compartment structure at the two rows where the cabin refit moved the divider."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420139171185",
+        "D4420139649717",
+        "D2450122851975",
+        "AES140047-2A"
+      ],
+      "fins": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "drawings": [
+        "D24501217521"
+      ],
+      "software": [],
+      "zones": [
+        "252",
+        "272",
+        "922"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00001",
+        "C00165",
+        "C00186"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-260127",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-111138",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      },
+      {
+        "doc_id": "AMM-C-44-20-13-400-009-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-44-20-13-810-805",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "seat power supply",
+      "feeder allocation",
+      "current limit",
+      "cabin refit",
+      "ground power"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Cabin Design"
+    },
+    "type_data": {
+      "mod_number": 111854,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1353",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 5.4,
+      "balance_impact": "Aft cabin, CG shift below 0.03 % MAC",
+      "electrical_load_impact_va": 2400,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES140047-2A"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4420139171185",
+        "D4420139649717",
+        "D2450122851975"
+      ],
+      "fins_affected": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 96,
+      "estimated_cost_keur": 390,
+      "lead_time_weeks": 24,
+      "production_impact": "Retrofit only; production cabins are not at the refit socket count",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-111854",
+    "doc_type": "MOD",
+    "title": "Higher Rated In-Seat Power Supply and Revised Aft Cabin Feeder Allocation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-21",
+      "reason": "Load allocation re-based on the aft feeder run rating, with the distribution box rating marked as not applicable to run loading.",
+      "raised_by_pawo": "PAWO-111138-01",
+      "raised_by_finding": "F01",
+      "finding_type": "OVERLAPPING_SCOPE"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-13",
+      "title": "Inflight Entertainment — IFE Power Supply"
+    },
+    "secondary_ata": [
+      "24-50-12",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [
+        "C00001",
+        "C00165",
+        "C00186",
+        "C00339",
+        "C00404",
+        "C00523",
+        "C00544"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111138"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-03-10",
+      "released": null,
+      "revised": "2026-07-21",
+      "effective": null
+    },
+    "abstract": "A larger in-seat power supply for refitted cabins, together with a feeder reallocation in the aft distribution, ending the block dropouts that appear on ground power when every seat socket is connected.",
+    "sections": {
+      "reason": "An operator that has doubled its in-seat socket count during a cabin refit reports the aft third of the cabin losing socket power in blocks during boarding on ground power, recovering unattended after a few minutes. Eleven aircraft are affected and the fault is written up on almost every rotation. Measurement on two aircraft confirms that the supply is entering current limit rather than failing: the fitted socket count exceeds the design assumption of the supply by roughly 40 per cent, and the aft feeder group carries the galley at the same time. Nothing is broken, but the installation as refitted is outside the case it was sized for.",
+      "description": "The in-seat power supply is replaced by a unit rated for the full fitted socket count with 25 per cent margin, and the aft cabin feeder allocation is revised so that the seat sockets and the aft galley no longer draw from the same group. The supply mounting trim D4420139171185 is replaced by a deeper item and the overhead housing D4420139649717 is re-profiled to clear it. The aft distribution harness D2450122851975 is re-terminated at two positions and spacers AES140047-2A set the new lug standoff. The supply panel 1RM and its decor panel 335RM keep their identifiers, and the distribution bus bar 403XU2 is re-strapped, which is why the aircraft must already carry the ventilated distribution box standard. The reallocation is sized against the measured feeder run capability, which is the governing figure for this installation. Revised detail is on drawing D24501217521. Work is done in the aft cabin and at the aft equipment rack, zones 252, 272 and 922.",
+      "effects": "Mass increase of 5.4 kg per aircraft. Continuous cabin electrical load rises by 2400 VA with every socket connected. That figure is allocated against the aft feeder run rating and not against the distribution box outlet rating: the box rating is a terminal figure and says nothing about what the run between the box and the cabin outlets will carry, and the run has never been re-rated, so it is about a fifth lower than the box. Against the run rating the margin after this change is 9 per cent and not the 28 per cent the first estimate gave. The supply is not interchangeable with the current unit because the mounting depth and the feeder allocation both change. No dispatch impact. Illustrated parts content for the seat power installation and the wiring content for the aft cabin distribution both need re-issue, and the installation task for the supply is replaced.",
+      "embodiment_note": "Retrofit only, for aircraft that have been through the cabin refit. Provisional estimate is one night stop per aircraft with the aft cabin sidewall opened at three positions. Kits are per aircraft and include the feeder reallocation hardware.",
+      "open_points": "Pre-analysis has established that the aft feeder run and not the distribution box is the limiting element, and the allocation has been re-based on it. What remains is to confirm that the additional continuous load is inside the ventilated distribution box thermal case rather than merely inside its rating, whether the embodiment must be simultaneous with the distribution box standard on aircraft that have neither, whether the 9 per cent run margin leaves room for any further cabin load, and whether the deeper supply housing clears the overhead stowage compartment structure at the two rows where the cabin refit moved the divider."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420139171185",
+        "D4420139649717",
+        "D2450122851975",
+        "AES140047-2A"
+      ],
+      "fins": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "drawings": [
+        "D24501217521"
+      ],
+      "software": [],
+      "zones": [
+        "252",
+        "272",
+        "922"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00001",
+        "C00165",
+        "C00186"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-260127",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-111138",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      },
+      {
+        "doc_id": "MOD-111132",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-44-20-13-400-009-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-44-20-13-810-805",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "seat power supply",
+      "feeder run rating",
+      "current limit",
+      "cabin refit",
+      "load allocation"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Cabin Design"
+    },
+    "type_data": {
+      "mod_number": 111854,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1353",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 5.4,
+      "balance_impact": "Aft cabin, CG shift below 0.03 % MAC",
+      "electrical_load_impact_va": 2400,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES140047-2A"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4420139171185",
+        "D4420139649717",
+        "D2450122851975"
+      ],
+      "fins_affected": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 96,
+      "estimated_cost_keur": 390,
+      "lead_time_weeks": 24,
+      "production_impact": "Retrofit only; production cabins are not at the refit socket count",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

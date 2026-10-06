@@ -1,0 +1,180 @@
+[
+  {
+    "doc_id": "MOD-168036",
+    "doc_type": "MOD",
+    "title": "Extended Flight Data Frame and Isolated Recorder Mounting Tray",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-09-25",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-30",
+      "ata_6d": "31-30-11",
+      "title": "Recorders — Flight Data Recorder"
+    },
+    "secondary_ata": [
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "M00412",
+      "production_cut_in_date": "2024-01-30",
+      "retrofit_via": [
+        "MRD-31-1007"
+      ]
+    },
+    "dates": {
+      "created": "2022-02-17",
+      "released": "2023-09-25",
+      "revised": null,
+      "effective": "2023-10-20"
+    },
+    "abstract": "Introduces the extended recording frame required by the revised operational rule and replaces the recorder mounting tray with an isolated variant, after vibration surveys showed the delivered tray transmitting airframe response into the recorder at cruise.",
+    "sections": {
+      "reason": "The revised operational recording requirement adds fourteen parameters that the delivered frame has no room for, and the compliance date applies to the whole fleet. Separately, four operators reported recorder built-in test warnings in cruise that cleared on descent, and a vibration survey on two airframes showed the delivered mounting tray amplifying the local structural response in a narrow band around the cruise condition. Addressing both in one change avoids opening the avionics bay twice.",
+      "description": "The recorder frame definition is extended to the new parameter set and the associated interface configuration is reissued. The recorder mounting tray is replaced by a variant carrying four elastomeric isolators and a revised earthing strap; the display unit assembly at the recorder position is retained and re-fitted to the new tray with cushioned loop clamps on the harness run. The harness itself is not rerouted, only re-clipped clear of the isolator travel. The recorder wiring drawing is reissued for the earthing strap position. The cockpit voice recorder installation is not touched by this modification.",
+      "effects": "Mass increase of two point four kilograms in the avionics bay, no measurable balance effect. No change in electrical load. The tray is not interchangeable with the delivered part because the isolator footprint differs. Removal and installation task times increase by half an hour for the isolator torque sequence. The parts catalogue figure and the removal task both require reissue, and the operator must reload the recording configuration after embodiment.",
+      "embodiment_note": "Cut in at MSN M00412 and available as a retrofit bulletin covering both the frame reload and the tray change in a single avionics bay visit of about ten hours."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3130116611592",
+        "LN834365-8A",
+        "LN760453-5C"
+      ],
+      "fins": [
+        "4FP",
+        "63FW7"
+      ],
+      "drawings": [
+        "D31301163625"
+      ],
+      "software": [],
+      "zones": [
+        "221",
+        "242"
+      ],
+      "figures": [
+        "FIG-31-30-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00412"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-31-1007",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-M-31-30-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "AMM-M-31-30-11-000-035-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "flight data recorder",
+      "recording frame",
+      "mounting tray",
+      "isolator",
+      "avionics bay"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168036,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CERTIFICATION",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1459",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.4,
+      "balance_impact": "Negligible, avionics bay installation",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3130116611592",
+        "LN760453-5C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "LN834365-8A"
+      ],
+      "fins_affected": [
+        "4FP",
+        "63FW7"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 880,
+      "estimated_cost_keur": 1640,
+      "lead_time_weeks": 52,
+      "production_impact": "Cut in at MSN M00412, tray supplied as a kit to the final assembly line",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

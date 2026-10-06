@@ -1,0 +1,152 @@
+[
+  {
+    "doc_id": "TSM-T-24-50-11-810-808",
+    "doc_type": "TSM",
+    "title": "Primary Distribution Centre Contactor Status Disagreement — Fault Isolation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-05-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-11",
+      "title": "Electrical Load Distribution — Primary Distribution Centre"
+    },
+    "secondary_ata": [
+      "24-50-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-01-23",
+      "released": "2017-05-19",
+      "revised": null,
+      "effective": "2017-06-23"
+    },
+    "abstract": "Fault isolation for a contactor status disagreement in the primary distribution centre, distinguishing a latched module reporting its retained state from a genuine status wiring or contact block fault.",
+    "sections": {
+      "purpose": "Fault isolation for a reported disagreement between the commanded and the reported state of a contactor in the primary distribution centre.",
+      "fault_description": "The maintenance system reports a contactor status disagreement, usually on power-up and usually clearing after the first commanded change of state. On an aircraft with the latching module standard this is frequently not a fault at all: the module holds its last commanded state with no power applied, and a rack that was left with a module open before a power interruption reports exactly this disagreement on the next power-up. Isolation begins by establishing which module standard is fitted, because the two behave differently and the same message means different things.",
+      "isolation_procedure": "1. Read the maintenance message and note the affected rack position. 2. Establish the module standard fitted at that position from the configuration record; a rack part way through conversion can carry both. 3. On a latching module, command the contactor open and then closed, and confirm the status follows on both transitions. Where it does, the disagreement was a retained state on power-up and no further action is required. 4. Where the status does not follow, do the continuity check between the auxiliary contact block and the rack terminal. CAUTION applies: an open circuit here looks identical to a failed module from the maintenance system. 5. Where the continuity is good, measure the contact resistance at the module position and compare against the recorded baseline. 6. Examine the auxiliary contact block for bent contact fingers, which are the most common physical cause and are not detected electrically until the block is loaded. 7. Replace the contact block before replacing the module; the block fails an order of magnitude more often.",
+      "dispatch_note": "Dispatch with one contactor position inoperative is permitted under the minimum equipment list item provided the associated bus can be fed from the alternate source. A status disagreement that has been shown to be a retained state is not a defect and does not require a technical log entry beyond the isolation result."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450112131298",
+        "D2450115910023",
+        "EN575431K5"
+      ],
+      "fins": [
+        "1198GX9",
+        "3102GX",
+        "35GX"
+      ],
+      "drawings": [
+        "D24501125799"
+      ],
+      "software": [],
+      "zones": [
+        "292",
+        "682"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-24-50-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "contactor",
+      "status disagreement",
+      "latching",
+      "contact block",
+      "retained state"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "24-50-11-810-808",
+      "fault_symptom": "CONTACTOR STATUS DISAGREE reported by the central maintenance system",
+      "fault_codes": [
+        "245011003",
+        "245011021"
+      ],
+      "warning_messages": [
+        "ELEC DISTRIBUTION FAULT"
+      ],
+      "affected_fins": [
+        "1198GX9",
+        "3102GX"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Latching module reporting a retained state after a power interruption",
+          "probability_pct": 45,
+          "fin": "1198GX9"
+        },
+        {
+          "cause": "Auxiliary contact block with bent contact fingers",
+          "probability_pct": 30,
+          "fin": "3102GX"
+        },
+        {
+          "cause": "Status wiring open circuit at the rack terminal",
+          "probability_pct": 15,
+          "fin": "35GX"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-T-24-50-11-400-001-A",
+      "dispatch": {
+        "mel_item": "24-50-02B",
+        "dispatchable": true,
+        "dispatch_condition": "One contactor position inoperative, associated bus fed from the alternate source"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

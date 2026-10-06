@@ -1,0 +1,218 @@
+[
+  {
+    "doc_id": "MOD-111244",
+    "doc_type": "MOD",
+    "title": "Extension of the Revised Isolation Valve Standard to the Cross-Bleed Duct and the Ground Connection",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-04-03",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-12",
+      "title": "Distribution — Isolation Valves"
+    },
+    "secondary_ata": [
+      "36-20",
+      "21-60"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "PYR-1519G",
+        "PYR-1521G",
+        "PYR-1524G"
+      ],
+      "operators": [
+        "TJT",
+        "BCA",
+        "MSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111238"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00544",
+      "production_cut_in_date": "2022-06-08",
+      "retrofit_via": [
+        "CRN-36-2005",
+        "CRN-36-2009"
+      ]
+    },
+    "dates": {
+      "created": "2020-05-26",
+      "released": "2022-01-17",
+      "revised": "2024-04-03",
+      "effective": "2024-05-01"
+    },
+    "abstract": "Second issue of the isolation valve standard, carrying the low-temperature actuator forward to the cross-bleed valve and the ground connection valve and adding a position confirmation the monitoring computer can read directly.",
+    "sections": {
+      "reason": "The first standard corrected the two engine isolation valves and left the cross-bleed valve and the ground connection valve at the original build. Two winters of service showed that the same slow response appeared at the cross-bleed valve, this time producing a delayed cross-bleed start rather than a departure caution, and one operator reported eight events on a single aircraft in a fortnight. In parallel, the bleed monitoring computer had to infer valve position from duct pressure because no direct position signal existed, which was the source of a persistent complaint about ambiguous fault messages.",
+      "description": "The low-temperature actuator introduced by the earlier standard is fitted to the cross-bleed valve and the ground connection valve. A discrete position sensor GIR634074-45 is added at each of the four valve positions and wired to the bleed monitoring computer so that position is reported rather than inferred. The regulator D3610120750241 is common across all four positions from this standard onward, which removes a spares distinction the line found difficult. The duct D3610123273634 at the cross-bleed joint is replaced by the sub-assembly D3610128140349 to give the sensor a mounting boss. Cushioned clamps EN984959K3 and swaged collars EN767708K2 are used throughout. Functional items 57PN6, 198PU and 7013PU are affected, and the work is in zones 443, 444 and 191.",
+      "effects": "Mass increase of 1.4 kg for the whole aircraft. Electrical load increases by 30 volt-amperes for the four sensors. The change is not interchangeable at the cross-bleed position because the duct changes. The minimum equipment list gains a new entry for a single valve position sensor inoperative, dispatchable for ten days with the bleed configuration to be confirmed by the crew before each departure. Maintenance manual, illustrated parts, trouble shooting and wiring content all change, and the flight crew procedure for a cross-bleed start is re-issued because the timing note is no longer correct.",
+      "embodiment_note": "Production cut-in at MSN C00544 in June 2022. Retrofit is by Service Bulletin CRN-36-2005 for the valve and sensor work, with Service Bulletin CRN-36-2009 covering the wiring provision on aircraft that were never brought to the first standard. Two shifts with the pylon panels open."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3610120750241",
+        "D3610123273634",
+        "D3610128140349",
+        "GIR634074-45",
+        "EN984959K3",
+        "EN767708K2",
+        "KADE183019-31"
+      ],
+      "fins": [
+        "57PN6",
+        "198PU",
+        "7013PU"
+      ],
+      "drawings": [
+        "D36201159645",
+        "D36201229644"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "444",
+        "191"
+      ],
+      "figures": [
+        "FIG-36-10-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00544"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111238",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "CRN-36-2005",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "CRN-36-2009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "FCOM-C-PRO-36-10-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-36-10-12-400-012-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-36-10-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "cross-bleed valve",
+      "position sensor",
+      "ground connection",
+      "isolation valve",
+      "bleed monitoring"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111244,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1439"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.4,
+      "balance_impact": "Negligible, distributed between the two pylons and the belly fairing",
+      "electrical_load_impact_va": 30,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "GIR634074-45",
+        "D3610128140349",
+        "KADE183019-31"
+      ],
+      "parts_removed": [
+        "D3610123273634"
+      ],
+      "parts_modified": [
+        "D3610120750241"
+      ],
+      "fins_affected": [
+        "57PN6",
+        "198PU",
+        "7013PU"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 260,
+      "estimated_cost_keur": 880,
+      "lead_time_weeks": 44,
+      "production_impact": "Cut-in at MSN C00544, sensor harness pre-installed from MSN C00512",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

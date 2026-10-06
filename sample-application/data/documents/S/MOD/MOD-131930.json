@@ -1,0 +1,198 @@
+[
+  {
+    "doc_id": "MOD-131930",
+    "doc_type": "MOD",
+    "title": "Crew Oxygen Cylinder Cradle and Pressure Transducer Installation Rework",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-03-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "35",
+      "ata_4d": "35-10",
+      "ata_6d": "35-10-11",
+      "title": "Crew Oxygen — Crew Oxygen Cylinder"
+    },
+    "secondary_ata": [
+      "25-10",
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00029",
+          "to": "S01430"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "JTA",
+        "IOW"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01430",
+      "production_cut_in_date": "2020-05-27",
+      "retrofit_via": [
+        "SLN-35-1005"
+      ]
+    },
+    "dates": {
+      "created": "2019-02-11",
+      "released": "2020-03-24",
+      "revised": null,
+      "effective": "2020-04-13"
+    },
+    "abstract": "A revised cylinder cradle and a solid-state pressure transducer for the crew oxygen installation, ending the slow gauge drift that was driving unnecessary cylinder changes at transit stops.",
+    "sections": {
+      "reason": "The bourdon-tube transducer fitted at build drifts with temperature and ages by about two per cent a year, which puts an in-tolerance cylinder below the dispatch line on a cold morning. Operators were changing cylinders that later tested full: forty-three of sixty-one cylinders returned in an eighteen-month sample were within limits. Each unnecessary change is a two-hour job in the flight compartment with the crew rest floor lifted, and three operators reported delayed departures because of it. A secondary finding was cradle strap chafe on the cylinder neck at two operators with high cycle utilisation.",
+      "description": "The transducer is replaced by a solid-state item with a temperature-compensated output, and the non-return valve D3510118104447 at the cylinder outlet is renewed at the same time because it must be disturbed to change the transducer. The cradle is reworked so that the strap bears on a moulded saddle rather than directly on the cylinder neck, and the charging pump connection YS788350-31 is relocated fifty millimetres outboard to give tool clearance at the transducer. Filter 5HD is refitted, solenoid 61HD in the upper position is unchanged, and valve 6908HE is re-lock-wired after the outlet is broken. Access is at the flight compartment access area in zone 215, the forward cabin right-hand lower area in zone 233 and the left-hand lower area in zone 243. Detail is on drawing D35101107687.",
+      "effects": "Mass increase of 0.6 kg. Electrical load increases by four volt-amperes for the transducer excitation, taken from the existing indicating supply with no change to the load analysis. The transducer is not interchangeable with the original because the output law differs and the indicating channel must be re-ranged at the same time. The cylinder pressure check keeps its interval but its acceptance table is replaced by a single figure, because temperature correction is no longer needed. Servicing content changes.",
+      "embodiment_note": "Production cut-in at MSN S01430. Retrofit is twelve manhours with the crew rest floor panel lifted, offered at any A-check. The cylinder itself is not changed and its hydrostatic test interval is unaffected."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3510118104447",
+        "YS788350-31"
+      ],
+      "fins": [
+        "5HD",
+        "61HD",
+        "6908HE"
+      ],
+      "drawings": [
+        "D35101107687"
+      ],
+      "software": [],
+      "zones": [
+        "215",
+        "233",
+        "243"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01430"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-35-1005",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-S-35-10-11-800-038-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-S-35-10-11-000-039-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-S-35-10-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "FCOM-S-LIM-35-10-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "oxygen cylinder",
+      "pressure transducer",
+      "gauge drift",
+      "cradle strap",
+      "dispatch"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 131930,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1441",
+          "CS 25.1443"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.6,
+      "balance_impact": "Forward of the reference datum; negligible",
+      "electrical_load_impact_va": 4,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "YS788350-31"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3510118104447"
+      ],
+      "fins_affected": [
+        "5HD",
+        "6908HE"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 54,
+      "estimated_cost_keur": 195,
+      "lead_time_weeks": 20,
+      "production_impact": "Cut-in at MSN S01430",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

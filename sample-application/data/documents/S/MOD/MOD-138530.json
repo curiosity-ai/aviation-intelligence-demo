@@ -1,0 +1,189 @@
+[
+  {
+    "doc_id": "MOD-138530",
+    "doc_type": "MOD",
+    "title": "Auxiliary Power Unit Air Intake Flap — Sealed Actuator Housing and Four-Engine Effectivity",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-10",
+      "ata_6d": "49-10-11",
+      "title": "Power Plant — APU Installation"
+    },
+    "secondary_ata": [
+      "26-10",
+      "49-10-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00014",
+          "to": "S01503"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "KLE",
+        "AUN",
+        "JTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-05-06",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "A fully sealed intake flap actuator housing for the auxiliary power unit, extended for the first time to the four-engine aircraft, addressing cold and contaminated conditions rather than the dust ingress the current standard was designed for.",
+    "sections": {
+      "reason": "The current shrouded-bearing standard solved dust ingress and was never offered on the four-engine aircraft. What operators now report is different: at northern outstations the flap is stiff on the first movement of the day and either takes too long to open or does not indicate open at all, and the start is inhibited. Two operators logged twenty-eight abandoned starts over two winters, twenty-one of them on the four-engine fleet which never received the earlier work. The ramp workaround is to cycle the flap by hand during the walk-around, which nobody performs reliably at minus twenty degrees.",
+      "description": "The actuator is enclosed in a fully sealed housing with a heated breather, so that de-icing residue and melt water cannot reach the output bearing or the anti-rotation slot, and so that any moisture that does enter cannot freeze the mechanism overnight. The shroud D4910119498267 is re-machined to carry the housing and the anchor nut AGS522879K5 is retained from the current standard at the mounting pattern, with the barrel nut LN685489-2E deleted at the two positions where the housing now bolts through. Cowl latch 52PB and shroud 5135PB are refitted. The four-engine installation needs a different bracket because the compartment firewall sits ninety millimetres further inboard, and that bracket is new to this modification. The auxiliary power unit fire detection loop regulator 25WD sits within the standoff envelope of the new housing in the same compartment and its clip positions are moved. Access is in the auxiliary power unit compartment in zones 393, 394 and 396.",
+      "effects": "Estimated mass increase of 1.6 kg on the twin-engine aircraft and 2.1 kg on the four-engine aircraft, aft of the reference datum. Electrical load increases by ninety volt-amperes while the breather heater is energised, which is on the ground only and is a new item on the auxiliary power unit start load case. The housing is not interchangeable with either the delivered or the current standard. Opening times at minus thirty degrees are expected to meet the design figure with de-icing fluid present. The flap travel check and the flight crew description of the intake flap both change.",
+      "embodiment_note": "Production cut-in is proposed on the twin-engine line after freeze, with retrofit through a new bulletin at any overnight stop with a tail cone stand. The four-engine aircraft are retrofit only, since that line is closed.",
+      "open_points": "Pre-analysis must establish whether the existing retrofit bulletin for the current standard survives once this modification exists or is invalidated by it, whether the breather heater load can be taken during a cold start without reducing the available start energy, whether the four-engine bracket clashes with the fire detection loop routing recently changed in the same compartment, and whether the crew documentation for the intake flap has to change at all."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4910119498267",
+        "AGS522879K5",
+        "LN685489-2E"
+      ],
+      "fins": [
+        "52PB",
+        "5135PB",
+        "25WD"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "393",
+        "394",
+        "396"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00020",
+        "S00429",
+        "S00781"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-S-260533",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-130680",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "intake flap",
+      "sealed housing",
+      "breather heater",
+      "cold soak",
+      "four-engine retrofit"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 138530,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1093"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.1,
+      "balance_impact": "Aft of the reference datum; negligible",
+      "electrical_load_impact_va": 90,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AGS522879K5"
+      ],
+      "parts_removed": [
+        "LN685489-2E"
+      ],
+      "parts_modified": [
+        "D4910119498267"
+      ],
+      "fins_affected": [
+        "52PB",
+        "25WD"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 110,
+      "estimated_cost_keur": 690,
+      "lead_time_weeks": 36,
+      "production_impact": "Cut-in proposed on the twin-engine line; four-engine retrofit only",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

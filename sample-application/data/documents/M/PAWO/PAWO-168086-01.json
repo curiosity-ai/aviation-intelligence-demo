@@ -1,0 +1,289 @@
+[
+  {
+    "doc_id": "PAWO-168086-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Closed) — Auxiliary Power Unit Mount Reinforcement, Inspection Bulletin Cancellation",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-10",
+      "ata_6d": "49-10-12",
+      "title": "Power Plant — APU Mount Assembly"
+    },
+    "secondary_ata": [
+      "49-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00028",
+          "to": "M00310"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-05",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis supporting the cancellation of the separate inspection bulletin once the reinforcement bulletin absorbed its measurements, and confirming that returns already made stayed valid.",
+    "sections": {
+      "objective": "Establish whether the standalone inspection bulletin could be cancelled without losing the fleet distortion data it was collecting, and what happened to operators who had already accomplished it.",
+      "findings_summary": "Four items were confirmed and none blocking. The reinforcement bulletin repeats the same three distortion measurements and the same torque check in its first two steps, so nothing is lost by cancelling the inspection except a separate compartment opening the operator does not want. Measurements already returned stay valid provided the compartment has not been opened since, which is a condition the cancellation notice had to state and originally did not. The installation task carries a hot clearance check that the inspection bulletin never had, so the data quality after cancellation is actually better. The parts figure needed no change. The work order ran over its estimate because the returns had to be reconciled aircraft by aircraft against compartment opening records.",
+      "next_steps": "Cancellation approved with the credit condition added to the notice. The reconciled return data was passed to continued airworthiness as the distortion baseline."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4910128135522",
+        "D4910128114119"
+      ],
+      "fins": [
+        "1PB",
+        "244PB3"
+      ],
+      "drawings": [
+        "D49101142926"
+      ],
+      "software": [],
+      "zones": [
+        "394",
+        "396"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168086",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "closed pre-analysis",
+      "bulletin cancellation",
+      "distortion measurement",
+      "credit condition",
+      "compartment opening"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Port-Rivage",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-168086-01",
+      "subject_mod": "MOD-168086",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-17",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-03-05",
+      "due_date": "2026-06-12",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Port-Rivage",
+        "contributing_departments": [
+          "EYIS",
+          "EDSA"
+        ],
+        "estimated_manhours": 200,
+        "spent_manhours": 244
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "49"
+        ],
+        "ata_4d": [
+          "49-10",
+          "49-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "M00028",
+          "to": "M00310"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4910128135522",
+            "D4910128114119"
+          ],
+          "fins": [
+            "1PB",
+            "244PB3"
+          ],
+          "drawings": [
+            "D49101142926"
+          ],
+          "zones": [
+            "394",
+            "396"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "an inspection absorbed into the modification it was written to precede"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare the two bulletin accomplishments step by step",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Reconcile returned measurements against compartment opening records",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the installation task clearance steps",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MRD-49-1011",
+          "doc_type": "SB",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "49-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The inspection bulletin's measurements are repeated in the first two steps of the reinforcement bulletin, so keeping it live forces a second compartment opening for no additional data.",
+          "resolution": "Cancel the inspection bulletin and point it at the reinforcement bulletin."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-49-1017",
+          "doc_type": "SB",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "49-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Credit for measurements already returned is only valid if the compartment has not been opened since, and the cancellation notice did not say so.",
+          "resolution": "Add the credit condition to the cancellation notice and to the reinforcement bulletin."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-49-10-12-400-041-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "49-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task's hot clearance check produces better data than the cancelled inspection, and should be referenced by the cancellation notice as the continuing source.",
+          "resolution": "Reference the installation task in the cancellation notice."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "IPC-M-49-10-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "49-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries the shield and link standards split by effectivity and needs no change from the cancellation.",
+          "resolution": "No action."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed. Cancellation approved with the credit condition; the reconciled measurements became the fleet distortion baseline.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

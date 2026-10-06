@@ -1,0 +1,255 @@
+[
+  {
+    "doc_id": "PAWO-132480-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Oil Filter Bypass Indicator Standard for the Retrofit Release",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-08-07",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "79",
+      "ata_4d": "79-20",
+      "ata_6d": "79-20-12",
+      "title": "Distribution — Oil Filter Housing"
+    },
+    "secondary_ata": [
+      "71-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "OST",
+        "LDL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-14",
+      "released": "2026-08-07",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed work order confirming that the bypass indicator standard could be released for shop retrofit, and establishing what the walk-around addition means for the operator's task cards.",
+    "sections": {
+      "objective": "Confirm that the mechanical bypass indicator standard could be released for shop retrofit on the Auran 7720 fleet, and establish exactly what the new walk-around item requires of the operator, since the value of the indicator depends entirely on somebody reading it and writing it down.",
+      "findings_summary": "The retrofit itself is straightforward and the shop route is the only one available, because the housing has to come off the gearbox pad. The interesting finding is about the record rather than the hardware. The indicator has no memory: once it is pushed back in, the evidence that it had tripped is gone. The inspection task was written correctly and reads the indicator before anything else is touched, but the walk-around item that the modification also introduces has no place to record a trip, and a line engineer who resets it on the ramp destroys the only evidence there is. Two operators had already asked what to do with an indicator found tripped at a transit. The second finding is that the heat shield is not procurable in the pre-modification profile once the housing changes, which matters because an engine can carry a modified housing and an unmodified spare shield in the same store.",
+      "next_steps": "Add a recording line to the walk-around item and instruct that a tripped indicator is not reset on the ramp. Publish the heat shield supersession clearly so that stores do not hold an unusable profile. Release the retrofit as planned."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7920120683140",
+        "SAL498770-46",
+        "VA570633-07"
+      ],
+      "fins": [
+        "1237EO",
+        "1EO"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "422",
+        "423"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-132480",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "AMM-S-79-20-12-200-041-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-79-1006",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "pre-analysis",
+      "indicator",
+      "standard",
+      "retrofit"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-132480-01",
+      "subject_mod": "MOD-132480",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-08-07",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-04-14",
+      "due_date": "2026-08-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 75,
+        "spent_manhours": 61
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34"
+        ],
+        "ata_2d": [
+          "79",
+          "71"
+        ],
+        "ata_4d": [
+          "79-20",
+          "71-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D7920120683140",
+            "SAL498770-46",
+            "VA570633-07"
+          ],
+          "fins": [
+            "1237EO",
+            "1EO"
+          ],
+          "drawings": [],
+          "zones": [
+            "422",
+            "423"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "unfiltered oil through the bearings after a bypass event",
+          "pop-out indicator reset without a record"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the retrofit route and its constraints",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check how a tripped indicator is recorded",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm the heat shield supersession position",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-S-79-20-12-200-041-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found by entity linking on the mount link and heat shield part numbers the task calls out."
+          },
+          "rationale": "The inspection task reads the indicator before anything is disturbed, which is right. The walk-around item introduced by the same modification has no recording line, and resetting the indicator on the ramp destroys the only evidence of a bypass event.",
+          "resolution": "Add a recording line to the walk-around item and prohibit reset on the ramp."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SLN-79-1006",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Reached from the modification to its retrofit bulletin."
+          },
+          "rationale": "The bulletin states that no on-wing embodiment is offered, which is correct, but does not tell the operator that the pre-modification heat shield profile becomes unusable at the same moment.",
+          "resolution": "Add a material note on the heat shield supersession."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed. The retrofit may be released with a recording line added to the walk-around item.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

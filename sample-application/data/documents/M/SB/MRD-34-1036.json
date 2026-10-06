@@ -1,0 +1,182 @@
+[
+  {
+    "doc_id": "MRD-34-1036",
+    "doc_type": "SB",
+    "title": "Navigation — Multi-Mode Receiver — Apply the Feed Routing to Both Variants and Load the Aligned Navigation Database",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-12-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168048"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-08-04",
+      "released": "2021-12-09",
+      "revised": null,
+      "effective": "2022-01-13"
+    },
+    "abstract": "Applies the receiver feed routing to the larger variant and loads the navigation database aligned with the current augmentation service, removing the long first-fix time reported after a power-down.",
+    "sections": {
+      "planning_reason": "The routing change removed the interference path, but operators continued to report a slow first fix after a long power-down. The receiver database as delivered predates the current augmentation service definition and forces a full almanac search, which takes up to eleven minutes on a cold aircraft. The larger variant was never covered by the first routing bulletin and carries the same delivered routing, so both are addressed here.",
+      "description": "This bulletin applies the routing change to the larger variant using the same revised mounting tray, and loads the aligned navigation database into the receiver on both variants. The interface unit identification plate is restamped with the new database part number. The receiver hardware is otherwise unchanged.",
+      "accomplishment_summary": "On the larger variant, do the routing change as described for the smaller variant: remove power, fit the revised mounting tray, route the antenna feed on the opposite side of the rack through the new grommet and keep the separation above two hundred millimetres. On both variants, connect the portable loader and load the aligned navigation database, then confirm the reported database part number. Restamp the interface unit identification plate. Do the receiver check in AMM-M-34-50-11-200-036-A and a cold start check with the receiver de-powered for thirty minutes, confirming a first fix within three minutes. Close the bay and make the records entry.",
+      "effectivity_note": "Applies to MERIDIAN-42 and MERIDIAN-46 aircraft delivered before MSN M00329. On the smaller variant, MOD-168048 or bulletin MRD-34-1022 must already be embodied, since the routing is not repeated here for that variant. The database and the routing must be present together.",
+      "material_note": "Kit contains the revised mounting tray and grommet for the larger variant only, plus the identification plate stamps. The navigation database is supplied electronically. No parts are returned."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450119360685",
+        "D3450118136339"
+      ],
+      "fins": [
+        "1038DA",
+        "3TR"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LE4PC90617C"
+      ],
+      "zones": [
+        "183",
+        "222"
+      ],
+      "figures": [
+        "FIG-34-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00329"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168155",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "MRD-34-1022",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-M-34-50-11-200-036-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-M-34-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "multi-mode receiver",
+      "navigation database",
+      "cold start",
+      "augmentation",
+      "routing"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Customer Services"
+    },
+    "type_data": {
+      "sb_number": "MRD-34-1036",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Within 24 months of the date of this Service Bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "PERFORMANCE",
+      "embodied_mod": "MOD-168155",
+      "manpower": {
+        "elapsed_time_hours": 9,
+        "manhours": 14,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K3450-1036-01",
+        "kit_available_from": "2022-02-24",
+        "parts_required": [
+          {
+            "part_number": "D3450119360685",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Identification plate stamp set"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Satellite signal simulator"
+        ]
+      },
+      "weight_change_kg": 0.3,
+      "accomplishment_steps": 9,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2021-12-09",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

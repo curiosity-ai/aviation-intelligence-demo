@@ -1,0 +1,370 @@
+[
+  {
+    "doc_id": "MOD-168012",
+    "doc_type": "MOD",
+    "title": "Thermal Derating Threshold Revision of the Generator Control Unit — Issue 1",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-02-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-12",
+      "title": "AC Generation — Generator Control Unit"
+    },
+    "secondary_ata": [
+      "24-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42"
+      ],
+      "models": [
+        "MRD-42K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00219"
+        }
+      ],
+      "excluded_msns": [
+        "M00069"
+      ],
+      "engine_types": [
+        "AUR-8400"
+      ],
+      "operators": [
+        "CKP",
+        "FRR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "M00157",
+      "production_cut_in_date": "2019-03-05",
+      "retrofit_via": [
+        "MRD-24-1041"
+      ]
+    },
+    "dates": {
+      "created": "2018-03-12",
+      "released": "2019-02-08",
+      "revised": "2019-02-08",
+      "effective": "2019-03-05"
+    },
+    "abstract": "First issue of the generator control unit thermal protection revision, raising the bay temperature threshold at which the channel is shed and adding a short confirmation window so that a transient reading no longer takes the channel off line.",
+    "sections": {
+      "reason": "Early fleet aircraft were losing an alternating current channel on the ground at hot stations, at a rate of roughly one event per aircraft per summer month, without any subsequent shop finding on the removed control unit. Investigation traced the behaviour to the bay temperature protection, which had been set on a rig thermal model and was tripping on a reading taken during the period when bay ventilation is lowest, immediately after engine shutdown with the doors open.",
+      "description": "The modification revises the protection settings held in the generator control unit configuration load. The shed threshold is raised by nine degrees, the temperature is now sampled from the averaged pair rather than from the higher of the two, and a twelve second confirmation window is introduced before the channel is shed. The relay and terminal hardware in the bay is unchanged apart from the addition of a second bonding path on the mounting rail, which uses the existing relay assembly and its fixing set. The wiring drawing is reissued to show the revised sensing pair identification at the bay terminal block. No change is made to the overheat cut-out, which remains a hardware function independent of the configuration load.",
+      "effects": "No mass change and no change to electrical load. Interchangeability is one way: a post modification unit may be fitted to a pre modification aircraft only after the configuration load has been aligned, and the reverse is not permitted. Dispatch is unaffected. The maintenance manual test task and the troubleshooting entry for the channel loss message both require reissue, and the shop repair standard for the control unit is unaffected.",
+      "embodiment_note": "Cut in at MSN M00157 and retrofitted through the associated service bulletin, which is a load and a bonding strap and can be embodied at a line station in one shift without removing the unit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2420007230862",
+        "AES247501-43"
+      ],
+      "fins": [
+        "14PC2",
+        "18GX"
+      ],
+      "drawings": [
+        "D24201265226"
+      ],
+      "software": [
+        "LE9PB857871"
+      ],
+      "zones": [
+        "663",
+        "512"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00157"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-24-1041",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-M-24-20-12-700-032-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "generator control unit",
+      "thermal protection",
+      "channel shed",
+      "configuration load",
+      "bonding"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168012,
+      "mod_class": "MINOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1351",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.2,
+      "balance_impact": "None, local addition of a bonding strap in the aft equipment bay",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "AES247501-43"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2420007230862"
+      ],
+      "fins_affected": [
+        "14PC2"
+      ],
+      "software_affected": [
+        "LE9PB857871"
+      ],
+      "estimated_manhours": 210,
+      "estimated_cost_keur": 340,
+      "lead_time_weeks": 26,
+      "production_impact": "Cut in at MSN M00157 with the standard load process, no line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-168012",
+    "doc_type": "MOD",
+    "title": "Thermal Derating Threshold Revision of the Generator Control Unit — Issue 1",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-31",
+      "reason": "Recorded as a prerequisite of the second issue standard, whose configuration reads the sensing pair identification introduced here, and marked superseded by it.",
+      "raised_by_pawo": "PAWO-168118-01",
+      "raised_by_finding": "F01",
+      "finding_type": "PREREQUISITE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-12",
+      "title": "AC Generation — Generator Control Unit"
+    },
+    "secondary_ata": [
+      "24-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42"
+      ],
+      "models": [
+        "MRD-42K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00219"
+        }
+      ],
+      "excluded_msns": [
+        "M00069"
+      ],
+      "engine_types": [
+        "AUR-8400"
+      ],
+      "operators": [
+        "CKP",
+        "FRR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "M00157",
+      "production_cut_in_date": "2019-03-05",
+      "retrofit_via": [
+        "MRD-24-1041"
+      ]
+    },
+    "dates": {
+      "created": "2018-03-12",
+      "released": "2019-02-08",
+      "revised": "2026-07-31",
+      "effective": "2026-08-07"
+    },
+    "abstract": "First issue of the generator control unit thermal protection revision, raising the bay temperature threshold at which the channel is shed and adding a short confirmation window so that a transient reading no longer takes the channel off line.",
+    "sections": {
+      "reason": "Early fleet aircraft were losing an alternating current channel on the ground at hot stations, at a rate of roughly one event per aircraft per summer month, without any subsequent shop finding on the removed control unit. Investigation traced the behaviour to the bay temperature protection, which had been set on a rig thermal model and was tripping on a reading taken during the period when bay ventilation is lowest, immediately after engine shutdown with the doors open.",
+      "description": "The modification revises the protection settings held in the generator control unit configuration load. The shed threshold is raised by nine degrees, the temperature is now sampled from the averaged pair rather than from the higher of the two, and a twelve second confirmation window is introduced before the channel is shed. The relay and terminal hardware in the bay is unchanged apart from the addition of a second bonding path on the mounting rail, which uses the existing relay assembly and its fixing set. The wiring drawing is reissued to show the revised sensing pair identification at the bay terminal block. No change is made to the overheat cut-out, which remains a hardware function independent of the configuration load.",
+      "effects": "No mass change and no change to electrical load. Interchangeability is one way: a post modification unit may be fitted to a pre modification aircraft only after the configuration load has been aligned, and the reverse is not permitted. Dispatch is unaffected. The maintenance manual test task and the troubleshooting entry for the channel loss message both require reissue, and the shop repair standard for the control unit is unaffected. The revised sensing pair identification at the bay terminal block introduced by this modification is read by the second issue configuration of MOD-168118 and is not re-established by it. That makes this modification a prerequisite of the second issue and not merely the version before it: an aircraft that never embodied it will load the second issue configuration and find the averaged pair mapped to the wrong two probes.",
+      "embodiment_note": "Cut in at MSN M00157 and retrofitted through the associated service bulletin, which is a load and a bonding strap and can be embodied at a line station in one shift without removing the unit. Superseded by the second issue standard MOD-168118 for new embodiment, but retained as a live prerequisite: the retrofit bulletin of the second issue carries this modification as a post-modification applicability condition, and an aircraft outside that condition must take the identification work first. The bulletin content is unchanged by this issue."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2420007230862",
+        "AES247501-43"
+      ],
+      "fins": [
+        "14PC2",
+        "18GX"
+      ],
+      "drawings": [
+        "D24201265226"
+      ],
+      "software": [
+        "LE9PB857871"
+      ],
+      "zones": [
+        "663",
+        "512"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00157"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-24-1041",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-168118",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "MOD-168118",
+        "doc_type": "MOD",
+        "relation": "PREREQUISITE_OF"
+      },
+      {
+        "doc_id": "AMM-M-24-20-12-700-032-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "generator control unit",
+      "thermal protection",
+      "sensing pair",
+      "prerequisite",
+      "configuration load"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168012,
+      "mod_class": "MINOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1351",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.2,
+      "balance_impact": "None, local addition of a bonding strap in the aft equipment bay",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "AES247501-43"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2420007230862"
+      ],
+      "fins_affected": [
+        "14PC2"
+      ],
+      "software_affected": [
+        "LE9PB857871"
+      ],
+      "estimated_manhours": 210,
+      "estimated_cost_keur": 340,
+      "lead_time_weeks": 26,
+      "production_impact": "Cut in at MSN M00157 with the standard load process, no line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

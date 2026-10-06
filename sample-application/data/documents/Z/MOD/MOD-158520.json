@@ -1,0 +1,194 @@
+[
+  {
+    "doc_id": "MOD-158520",
+    "doc_type": "MOD",
+    "title": "Auxiliary Power Unit Electronic Control Box Thermal Repackaging and Load Compressor Schedule Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50",
+      "49-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z08554",
+          "to": "Z12264"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SOL",
+        "ACL",
+        "PAL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-152210"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-04-20",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposal to repackage the auxiliary power unit control box away from the compartment hot wall and to reschedule the load compressor surge margin, so that the unit stops protecting itself out of service on hot turnarounds.",
+    "sections": {
+      "reason": "Auto-shutdowns on the third and fourth sector of a hot day are now the single largest source of auxiliary power unit complaints, with thirty-one events reported by one operator alone in twelve months and a further ninety across the tracked fleet. The unit is not failing: it is shutting down on an internal over-temperature protection whose threshold was set for a control box mounted where the compartment is coolest, and the box has since been moved twice for accessibility. Two unit exchanges on the same aircraft produced no improvement, which is what finally directed attention at the installation rather than the machine. The surge margin schedule compounds the problem because it commands more bleed than the compartment cooling flow can support at high ambient temperature.",
+      "description": "The control box is repackaged onto a standoff bracket that moves it one hundred and sixty millimetres away from the compartment hot wall and gives it a dedicated cooling inlet. The bracket D4960115159645 and the tube assembly D4960118355783 are new, and the heat shield ESC601932-18 is extended to cover the standoff footprint. Anchor nuts AGS522879K5 secure the bracket into the existing firewall panel hard points introduced by the earlier installation change. The firewall panel at FIN 47PA and the tube assembly at FIN 5366PA are disturbed, and the shroud at FIN 9992PB is replaced. The application load LA4N61F1A35 and the parameter load LG7N7AE7E40 are both re-issued to carry the revised surge margin schedule and the new protection threshold. Work is in zones 396, 391 and 321 with the compartment doors open. The revised arrangement is on drawing D49601121167.",
+      "effects": "Mass increase of 2.9 kilograms at the extreme aft of the aircraft, with a centre of gravity shift of 0.05 per cent MAC. Electrical load is unchanged. Not interchangeable, because the standoff bracket footprint is drilled into the firewall panel at embodiment and the earlier box position leaves the new cooling inlet unsupplied. Auxiliary power unit availability on a hot turnaround is expected to return to fleet average, and the cooling-down period before a restart disappears. The control box removal and test tasks, the fault isolation procedure and the parts figure all require re-issue, and the crew-facing description of the auxiliary power unit ground operating envelope changes because the published maximum ambient for continuous bleed extraction moves.",
+      "embodiment_note": "Production cut-in and retrofit are both proposed. Retrofit needs the tail cone open and the compartment doors removed, which is a base maintenance activity, and the software loads must follow the hardware in the same visit. No kit is defined yet.",
+      "open_points": "Pre-analysis must establish whether the firewall panel introduced by the earlier installation change has the structural allowance for the standoff footprint, whether the revised surge margin schedule invalidates the published load compressor performance data, what the new protection threshold does to the existing dispatch condition for auxiliary power unit bleed, and whether the software loads can be released before the hardware is certified so that operators get partial relief this summer."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4960115159645",
+        "D4960118355783",
+        "ESC601932-18",
+        "AGS522879K5"
+      ],
+      "fins": [
+        "47PA",
+        "5366PA",
+        "9992PB"
+      ],
+      "drawings": [
+        "D49601121167"
+      ],
+      "software": [
+        "LA4N61F1A35",
+        "LG7N7AE7E40"
+      ],
+      "zones": [
+        "396",
+        "391",
+        "321"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "IO-Z-260342",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-152210",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "apu control box",
+      "thermal repackaging",
+      "surge margin schedule",
+      "auto shutdown",
+      "hot turnaround"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Powerplant Systems Design"
+    },
+    "type_data": {
+      "mod_number": 158520,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1181",
+          "CS 25.1309",
+          "CS 25.1461"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 2.9,
+      "balance_impact": "Extreme aft installation, CG shift 0.05 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D4960115159645",
+        "D4960118355783",
+        "AGS522879K5"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "ESC601932-18"
+      ],
+      "fins_affected": [
+        "47PA",
+        "5366PA",
+        "9992PB"
+      ],
+      "software_affected": [
+        "LA4N61F1A35",
+        "LG7N7AE7E40"
+      ],
+      "estimated_manhours": 480,
+      "estimated_cost_keur": 2150,
+      "lead_time_weeks": 54,
+      "production_impact": "Cut-in proposed subject to the firewall panel structural allowance",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

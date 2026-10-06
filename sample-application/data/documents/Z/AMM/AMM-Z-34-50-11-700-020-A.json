@@ -1,0 +1,358 @@
+[
+  {
+    "doc_id": "AMM-Z-34-50-11-700-020-A",
+    "doc_type": "AMM",
+    "title": "Operational Test of the Multi-Mode Receiver and Surveillance Broadcast Output",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1991-11-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-06-28",
+      "released": "1991-11-21",
+      "revised": null,
+      "effective": "1991-12-12"
+    },
+    "abstract": "Operational test of the multi-mode receiver, verifying the software part number, the integrity figure of merit publication rate, the landing system function and every field of the transmitted surveillance message.",
+    "sections": {
+      "purpose": "This task verifies that the multi-mode receiver is correctly configured, that it publishes the integrity figure of merit at the required rate, and that the transmitted surveillance broadcast message matches the aircraft configuration data sheet.",
+      "job_setup_note": "The test needs a clear view of the sky for the receiver to acquire, so it cannot be done inside a hangar. The ramp surveillance test set must be within the calibration period and its own configuration must be checked before use. The aircraft configuration data sheet is issued per registration and carries the antenna offset; have the current issue available before you start. The acceptance criteria in this task are written against the display format fitted to the aircraft at the time of the receiver installation.",
+      "procedure": "1. Position the aircraft outside with a clear view of the sky and apply electrical power. 2. Get access to the receiver in zone 263 and confirm the connector locking. 3. Select the maintenance page and record the software part number reported by the receiver. CAUTION: THE RECEIVER WILL RUN A FACTORY LOAD WITHOUT ANY FAULT INDICATION, BUT IT WILL NOT TRANSMIT A VALID SURVEILLANCE MESSAGE. CONFIRM THE PART NUMBER AGAINST THE CONFIGURATION RECORD. 4. Wait for the receiver to acquire and confirm the position solution. 5. Confirm that the integrity figure of merit is published at the required rate on the maintenance page. 6. Connect the ramp surveillance test set and confirm its calibration date. WARNING: THE TEST SET RADIATES ON THE SURVEILLANCE FREQUENCY. INFORM AIR TRAFFIC CONTROL BEFORE YOU TRANSMIT AND USE THE LOWEST POWER SETTING. 7. Verify every field of the transmitted message against the aircraft configuration data sheet, including the identification, the emitter category and the length and width codes. 8. Verify the antenna offset entry against the measured value at the tray of FIN 172TR7. 9. Do the landing system function check on the receiver at the display unit D3450125988160. 10. Check the transceiver at FIN 4DA1 for correct response. 11. Confirm the receiver fault memory is empty and remove the test set.",
+      "close_out": "Remove electrical power and disconnect the test set. Inform air traffic control that transmission has stopped. Record the software part number, the integrity publication rate and every verified message field against the aircraft. Have the configuration entries independently checked and signed before release to service."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450125988160",
+        "D3450128437161"
+      ],
+      "fins": [
+        "172TR7",
+        "4DA1",
+        "32DA"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LF2NDF3D474",
+        "LF5N0045592"
+      ],
+      "zones": [
+        "262",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-34-1211",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-155126",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "multi-mode receiver",
+      "integrity figure of merit",
+      "surveillance message",
+      "antenna offset",
+      "ramp test set"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "34-50-11-700-020-A",
+      "task_type": "TEST",
+      "effectivity_note": "Aircraft post MOD-155126",
+      "manhours": 5.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "262",
+          "263"
+        ],
+        "access_panels": [
+          "262CR",
+          "263BL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not do this test inside a hangar; the receiver will not acquire.",
+          "Inform air traffic control before you transmit with the test set.",
+          "Use the lowest test set power setting that gives a valid reply.",
+          "Have the configuration entries independently checked."
+        ],
+        "tooling": [
+          {
+            "reference": "98D34501-071",
+            "description": "Ramp surveillance test set"
+          },
+          {
+            "reference": "98D34501-083",
+            "description": "Avionics extraction tool set"
+          },
+          {
+            "reference": "98D34501-090",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner",
+          "Cable ties, flame retardant"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-Z-24-30-11-000-019-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-Z-34-50-11-700-020-A",
+    "doc_type": "AMM",
+    "title": "Operational Test of the Multi-Mode Receiver and Surveillance Broadcast Output",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-07",
+      "reason": "Acceptance criteria are given for both display formats and this revision is released in the same batch as the bulletin that calls the task up as its closing check.",
+      "raised_by_pawo": "PAWO-157011-02",
+      "raised_by_finding": "F04",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-06-28",
+      "released": "1991-11-21",
+      "revised": "2026-08-07",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Operational test of the multi-mode receiver, verifying the software part number, the integrity figure of merit publication rate, the landing system function and every field of the transmitted surveillance message, against the display format fitted.",
+    "sections": {
+      "purpose": "This task verifies that the multi-mode receiver is correctly configured, that it publishes the integrity figure of merit at the required rate, and that the transmitted surveillance broadcast message matches the aircraft configuration data sheet.",
+      "job_setup_note": "The test needs a clear view of the sky for the receiver to acquire, so it cannot be done inside a hangar. The ramp surveillance test set must be within the calibration period and its own configuration must be checked before use. The aircraft configuration data sheet is issued per registration and carries the antenna offset; have the current issue available before you start. Read the display format from the aircraft configuration record before you begin: the acceptance criteria for the integrity publication rate and for the containment display differ between the two formats, and the earlier criteria applied to a converted aircraft fail a serviceable installation. This task is the closing check of the conversion bulletin, so this revision is released in the same batch as the bulletin re-issue; an operator holding one without the other cannot close the work.",
+      "procedure": "1. Position the aircraft outside with a clear view of the sky and apply electrical power. 2. Get access to the receiver in zone 263 and confirm the connector locking. 3. Select the maintenance page and record the software part number reported by the receiver. CAUTION: THE RECEIVER WILL RUN A FACTORY LOAD WITHOUT ANY FAULT INDICATION, BUT IT WILL NOT TRANSMIT A VALID SURVEILLANCE MESSAGE. CONFIRM THE PART NUMBER AGAINST THE CONFIGURATION RECORD. 4. Wait for the receiver to acquire and confirm the position solution. 5. Confirm that the integrity figure of merit is published at the required rate on the maintenance page. 6. Connect the ramp surveillance test set and confirm its calibration date. WARNING: THE TEST SET RADIATES ON THE SURVEILLANCE FREQUENCY. INFORM AIR TRAFFIC CONTROL BEFORE YOU TRANSMIT AND USE THE LOWEST POWER SETTING. 7. Verify every field of the transmitted message against the aircraft configuration data sheet, including the identification, the emitter category and the length and width codes. 8. Verify the antenna offset entry against the measured value at the tray of FIN 172TR7. 9. Do the landing system function check on the receiver at the display unit D3450125988160. 10. Check the transceiver at FIN 4DA1 for correct response. 11. Confirm the receiver fault memory is empty and remove the test set.",
+      "close_out": "Remove electrical power and disconnect the test set. Inform air traffic control that transmission has stopped. Record the software part number, the integrity publication rate and every verified message field against the aircraft. Have the configuration entries independently checked and signed before release to service."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450125988160",
+        "D3450128437161"
+      ],
+      "fins": [
+        "172TR7",
+        "4DA1",
+        "32DA"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LF2NDF3D474",
+        "LF5N0045592"
+      ],
+      "zones": [
+        "262",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-34-1211",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-155126",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "multi-mode receiver",
+      "display format",
+      "integrity figure of merit",
+      "surveillance message",
+      "closing check"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "34-50-11-700-020-A",
+      "task_type": "TEST",
+      "effectivity_note": "Aircraft post MOD-155126; acceptance criteria depend on the display format fitted",
+      "manhours": 5.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "262",
+          "263"
+        ],
+        "access_panels": [
+          "262CR",
+          "263BL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not do this test inside a hangar; the receiver will not acquire.",
+          "Inform air traffic control before you transmit with the test set.",
+          "Use the lowest test set power setting that gives a valid reply.",
+          "Have the configuration entries independently checked."
+        ],
+        "tooling": [
+          {
+            "reference": "98D34501-071",
+            "description": "Ramp surveillance test set"
+          },
+          {
+            "reference": "98D34501-083",
+            "description": "Avionics extraction tool set"
+          },
+          {
+            "reference": "98D34501-090",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner",
+          "Cable ties, flame retardant"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-Z-24-30-11-000-019-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

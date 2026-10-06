@@ -1,0 +1,187 @@
+[
+  {
+    "doc_id": "MOD-146790",
+    "doc_type": "MOD",
+    "title": "Revised Caution Inhibit Logic and Circuit Card Replacement in the Flight Warning Computer",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2019-02-27",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-50-12",
+      "31-60-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00152"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "T00155",
+      "production_cut_in_date": "2019-01-29",
+      "retrofit_via": [
+        "TTN-31-1031"
+      ]
+    },
+    "dates": {
+      "created": "2016-09-22",
+      "released": "2018-05-18",
+      "revised": "2019-02-27",
+      "effective": "2019-04-08"
+    },
+    "abstract": "Replaces the input processing card of the flight warning computer and re-declares the take-off phase inhibit table, removing a family of nuisance cautions that crews were seeing during the acceleration segment.",
+    "sections": {
+      "reason": "Crews reported cautions appearing briefly during the take-off acceleration segment and clearing without action, most often relating to bleed and hydraulic parameters that are legitimately transient at that point in the flight. Two hundred and six crew reports were collected across the fleet in three years. The behaviour is not a system fault: the inhibit table was declared against a flight phase boundary derived from a single air-ground signal, and on a long acceleration that boundary is reached late. Several operators had raised it as a distraction at the highest workload point of the flight, and one authority had asked for a position.",
+      "description": "The input processing card D3150116156104 of the flight warning computer is replaced by a variant with a faster sampling interval and a longer confirmation window, and the display driver assembly D3150111745067 is replaced to match the new card interface. The mounting tray D3150111234640 is renewed because the new card is slightly longer. The take-off inhibit table is re-declared so that the phase boundary is derived from a combination of air-ground state, computed airspeed and thrust lever position rather than from the air-ground signal alone, and the confirmation window for the affected parameter set is extended. The operational software load LC2RA4D7C66 carries the revised table. Wiring at FIN 60FW is re-terminated at the rack connector. Work is from the flight deck rack in zone 292. The aural warning generation path is not changed and the master caution logic is untouched.",
+      "effects": "No measurable mass change. Electrical load is unchanged. The revised card is not interchangeable with the original because the connector keying differs, which is deliberate: the old card must not be fitted to a computer carrying the new inhibit table. Dispatch is unchanged and the minimum equipment list entry for a single flight warning computer inoperative is unaffected. Flight crew documentation for the take-off phase caution set requires update, as do the troubleshooting procedure and the illustrated parts content for the computer rack.",
+      "embodiment_note": "Production cut-in at MSN T00155 in January 2019. Retrofit through the associated service bulletin, a four hour task on the line with the flight deck rack accessible. The software load is delivered with the kit and is applied after the card change, not before."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150111234640",
+        "D3150111745067",
+        "D3150116156104"
+      ],
+      "fins": [
+        "60FW"
+      ],
+      "drawings": [
+        "D31501271700"
+      ],
+      "software": [
+        "LC2RA4D7C66"
+      ],
+      "zones": [
+        "292"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00155"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-31-1031",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-149310",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "AMM-T-31-50-11-700-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-T-DSC-31-50-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "flight warning computer",
+      "nuisance caution",
+      "inhibit table",
+      "take-off phase",
+      "input card"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 146790,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1322",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0.0,
+      "balance_impact": "No mass change",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3150111234640",
+        "D3150111745067",
+        "D3150116156104"
+      ],
+      "fins_affected": [
+        "60FW"
+      ],
+      "software_affected": [
+        "LC2RA4D7C66"
+      ],
+      "estimated_manhours": 320,
+      "estimated_cost_keur": 1650,
+      "lead_time_weeks": 62,
+      "production_impact": "Cut-in at MSN T00155, no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

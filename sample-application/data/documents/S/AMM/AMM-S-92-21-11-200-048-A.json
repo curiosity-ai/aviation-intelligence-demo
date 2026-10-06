@@ -1,0 +1,179 @@
+[
+  {
+    "doc_id": "AMM-S-92-21-11-200-048-A",
+    "doc_type": "AMM",
+    "title": "Avionics Bay Harness — Routing and Segregation Check at the Rack Feedthrough",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-09-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-11",
+      "title": "Forward Fuselage Wiring — Avionics Bay Harnesses"
+    },
+    "secondary_ata": [
+      "20-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-02-13",
+      "released": "2023-09-08",
+      "revised": null,
+      "effective": "2023-09-27"
+    },
+    "abstract": "Check of the avionics bay harness routing at the rack feedthrough against the wiring sheet, covering aperture separation, clip positions and the point at which the harness screen is terminated.",
+    "sections": {
+      "purpose": "This task confirms that the avionics bay harnesses are routed and supported as the wiring sheet requires, that the sensitive and power routes are separated at the feedthrough, and that the screens terminate where they should.",
+      "job_setup_note": "This is a check against the wiring sheet, not against what looks tidy. Have the applicable sheet open while you work, because a route that has been re-clipped by a previous crew can look neat and still be wrong. Photograph the feedthrough before touching anything; it is the only record of the as-found state.",
+      "procedure": "1. Put the aircraft on ground power and lift the avionics bay floor panels in zones 162, 165 and 166. 2. Photograph the feedthrough from both sides before anything is disturbed. 3. Confirm from the aircraft record whether the segregated two-aperture feedthrough is fitted. 4. Where it is fitted, confirm that the sensitive route runs in the upper aperture and the power feed in the lower, and that the metallic divider is present and undamaged. 5. Where it is not fitted, record that the single-aperture build standard is present and note the separation achieved. CAUTION: DO NOT RE-ROUTE A HARNESS TO IMPROVE SEPARATION ON A SINGLE-APERTURE FEEDTHROUGH. THE HARNESS LENGTH DOES NOT ALLOW IT AND THE STRAIN WILL APPEAR AT THE CONNECTOR. 6. Check the edging grommet EN491538-6A in each aperture for splits and for displacement. 7. Follow the harness D9221112074044 along its run and confirm that a cushioned loop clamp AGS958367K4 is present at each of the six support positions given on the sheet. 8. Confirm that no clamp is closer than the minimum distance to a connector backshell. 9. Confirm that the screen of the cable assembly D9221113760580 terminates at the aperture and not further downstream. 10. Where the ground stud kit QUD240612-74 is fitted on the divider, measure the bonding resistance at the stud. 11. Check the bus bar 8127VC and the harness 9000VC9 for chafe where they pass the floor beam. 12. Confirm that nothing has been added to the run that is not on the sheet.",
+      "close_out": "Record the feedthrough standard found, the six clip positions, the screen termination point and the bonding resistance. Attach the before photographs to the work pack. Where the run does not match the sheet, raise a defect rather than correcting it on the spot: the sheet may be the thing that is wrong."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221112074044",
+        "D9221113760580",
+        "QUD240612-74",
+        "EN491538-6A",
+        "AGS958367K4"
+      ],
+      "fins": [
+        "8127VC",
+        "9000VC9"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "162",
+        "165",
+        "166"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "WDM-S-92-21-11",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-42-10-12-000-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "harness routing",
+      "feedthrough",
+      "segregation",
+      "screen termination",
+      "clip position"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "92-21-11-200-048-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft; steps 4 and 10 apply only where the segregated feedthrough is fitted",
+      "manhours": 3.0,
+      "personnel": 1,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "162",
+          "165",
+          "166"
+        ],
+        "access_panels": [
+          "162BL",
+          "165CL",
+          "166BR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not disturb a live harness.",
+          "Use a low-voltage inspection lamp under the floor."
+        ],
+        "tooling": [
+          {
+            "reference": "98D92211-060",
+            "description": "Bonding meter, four-wire"
+          },
+          {
+            "reference": "98D92211-064",
+            "description": "Inspection lamp, low voltage"
+          },
+          {
+            "reference": "98D92211-067",
+            "description": "Camera, maintenance record"
+          }
+        ],
+        "consumables": [
+          "Cable tie, self-locking"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-42-10-12-000-043-A"
+      ],
+      "steps": 12,
+      "warnings": 0,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

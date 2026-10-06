@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "MOD-169512",
+    "doc_type": "MOD",
+    "title": "Pedestal Outlet Reprofile for Throttle Actuation Card Ventilation",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-12-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-12",
+      "title": "Auto Throttle — Throttle Actuation"
+    },
+    "secondary_ata": [
+      "22-30",
+      "25-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168264"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-12-02",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Reprofiles the pedestal ventilation outlet so that forward galley loading can no longer block it, addressing the installation cause that the earlier circuit card change worked around rather than removed.",
+    "sections": {
+      "reason": "The wider thermal margin introduced by the card change brought removals back to prediction, but the thermal survey behind it showed the pedestal outlet obstructed by galley loading on most operators, which leaves no margin for the next generation of card and constrains any future function added to the pedestal. Customer services also report cabin crew stowing service items directly against the outlet, which no placard has stopped in four years.",
+      "description": "The outlet grille at the aft face of the pedestal is replaced by a raised profile that stands forty millimetres proud of the monument face and vents upward, so that an item placed against the monument cannot seal it. The grommet at the harness entry introduced by the card change is retained. The circuit card, the transceiver and the interface unit are all unchanged; this modification is a cabin interface change carried in the auto throttle chapter because the function it protects lives there.",
+      "effects": "Mass increase of zero point nine kilograms. No electrical load change. Interchangeable. Measured card temperature falls by eleven degrees in the blocked case, restoring the margin the card change bought and adding to it. No crew procedure change, but the cabin crew stowage briefing changes and the galley loading diagram is reissued by the cabin definition owner.",
+      "embodiment_note": "Design launched. Cut-in is planned at the next cabin standard change so that the galley loading diagram and the outlet change go together; retrofit is a two hour task at a line station.",
+      "open_points": "Pre-analysis is closed. The item carried into design is whether the raised profile intrudes on the certified evacuation path clearance at the forward galley, which the cabin safety office is assessing."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2230121548877",
+        "AGS433103-4C",
+        "AES934842K8"
+      ],
+      "fins": [
+        "363CC",
+        "41CE4"
+      ],
+      "drawings": [
+        "D22301213347"
+      ],
+      "software": [],
+      "zones": [
+        "226",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168264",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "MOD-168264",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "pedestal outlet",
+      "ventilation",
+      "galley loading",
+      "throttle actuation",
+      "thermal margin"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 169512,
+      "mod_class": "MINOR",
+      "change_category": "CABIN",
+      "trigger": "PRODUCTION_IMPROVEMENT",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.813",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.9,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "AES934842K8"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "AGS433103-4C"
+      ],
+      "fins_affected": [
+        "363CC"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 340,
+      "estimated_cost_keur": 560,
+      "lead_time_weeks": 34,
+      "production_impact": "Cut-in aligned with the next cabin standard change",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

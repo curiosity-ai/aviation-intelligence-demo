@@ -1,0 +1,327 @@
+[
+  {
+    "doc_id": "WDM-C-23-70-01",
+    "doc_type": "WDM",
+    "title": "Datalink Router and Satellite Data Unit — Interconnection Schematic",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-04-06",
+      "reason": "Original issue of the datalink router interconnection schematic.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2015-08-12",
+      "released": "2016-04-06",
+      "revised": "2016-04-06",
+      "effective": "2016-04-27"
+    },
+    "abstract": "Interconnection schematic for the datalink router, its data concentrator and the two radio sets, showing the position source path used by the surveillance function.",
+    "sections": {
+      "purpose": "To show the interconnection between the datalink router, the data concentrator and the two radio sets, and the path by which the surveillance function receives position.",
+      "sheet_note": "The schematic is drawn as a functional interconnection rather than as a physical harness. The router is served by one data concentrator at the outboard shelf position. The position source path shown as a dashed line on sheet 2 is the one the surveillance function uses, and it is independent of the path used by the flight management computer; that independence is a certification requirement and must not be defeated during a repair.",
+      "routing_note": "The router feeds run from the lower rack position at zone 165 to the overhead panel at zone 211 through the forward pressure bulkhead penetration. There is no coaxial run aft of the shelf on this installation."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221002439073",
+        "D2370118700860",
+        "D2370006240541",
+        "VED805230-21"
+      ],
+      "fins": [
+        "218RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211"
+      ],
+      "figures": [
+        "FIG-23-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-23-70-11-400-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-23-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "data concentrator",
+      "position source",
+      "interconnection",
+      "certification independence"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "sheet_number": "23-70-11",
+      "sheet_title": "DATALINK ROUTER AND SATELLITE DATA UNIT INTERCONNECTION",
+      "diagram_type": "SCHEMATIC",
+      "harnesses": [
+        "1650W",
+        "2110W"
+      ],
+      "connectors": [
+        {
+          "reference": "1651VC",
+          "part_number": "D9221002439073",
+          "location_zone": "165",
+          "contacts": 37
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "218RN",
+          "description": "RACK, ATC DATALINK ROUTER, LH",
+          "zone": "165"
+        },
+        {
+          "fin": "7RC",
+          "description": "DATA CONCENTRATOR, SATCOM DATA UNIT, FWD",
+          "zone": "211"
+        }
+      ],
+      "wire_count": 48,
+      "wire_gauge_range": "AWG 24 to AWG 20",
+      "routes": [
+        "Zone 165 → Zone 211 via the forward pressure bulkhead penetration"
+      ],
+      "related_sheets": [
+        "WDM-C-92-21-31"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "WDM-C-23-70-01",
+    "doc_type": "WDM",
+    "title": "Datalink Router and Satellite Data Unit — Interconnection Schematic",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-02-03",
+      "reason": "Schematic re-drawn with the second concentrator position and the satellite data unit antenna feed, which no aircraft at the upgraded standard could be read against before.",
+      "raised_by_pawo": "PAWO-111225-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2015-08-12",
+      "released": "2016-04-06",
+      "revised": "2026-02-03",
+      "effective": "2026-02-24"
+    },
+    "abstract": "Interconnection schematic for the datalink router, its data concentrators and the satellite data unit, showing the antenna feeds and the position source path used by the surveillance function.",
+    "sections": {
+      "purpose": "To show the interconnection between the datalink router, the data concentrators, the satellite data unit and the two radio sets, and the path by which the surveillance function receives position.",
+      "sheet_note": "The schematic is drawn as a functional interconnection rather than as a physical harness, because the same functional path is realised differently at the two released router standards. At the first standard there is one data concentrator and no satellite data unit; at the second there are two concentrators and the satellite data unit is present with its own antenna feed. Until this issue only the first arrangement was drawn, so an upgraded aircraft could not be read against this sheet at all. The position source path shown as a dashed line on sheet 2 is the one the surveillance function uses, and it is independent of the path used by the flight management computer; that independence is a certification requirement and must not be defeated during a repair.",
+      "routing_note": "The router feeds run from the lower rack position at zone 165 to the overhead panel at zone 211 through the forward pressure bulkhead penetration. The satellite antenna feed runs aft from the shelf to the aft equipment position at zone 282 along the upper cable route, and is the only coaxial run on that route. The antenna feed must not share a clamp with any power feeder."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221002439073",
+        "D2370118700860",
+        "D2370006240541",
+        "VED805230-21",
+        "ELL642868-87"
+      ],
+      "fins": [
+        "218RN",
+        "16RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211",
+        "282"
+      ],
+      "figures": [
+        "FIG-23-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-23-70-11-400-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-23-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111225",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "satellite data unit",
+      "antenna feed",
+      "position source",
+      "interconnection"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "sheet_number": "23-70-11",
+      "sheet_title": "DATALINK ROUTER AND SATELLITE DATA UNIT INTERCONNECTION",
+      "diagram_type": "SCHEMATIC",
+      "harnesses": [
+        "1650W",
+        "2110W",
+        "2820W"
+      ],
+      "connectors": [
+        {
+          "reference": "1651VC",
+          "part_number": "D9221002439073",
+          "location_zone": "165",
+          "contacts": 37
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "218RN",
+          "description": "RACK, ATC DATALINK ROUTER, LH",
+          "zone": "165"
+        },
+        {
+          "fin": "7RC",
+          "description": "DATA CONCENTRATOR, SATCOM DATA UNIT, FWD",
+          "zone": "211"
+        },
+        {
+          "fin": "16RN",
+          "description": "ANTENNA, SATCOM DATA UNIT, AFT",
+          "zone": "282"
+        }
+      ],
+      "wire_count": 72,
+      "wire_gauge_range": "AWG 24 to AWG 20",
+      "routes": [
+        "Zone 165 → Zone 211 via the forward pressure bulkhead penetration",
+        "Zone 165 → Zone 282 along the upper cable route for the satellite antenna feed"
+      ],
+      "related_sheets": [
+        "WDM-C-92-21-31"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

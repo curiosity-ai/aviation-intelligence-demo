@@ -1,0 +1,148 @@
+[
+  {
+    "doc_id": "IO-C-260233",
+    "doc_type": "IO",
+    "title": "Repeated Bleed Air Caution Messages in the Climb With No Fault Found on the Ground",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "OPEN",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-20",
+      "ata_6d": "36-20-11",
+      "title": "Indicating — Bleed Monitoring Computer"
+    },
+    "secondary_ata": [
+      "36-10",
+      "21-60"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00205",
+          "to": "C00612"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-24",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Operator request about a bleed air caution that appears in the climb on warm days, clears itself in the cruise and cannot be reproduced on the ground, generating crew reports and unnecessary component changes across a fleet of twenty-eight aircraft.",
+    "sections": {
+      "request": "On warm days, and almost always between about fifteen and twenty-two thousand feet in the climb, we get a bleed caution on the left side. The crew runs the drill, the message clears itself before top of climb about four times in five, and the aircraft is completely normal for the rest of the day. On the ground nothing is found. Our engineers have changed valves, changed sensors, re-torqued clamps and swapped the computer, and the message comes back on the same aeroplane a week later. The crews have stopped taking it seriously, which is the part that worries us most, because one day it will be real. We are also carrying an unnecessary flight-deck workload at the busiest part of the flight. We would like the threshold looked at rather than more parts thrown at it, because the pattern across twenty-eight aircraft is far too consistent to be a hardware defect.",
+      "background": "We opened a technical query on this eighteen months ago and were given a trouble shooting procedure that ends by replacing the pressure sensor. We have replaced eleven sensors under that procedure and eight of them tested serviceable. Our maintenance control now defers the message on sight unless it stays on in the cruise. Two of our aircraft are on a long over-water sector where a spurious bleed caution has real consequences for the crew's planning, and that is where the pressure to sort this out is coming from.",
+      "expected_outcome": "A change that stops the message appearing when nothing is wrong, without making the system slower to report a genuine duct leak. We would prefer a parameter change we can load at the gate over anything that needs the aircraft out of service."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [
+        "4PU9",
+        "883PU"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "531"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00273",
+        "C00544"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111946",
+        "doc_type": "MOD",
+        "relation": "CREATED"
+      }
+    ],
+    "keywords": [
+      "bleed caution",
+      "climb",
+      "no fault found",
+      "threshold",
+      "sensor replacement"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Customer Support"
+    },
+    "type_data": {
+      "io_number": "IO-C-260233",
+      "raised_by": {
+        "requester_type": "OPERATOR",
+        "operator_code": "MSL",
+        "contact_role": "Maintenance Control Manager",
+        "oem_focal_department": "EVAA",
+        "oem_focal_site": "Valmont"
+      },
+      "request_category": "SYSTEM",
+      "priority": "HIGH",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {
+        "aircraft_count": 28,
+        "msns": [
+          "C00273",
+          "C00544"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13"
+        ]
+      },
+      "business_justification": "Eleven sensor replacements in eighteen months of which eight were serviceable, a normalised deviation risk in the flight compartment, and a caution that appears on roughly one climb in nine on warm days across a fleet of twenty-eight aircraft.",
+      "commercial": {
+        "funding": "WARRANTY",
+        "budget_keur": 320,
+        "contract_reference": "CSA-2024-MSL-0142"
+      },
+      "target_dates": {
+        "requested_response": "2026-05-29",
+        "requested_embodiment_start": "2026-11-01"
+      },
+      "created_mod": "MOD-111946",
+      "closure_note": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

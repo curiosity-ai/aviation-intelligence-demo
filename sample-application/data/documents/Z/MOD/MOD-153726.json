@@ -1,0 +1,190 @@
+[
+  {
+    "doc_id": "MOD-153726",
+    "doc_type": "MOD",
+    "title": "Pre-Cooler Outlet Duct and Overheat Sensor Relocation on the Bleed Air Distribution Line",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-04-14",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "36-10-12",
+      "54-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z02497",
+          "to": "Z09175"
+        }
+      ],
+      "excluded_msns": [
+        "Z07304"
+      ],
+      "engine_types": [
+        "VDK-56B",
+        "VNT-2500A"
+      ],
+      "operators": [
+        "DNR",
+        "MTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "Z09175",
+      "production_cut_in_date": "2019-11-12",
+      "retrofit_via": [
+        "ZPH-36-1009"
+      ]
+    },
+    "dates": {
+      "created": "2018-05-30",
+      "released": "2019-08-27",
+      "revised": "2021-04-14",
+      "effective": "2021-05-05"
+    },
+    "abstract": "Relocation of the bleed overheat sensor and a change of the pre-cooler outlet duct, after nuisance bleed leak warnings during climb were traced to radiant heating of the sensor rather than to any real duct leak.",
+    "sections": {
+      "reason": "Nuisance bleed leak warnings during the climb accounted for one hundred and thirty in-flight bleed shutdowns in 2017 and 2018 across the tracked fleet, and none of them was followed by a confirmed duct leak on the ground. Instrumented flights showed that the overheat sensor, mounted on a bracket directly above the pre-cooler outlet elbow, was seeing radiant heat from the elbow itself rather than air temperature, and that the effect grew with the outside air temperature at top of climb. Operators were losing a bleed system on about one flight in four hundred, with the associated single-pack cabin and the dispatch penalty that follows an unexplained shutdown.",
+      "description": "The pre-cooler outlet duct is replaced by a formed pipe ES695992-47 with a longer straight run before the first bend, and the overheat sensor D3610116027716 is moved two hundred and forty millimetres outboard onto a new bracket clear of the elbow radiant field. The isolation valve D3610114004535 is retained but its actuating rod is shortened to suit the new duct geometry. The filter PE873965-99 upstream of the valve is unchanged. The bracket is secured with titanium bolts LN212801K2 into existing pylon hard points. The regulator at FIN 16PU is not moved. Work is in the pylon and nacelle zones 431, 433 and 443 with the fan cowls open and the pylon lower fairing removed.",
+      "effects": "Mass increase of 2.1 kilograms per engine, symmetric, with no measurable balance effect. No electrical load change. Not interchangeable: the sensor bracket hard point is drilled at embodiment and the earlier duct will not mate with the new sensor position. Nuisance bleed shutdown rate is expected to fall by more than ninety per cent. The bleed leak detection loop check task, the duct inspection task and the bleed fault isolation procedure all require re-issue, and the dispatch condition for a single bleed system is unchanged.",
+      "embodiment_note": "Production cut-in at MSN Z09175 in November 2019. Retrofit is per engine and is quoted at one shift with the fan cowls open; both engines are normally done in the same visit. Kits contain the duct, the bracket, the bolt set and the shortened actuating rod."
+    },
+    "entities": {
+      "part_numbers": [
+        "ES695992-47",
+        "D3610116027716",
+        "D3610114004535",
+        "PE873965-99",
+        "LN212801K2"
+      ],
+      "fins": [
+        "16PU"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "431",
+        "433",
+        "443"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z07304"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-36-1009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-Z-36-10-11-200-032-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "bleed overheat sensor",
+      "pre-cooler outlet",
+      "nuisance warning",
+      "radiant heating",
+      "bleed shutdown"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 153726,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1183"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 2.1,
+      "balance_impact": "Symmetric, no measurable effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "ES695992-47",
+        "LN212801K2"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3610116027716",
+        "D3610114004535"
+      ],
+      "fins_affected": [
+        "16PU"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 190,
+      "estimated_cost_keur": 690,
+      "lead_time_weeks": 32,
+      "production_impact": "Cut-in at MSN Z09175 with the pylon build standard changed at the same point",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

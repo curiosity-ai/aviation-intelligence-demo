@@ -1,0 +1,177 @@
+[
+  {
+    "doc_id": "AMM-Z-36-10-11-200-032-A",
+    "doc_type": "AMM",
+    "title": "Inspection of the Bleed Air Distribution Ducting and Test of the Leak Detection Loop",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-06-22",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "36-10-12",
+      "54-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-01-08",
+      "released": "2019-07-30",
+      "revised": "2021-06-22",
+      "effective": "2021-07-13"
+    },
+    "abstract": "Inspection of the bleed air distribution ducting in the pylon and nacelle, and functional test of the leak detection loop, including the sensor position check introduced with the relocated overheat sensor.",
+    "sections": {
+      "purpose": "This task inspects the bleed air distribution ducting between the pre-cooler outlet and the pylon interface, and tests the leak detection loop that protects it.",
+      "job_setup_note": "The engine must be cool and the bleed system depressurised. The duct joints are made with high temperature seals that harden with service and can look sound while leaking under pressure, so the visual inspection alone is not sufficient and the pressure check must be done. On aircraft with the relocated overheat sensor, the sensor position and its clearance to the elbow are part of this inspection.",
+      "procedure": "1. Make sure that the engine is cool and that the bleed system is depressurised. WARNING: DO NOT OPEN A BLEED DUCT JOINT UNTIL YOU HAVE CONFIRMED ZERO PRESSURE AT THE GAUGE AND THE DUCT SURFACE TEMPERATURE IS BELOW 50 DEGREES. 2. Open the fan cowls and remove the pylon lower fairing to get access to zones 431, 433 and 443. 3. Do a detailed visual inspection of the pre-cooler outlet pipe ES695992-47 over its full length for distortion, chafing and heat marking. 4. Check the joint clamps for band distortion and for correct alignment of the clamp gap. 5. Check the isolation valve D3610114004535 actuating rod for free movement and correct rig length. 6. Check the filter PE873965-99 mounting for security. 7. On aircraft with the relocated sensor, measure the distance from the overheat sensor D3610116027716 to the elbow and confirm that it is inside the tolerance in the instructions. CAUTION: DO NOT REPOSITION THE SENSOR TO ACHIEVE THE DIMENSION. IF IT IS OUT OF TOLERANCE THE BRACKET MUST BE CHECKED, BECAUSE THE HARD POINT MAY HAVE MOVED. 8. Check the regulator at FIN 16PU for security and for evidence of leakage at the flange. 9. Pressurise the bleed system to the test value and check every joint with the leak detection solution. 10. Do the leak detection loop functional test with the loop test set and confirm that each loop section reports. 11. Depressurise the system and clean off the leak detection solution. 12. Record every finding with its position and report any joint that leaked.",
+      "close_out": "Refit the pylon lower fairing and close the fan cowls, checking the latch engagement. Record the sensor dimension and the loop test result on the maintenance record. Report any duct distortion to engineering before the aircraft is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "ES695992-47",
+        "D3610116027716",
+        "D3610114004535",
+        "PE873965-99",
+        "LN212801K2"
+      ],
+      "fins": [
+        "16PU",
+        "94PU"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "431",
+        "433",
+        "443"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-36-1009",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-153726",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bleed ducting",
+      "leak detection loop",
+      "overheat sensor position",
+      "joint clamp",
+      "pressure check"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "36-10-11-200-032-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. Step 7 applies post MOD-153726 only.",
+      "manhours": 7.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "431",
+          "433",
+          "443"
+        ],
+        "access_panels": [
+          "431CL",
+          "433AR",
+          "443BL"
+        ],
+        "doors": [
+          "Fan cowl doors"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Confirm zero bleed pressure and a duct surface temperature below 50 degrees.",
+          "Support the pylon lower fairing during removal.",
+          "Clean off all leak detection solution before closing."
+        ],
+        "tooling": [
+          {
+            "reference": "Bleed leak test rig",
+            "description": "Pressure source and gauge"
+          },
+          {
+            "reference": "Loop test set",
+            "description": "Leak detection loop functional test"
+          },
+          {
+            "reference": "98D36101-009",
+            "description": "Rigging gauge"
+          }
+        ],
+        "consumables": [
+          "Leak detection solution",
+          "High temperature joint seal set",
+          "Lint free wipes"
+        ],
+        "expendables": [
+          {
+            "part_number": "LN212801K2",
+            "qty": 8
+          }
+        ]
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

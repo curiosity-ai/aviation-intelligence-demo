@@ -1,0 +1,290 @@
+[
+  {
+    "doc_id": "PAWO-111212-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Datalink Router Installation in the Forward Avionics Rack",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-09-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "92-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00479"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2024-05-14",
+      "released": "2024-09-19",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the first datalink router standard, run for a spares release rather than for the original design, covering the rack capacity the installation consumed and the wiring content that had never been reconciled with the as-built aircraft.",
+    "sections": {
+      "objective": "Re-examine the first router standard six years after release, in support of a spares and repair release for operators still at that standard, and establish what the installation actually consumed in the forward avionics rack so that later changes can be planned against a correct baseline.",
+      "findings_summary": "Three items were confirmed. The most important was that the spare pair count recorded for the forward avionics bay had never been corrected after this installation, so every later change had been planned against a figure that was two pairs too generous. That was corrected in the wiring sheet as a direct result of this work and is the reason the sheet now carries an explicit warning about the count. The second finding was that the installation task and the removal task had drifted apart at their revision B: the removal task safeguards the message store and the installation task does not check that the safeguard was done. The third was minor and concerned the illustrated part list, which carried the display unit at two hardware standards behind one part number without saying how to tell them apart.",
+      "next_steps": "Correct the spare pair count in the wiring sheet and add the warning about it being maintained by hand. Reconcile the removal and installation tasks at their next revision. Add a note to the illustrated part list explaining that the two display unit standards are distinguished by the modification letter on the unit label. Release the spares and repair scope as requested."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370118700860",
+        "D2370006240541",
+        "VED805230-21",
+        "AGS119203K9"
+      ],
+      "fins": [
+        "218RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00137"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111212",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "datalink router",
+      "spare capacity",
+      "spares release",
+      "wiring sheet"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Lorencourt",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111212-01",
+      "subject_mod": "MOD-111212",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2024-09-19",
+      "outcome": "VALIDATED",
+      "raised_date": "2024-05-14",
+      "due_date": "2024-09-30",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Lorencourt",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 120,
+        "spent_manhours": 143
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "23",
+          "92"
+        ],
+        "ata_4d": [
+          "23-70",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "C00001",
+          "to": "C00479"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2370118700860",
+            "D2370006240541",
+            "VED805230-21"
+          ],
+          "fins": [
+            "218RN",
+            "7RC"
+          ],
+          "drawings": [
+            "D23700095149"
+          ],
+          "zones": [
+            "165",
+            "211"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "what spare capacity remains in the forward avionics bay after an installation"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Reconcile the rack and bay capacity against the as-built aircraft",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review the removal and installation task pair",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "WDM-C-92-21-31",
+          "doc_type": "WDM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370118700860"
+            ],
+            "shared_fins": [
+              "218RN"
+            ],
+            "shared_zones": [
+              "165"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The spare pair count for the forward avionics bay had not been corrected after this installation and was two pairs too generous, which meant every later installation in the bay had been planned against a wrong figure.",
+          "resolution": "Sheet corrected and an explicit warning added that the count is maintained by hand and must be confirmed on the aircraft."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-C-23-70-11-400-011-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370118700860",
+              "D2370006240541",
+              "AGS119203K9"
+            ],
+            "shared_fins": [
+              "218RN",
+              "7RC"
+            ],
+            "shared_zones": [
+              "165",
+              "211"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task safeguards the message store before power is removed and the installation task does not check that the safeguard was done, so a unit installed after an unsafeguarded removal cannot be shown to be clean.",
+          "resolution": "Reconciled at the next revision of both tasks."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-C-23-70-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370118700860",
+              "VED805230-21"
+            ],
+            "shared_fins": [
+              "218RN"
+            ],
+            "shared_zones": [
+              "165"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The figure carried the display unit at two hardware standards behind one part number without saying how the two are distinguished in the field.",
+          "resolution": "Figure note added explaining the modification letter on the unit label."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Spares and repair scope released. The corrected spare pair count was the most valuable output and has been carried into the wiring sheet.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

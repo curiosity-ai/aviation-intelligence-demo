@@ -1,0 +1,171 @@
+[
+  {
+    "doc_id": "AMM-T-80-10-11-800-001-A",
+    "doc_type": "AMM",
+    "title": "Air Starter Motor — Oil Level Servicing and Duct Flange Condition Check",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-01-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Starting — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "80-10-12",
+      "36-10-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2024-09-02",
+      "released": "2025-01-27",
+      "revised": null,
+      "effective": "2025-03-07"
+    },
+    "abstract": "Oil level servicing of the air starter motor combined with the duct flange condition check, which is the scheduled opportunity to find the flange cracking before it is found by a leak.",
+    "sections": {
+      "purpose": "This task gives the oil level servicing of the air starter motor and the duct flange condition check that is done at the same access, including the crack acceptance criteria at the inlet flange.",
+      "job_setup_note": "The motor must be cool before the filler plug is removed; the oil is hot enough to burn for some time after a start cycle. The flange check is not a walk-past look: the inboard side of the inlet flange is where the cracking is found and it can only be seen with the mirror and a torch. A cracked flange must be reported before the next start, because the flange releases high pressure air into the fan compartment if it fails.",
+      "procedure": "1. Confirm that the engine has been shut down for the cooling period given in the figure. 2. Open the fan cowl doors and gain access to the starter motor in zone 463. WARNING: DO NOT REMOVE THE FILLER PLUG UNTIL THE MOTOR IS COOL. THE OIL STAYS ABOVE 90 DEGREES CELSIUS FOR AT LEAST 45 MINUTES AFTER A START CYCLE. 3. Clean around the filler plug and the sight glass. 4. Read the oil level at the sight glass and record it. 5. Where the level is below the mark, remove the filler plug and add the approved oil to the mark, then refit the plug and lockwire it. 6. Examine the starter motor mount links and their bushes for movement and for elongation at the attachment holes. 7. Examine the inlet duct flange with the mirror and torch, giving particular attention to the inboard side. CAUTION: THE CRACKING IS FOUND ON THE INBOARD SIDE OF THE INLET FLANGE AND IS NOT VISIBLE FROM DIRECTLY BELOW. USE THE MIRROR. 8. Where any indication is found, do the dye penetrant check at that location. 9. Record the length and position of any confirmed crack against the acceptance criteria. 10. Examine the clamp assembly at both ends of the duct connection for security. 11. Wipe the area clean and confirm no oil residue remains that would mask a future leak. 12. Close the fan cowl doors.",
+      "close_out": "Record the oil level found, the quantity added and the flange check result in the engine record. Report any confirmed crack before the next engine start; a cracked flange is not a deferrable finding. Confirm the filler plug is lockwired and that the fan cowl doors are latched with all indicators showing latched."
+    },
+    "entities": {
+      "part_numbers": [
+        "D8010117036736",
+        "D8010117557935",
+        "PE187919-09"
+      ],
+      "fins": [
+        "5097ES",
+        "6408ES4",
+        "7ES"
+      ],
+      "drawings": [
+        "D80101152437",
+        "D80101231055"
+      ],
+      "software": [],
+      "zones": [
+        "463",
+        "433",
+        "423"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-73-20-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "air starter motor",
+      "oil servicing",
+      "duct flange",
+      "crack",
+      "dye penetrant"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "80-10-11-800-001-A",
+      "task_type": "SERVICING",
+      "effectivity_note": "All aircraft. On aircraft post MOD-149120 the flange check at step 7 is done on a sampling basis rather than at every servicing.",
+      "manhours": 2.0,
+      "personnel": 1,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "463",
+          "433"
+        ],
+        "access_panels": [
+          "463AL",
+          "433BR"
+        ],
+        "doors": [
+          "Fan cowl door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not remove the filler plug until the motor is cool.",
+          "Confirm the engine cooling period has elapsed.",
+          "Wear gloves; the oil is an irritant."
+        ],
+        "tooling": [
+          {
+            "reference": "98D80101-029",
+            "description": "Inspection mirror and torch set"
+          },
+          {
+            "reference": "98D80101-034",
+            "description": "Dye penetrant kit"
+          }
+        ],
+        "consumables": [
+          "Approved starter motor oil",
+          "Lockwire 0.8 mm",
+          "Lint free cloth"
+        ],
+        "expendables": [
+          {
+            "part_number": "PE187919-09",
+            "qty": 2
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-73-20-11-400-001-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

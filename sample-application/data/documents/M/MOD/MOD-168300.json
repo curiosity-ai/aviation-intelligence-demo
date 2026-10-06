@@ -1,0 +1,188 @@
+[
+  {
+    "doc_id": "MOD-168300",
+    "doc_type": "MOD",
+    "title": "Data Load Configuration Computer Replacement and Load Record Retention",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-05-07",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-12",
+      "title": "Data Loading — Data Load Configuration"
+    },
+    "secondary_ata": [
+      "45-20",
+      "31-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "M00464",
+      "production_cut_in_date": "2025-06-11",
+      "retrofit_via": [
+        "MRD-45-1029"
+      ]
+    },
+    "dates": {
+      "created": "2022-11-21",
+      "released": "2025-05-07",
+      "revised": null,
+      "effective": "2025-06-11"
+    },
+    "abstract": "Replaces the data load configuration computer with a variant holding a larger load record, so that the full software configuration history survives a power interruption during loading instead of reverting to the last confirmed state.",
+    "sections": {
+      "reason": "Operators reported losing the load record when ground power was interrupted during a data load session, which forced a full configuration read and in three cases a repeat of the entire load. The record store as delivered holds sixteen sessions and writes the confirmation only at the end of a session, so an interruption in a long session leaves no trace of what was loaded. Two of the events happened during a night stop with a partial load left on the aircraft, which is the case the maintenance organisation is least able to detect.",
+      "description": "The configuration computer is replaced by a variant with a larger non-volatile record store holding one hundred and twenty sessions and writing an entry per item rather than per session. The receiver at the data loading interface is unchanged and the maintenance computer database is reissued to read the extended record format. Cushioned loop clamps replace the obsolete collars on the harness at the computer position. No change is made to the loading protocol itself, so a portable loader of any supported standard continues to work unchanged.",
+      "effects": "Mass increase of one point two kilograms in the avionics bay. No electrical load change. Not interchangeable, because the extended record format is not readable by the delivered maintenance computer database, which is why the database is part of the change. The onboard maintenance troubleshooting entry for an incomplete load is reissued, and the crew-facing description of the maintenance system is updated where it lists the record depth.",
+      "embodiment_note": "Cut in at MSN M00464. Retrofit is by bulletin combining the computer change and the database load in one visit of about five hours; the two must not be embodied separately."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545120504726",
+        "LN760453-5C",
+        "AES133277-12"
+      ],
+      "fins": [
+        "228TN",
+        "2848TN"
+      ],
+      "drawings": [
+        "D45450007012"
+      ],
+      "software": [
+        "LH4PE007934"
+      ],
+      "zones": [
+        "273",
+        "262"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00464"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-45-1029",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-M-45-45-12-900-053-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-M-45-20-11-812-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-M-DSC-45-20-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "data load configuration",
+      "load record",
+      "non-volatile store",
+      "maintenance database",
+      "partial load"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168300,
+      "mod_class": "MINOR",
+      "change_category": "SOFTWARE",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.2,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D4545120504726",
+        "LN760453-5C"
+      ],
+      "parts_removed": [
+        "AES133277-12"
+      ],
+      "parts_modified": [],
+      "fins_affected": [
+        "228TN",
+        "2848TN"
+      ],
+      "software_affected": [
+        "LH4PE007934"
+      ],
+      "estimated_manhours": 700,
+      "estimated_cost_keur": 1350,
+      "lead_time_weeks": 46,
+      "production_impact": "Cut in at MSN M00464 with the maintenance database reissued at the same standard",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

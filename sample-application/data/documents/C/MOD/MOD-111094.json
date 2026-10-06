@@ -1,0 +1,201 @@
+[
+  {
+    "doc_id": "MOD-111094",
+    "doc_type": "MOD",
+    "title": "Slat Flap Control Computer Test Standard 6.7 and Flap Drive Torque Limiter Rerating",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-01-17",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [
+      "27-80"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00506",
+      "production_cut_in_date": "2022-12-11",
+      "retrofit_via": [
+        "CRN-27-1033",
+        "CRN-27-1040"
+      ]
+    },
+    "dates": {
+      "created": "2021-03-08",
+      "released": "2022-08-30",
+      "revised": "2024-01-17",
+      "effective": "2024-02-05"
+    },
+    "abstract": "A built-in test standard for the slat flap control computer combined with a higher torque limiter setting, cutting the number of flap system faults that clear on the ground with nothing found.",
+    "sections": {
+      "reason": "Flap system fault messages were the third most frequent technical log entry on the type and roughly six in ten cleared on the ground with no fault found. Analysis of the recorded data showed the built-in test declaring an asymmetry when the torque limiter slipped momentarily during a cold-soaked first extension, which the previous test standard could not distinguish from a genuine skew. Fifty-eight occurrences were confirmed on a sample of forty aircraft over one winter, and two of them led to an unnecessary computer replacement at an outstation.",
+      "description": "The slat flap control computer adopts built-in test standard 6.7, loadable part LC8C8E906FE, which adds a temperature-compensated settling window before an asymmetry is declared and separates a limiter slip signature from a skew signature. In parallel the flap drive torque limiter setting is raised by 8 per cent, which required the drive solenoid D2750116570759 to be replaced by a higher rated item and the drive clamp D2750008046179 to be repositioned. Washers AES606871-9E are added at the limiter mounting. The drive pump 345EV2 and the flap selector switch 916EV9 are unchanged. Revised detail is on drawing D27501162228. Work is carried out in zones 522, 561 and 661 with the flap in the fully extended position.",
+      "effects": "Mass increase of 0.6 kg per aircraft. Electrical load rises by 40 VA on the essential bus during flap transit only. The loadable part is interchangeable in both directions but the raised limiter setting is not, because the previous solenoid cannot hold the higher torque. Minimum equipment list dispatch with one flap channel inoperative is unchanged. Maintenance manual content for the flap drive system test and for the position sensor rigging both need re-issue, and the trouble shooting procedure for flap faults is superseded in full.",
+      "embodiment_note": "Cut in on the production line at MSN C00506 in December 2022. The hardware part of the change is retrofitted through Service Bulletin CRN-27-1033 during a scheduled A-check, and the loadable part alone can be applied at line level through Service Bulletin CRN-27-1040 on aircraft that already carry the higher rated solenoid."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759",
+        "D2750008046179",
+        "AES606871-9E"
+      ],
+      "fins": [
+        "345EV2",
+        "916EV9"
+      ],
+      "drawings": [
+        "D27501162228"
+      ],
+      "software": [
+        "LC8C8E906FE"
+      ],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [
+        "FIG-27-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00506"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-27-1033",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "CRN-27-1040",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-27-50-11-700-003-A",
+        "doc_type": "AMM",
+        "relation": "DOCUMENTED_IN"
+      },
+      {
+        "doc_id": "AMM-C-27-50-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-27-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "TSM-C-27-50-11-810-803",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "slat flap control computer",
+      "built-in test",
+      "torque limiter",
+      "asymmetry",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111094,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.671",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0.6,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 40,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "AES606871-9E"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2750116570759",
+        "D2750008046179"
+      ],
+      "fins_affected": [
+        "345EV2",
+        "916EV9"
+      ],
+      "software_affected": [
+        "LC8C8E906FE"
+      ],
+      "estimated_manhours": 88,
+      "estimated_cost_keur": 520,
+      "lead_time_weeks": 26,
+      "production_impact": "Cut-in at MSN C00506, wing final assembly unaffected",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

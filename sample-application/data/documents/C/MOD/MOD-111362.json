@@ -1,0 +1,182 @@
+[
+  {
+    "doc_id": "MOD-111362",
+    "doc_type": "MOD",
+    "title": "Audio Management Unit Replacement to Remove Crosstalk on the Cabin Interphone Loop",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-50",
+      "ata_6d": "23-50-11",
+      "title": "Audio Integrating — Audio Management Unit"
+    },
+    "secondary_ata": [
+      "23-50-12",
+      "44-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [
+        "C00408",
+        "C00479",
+        "C00544",
+        "C00612",
+        "C00680"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "OST",
+        "IOW"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "FROZEN",
+      "points": [
+        "PRODUCTION"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-03-12",
+      "released": "2026-01-20",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Design-frozen replacement of the audio management unit to remove the crosstalk between the cabin interphone loop and the flight interphone that cabin crew have reported since the first cabin lighting standard change.",
+    "sections": {
+      "reason": "Cabin crew on twenty-two aircraft reported hearing flight compartment conversation faintly on the cabin handset when the handset is off-hook and the cabin lighting is at a particular dimming level. The effect was reproduced on the ground and traced to a common return path in the audio management unit that the delivered design shares with the lighting dimmer supply. Although the audio quality effect is minor, the privacy implication was raised formally by two operators and by one flight crew association, and there is no satisfactory service action short of changing the unit.",
+      "description": "The audio management unit is replaced by a variant with separated returns for the cabin loop and the flight interphone, and with the dimmer supply reference moved off the audio ground entirely. The receiver D2350002635675 is superseded by the same form-fit unit at the later hardware standard, the control panel kit EL170895-98 is replaced because the pin allocation on the rear connector changes, and the flight interphone control panel D2350120530307 in the aft cabin is re-terminated. Washers LN760279K5 are renewed at the rack and the protective sleeve LN112642-3C is added over the re-routed cabin loop pair. Functional items 6383RC, 509RC and 7RN1 are affected. Work is in the cabin ceiling and rack areas, zones 111, 234 and 265.",
+      "effects": "Mass increase of 0.7 kg. Electrical load unchanged. The unit is not interchangeable with the delivered unit because the rear connector allocation changes, and an aircraft cannot be operated with one panel at each standard. There is no dispatch consequence. Wiring manual content changes at three sheets and the illustrated parts figure gains a pre and post modification item pair. Cabin crew procedures are unaffected.",
+      "embodiment_note": "The design is frozen and awaiting certification. Production cut-in is planned but not yet fixed, and no retrofit bulletin is offered at this stage; the affected operators have been given a service instruction that changes the dimming level at which the effect appears, as an interim measure until the unit is available."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2350002635675",
+        "EL170895-98",
+        "D2350120530307",
+        "LN760279K5",
+        "LN112642-3C"
+      ],
+      "fins": [
+        "6383RC",
+        "509RC",
+        "7RN1"
+      ],
+      "drawings": [
+        "D23501294034"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "234",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00408",
+        "C00544"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-23-50-11-000-023-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "WDM-C-92-11-21",
+        "doc_type": "WDM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "audio management unit",
+      "crosstalk",
+      "cabin interphone",
+      "dimmer supply",
+      "separated returns"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111362,
+      "mod_class": "MINOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.7,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "LN112642-3C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2350002635675",
+        "EL170895-98",
+        "D2350120530307"
+      ],
+      "fins_affected": [
+        "6383RC",
+        "509RC"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 210,
+      "estimated_cost_keur": 540,
+      "lead_time_weeks": 38,
+      "production_impact": "Cut-in planned but not fixed; unit qualification is the pacing item",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

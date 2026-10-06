@@ -1,0 +1,244 @@
+[
+  {
+    "doc_id": "CRN-34-2006",
+    "doc_type": "SB",
+    "title": "Navigation — Weather Radar Antenna Drive Replacement and Attitude Referenced Stabilisation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-04-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-40",
+      "ata_6d": "34-40-11",
+      "title": "Independent Position Determining — Weather Radar Transceiver"
+    },
+    "secondary_ata": [
+      "34-20",
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00273",
+          "to": "C00750"
+        }
+      ],
+      "excluded_msns": [
+        "C00612"
+      ],
+      "engine_types": [],
+      "operators": [
+        "NVT",
+        "CDW",
+        "SDA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111251"
+        ],
+        "pre_mod": [],
+        "post_sb": [
+          "CRN-34-2003"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-12-02",
+      "released": "2025-04-24",
+      "revised": null,
+      "effective": "2025-05-19"
+    },
+    "abstract": "Retrofit of the brushless antenna drive and the attitude referenced stabilisation loop, so that ground return no longer dominates the radar picture in the last two thousand feet of an approach.",
+    "sections": {
+      "planning_reason": "Four operators have reported that below about three thousand feet the ground return fills the display and the crew has to work the tilt manually to see the cell. Flight data from one operator covering nine hundred approaches shows the manual tilt being moved on average four times per approach on this type against once on comparable fleets. The delivered antenna drive is also the highest unscheduled removal item in the chapter at one removal per nineteen thousand flight hours.",
+      "description": "The bulletin replaces the antenna drive with a brushless unit, re-references the stabilisation loop to the inertial attitude source, replaces the interface unit with the display unit assembly and adds a computer card on the forward shelf.",
+      "accomplishment_summary": "Open the radome and support it clear of the bulkhead. Remove the antenna drive and keep the antenna. Install the brushless drive and set the null position with the alignment fixture. Install the display unit assembly D3440008623827 in place of the interface unit and connect the display bus. Install the computer DUD963936-57 on the forward shelf at zone 251. Connect the attitude feed and allocate functional item 580DA. Renew the tray washers AES311855K5 and AGS393059-2A on the transceiver D3440119270001 and re-load it with the operational software. Do the installation task AMM-C-34-40-11-400-013-A. Do the stabilisation acceptance run on the ground and record the residual error. Close the radome and record the embodiment.",
+      "effectivity_note": "Applicable to CIRRANE-11 and CIRRANE-13 aircraft from MSN C00273 to MSN C00750 that already carry the solid state transceiver, whether from production or from Service Bulletin CRN-34-2003. Aircraft from MSN C00750 onward are already at the standard. One aircraft on a supplemental type certificate installation is excluded.",
+      "material_note": "Kit K3440-2006-01 contains the antenna drive, the display unit assembly, the computer card and the tray hardware. Lead time is thirty weeks and the drive is the long-lead item. The removed drive is returned to the supplier."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3440119270001",
+        "D3440008623827",
+        "DUD963936-57",
+        "AES311855K5",
+        "AGS393059-2A",
+        "D3440003473401"
+      ],
+      "fins": [
+        "282TR7",
+        "2FE",
+        "580DA"
+      ],
+      "drawings": [
+        "D34401154303",
+        "D34400093148"
+      ],
+      "software": [
+        "LA3C9E7BDD5"
+      ],
+      "zones": [
+        "111",
+        "216",
+        "251"
+      ],
+      "figures": [
+        "FIG-34-40-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00750"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111263",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "CRN-34-2003",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-C-34-40-11-400-013-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-34-40-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-34-40-11-810-811",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-C-DSC-34-40-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "antenna drive",
+      "stabilisation",
+      "ground clutter",
+      "attitude reference",
+      "approach picture"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Customer Services Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-34-2006",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "DESIRABLE",
+      "compliance_time": "At the operator's convenience. Operators intending fleet-wide crew commonality are advised to plan a single campaign.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-111263",
+      "manpower": {
+        "elapsed_time_hours": 20,
+        "manhours": 34,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K3440-2006-01",
+        "kit_available_from": "2025-06-16",
+        "parts_required": [
+          {
+            "part_number": "D3440008623827",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "DUD963936-57",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D3440003473401",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES311855K5",
+            "qty": 8,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS393059-2A",
+            "qty": 8,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Contact cleaner, electrical",
+          "Lockwire, corrosion resistant"
+        ],
+        "tooling": [
+          "Antenna alignment fixture",
+          "Radar test set",
+          "Maintenance terminal"
+        ]
+      },
+      "weight_change_kg": 1.8,
+      "accomplishment_steps": 11,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2025-04-24",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

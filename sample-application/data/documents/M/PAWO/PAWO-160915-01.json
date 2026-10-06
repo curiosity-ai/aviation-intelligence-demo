@@ -1,0 +1,318 @@
+[
+  {
+    "doc_id": "PAWO-160915-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Self-Lubricating Bushings in the Fwd Cargo Door Latch Pin Housings",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-11-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-03-05",
+      "released": "2019-11-08",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the self-lubricating bushing change in the forward cargo door latch pin housings, raised internally after the greased bushing removal rate exceeded the reliability target on early aircraft.",
+    "sections": {
+      "objective": "Confirm what the move from a greased steel bushing to a self-lubricating liner does to the borescope survey already mandated on the latch beam, and whether the latch pin retention hardware, the housing bore tolerance and the door rigging procedure can absorb the change without a rig re-qualification. The reliability case was already made; the question the work order had to answer was what the change breaks elsewhere on the door.",
+      "findings_summary": "Four items were confirmed, one blocking. The borescope survey of the latch beam bore is written to detect grease breakdown and scoring, and its acceptance criteria are expressed in terms of a lubricated surface. A self-lubricating liner presents a dry surface with a normal transfer film that the criteria would read as contamination, so post-modification aircraft would be failing a survey they should pass. Below that, the illustrated parts figure and both latching tasks carry the bushing, the pin and the retention ring as one set and need a second set rather than a substitution. The door outer skin dent repair scheme shares the aft latch zone and its blend-out limits are measured with the door in the rigged position, which the revised bushing clearance changes by a small but non-zero amount.",
+      "next_steps": "Rewrite the borescope acceptance criteria for a dry liner before the modification is cut in, and hold the retrofit bulletin until that is issued. Add the second bushing and pin set to the latching figure and to both tasks. Ask structures to confirm the rigged-position datum used by the skin repair scheme still holds within tolerance. No second round needed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230131366114",
+        "D5230134342244",
+        "D5230135480243",
+        "EN816709K3"
+      ],
+      "fins": [
+        "1490WV"
+      ],
+      "drawings": [
+        "D52301308669"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-160915",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "latch pin bushing",
+      "self-lubricating liner",
+      "borescope survey",
+      "cargo door rigging"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-160915-01",
+      "subject_mod": "MOD-160915",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2019-11-08",
+      "outcome": "VALIDATED",
+      "raised_date": "2019-03-05",
+      "due_date": "2019-10-25",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EYIS",
+          "EDSA"
+        ],
+        "estimated_manhours": 85,
+        "spent_manhours": 61
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "52"
+        ],
+        "ata_4d": [
+          "52-30",
+          "52-70"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00360"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5230131366114",
+            "D5230134342244",
+            "D5230135480243",
+            "EN816709K3"
+          ],
+          "fins": [
+            "1490WV"
+          ],
+          "drawings": [
+            "D52301308669"
+          ],
+          "zones": [
+            "891",
+            "893"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "dry lubricated bushing replacing a greased bearing in a door mechanism",
+          "acceptance criteria written for a lubricated bore surface"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released latching content on ATA 52-30 and 52-70",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review the borescope survey acceptance criteria against a dry liner",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the door skin repair rigged-position datum",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MRD-52-1031",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230134342244"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The borescope survey acceptance criteria describe a lubricated bore. A self-lubricating liner develops a normal dry transfer film that reads as contamination against those criteria, so post-modification aircraft would be rejected on a serviceable installation.",
+          "resolution": "Issue revised acceptance criteria for a dry liner and hold the retrofit bulletin until the revision is released."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-M-52-30-13-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230131366114",
+              "D5230134342244",
+              "D5230135480243",
+              "EN816709K3"
+            ],
+            "shared_fins": [
+              "1490WV"
+            ],
+            "shared_zones": [
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure treats bushing, pin and retention ring as a matched set with a single item group. The liner bushing is not interchangeable with the greased bushing in either direction because the housing bore is re-machined, so a substitution note would be wrong.",
+          "resolution": "Create a second matched item group with a post-modification effectivity note and a not-interchangeable statement."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-52-30-13-000-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230131366114",
+              "D5230134342244"
+            ],
+            "shared_fins": [
+              "1490WV"
+            ],
+            "shared_zones": [
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task was reached through the impact edge from the existing bushing standard. It calls for grease removal and re-lubrication steps that have no meaning on a self-lubricating liner and would contaminate it if followed.",
+          "resolution": "Remove the lubrication steps under a post-modification effectivity condition in the same documentation package."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-M-52-30-11-001",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "893"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The dent blend-out limits on the door outer skin are measured with the door in the rigged position. The revised bushing clearance shifts that position by a fraction of a millimetre, which is inside the measurement tolerance but was not documented anywhere.",
+          "resolution": "Record the rigged-position tolerance in the design justification so the question is not reopened at the next repair revision."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "TSM-M-52-70-11-810-801",
+          "doc_type": "TSM",
+          "reason": "Shares zone 891 and reads as a forward cargo door problem, but it isolates a warning indication fault in the proximity sensing chain. It has no latch hardware content, no shared part number and nothing that the bushing change touches."
+        }
+      ],
+      "conclusion": "Closed. The survey acceptance criteria were the pacing item and were reissued before cut-in. All four items were carried into the release package.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

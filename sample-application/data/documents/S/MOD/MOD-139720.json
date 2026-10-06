@@ -1,0 +1,186 @@
+[
+  {
+    "doc_id": "MOD-139720",
+    "doc_type": "MOD",
+    "title": "Flight Data Acquisition Interface for Twenty-Five Hour Recording Duration",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-03-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-30",
+      "ata_6d": "31-30-11",
+      "title": "Recorders — Flight Data Recorder"
+    },
+    "secondary_ata": [
+      "31-30-12",
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-34V3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [
+        "S01317",
+        "S01380",
+        "S01493",
+        "S01521",
+        "S01536",
+        "S01572",
+        "S01606",
+        "S01615",
+        "S01668",
+        "S01741"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-03-11",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Replacement of the flight data acquisition interface and the recorder rack to meet the twenty-five hour recording duration and the additional parameter set that becomes applicable to this fleet in 2028.",
+    "sections": {
+      "reason": "The operational rule that applies to these aircraft from January 2028 raises the required flight data recording duration from twenty-five to a rolling twenty-five hours with a wider mandatory parameter set, and requires the cockpit voice channel to be recorded for the same duration. The recorder currently installed meets neither. Compliance is not optional and the fleet is large enough that the retrofit has to be planned into scheduled maintenance rather than done as a campaign, which is why the change is being launched three years ahead of the date.",
+      "description": "The recorder rack and the acquisition interface are both replaced. The outboard recorder rack D3130110279730 is superseded by a rack with a deeper envelope and improved cooling, the right-hand recorder circuit card sub-assembly D3130114883023 is replaced by a card carrying the wider acquisition frame, and the forward receiver LUM703648-52 is retained. The outboard recorder module assembly D3130007164715 is re-worked for the new connector pattern and the obsolete tubular spacer set AGS103845-6C is deleted. The aft control panel positions 552FP5 and 819FP are re-labelled for the revised download procedure, the left-hand rack position 4820FP7 is re-shimmed, and the right-hand voice recorder circuit card position 30FW is replaced to give the matching duration. Additional parameters are picked up from existing system buses; no new sensors are installed. Work is in the aft avionics area and the aft cabin, zones 116, 124 and 274, with the ceiling panels dropped at the recorder position.",
+      "effects": "Estimated mass increase of 8.9 kg per aircraft, aft of the reference datum, with a centre-of-gravity shift below 0.02 per cent MAC. Electrical load increases by 210 VA. Not interchangeable: the rack envelope and the connector pattern change together and the previous recorder cannot be fitted to the new rack. The download procedure changes and the ground support equipment used by accident investigation authorities must be at the corresponding standard. Recorder maintenance tasks, the central maintenance system parameter list and the associated wiring content all require update. There is no dispatch relief for an inoperative recorder beyond the existing MMEL item, which is unchanged.",
+      "embodiment_note": "Launched. Production cut-in is planned for the delivery block following certification and retrofit will be offered through a service bulletin sized to fit inside a scheduled A-check. Elapsed time is estimated at eighteen hours per aircraft.",
+      "open_points": "Pre-analysis must confirm that the deeper rack does not conflict with the connectivity equipment being studied for the same aircraft, that the additional parameters are all available on existing buses at the required sample rate, and whether the voice recorder change can be released separately if the data recorder slips."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3130110279730",
+        "D3130114883023",
+        "LUM703648-52",
+        "D3130007164715",
+        "AGS103845-6C"
+      ],
+      "fins": [
+        "552FP5",
+        "819FP",
+        "4820FP7",
+        "30FW"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "116",
+        "124",
+        "274"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01521",
+        "S01741"
+      ]
+    },
+    "references": [],
+    "keywords": [
+      "flight data recorder",
+      "recording duration",
+      "acquisition frame",
+      "parameter set",
+      "voice recorder"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Avionics Systems"
+    },
+    "type_data": {
+      "mod_number": 139720,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "AIRWORTHINESS_DIRECTIVE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1457",
+          "CS 25.1459",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 8.9,
+      "balance_impact": "Aft of the reference datum; CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 210,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "LUM703648-52"
+      ],
+      "parts_removed": [
+        "AGS103845-6C"
+      ],
+      "parts_modified": [
+        "D3130110279730",
+        "D3130114883023",
+        "D3130007164715"
+      ],
+      "fins_affected": [
+        "552FP5",
+        "819FP",
+        "4820FP7",
+        "30FW"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 110,
+      "estimated_cost_keur": 1450,
+      "lead_time_weeks": 56,
+      "production_impact": "Cut-in planned for the delivery block after certification",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,399 @@
+[
+  {
+    "doc_id": "MRD-42-1013",
+    "doc_type": "SB",
+    "title": "Avionics — Software Management — Replacement of the Onboard Loadable Software Module",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-10-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-40",
+      "ata_6d": "42-40-12",
+      "title": "Software Loading — Onboard Loadable Software Management"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00451"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-164355"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-03-25",
+      "released": "2024-10-14",
+      "revised": "2024-10-14",
+      "effective": "2024-11-11"
+    },
+    "abstract": "Replacement of the software management module and its flight deck control panel by units with four times the storage and hardware support for signed load packages, ahead of the memory device last-time-buy.",
+    "sections": {
+      "planning_reason": "The installed module cannot hold more than two pending loads at once, so an operator doing a multi-system update has to make several visits to the aircraft with a portable loader. Separately, the manufacturer of the memory device issued an obsolescence notice with a last-time-buy in 2025, which makes the delivered standard unsupportable in the medium term. Operators that do not embody this Service Bulletin will find spares availability falling from 2026 onwards.",
+      "description": "The management module is replaced by a unit with four times the non-volatile storage and hardware support for signed load packages, so that the integrity check is done on board rather than on the loader. The flight deck control panel is replaced by a version with a package staging page and a load history display. The rack position and the mounting are unchanged, but the connector pinout differs and the transceiver and loading module cabling is remade.",
+      "accomplishment_summary": "Remove the management module YST726849-60 and the flight deck control panel. Remake the cabling to the transceiver 96CQ8 and the loading module 7CQ to the new pinout shown in the accomplishment instructions. Install the replacement module and the replacement control panel D4240123411827 with screws LN3340K2. Do the power-up test and confirm that the module reports the expected storage size. Stage a signed test package and confirm that the on-board integrity check passes. Do the software configuration report and compare it with the aircraft record. Do the test steps of task AMM-M-42-40-12-900-020-A. Record the embodiment and inform the operator maintenance system owner of the changed report format.",
+      "effectivity_note": "Applicable to all MERIDIAN models from MSN M00001 through M00451 that are still pre MOD-164355. Aircraft from the production cut-in onward already carry the new module. There is no partial embodiment: the module and the control panel must be changed together because the staging page does not exist on the earlier panel.",
+      "material_note": "Kit K4240-1013-01 contains the module, the control panel, the cabling change content and the screws. Lead time is twenty-six weeks. The removed module is to be returned to Aeralis for the supplier credit scheme. Operators are reminded that the aircraft software configuration report changes format on embodiment and that their maintenance system may need updating before the aircraft returns to service."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4240123411827",
+        "YST726849-60",
+        "LN3340K2"
+      ],
+      "fins": [
+        "96CQ8",
+        "7CQ"
+      ],
+      "drawings": [
+        "D42401292851"
+      ],
+      "software": [],
+      "zones": [
+        "116",
+        "165"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00451"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-164355",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-M-42-40-12-900-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software management module",
+      "last time buy",
+      "signed package",
+      "staging",
+      "avionics rack"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Avionics In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "MRD-42-1013",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Within 36 months after the date of this Service Bulletin, and in any case before the aircraft next requires a multi-system software update.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-164355",
+      "manpower": {
+        "elapsed_time_hours": 10,
+        "manhours": 22,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K4240-1013-01",
+        "kit_available_from": "2025-02-10",
+        "parts_required": [
+          {
+            "part_number": "D4240123411827",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "LN3340K2",
+            "qty": 24,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "YST726849-60",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Connector sealing compound",
+          "Cable tie, flame resistant"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Contact insertion and extraction tool set",
+          "Insulation resistance tester"
+        ]
+      },
+      "weight_change_kg": -1.9,
+      "accomplishment_steps": 8,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2024-10-14",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MRD-42-1013",
+    "doc_type": "SB",
+    "title": "Avionics — Software Management — Replacement of the Onboard Loadable Software Module",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-04",
+      "reason": "Access, power isolation and reinstatement content added so that the bulletin reads as an in-service instruction rather than as a production line completion.",
+      "raised_by_pawo": "PAWO-164355-01",
+      "raised_by_finding": "F03",
+      "finding_type": "EFFECTIVITY_INVALIDATION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-40",
+      "ata_6d": "42-40-12",
+      "title": "Software Loading — Onboard Loadable Software Management"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00451"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-164355"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-03-25",
+      "released": "2024-10-14",
+      "revised": "2026-08-04",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Replacement of the software management module and its flight deck control panel by units with four times the storage and hardware support for signed load packages, with the access, isolation and reinstatement content needed to do the work on a delivered aircraft.",
+    "sections": {
+      "planning_reason": "The installed module cannot hold more than two pending loads at once, so an operator doing a multi-system update has to make several visits to the aircraft with a portable loader. Separately, the manufacturer of the memory device issued an obsolescence notice with a last-time-buy in 2025, which makes the delivered standard unsupportable in the medium term. Operators that do not embody this Service Bulletin will find spares availability falling from 2026 onwards.",
+      "description": "The management module is replaced by a unit with four times the non-volatile storage and hardware support for signed load packages, so that the integrity check is done on board rather than on the loader. The flight deck control panel is replaced by a version with a package staging page and a load history display. The rack position and the mounting are unchanged, but the connector pinout differs and the transceiver and loading module cabling is remade. This revision adds the content an in-service accomplishment needs and the production line did not: getting into the avionics bay on a delivered aircraft, isolating the loading bus and the flight deck panel supply, and putting the bay and the panel back with the checks that prove it.",
+      "accomplishment_summary": "Position the aircraft with ground power available and the cabin lighting on; the avionics bay has no permanent lighting and a portable lamp is needed at the rack face. Open the avionics bay access in zone 116 and remove the two lower rack fairings; on an aircraft with the cargo liner fitted, the liner panel at the aft face of the bay has to come out first and is not reusable if its edge seal tears. Get access to the flight deck control panel in zone 165. Make the aircraft electrically safe: open and tag the loading bus breaker and the flight deck panel supply breaker, and confirm zero volts at the module connector before anything is disturbed. Remove the management module YST726849-60 and the flight deck control panel. Remake the cabling to the transceiver 96CQ8 and the loading module 7CQ to the new pinout shown in the accomplishment instructions. Install the replacement module and the replacement control panel D4240123411827 with screws LN3340K2. Restore the breakers, do the power-up test and confirm that the module reports the expected storage size. Stage a signed test package and confirm that the on-board integrity check passes. Do the software configuration report and compare it with the aircraft record. Do the test steps of task AMM-M-42-40-12-900-020-A. Refit the rack fairings, renew the cargo liner panel seal, close the bay and do a bay lighting and smoke detection functional check before the aircraft is released. Record the embodiment and inform the operator maintenance system owner of the changed report format.",
+      "effectivity_note": "Applicable to all MERIDIAN models from MSN M00001 through M00451 that are still pre MOD-164355. Aircraft from the production cut-in onward already carry the new module. There is no partial embodiment: the module and the control panel must be changed together because the staging page does not exist on the earlier panel.",
+      "material_note": "Kit K4240-1013-01 contains the module, the control panel, the cabling change content and the screws. Lead time is twenty-six weeks. The removed module is to be returned to Aeralis for the supplier credit scheme. Order the cargo liner edge seal separately: it is not in the kit and it is almost always damaged when the aft bay liner panel is removed on a delivered aircraft. Operators are reminded that the aircraft software configuration report changes format on embodiment and that their maintenance system may need updating before the aircraft returns to service."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4240123411827",
+        "YST726849-60",
+        "LN3340K2"
+      ],
+      "fins": [
+        "96CQ8",
+        "7CQ"
+      ],
+      "drawings": [
+        "D42401292851"
+      ],
+      "software": [],
+      "zones": [
+        "116",
+        "165"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00451"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-164355",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-M-42-40-12-900-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software management module",
+      "in-service accomplishment",
+      "power isolation",
+      "avionics bay access",
+      "reinstatement check"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Avionics In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "MRD-42-1013",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Within 36 months after the date of this Service Bulletin, and in any case before the aircraft next requires a multi-system software update.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-164355",
+      "manpower": {
+        "elapsed_time_hours": 16,
+        "manhours": 34,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K4240-1013-01",
+        "kit_available_from": "2025-02-10",
+        "parts_required": [
+          {
+            "part_number": "D4240123411827",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "LN3340K2",
+            "qty": 24,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "YST726849-60",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Connector sealing compound",
+          "Cable tie, flame resistant"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Contact insertion and extraction tool set",
+          "Insulation resistance tester"
+        ]
+      },
+      "weight_change_kg": -1.9,
+      "accomplishment_steps": 14,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2024-10-14",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-08-04",
+          "reason": "In-service access, power isolation and reinstatement content added"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

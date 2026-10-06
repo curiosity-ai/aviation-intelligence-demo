@@ -1,0 +1,435 @@
+[
+  {
+    "doc_id": "PAWO-158402-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Replacement of the Fwd Lower Shell Lap Joint by a Machined Integral Splice Strap",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-12",
+      "title": "Fuselage Section 13 — Forward — Skin Panels"
+    },
+    "secondary_ata": [
+      "51-20",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z00238",
+          "to": "Z03884"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56B",
+        "VNT-2500A"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-24",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the forward lower shell lap joint replacement, covering the three earlier generations of answer on the same joint, the surface protection process it depends on, the published repairs it would invalidate and the cargo compartment wiring it disturbs.",
+    "sections": {
+      "objective": "Identify every released or candidate item of technical documentation applicable to ZEPHYR-20 and ZEPHYR-22 aircraft in the MSN Z00238 to Z03884 range that the proposed machined splice strap would supersede, depend on, invalidate or force to be re-issued, and establish which of those constraints are hard enough to block the design freeze.",
+      "scope_note": "The search covers ATA 53-21 as the primary chapter, ATA 51-20 because the joint uses a surface protection process that is itself under change, and ATA 92-21 because the forward cargo compartment cable route is supported off the joint fastener line. ATA 25-50 cargo lining was included in the first pass and then excluded: the lining panels are removed and refitted unchanged and no lining content is affected. Powerplant, avionics and cabin chapters were not searched. The MSN range was taken from the candidate rather than from the originating operator, because two other operators have the same finding history on the same build standard.",
+      "method_note": "Entity linking was run first, seeded from the five part numbers, the three drawing numbers and the three zones carried by the candidate. Semantic similarity was then run over titles, abstracts and reason-for-change text using the three seed phrases below, and the two result sets were merged. Findings surfaced by only one of the two methods are marked accordingly. Two findings were reached by following the supersession and prerequisite edges outward from the entity hits rather than by either search directly, and are marked as graph traversal.",
+      "findings_summary": "Eight items have been confirmed and two of them block the design freeze. The first blocker is the supersession itself: the candidate cuts out the bonded strap standard that the fleet has been progressively brought to, so the two cannot coexist on one joint and the earlier standard has to be formally superseded rather than left open. The second blocker is the surface protection process. The candidate assumes the chromate-free system on every new faying surface, and that system is released to production but only reaches in-service work through a standard practices bulletin that a station must hold an extended approval to use. Three of the four operators in the target population use stations that do not yet hold it. Beyond the blockers, the oldest re-sealing bulletin is written for aircraft that are not yet at the bonded strap standard and its effectivity statement becomes meaningless once a third standard exists on the same joint. A published skin repair scheme for the same panel was found only by the descriptive text, because it shares no part number, no drawing and no zone with the candidate: it describes a flush bonded patch in the lower forward barrel where the candidate describes a machined splice at the longitudinal joint, and the two occupy the same material. Finally, the forward cargo compartment cable route is supported at four bracket stations that land on the joint fastener line and must be re-supported rather than re-clipped.",
+      "next_steps": "Obtain a written position from materials and processes on whether the chromate-free system can be released to the target stations before the retrofit window opens, and cost the alternative of shipping the aircraft to an approved station. Raise a change request against the oldest re-sealing bulletin so that its effectivity is re-stated once the candidate exists. Ask the repair design owner whether an aircraft carrying the flush bonded patch can be modified at all. Commission a wiring re-support study for the four bracket stations before the design review in June."
+    },
+    "entities": {
+      "part_numbers": [
+        "ORV288354-46",
+        "MOD50333-97",
+        "D5321120539448",
+        "AES645587-2A",
+        "D5120112339055"
+      ],
+      "fins": [],
+      "drawings": [
+        "D53211223480",
+        "D53211263552",
+        "D51201131570"
+      ],
+      "software": [],
+      "zones": [
+        "113",
+        "115",
+        "121"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-158402",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-Z-260114",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "lap joint",
+      "supersession",
+      "surface protection",
+      "conflict search"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-158402-01",
+      "subject_mod": "MOD-158402",
+      "source_io": "IO-Z-260114",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": true,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-02-24",
+      "due_date": "2026-06-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA",
+          "ETGC",
+          "ELSC"
+        ],
+        "estimated_manhours": 180,
+        "spent_manhours": 96
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22"
+        ],
+        "ata_2d": [
+          "53",
+          "51",
+          "92"
+        ],
+        "ata_4d": [
+          "53-21",
+          "51-20",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "Z00238",
+          "to": "Z03884"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "ORV288354-46",
+            "MOD50333-97",
+            "D5321120539448",
+            "D5120112339055"
+          ],
+          "fins": [],
+          "drawings": [
+            "D53211223480",
+            "D53211263552"
+          ],
+          "zones": [
+            "113",
+            "115",
+            "121"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "corrosion and cracking at a longitudinal lap joint in the lower fuselage shell",
+          "external doubler or patch repair on a thin lower shell skin panel",
+          "chromate-free conversion coating released for in-service structural work"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released and candidate modifications on ATA 53-21 and 51-20",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review published repair schemes on the forward lower shell panels",
+          "method": "SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm chromate-free process availability at the target repair stations",
+          "method": "SME_INTERVIEW",
+          "owner": "ETGC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Assess the forward cargo compartment cable route support stations",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-153870",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ORV288354-46",
+              "MOD50333-97"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "121"
+            ],
+            "shared_ata_6d": [
+              "53-21-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The candidate cuts out the joint that the bonded strap standard covers, and the strap is removed as part of the operation. The two standards cannot coexist on one joint and the earlier one must be formally superseded, not simply left available.",
+          "resolution": "Declare the supersession explicitly on the candidate and withdraw the strap kit from new orders once the candidate is released."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-157355",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5120112339055"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "121"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "Every new faying surface created by the candidate is protected with the chromate-free system. That system is cut into production but is only available for in-service work at stations holding an extended process approval, which three of the four operators in the target population do not have.",
+          "resolution": "Declare the surface protection standard as a post-mod applicability condition and agree a station qualification plan before the retrofit window opens."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "ZPH-53-1004",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ORV288354-46"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113"
+            ],
+            "shared_ata_6d": [
+              "53-21-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The re-sealing bulletin is effective only on aircraft that have not been brought to the bonded strap standard. Once a third standard exists on the same joint its effectivity statement no longer describes any real fleet condition, and an operator reading it could open a joint that the candidate has already replaced.",
+          "resolution": "Re-issue the effectivity statement with an explicit exclusion for aircraft at the machined splice standard, or cancel the bulletin outright."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-Z-53-21-12-901",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The repair and the candidate describe the same material in entirely different vocabulary — 'flush bonded patch in the lower forward barrel skin' against 'machined splice strap across the longitudinal joint' — and share no part number, no drawing, no FIN and no zone. Only the descriptive text connects them."
+          },
+          "rationale": "An aircraft carrying the flush bonded patch has a machined recess and a bonded insert in the material that the candidate cuts out. The combined configuration has never been substantiated and the patch's own bond line inspection cannot be performed once the splice strap covers it.",
+          "resolution": "Obtain a position from the repair design owner on whether a patched aircraft can be modified, and add an explicit pre-embodiment repair survey to the retrofit bulletin."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "IPC-Z-53-21-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "MOD50333-97",
+              "D5321120539448"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "121"
+            ],
+            "shared_ata_6d": [
+              "53-21-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries two joint standards on separate sheets. A third standard needs a third sheet and a re-numbering of the alternate items, because the current pre and post effectivity notation only distinguishes two configurations.",
+          "resolution": "Raise a publication change request for a third sheet and agree the alternate item numbering before the retrofit bulletin is issued."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-150214",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "INFORMATIONAL",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "ORV288354-46"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "121"
+            ],
+            "shared_ata_6d": [
+              "53-21-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The first generation of answer on this joint is already superseded and is reached only by following the supersession chain outward. It is listed so that the design review sees the full history of the joint and can state why a third attempt is expected to close it.",
+          "resolution": "No action beyond recording the chain in the modification dossier."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "WDM-Z-92-21-12",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "121"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The forward cargo compartment cable route is supported at eight bracket stations, four of which land on the joint fastener line that the candidate removes. The wiring sheet states that a removed bracket station must be re-supported rather than re-clipped, which is design work and not a bulletin step.",
+          "resolution": "Commission a re-support study for the four affected bracket stations and reflect the result in both the modification and the wiring sheet."
+        },
+        {
+          "finding_id": "F08",
+          "doc_id": "ZPH-51-1008",
+          "doc_type": "SB",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5120112339055"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "121"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents describe the release of a chromate-free protection process to structural joints, in closely related wording, and they also share the process reference article."
+          },
+          "rationale": "The candidate's fatigue substantiation assumes the adhesion performance of the chromate-free system, whose acceptance depends on a per-shift coupon regime defined in the standard practices bulletin. If a station applies the process without the coupon regime the substantiation is not supported, which is a certification issue and not only a quality one.",
+          "resolution": "State the coupon regime as a mandatory condition inside the retrofit bulletin rather than by reference, and have the certification office confirm the wording."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-151633",
+          "doc_type": "MOD",
+          "reason": "Title and vocabulary are almost identical — reinforcement of longitudinal splice plates — and the ATA 2D chapters are adjacent, but this modification applies only to ZEPHYR-24 Evo aircraft at the aft cargo door surround. There is no MSN overlap with the ZEPHYR-20 and ZEPHYR-22 classic range under analysis, no shared part number and no shared zone."
+        },
+        {
+          "doc_id": "SRM-Z-53-31-12-902",
+          "doc_type": "SRM",
+          "reason": "Describes an external doubler repair at a longitudinal seam in almost the same words as the candidate's own description, and sits in the same ATA 2D chapter, but it applies to the aft fuselage skin in section 15/16. It shares no part number, no zone and no drawing with the candidate and cannot be affected by work in section 13."
+        }
+      ],
+      "conclusion": "Not yet issued. Two blocking constraints are confirmed, one repair conflict is under assessment with the repair design owner and the wiring re-support study has not started.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

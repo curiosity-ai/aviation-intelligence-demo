@@ -1,0 +1,188 @@
+[
+  {
+    "doc_id": "MRD-22-1009",
+    "doc_type": "SB",
+    "title": "Auto Flight — Throttle Actuation — Install the Wide Thermal Margin Circuit Card",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-06-23",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-12",
+      "title": "Auto Throttle — Throttle Actuation"
+    },
+    "secondary_ata": [
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-02-27",
+      "released": "2023-06-23",
+      "revised": null,
+      "effective": "2023-07-21"
+    },
+    "abstract": "Replaces the throttle actuation circuit card with the wide thermal margin variant and fits the current grommet at the harness entry, addressing removals concentrated on hot-region operators.",
+    "sections": {
+      "planning_reason": "Removal rate for the throttle actuation function reached twice the predicted figure on aircraft based in hot regions, with twenty-nine of forty-one returned cards showing no failure on the bench. Thermal survey found the card running within four degrees of its rated maximum whenever the forward galley loading blocks the pedestal outlet, which is normal practice for most operators. The wider margin removes the sensitivity without touching the cabin monument.",
+      "description": "This bulletin replaces the circuit card with the variant built on the current process, with a twenty degree wider rated margin and a revised conformal coating, and replaces the grommet at the harness entry with the current item to close a ventilation leak found during the survey. The transceiver, interface unit and pedestal ventilation are unchanged.",
+      "accomplishment_summary": "Remove electrical power from the pedestal and open the pedestal access panel. Extract the existing circuit card from its slot, noting the orientation, and fit the new card in the same slot until the latch engages. Remove the grommet at the harness entry and fit the current item, dressing the harness so that no load is taken at the entry. Restore power and do the functional test of the throttle actuation in AMM-M-22-30-12-700-051-A, confirming the new card identification is reported by the built-in test. Check autothrust engagement and disconnect at both levers, close the panel and make the records entry.",
+      "effectivity_note": "Applies to all MERIDIAN-42 and MERIDIAN-46 aircraft delivered before MSN M00351. Cards may be mixed across the fleet but not within an aircraft, because the built-in test reports a single configuration for the pair.",
+      "material_note": "Kit contains one circuit card and one grommet per aircraft. The removed card is returned within thirty days and is credited if it passes bench test, which most do. No consumables beyond the identification label."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2230121548877",
+        "AGS433103-4C"
+      ],
+      "fins": [
+        "363CC",
+        "41CE4"
+      ],
+      "drawings": [
+        "D22301213347"
+      ],
+      "software": [],
+      "zones": [
+        "226",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00351"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168264",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-M-22-30-12-700-051-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-M-22-30-11-812-803",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-M-DSC-22-30-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "throttle actuation",
+      "circuit card",
+      "thermal margin",
+      "grommet",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Customer Services"
+    },
+    "type_data": {
+      "sb_number": "MRD-22-1009",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Within 36 months of the date of this Service Bulletin, or at the next throttle actuation removal.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-168264",
+      "manpower": {
+        "elapsed_time_hours": 4,
+        "manhours": 6,
+        "personnel": 1,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K2230-1009-01",
+        "kit_available_from": "2023-08-25",
+        "parts_required": [
+          {
+            "part_number": "D2230121548877",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS433103-4C",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2230121548877",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Identification label set",
+          "Antistatic bag, card size"
+        ],
+        "tooling": [
+          "Antistatic wrist strap and mat",
+          "Card extraction tool"
+        ]
+      },
+      "weight_change_kg": 0.1,
+      "accomplishment_steps": 7,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-06-23",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

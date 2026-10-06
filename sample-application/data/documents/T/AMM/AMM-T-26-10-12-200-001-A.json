@@ -1,0 +1,345 @@
+[
+  {
+    "doc_id": "AMM-T-26-10-12-200-001-A",
+    "doc_type": "AMM",
+    "title": "Cargo Smoke Detection Sampling Line — Flow and Integrity Check",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2009-04-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2008-12-09",
+      "released": "2009-04-13",
+      "revised": "2009-04-13",
+      "effective": "2009-05-04"
+    },
+    "abstract": "Flow and integrity check of the cargo compartment smoke sampling line, measuring the flow drawn at every sampling point and comparing it with the acceptance band stated for the compartment volume at the recorded temperature.",
+    "sections": {
+      "purpose": "This task gives the measurement of sampling flow at every sampling point of a cargo compartment. Do it after any work on the sampling line and as the closing check of a false warning investigation.",
+      "job_setup_note": "The compartment must be empty and the lining panels along the sampling run removed at the points to be measured. Connect the flow test set at the detector inlet and let the system run for ten minutes before the first reading, because the flow settles as the line warms. Record the compartment temperature; the acceptance band is temperature dependent and is stated for the compartment volume as a whole.",
+      "procedure": "Empty the compartment and remove the lining panels at the sampling points listed in the illustration. Apply ground power and let the detection system run for ten minutes. Record the compartment temperature. Connect the flow test set at the inlet of the detection sensor assembly D2610001304989. Measure and record the flow at the detector inlet. CAUTION: DO NOT BLOW COMPRESSED AIR INTO A SAMPLING LINE TO CLEAR A LOW FLOW READING. THE DEPOSIT WILL BE DRIVEN INTO THE DETECTOR CHAMBER AND THE UNIT WILL THEN NEED REPLACEMENT. Occlude each sampling point in turn and record the change in flow, which identifies the point that the line is drawing from. Compare each reading against the band for the recorded temperature. WARNING: DO NOT ENTER THE COMPARTMENT WHILE THE HEATED BLEED IS ENERGISED. THE BLEED ELEMENT AND THE ADJACENT PIPEWORK REACH TEMPERATURES THAT CAUSE BURNS. Inspect the condensate trap at the low point and record whether standing water is present. Where the flow is below the band, do the sampling line cleaning task before any further work.",
+      "close_out": "Disconnect the flow test set and refit the lining panels. Do a smoke generator test on the compartment if any sampling point was disturbed. Record the flow at each point and the compartment temperature. Report any standing water in the condensate trap to the operator engineering department."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610001304989",
+        "UMD917763-33",
+        "AES545422-2C"
+      ],
+      "fins": [
+        "2841WD"
+      ],
+      "drawings": [
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "115",
+        "131",
+        "151"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-26-10-12-100-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "sampling line",
+      "flow check",
+      "acceptance band",
+      "condensate trap",
+      "smoke detection"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "26-10-12-200-001-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. One sampling loop per compartment; the acceptance band is stated for the compartment volume.",
+      "manhours": 9.0,
+      "personnel": 2,
+      "elapsed_time_hours": 6.0,
+      "access": {
+        "zones": [
+          "111",
+          "115",
+          "131",
+          "151"
+        ],
+        "access_panels": [
+          "111BL",
+          "115CL",
+          "131AL",
+          "151AR"
+        ],
+        "doors": [
+          "Fwd cargo door",
+          "Aft cargo door",
+          "Bulk cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not enter the compartment while the heated bleed is energised.",
+          "Do not use compressed air to clear a low flow reading.",
+          "Record the compartment temperature before the first reading."
+        ],
+        "tooling": [
+          {
+            "reference": "98D26101-052",
+            "description": "Sampling flow test set"
+          },
+          {
+            "reference": "98D26101-061",
+            "description": "Sampling point occlusion plug set"
+          }
+        ],
+        "consumables": [
+          "Cleaning cloth, lint free",
+          "Sealing caps, sampling line"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-26-10-12-100-002-A"
+      ],
+      "steps": 10,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-T-26-10-12-200-001-A",
+    "doc_type": "AMM",
+    "title": "Cargo Smoke Detection Sampling Line — Flow and Integrity Check",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2018-06-05",
+      "reason": "Check restated as a per loop procedure with the other loop isolated at the detector inlet and a per loop acceptance band agreed with the detection supplier.",
+      "raised_by_pawo": "PAWO-143950-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2008-12-09",
+      "released": "2009-04-13",
+      "revised": "2018-06-05",
+      "effective": "2018-07-03"
+    },
+    "abstract": "Flow and integrity check of the cargo compartment smoke sampling lines, measuring the flow at each sampling point and, on dual loop aircraft, the split between the two loops.",
+    "sections": {
+      "purpose": "This task gives the measurement of sampling flow at every sampling point of a cargo compartment and, where two loops are fitted, the flow split between them. Do it after any work on the sampling line and as the closing check of a false warning investigation.",
+      "job_setup_note": "The compartment must be empty and the lining panels along the sampling run removed at the points to be measured. Connect the flow test set at the detector inlet and let the system run for ten minutes before the first reading, because the flow settles as the line warms. Record the compartment temperature; the acceptance band is temperature dependent. On a dual loop compartment the two loops draw from one volume, so the band is not the single loop band doubled and neither loop can be measured while the other is drawing. Take a blanking cap set for the loop that is not being measured.",
+      "procedure": "Empty the compartment and remove the lining panels at the sampling points listed in the illustration. Apply ground power and let the detection system run for ten minutes. Record the compartment temperature. On a dual loop compartment, isolate the loop that is not being measured by fitting the blanking cap at its detector inlet and confirm at the maintenance terminal that the isolated loop reports no flow. Connect the flow test set at the inlet of the detection sensor assembly D2610001304989 of the loop being measured. Measure and record the flow at the detector inlet. CAUTION: DO NOT BLOW COMPRESSED AIR INTO A SAMPLING LINE TO CLEAR A LOW FLOW READING. THE DEPOSIT WILL BE DRIVEN INTO THE DETECTOR CHAMBER AND THE UNIT WILL THEN NEED REPLACEMENT. Occlude each sampling point of that loop in turn and record the change in flow, which identifies the point that the line is drawing from. Compare each reading against the per loop band for the recorded temperature; do not use the single loop band on a dual loop compartment. WARNING: DO NOT ENTER THE COMPARTMENT WHILE THE HEATED BLEED IS ENERGISED. THE BLEED ELEMENT AND THE ADJACENT PIPEWORK REACH TEMPERATURES THAT CAUSE BURNS. Remove the blanking cap, isolate the first loop and repeat the whole sequence on the second loop. Calculate the split between the two loops and compare it with the tolerance. Inspect the condensate trap at the low point and record whether standing water is present. Where the flow is below the band, or the split is outside tolerance, do the sampling line cleaning task before any further work.",
+      "close_out": "Disconnect the flow test set, confirm that no blanking cap has been left in place and refit the lining panels. Do a smoke generator test on the compartment if any sampling point was disturbed. Record the flow at each point per loop, the compartment temperature and, where applicable, the loop split. Report any standing water in the condensate trap to the operator engineering department."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610001304989",
+        "UMD917763-33",
+        "AES545422-2C"
+      ],
+      "fins": [
+        "2841WD"
+      ],
+      "drawings": [
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "115",
+        "131",
+        "151"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-26-10-12-100-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "sampling line",
+      "flow check",
+      "loop split",
+      "condensate trap",
+      "smoke detection"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "26-10-12-200-001-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. On aircraft with the dual sampling loop standard the check is run once per loop with the other loop isolated, against the per loop band; the loop split measurement applies to those aircraft only.",
+      "manhours": 9.0,
+      "personnel": 2,
+      "elapsed_time_hours": 6.0,
+      "access": {
+        "zones": [
+          "111",
+          "115",
+          "131",
+          "151"
+        ],
+        "access_panels": [
+          "111BL",
+          "115CL",
+          "131AL",
+          "151AR"
+        ],
+        "doors": [
+          "Fwd cargo door",
+          "Aft cargo door",
+          "Bulk cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not enter the compartment while the heated bleed is energised.",
+          "Do not use compressed air to clear a low flow reading.",
+          "Record the compartment temperature before the first reading.",
+          "Confirm that no blanking cap remains fitted before the compartment is closed."
+        ],
+        "tooling": [
+          {
+            "reference": "98D26101-052",
+            "description": "Sampling flow test set"
+          },
+          {
+            "reference": "98D26101-061",
+            "description": "Sampling point occlusion plug set"
+          }
+        ],
+        "consumables": [
+          "Cleaning cloth, lint free",
+          "Sealing caps, sampling line"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-26-10-12-100-002-A"
+      ],
+      "steps": 14,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

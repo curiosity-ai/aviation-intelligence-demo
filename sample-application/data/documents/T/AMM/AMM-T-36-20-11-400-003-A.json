@@ -1,0 +1,185 @@
+[
+  {
+    "doc_id": "AMM-T-36-20-11-400-003-A",
+    "doc_type": "AMM",
+    "title": "Bleed Monitoring Computer — Installation and Bleed System Functional Test",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-04-08",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-20",
+      "ata_6d": "36-20-11",
+      "title": "Pneumatic Indicating — Bleed Monitoring Computer"
+    },
+    "secondary_ata": [
+      "36-20-12",
+      "30-10-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-12-04",
+      "released": "2021-04-22",
+      "revised": "2022-04-08",
+      "effective": "2022-05-16"
+    },
+    "abstract": "Installation of the bleed monitoring computer, connection of the sensing harnesses in the identified order, software loading and the bleed system functional test including the sensor disagreement check.",
+    "sections": {
+      "purpose": "This task gives the procedure to install the bleed monitoring computer, to connect the pressure and temperature sensing harnesses in the correct order, to load the operational and built-in test software and to do the bleed system functional test.",
+      "job_setup_note": "The sensing harnesses must be connected to the inputs identified during removal. On a dual sensing installation the disagreement logic reads channel A against channel B, so a crossed pair produces a permanent disagreement rather than a fault. The functional test needs a pneumatic ground cart and a person at the flight deck. Software is loaded after the computer is installed and connected, never before.",
+      "procedure": "1. Make sure that the pneumatic system is depressurised and that electrical power is removed. 2. Remove the protective cover from the rack position. 3. Put the computer in the rack and push it home until the rear connector engages, then close the rack latch. 4. Connect the temperature sensing harness. 5. Connect the pressure sensing harness or harnesses to the inputs identified during removal. CAUTION: CONFIRM THE LABELS BEFORE YOU CONNECT. A CROSSED PAIR GIVES A PERMANENT DISAGREEMENT AND NOT A FAULT INDICATION. 6. Fit new clamps at every harness support position. 7. Restore electrical power. 8. Load the operational software and then the built-in test software, and confirm both part numbers on the maintenance terminal. 9. Connect the pneumatic ground cart and raise the duct pressure slowly to the test pressure. WARNING: DO NOT WORK IN THE WING ROOT FAIRING WHILE THE DUCT IS PRESSURISED. 10. Do the bleed system functional test and record the pressure and temperature indications. 11. On a dual sensing installation, simulate a single sensor drift on the maintenance terminal and confirm that a maintenance message is produced and that no bleed shutdown occurs. 12. Reduce the duct pressure and disconnect the ground cart. 13. Close the wing root fairing.",
+      "close_out": "Remove the warning notice and confirm that no maintenance message remains active. Record the computer part number, both software part numbers and the functional test result in the aircraft maintenance record. Confirm that the sensing harness labels have been removed before the fairing is closed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3620112949513",
+        "D3620115643168",
+        "D3620117912452",
+        "D3620117993254",
+        "LN276052K6",
+        "LN546613-82"
+      ],
+      "fins": [
+        "154PU",
+        "4PU9",
+        "5172PN"
+      ],
+      "drawings": [
+        "D36201195418"
+      ],
+      "software": [
+        "LC8RC1C4C75",
+        "LG2RD2CCF4D"
+      ],
+      "zones": [
+        "683",
+        "531",
+        "141"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-36-20-11-000-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-30-10-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bleed monitoring computer",
+      "installation",
+      "sensor disagreement",
+      "software load",
+      "functional test"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "36-20-11-400-003-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. Step 11 applies only to aircraft post MOD-146910.",
+      "manhours": 5.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.5,
+      "access": {
+        "zones": [
+          "683",
+          "531",
+          "141"
+        ],
+        "access_panels": [
+          "683AL",
+          "683BR",
+          "531AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not work in the wing root fairing while the duct is pressurised.",
+          "Make sure that electrical power is removed until step 7.",
+          "Wear hearing protection near the pneumatic ground cart."
+        ],
+        "tooling": [
+          {
+            "reference": "98D36201-052",
+            "description": "Pneumatic leak test set"
+          },
+          {
+            "reference": "98D31501-027",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [
+          "High temperature anti-seize compound",
+          "Lockwire 0.8 mm"
+        ],
+        "expendables": [
+          {
+            "part_number": "LN276052K6",
+            "qty": 18
+          },
+          {
+            "part_number": "LN546613-82",
+            "qty": 6
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-36-20-11-000-003-A",
+        "AMM-T-30-10-11-400-001-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

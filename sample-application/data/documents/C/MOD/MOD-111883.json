@@ -1,0 +1,374 @@
+[
+  {
+    "doc_id": "MOD-111883",
+    "doc_type": "MOD",
+    "title": "Probe Heat Element Health Judged by Thermal Response Instead of Resistance",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-06",
+      "reason": "Original issue of the thermal response element health proposal dossier.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "TJT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111159"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-01-28",
+      "released": null,
+      "revised": "2026-02-06",
+      "effective": null
+    },
+    "abstract": "Replacing the resistance-band judgement of heating element health with a measurement of how fast each element warms, which removes the remaining cold-soak false declarations without weakening open-circuit detection.",
+    "sections": {
+      "reason": "Temperature compensation reduced but did not eliminate the cold-soak false declaration. Sixty-one occurrences were reported in the 2025 winter across fourteen aircraft at stations where the overnight minimum falls below minus twenty-five degrees, and four probe heat computers were removed with no fault found. The compensation curve is fitted to total air temperature at the probe base, which lags the element itself by several minutes after a long cold soak, so the accept band is still wrong at the moment of the first test. Operators consider the residual rate unacceptable and one has asked for the caution to be inhibited on the ground, which the safety case does not allow.",
+      "description": "Element health is judged from the rate of resistance rise in the first eight seconds of energisation rather than from an absolute resistance band. A healthy element warms at a characteristic rate whatever its starting temperature, and an open or partly open element does not warm at all, so the discrimination no longer depends on knowing the starting temperature. The probe heat computer takes boot software LG6C6545962. The supply pipe D3030115331360 is retained from the current standard, the supply solenoid D3030009094020 is replaced by a faster acting item so that the energisation edge is clean enough to measure, and the sense pipe D3030004604475 is re-routed away from the bleed duct to reduce thermal noise. The probe heat regulator 4618WX and the system switch 386WX5 keep their identifiers. Revised detail is on drawing D30301166008. Work is done in zones 162, 211 and 214.",
+      "effects": "Mass increase of 0.4 kg per aircraft. No electrical load change in steady state, with a 2 A higher inrush per element for the first eight seconds. The software is not interchangeable with the temperature-compensated standard because the faster solenoid is required for the measurement to be valid, so the two parts move together. Minimum equipment list content is unchanged. Maintenance manual content for the probe heat system test and for the software load task both need re-issue, and the existing trouble shooting procedure is superseded in full because the fault codes change meaning.",
+      "embodiment_note": "Proposed as a production cut-in with a fleet retrofit at line level, about three hours per aircraft. Embodiment is only possible on aircraft already at the temperature-compensated standard, because the sense harness break-out introduced there is assumed by this change.",
+      "open_points": "Pre-analysis must confirm that the retrofit Service Bulletin for the temperature-compensated standard does not become misleading once this change exists, because its effectivity is written for aircraft that have not yet had that standard and gives no ordering guidance. It must establish whether this change stands alongside the compensated standard or replaces it, since both judge the same element from the same harness. It must also confirm that the higher inrush is inside the probe heat contactor duty and that the air data trouble shooting content does not need to change with the fault code meanings."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030115331360",
+        "D3030009094020",
+        "D3030004604475"
+      ],
+      "fins": [
+        "4618WX",
+        "386WX5"
+      ],
+      "drawings": [
+        "D30301166008"
+      ],
+      "software": [
+        "LG6C6545962"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-250347",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-111159",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-900-002-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-30-30-11-810-801",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "probe heat",
+      "thermal response",
+      "cold soak",
+      "false declaration",
+      "element health"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111883,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1323",
+          "CS 25.1309",
+          "CS 25.1419"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.4,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3030009094020",
+        "D3030004604475"
+      ],
+      "fins_affected": [
+        "4618WX",
+        "386WX5"
+      ],
+      "software_affected": [
+        "LG6C6545962"
+      ],
+      "estimated_manhours": 52,
+      "estimated_cost_keur": 340,
+      "lead_time_weeks": 30,
+      "production_impact": "Cut-in proposed once the faster solenoid is qualified",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-111883",
+    "doc_type": "MOD",
+    "title": "Probe Heat Element Health Judged by Thermal Response Instead of Resistance",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-03",
+      "reason": "Supersession of the compensated standard declared here, with the hardware it installs recorded as retained rather than replaced.",
+      "raised_by_pawo": "PAWO-111159-01",
+      "raised_by_finding": "F01",
+      "finding_type": "SUPERSESSION"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "TJT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111159"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-01-28",
+      "released": null,
+      "revised": "2026-08-03",
+      "effective": null
+    },
+    "abstract": "Replacing the resistance-band judgement of heating element health with a measurement of how fast each element warms, which removes the remaining cold-soak false declarations without weakening open-circuit detection.",
+    "sections": {
+      "reason": "Temperature compensation reduced but did not eliminate the cold-soak false declaration. Sixty-one occurrences were reported in the 2025 winter across fourteen aircraft at stations where the overnight minimum falls below minus twenty-five degrees, and four probe heat computers were removed with no fault found. The compensation curve is fitted to total air temperature at the probe base, which lags the element itself by several minutes after a long cold soak, so the accept band is still wrong at the moment of the first test. Operators consider the residual rate unacceptable and one has asked for the caution to be inhibited on the ground, which the safety case does not allow.",
+      "description": "Element health is judged from the rate of resistance rise in the first eight seconds of energisation rather than from an absolute resistance band. A healthy element warms at a characteristic rate whatever its starting temperature, and an open or partly open element does not warm at all, so the discrimination no longer depends on knowing the starting temperature. The probe heat computer takes boot software LG6C6545962. The supply pipe D3030115331360 is retained from the current standard, the supply solenoid D3030009094020 is replaced by a faster acting item so that the energisation edge is clean enough to measure, and the sense pipe D3030004604475 is re-routed away from the bleed duct to reduce thermal noise. The probe heat regulator 4618WX and the system switch 386WX5 keep their identifiers. Revised detail is on drawing D30301166008. Work is done in zones 162, 211 and 214.",
+      "effects": "Mass increase of 0.4 kg per aircraft. No electrical load change in steady state, with a 2 A higher inrush per element for the first eight seconds. The software is not interchangeable with the temperature-compensated standard because the faster solenoid is required for the measurement to be valid, so the two parts move together. This change supersedes the judgement logic of MOD-111159 and nothing else about it: the supply pipe, the probe base bracket and the per-element sense harness that standard installs are all retained and are read by the new logic, so an operator part way through that retrofit campaign is not paying for work that will be undone. Minimum equipment list content is unchanged. Maintenance manual content for the probe heat system test and for the software load task both need re-issue, and the existing trouble shooting procedure is superseded in full because the fault codes change meaning.",
+      "embodiment_note": "Proposed as a production cut-in with a fleet retrofit at line level, about three hours per aircraft. Embodiment is only possible on aircraft already at the temperature-compensated standard, because the sense harness break-out introduced there is assumed by this change. The supersession of MOD-111159 is declared here rather than on that dossier, because it only takes effect if this proposal is launched; the statement issued to the operators still running the compensated retrofit says exactly that, and confirms that the hardware they are fitting is kept.",
+      "open_points": "Pre-analysis must confirm that the higher inrush is inside the probe heat contactor duty, that the air data trouble shooting content does not need to change with the fault code meanings, and how a technician is to establish on the aircraft which of the three standards may be loaded, since the discriminator for this one is the supply solenoid response and nothing about it can be seen from the connector."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030115331360",
+        "D3030009094020",
+        "D3030004604475"
+      ],
+      "fins": [
+        "4618WX",
+        "386WX5"
+      ],
+      "drawings": [
+        "D30301166008"
+      ],
+      "software": [
+        "LG6C6545962"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-250347",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-111159",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-900-002-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-30-30-11-810-801",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "probe heat",
+      "thermal response",
+      "supersession",
+      "retained hardware",
+      "element health"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111883,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1323",
+          "CS 25.1309",
+          "CS 25.1419"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.4,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3030009094020",
+        "D3030004604475"
+      ],
+      "fins_affected": [
+        "4618WX",
+        "386WX5"
+      ],
+      "software_affected": [
+        "LG6C6545962"
+      ],
+      "estimated_manhours": 52,
+      "estimated_cost_keur": 340,
+      "lead_time_weeks": 30,
+      "production_impact": "Cut-in proposed once the faster solenoid is qualified",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

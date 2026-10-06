@@ -1,0 +1,165 @@
+[
+  {
+    "doc_id": "AMM-M-36-10-11-200-019-A",
+    "doc_type": "AMM",
+    "title": "Inspection of the Bleed Duct Overheat Sensing Loop at the Pylon",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-06-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "36-20",
+      "54-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-11-16",
+      "released": "2021-06-04",
+      "revised": null,
+      "effective": "2021-07-02"
+    },
+    "abstract": "Inspection of the bleed duct overheat sensing loop where it crosses the pylon firewall penetration, with the resistance balance check that finds a degraded element pair before it gives a nuisance warning.",
+    "sections": {
+      "purpose": "This task gives the inspection of the bleed duct overheat sensing loop at the pylon firewall penetration and the resistance balance check of the element pair.",
+      "job_setup_note": "Do this task with the engine cold and the aircraft electrically safe. The resistance balance reading is the useful result and it is temperature dependent, so record the local temperature at the penetration when you take it. The pylon lower fairings must be removed for access; support them properly, they are large and awkward for one person. Have the previous balance reading available so that a trend can be seen.",
+      "procedure": "1. Make sure that the engine is cold and that the aircraft is electrically safe. 2. Remove the pylon lower fairings to get access in zones 443 and 433. WARNING: THE PYLON LOWER FAIRING IS HEAVY AND AWKWARD. USE TWO PEOPLE OR A SUPPORT STAND TO REMOVE IT. 3. Clean the sensing loop and the firewall penetration locally. 4. Do a detailed visual inspection of the sensing element assembly HAD174896-54 over its full run. 5. Do a detailed visual inspection of the element supports and check for chafing at the penetration grommet. 6. Do a general visual inspection of the non-return valve FJD499716-77 in the sensing tapping. 7. Record the local temperature at the penetration. 8. Measure the resistance of each element of the pair and record both readings. CAUTION: DO NOT DISTURB THE ELEMENT ROUTING TO REACH THE TERMINALS. A MOVED ELEMENT WILL GIVE A DIFFERENT BALANCE READING AT THE NEXT VISIT. 9. Calculate the balance between the two elements and compare it with the limit. 10. Check the duct transmitter D3610117518658 bracket for security. 11. Check the accumulator tapping 26PN and the heat exchanger tapping 2PN for leakage staining. 12. Install the pylon lower fairings.",
+      "close_out": "Record both element resistance readings, the local temperature and the calculated balance on the aircraft work card. Compare the balance with the previous visit and report an adverse trend even where the reading is still inside the limit. Do a bleed system operational test before the aircraft is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "FJD499716-77",
+        "HAD174896-54",
+        "D3610117518658"
+      ],
+      "fins": [
+        "26PN",
+        "2PN"
+      ],
+      "drawings": [
+        "D36101141546"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163208",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bleed overheat",
+      "sensing loop",
+      "resistance balance",
+      "firewall penetration",
+      "nuisance warning"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pneumatic Systems Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "36-10-11-200-019-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. The balance limit in step 9 assumes the sensing elements are at the delivered position at the firewall penetration.",
+      "manhours": 7.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "443",
+          "433"
+        ],
+        "access_panels": [
+          "443CL",
+          "433BR"
+        ],
+        "doors": [
+          "Pylon lower fairing"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do this task with the engine cold.",
+          "Use two people or a support stand for the pylon lower fairing.",
+          "Make the aircraft electrically safe before you measure resistance."
+        ],
+        "tooling": [
+          {
+            "reference": "MM-004",
+            "description": "Digital multimeter, four wire"
+          },
+          {
+            "reference": "TH-020",
+            "description": "Calibrated thermometer, ambient"
+          },
+          {
+            "reference": "IM-004",
+            "description": "Inspection mirror set"
+          }
+        ],
+        "consumables": [
+          "Cleaning agent, solvent, powerplant"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-30-10-12-200-017-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

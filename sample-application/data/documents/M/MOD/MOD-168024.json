@@ -1,0 +1,192 @@
+[
+  {
+    "doc_id": "MOD-168024",
+    "doc_type": "MOD",
+    "title": "Relocation of the Aft Hold Smoke Sampling Ports Clear of the Loading Air Path",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-03-30",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "92-41"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00022",
+          "to": "M00290"
+        }
+      ],
+      "excluded_msns": [
+        "M00263"
+      ],
+      "engine_types": [],
+      "operators": [
+        "NVC",
+        "ACL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "M00290",
+      "production_cut_in_date": "2020-09-15",
+      "retrofit_via": [
+        "MRD-26-1012",
+        "MRD-26-1019"
+      ]
+    },
+    "dates": {
+      "created": "2019-05-14",
+      "released": "2020-08-19",
+      "revised": "2022-03-30",
+      "effective": "2022-04-22"
+    },
+    "abstract": "Moves the aft hold smoke sampling ports out of the direct path of air entering through the cargo door and adds a shielded inlet, in response to detection events that correlated with loading conditions rather than with any combustion source.",
+    "sections": {
+      "reason": "Operators flying freight and mixed configurations reported detection events in the aft hold shortly after loading, with no source found on inspection. Nineteen events across seven operators were analysed and all of them occurred within four hours of loading in rain, wet snow or high humidity. The sampling ports as delivered sit in the flow that enters through the door aperture during loading, and condensation forming on the sampling tube wall was found to scatter light in the same way as a low density smoke.",
+      "description": "Two sampling ports in the aft hold ceiling are moved inboard by three hundred and twenty millimetres and rotated ninety degrees so that the inlet faces aft rather than into the door flow. A shielded inlet with a labyrinth drain replaces the open port, and the tube run between the port and the detection regulator is re-clipped along the same ceiling rail using the existing screw pattern. The regulator itself is unchanged. The relocation uses the existing structural attachments in the ceiling rail; no new penetrations are made. The detection sensor threshold is unchanged, which is the point of the modification: the fix is to the air path, not to the sensitivity.",
+      "effects": "Mass increase of one point one kilograms per aircraft, symmetric about the centreline. No electrical load change. Fully interchangeable at aircraft level; the shielded inlet is not interchangeable with the open port at part level. The maintenance manual inspection task changes because the port position and the drain check are new, and the parts catalogue figure gains a pre and post modification item pair. Dispatch is unaffected.",
+      "embodiment_note": "Cut in at MSN M00290. Retrofit is by service bulletin during an overnight stop, with a preceding inspection bulletin that establishes whether the ceiling rail is in condition to accept the shielded inlet."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610121518371",
+        "AES545422-2C",
+        "D2610003829972"
+      ],
+      "fins": [
+        "2332WF",
+        "1WF8"
+      ],
+      "drawings": [
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "143",
+        "145"
+      ],
+      "figures": [
+        "FIG-26-10-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00290"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-26-1012",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MRD-26-1019",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-M-26-10-12-200-033-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-M-26-10-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "cargo smoke detection",
+      "sampling port",
+      "shielded inlet",
+      "condensation",
+      "aft hold"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168024,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.858",
+          "CS 25.855"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.1,
+      "balance_impact": "Negligible, symmetric about the centreline",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "D2610121518371"
+      ],
+      "parts_removed": [
+        "D2610003829972"
+      ],
+      "parts_modified": [],
+      "fins_affected": [
+        "2332WF"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 640,
+      "estimated_cost_keur": 1250,
+      "lead_time_weeks": 44,
+      "production_impact": "Cut in at MSN M00290, ceiling rail drilling pattern unchanged",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

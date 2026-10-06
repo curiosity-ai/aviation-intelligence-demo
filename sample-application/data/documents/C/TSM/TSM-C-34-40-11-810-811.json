@@ -1,0 +1,169 @@
+[
+  {
+    "doc_id": "TSM-C-34-40-11-810-811",
+    "doc_type": "TSM",
+    "title": "Weather Radar Picture Unstable or Frozen in Pitch and Roll",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-05-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-40",
+      "ata_6d": "34-40-11",
+      "title": "Independent Position Determining — Weather Radar Transceiver"
+    },
+    "secondary_ata": [
+      "34-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2024-12-16",
+      "released": "2025-05-06",
+      "revised": null,
+      "effective": "2025-06-02"
+    },
+    "abstract": "Fault isolation for a weather radar picture that tilts with the aircraft, freezes for several seconds or shows a residual stabilisation error, distinguishing an attitude feed problem from a drive problem.",
+    "sections": {
+      "purpose": "To isolate the cause of an unstable, frozen or mis-stabilised weather radar picture reported by the flight crew.",
+      "fault_description": "The crew reports one of three things: the picture tilts with the aircraft in a turn instead of holding its angle to the horizon, the picture freezes for ten to fifteen seconds and then catches up, or ground return appears in the lower part of the display when the tilt is set correctly. On aircraft with the stabilised antenna drive all three are stabilisation symptoms and share the same isolation. On aircraft without the stabilised drive the first symptom is normal behaviour and must not be worked as a fault. Establish which standard the aircraft carries before starting.",
+      "isolation_procedure": "Confirm from the configuration file whether the aircraft carries the stabilised antenna drive. If it does not, the picture tilting with the aircraft is normal and no further action is required. Read the fault history from the central maintenance computer and note whether the attitude source reported a fault in the same leg. If the attitude source reported a fault, work that fault first; the radar symptom will follow it. If it did not, connect the maintenance terminal and read the stabilisation residual error over a full antenna sweep. If the residual error exceeds the limit in a consistent direction, the antenna alignment is suspect and the alignment fixture check is required. If the residual error is erratic, disconnect and remake the attitude feed at functional item 580DA and repeat the reading. If the error persists, replace the computer DUD963936-57 and repeat. If the picture freezes rather than mis-stabilises, read the display bus error count; a rising count with a normal residual error points at the display unit assembly D3440008623827 rather than at the drive. Do the confirmation task after any replacement.",
+      "dispatch_note": "Dispatch is permitted with the weather radar inoperative under the minimum equipment list for ten days, provided the operator does not plan into forecast convective weather. Dispatch with a stabilisation fault but a usable picture is not covered by a separate entry and must be treated as the radar being inoperative."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3440119270001",
+        "D3440008623827",
+        "DUD963936-57",
+        "D3440005921121"
+      ],
+      "fins": [
+        "282TR7",
+        "2FE",
+        "580DA"
+      ],
+      "drawings": [
+        "D34401154303"
+      ],
+      "software": [
+        "LA3C9E7BDD5"
+      ],
+      "zones": [
+        "111",
+        "216",
+        "251"
+      ],
+      "figures": [
+        "FIG-34-40-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-34-40-11-400-013-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-45-20-11-700-016-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "weather radar",
+      "stabilisation",
+      "attitude feed",
+      "residual error",
+      "display bus"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "34-40-11-810-811",
+      "fault_symptom": "WXR STAB FAULT displayed on the maintenance page, or crew report of an unstable or frozen radar picture",
+      "fault_codes": [
+        "344011001",
+        "344011014"
+      ],
+      "warning_messages": [
+        "NAV WXR STAB FAULT"
+      ],
+      "affected_fins": [
+        "282TR7",
+        "2FE",
+        "580DA"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Attitude source fault upstream of the radar",
+          "probability_pct": 34,
+          "fin": "580DA"
+        },
+        {
+          "cause": "Antenna alignment out of limits after a drive change",
+          "probability_pct": 26,
+          "fin": "2FE"
+        },
+        {
+          "cause": "Attitude feed connection degraded at the shelf",
+          "probability_pct": 22,
+          "fin": "580DA"
+        },
+        {
+          "cause": "Transceiver display bus error",
+          "probability_pct": 18,
+          "fin": "282TR7"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-C-34-40-11-400-013-A",
+      "dispatch": {
+        "mel_item": "34-40-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Radar inoperative, ten days, no planned operation into forecast convective weather"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

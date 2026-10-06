@@ -1,0 +1,175 @@
+[
+  {
+    "doc_id": "MOD-169356",
+    "doc_type": "MOD",
+    "title": "Trace Heating and Lagging of the Mid Cabin Lavatory Waste Run",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "38",
+      "ata_4d": "38-30",
+      "ata_6d": "38-30-11",
+      "title": "Waste Disposal — Vacuum Toilet Assembly"
+    },
+    "secondary_ata": [
+      "38-10",
+      "21-40"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "AMA",
+        "AUN",
+        "JTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168074"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-06-15",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposes trace heating and additional lagging on the section of mid cabin waste run that crosses the coldest part of the floor structure, in response to lavatories going out of service late in long high latitude sectors.",
+    "sections": {
+      "reason": "One operator records twenty-two out-of-service events on eleven long northern rotations in a single winter, always the same two mid cabin lavatories and always more than eight hours into the sector. The units recover on the ground without intervention and cannot be reproduced by the maintenance organisation. Temperature survey on one aircraft found the waste run at the mid cabin crossing reaching minus four degrees in cruise at high latitude, which is enough to freeze residual liquid in the low point of the run.",
+      "description": "The proposal adds a self-regulating trace heating element along the two metre section of waste run that crosses the floor beams at the mid cabin position, with additional closed cell lagging over the same section and at the two elbows either side. The waste tank partition is replaced by a variant that carries the heater termination, and the lining panel at the run is replaced by the current item so that the lagging fits behind it. The spacer standard at the pipe supports is brought to the current part. The vacuum generator, the flush control and the tank level sensing are untouched.",
+      "effects": "Mass increase of six point three kilograms, distributed at the mid cabin station. Electrical load increases by three hundred and twenty volt amperes at the affected bus when the trace heating is energised, which is the largest single effect of this change and needs a load analysis. Not interchangeable at part level. Servicing and the lavatory inoperative dispatch condition are unaffected, but the cabin crew must be told that the lavatory no longer needs to be locked out on these sectors.",
+      "embodiment_note": "Retrofit only, offered to operators flying high latitude sectors. About twenty-four hours per aircraft with the mid cabin floor panels lifted, normally at a C check.",
+      "open_points": "Pre-analysis must confirm the spare capacity on the affected bus, whether the trace heating can be powered without a new circuit breaker, and whether the lagging thickness leaves the floor panel clearance required for the seat track load path."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3830122049905",
+        "D3810120156917",
+        "AES131071-62"
+      ],
+      "fins": [
+        "41WM",
+        "44WP3",
+        "7WM"
+      ],
+      "drawings": [
+        "D38301279497"
+      ],
+      "software": [],
+      "zones": [
+        "932",
+        "933"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00310"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-M-260661",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-168074",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "waste run",
+      "trace heating",
+      "lagging",
+      "high latitude",
+      "lavatory out of service"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "mod_number": 169356,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1353",
+          "CS 25.831"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 6.3,
+      "balance_impact": "Negligible, mid cabin station",
+      "electrical_load_impact_va": 320,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3810120156917"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3830122049905",
+        "AES131071-62"
+      ],
+      "fins_affected": [
+        "41WM",
+        "44WP3"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 1150,
+      "estimated_cost_keur": 1980,
+      "lead_time_weeks": 52,
+      "production_impact": "No production cut-in proposed; the condition is route dependent",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

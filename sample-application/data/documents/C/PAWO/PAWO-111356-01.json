@@ -1,0 +1,306 @@
+[
+  {
+    "doc_id": "PAWO-111356-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Extended Starter Duty Cycle Release to the Whole Fleet",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "36-10",
+      "71-00"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-07",
+      "released": "2026-07-09",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the revised starter standard, run to release the extended duty cycle to operators outside the hot and high group, covering the both-engines rule and the shroud aperture that makes the standard identifiable.",
+    "sections": {
+      "objective": "Release the extended five-attempt duty cycle to operators outside the original hot and high group, and confirm that the rule requiring both engines to be at the new standard can actually be enforced on the line.",
+      "findings_summary": "Three items were confirmed and the release was approved. The rule that the extended duty cycle may only be used when both engines carry the revised starter is enforceable only because the revised cranking shroud has a larger inspection aperture, which is the one visible difference between the two standards. That was not designed as an identification feature and the analysis recommended stating it as one explicitly, because otherwise a crew has no way to check what the aircraft is entitled to. The second finding was that the crew performance entry already states the both-engines rule correctly, having been written in anticipation, which was confirmed rather than changed. The third was that the trouble shooting procedure for a starter that does not cut out counts attempts against the duty cycle and needed the new figures.",
+      "next_steps": "State the shroud aperture as the identification feature for the starter standard in the maintenance and crew documentation. Confirm the crew performance entry needs no change and record why. Release the extended duty cycle with the both-engines rule unchanged."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL790179-18",
+        "PE187919-09",
+        "EN290030-3C",
+        "ASDE222426-98",
+        "ZE172964-77"
+      ],
+      "fins": [
+        "93ES",
+        "5173ES",
+        "517ES"
+      ],
+      "drawings": [
+        "D80100037770"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "444",
+        "413"
+      ],
+      "figures": [
+        "FIG-80-10-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00680"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111356",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "duty cycle",
+      "both engines rule",
+      "shroud aperture",
+      "identification"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111356-01",
+      "subject_mod": "MOD-111356",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-09",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-04-07",
+      "due_date": "2026-07-17",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EGAM",
+          "EYIS"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 96
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "80",
+          "36"
+        ],
+        "ata_4d": [
+          "80-10",
+          "36-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "HOL790179-18",
+            "ASDE222426-98",
+            "PE187919-09",
+            "ZE172964-77"
+          ],
+          "fins": [
+            "93ES",
+            "5173ES",
+            "517ES"
+          ],
+          "drawings": [
+            "D80100037770"
+          ],
+          "zones": [
+            "431",
+            "444",
+            "413"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "how a crew can tell which standard of a component the aircraft is carrying"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish how the two starter standards are distinguished",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm the crew performance entry",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Update the attempt counting in trouble shooting",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-C-80-10-11-400-022-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "HOL790179-18",
+              "PE187919-09",
+              "EN290030-3C",
+              "ASDE222426-98",
+              "ZE172964-77"
+            ],
+            "shared_fins": [
+              "93ES",
+              "5173ES",
+              "517ES"
+            ],
+            "shared_zones": [
+              "431",
+              "444",
+              "413"
+            ],
+            "shared_ata_6d": [
+              "80-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task already records the starter standard fitted and notes that it determines the duty cycle the crew may use, but it does not say that the shroud aperture is the way to tell the two apart on an installed engine.",
+          "resolution": "Identification note added to the installation task and to the illustrated part list."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "FCOM-C-PER-80-10-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "No shared identifier. The crew entry is about counting attempts and cooling periods; the modification is about clutch re-engagement speed and grease. The both-engines rule is the only thing they state in common and they state it in different words."
+          },
+          "rationale": "The crew performance entry already states the both-engines rule and the aborted-attempt rule correctly, having been written in anticipation of this release. It was checked deliberately and needed no change.",
+          "resolution": "No change; the confirmation recorded so the question is not re-opened."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-C-80-10-11-812-804",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "HOL790179-18",
+              "PE187919-09",
+              "ASDE222426-98",
+              "ZE172964-77"
+            ],
+            "shared_fins": [
+              "93ES",
+              "517ES"
+            ],
+            "shared_zones": [
+              "431",
+              "444",
+              "413"
+            ],
+            "shared_ata_6d": [
+              "80-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure counts start attempts against the permitted duty cycle and stops when the permitted number is reached, so it has to carry both sets of figures and the rule for a mixed aircraft.",
+          "resolution": "Procedure updated with both figures and the mixed aircraft rule."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "IPC-C-80-10-11-FIG-01",
+          "doc_type": "IPC",
+          "reason": "Returned by every entity search in the chapter and it does carry the two shroud standards, but the figure change that follows from this analysis is a note rather than an item change, so it was handled as part of the identification action rather than as a finding in its own right."
+        }
+      ],
+      "conclusion": "Extended duty cycle released to the whole fleet. The shroud aperture is now stated as the identification feature for the starter standard.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

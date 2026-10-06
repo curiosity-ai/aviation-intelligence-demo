@@ -1,0 +1,421 @@
+[
+  {
+    "doc_id": "PAWO-111883-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Probe Heat Element Health Judged by Thermal Response",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "TJT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-03",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the thermal response monitoring change, covering the two earlier monitoring standards it stands on, the retrofit bulletin whose effectivity it invalidates and the maintenance content written around resistance thresholds.",
+    "sections": {
+      "objective": "Establish what the third probe heat monitoring standard depends on, what it makes obsolete, and in particular whether the retrofit bulletin for the current standard remains safe to publish unchanged once a third standard exists that can only be embodied on top of it.",
+      "scope_note": "The search covers ATA 30-30 as the primary chapter with ATA 34-10 as secondary, because the probe base temperature reference is shared with the air data installation. ATA 92-11 was included for the overhead panel wiring that carries the sense returns. Ice protection chapters other than probe heat were excluded: the wing anti-ice system has an independent monitoring architecture and shares nothing with this change. No MSN restriction was applied because the change is proposed fleet wide.",
+      "method_note": "Entity linking is decisive here. The three monitoring standards share the supply pipe part number, the probe heat regulator functional item number and the same three zones, so the seeds return the whole supersession chain and its retrofit bulletins immediately. Semantic similarity added the wiring sheet and the certification comparison but returned mostly noise, because the vocabulary of resistance thresholds and temperature compensation is used almost identically by all three standards and does not discriminate between them.",
+      "findings_summary": "Seven items have been confirmed and two of them are blocking. The change supersedes the temperature compensated standard directly and can only be embodied on top of it, so the supersession is both a dependency and an obsolescence event in one. The blocking finding that matters commercially is the retrofit bulletin for the temperature compensated standard: it is written for aircraft that have the per-element sense harness but not the compensated logic, and it explicitly prohibits embodiment without the harness. It says nothing about a third standard, so an operator reading it today has no way of knowing that the standard it installs will be superseded within a year, and the campaign it drives is still running. The original fixed threshold standard is implicated only through the chain. The remaining findings are the maintenance content written around resistance acceptance bands, all of which becomes wrong when health is judged by a rate rather than a value, and the overhead panel wiring sheet whose sense return arrangement is selected by embodiment standard.",
+      "next_steps": "Decide whether the temperature compensated retrofit campaign should be paused, completed or re-scoped, and communicate the decision to the operators still running it. Re-issue the bulletin effectivity statement with a forward note. Prepare the acceptance criteria change for the functional test and the loading task together. Confirm with the wiring owner that the sense return arrangement is unchanged."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030115331360",
+        "D3030009094020",
+        "D3030004604475"
+      ],
+      "fins": [
+        "4618WX",
+        "386WX5"
+      ],
+      "drawings": [
+        "D30301166008"
+      ],
+      "software": [
+        "LG6C6545962"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111883",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-250347",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "probe heat",
+      "supersession",
+      "effectivity",
+      "acceptance band"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111883-01",
+      "subject_mod": "MOD-111883",
+      "source_io": "IO-C-250347",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-02-03",
+      "due_date": "2026-05-15",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 95,
+        "spent_manhours": 70
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "30",
+          "34",
+          "92",
+          "31"
+        ],
+        "ata_4d": [
+          "30-30",
+          "34-10",
+          "92-11",
+          "31-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D3030115331360",
+            "D3030009094020",
+            "D3030004604475"
+          ],
+          "fins": [
+            "4618WX",
+            "386WX5"
+          ],
+          "drawings": [
+            "D30301166008"
+          ],
+          "zones": [
+            "162",
+            "211",
+            "214"
+          ],
+          "software": [
+            "LG6C6545962"
+          ]
+        },
+        "similarity_seeds": [
+          "heating element health judged from resistance measured at power-up",
+          "spurious probe heat caution on a cold soaked aircraft that clears in the climb"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Trace the probe heat monitoring supersession chain and its bulletins",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review maintenance content built on resistance acceptance bands",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm the sense return wiring arrangement is unchanged",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Decide the position of the running retrofit campaign",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111159",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3030115331360"
+            ],
+            "shared_fins": [
+              "4618WX"
+            ],
+            "shared_zones": [
+              "162",
+              "211",
+              "214"
+            ],
+            "shared_ata_6d": [
+              "30-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The candidate retains the supply pipe and the sense harness break-out introduced by the temperature compensated standard and replaces its judgement logic entirely. It therefore both supersedes that standard and depends on it, which is an unusual combination and needs to be stated on both documents rather than inferred.",
+          "resolution": "Declare the supersession explicitly and carry the compensated standard as a post-mod applicability condition on the candidate."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "CRN-30-1021",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3030115331360"
+            ],
+            "shared_fins": [
+              "4618WX"
+            ],
+            "shared_zones": [
+              "162",
+              "211",
+              "214"
+            ],
+            "shared_ata_6d": [
+              "30-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin is effective on aircraft that carry the per-element sense harness and not the compensated logic, and it is currently driving an active retrofit campaign before the next winter season. It contains no forward note. An operator embodying it today installs a standard that this candidate will supersede, and pays for a line-level visit that will be repeated.",
+          "resolution": "Re-issue the effectivity statement with a forward note and take a programme decision on whether the running campaign should be paused, completed or re-scoped."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-111145",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "386WX5"
+            ],
+            "shared_zones": [
+              "162",
+              "211",
+              "214"
+            ],
+            "shared_ata_6d": [
+              "30-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The original fixed threshold standard is already superseded and is reached only through the chain, but it is still the installed standard on the aircraft that have not taken the compensated retrofit. Those aircraft cannot take the candidate at all and will need two embodiments in sequence.",
+          "resolution": "Identify the population still at the fixed threshold standard and state the two-step embodiment path explicitly in the retrofit planning."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-C-30-30-11-810-801",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3030115331360"
+            ],
+            "shared_fins": [
+              "4618WX",
+              "386WX5"
+            ],
+            "shared_zones": [
+              "162",
+              "211",
+              "214"
+            ],
+            "shared_ata_6d": [
+              "30-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure branches on the built-in test standard reported by the computer and its most probable cause is the cold-soak declaration produced by the fixed threshold logic. With health judged by thermal response the fault codes change meaning and the resistance measurement steps no longer discriminate anything.",
+          "resolution": "Re-write the procedure for the third standard and keep the existing branches for aircraft at the earlier two, rather than replacing the document outright."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-C-30-30-11-900-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3030115331360"
+            ],
+            "shared_fins": [
+              "4618WX",
+              "386WX5"
+            ],
+            "shared_zones": [
+              "162",
+              "211",
+              "214"
+            ],
+            "shared_ata_6d": [
+              "30-30-11"
+            ],
+            "similarity_note": "The task and the candidate use the same vocabulary of loadable parts, hardware prerequisites and sense harness standards, and share the supply pipe, both functional item numbers and all three zones."
+          },
+          "rationale": "The loading task already carries a prerequisite check that decides which standard may be loaded from the hardware fitted. A third standard adds a third branch, and the new branch depends on the faster supply solenoid rather than on a harness feature, which the task has no way of checking visually.",
+          "resolution": "Add the third branch and define a check the technician can actually perform, most likely a part number confirmation from the aircraft record rather than a physical inspection."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "WDM-C-92-11-12",
+          "doc_type": "WDM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "4618WX"
+            ],
+            "shared_zones": [
+              "211",
+              "214"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The overhead panel sheet already carries two arrangements of the sense return selected by embodiment standard, and its sheet note warns that the applicable sheet must be chosen from the embodiment record rather than the delivery date. A third standard does not change the wiring but does change which note is correct.",
+          "resolution": "Amend the sheet note to name three standards rather than two; no wiring change is required."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "MOD-111196",
+          "doc_type": "MOD",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Connected by the shared subject of parameters recorded for later analysis and by nothing else; the two documents have no identifier in common."
+          },
+          "rationale": "Probe heat status is among the parameters added to the mandatory recorded set. The meaning of the recorded status word changes when health is judged by rate rather than by resistance, and the recorded parameter definition would then describe something different from what is recorded.",
+          "resolution": "Confirm with the recorder owner whether the parameter definition needs re-issuing and, if so, time it with the candidate cut-in."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111085",
+          "doc_type": "MOD",
+          "reason": "Surfaces on the shared vocabulary of loadable configuration standards, built-in test and no-fault-found removals, and it is a system change of similar shape, but it concerns brake control on the landing gear and shares no part number, no functional item number and no zone with the probe heat installation."
+        },
+        {
+          "doc_id": "SRM-C-51-70-11-908",
+          "doc_type": "SRM",
+          "reason": "Returned by the entity search because the general repair practice covers structure in the same zones as the avionics compartment access. It has no system content of any kind and cannot be affected by a monitoring logic change."
+        }
+      ],
+      "conclusion": "Not yet issued. The supersession is confirmed and the effectivity of the running retrofit campaign is the decisive commercial question.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

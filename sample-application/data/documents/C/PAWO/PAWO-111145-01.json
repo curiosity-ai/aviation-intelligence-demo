@@ -1,0 +1,311 @@
+[
+  {
+    "doc_id": "PAWO-111145-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — First Probe Heat Monitoring Standard with Fixed Resistance Thresholds",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-06-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00291"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-10-25",
+      "released": "2018-06-05",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of the first probe heat monitoring standard, which recommended against release on the fixed threshold logic; the recommendation was not followed and the standard was released to close an open finding on undetected element failures.",
+    "sections": {
+      "objective": "Assess the first probe heat monitoring standard, which judges heater element health against fixed resistance thresholds, and establish whether the threshold band is defensible across the temperature range the fleet operates in. The work order was raised internally after an undetected open circuit was found on a heater element during a scheduled check, and it was given a short deadline because the finding was open against the type.",
+      "findings_summary": "Three items were confirmed and the analysis did not support the standard as submitted. Element resistance is a strong function of element temperature, and the proposed band is derived from bench measurements at twenty degrees. On a cold soaked airframe a healthy element reads below the lower threshold for the first several minutes of heating, which the logic cannot distinguish from an open circuit. The functional test and the fault isolation procedure both inherit the same fixed band and would report the same false declaration on the ground. The wiring sheet carries the sense return arrangement the logic depends on and needed no change.",
+      "next_steps": "The recommendation to reject was not followed: the standard was released to close the open finding, with the cold soak behaviour accepted as a nuisance and recorded as a known limitation. Monitor the caution rate through the first two winter seasons and hold the temperature compensation study open. Re-issue the functional test with a warm-up wait so that the ground case at least is protected."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030112295450",
+        "D3030112916343"
+      ],
+      "fins": [
+        "4618WX",
+        "386WX5"
+      ],
+      "drawings": [
+        "D30301165123",
+        "D30301166008"
+      ],
+      "software": [
+        "LB8CAD816CB"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111145",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "probe heat",
+      "resistance threshold",
+      "cold soak",
+      "nuisance caution"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111145-01",
+      "subject_mod": "MOD-111145",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2018-06-05",
+      "outcome": "REJECTED",
+      "raised_date": "2017-10-25",
+      "due_date": "2018-05-31",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EGAM"
+        ],
+        "estimated_manhours": 75,
+        "spent_manhours": 98
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "30",
+          "34",
+          "92"
+        ],
+        "ata_4d": [
+          "30-30",
+          "34-10",
+          "92-11"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "C00001",
+          "to": "C00291"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3030112295450",
+            "D3030112916343"
+          ],
+          "fins": [
+            "4618WX",
+            "386WX5"
+          ],
+          "drawings": [
+            "D30301165123"
+          ],
+          "zones": [
+            "162",
+            "211",
+            "214"
+          ],
+          "software": [
+            "LB8CAD816CB"
+          ]
+        },
+        "similarity_seeds": [
+          "heater element resistance measured at power-up on a cold aircraft",
+          "undetected open circuit in a pitot probe heating element"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Re-derive the threshold band across the operating temperature range",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search maintenance content inheriting the fixed band",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm the sense return arrangement supports the logic",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Establish the position on the open finding if release is delayed",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-C-30-30-11-700-004-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3030112295450",
+              "D3030112916343"
+            ],
+            "shared_fins": [
+              "4618WX",
+              "386WX5"
+            ],
+            "shared_zones": [
+              "162",
+              "211",
+              "214"
+            ],
+            "shared_ata_6d": [
+              "30-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The functional test accepts or rejects an element against the same fixed band. Run on a cold soaked aircraft it will reject healthy elements, and the test is the one a station uses to clear the caution the logic raises, so the two would disagree with each other in exactly the case that matters.",
+          "resolution": "Warm-up wait added to the test before the resistance measurement is taken; the airborne case remains unprotected."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-C-30-30-11-810-801",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3030112916343"
+            ],
+            "shared_fins": [
+              "4618WX",
+              "386WX5"
+            ],
+            "shared_zones": [
+              "162",
+              "211",
+              "214"
+            ],
+            "shared_ata_6d": [
+              "30-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure for a probe heat caution on the ground puts a failed element first in its cause list. With the fixed band the most probable cause is in fact outside air temperature, and the procedure would send elements to the shop that test serviceable on the bench.",
+          "resolution": "Cause list re-ordered with a temperature check first; no-fault-found rate to be monitored through the first winter."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-C-92-11-12",
+          "doc_type": "WDM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "4618WX"
+            ],
+            "shared_zones": [
+              "211",
+              "214"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The overhead panel sheet carries the sense return for the probe heat regulator that the monitoring logic reads. The arrangement supports the measurement as drawn, but the sheet note describes the return as a status line rather than a measurement circuit, which understates how sensitive it now is to contact resistance.",
+          "resolution": "Sheet note re-worded and a contact resistance limit added at the next routine revision."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Rejected on the fixed threshold logic. The recommendation was overruled at the design review and the standard released with the cold soak behaviour accepted as a known limitation.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,454 @@
+[
+  {
+    "doc_id": "PAWO-138410-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Fwd Cargo Door Latching Sealed Bearing Cartridge",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00003",
+          "to": "S01918"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-02",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the third-generation forward cargo door latching, focused on the supersession chain, the effectivity of the two in-service bulletins that sit on the current standard, and the door warning sensing that the cartridge re-targets.",
+    "sections": {
+      "objective": "Establish what the sealed bearing cartridge does to the existing latching supersession chain and to the two service bulletins written against the current standard, and confirm that the re-targeted door warning sensing can stay on its existing wiring and its existing trouble shooting logic.",
+      "scope_note": "The search covers ATA 52-30 as the primary chapter and ATA 52-70 door warning and ATA 92-21 forward fuselage wiring as secondary, because the sensing target moves from a bonded plate to a machined feature on the cartridge output arm. ATA 53-21 door surround structure was included in the first pass and excluded: the door frame is not modified and the surround is not disturbed. Four-engine aircraft were not searched, because the candidate effectivity is twin-engine only, although the four-engine door uses the same latching and that is raised as an open point rather than as a finding.",
+      "method_note": "Entity linking was seeded from the five part numbers, the single FIN and the three zones of the candidate, which is a small and tightly clustered seed set, so the entity results are dense and largely expected. Semantic similarity was run second and added little on this chapter, which is itself informative: the latching vocabulary is stable across twenty years of documents, so almost everything the similarity search returns is already in the entity result. The one exception is the cancelled first-generation bulletin, which similarity ranks high on wording and which entity linking correctly leaves out.",
+      "findings_summary": "Seven items are confirmed and two are blocking. The candidate supersedes the current load-sharing standard, which closes the supersession chain that began with the first-generation hook change; that is intended and is already declared. What is not yet handled is the effect on the two service bulletins that sit on the current standard. The modification bulletin is written for aircraft that are pre the current standard, and once the candidate exists an operator can embody the candidate first and then find the modification bulletin still nominally open against the aircraft, which leaves the door in a configuration that neither substantiation covers. The survey bulletin is the mirror image: it is written for aircraft that are post the current standard and it measures a carriage that the candidate deletes, so its population becomes ambiguous on the day the candidate is released. Beyond effectivity, the in-service hook seat repair is written around the carriage rail seat and cannot be applied to a cartridge station, and the door warning sensing appears in three separate manual documents that all describe the sensing gap against a bonded target plate.",
+      "next_steps": "Raise change requests against both service bulletin effectivity statements before the candidate is released, not after. Ask the repair design owner whether the hook seat repair can be re-issued for the cartridge or must be withdrawn for post-candidate aircraft. Confirm with the wiring owner that the sensing pair and the service loop are unaffected by the re-targeting. Establish whether the four-engine door can take the cartridge, because the answer changes the business case."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230136217763",
+        "D5230114238785",
+        "GRA7840-60",
+        "AGS534950-40"
+      ],
+      "fins": [
+        "3323WT"
+      ],
+      "drawings": [
+        "D52301387215",
+        "D52701135292"
+      ],
+      "software": [],
+      "zones": [
+        "812",
+        "891",
+        "893"
+      ],
+      "figures": [
+        "FIG-52-30-13-01"
+      ],
+      "repair_drawings": [
+        "RD-52-30-13-001"
+      ],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-138410",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-260218",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-133110",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-52-1043",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-52-1051",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "latching cartridge",
+      "supersession",
+      "effectivity",
+      "door warning"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-138410-01",
+      "subject_mod": "MOD-138410",
+      "source_io": "IO-S-260218",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-03-02",
+      "due_date": "2026-06-12",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA",
+          "ELSC"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 68
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34"
+        ],
+        "ata_2d": [
+          "52",
+          "92"
+        ],
+        "ata_4d": [
+          "52-30",
+          "52-70",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "S00003",
+          "to": "S01918"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5230136217763",
+            "D5230114238785",
+            "GRA7840-60",
+            "AGS534950-40"
+          ],
+          "fins": [
+            "3323WT"
+          ],
+          "drawings": [
+            "D52301387215"
+          ],
+          "zones": [
+            "812",
+            "891",
+            "893"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "load sharing between the hooks of a cargo door latch train",
+          "spurious door not locked indication traced to mechanism wear"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Trace the latching supersession chain and its declared conditions",
+          "method": "MANUAL_REVIEW",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess the effectivity of both bulletins on the current standard",
+          "method": "MANUAL_REVIEW",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the in-service hook seat repair against the cartridge station",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Confirm the door warning sensing wiring is unaffected",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-133110",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230136217763",
+              "GRA7840-60"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The candidate re-machines the same latching web and reuses the same shear ties, replacing the carriage rail with the cartridge. It therefore supersedes the current standard rather than sitting alongside it, and the current standard cannot remain the production configuration once the candidate is cut in.",
+          "resolution": "Declare the supersession on both documents and set the current standard to superseded status at candidate release, not at candidate freeze."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SLN-52-1043",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230136217763",
+              "GRA7840-60"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The retrofit bulletin for the current standard is effective on aircraft that are pre that standard, which after candidate release still includes every aircraft that goes straight to the cartridge. An operator can therefore embody the candidate and still see the bulletin open against the aircraft, and the bulletin gives no warning that its accomplishment instructions no longer describe the installed mechanism.",
+          "resolution": "Re-issue the bulletin effectivity with an explicit exclusion for aircraft at the cartridge standard, and add an ordering note. This must be in place before the candidate is released."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SLN-52-1051",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230136217763",
+              "GRA7840-60"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The wear survey bulletin is effective on aircraft that are post the current standard and it measures carriage travel. The candidate deletes the carriage, so an aircraft that is post the candidate is nominally in the survey population but has nothing to survey. The service data the survey feeds is also the data behind the candidate, so quietly leaving it open would corrupt the fleet wear model.",
+          "resolution": "Close the survey bulletin for aircraft at the cartridge standard and state in the candidate that the survey data set is closed at that point."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-S-52-30-13-001",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230136217763",
+              "GRA7840-60",
+              "AGS534950-40"
+            ],
+            "shared_fins": [
+              "3323WT"
+            ],
+            "shared_zones": [
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "similarity_note": "Returned by both methods: the part set is shared and the wording around hook seats, fretting and seat depth is close to the candidate reason-for-change."
+          },
+          "rationale": "The hook seat repair machines a seat square and bonds an insert into it, and it is life limited with a seat depth re-measurement at each C-check. The cartridge housing bolts through the same seat area on a different pattern, so an aircraft with a repaired station cannot take the cartridge at that station without an assessment, and the seat depth measurement is no longer meaningful once the cartridge is fitted.",
+          "resolution": "Ask the repair design owner whether the repair can be re-issued with a cartridge variant or must be withdrawn for post-candidate aircraft, and add a pre-embodiment repair check to the retrofit bulletin."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "WDM-S-92-21-13",
+          "doc_type": "WDM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "3323WT"
+            ],
+            "shared_zones": [
+              "812",
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The sensing target moves from a bonded plate on the hook to a machined feature on the cartridge output arm, which changes the sensing gap value and the position at which the sensor sits. The wiring sheet does not carry the gap value, but it does carry the service loop dimension across the door aperture, and if the sensor mounting moves the loop dimension must be re-checked. Neither document currently says so.",
+          "resolution": "Confirm with the wiring owner whether the sensor mounting position moves at all. If it does, re-issue the sheet with the revised service loop dimension for the cartridge standard."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-S-52-30-13-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230136217763",
+              "GRA7840-60",
+              "D5230114238785",
+              "AGS534950-40"
+            ],
+            "shared_fins": [
+              "3323WT"
+            ],
+            "shared_zones": [
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "similarity_note": "Reached by traversal from the superseded modification to the parts figure that already carries its effectivity split."
+          },
+          "rationale": "The figure already carries one alternate pair for the carriage standard. The candidate adds a third standard for the same item numbers, and the existing note that a door cannot carry a mixture of two standards becomes a three-way statement. Item 20, the shear tie, is retained but its quantity per assembly changes.",
+          "resolution": "Raise an illustrated parts change request for a three-way effectivity split with a revised mixing note and the corrected shear tie quantity."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "TSM-S-52-30-13-810-801",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230136217763",
+              "GRA7840-60"
+            ],
+            "shared_fins": [
+              "3323WT"
+            ],
+            "shared_zones": [
+              "812",
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "similarity_note": "Both methods return it: the part and FIN seeds match and the fault symptom text is close to the candidate reason-for-change."
+          },
+          "rationale": "The isolation procedure names carriage travel as the second most probable cause and sends the line station to a check that will not exist on a cartridge aircraft. The probability table itself is standard-dependent, and the candidate is expected to change the dominant cause rather than merely remove one branch.",
+          "resolution": "Re-issue the procedure with a standard-dependent cause list and a revised probability table once service data on the cartridge is available."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-131020",
+          "doc_type": "MOD",
+          "reason": "The first-generation corrosion-resistant hook standard, on the same ATA 6D with a title that reads as a member of the same family, and it ranks high on both methods. It was superseded in 2020, no aircraft in the candidate effectivity is still at that standard, and it shares no part number with the candidate; the hook, the strap and the bolt set are all different."
+        },
+        {
+          "doc_id": "SLN-52-1024",
+          "doc_type": "SB",
+          "reason": "The cancelled retrofit vehicle for the first-generation hook standard. Its accomplishment text is close enough to the candidate wording to rank in the top five on similarity, but the bulletin was cancelled in 2021, its kit is withdrawn, and it shares no part number, FIN or drawing with the candidate."
+        }
+      ],
+      "conclusion": "Not yet issued. Two blocking effectivity items must be resolved before release; the repair position and the wiring confirmation are expected within the current round.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

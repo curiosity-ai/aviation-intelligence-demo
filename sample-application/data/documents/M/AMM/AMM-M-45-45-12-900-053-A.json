@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "AMM-M-45-45-12-900-053-A",
+    "doc_type": "AMM",
+    "title": "Data Load Configuration — Record Format Check and Alignment",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-10-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-12",
+      "title": "Data Loading — Data Load Configuration"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-06-30",
+      "released": "2022-03-25",
+      "revised": "2025-10-02",
+      "effective": "2025-10-30"
+    },
+    "abstract": "Check that the data load configuration computer and the maintenance database report the same record format, and alignment of the aircraft configuration record after a computer change or an interrupted load.",
+    "sections": {
+      "purpose": "This task gives the check of the load record format reported by the configuration computer against the format expected by the maintenance database, and the alignment of the aircraft configuration record after a computer change or an interrupted load session.",
+      "job_setup_note": "Do this task after any configuration computer change, after any interrupted load and before any audit of the aircraft software configuration. Connect the portable loader at the maintenance terminal. If the computer reports the extended format and the maintenance database is at the delivered standard the aircraft will display a record the operator cannot interpret; that is a database load, not a computer fault, and the order of the two matters.",
+      "procedure": "1. Connect the portable data loader at the maintenance terminal. 2. Read and record the configuration computer part number and the record format it reports. 3. Read and record the maintenance database part number. 4. Compare both against the aircraft configuration record. 5. CAUTION: DO NOT START A LOAD SESSION TO CORRECT A MISMATCH BEFORE THE TWO PART NUMBERS ARE RECORDED. THE SESSION OVERWRITES THE EVIDENCE OF WHAT WAS THERE. 6. If the formats disagree, load the maintenance database at the standard matching the computer and repeat steps 2 to 4. 7. Export the load record and check that the last session is complete. 8. If the last session is incomplete, list the items loaded and compare them against the intended load sheet. 9. WARNING: DO NOT RELEASE THE AIRCRAFT WITH AN INCOMPLETE LOAD SESSION RECORDED. THE CONFIGURATION IS NOT KNOWN UNTIL THE SESSION IS REPEATED IN FULL. 10. Repeat any incomplete session in full. 11. Align the aircraft configuration record with the exported load record.",
+      "close_out": "Disconnect the portable loader. Confirm no maintenance message remains at the maintenance terminal. File the exported load record with the aircraft documentation and record the computer part number, the database part number and the alignment result in the technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545120504726",
+        "LN760453-5C"
+      ],
+      "fins": [
+        "228TN",
+        "2848TN"
+      ],
+      "drawings": [
+        "D45450007012"
+      ],
+      "software": [
+        "LH4PE007934"
+      ],
+      "zones": [
+        "273",
+        "262"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-M-45-20-11-812-802",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-31-30-11-400-035-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-168300",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "data load configuration",
+      "record format",
+      "maintenance database",
+      "incomplete session",
+      "configuration record"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "45-45-12-900-053-A",
+      "task_type": "ADJUSTMENT",
+      "effectivity_note": "All aircraft; the extended record format applies to aircraft post MOD-168300",
+      "manhours": 2.0,
+      "personnel": 1,
+      "elapsed_time_hours": 1.5,
+      "access": {
+        "zones": [
+          "273",
+          "262"
+        ],
+        "access_panels": [
+          "273CR",
+          "262CR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not release the aircraft with an incomplete load session recorded.",
+          "Record both part numbers before any corrective load is started."
+        ],
+        "tooling": [
+          {
+            "reference": "98D45451-611",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D45451-615",
+            "description": "Maintenance terminal cable set"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-31-30-11-400-035-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,346 @@
+[
+  {
+    "doc_id": "MOD-158310",
+    "doc_type": "MOD",
+    "title": "Data Loader Interface Standard C with Signed Load Verification and Concurrent Multi-Target Loading",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-10-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-45-12",
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HKA",
+        "NCA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-155690"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-08-11",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Third issue of the data loader interface, adding cryptographic verification of every load before it is written and the ability to load three targets in parallel, which turns a night of loading into a single turnaround activity.",
+    "sections": {
+      "reason": "Two changes in the operating environment have overtaken the standard B interface. Regulators now expect a demonstrable chain of custody for loadable software, and the interface as built verifies only a checksum computed by the media itself, which is not evidence of origin. Separately, the number of loadable targets on the current build standard has grown from four to eleven, and loading them sequentially at twenty minutes each no longer fits inside any turnaround an operator will give up. Two launch operators have made parallel loading a condition of their fleet software policy.",
+      "description": "The interface is built to standard C. The transceiver D4545112932616 is retained as the aircraft interface but the internal processing is replaced so that each load is verified against a signature before a single byte is written to the target, and a load that fails verification is refused rather than aborted part way. Three bus ports are driven concurrently, so that three targets load in parallel with independent progress reporting. The chassis harness is secured with loop clamps LN760453-5C at two additional stations. The data concentrator at FIN 78TN, the rack at FIN 23TN and the circuit card at FIN 71TN are all affected. Work is in zones 252 and 264 with the avionics bay open. The rack arrangement is on drawing D45451170573.",
+      "effects": "Mass increase of 0.4 kilograms. Electrical load increases by 45 volt amperes when three ports are driven. One way interchangeable: a standard C unit will load a standard B aircraft sequentially, but a standard B unit cannot satisfy the signed verification the maintenance system now records. Full-fleet software loading time falls from roughly four hours to under one. The data loading task, the configuration reporting section and the parts data require re-issue.",
+      "embodiment_note": "Production cut-in and retrofit are both intended. Retrofit is a four hour task with the avionics bay open once the unit is available, and does not need the aircraft to be depowered for the whole period.",
+      "open_points": "Design work is proceeding but the pre-analysis position on the signing infrastructure is still outstanding: it must be confirmed that the key management the operator has to run is acceptable to their regulator, and that the concurrent bus loading does not violate the isolation assumptions in the existing avionics safety assessment."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545112932616",
+        "LN760453-5C"
+      ],
+      "fins": [
+        "78TN",
+        "23TN",
+        "71TN"
+      ],
+      "drawings": [
+        "D45451170573"
+      ],
+      "software": [],
+      "zones": [
+        "252",
+        "264"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155690",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "data loader standard c",
+      "signed load verification",
+      "parallel loading",
+      "chain of custody",
+      "bus isolation"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 158310,
+      "mod_class": "MAJOR",
+      "change_category": "SOFTWARE",
+      "trigger": "CERTIFICATION",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1319"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.4,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 45,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "LN760453-5C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4545112932616"
+      ],
+      "fins_affected": [
+        "78TN",
+        "23TN",
+        "71TN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 340,
+      "estimated_cost_keur": 1420,
+      "lead_time_weeks": 40,
+      "production_impact": "Cut-in planned once the signing infrastructure position is closed",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-158310",
+    "doc_type": "MOD",
+    "title": "Data Loader Interface Standard C with Signed Load Verification and Concurrent Multi-Target Loading",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-13",
+      "reason": "The configuration report is recorded as a maintenance interface with a fixed content contract that the signed verification must preserve.",
+      "raised_by_pawo": "PAWO-155690-01",
+      "raised_by_finding": "F03",
+      "finding_type": "SUPERSESSION"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-45-12",
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HKA",
+        "NCA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-155690"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-08-11",
+      "released": null,
+      "revised": "2026-07-13",
+      "effective": null
+    },
+    "abstract": "Third issue of the data loader interface, adding cryptographic verification of every load and concurrent loading of three targets, while preserving the configuration report that maintenance organisations settle software disputes with.",
+    "sections": {
+      "reason": "Two changes in the operating environment have overtaken the standard B interface. Regulators now expect a demonstrable chain of custody for loadable software, and the interface as built verifies only a checksum computed by the media itself, which is not evidence of origin. Separately, the number of loadable targets on the current build standard has grown from four to eleven, and loading them sequentially at twenty minutes each no longer fits inside any turnaround an operator will give up. Two launch operators have made parallel loading a condition of their fleet software policy.",
+      "description": "The interface is built to standard C. The transceiver D4545112932616 is retained as the aircraft interface but the internal processing is replaced so that each load is verified against a signature before a single byte is written to the target, and a load that fails verification is refused rather than aborted part way. Three bus ports are driven concurrently, so that three targets load in parallel with independent progress reporting. The chassis harness is secured with loop clamps LN760453-5C at two additional stations. The data concentrator at FIN 78TN, the rack at FIN 23TN and the circuit card at FIN 71TN are all affected. Work is in zones 252 and 264 with the avionics bay open. The rack arrangement is on drawing D45451170573.",
+      "effects": "Mass increase of 0.4 kilograms. Electrical load increases by 45 volt amperes when three ports are driven. One way interchangeable: a standard C unit will load a standard B aircraft sequentially, but a standard B unit cannot satisfy the signed verification the maintenance system now records. Full-fleet software loading time falls from roughly four hours to under one. The data loading task, the configuration reporting section and the parts data require re-issue. The configuration report is treated as a maintenance interface rather than as an output of the unit: its fields are fixed, the signature result is added as a new field and no existing field is renamed or dropped, because operators settle software configuration disputes on that report and their process reads it field by field.",
+      "embodiment_note": "Production cut-in and retrofit are both intended. Retrofit is a four hour task with the avionics bay open once the unit is available, and does not need the aircraft to be depowered for the whole period.",
+      "open_points": "Design work is proceeding but the pre-analysis position on the signing infrastructure is still outstanding: it must be confirmed that the key management the operator has to run is acceptable to their regulator, and that the concurrent bus loading does not violate the isolation assumptions in the existing avionics safety assessment. The configuration report content is now frozen as an interface and any proposal to change a field goes through the maintenance organisations before it reaches design review."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545112932616",
+        "LN760453-5C"
+      ],
+      "fins": [
+        "78TN",
+        "23TN",
+        "71TN"
+      ],
+      "drawings": [
+        "D45451170573"
+      ],
+      "software": [],
+      "zones": [
+        "252",
+        "264"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155690",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "data loader standard c",
+      "signed load verification",
+      "configuration report interface",
+      "parallel loading",
+      "bus isolation"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 158310,
+      "mod_class": "MAJOR",
+      "change_category": "SOFTWARE",
+      "trigger": "CERTIFICATION",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1319"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.4,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 45,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "LN760453-5C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4545112932616"
+      ],
+      "fins_affected": [
+        "78TN",
+        "23TN",
+        "71TN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 340,
+      "estimated_cost_keur": 1420,
+      "lead_time_weeks": 40,
+      "production_impact": "Cut-in planned once the signing infrastructure position is closed",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

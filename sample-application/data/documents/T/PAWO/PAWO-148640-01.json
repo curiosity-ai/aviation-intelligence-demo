@@ -1,0 +1,285 @@
+[
+  {
+    "doc_id": "PAWO-148640-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Cold Expanded Fastener Hole Standard",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-25",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "51",
+      "ata_4d": "51-10",
+      "ata_6d": "51-10-11",
+      "title": "Standard Practices — Damage Investigation"
+    },
+    "secondary_ata": [
+      "51-70-11",
+      "53-21-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-25",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the cold expansion standard, opened to extend its declared applicability to a further diameter range and validated after the coupon evidence and the repair library were reviewed.",
+    "sections": {
+      "objective": "Establish whether the declared applicability of the cold expansion standard can be extended to a further diameter range, and identify every published repair scheme that would have to be re-baselined if the extension proceeds.",
+      "findings_summary": "The extension was validated. The coupon evidence covers the requested diameter range with margin, and the mandrel and split sleeve sets for that range are already qualified for other applications on this aircraft, so no new tooling qualification is required. Four published repair schemes reference the ream-and-oversize practice at diameters inside the extended range and each was reviewed. Three are unaffected because they explicitly exclude previously expanded holes. The fourth, the cracked hole scheme, has to be amended because its applicability check reads the diameter against the current declared range and would reject a hole that is inside the extended one. The associated maintenance task needs the same amendment.",
+      "next_steps": "Publish the extended diameter range in the standard practice. Amend the cracked hole repair scheme and the maintenance task so that both read the extended range. Confirm with the operator training organisation that the coupon set covers the extended range before the amendment takes effect."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5110113425482",
+        "EN824462K5",
+        "PE170760-37"
+      ],
+      "fins": [],
+      "drawings": [
+        "D51101142795",
+        "D51101154586"
+      ],
+      "software": [],
+      "zones": [
+        "113",
+        "115"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-148640",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "cold expansion",
+      "diameter range",
+      "repair library",
+      "historical"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Alcadara",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-148640-01",
+      "subject_mod": "MOD-148640",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-12",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-05-25",
+      "due_date": "2026-07-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EDSA",
+        "lead_site": "Alcadara",
+        "contributing_departments": [
+          "ESZS"
+        ],
+        "estimated_manhours": 180,
+        "spent_manhours": 232
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "51",
+          "53"
+        ],
+        "ata_4d": [
+          "51-10",
+          "53-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "EN824462K5",
+            "PE170760-37"
+          ],
+          "fins": [],
+          "drawings": [
+            "D51101142795"
+          ],
+          "zones": [
+            "113"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "improving the fatigue quality of a reworked hole",
+          "interference fit fastener at a pressure boundary"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Review the coupon evidence for the extended diameter range",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Identify published repairs referencing the ream-and-oversize practice",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the tooling qualification for the extended range",
+          "method": "SME_INTERVIEW",
+          "owner": "ESZS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-T-51-10-11-001",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5110113425482",
+              "EN824462K5",
+              "PE170760-37"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "51-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The scheme reads the measured diameter against the currently declared range and rejects anything outside it. A hole inside the extended range would be rejected by a scheme that is meant to cover it.",
+          "resolution": "Amend the applicability check in the repair scheme to read the extended range."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-51-10-11-300-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN824462K5",
+              "PE170760-37"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "51-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The task carries the same applicability check as the repair scheme and must be amended with it, otherwise the two will disagree in service.",
+          "resolution": "Amend the task in step with the repair scheme."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TTN-51-1010",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN824462K5",
+              "PE170760-37"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113"
+            ],
+            "shared_ata_6d": [
+              "51-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The information bulletin states the declared range and would become out of date on publication of the extension.",
+          "resolution": "Re-issue the bulletin with the extended range."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "SRM-T-53-21-11-005",
+          "doc_type": "SRM",
+          "reason": "Shares the forward cargo zone and the frame foot subject and is returned by an entity search on the same zones, but it is a blend and bonded angle scheme that does not use a fastener hole rework at all and is unaffected by the diameter range."
+        }
+      ],
+      "conclusion": "Extension validated. Two amendments and one bulletin re-issue raised.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

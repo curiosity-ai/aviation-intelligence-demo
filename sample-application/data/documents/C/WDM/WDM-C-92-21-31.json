@@ -1,0 +1,361 @@
+[
+  {
+    "doc_id": "WDM-C-92-21-31",
+    "doc_type": "WDM",
+    "title": "Forward Fuselage Wiring — Avionics Bay Rack Harnesses and Maintenance Bus",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-10-03",
+      "reason": "Original issue of the forward avionics bay rack harness and maintenance bus sheet.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-11",
+      "title": "Forward Fuselage Wiring — Avionics Bay Harnesses"
+    },
+    "secondary_ata": [
+      "45-20",
+      "23-70"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-03-24",
+      "released": "2018-10-03",
+      "revised": "2018-10-03",
+      "effective": "2018-10-24"
+    },
+    "abstract": "Wiring sheet for the forward avionics bay rack harnesses, showing the maintenance bus, the datalink router feeds and the spare capacity in the bay that competing installations claim.",
+    "sections": {
+      "purpose": "To show the rack harnesses in the forward avionics bay, including the maintenance bus, the datalink router feeds and the spare pairs available at each shelf position.",
+      "sheet_note": "The sheet covers the whole forward avionics bay and is the reference for any new installation in it. The spare pair count at each shelf is shown in the box at the lower right of sheet 1 and is the figure a new installation must be checked against: six spare pairs at the lower rack shelf, four at the middle shelf and four at the upper. The maintenance bus terminates at the terminal block at zone 164 and is the only path by which the central maintenance computer receives from the rack. Sheet 3 shows the second concentrator position, which is populated only on aircraft at the second datalink standard.",
+      "routing_note": "The rack harnesses run from the shelf positions to the terminal block at zone 164 and from there aft to zone 173 through the bay floor penetration. The datalink router feeds run separately from the lower rack position to the overhead panel through the forward pressure bulkhead penetration. There is no spare capacity in the bulkhead penetration, and any new run must use the bay floor route instead."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221116059011",
+        "D9221118916782",
+        "D9221002439073",
+        "D4520114738386",
+        "D2370118700860"
+      ],
+      "fins": [
+        "4310TN",
+        "1TM",
+        "218RN"
+      ],
+      "drawings": [
+        "D92211253715"
+      ],
+      "software": [],
+      "zones": [
+        "164",
+        "165",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-45-20-11-700-016-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-23-70-11-400-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "avionics bay",
+      "rack harness",
+      "maintenance bus",
+      "spare pairs",
+      "bulkhead penetration"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "sheet_number": "92-21-11",
+      "sheet_title": "AVIONICS BAY RACK HARNESSES AND MAINTENANCE BUS",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1640W",
+        "1641W",
+        "1650W",
+        "1730W"
+      ],
+      "connectors": [
+        {
+          "reference": "1640VC",
+          "part_number": "D9221118916782",
+          "location_zone": "164",
+          "contacts": 61
+        },
+        {
+          "reference": "1650VC",
+          "part_number": "D9221116059011",
+          "location_zone": "165",
+          "contacts": 37
+        },
+        {
+          "reference": "1730VC",
+          "part_number": "D9221002439073",
+          "location_zone": "173",
+          "contacts": 26
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "4310TN",
+          "description": "MOUNTING TRAY, CENTRAL MAINTENANCE COMPUTER",
+          "zone": "164"
+        },
+        {
+          "fin": "1TM",
+          "description": "MODULE, ONBOARD MAINTENANCE, LH",
+          "zone": "164"
+        },
+        {
+          "fin": "218RN",
+          "description": "RACK, ATC DATALINK ROUTER, LH",
+          "zone": "165"
+        }
+      ],
+      "wire_count": 184,
+      "wire_gauge_range": "AWG 24 to AWG 12",
+      "routes": [
+        "Shelf positions → terminal block zone 164 → zone 173 via the bay floor penetration",
+        "Lower rack position zone 165 → overhead panel via the forward pressure bulkhead penetration"
+      ],
+      "related_sheets": [
+        "WDM-C-23-70-01",
+        "WDM-C-92-11-21"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "WDM-C-92-21-31",
+    "doc_type": "WDM",
+    "title": "Forward Fuselage Wiring — Avionics Bay Rack Harnesses and Maintenance Bus",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-11-26",
+      "reason": "Spare pair count at the lower rack shelf corrected by two pairs and a warning added that the count is maintained by hand.",
+      "raised_by_pawo": "PAWO-111212-01",
+      "raised_by_finding": "F01",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-11",
+      "title": "Forward Fuselage Wiring — Avionics Bay Harnesses"
+    },
+    "secondary_ata": [
+      "45-20",
+      "23-70"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-03-24",
+      "released": "2018-10-03",
+      "revised": "2024-11-26",
+      "effective": "2024-12-17"
+    },
+    "abstract": "Wiring sheet for the forward avionics bay rack harnesses, showing the maintenance bus, the datalink router feeds and the corrected spare pair count that competing installations must be checked against.",
+    "sections": {
+      "purpose": "To show the rack harnesses in the forward avionics bay, including the maintenance bus, the datalink router feeds and the spare pairs available at each shelf position.",
+      "sheet_note": "The sheet covers the whole forward avionics bay and is the reference for any new installation in it. The spare pair count at each shelf is shown in the box at the lower right of sheet 1 and is the figure a new installation must be checked against: four spare pairs at the lower rack shelf, four at the middle shelf and four at the upper. The lower shelf figure was six until this issue and was wrong: two pairs were taken by the datalink router feeds and the box was never corrected, so every installation planned in this bay since then was planned against a figure that did not exist on the aircraft. WARNING: THIS COUNT IS MAINTAINED BY HAND AND HAS BEEN WRONG TWICE IN SERVICE. CONFIRM THE SPARE PAIRS ON THE AIRCRAFT BEFORE ANY INSTALLATION IS COMMITTED TO THEM. The maintenance bus terminates at the terminal block at zone 164 and is the only path by which the central maintenance computer receives from the rack. Sheet 3 shows the second concentrator position, which is populated only on aircraft at the second datalink standard.",
+      "routing_note": "The rack harnesses run from the shelf positions to the terminal block at zone 164 and from there aft to zone 173 through the bay floor penetration. The datalink router feeds run separately from the lower rack position to the overhead panel through the forward pressure bulkhead penetration. There is no spare capacity in the bulkhead penetration, and any new run must use the bay floor route instead."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221116059011",
+        "D9221118916782",
+        "D9221002439073",
+        "D4520114738386",
+        "D2370118700860"
+      ],
+      "fins": [
+        "4310TN",
+        "1TM",
+        "218RN"
+      ],
+      "drawings": [
+        "D92211253715"
+      ],
+      "software": [],
+      "zones": [
+        "164",
+        "165",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-45-20-11-700-016-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-23-70-11-400-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111212",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "avionics bay",
+      "rack harness",
+      "spare pair count",
+      "maintenance bus",
+      "hand maintained figure"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "sheet_number": "92-21-11",
+      "sheet_title": "AVIONICS BAY RACK HARNESSES AND MAINTENANCE BUS",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1640W",
+        "1641W",
+        "1650W",
+        "1730W"
+      ],
+      "connectors": [
+        {
+          "reference": "1640VC",
+          "part_number": "D9221118916782",
+          "location_zone": "164",
+          "contacts": 61
+        },
+        {
+          "reference": "1650VC",
+          "part_number": "D9221116059011",
+          "location_zone": "165",
+          "contacts": 37
+        },
+        {
+          "reference": "1730VC",
+          "part_number": "D9221002439073",
+          "location_zone": "173",
+          "contacts": 26
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "4310TN",
+          "description": "MOUNTING TRAY, CENTRAL MAINTENANCE COMPUTER",
+          "zone": "164"
+        },
+        {
+          "fin": "1TM",
+          "description": "MODULE, ONBOARD MAINTENANCE, LH",
+          "zone": "164"
+        },
+        {
+          "fin": "218RN",
+          "description": "RACK, ATC DATALINK ROUTER, LH",
+          "zone": "165"
+        }
+      ],
+      "wire_count": 184,
+      "wire_gauge_range": "AWG 24 to AWG 12",
+      "routes": [
+        "Shelf positions → terminal block zone 164 → zone 173 via the bay floor penetration",
+        "Lower rack position zone 165 → overhead panel via the forward pressure bulkhead penetration"
+      ],
+      "related_sheets": [
+        "WDM-C-23-70-01",
+        "WDM-C-92-11-21"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,166 @@
+[
+  {
+    "doc_id": "AMM-T-36-20-11-000-003-A",
+    "doc_type": "AMM",
+    "title": "Bleed Monitoring Computer — Removal and Disconnection of the Cross-Bleed Sensing Harness",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-04-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-20",
+      "ata_6d": "36-20-11",
+      "title": "Pneumatic Indicating — Bleed Monitoring Computer"
+    },
+    "secondary_ata": [
+      "36-20-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-12-04",
+      "released": "2021-04-22",
+      "revised": null,
+      "effective": "2021-06-01"
+    },
+    "abstract": "Removal of the bleed monitoring computer and disconnection of the cross-bleed sensing harness, with the duct cooling wait and the sensor identification that a dual sensing installation requires.",
+    "sections": {
+      "purpose": "This task gives the procedure to remove the bleed monitoring computer from its rack and to disconnect the cross-bleed pressure and temperature sensing harness, for computer replacement or for access to the manifold behind it.",
+      "job_setup_note": "The pneumatic system must be depressurised and the duct allowed to cool before the wing root fairing is opened. On an aircraft with dual pressure sensing the two sensor harnesses look identical at the computer end and must be identified before disconnection; swapping them produces a permanent disagreement that is not detected until the next functional test. Electrical power must be removed before the computer is withdrawn.",
+      "procedure": "1. Depressurise the pneumatic system and confirm zero pressure at the gauge. 2. Remove electrical power and put the warning notice in position. WARNING: LET THE CROSS-BLEED DUCT COOL BEFORE YOU OPEN THE WING ROOT FAIRING. THE DUCT SURFACE STAYS ABOVE 200 DEGREES CELSIUS FOR AT LEAST 30 MINUTES. 3. Open the wing root fairing in zone 683. 4. Identify the sensing harnesses with the temporary labels before you disconnect anything. CAUTION: DO NOT DISCONNECT BOTH SENSOR HARNESSES BEFORE THEY ARE LABELLED. THE TWO ARE IDENTICAL AND A SWAP IS NOT DETECTED UNTIL THE FUNCTIONAL TEST. 5. Disconnect the pressure sensing harness or harnesses at the computer and cap the connectors. 6. Disconnect the temperature sensing harness and cap the connector. 7. Release the computer rack latch and withdraw the computer until the rear connector separates. 8. Support the computer and remove it from the rack. 9. Put the computer in an antistatic bag. 10. Examine the rack rear connector for damage or discolouration and record the condition. 11. Install the protective cover on the open rack position.",
+      "close_out": "Confirm that every disconnected connector is capped and that the labelled harnesses are supported clear of the duct. Close the wing root fairing if no further work is planned. Record the computer part number, the software standard read before removal and the rack connector condition."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3620112949513",
+        "D3620115643168",
+        "D3620117912452",
+        "D3620117993254",
+        "LN276052K6"
+      ],
+      "fins": [
+        "154PU",
+        "4PU9",
+        "5172PN"
+      ],
+      "drawings": [
+        "D36201195418"
+      ],
+      "software": [
+        "LC8RC1C4C75"
+      ],
+      "zones": [
+        "683",
+        "531",
+        "141"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-36-20-11-400-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bleed monitoring computer",
+      "removal",
+      "sensing harness",
+      "cross-bleed",
+      "labelling"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "36-20-11-000-003-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All aircraft. Step 4 is mandatory on aircraft post MOD-146910, which carry two identical pressure sensing harnesses.",
+      "manhours": 3.5,
+      "personnel": 2,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "683",
+          "531"
+        ],
+        "access_panels": [
+          "683AL",
+          "683BR",
+          "531AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Depressurise the pneumatic system.",
+          "Let the cross-bleed duct cool before you open the fairing.",
+          "Remove electrical power and put the warning notice in position."
+        ],
+        "tooling": [
+          {
+            "reference": "98D36201-044",
+            "description": "Rack position protective cover"
+          },
+          {
+            "reference": "98D36201-048",
+            "description": "Harness labelling set"
+          }
+        ],
+        "consumables": [
+          "Antistatic bag",
+          "Blanking cap set"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-36-20-11-400-003-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

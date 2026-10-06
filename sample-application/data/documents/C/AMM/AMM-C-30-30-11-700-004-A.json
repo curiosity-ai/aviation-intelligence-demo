@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "AMM-C-30-30-11-700-004-A",
+    "doc_type": "AMM",
+    "title": "Probe Heat System — Functional Test",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "D",
+    "issue": {
+      "letter": "D",
+      "supersedes": "C",
+      "date": "2024-10-07",
+      "reason": "Issue D. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-05-11",
+      "released": "2018-01-25",
+      "revised": "2024-10-07",
+      "effective": "2024-10-28"
+    },
+    "abstract": "Functional test of the probe heat system with the element results read individually, including the acceptance criteria that differ between the fixed threshold and the temperature compensated standards.",
+    "sections": {
+      "purpose": "This task gives the functional test of the probe heat system, reads the result for each heating element individually and gives the acceptance criteria that apply to each monitoring standard.",
+      "job_setup_note": "The aircraft must be electrically powered with the probes cold. The probes reach temperatures that cause serious burns within seconds of energisation, so the probe covers must stay fitted until the test is complete and the barrier must be in position around each probe. Read the built-in test standard from the computer before the acceptance criteria are selected.",
+      "procedure": "1. WARNING: DO NOT TOUCH A PROBE DURING OR AFTER THE TEST. A PROBE REACHES A TEMPERATURE THAT CAUSES SERIOUS BURNS WITHIN SECONDS AND STAYS HOT FOR SEVERAL MINUTES. 2. Put the barriers in position around each probe and confirm that the probe covers are fitted. 3. Apply electrical power and read out the built-in test standard reported by the probe heat computer. 4. Select the probe heat test on the maintenance page. 5. Record the result reported for each heating element individually. 6. CAUTION: DO NOT REPEAT THE TEST WITHIN TEN MINUTES. A SECOND TEST ON A WARM ELEMENT GIVES A RESULT THAT CANNOT BE COMPARED WITH THE ACCEPTANCE BAND. 7. On the fixed threshold standard, compare each result with the fixed band in the task. 8. On the temperature compensated standard, record the total air temperature and compare each result with the compensated band. 9. Confirm that the probe heat regulator 4618WX and the element valve 274HA respond correctly. 10. Confirm the system switch 386WX5 reads the correct position. 11. Check that the fault memory is clear and that no maintenance message remains. 12. Remove electrical power and leave the barriers in position for ten minutes.",
+      "close_out": "Leave the barriers in position until the probes are cool enough to touch. Remove the barriers and the probe covers as required by the aircraft configuration. Record the built-in test standard, the total air temperature where applicable, the per-element results and the fault memory state in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030115331360",
+        "D3030112916343",
+        "D3030112295450"
+      ],
+      "fins": [
+        "4618WX",
+        "274HA",
+        "386WX5"
+      ],
+      "drawings": [
+        "D30301165123"
+      ],
+      "software": [
+        "LC5C5779B0E",
+        "LB8CAD816CB"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-30-30-11-900-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-30-30-11-810-801",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "probe heat test",
+      "per-element result",
+      "acceptance band",
+      "burn hazard",
+      "total air temperature"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "30-30-11-700-004-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. Select the acceptance criteria for the built-in test standard the computer reports, not for the aircraft delivery standard.",
+      "manhours": 3.5,
+      "personnel": 2,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "162",
+          "211",
+          "214"
+        ],
+        "access_panels": [
+          "162BL",
+          "211AR",
+          "214AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not touch a probe during or after the test.",
+          "Put the barriers in position around each probe before power is applied.",
+          "Leave the barriers in position for ten minutes after the test."
+        ],
+        "tooling": [
+          {
+            "reference": "98D30301-004",
+            "description": "Probe barrier set"
+          },
+          {
+            "reference": "98D30301-006",
+            "description": "Portable maintenance terminal"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-30-30-11-900-002-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

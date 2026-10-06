@@ -1,0 +1,160 @@
+[
+  {
+    "doc_id": "AMM-M-49-60-11-700-042-A",
+    "doc_type": "AMM",
+    "title": "Auxiliary Power Unit Electronic Control Box — Load Acceptance Test",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-01-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-04-24",
+      "released": "2020-01-14",
+      "revised": null,
+      "effective": "2020-02-11"
+    },
+    "abstract": "Load acceptance test of the auxiliary power unit, measuring the time from availability to bleed load acceptance and the exhaust gas temperature margin at the acceptance point.",
+    "sections": {
+      "purpose": "This task gives the load acceptance test used after a control box replacement, after a software load, or to investigate a report of slow load acceptance.",
+      "job_setup_note": "Record the field elevation and the ambient temperature before the test, because the acceptance time limit is read from a table against both. The test needs the aircraft clear of ground equipment behind the tail cone and a fire watch for the run. Get the maintenance terminal for the parameter recording; timing by hand is not accurate enough for this test.",
+      "procedure": "1. Confirm the area behind the tail cone is clear and post the fire watch. 2. Record the field elevation and the ambient temperature. 3. Start the auxiliary power unit and record the time to the availability indication. 4. WARNING: DO NOT APPROACH THE EXHAUST OR THE INLET WHILE THE UNIT IS RUNNING. 5. When availability is indicated, start the stopwatch and select the air conditioning packs to the auxiliary power unit. 6. Record the time from availability to stable bleed load acceptance. 7. Read the limit from the table against the field elevation and ambient temperature and compare. 8. Record the exhaust gas temperature margin at the acceptance point from the maintenance terminal. 9. CAUTION: DO NOT REPEAT THE TEST WITHIN TEN MINUTES. A HOT START AFFECTS THE ACCEPTANCE TIME AND WILL GIVE A FALSE PASS. 10. Shut the unit down and let it run down without interruption. 11. Export the parameter record from the maintenance terminal.",
+      "close_out": "Confirm the auxiliary power unit shuts down normally and that no maintenance message remains. Remove the fire watch. Record the acceptance time, the applicable limit, the exhaust gas temperature margin, the field elevation and the ambient temperature in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4950123850952",
+        "AES689669-90"
+      ],
+      "fins": [
+        "5PB",
+        "244PB3"
+      ],
+      "drawings": [
+        "D49601217089"
+      ],
+      "software": [
+        "LD7PCEB6F22"
+      ],
+      "zones": [
+        "394"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-49-10-12-400-041-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-M-49-60-11-810-811",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "load acceptance",
+      "auxiliary power unit",
+      "exhaust gas temperature margin",
+      "field elevation",
+      "stabilisation"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Port-Rivage",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "49-60-11-700-042-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft",
+      "manhours": 3.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "394"
+        ],
+        "access_panels": [
+          "394CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Post a fire watch for the auxiliary power unit run.",
+          "Do not approach the exhaust or the inlet while the unit is running."
+        ],
+        "tooling": [
+          {
+            "reference": "98D49601-481",
+            "description": "Maintenance terminal, parameter recording"
+          },
+          {
+            "reference": "98D34501-386",
+            "description": "Stopwatch, calibrated"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-49-10-12-400-041-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

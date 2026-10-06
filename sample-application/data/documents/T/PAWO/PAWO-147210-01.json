@@ -1,0 +1,245 @@
+[
+  {
+    "doc_id": "PAWO-147210-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Ventilated Flight Bag Arm and Switched Power Supply",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-26",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-20",
+      "ata_6d": "46-20-11",
+      "title": "Flight Deck Information — Electronic Flight Bag Unit"
+    },
+    "secondary_ata": [
+      "46-20-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-26",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the ventilated flight bag arm, opened to consider extending it to the right hand installation and cancelled when the operator population withdrew the request.",
+    "sections": {
+      "objective": "Establish whether the ventilated arm standard should be extended to the right hand installation as a fleet-wide change, and what the crew documentation consequence of a symmetric installation would be.",
+      "findings_summary": "The work order was cancelled before completion. The right hand installation has never reported a thermal shutdown, and the two operators who raised the question withdrew it once the mixed installation was confirmed as explicitly permitted by the bulletin. Before the cancellation two items had been confirmed and are recorded here because they remain valid. The crew description needed a sentence on the mixed case, since a crew moving between aircraft will find one side that switches off on ground power and one that does not, and that is not currently described. The clearance check in the installation task is written for the left hand seat geometry and would need a second acceptance figure if the right hand side were ever converted.",
+      "next_steps": "No further work on the extension. Add the mixed installation sentence to the crew description, which is worth doing regardless of the extension. Retain the clearance figure note for any future right hand conversion."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4620114030606",
+        "D4620117513908",
+        "D4620126779963"
+      ],
+      "fins": [
+        "510IU"
+      ],
+      "drawings": [
+        "D46201175014"
+      ],
+      "software": [],
+      "zones": [
+        "234"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147210",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "flight bag",
+      "mixed installation",
+      "cancelled",
+      "historical"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-147210-01",
+      "subject_mod": "MOD-147210",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-06",
+      "outcome": "REJECTED",
+      "raised_date": "2026-05-26",
+      "due_date": "2026-07-17",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [],
+        "estimated_manhours": 50,
+        "spent_manhours": 78
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "46"
+        ],
+        "ata_4d": [
+          "46-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "T00069",
+          "to": "T00224"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4620114030606",
+            "D4620126779963"
+          ],
+          "fins": [
+            "510IU"
+          ],
+          "drawings": [
+            "D46201175014"
+          ],
+          "zones": [
+            "234"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "display unavailable on a hot turnaround",
+          "equipment powered through a ground stop with no crew present"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Assess the right hand installation event history",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review the crew description for the mixed case",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Cost the symmetric conversion",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "BLOCKED"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "FCOM-T-DSC-46-20-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew description explains the switched behaviour as though it applies to both sides, using crew language that shares nothing with the installation documentation."
+          },
+          "rationale": "A mixed installation is explicitly permitted, so a crew will meet one side that switches off on ground power and one that does not. The description does not cover that and the difference reads as a fault.",
+          "resolution": "Add a sentence describing the mixed case."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-46-20-11-400-004-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4620114030606",
+              "D4620117513908"
+            ],
+            "shared_fins": [
+              "510IU"
+            ],
+            "shared_zones": [
+              "234"
+            ],
+            "shared_ata_6d": [
+              "46-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The clearance acceptance figure in the installation task is derived from the left hand seat geometry. A right hand conversion would need its own figure and the task does not say so.",
+          "resolution": "Record the note for any future right hand conversion. No change made now."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Cancelled at the request of the raising operators. Two documentation observations retained.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

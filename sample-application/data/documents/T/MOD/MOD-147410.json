@@ -1,0 +1,379 @@
+[
+  {
+    "doc_id": "MOD-147410",
+    "doc_type": "MOD",
+    "title": "Upper Deck Seat Power Distribution Uprating and Under-Seat Box Relocation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-13",
+      "title": "Inflight Entertainment — IFE Power Supply"
+    },
+    "secondary_ata": [
+      "44-20-12",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [
+        "T00033",
+        "T00037",
+        "T00053",
+        "T00095",
+        "T00124",
+        "T00232",
+        "T00237"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-145110"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-01-19",
+      "released": null,
+      "revised": "2026-02-03",
+      "effective": null
+    },
+    "abstract": "Uprating of the seat power feeders serving the upper deck premium cabin, together with a move of the under-seat power boxes out of the footwell and onto the seat track, sized for present-day passenger device loads.",
+    "sections": {
+      "reason": "The upper deck premium cabin was sized on a per-seat allowance of 75 watts, which was generous when the aircraft was designed and is now exceeded by a single passenger charging a laptop and a tablet at the same time. One operator records 6.1 cabin service events per thousand flight hours in that cabin against 0.9 fleetwide, all of them late in the cruise and all of them clearing on a crew reset. Two vendor investigations closed with no fault found on the removed units, which is consistent with a distribution that is inside specification and simply undersized. Separately, the boxes sit in the footwell where they are kicked, and mechanical damage accounts for a third of removals.",
+      "description": "The feeders serving the upper deck seat groups are uprated by replacing the distribution tail and the protection device, and the per-seat allowance is raised to 190 watts. The monument fitting assembly D4420134200425 that carries the distribution unit at the cabin boundary is replaced by a deeper item, and the seat track cover sub-assembly D4420008271203 is replaced by a version with an integral box cradle so that the under-seat units move out of the footwell and mount on the seat track instead. Tubular spacers EN187472K9 set the cradle standoff above the track flange, protective sleeving AES430915-41 is used where the seat harness crosses the cradle edge, and anchor nuts EN258434K3 secure the cradle. The power supply light assembly at FIN 433RM is relocated with the unit and the galley insert at FIN 7RK6 is disturbed for access to the distribution. Work is in zones 222, 242, 916 and 942 with the seats removed. Interface detail is on drawing D44200016279.",
+      "effects": "Estimated mass increase of 34 kg per aircraft, distributed along the upper deck and giving a centre-of-gravity shift below 0.02 per cent mean aerodynamic chord. Continuous electrical load rises by 5 800 volt-amperes on the cabin busbar at full occupancy, which is the dominant technical issue and the reason the head end rack feeder standard is a hard precondition. The cradle installation is not interchangeable with the footwell installation, and a seat group must be converted as a whole. No despatch change is expected. Illustrated parts content for the seat power installation and the cabin load analysis both require update.",
+      "embodiment_note": "Retrofit only, on aircraft already at the second generation head end architecture, because the earlier rack feeder cannot carry the additional load. Provisional estimate is six days with the upper deck seats out. Kits are supplied per seat group.",
+      "open_points": "Pre-analysis must confirm the total cabin busbar margin once the uprated feeders are added, whether the box cradle can be mounted on a seat track that another candidate proposes to rework to a different flange profile, and whether the relocated units clear the seat actuation envelope at full recline."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420134200425",
+        "D4420008271203",
+        "EN258434K3",
+        "EN187472K9",
+        "AES430915-41"
+      ],
+      "fins": [
+        "433RM",
+        "7RK6"
+      ],
+      "drawings": [
+        "D44200016279"
+      ],
+      "software": [],
+      "zones": [
+        "222",
+        "242",
+        "916",
+        "942"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00033",
+        "T00095"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-T-250487",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-145110",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "seat power",
+      "feeder uprating",
+      "under-seat box",
+      "cabin load",
+      "premium cabin"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Cabin Systems"
+    },
+    "type_data": {
+      "mod_number": 147410,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1353",
+          "CS 25.1309",
+          "CS 25.869"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 34.0,
+      "balance_impact": "Distributed along the upper deck, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 5800,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "EN187472K9",
+        "AES430915-41",
+        "EN258434K3"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4420134200425",
+        "D4420008271203"
+      ],
+      "fins_affected": [
+        "433RM"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 460,
+      "estimated_cost_keur": 1750,
+      "lead_time_weeks": 38,
+      "production_impact": "No production cut-in proposed",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-147410",
+    "doc_type": "MOD",
+    "title": "Upper Deck Seat Power Distribution Uprating and Under-Seat Box Relocation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-20",
+      "reason": "Effects text now states the cabin load reduction the lighting conversion releases, so that it can be cited as the precondition that closes the busbar budget.",
+      "raised_by_pawo": "PAWO-145340-01",
+      "raised_by_finding": "F04",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-13",
+      "title": "Inflight Entertainment — IFE Power Supply"
+    },
+    "secondary_ata": [
+      "44-20-12",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [
+        "T00033",
+        "T00037",
+        "T00053",
+        "T00095",
+        "T00124",
+        "T00232",
+        "T00237"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-145110"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-01-19",
+      "released": null,
+      "revised": "2026-07-20",
+      "effective": null
+    },
+    "abstract": "Uprating of the seat power feeders serving the upper deck premium cabin, together with a move of the under-seat power boxes out of the footwell and onto the seat track, sized for present-day passenger device loads.",
+    "sections": {
+      "reason": "The upper deck premium cabin was sized on a per-seat allowance of 75 watts, which was generous when the aircraft was designed and is now exceeded by a single passenger charging a laptop and a tablet at the same time. One operator records 6.1 cabin service events per thousand flight hours in that cabin against 0.9 fleetwide, all of them late in the cruise and all of them clearing on a crew reset. Two vendor investigations closed with no fault found on the removed units, which is consistent with a distribution that is inside specification and simply undersized. Separately, the boxes sit in the footwell where they are kicked, and mechanical damage accounts for a third of removals.",
+      "description": "The feeders serving the upper deck seat groups are uprated by replacing the distribution tail and the protection device, and the per-seat allowance is raised to 190 watts. The monument fitting assembly D4420134200425 that carries the distribution unit at the cabin boundary is replaced by a deeper item, and the seat track cover sub-assembly D4420008271203 is replaced by a version with an integral box cradle so that the under-seat units move out of the footwell and mount on the seat track instead. Tubular spacers EN187472K9 set the cradle standoff above the track flange, protective sleeving AES430915-41 is used where the seat harness crosses the cradle edge, and anchor nuts EN258434K3 secure the cradle. The power supply light assembly at FIN 433RM is relocated with the unit and the galley insert at FIN 7RK6 is disturbed for access to the distribution. Work is in zones 222, 242, 916 and 942 with the seats removed. Interface detail is on drawing D44200016279.",
+      "effects": "Estimated mass increase of 34 kg per aircraft, distributed along the upper deck and giving a centre-of-gravity shift below 0.02 per cent mean aerodynamic chord. Continuous electrical load rises by 5 800 volt-amperes on the cabin busbar at full occupancy, which is the dominant technical issue and the reason the head end rack feeder standard is a hard precondition. The budget closes only on an aircraft that has taken the solid state lighting conversion, which releases 4 200 volt-amperes on the same busbar; on an aircraft still carrying fluorescent tubes the margin is negative at full occupancy and this change cannot be embodied. That figure is restated here so that it can be cited directly rather than recovered from the lighting documentation, and it makes the lighting conversion a precondition of this change on any aircraft that has not yet taken it. The cradle installation is not interchangeable with the footwell installation, and a seat group must be converted as a whole. No despatch change is expected. Illustrated parts content for the seat power installation and the cabin load analysis both require update.",
+      "embodiment_note": "Retrofit only, on aircraft already at the second generation head end architecture, because the earlier rack feeder cannot carry the additional load, and on aircraft that have taken the solid state lighting conversion, without which the cabin busbar margin does not close. Provisional estimate is six days with the upper deck seats out. Kits are supplied per seat group.",
+      "open_points": "Pre-analysis must confirm the total cabin busbar margin once the uprated feeders are added, whether the box cradle can be mounted on a seat track that another candidate proposes to rework to a different flange profile, and whether the relocated units clear the seat actuation envelope at full recline."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420134200425",
+        "D4420008271203",
+        "EN258434K3",
+        "EN187472K9",
+        "AES430915-41"
+      ],
+      "fins": [
+        "433RM",
+        "7RK6"
+      ],
+      "drawings": [
+        "D44200016279"
+      ],
+      "software": [],
+      "zones": [
+        "222",
+        "242",
+        "916",
+        "942"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00033",
+        "T00095"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-T-250487",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-145110",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "MOD-145340",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "seat power",
+      "feeder uprating",
+      "under-seat box",
+      "cabin load",
+      "premium cabin"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Cabin Systems"
+    },
+    "type_data": {
+      "mod_number": 147410,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1353",
+          "CS 25.1309",
+          "CS 25.869"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 34.0,
+      "balance_impact": "Distributed along the upper deck, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 5800,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "EN187472K9",
+        "AES430915-41",
+        "EN258434K3"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4420134200425",
+        "D4420008271203"
+      ],
+      "fins_affected": [
+        "433RM"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 460,
+      "estimated_cost_keur": 1750,
+      "lead_time_weeks": 38,
+      "production_impact": "No production cut-in proposed",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

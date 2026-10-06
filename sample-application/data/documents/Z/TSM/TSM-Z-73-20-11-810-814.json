@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "TSM-Z-73-20-11-810-814",
+    "doc_type": "TSM",
+    "title": "Engine Control Unit Reported Fault Not Reproducible on the Ground",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-11-10",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-20",
+      "ata_6d": "73-20-11",
+      "title": "Controlling — Engine Electronic Control Unit"
+    },
+    "secondary_ata": [
+      "73-20-12",
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-05-11",
+      "released": "2023-12-01",
+      "revised": "2025-11-10",
+      "effective": "2025-12-01"
+    },
+    "abstract": "Fault isolation for an engine control unit fault that cannot be reproduced on the ground, built around capturing the fault history before power is removed and around checking the configuration table.",
+    "sections": {
+      "purpose": "This procedure isolates an engine control unit fault reported in flight that cannot be reproduced on the ground, and gives the sequence that preserves the evidence needed to avoid a no fault found return.",
+      "fault_description": "The crew reports an engine control message that clears itself, or an engine parameter excursion with no message at all, and nothing is found on the ground. On units at the earlier build standard the recorded fault window is thirty seconds, which closes long before the aircraft is on stand, so the single most common outcome is a unit removed and returned serviceable. A configuration table changed by an earlier maintenance load is the second most common cause and is invisible unless the table is compared with the engine data plate.",
+      "isolation_procedure": "1. Download the fault history at the unit FIN 25EF before aircraft power is removed. This is the first step and it cannot be recovered later. 2. Read the reported configuration table and compare it, digit by digit, with the engine data plate. 3. A difference indicates that a maintenance load has written the wrong table; re-write the correct table and monitor the engine for three flights before any component is changed. 4. If the table is correct, examine the downloaded history for the parameter that moved first; the first parameter to move is almost always closer to the cause than the parameter that raised the message. 5. Check the harness at the clamp FIN 18EF and at the tube assembly FIN 342EF for chafing where it crosses the cooling duct. 6. Check the grommets at the mounting face for damage; a displaced grommet allows the harness to bear on the bracket edge and produces exactly this intermittent picture. 7. Check the mounting bracket for cracking at the fillet radii, which changes the unit resonance and can produce intermittent internal faults. 8. Measure the cooling duct inlet for obstruction and record the unit case temperature during a ground run at a stabilised power point. 9. Replace the unit only when the history, the table, the harness and the cooling have all been cleared, and send the downloaded history with it.",
+      "dispatch_note": "Dispatch is permitted with a single engine control channel inoperative subject to the thrust limitations in the minimum equipment list and to both engines having at least one serviceable channel. Rectify within two calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7320110360398",
+        "INN739616-21",
+        "AES641639-8C"
+      ],
+      "fins": [
+        "25EF",
+        "342EF",
+        "18EF",
+        "5EF"
+      ],
+      "drawings": [],
+      "software": [
+        "LE2NF49598E",
+        "LF5N800C79F",
+        "LB2N19CF509"
+      ],
+      "zones": [
+        "433",
+        "412",
+        "483"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-73-20-11-000-041-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-73-1010",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "engine control unit",
+      "no fault found",
+      "fault history download",
+      "configuration table",
+      "harness chafing"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "73-20-11-810-814",
+      "fault_symptom": "ENG 1 CTL FAULT reported in flight, not reproducible on the ground",
+      "fault_codes": [
+        "732011008",
+        "732011026"
+      ],
+      "warning_messages": [
+        "ENG 1 CTL SYS FAULT",
+        "ENG 2 CTL SYS FAULT"
+      ],
+      "affected_fins": [
+        "25EF",
+        "342EF",
+        "18EF"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Fault occurred outside the 30 second recorded window and the evidence was lost at power down",
+          "probability_pct": 37,
+          "fin": "25EF"
+        },
+        {
+          "cause": "Configuration table written incorrectly by an earlier maintenance load",
+          "probability_pct": 25,
+          "fin": "25EF"
+        },
+        {
+          "cause": "Harness chafing at the cooling duct crossing or a displaced grommet",
+          "probability_pct": 22,
+          "fin": "342EF"
+        },
+        {
+          "cause": "Mounting bracket cracking changing the unit resonance",
+          "probability_pct": 16,
+          "fin": "18EF"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-Z-73-20-11-000-041-A",
+      "dispatch": {
+        "mel_item": "73-20-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One engine control channel inoperative per engine, thrust limitations applied, both engines with at least one serviceable channel"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

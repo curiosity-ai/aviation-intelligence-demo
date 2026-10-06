@@ -1,0 +1,225 @@
+[
+  {
+    "doc_id": "MOD-111263",
+    "doc_type": "MOD",
+    "title": "Weather Radar Antenna Drive and Stabilisation Change for Low Altitude Ground Return Rejection",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-11-05",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-40",
+      "ata_6d": "34-40-11",
+      "title": "Independent Position Determining — Weather Radar Transceiver"
+    },
+    "secondary_ata": [
+      "34-20",
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00273",
+          "to": "C00796"
+        }
+      ],
+      "excluded_msns": [
+        "C00612"
+      ],
+      "engine_types": [
+        "PYR-1524G",
+        "PYR-1525G"
+      ],
+      "operators": [
+        "NVT",
+        "CDW",
+        "SDA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111251"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "C00750",
+      "production_cut_in_date": "2025-05-19",
+      "retrofit_via": [
+        "CRN-34-2006"
+      ]
+    },
+    "dates": {
+      "created": "2022-09-14",
+      "released": "2024-11-05",
+      "revised": null,
+      "effective": "2025-01-13"
+    },
+    "abstract": "Second issue of the radar standard, replacing the antenna drive and adding an attitude-referenced stabilisation loop so that ground return no longer dominates the picture in the last two thousand feet of an approach.",
+    "sections": {
+      "reason": "The solid state transceiver introduced earlier gave a faster picture but did nothing about the tilt behaviour, and the complaint that followed it was consistent across four operators: below about three thousand feet the ground return fills the display and the crew has to work the tilt manually to see the cell. Analysis of nine hundred approaches supplied by one operator showed the manual tilt being moved on average four times per approach on this type against once on comparable fleets. The delivered antenna drive was also the single highest unscheduled removal item in the chapter, at one removal per nineteen thousand flight hours.",
+      "description": "The antenna drive is replaced by a brushless unit and the stabilisation loop is re-referenced to the inertial attitude source rather than to the internal rate sensor, which is what allows the ground clutter map to be subtracted reliably in the flare region. The transceiver D3440119270001 is retained and re-loaded with the operational software LA3C9E7BDD5. The interface unit D3440005921121 is replaced by the display unit assembly D3440008623827 so that the display bus can carry the clutter-corrected picture, and the computer DUD963936-57 is added on the forward shelf. Fastener hardware AES311855K5 and AGS393059-2A carry over. Functional items 282TR7 and 2FE are affected and functional item 580DA is added for the attitude feed in zone 216. Nose work is in zone 111, with the drive replacement inside the radome and the shelf work in zone 251.",
+      "effects": "Mass increase of 1.8 kg. Electrical load rises by 60 volt-amperes. The change is not interchangeable because the drive mounting and the display bus loading both change. The manual tilt procedure in the flight crew operating manual has to be rewritten, since the whole point of the change is that the crew no longer works the tilt on approach. The trouble shooting procedure for a stabilisation fault is superseded and a new isolation branch is needed for the attitude feed. Spares provisioning changes because the drive is no longer a line replaceable item on its own.",
+      "embodiment_note": "Production cut-in at MSN C00750 in May 2025. Retrofit is by Service Bulletin CRN-34-2006, which requires the aircraft to be at the solid state transceiver standard first. Two shifts with the radome removed. Kits have been available since the second quarter of 2025."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3440119270001",
+        "D3440008623827",
+        "DUD963936-57",
+        "D3440005921121",
+        "AES311855K5",
+        "AGS393059-2A",
+        "D3440003473401"
+      ],
+      "fins": [
+        "282TR7",
+        "2FE",
+        "580DA"
+      ],
+      "drawings": [
+        "D34401154303",
+        "D34400093148"
+      ],
+      "software": [
+        "LA3C9E7BDD5"
+      ],
+      "zones": [
+        "111",
+        "216",
+        "251"
+      ],
+      "figures": [
+        "FIG-34-40-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00750"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111251",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "CRN-34-2006",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "FCOM-C-DSC-34-40-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-34-40-11-400-013-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-34-40-11-810-811",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-34-40-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "antenna drive",
+      "stabilisation",
+      "ground return",
+      "tilt",
+      "clutter rejection"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111263,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309",
+          "CS 25.1322"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 1.8,
+      "balance_impact": "Forward installation, CG shift under 0.03 % MAC",
+      "electrical_load_impact_va": 60,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3440008623827",
+        "DUD963936-57",
+        "D3440003473401"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3440119270001"
+      ],
+      "fins_affected": [
+        "282TR7",
+        "2FE",
+        "580DA"
+      ],
+      "software_affected": [
+        "LA3C9E7BDD5"
+      ],
+      "estimated_manhours": 510,
+      "estimated_cost_keur": 2900,
+      "lead_time_weeks": 70,
+      "production_impact": "Cut-in at MSN C00750, drive supplied as a matched set with the antenna",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,360 @@
+[
+  {
+    "doc_id": "PAWO-135520-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Close-Out Position for the Standard 2.4 Guidance Configuration Data Set",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-90",
+      "ata_6d": "27-90-11",
+      "title": "Flight Control Computing — Flight Control Primary Computer"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-08",
+      "released": "2026-07-24",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed work order establishing what has to happen to the standard 2.4 guidance configuration data set as the fleet moves to standard 11.0, closed by handing the loadable retirement decision to the avionics configuration authority.",
+    "sections": {
+      "objective": "Establish what has to be done with the standard 2.4 guidance configuration data set now that its successor is in pre-analysis and the obsolescence order has been raised against the current loadable. The work order had to identify every document that names the standard 2.4 loadable, determine whether any of them can survive the transition unchanged, and produce a retirement sequence that does not leave an aircraft between two configurations with no valid data load procedure.",
+      "findings_summary": "The picture is unusually clean for a software item and the difficulty is one of sequencing rather than content. The standard 11.0 data set supersedes this one on the same computers, the same rack zones and the same fault reporting word, and its own pre-analysis is running in parallel. The data load bulletin is the only vehicle that puts the standard 2.4 loadable on an aircraft; its effectivity has to be closed at the same moment the successor becomes available or the fleet has two valid loads. The fault attribution procedure quotes the standard 2.4 reporting word explicitly and would misdirect on a transitioned aircraft. The rack figure carries the loadable as a part reference and is the item most likely to be missed. None of this is a design question, which is why the work order was closed without taking the retirement decision itself.",
+      "next_steps": "Hand the loadable retirement sequence to the avionics configuration authority together with the four affected documents and the obsolescence order reference. Ask that the bulletin effectivity close and the successor availability be published in one action rather than two. Raise the fault attribution procedure as the first troubleshooting change under the successor, and flag the rack figure part reference so it is not left pointing at a withdrawn loadable."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2790113238523"
+      ],
+      "fins": [
+        "435EV",
+        "52CE"
+      ],
+      "drawings": [
+        "D27901146283"
+      ],
+      "software": [
+        "LG8L72901CB"
+      ],
+      "zones": [
+        "162",
+        "216"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-135520",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-250518",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-139310",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-27-1063",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-27-90-11-810-807",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-27-90-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-134210",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "configuration data set",
+      "loadable retirement",
+      "fault reporting word",
+      "obsolescence"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-135520-01",
+      "subject_mod": "MOD-135520",
+      "source_io": "IO-S-250518",
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-24",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-06-08",
+      "due_date": "2026-08-14",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ETGC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EVAA"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 71
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34",
+          "VANTOR-64",
+          "VANTOR-68"
+        ],
+        "ata_2d": [
+          "27",
+          "45"
+        ],
+        "ata_4d": [
+          "27-90",
+          "45-45"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "S00003",
+          "to": "S01900"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2790113238523"
+          ],
+          "fins": [
+            "435EV",
+            "52CE"
+          ],
+          "drawings": [
+            "D27901146283"
+          ],
+          "zones": [
+            "162",
+            "216"
+          ],
+          "software": [
+            "LG8L72901CB"
+          ]
+        },
+        "similarity_seeds": [
+          "gain table revision carried as a production deviation",
+          "fault reporting word alignment on a primary flight control computer"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "List every document that names the standard 2.4 loadable",
+          "method": "ENTITY",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish the supersession relationship with the successor standard",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Draft a retirement sequence with no gap in valid loads",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-139310",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2790113238523"
+            ],
+            "shared_fins": [
+              "435EV",
+              "52CE"
+            ],
+            "shared_zones": [
+              "162",
+              "216"
+            ],
+            "shared_ata_6d": [
+              "27-90-11",
+              "45-45"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The successor standard targets the same computers in the same rack positions and rewrites the same gain tables and fault word. It supersedes this data set outright, so every question in this work order is really a question about the transition sequence.",
+          "resolution": "Sequence the retirement against the successor availability date, not against a calendar."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SLN-27-1063",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2790113238523"
+            ],
+            "shared_fins": [
+              "435EV",
+              "52CE"
+            ],
+            "shared_zones": [
+              "162",
+              "216"
+            ],
+            "shared_ata_6d": [
+              "27-90-11",
+              "45-45"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The data load bulletin is the only vehicle that puts this loadable onto an aircraft. If its effectivity is not closed at the moment the successor becomes available, two valid loads exist for the same computers and the configuration record stops being unambiguous.",
+          "resolution": "Close the bulletin effectivity in the same action that publishes the successor."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-S-27-90-11-810-807",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2790113238523"
+            ],
+            "shared_fins": [
+              "435EV",
+              "52CE"
+            ],
+            "shared_zones": [
+              "162",
+              "216"
+            ],
+            "shared_ata_6d": [
+              "27-90-11"
+            ],
+            "similarity_note": "Returned by the entity link on the loadable and by similarity on the fault reporting wording; the two texts describe the same fault word from opposite ends."
+          },
+          "rationale": "The procedure quotes the standard 2.4 reporting word to decide which computer is at fault. On a transitioned aircraft the same symptom carries a different word and the procedure attributes the fault to the wrong unit.",
+          "resolution": "Raise as the first troubleshooting change under the successor standard."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "IPC-S-27-90-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2790113238523"
+            ],
+            "shared_fins": [
+              "435EV",
+              "52CE"
+            ],
+            "shared_zones": [
+              "162",
+              "216"
+            ],
+            "shared_ata_6d": [
+              "27-90-11",
+              "45-45"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The rack figure carries the loadable as a part reference alongside the hardware. Software references inside parts figures are the ones that survive a transition unnoticed and then point at a withdrawn item.",
+          "resolution": "Flag the reference for update in the same batch as the bulletin closure."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-134210",
+          "doc_type": "MOD",
+          "reason": "Shares the avionics rack zone and is returned by any search on guidance and protection levels. It installs a navigation receiver and its own loadable; it neither reads nor writes the flight control configuration data set and its transition is a separate matter."
+        }
+      ],
+      "conclusion": "No retirement decision taken here. The transition sequence and the four affected documents are handed to the avionics configuration authority.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

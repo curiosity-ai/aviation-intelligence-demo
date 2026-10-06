@@ -1,0 +1,442 @@
+[
+  {
+    "doc_id": "SLN-32-1027",
+    "doc_type": "SB",
+    "title": "Landing Gear — Main Gear Lock Link — Overcentre Travel and Downlock Sensing Rework, VANTOR-68",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-03-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-10",
+      "ata_6d": "32-10-12",
+      "title": "Main Gear — Side Stay and Lock Links"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-5560"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-133020"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2018-09-24",
+      "released": "2019-03-11",
+      "revised": "2019-03-11",
+      "effective": "2019-03-29"
+    },
+    "abstract": "Mandatory rework of the wing-mounted main gear lock link actuation and downlock sensing on the four-engine stretched aircraft, restoring the overcentre margin lost at low temperature.",
+    "sections": {
+      "planning_reason": "Six operators reported twenty-three unsafe gear indications during extension below minus five degrees Celsius outside air temperature, all of which cleared on recycling. Ground testing at low temperature reproduced the condition: grease in the lock link joint stiffens enough to leave the link 1.2 degrees short of the overcentre position, which is inside the proximity sensor dead band but outside the certified locked geometry. The stretched four-engine aircraft carries the highest maximum landing weight in the family on a gear geometry shared with lighter variants, and its overcentre margin was set from the lighter case. The authority has made the rework mandatory.",
+      "description": "The lock link actuation is re-worked to increase the overcentre travel by 3.5 degrees and to lower the breakout force at low temperature. Redundant hydraulic items are deleted and the circuit re-plumbed directly. The outboard solenoid is replaced by a unit with a wider operating temperature band. Proximity sensing is re-targeted onto the link itself rather than the actuator rod.",
+      "accomplishment_summary": "Put the aircraft on jacks and support the gear on the maintenance trestles. WARNING: DO NOT WORK ON THE LOCK LINK WITH THE GEAR UNSUPPORTED. Depressurise the green system: select the electric pump off, open the ground service depressurisation valve and wait for the accumulator gauge to fall to zero, then confirm that the outboard solenoid has dropped out by checking that the downlock indication is lost. Get access in the main gear bays and the gear doors, zones 721, 731 and 752. Remove the lower manifold D3210129320861, the forward pump D3210120197201, the lower pump HED997832-72 and the upper non-return valve LUDE897936-82 and re-plumb the circuit as shown on the modification drawing. Replace the inboard clamp assembly D3210122801088 by the stiffer item and retain the inboard heat exchanger sub-assembly D3210122818558. Install the outboard solenoid VAD543968-23. Move the outboard sensing position 14WS and the forward sensing position 70GM onto the link brackets from the kit and set the sensing gap. Re-route the inboard hose position 448GB clear of the new travel and check the clearance through the full retraction cycle. Retain the right-hand filter position 9WS8 with no change. Do the landing gear swing test through five complete cycles, including one cold-soaked cycle, and record the overcentre angle measured at each. Lower the aircraft and record the embodiment.",
+      "effectivity_note": "Applicable to all VTR-68R2 aircraft. There is no production cut-in because the line is closed, so every aircraft in the fleet is pre-modification. The shorter four-engine variant and the twin-engine aircraft have adequate overcentre margin at the same temperature and are not covered.",
+      "material_note": "Kit K3210-1027-01 contains the stiffer clamp, the solenoid, the sensor brackets and the re-plumbing set for one aircraft. Lead time is twenty-eight weeks. The removed pumps, manifold and non-return valve are returned to Aeralis."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3210122801088",
+        "D3210122818558",
+        "D3210129320861",
+        "D3210120197201",
+        "VAD543968-23",
+        "HED997832-72",
+        "LUDE897936-82"
+      ],
+      "fins": [
+        "14WS",
+        "70GM",
+        "448GB",
+        "9WS8"
+      ],
+      "drawings": [
+        "D32100087428",
+        "D32101114402"
+      ],
+      "software": [],
+      "zones": [
+        "721",
+        "731",
+        "752"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00785",
+        "S01131"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-133020",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "TSM-S-32-10-12-812-806",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "lock link",
+      "overcentre travel",
+      "downlock sensing",
+      "swing test",
+      "airworthiness directive"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Ashcombe",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-32-1027",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "MANDATORY",
+      "compliance_time": "Within 24 months after the effective date of this Service Bulletin, or before the next scheduled 6-year check, whichever occurs first.",
+      "ad_linked": true,
+      "ad_reference": "EASA AD 2019-0187",
+      "reason_code": "SAFETY",
+      "embodied_mod": "MOD-133020",
+      "manpower": {
+        "elapsed_time_hours": 102,
+        "manhours": 230,
+        "personnel": 4,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K3210-1027-01",
+        "kit_available_from": "2019-12-09",
+        "parts_required": [
+          {
+            "part_number": "D3210122801088",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "VAD543968-23",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D3210129320861",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D3210120197201",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "HED997832-72",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "LUDE897936-82",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Grease, low temperature, MIL specification",
+          "Lockwire, 0.8 mm"
+        ],
+        "tooling": [
+          "Aircraft jacking set",
+          "Gear maintenance trestle set",
+          "Overcentre angle gauge 98D32101-402",
+          "Cold soak chamber, portable"
+        ]
+      },
+      "weight_change_kg": -6.8,
+      "accomplishment_steps": 14,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2019-03-11",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "SLN-32-1027",
+    "doc_type": "SB",
+    "title": "Landing Gear — Main Gear Lock Link — Overcentre Travel and Downlock Sensing Rework, VANTOR-68",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2020-04-07",
+      "reason": "The inline green system depressurisation wording is replaced by a single reference to the sequence held in SLN-29-1018, which is valid on both engine driven pump standards.",
+      "raised_by_pawo": "PAWO-131570-01",
+      "raised_by_finding": "F04",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-10",
+      "ata_6d": "32-10-12",
+      "title": "Main Gear — Side Stay and Lock Links"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-5560"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-133020"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2018-09-24",
+      "released": "2019-03-11",
+      "revised": "2020-04-07",
+      "effective": "2020-04-26"
+    },
+    "abstract": "Mandatory rework of the wing-mounted main gear lock link actuation and downlock sensing on the four-engine stretched aircraft, restoring the overcentre margin lost at low temperature.",
+    "sections": {
+      "planning_reason": "Six operators reported twenty-three unsafe gear indications during extension below minus five degrees Celsius outside air temperature, all of which cleared on recycling. Ground testing at low temperature reproduced the condition: grease in the lock link joint stiffens enough to leave the link 1.2 degrees short of the overcentre position, which is inside the proximity sensor dead band but outside the certified locked geometry. The stretched four-engine aircraft carries the highest maximum landing weight in the family on a gear geometry shared with lighter variants, and its overcentre margin was set from the lighter case. The authority has made the rework mandatory.",
+      "description": "The lock link actuation is re-worked to increase the overcentre travel by 3.5 degrees and to lower the breakout force at low temperature. Redundant hydraulic items are deleted and the circuit re-plumbed directly. The outboard solenoid is replaced by a unit with a wider operating temperature band. Proximity sensing is re-targeted onto the link itself rather than the actuator rod.",
+      "accomplishment_summary": "Put the aircraft on jacks and support the gear on the maintenance trestles. WARNING: DO NOT WORK ON THE LOCK LINK WITH THE GEAR UNSUPPORTED. Depressurise the green system using the sequence given in SLN-29-1018, which is the only approved sequence and is written to be valid whether or not the case drain filter standard is embodied. Do not use a depressurisation sequence written against solenoid drop-out, because the confirmation differs between the two pump standards. Get access in the main gear bays and the gear doors, zones 721, 731 and 752. Remove the lower manifold D3210129320861, the forward pump D3210120197201, the lower pump HED997832-72 and the upper non-return valve LUDE897936-82 and re-plumb the circuit as shown on the modification drawing. Replace the inboard clamp assembly D3210122801088 by the stiffer item and retain the inboard heat exchanger sub-assembly D3210122818558. Install the outboard solenoid VAD543968-23. Move the outboard sensing position 14WS and the forward sensing position 70GM onto the link brackets from the kit and set the sensing gap. Re-route the inboard hose position 448GB clear of the new travel and check the clearance through the full retraction cycle. Retain the right-hand filter position 9WS8 with no change. Do the landing gear swing test through five complete cycles, including one cold-soaked cycle, and record the overcentre angle measured at each. Lower the aircraft and record the embodiment.",
+      "effectivity_note": "Applicable to all VTR-68R2 aircraft. There is no production cut-in because the line is closed, so every aircraft in the fleet is pre-modification. The shorter four-engine variant and the twin-engine aircraft have adequate overcentre margin at the same temperature and are not covered.",
+      "material_note": "Kit K3210-1027-01 contains the stiffer clamp, the solenoid, the sensor brackets and the re-plumbing set for one aircraft. Lead time is twenty-eight weeks. The removed pumps, manifold and non-return valve are returned to Aeralis. Where this bulletin and SLN-29-1018 are embodied in one visit, order both kits against the same visit so that the gear bay is opened once."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3210122801088",
+        "D3210122818558",
+        "D3210129320861",
+        "D3210120197201",
+        "VAD543968-23",
+        "HED997832-72",
+        "LUDE897936-82"
+      ],
+      "fins": [
+        "14WS",
+        "70GM",
+        "448GB",
+        "9WS8"
+      ],
+      "drawings": [
+        "D32100087428",
+        "D32101114402"
+      ],
+      "software": [],
+      "zones": [
+        "721",
+        "731",
+        "752"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00785",
+        "S01131"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-133020",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "TSM-S-32-10-12-812-806",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "SLN-29-1018",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "lock link",
+      "overcentre travel",
+      "downlock sensing",
+      "green system",
+      "depressurisation sequence"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Ashcombe",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-32-1027",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "MANDATORY",
+      "compliance_time": "Within 24 months after the effective date of this Service Bulletin, or before the next scheduled 6-year check, whichever occurs first.",
+      "ad_linked": true,
+      "ad_reference": "EASA AD 2019-0187",
+      "reason_code": "SAFETY",
+      "embodied_mod": "MOD-133020",
+      "manpower": {
+        "elapsed_time_hours": 102,
+        "manhours": 230,
+        "personnel": 4,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K3210-1027-01",
+        "kit_available_from": "2019-12-09",
+        "parts_required": [
+          {
+            "part_number": "D3210122801088",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "VAD543968-23",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D3210129320861",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D3210120197201",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "HED997832-72",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "LUDE897936-82",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Grease, low temperature, MIL specification",
+          "Lockwire, 0.8 mm"
+        ],
+        "tooling": [
+          "Aircraft jacking set",
+          "Gear maintenance trestle set",
+          "Overcentre angle gauge 98D32101-402",
+          "Cold soak chamber, portable"
+        ]
+      },
+      "weight_change_kg": -6.8,
+      "accomplishment_steps": 15,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2019-03-11",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2020-04-07",
+          "reason": "Green system depressurisation replaced by a reference to the single sequence in SLN-29-1018; caution added against the solenoid drop-out confirmation"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

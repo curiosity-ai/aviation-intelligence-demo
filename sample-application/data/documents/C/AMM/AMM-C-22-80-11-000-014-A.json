@@ -1,0 +1,167 @@
+[
+  {
+    "doc_id": "AMM-C-22-80-11-000-014-A",
+    "doc_type": "AMM",
+    "title": "Flight Management Computer — Removal",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-03-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-11",
+      "title": "Flight Management Computing — Flight Management Computer"
+    },
+    "secondary_ata": [
+      "22-80-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-09-14",
+      "released": "2022-03-02",
+      "revised": null,
+      "effective": "2022-03-28"
+    },
+    "abstract": "Removal of the flight management computer from the flight compartment rack, including the configuration record that has to be taken before power is removed so that the replacement unit can be set up correctly.",
+    "sections": {
+      "purpose": "To remove the flight management computer from the flight compartment rack for replacement or for a tray change.",
+      "job_setup_note": "The aircraft must be on external power for the configuration record and then de-powered before the unit is disconnected. The flight compartment rack access must be open. One person is enough for the removal but a second is needed at the maintenance terminal. Electrostatic protection is required.",
+      "procedure": "Make sure that the aircraft is on external power. At the maintenance terminal, print or record the aircraft configuration page, including the active navigation database identifier and both software part numbers. WARNING: DO NOT REMOVE THE COMPUTER WITH THE AIRCRAFT POWERED. A LIVE REMOVAL CAN CORRUPT THE DATABASE PARTITION. Remove the electrical power from the aircraft and put the warning notices in position. Open the flight compartment rack access in zone 263. Put on the electrostatic wrist strap and connect it to the rack bonding stud. Release the two front latches on the computer and let them hang. CAUTION: SUPPORT THE UNIT AS THE LATCHES ARE RELEASED. IT IS HEAVIER THAN IT LOOKS AND WILL SLIDE OUT UNDER ITS OWN WEIGHT. Pull the computer squarely out of the tray for the first 40 mm without lifting it. Disconnect the rear connector as it becomes accessible. Lift the unit clear of the rack and put it in an electrostatic bag with the configuration record attached. Examine the tray for distortion and for signs of arcing at the rear connector.",
+      "close_out": "Make sure that the tray and the rack area are clean. Remove the electrostatic wrist strap. Fit the rack blanking cover if the computer is not being replaced immediately. Close the rack access if no further work is planned. Remove the warning notices. Record the removal, the serial number and the configuration recorded before power was removed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2280117216234",
+        "D2280111910946",
+        "EN462879-3E"
+      ],
+      "fins": [
+        "5CC"
+      ],
+      "drawings": [
+        "D22801178992"
+      ],
+      "software": [
+        "LA7C64D57DF",
+        "LE1C320FA60"
+      ],
+      "zones": [
+        "263"
+      ],
+      "figures": [
+        "FIG-22-80-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-22-80-11-400-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-22-80-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight management computer",
+      "removal",
+      "configuration record",
+      "database partition",
+      "rack latch"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "22-80-11-000-014-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All aircraft",
+      "manhours": 1.4,
+      "personnel": 2,
+      "elapsed_time_hours": 1.0,
+      "access": {
+        "zones": [
+          "263"
+        ],
+        "access_panels": [
+          "263BL"
+        ],
+        "doors": [
+          "Flight compartment rack access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not remove the computer with the aircraft powered.",
+          "Support the unit as the latches are released.",
+          "Put the warning notices in position after the power is removed."
+        ],
+        "tooling": [
+          {
+            "reference": "98C23701-201",
+            "description": "Electrostatic wrist strap and bonding lead"
+          }
+        ],
+        "consumables": [
+          "Electrostatic bag, avionics unit"
+        ],
+        "expendables": [
+          {
+            "part_number": "EN462879-3E",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-C-22-80-11-400-014-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

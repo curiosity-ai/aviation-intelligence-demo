@@ -1,0 +1,468 @@
+[
+  {
+    "doc_id": "PAWO-138620-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Bilge Corrosion Protection and Frame Foot Renewal, Section 15",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-10",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-31",
+      "ata_6d": "53-31-11",
+      "title": "Fuselage Section 15/16 — Aft — Frames"
+    },
+    "secondary_ata": [
+      "51-20",
+      "53-31-12",
+      "92-41"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00003",
+          "to": "S01046"
+        }
+      ],
+      "excluded_msns": [
+        "S00559"
+      ],
+      "engine_types": [],
+      "operators": [
+        "OST",
+        "IOW"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-10",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the aft bilge corrosion protection and frame foot renewal for early-build twin-engine aircraft, covering released modifications, in-service repair schemes, wiring ground points and the adjacent fuel system work now in pre-analysis.",
+    "sections": {
+      "objective": "Identify every released or candidate item of Aeralis technical documentation applicable to SOLANO-30 and SOLANO-34 aircraft in the MSN S00003 to S01046 range that the proposed aft bilge treatment and frame foot renewal would conflict with, depend on, supersede or invalidate, and establish whether the proposed repeat inspection relief is defensible.",
+      "scope_note": "The search covers ATA 53-31 as the primary chapter, with ATA 51-20 for the protective scheme and ATA 92-41 for the wiring that passes through the sprayed area. ATA 53-50 floor structure was included in the first pass and then excluded: the cargo floor panels are lifted and refitted unchanged and no floor item is disturbed. ATA 25-50 cargo lining was excluded for the same reason. Fuel and air system chapters were not searched by chapter, but the entity seeds picked up one fuel candidate through a shared zone and that result was kept.",
+      "method_note": "Entity linking was run first from the five part numbers, the two FIN positions, the two drawing numbers and the four zones carried by the candidate. Semantic similarity was then run over titles, abstracts and reason-for-change text with the two seed phrases below, and the two result sets were merged. Findings surfaced by only one of the two methods are marked accordingly. The fuel candidate and the wiring sheet were found by entity linking alone and share almost no vocabulary with the candidate; the waste line proposal and the external skin repair were found by similarity alone and share no identifiers at all.",
+      "findings_summary": "Eight items have been confirmed and two of them are blocking. The renewal cannot be embodied on an aircraft that is not already at the chromate-free protection and drainage standard of MOD-130120, because the sealing land geometry and the fastener set assume it; that makes MOD-130120 a hard prerequisite rather than a recommendation, and the applicability condition already carries it. The second blocking item is the in-service repair scheme for frame foot material loss: a spliced foot carries a life limit and a repeat eddy current inspection of the splice fastener rows, and the renewal covers the splice with new material and new fasteners, so neither the life limit nor the inspection can be honoured afterwards. Beyond those, a fuel candidate now in pre-analysis puts a shell penetration and a local doubler into the same belly fairing bay and uses the same doubler kit, which was found only through the shared zone and part number and not through any shared wording. Two wiring ground points sit inside the sprayed area and their bonding resistance is not currently a step in the proposed work. The external skin patch repair on the aft lower shell was surfaced by similarity alone; it shares nothing with the candidate but describes the same physical bay from outside, and a combined internal and external stack has never been substantiated.",
+      "next_steps": "Obtain a position from the repair design owner on whether a spliced frame foot can be over-worked by the renewal or must be cut out first. Add a bonding resistance measurement to the proposed work for both bilge ground points and reflect it in the wiring sheet. Open a coordination item with the fuel candidate team on the belly fairing penetration and agree a single doubler installation rather than two. Confirm with the ageing structures owner that the proposed interval relief is defensible before the design review."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5331118141717",
+        "D5331119974905",
+        "D5331120068647",
+        "RO920514-03",
+        "AGS713311K3"
+      ],
+      "fins": [
+        "551VC",
+        "3061VC"
+      ],
+      "drawings": [
+        "D53311127475"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "142",
+        "191",
+        "192"
+      ],
+      "figures": [],
+      "repair_drawings": [
+        "RD-53-31-11-002"
+      ],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-138620",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-260114",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-130120",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-139050",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-130760",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "bilge",
+      "frame foot",
+      "conflict search",
+      "repeat inspection"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-138620-01",
+      "subject_mod": "MOD-138620",
+      "source_io": "IO-S-260114",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": true,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-02-10",
+      "due_date": "2026-05-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA",
+          "ELSC",
+          "EAAM"
+        ],
+        "estimated_manhours": 180,
+        "spent_manhours": 112
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34"
+        ],
+        "ata_2d": [
+          "53",
+          "51",
+          "92",
+          "28"
+        ],
+        "ata_4d": [
+          "53-31",
+          "53-50",
+          "51-20",
+          "92-41",
+          "28-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "S00003",
+          "to": "S01046"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5331118141717",
+            "D5331119974905",
+            "D5331120068647",
+            "RO920514-03",
+            "AGS713311K3"
+          ],
+          "fins": [
+            "551VC",
+            "3061VC"
+          ],
+          "drawings": [
+            "D53311127475"
+          ],
+          "zones": [
+            "133",
+            "142",
+            "191",
+            "192"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "standing water and corrosion at the frame feet of the lower fuselage",
+          "water displacing inhibitor sprayed over a bilge after wash and dry"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released and candidate MODs on ATA 53-31 and 51-20",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check in-service repair schemes on the aft bilge and the lower shell",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the wiring ground points inside the sprayed area",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Coordinate the belly fairing penetration with the fuel candidate",
+          "method": "SME_INTERVIEW",
+          "owner": "EAAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T05",
+          "title": "Establish whether the proposed inspection interval relief is defensible",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-130120",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "No identifier is shared and the two documents sit in different fuselage sections. The link is the applicability condition: the candidate declares the earlier modification as a post-mod condition and its sealing land geometry only exists on aircraft that carry it."
+          },
+          "rationale": "The interrupted faying seal and the chromate-free fastener set introduced at the forward cargo door surround became the lower shell standard. The renewal reproduces that geometry at the aft frame feet and assumes the drain path it created. On an aircraft that never received the standard, the renewed foot would drain into a path that does not exist.",
+          "resolution": "Keep the earlier modification as a post-mod applicability condition and state the constraint explicitly in the retrofit service bulletin, including for operators who embodied the forward work only partially."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-139050",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331120068647"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "191"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The fuel candidate takes a scavenge line out of the centre tank and through the shell into the aft belly fairing, closing the penetration with the same skin doubler kit that the renewal uses at the stringer penetrations, in the same bay. Neither document mentions the other and their vocabularies do not overlap at all: one is a corrosion and structures document and the other is a fuel distribution document. Only the shared zone and the shared part number connect them.",
+          "resolution": "Open a coordination item between the two design teams. Agree one doubler installation covering both penetrations, and decide which modification owns it, before either design is frozen."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-S-53-31-11-002",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331118141717",
+              "D5331119974905",
+              "RO920514-03",
+              "AGS713311K3"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "191",
+              "192"
+            ],
+            "shared_ata_6d": [
+              "53-31-11"
+            ],
+            "similarity_note": "Both describe work at the same frame feet with substantially the same part set, and both were returned by the similarity search as well as by entity linking."
+          },
+          "rationale": "An aircraft that already carries a spliced frame foot has a life-limited repair with a repeat eddy current inspection of the splice fastener rows. The renewal installs new material and a new fastener pattern over that splice, which makes the recorded life limit untraceable and the repeat inspection impossible to perform as written. A significant part of the target population is expected to carry at least one spliced foot.",
+          "resolution": "Obtain a position from the repair design owner on whether a spliced foot may be over-worked or must be cut out and renewed from sound material. Add an explicit pre-embodiment repair survey to the retrofit service bulletin."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-131750",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both address water reaching the lower fuselage on ageing aircraft, but in entirely different vocabulary: the cancelled proposal speaks of a waste line joint above a floor penetration, saturated insulation blankets and a heated drain cartridge, while the candidate speaks of frame feet, escape routes and inhibitor coverage. No part number, FIN, drawing or zone is shared."
+          },
+          "rationale": "The cancelled proposal identified the same underlying condition from the cabin side and was closed out with a sealing compound change rather than a design change. Its closure rationale assumed that the structural consequence was being handled elsewhere, which at the time it was not. The candidate should record that assumption explicitly rather than let it stay implicit.",
+          "resolution": "Cite the cancelled proposal in the candidate reason-for-change so that the two halves of the same in-service story are traceable. No design action is required."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-S-53-31-11-100-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331118141717",
+              "D5331119974905"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "133",
+              "142",
+              "191",
+              "192"
+            ],
+            "shared_ata_6d": [
+              "53-31-11"
+            ],
+            "similarity_note": "Reached by traversing from the candidate to the modification it depends on and from there to the maintenance task that both service bulletins call out."
+          },
+          "rationale": "The wash and dry task is the entry point for every piece of work in this bilge and it ends with a drain path check. The candidate re-cuts the escape route, so the drain path check acceptance criterion changes and the task must say which standard it is checking against.",
+          "resolution": "Raise a manual change request against the cleaning task to add a standard-dependent drain path acceptance criterion, effective with the candidate."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "WDM-S-92-41-11",
+          "doc_type": "WDM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "551VC"
+            ],
+            "shared_zones": [
+              "133",
+              "142",
+              "191"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "Two ground points sit inside the area that the candidate washes, dries and sprays. Corrosion inhibiting compound on a ground stud face raises the bonding resistance without any visible change, and the wiring sheet already carries per-point resistance limits precisely because of this. The candidate work instruction masks the studs but has no measurement step afterwards.",
+          "resolution": "Add a bonding resistance measurement for both ground points to the candidate work content and to the retrofit service bulletin, and reference the wiring sheet limits rather than a fleet value."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "SRM-S-53-31-12-004",
+          "doc_type": "SRM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by similarity alone. The repair describes an external patch on the aft lower shell below the cargo floor line and the candidate describes internal frame foot work in the same bay; they share the physical location and nothing else. No part number, FIN, drawing or zone is common, and the two documents use no significant vocabulary in common beyond the section number."
+          },
+          "rationale": "An aircraft carrying the external patch and then receiving the internal renewal ends up with a stack that neither substantiation covers, and the patch is life limited with a repeat eddy current inspection of its perimeter that the internal work does not obstruct but does not account for either. The combination has not been assessed.",
+          "resolution": "Ask the structures certification owner whether the combined stack needs a dedicated substantiation, and add a pre-embodiment check for an existing external patch to the retrofit service bulletin."
+        },
+        {
+          "finding_id": "F08",
+          "doc_id": "IPC-S-53-31-11-FIG-02",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331118141717",
+              "D5331119974905",
+              "RO920514-03",
+              "AGS713311K3"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "191",
+              "192"
+            ],
+            "shared_ata_6d": [
+              "53-31-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The parts figure already carries a post-modification effectivity split for the four-engine splice items. The candidate introduces a second post-modification standard for the same items on the twin-engine aircraft, which the current figure cannot express without a further alternate row and a clear note on which splice belongs to which fleet.",
+          "resolution": "Raise an illustrated parts change request to add the twin-engine renewal items as alternates with their own effectivity, and check that the four-engine and twin-engine splice sets cannot be cross-ordered."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-130760",
+          "doc_type": "MOD",
+          "reason": "Near-identical title and the same ATA 53-31-11: it is also a frame foot renewal with a bilge corrosion treatment, and it ranks first on similarity. It applies only to the four-engine VANTOR-64 and VANTOR-68, whose aft cabin arrangement and drain routing differ; no aircraft in the candidate effectivity is covered by it, and the two share no part number, FIN, drawing or zone."
+        },
+        {
+          "doc_id": "SLN-53-1030",
+          "doc_type": "SB",
+          "reason": "The retrofit vehicle for the four-engine renewal. It shares the working vocabulary of the candidate almost word for word, including the wash, dry and inhibitor sequence, but its effectivity is VTR-64C3 and VTR-68R2 only and its splice part set is different. Surfacing it is correct behaviour for the search; treating it as a conflict would be wrong."
+        }
+      ],
+      "conclusion": "Not yet issued. Two blocking items are confirmed, one of which needs a position from the repair design owner before the scope can be fixed, and one coordination item with a parallel fuel candidate is open.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

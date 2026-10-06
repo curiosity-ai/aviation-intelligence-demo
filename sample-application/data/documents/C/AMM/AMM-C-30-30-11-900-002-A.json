@@ -1,0 +1,325 @@
+[
+  {
+    "doc_id": "AMM-C-30-30-11-900-002-A",
+    "doc_type": "AMM",
+    "title": "Probe Heat Computer — Loadable Software Part Loading",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-12-10",
+      "reason": "Original issue of the probe heat computer software loading task.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "42-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-08-09",
+      "released": "2018-12-10",
+      "revised": "2018-12-10",
+      "effective": "2018-12-31"
+    },
+    "abstract": "Loading of a probe heat computer software part through the maintenance port, with the sense harness check that must pass before the per-element monitoring standard is loaded onto an aircraft.",
+    "sections": {
+      "purpose": "This task gives the loading of a loadable software part into the probe heat computer and the hardware check that decides whether the per-element monitoring standard may be loaded on the aircraft.",
+      "job_setup_note": "The aircraft must be on external power with a stable supply for the whole load, because an interrupted load leaves the computer in a state that needs a shop visit. The per-element sense harness must be fitted before the monitoring standard is loaded; establish the fitted harness before the media is selected.",
+      "procedure": "1. WARNING: DO NOT INTERRUPT THE ELECTRICAL SUPPLY DURING A SOFTWARE LOAD. AN INTERRUPTED LOAD MAKES THE COMPUTER UNSERVICEABLE. 2. Confirm that the external power supply is stable and that the ground power unit will not be disconnected. 3. Read out the currently loaded part number and record it. 4. Establish the fitted sense harness standard by examining the hose assembly D3030112295450 at the computer connector; the per-element standard has two additional contacts in the backshell and is identified by sight. 5. CAUTION: DO NOT LOAD THE PER-ELEMENT MONITORING STANDARD ONTO AN AIRCRAFT WITHOUT THE SENSE HARNESS. THE COMPUTER WILL REPORT A PERMANENT FAULT. 6. Select the media for the applicable standard. 7. Connect the portable data loader at the maintenance port. 8. Load the selected part and wait for the completion message; do not select anything on the flight deck during the load. 9. Read back the loaded part number and confirm it against the work card. 10. Do the probe heat system functional test and confirm the acceptance criteria for the loaded standard. 11. Disconnect the data loader and secure the maintenance port cover.",
+      "close_out": "Confirm that the loaded part number is correctly reported and that the fault memory is clear. Update the aircraft software configuration record with the loaded part number and the load date. Record the load in the aircraft technical record together with the result of the functional test."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030112295450"
+      ],
+      "fins": [
+        "4618WX",
+        "386WX5"
+      ],
+      "drawings": [
+        "D30301166008"
+      ],
+      "software": [
+        "LB8CAD816CB"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-30-30-11-700-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software load",
+      "probe heat computer",
+      "sense harness",
+      "data loader",
+      "configuration record"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "30-30-11-900-002-A",
+      "task_type": "ADJUSTMENT",
+      "effectivity_note": "All aircraft. The sense harness standard must be verified on the aircraft before the load is started.",
+      "manhours": 3.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "162",
+          "211",
+          "214"
+        ],
+        "access_panels": [
+          "162AL",
+          "211CR",
+          "214CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not interrupt the electrical supply during a software load.",
+          "Do not make flight deck selections while a load is running.",
+          "Confirm the hardware prerequisite before the media is selected."
+        ],
+        "tooling": [
+          {
+            "reference": "98D30301-006",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D30301-011",
+            "description": "Maintenance port adapter cable"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-30-30-11-700-004-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-C-30-30-11-900-002-A",
+    "doc_type": "AMM",
+    "title": "Probe Heat Computer — Loadable Software Part Loading",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-02",
+      "reason": "Prerequisite check for the thermal response standard declared undefined and the standard barred from loading until the check is issued with it.",
+      "raised_by_pawo": "PAWO-111159-01",
+      "raised_by_finding": "F04",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "42-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-08-09",
+      "released": "2018-12-10",
+      "revised": "2026-08-02",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Loading of a probe heat computer software part through the maintenance port, with the hardware prerequisite check that must pass before a compensated standard is loaded onto an aircraft.",
+    "sections": {
+      "purpose": "This task gives the loading of a loadable software part into the probe heat computer and the hardware prerequisite checks that decide whether a given standard may be loaded on the aircraft.",
+      "job_setup_note": "The aircraft must be on external power with a stable supply for the whole load, because an interrupted load leaves the computer in a state that needs a shop visit. The hardware prerequisite differs by standard, and only two of the three can be established by looking: the per-element sense harness must be fitted before a compensated standard is loaded, and the probe base temperature sensor must be fitted before the thermal response standard is loaded. Both of those are visible at the connector or at the probe base. The thermal response standard has a third prerequisite that is not: it needs the faster acting supply solenoid, which carries no external marking and cannot be told from the current item without a response measurement. Until a check the technician can actually perform has been defined and issued with that standard, the thermal response part must not be loaded under this task. Establish the fitted hardware before the media is selected.",
+      "procedure": "1. WARNING: DO NOT INTERRUPT THE ELECTRICAL SUPPLY DURING A SOFTWARE LOAD. AN INTERRUPTED LOAD MAKES THE COMPUTER UNSERVICEABLE. 2. Confirm that the external power supply is stable and that the ground power unit will not be disconnected. 3. Read out the currently loaded part number and record it. 4. Establish the fitted sense harness standard by examining the hose assembly D3030112295450 or the supply pipe D3030115331360 at the computer connector. 5. CAUTION: DO NOT LOAD A COMPENSATED STANDARD ONTO AN AIRCRAFT WITHOUT THE PER-ELEMENT SENSE HARNESS. THE COMPUTER WILL REPORT A PERMANENT FAULT. 6. Confirm whether the probe base temperature sensor is fitted and whether its clamp AES270917-26 is installed. 7. CAUTION: DO NOT LOAD THE THERMAL RESPONSE STANDARD UNDER THIS TASK. ITS SOLENOID PREREQUISITE CANNOT BE VERIFIED BY THE CHECKS GIVEN HERE. 8. Select the media for the applicable standard, either LB8CAD816CB or LC5C5779B0E as required by the aircraft configuration. 9. Connect the portable data loader at the maintenance port. 10. Load the selected part and wait for the completion message; do not select anything on the flight deck during the load. 11. Read back the loaded part number and confirm it against the work card. 12. Do the probe heat system functional test and confirm the acceptance criteria for the loaded standard. 13. Disconnect the data loader and secure the maintenance port cover.",
+      "close_out": "Confirm that the loaded part number is correctly reported and that the fault memory is clear. Update the aircraft software configuration record with the loaded part number and the load date. Record the load in the aircraft technical record together with the result of the functional test."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030112295450",
+        "D3030115331360",
+        "AES270917-26"
+      ],
+      "fins": [
+        "4618WX",
+        "386WX5"
+      ],
+      "drawings": [
+        "D30301166008"
+      ],
+      "software": [
+        "LB8CAD816CB",
+        "LC5C5779B0E",
+        "LG6C6545962"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-30-30-11-700-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111159",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software load",
+      "probe heat computer",
+      "hardware prerequisite",
+      "solenoid response",
+      "data loader"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "30-30-11-900-002-A",
+      "task_type": "ADJUSTMENT",
+      "effectivity_note": "All aircraft. The hardware prerequisite for the selected standard must be verified on the aircraft before the load is started. The thermal response standard is excluded from this task until its prerequisite check is defined.",
+      "manhours": 3.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "162",
+          "211",
+          "214"
+        ],
+        "access_panels": [
+          "162AL",
+          "211CR",
+          "214CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not interrupt the electrical supply during a software load.",
+          "Do not make flight deck selections while a load is running.",
+          "Confirm the hardware prerequisite before the media is selected."
+        ],
+        "tooling": [
+          {
+            "reference": "98D30301-006",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D30301-011",
+            "description": "Maintenance port adapter cable"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-30-30-11-700-004-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 2
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

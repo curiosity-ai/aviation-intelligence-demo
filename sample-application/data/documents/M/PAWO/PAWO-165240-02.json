@@ -1,0 +1,317 @@
+[
+  {
+    "doc_id": "PAWO-165240-02",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis Round Two — Central Maintenance Computer Rack Extension to the Freighter Fleet",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45",
+      "42-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-164788"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-04",
+      "released": "2026-07-30",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Second pre-analysis round on the central maintenance computer rack replacement, raised after the revision that widened its applicability to the freighter and closed with the freighter question handed to the cargo systems design office.",
+    "sections": {
+      "objective": "The revision that widened the rack replacement to the freighter was written on the assumption that the freighter avionics bay is configurationally identical to the passenger aircraft. A first round had never examined the freighter case, so this second round was raised to test that assumption before the retrofit campaign opened, and to settle the sequencing against the software management module retrofit running in parallel.",
+      "findings_summary": "The assumption holds electrically and fails on installation. The rack itself, the harness terminations and the loading path are common, which is why the revision passed review. The freighter main deck cargo system controller occupies the adjacent rack position and its cooling airflow crosses the bay in the opposite direction, so the rack replacement changes the thermal picture in a way that the passenger substantiation does not cover. That is not a rack problem and this team does not own it. Alongside it, the software module retrofit needs the same bay window and the same loading path validation, the replacement bulletin effectivity now names freighter MSNs it has never been written for, and the seat display candidate shares the forward cabin floor access on combi layouts.",
+      "next_steps": "Hand the freighter bay thermal question to the cargo systems design office with the airflow measurements taken during this round. Merge the freighter rack retrofit into the software module campaign so the bay is opened once and the loading path validated once. Hold the bulletin effectivity extension until the thermal position is returned. No third round is required from this team."
+    },
+    "entities": {
+      "part_numbers": [
+        "KEDE588674-53",
+        "D4520115601387",
+        "KAD366597-92"
+      ],
+      "fins": [
+        "72TN",
+        "169TN8",
+        "6796TN8"
+      ],
+      "drawings": [
+        "D45201289920"
+      ],
+      "software": [],
+      "zones": [
+        "116",
+        "241"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-165240",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "MOD-164355",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "freighter",
+      "avionics bay",
+      "rack replacement",
+      "bay thermal"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-165240-02",
+      "subject_mod": "MOD-165240",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-30",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-05-04",
+      "due_date": "2026-08-07",
+      "analysis_round": 2,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EVAA",
+          "EGAM"
+        ],
+        "estimated_manhours": 130,
+        "spent_manhours": 74
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42F"
+        ],
+        "ata_2d": [
+          "45",
+          "42",
+          "25"
+        ],
+        "ata_4d": [
+          "45-20",
+          "45-45",
+          "42-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "M00300",
+          "to": "M00520"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "KEDE588674-53",
+            "D4520115601387",
+            "KAD366597-92"
+          ],
+          "fins": [
+            "72TN",
+            "169TN8",
+            "6796TN8"
+          ],
+          "drawings": [
+            "D45201289920"
+          ],
+          "zones": [
+            "116",
+            "241"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "avionics bay cooling airflow crossed by an adjacent rack",
+          "freighter configuration assumed identical to the passenger aircraft"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare freighter and passenger avionics bay rack layouts",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Measure bay airflow with the cargo system controller installed",
+          "method": "SME_INTERVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Sequence the rack retrofit against the module campaign",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Check forward cabin floor access on combi layouts",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-164355",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "116"
+            ],
+            "shared_ata_6d": [
+              "45-45"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The module retrofit campaign is opening on the same fleets and needs the same bay window and the same loading path validation. Running the freighter rack retrofit separately would double both, and the freighter campaign is small enough that the duplication is a large fraction of its cost.",
+          "resolution": "Merge the freighter rack retrofit into the module campaign and validate the loading path once."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-45-1021",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4520115601387",
+              "KAD366597-92",
+              "KEDE588674-53"
+            ],
+            "shared_fins": [
+              "72TN",
+              "169TN8",
+              "6796TN8"
+            ],
+            "shared_zones": [
+              "116",
+              "241"
+            ],
+            "shared_ata_6d": [
+              "45-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The revision widened the modification applicability but the bulletin still describes a passenger avionics bay throughout, including the access route and the adjacent equipment it tells the technician to leave undisturbed. On the freighter that equipment is the cargo system controller.",
+          "resolution": "Hold the bulletin effectivity extension until the bay thermal position is returned, then rewrite the access content for the freighter."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-167012",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "241"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The seat display obsolescence candidate runs its harness under the forward cabin floor in the same zone, which on combi layouts is the access route to the rack. Two campaigns lifting the same panels in the same year is avoidable if they are planned together.",
+          "resolution": "Flag the shared floor access to fleet planning while the candidate is still in proposal."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-M-31-50-11-812-801",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "241"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The fault isolation reached through the rack impact edge still describes the passenger access route to the bay. On the freighter the route differs and the panel identifiers it quotes do not exist.",
+          "resolution": "Add a freighter access variant when the bulletin access content is rewritten."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed and delegated. The electrical read-across to the freighter holds; the bay thermal question belongs to the cargo systems design office and was handed over with the airflow data.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

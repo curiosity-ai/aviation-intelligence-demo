@@ -1,0 +1,453 @@
+[
+  {
+    "doc_id": "PAWO-139850-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Latched Start Valve Override and Start Sequence Protection",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "36-10",
+      "49-50",
+      "78-30"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-39R1"
+      ],
+      "msns": [
+        "S00339",
+        "S01029",
+        "S01232",
+        "S01668"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7000"
+      ],
+      "operators": [
+        "VIA",
+        "ACL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-16",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the latched start valve override, covering the duct clamping standard it depends on, the reverser interface it routes through, and the crew procedure and trouble shooting content that the change is really aimed at.",
+    "sections": {
+      "objective": "Identify every released or candidate item applicable to the four listed SLN-39R1 aircraft that the latched start valve override and start sequence protection would conflict with, depend on, supersede or invalidate, and establish whether the elevation improvement can be demonstrated against a defensible baseline.",
+      "scope_note": "The search covers ATA 80-10 as the primary chapter, ATA 36-10 for the bleed supply and ATA 49-50 for the auxiliary power unit load compressor that provides it. ATA 78-30 was added after entity linking returned the reverser interface through a shared zone, which the original scope did not anticipate. ATA 73 engine fuel and control was excluded: the change is upstream of the engine control unit and no engine interface is modified beyond three spare pins.",
+      "method_note": "Entity linking was run from the three part numbers, the two duct positions and the three zones the candidate carries. Semantic similarity was run over titles, abstracts and reason-for-change text with the two seed phrases below. The reverser standard was returned by entity linking alone through a single shared zone and shares no vocabulary with the candidate at all. The flight crew procedure was returned by similarity alone with no shared identifier, and it is arguably the most important finding here because the whole candidate exists to change what the crew does.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the prerequisite: the candidate keeps the two-piece clamp, the titanium bolt set and the re-machined nozzle face from the duct clamping standard, and its mass flow baseline is the recovered figure rather than the delivered one. Demonstrating the elevation improvement on an aircraft that has not embodied that standard would measure the candidate against a leaking joint. The reverser standard was returned by entity linking through one shared zone and nothing else; the candidate runs a new harness tail through the reverser interface and the clip positions it needs may fall where the reverser half has to move, which no amount of reading either dossier would have revealed. The crew procedure was returned by similarity alone and is where the change actually lands: it describes an override that does not latch and a crew that may make a second attempt, both of which the candidate changes. The trouble shooting procedure is the other side of the same coin and is the best available statement of the requirement, since it already asks for exactly the recorded parameters the candidate provides. Three further items follow: the installation task acceptance changes, the inlet cowl repair scheme counts intrusions into the acoustic panel, and the existing bulletin's both-engines constraint is inherited and extended by a human factors argument.",
+      "next_steps": "Confirm the prerequisite standard on all four aircraft before the trial is planned. Survey the reverser interface with the half in both positions before fixing clip positions. Draft the crew procedure change with flight operations and have an operator evaluate it. Use the trouble shooting procedure as the requirement source for the recorded parameters. Confirm the human factors position on mixed override standards across two engines."
+    },
+    "entities": {
+      "part_numbers": [
+        "D8010119758805",
+        "EN290030-3C",
+        "WES955482-79"
+      ],
+      "fins": [
+        "983ES",
+        "2788ES3"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "421",
+        "456",
+        "481"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00339",
+        "S01029"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-139850",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-260574",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-132070",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-134720",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "FCOM-S-PRO-80-10-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SRM-S-54-10-11-015",
+        "doc_type": "SRM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-80-10-11-400-040-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-80-10-11-810-812",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-80-1003",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "start valve",
+      "latched override",
+      "recorded parameter",
+      "conflict search"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-139850-01",
+      "subject_mod": "MOD-139850",
+      "source_io": "IO-S-260574",
+      "pawo_status": "ON_HOLD",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-04-16",
+      "due_date": "2026-09-11",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "ESZS",
+          "EGAM"
+        ],
+        "estimated_manhours": 115,
+        "spent_manhours": 64
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-39"
+        ],
+        "ata_2d": [
+          "80",
+          "36",
+          "49",
+          "78"
+        ],
+        "ata_4d": [
+          "80-10",
+          "36-10",
+          "49-50",
+          "78-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "SRM",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D8010119758805",
+            "EN290030-3C",
+            "WES955482-79"
+          ],
+          "fins": [
+            "983ES",
+            "2788ES3"
+          ],
+          "drawings": [],
+          "zones": [
+            "421",
+            "456",
+            "481"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "start hangs short of light-up speed at a high elevation airport",
+          "manual override left selected and found on the turnaround"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Confirm the duct clamping standard on the four target aircraft",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Survey the reverser interface clip positions",
+          "method": "ENTITY",
+          "owner": "ESZS",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Draft the crew procedure change with flight operations",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "BLOCKED"
+        },
+        {
+          "task_id": "T04",
+          "title": "Derive the recorded parameter set from the trouble shooting procedure",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T05",
+          "title": "Confirm the human factors position on mixed override standards",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "BLOCKED"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-132070",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D8010119758805",
+              "EN290030-3C",
+              "WES955482-79"
+            ],
+            "shared_fins": [
+              "983ES",
+              "2788ES3"
+            ],
+            "shared_zones": [
+              "421",
+              "456",
+              "481"
+            ],
+            "shared_ata_6d": [
+              "80-10-11"
+            ],
+            "similarity_note": "Both strategies return it first. The two share the aft clamp, the titanium bolt set, the nozzle, both duct positions, all three zones and the ATA 6D, and describe the same installation."
+          },
+          "rationale": "The candidate retains the two-piece clamp, the titanium bolt set and the re-machined nozzle face introduced by the duct clamping standard, and its mass flow assumptions start from the recovered figure rather than from the delivered one. On an aircraft that has not embodied that standard, the elevation improvement would be measured against a leaking joint and would not be reproducible.",
+          "resolution": "Keep the duct clamping standard as a hard post-mod condition and confirm that the four target aircraft carry it before the trial is planned."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-134720",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "481"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The candidate re-clips the forward duct and runs a new harness tail through the thrust reverser interface, which is where the blocker door link standard works. A reverser dossier and a start valve dossier share no vocabulary and neither mentions the other; only the zone connects them, and the clip positions the candidate needs may fall where the reverser half has to move.",
+          "resolution": "Survey the interface with the reverser half in both the stowed and the deployed positions before the clip positions are fixed."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "FCOM-S-PRO-80-10-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by similarity alone. The crew entry talks about abandoning a start, respecting the duty cycle and preferring a cross-bleed start; the candidate talks about latching solenoids, discretes and recorded parameters. No FIN, part number or zone is shared and the two texts have almost nothing in common lexically."
+          },
+          "rationale": "The crew procedure already tells crews to abandon a hung start and to prefer a cross-bleed start at elevation, and it describes an override that does not latch. The candidate makes the override latch and annunciate, and adds a start sequence inhibit that will refuse a second attempt. Both change what the crew does and the procedure is the document that governs it.",
+          "resolution": "Draft the procedure change with flight operations as part of the candidate rather than after it, and have an operator evaluate it before publication."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-S-54-10-11-015",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found through the applicability of the repair scheme rather than through any shared identifier; both apply to the same nacelle on the same aircraft."
+          },
+          "rationale": "The inlet cowl repair scheme keeps a running total of acoustic area lost per cowl and withdraws itself when that total reaches a limit. Any bracket or harness clip added inside the cowl is a further intrusion into that panel, and the candidate adds both without counting them.",
+          "resolution": "Confirm with the repair design owner that the added clip positions do not intrude into acoustic panel area, and record them if they do."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-S-80-10-11-400-040-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D8010119758805",
+              "EN290030-3C",
+              "WES955482-79"
+            ],
+            "shared_fins": [
+              "983ES",
+              "2788ES3"
+            ],
+            "shared_zones": [
+              "421",
+              "456",
+              "481"
+            ],
+            "shared_ata_6d": [
+              "80-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task ends with a dry motoring run and a check that the valve-open discrete appears within one second. The candidate replaces that discrete with a latched override annunciation and a duty timer, so the acceptance changes and a new step is needed to prove the inhibit.",
+          "resolution": "Raise a manual change request against the installation task for the revised acceptance and the inhibit check, effective with the candidate."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "TSM-S-80-10-11-810-812",
+          "doc_type": "TSM",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D8010119758805",
+              "WES955482-79"
+            ],
+            "shared_fins": [
+              "983ES",
+              "2788ES3"
+            ],
+            "shared_zones": [
+              "421",
+              "456"
+            ],
+            "shared_ata_6d": [
+              "80-10-11"
+            ],
+            "similarity_note": "Both strategies return it: the procedure shares the clamp and nozzle part numbers with the candidate and its fault description is the closest textual match to the candidate reason-for-change anywhere in the program."
+          },
+          "rationale": "The trouble shooting procedure already separates the elevation condition from the fretting condition and states that the elevation cases are a margin problem rather than a component problem. The candidate is the design answer to that analysis, and its recorded parameter addition is precisely what the procedure asks for and cannot have.",
+          "resolution": "Use the procedure as the requirement source for the recorded parameters, and rewrite it around them once the candidate is embodied."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "SLN-80-1003",
+          "doc_type": "SB",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "80-10-11"
+            ],
+            "similarity_note": "Reached by traversing from the candidate to the modification it requires and from there to that modification's retrofit bulletin."
+          },
+          "rationale": "The retrofit bulletin for the duct clamping standard states that both engines must be brought to the same standard within one maintenance visit. The candidate inherits that constraint and adds one of its own, because a latched override on one engine and a spring-loaded one on the other is a human factors exposure at the flight deck.",
+          "resolution": "State the both-engines constraint explicitly in the candidate and confirm the human factors position with the certification office."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-137030",
+          "doc_type": "MOD",
+          "reason": "Ranks first on similarity for several of the seed phrases because it is a powerplant change on the Auran installation with heavy overlap in mounting, shroud and thermal vocabulary. It is the engine electronic control unit mounting and thermal shroud, it shares no part number, no duct position and no zone with the candidate, and its effectivity is the Auran 7000 production standard rather than the four listed aircraft."
+        },
+        {
+          "doc_id": "FCOM-S-DSC-49-10-01",
+          "doc_type": "FCOM",
+          "reason": "Returned by similarity because it describes the auxiliary power unit that supplies the start air and uses the same start vocabulary. Nothing in it changes: the candidate does not alter the auxiliary power unit, its controls or its indications, and the duty cycle the crew respects is already stated in the start procedure rather than here."
+        }
+      ],
+      "conclusion": "On hold pending the flight operations engagement. The prerequisite is confirmed and the reverser interface survey is under way.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

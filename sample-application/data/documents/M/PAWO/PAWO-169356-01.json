@@ -1,0 +1,410 @@
+[
+  {
+    "doc_id": "PAWO-169356-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Trace Heating of the Mid Cabin Lavatory Waste Run",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "38",
+      "ata_4d": "38-30",
+      "ata_6d": "38-30-11",
+      "title": "Waste Disposal — Vacuum Toilet Assembly"
+    },
+    "secondary_ata": [
+      "38-10",
+      "21-40"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "AMA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-17",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the lavatory waste run trace heating proposal, covering the bulletin whose harness arrangement it reworks, the floor repair scheme in the same bay, the electrical load question and the crew-facing description of cold sector cabin behaviour.",
+    "sections": {
+      "objective": "Establish whether trace heating can be added to the mid cabin waste run without disturbing the bowl interface standard already embodied, where the electrical capacity comes from, and what maintenance and cabin content changes when a heated run is introduced.",
+      "scope_note": "The search covers ATA 38-30 as the primary chapter and ATA 38-10 because the lagging runs past the potable water distribution in the same bay. ATA 21-40 was included because the floor heating supply is the nearest existing electrical provision and was the first candidate for the power take-off. Structure chapter 51-70 came in through the zone seeds and was kept, because the floor panel supports in those bays are already a repair area. Avionics and powerplant chapters were excluded.",
+      "method_note": "Entity linking was seeded from the three part numbers, the three functional item numbers and the two lavatory zones, which returned the vacuum toilet family and, through the zones alone, a floor panel support repair scheme that has nothing to do with waste. Similarity was run over the operator's complaint about services becoming unavailable late in a long cold sector, deliberately avoiding the words heater and freeze, and that returned the crew performance entry describing exactly the same phenomenon from the cabin side.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the bowl interface bulletin: its accomplishment re-ties the harness behind the shroud to a defined standard, and the trace heating termination lands in the same place, so an aircraft embodying both in either order ends up with an arrangement neither document describes. The bowl interface modification itself is a prerequisite for a different reason — the seal standard is what the heated run's temperature rise is judged against. The floor panel repair scheme was returned by the zone seed alone and matters more than it looked: those bays already carry doubler straps at the tie-down positions, and the lagging thickness has to clear them. The servicing task changes because a heated run has a temperature check the current task has no concept of, and the parts figure needs the partition item split by effectivity. The electrical load is the largest single risk and is unresolved. The item the review would not have found by entity search is the crew performance entry: it tells crews to expect cold-related unavailability in the aft cabin on long high latitude sectors and not to compensate with cabin temperature, which is exactly the behaviour the candidate removes for two lavatories and leaves in place for everything else.",
+      "next_steps": "Get the load analysis for the affected bus before the design is frozen. Establish the lagging clearance over the existing floor repair straps. Agree with the bulletin owner how the harness tie arrangement is reconciled. Ask flight operations whether the crew entry needs a caveat once two lavatories behave differently from the rest."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3830122049905",
+        "D3810120156917",
+        "AES131071-62"
+      ],
+      "fins": [
+        "41WM",
+        "44WP3",
+        "7WM"
+      ],
+      "drawings": [
+        "D38301279497"
+      ],
+      "software": [],
+      "zones": [
+        "932",
+        "933"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00310"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-169356",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-M-260661",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "trace heating",
+      "waste run",
+      "electrical load",
+      "cold sector"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-169356-01",
+      "subject_mod": "MOD-169356",
+      "source_io": "IO-M-260661",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-06-17",
+      "due_date": "2026-10-09",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ETGC",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ELSC",
+          "EDSA"
+        ],
+        "estimated_manhours": 150,
+        "spent_manhours": 58
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "38",
+          "21",
+          "51"
+        ],
+        "ata_4d": [
+          "38-30",
+          "38-10",
+          "21-40",
+          "51-70"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "M00069",
+          "to": "M00475"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3830122049905",
+            "D3810120156917"
+          ],
+          "fins": [
+            "41WM",
+            "44WP3"
+          ],
+          "drawings": [
+            "D38301279497"
+          ],
+          "zones": [
+            "932",
+            "933"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "a service that stops working late in a long sector and recovers on the ground",
+          "cabin crew managing passengers around something that cannot be fixed in flight"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search the waste and water family on the entity seeds",
+          "method": "ENTITY",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search for comparable cold sector unavailability elsewhere",
+          "method": "SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Load analysis for the affected bus with trace heating energised",
+          "method": "SME_INTERVIEW",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Check lagging clearance over existing floor repair straps",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MRD-38-1014",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3830122049905"
+            ],
+            "shared_fins": [
+              "41WM"
+            ],
+            "shared_zones": [
+              "933"
+            ],
+            "shared_ata_6d": [
+              "38-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bowl interface bulletin re-ties the harness behind the shroud clear of the partition bracket, using a stated cable tie standard. The trace heating termination is carried on the same partition and lands in that area. An aircraft that embodies both, in either order, finishes with a harness arrangement that neither document describes and that no task inspects.",
+          "resolution": "Agree a single harness arrangement with the bulletin owner and re-issue the bulletin, or write the reconciliation into the candidate accomplishment."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-168074",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3830122049905"
+            ],
+            "shared_fins": [
+              "41WM",
+              "44WP3"
+            ],
+            "shared_zones": [
+              "933"
+            ],
+            "shared_ata_6d": [
+              "38-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The temperature rise from the heated run is judged against the two lip seal compound, not against the delivered seal, which relaxes at a lower temperature. An aircraft with the delivered seal would see the seal set faster with the heating in place.",
+          "resolution": "Declare the interface seal standard as a post-modification condition."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-M-51-70-11-005",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "932",
+              "933"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The floor panel support repair adds a doubler strap and tie-down cleats in exactly the bays the waste run crosses, and aircraft in this operator's fleet already carry it. The lagging thickness has to clear the strap, and the repair's own requirement for a continuous perimeter seal against spillage is affected by a heated pipe running above it.",
+          "resolution": "Measure the clearance over an embodied strap on an in-service aircraft and set the lagging thickness against it."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-M-38-30-11-800-039-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3830122049905"
+            ],
+            "shared_fins": [
+              "41WM"
+            ],
+            "shared_zones": [
+              "933"
+            ],
+            "shared_ata_6d": [
+              "38-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The servicing check has no concept of a heated run. A modified aircraft needs a heater continuity check and a temperature verification in the same task, and the seating gap limits may need review because the seal now runs warmer.",
+          "resolution": "Add the heater checks to the servicing task and review the seating gap limits at the higher seal temperature."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "FCOM-M-PER-21-30-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew entry describes services routed under the cabin floor running colder than the cabin on long high latitude sectors, tells crews to expect reports of unavailability late in the flight and warns against compensating with cabin temperature. It contains no part number, no functional item number and no zone."
+          },
+          "rationale": "The entry describes the exact phenomenon the candidate removes, but only for two lavatory positions. After embodiment the crew guidance is right for the rest of the cabin and wrong for the modified positions, which is worse than being uniformly wrong.",
+          "resolution": "Ask flight operations to add a post-modification caveat, and record the entry as impacted even though no crew action changes."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-M-38-30-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3830122049905"
+            ],
+            "shared_fins": [
+              "41WM",
+              "44WP3"
+            ],
+            "shared_zones": [
+              "933"
+            ],
+            "shared_ata_6d": [
+              "38-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The partition item in the figure carries the seal groove and, on a modified aircraft, the heater termination as well. The figure would show one part number for two different items unless it is split by effectivity.",
+          "resolution": "Split the partition item by effectivity when the modification is released."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "AMM-M-38-30-11-300-040-A",
+          "doc_type": "AMM",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3830122049905"
+            ],
+            "shared_fins": [
+              "41WM",
+              "44WP3"
+            ],
+            "shared_zones": [
+              "932",
+              "933"
+            ],
+            "shared_ata_6d": [
+              "38-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The repair task replaces the partition bracket in place and explicitly excludes damage to the monument seat. With a heater termination on the bracket, the repair cannot be done without disturbing the heating circuit, and the task gives no instruction for that.",
+          "resolution": "Add a heater disconnection and continuity step to the repair task, embodied at the same time as the modification."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-168276",
+          "doc_type": "MOD",
+          "reason": "Comes back on similarity because it is another cabin comfort change driven by repeated complaints and it also talks about a run in a ceiling or floor void. It is the recirculation filter housing, shares no part number, no functional item number and no zone with the candidate, and has no thermal content."
+        },
+        {
+          "doc_id": "TSM-M-21-40-11-810-805",
+          "doc_type": "TSM",
+          "reason": "Close on wording because it is also about a temperature-driven complaint that cannot be reproduced on the ground, but it is the cargo compartment heating procedure, with no lavatory content, no shared zone and no shared identifier."
+        }
+      ],
+      "conclusion": "Not yet issued. The bus load analysis and the harness reconciliation with the bowl interface bulletin are the two items that decide the shape of the change.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

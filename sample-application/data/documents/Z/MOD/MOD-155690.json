@@ -1,0 +1,182 @@
+[
+  {
+    "doc_id": "MOD-155690",
+    "doc_type": "MOD",
+    "title": "Data Loader Interface Standard B with Extended Media Support and Configuration Reporting",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-02-13",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-45-12",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22N1",
+        "ZPH-24C1",
+        "ZPH-24N3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-151480"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "Z10718",
+      "production_cut_in_date": "2022-03-15",
+      "retrofit_via": [
+        "ZPH-45-1016"
+      ]
+    },
+    "dates": {
+      "created": "2020-01-28",
+      "released": "2021-09-08",
+      "revised": "2023-02-13",
+      "effective": "2023-03-06"
+    },
+    "abstract": "Second issue of the data loader interface. The unit gains solid state media support, a configuration report that names every load actually on the aircraft, and a rack position that no longer depends on a blanking plate for cooling.",
+    "sections": {
+      "reason": "The 2017 transceiver change removed the temperature abort but left two problems that operators kept raising. The interface still accepted only the original media, which suppliers had stopped making and which operators were buying second hand, and it produced no record of what had actually been loaded, so a configuration dispute after a load could only be settled by reading each target computer individually. Twenty-two operators listed the media obsolescence as a top ten fleet issue in the 2019 survey, and the spares organisation had a two year forward cover on the reader assembly and nothing beyond it.",
+      "description": "The interface is rebuilt as standard B. The transceiver D4545112932616 is retained as the aircraft interface but the media side is replaced by a solid state reader, and a loop clamp LN760453-5C secures the additional internal harness to the chassis rail. The unit now writes a configuration report to the maintenance system after every load, naming the target, the part number written and the result. The rack at FIN 23TN in the avionics bay receives a revised air baffle so that cooling no longer depends on the blanking plate above the unit, and the data concentrator at FIN 78TN is unchanged. Work is in zone 252 with the avionics bay open. The rack arrangement is on drawing D45451170573.",
+      "effects": "Mass increase of 0.6 kilograms. Electrical load increases by 15 volt amperes. One way interchangeable: a standard B unit works in an unmodified rack but a standard A unit will not produce the configuration report the maintenance system now expects, so it must not be fitted back into a modified aircraft. Media obsolescence is removed and the configuration dispute case disappears. The data loading task, the configuration reporting section of the maintenance manual and the parts figure all require re-issue.",
+      "embodiment_note": "Production cut-in at MSN Z10718 in March 2022. Retrofit is a four hour task with the avionics bay open, normally combined with any scheduled avionics work. Kits include the baffle and the harness clamp; the reader is supplied as part of the unit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545112932616",
+        "LN760453-5C"
+      ],
+      "fins": [
+        "78TN",
+        "23TN"
+      ],
+      "drawings": [
+        "D45451170573"
+      ],
+      "software": [],
+      "zones": [
+        "252",
+        "264"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z10718"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-45-1016",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-151480",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "AMM-Z-45-45-11-900-026-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "data loader standard b",
+      "solid state media",
+      "configuration report",
+      "obsolescence",
+      "air baffle"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 155690,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.6,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 15,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "LN760453-5C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4545112932616"
+      ],
+      "fins_affected": [
+        "78TN",
+        "23TN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 74,
+      "estimated_cost_keur": 410,
+      "lead_time_weeks": 30,
+      "production_impact": "Cut-in at MSN Z10718 with no line disturbance",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

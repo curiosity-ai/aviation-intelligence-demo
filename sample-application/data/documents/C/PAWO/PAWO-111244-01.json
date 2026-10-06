@@ -1,0 +1,333 @@
+[
+  {
+    "doc_id": "PAWO-111244-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Four Position Valve Standard and Direct Position Reporting",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-12",
+      "title": "Distribution — Isolation Valves"
+    },
+    "secondary_ata": [
+      "36-20",
+      "21-60"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-12-09",
+      "released": "2026-03-24",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the four position valve standard, run to release the harness bulletin as a stand-alone action, covering the wiring segregation in the gear bay and the duct burst detection case that the position reporting rests on.",
+    "sections": {
+      "objective": "Support the release of the position sensing harness as a bulletin that can be accomplished independently of the valve work, and re-confirm the duct burst detection case now that position is reported directly rather than inferred.",
+      "findings_summary": "Four items were confirmed and the release was approved with conditions. The condition that mattered concerned the gear bay: the position sensing pairs cross the landing gear bay and are separated from the gear runs by fifty millimetres at every clamp, which is a certification requirement rather than good practice, and the harness bulletin as drafted did not say so. A technician restoring the bay after an unrelated repair would have had no way of knowing. The second finding was the duct burst detection case itself, which had been written when position was inferred from duct pressure and needed re-stating rather than re-arguing. The third and fourth were content: the illustrated part list needed the pre and post duct pair, and the trouble shooting entry conditions changed everywhere they quoted an inferred position.",
+      "next_steps": "Add the fifty millimetre separation requirement to the harness bulletin as an explicit step with a restoration note. Re-state the duct burst detection case with direct position reporting as an input. Re-issue the illustrated part list and the affected trouble shooting content ahead of the first embodiment."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3610120750241",
+        "D3610128140349",
+        "GIR634074-45",
+        "EN984959K3",
+        "KADE183019-31"
+      ],
+      "fins": [
+        "57PN6",
+        "198PU",
+        "7013PU"
+      ],
+      "drawings": [
+        "D36201159645",
+        "D36201229644"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "444",
+        "191"
+      ],
+      "figures": [
+        "FIG-36-10-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00544"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111244",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "position sensing",
+      "harness segregation",
+      "duct burst",
+      "bulletin split"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111244-01",
+      "subject_mod": "MOD-111244",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-03-24",
+      "outcome": "VALIDATED",
+      "raised_date": "2025-12-09",
+      "due_date": "2026-04-03",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 176
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "36",
+          "92",
+          "32"
+        ],
+        "ata_4d": [
+          "36-10",
+          "36-20",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D3610128140349",
+            "GIR634074-45",
+            "KADE183019-31"
+          ],
+          "fins": [
+            "57PN6",
+            "7013PU"
+          ],
+          "drawings": [
+            "D36201229644"
+          ],
+          "zones": [
+            "443",
+            "191"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "separating a sensing pair from a power run where both cross the same bay"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Check the harness route and segregation in the gear bay",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Re-state the duct burst detection case",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Identify manual content assuming inferred position",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "WDM-C-92-31-21",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "GIR634074-45"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "191"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The position sensing pairs cross the landing gear bay and must be kept fifty millimetres clear of the gear runs at every clamp, which is a certification requirement. The harness bulletin as drafted did not state it, so a technician restoring the bay after an unrelated repair would not have known.",
+          "resolution": "Explicit separation step and restoration note added to the bulletin, and the requirement stated on the wiring sheet."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "CRN-36-2009",
+          "doc_type": "SB",
+          "finding_type": "PREREQUISITE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "GIR634074-45",
+              "EN984959K3"
+            ],
+            "shared_fins": [
+              "57PN6"
+            ],
+            "shared_zones": [
+              "443",
+              "444",
+              "191"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "Splitting the harness out as its own bulletin was the right decision commercially but created an ordering constraint that had to be stated in both documents rather than in one.",
+          "resolution": "Prerequisite and requirement references added in both directions."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-C-36-10-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3610128140349",
+              "D3610120750241",
+              "GIR634074-45"
+            ],
+            "shared_fins": [
+              "57PN6",
+              "198PU",
+              "7013PU"
+            ],
+            "shared_zones": [
+              "443",
+              "444"
+            ],
+            "shared_ata_6d": [
+              "36-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The cross-bleed duct changes at this standard and the two ducts are not interchangeable, so the figure needed a pre and post pair rather than a note.",
+          "resolution": "Figure re-issued with the item pair timed with the production cut-in."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-C-36-10-12-000-012-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3610120750241",
+              "GIR634074-45"
+            ],
+            "shared_fins": [
+              "57PN6",
+              "198PU"
+            ],
+            "shared_zones": [
+              "443",
+              "444"
+            ],
+            "shared_ata_6d": [
+              "36-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task caps the sensing port but says nothing about the position sensor connector, which did not exist when it was written.",
+          "resolution": "Task amended at the revision released with the change."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111238",
+          "doc_type": "MOD",
+          "reason": "The direct predecessor, returned first by every entity search. Its relationship to this change was already declared and understood, and it was not a finding of this analysis."
+        }
+      ],
+      "conclusion": "Harness bulletin released as a stand-alone action with the segregation requirement stated explicitly. Duct burst detection case re-stated rather than re-argued.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

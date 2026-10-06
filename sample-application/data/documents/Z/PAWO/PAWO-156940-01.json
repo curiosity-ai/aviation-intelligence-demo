@@ -1,0 +1,302 @@
+[
+  {
+    "doc_id": "PAWO-156940-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Main Landing Gear Bay Harness Re-Routing and Terminal Block Relocation",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-31",
+      "ata_6d": "92-31-12",
+      "title": "Centre Fuselage Wiring — Landing Gear Bay Wiring"
+    },
+    "secondary_ata": [
+      "32-30",
+      "52-80"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-07",
+      "released": "2026-07-30",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the gear bay harness re-routing, opened when a repeat inspection finding suggested the new clearance was being lost again, covering the tie section, the wiring sheet value and the inspection method.",
+    "sections": {
+      "objective": "Two operators reported that the clearance measured at the first inspection after embodiment was already below the design value on some aircraft. The round was opened to establish whether the re-route was insufficient, whether the measurement method was inconsistent, or whether the harness was being re-secured incorrectly after component changes.",
+      "findings_summary": "Three items were confirmed and the modification itself was cleared. The wiring sheet states the clearance for three door positions and the inspection task measures at all three, but the operators reporting the finding had measured only with the door fully open, which always passes and then reads as a loss when someone later measures correctly. The bulletin specifies the cable tie section and the reported aircraft were found with ties of a different section fitted at the last component change, which pulls the harness inboard. The third finding is the inspection task itself, whose caution about tie section is correct but is placed after the clearance measurement rather than before it, so a technician following the order given will measure a harness that has already been pulled out of position.",
+      "next_steps": "Ask technical publications to move the tie section check ahead of the clearance measurement in the inspection task. Issue an operator communication restating that the measurement is at three door positions. No design change required."
+    },
+    "entities": {
+      "part_numbers": [
+        "BED352373-29",
+        "AGS700897-7A"
+      ],
+      "fins": [
+        "1396VC",
+        "622VC7"
+      ],
+      "drawings": [
+        "D92311222260"
+      ],
+      "software": [],
+      "zones": [
+        "145",
+        "572",
+        "721"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-156940",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "clearance measurement",
+      "cable tie section",
+      "inspection order",
+      "wiring sheet value"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-156940-01",
+      "subject_mod": "MOD-156940",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-30",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-04-07",
+      "due_date": "2026-07-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 85,
+        "spent_manhours": 74
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "92",
+          "32",
+          "52"
+        ],
+        "ata_4d": [
+          "92-31",
+          "32-30",
+          "52-80"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "Z04196",
+          "to": "Z11011"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "BED352373-29",
+            "AGS700897-7A"
+          ],
+          "fins": [
+            "1396VC",
+            "622VC7"
+          ],
+          "drawings": [
+            "D92311222260"
+          ],
+          "zones": [
+            "145",
+            "572",
+            "721"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "harness clearance to a moving actuator measured at more than one position",
+          "cable tie of the wrong section cutting a harness sleeve"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare the reported measurements against the published method",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Inspect the tie hardware fitted on the reporting aircraft",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the inspection task step order",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-92-1002",
+          "doc_type": "SB",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "BED352373-29",
+              "AGS700897-7A"
+            ],
+            "shared_fins": [
+              "1396VC"
+            ],
+            "shared_zones": [
+              "721"
+            ],
+            "shared_ata_6d": [
+              "92-31-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin specifies the cable tie section and the reporting aircraft were found with ties of a different section fitted at the last component change, which pulls the harness inboard.",
+          "resolution": "Restate the tie section in the operator communication and in the inspection task."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "WDM-Z-92-31-12",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "BED352373-29"
+            ],
+            "shared_fins": [
+              "1396VC",
+              "622VC7"
+            ],
+            "shared_zones": [
+              "145",
+              "572"
+            ],
+            "shared_ata_6d": [
+              "92-31-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The wiring sheet states the clearance for three door positions. The operators reporting the finding had measured only with the door fully open, which always passes.",
+          "resolution": "Issue an operator communication restating the three position method."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-Z-92-31-12-200-040-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS700897-7A"
+            ],
+            "shared_fins": [
+              "622VC7"
+            ],
+            "shared_zones": [
+              "572"
+            ],
+            "shared_ata_6d": [
+              "92-31-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The caution about tie section is correct but sits after the clearance measurement, so a technician following the given order measures a harness that has already been pulled out of position.",
+          "resolution": "Move the tie section check ahead of the clearance measurement."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "WDM-Z-92-41-11",
+          "doc_type": "WDM",
+          "reason": "Returned by the shared vocabulary of harness support stations and re-supporting after structural work, but it covers the aft cargo wiring and has no bracket, no terminal block and no zone in common with the gear bay route."
+        }
+      ],
+      "conclusion": "Closed with the modification cleared and three documentation actions. The reported clearance loss was a measurement method problem compounded by incorrect tie hardware.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

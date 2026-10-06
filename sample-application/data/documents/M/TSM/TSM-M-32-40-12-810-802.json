@@ -1,0 +1,335 @@
+[
+  {
+    "doc_id": "TSM-M-32-40-12-810-802",
+    "doc_type": "TSM",
+    "title": "Brake System Fault Message After Landing that Clears on Power Cycle",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-03-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30",
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-06-11",
+      "released": "2018-03-05",
+      "revised": "2018-03-05",
+      "effective": "2018-04-02"
+    },
+    "abstract": "Fault isolation for a brake system message raised after landing that clears on the next power-up and leaves a truncated fault record, seen mostly after hot turnarounds.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a brake system fault message raised after landing that is no longer present after the next power-up and that leaves nothing useful in the fault memory.",
+      "fault_description": "A brake system message appears on the flight deck during the landing roll or shortly after clearing the runway. Crews report normal deceleration and no asymmetry. The message is absent after the aircraft is powered down and up again, and the recorded fault snapshot is either missing or truncated. The pattern is strongly associated with landings above thirty-five degrees ambient on short turnarounds where the crew power down quickly. Component replacement without a usable snapshot has produced a high proportion of no-fault-found returns.",
+      "isolation_procedure": "1. Do not remove any brake assembly before this procedure is complete. 2. Read the brake control unit fault memory with the maintenance terminal and record whether a snapshot is present and whether it is complete. 3. Read back the loaded software part number and compare it with the aircraft configuration record. 4. If the software standard predates the extended snapshot, the truncated record is expected and is not itself a fault; go to step 6. 5. If the snapshot is complete, decode the recorded brake pressure and wheel speed traces and use them to select the branch in the fault tree. 6. Do the confirmation task in full and record the result of every built-in test channel. 7. Check the brake filter position 1GM5 and the solenoid 23GM for a latched fault. 8. Measure the pressure transmitter output against the applied pressure with the calibration set. 9. Check the wheel speed harness continuity from the axle to the control unit. 10. Where every check is satisfactory and the snapshot is truncated, record the event and do not replace any component; the fault is a recording limitation of the installed software standard.",
+      "dispatch_note": "Dispatch is permitted with the message absent after the power cycle, provided the built-in test is satisfactory and the event is recorded. Dispatch with the message present is not permitted. The master minimum equipment list allows one anti-skid channel inoperative with a landing distance penalty."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126111041",
+        "D3240127464045"
+      ],
+      "fins": [
+        "1GM5",
+        "23GM"
+      ],
+      "drawings": [
+        "D32401260138"
+      ],
+      "software": [
+        "LH4PE7117BE"
+      ],
+      "zones": [
+        "721",
+        "755"
+      ],
+      "figures": [
+        "FIG-32-40-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-32-40-12-700-018-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-163460",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake system message",
+      "fault snapshot",
+      "power cycle",
+      "no fault found",
+      "hot turnaround"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "32-40-12-810-802",
+      "fault_symptom": "BRAKES SYS FAULT displayed after landing, absent after the next power-up",
+      "fault_codes": [
+        "324012007",
+        "324012022"
+      ],
+      "warning_messages": [
+        "BRAKES SYS 1 FAULT",
+        "BRAKES ANTI SKID FAULT"
+      ],
+      "affected_fins": [
+        "1GM5",
+        "23GM"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Fault snapshot lost at shutdown, leaving no usable record for the line engineer",
+          "probability_pct": 48,
+          "fin": "1GM5"
+        },
+        {
+          "cause": "Anti-skid channel transient at high brake temperature",
+          "probability_pct": 27,
+          "fin": "23GM"
+        },
+        {
+          "cause": "Pressure transmitter drift at high temperature",
+          "probability_pct": 15,
+          "fin": "1GM5"
+        },
+        {
+          "cause": "Wheel speed harness intermittent at the axle connector",
+          "probability_pct": 10,
+          "fin": "23GM"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-M-32-40-12-700-018-A",
+      "dispatch": {
+        "mel_item": "32-40-03A",
+        "dispatchable": true,
+        "dispatch_condition": "One anti-skid channel inoperative, with the landing distance penalty of the master minimum equipment list applied. Not dispatchable with the message present."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-M-32-40-12-810-802",
+    "doc_type": "TSM",
+    "title": "Brake System Fault Message After Landing that Clears on Power Cycle",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-27",
+      "reason": "Warning added that every branch keyed on the message clearing fails on a retained-context load, with the rewrite held until the interface classification is settled.",
+      "raised_by_pawo": "PAWO-163460-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30",
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-06-11",
+      "released": "2018-03-05",
+      "revised": "2026-07-27",
+      "effective": "2026-08-06"
+    },
+    "abstract": "Fault isolation for a brake system message raised after landing that clears on the next power-up and leaves a truncated fault record, seen mostly after hot turnarounds.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a brake system fault message raised after landing that is no longer present after the next power-up and that leaves nothing useful in the fault memory.",
+      "fault_description": "A brake system message appears on the flight deck during the landing roll or shortly after clearing the runway. Crews report normal deceleration and no asymmetry. The message is absent after the aircraft is powered down and up again, and the recorded fault snapshot is either missing or truncated. The pattern is strongly associated with landings above thirty-five degrees ambient on short turnarounds where the crew power down quickly. Component replacement without a usable snapshot has produced a high proportion of no-fault-found returns. This whole procedure is built on the message clearing at the power cycle and on the snapshot being lost with it. A candidate software standard that retains the fault context across a power cycle would break both assumptions at once: the message would persist into the next flight and the snapshot would be complete, and neither is a fault. The procedure is not yet rewritten for that standard because the change is still being classified; until it is reissued, do not run this procedure on an aircraft carrying a retained-context load.",
+      "isolation_procedure": "1. Do not remove any brake assembly before this procedure is complete. 2. Read back the loaded software part number and compare it with the aircraft configuration record. If the aircraft carries a software standard that retains fault context across a power cycle, stop: this procedure does not apply to it and its persisting message is not the symptom described here. 3. Read the brake control unit fault memory with the maintenance terminal and record whether a snapshot is present and whether it is complete. 4. If the software standard predates the extended snapshot, the truncated record is expected and is not itself a fault; go to step 6. 5. If the snapshot is complete, decode the recorded brake pressure and wheel speed traces and use them to select the branch in the fault tree. 6. Do the confirmation task in full and record the result of every built-in test channel. 7. Check the brake filter position 1GM5 and the solenoid 23GM for a latched fault. 8. Measure the pressure transmitter output against the applied pressure with the calibration set. 9. Check the wheel speed harness continuity from the axle to the control unit. 10. Where every check is satisfactory and the snapshot is truncated, record the event and do not replace any component; the fault is a recording limitation of the installed software standard.",
+      "dispatch_note": "Dispatch is permitted with the message absent after the power cycle, provided the built-in test is satisfactory and the event is recorded. Dispatch with the message present is not permitted. The master minimum equipment list allows one anti-skid channel inoperative with a landing distance penalty. Note that on a retained-context load a message present after the power cycle no longer means the fault is present, and the dispatch rule above will need restating with the reissue of this procedure."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126111041",
+        "D3240127464045"
+      ],
+      "fins": [
+        "1GM5",
+        "23GM"
+      ],
+      "drawings": [
+        "D32401260138"
+      ],
+      "software": [
+        "LH4PE7117BE"
+      ],
+      "zones": [
+        "721",
+        "755"
+      ],
+      "figures": [
+        "FIG-32-40-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-32-40-12-700-018-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-163460",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-166630",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake system message",
+      "fault snapshot",
+      "power cycle",
+      "retained context",
+      "hot turnaround"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "32-40-12-810-802",
+      "fault_symptom": "BRAKES SYS FAULT displayed after landing, absent after the next power-up",
+      "fault_codes": [
+        "324012007",
+        "324012022"
+      ],
+      "warning_messages": [
+        "BRAKES SYS 1 FAULT",
+        "BRAKES ANTI SKID FAULT"
+      ],
+      "affected_fins": [
+        "1GM5",
+        "23GM"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Fault snapshot lost at shutdown, leaving no usable record for the line engineer",
+          "probability_pct": 48,
+          "fin": "1GM5"
+        },
+        {
+          "cause": "Anti-skid channel transient at high brake temperature",
+          "probability_pct": 27,
+          "fin": "23GM"
+        },
+        {
+          "cause": "Pressure transmitter drift at high temperature",
+          "probability_pct": 15,
+          "fin": "1GM5"
+        },
+        {
+          "cause": "Wheel speed harness intermittent at the axle connector",
+          "probability_pct": 10,
+          "fin": "23GM"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-M-32-40-12-700-018-A",
+      "dispatch": {
+        "mel_item": "32-40-03A",
+        "dispatchable": true,
+        "dispatch_condition": "One anti-skid channel inoperative, with the landing distance penalty of the master minimum equipment list applied. Not dispatchable with the message present."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

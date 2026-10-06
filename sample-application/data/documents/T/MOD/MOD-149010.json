@@ -1,0 +1,185 @@
+[
+  {
+    "doc_id": "MOD-149010",
+    "doc_type": "MOD",
+    "title": "Revised Seal and Blocker Door Interface on the Thrust Reverser Translating Sleeve",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-03-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "78",
+      "ata_4d": "78-30",
+      "ata_6d": "78-30-11",
+      "title": "Thrust Reverser — Translating Sleeve"
+    },
+    "secondary_ata": [
+      "78-10-12",
+      "78-30-12"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "CVX-7270"
+      ],
+      "operators": [
+        "GBA",
+        "KLE",
+        "RVC"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00213",
+      "production_cut_in_date": "2023-08-18",
+      "retrofit_via": [
+        "TTN-78-1019"
+      ]
+    },
+    "dates": {
+      "created": "2021-04-06",
+      "released": "2023-03-09",
+      "revised": null,
+      "effective": "2023-04-24"
+    },
+    "abstract": "Replaces the aft seal of the thrust reverser translating sleeve and reshapes the blocker door land, removing the hot gas leakage path that was scorching the sleeve inner liner on high-cycle aircraft.",
+    "sections": {
+      "reason": "Scorching and eventual liner delamination were found on the inner surface of the translating sleeve just forward of the blocker door land, on aircraft above six thousand reverser cycles. The cause is a leakage path that opens as the aft seal takes a compression set, allowing hot gas from the core stream to track forward along the land. Thirty-four sleeves were found with liner damage over three years and eleven required repair beyond allowable limits. The affected operators run short sectors with reverse selected on every landing, which is the driving parameter.",
+      "description": "The aft seal is replaced by the higher-temperature item D7830110928662, which uses a different section and a metal carrier rather than a bonded strip. The blocker door land on the sleeve is reshaped to give a positive seal contact throughout the sleeve travel, and the heat shield D7830119921493 is extended forward by 80 mm to cover the newly exposed liner edge. Retaining fasteners AGS5451K6 are renewed at every seal position and the shim set ORD935602-47 is used to set the seal compression at build. Wiring at FIN 1815ET and FIN 3973ET1 for the sleeve position sensing is disturbed for access but not modified. Work is done off the aircraft with the reverser in a stand, and the land reshaping is a machining operation that must be done in a qualified shop. Zones 483 and 482 are the reference access positions and the change is detailed on drawing D78101230413.",
+      "effects": "Mass increase of 5.2 kg per reverser, giving 20.8 kg per aircraft, applied symmetrically with no meaningful centre-of-gravity effect. No electrical effect. The new seal is not interchangeable with the original because the land profile differs, and a modified seal must not be fitted to an unmodified sleeve. Reverser deployment and stow times are unchanged and no flight test was required. The scheduled liner inspection interval can be doubled once the modification is embodied. Structure repair, removal and installation and illustrated parts content all require update.",
+      "embodiment_note": "Production cut-in at MSN T00213 in August 2023. Retrofit through the associated service bulletin during a reverser shop visit; the land reshaping cannot be done on wing. Operators are expected to embody it at the next scheduled reverser overhaul rather than as a dedicated event."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7830110928662",
+        "D7830119921493",
+        "AGS5451K6",
+        "ORD935602-47"
+      ],
+      "fins": [
+        "1815ET",
+        "3973ET1"
+      ],
+      "drawings": [
+        "D78101230413"
+      ],
+      "software": [],
+      "zones": [
+        "483",
+        "482"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00213"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-78-1019",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-78-30-11-400-003-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-T-78-30-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "translating sleeve",
+      "aft seal",
+      "blocker door",
+      "liner scorching",
+      "thrust reverser"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149010,
+      "mod_class": "MAJOR",
+      "change_category": "POWERPLANT",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.933",
+          "CS 25.603",
+          "CS 25.571"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 20.8,
+      "balance_impact": "Symmetric, no meaningful CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "ORD935602-47"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D7830110928662",
+        "D7830119921493",
+        "AGS5451K6"
+      ],
+      "fins_affected": [
+        "1815ET",
+        "3973ET1"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 580,
+      "estimated_cost_keur": 2340,
+      "lead_time_weeks": 58,
+      "production_impact": "Cut-in at MSN T00213, no line stoppage",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

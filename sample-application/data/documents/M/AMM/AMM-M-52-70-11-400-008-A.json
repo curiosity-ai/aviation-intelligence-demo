@@ -1,0 +1,173 @@
+[
+  {
+    "doc_id": "AMM-M-52-70-11-400-008-A",
+    "doc_type": "AMM",
+    "title": "Installation of the Fwd Cargo Door Proximity Sensor and Target Plate",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-09-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-70",
+      "ata_6d": "52-70-11",
+      "title": "Door Warning — Door Proximity Sensing"
+    },
+    "secondary_ata": [
+      "92-21",
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-05-21",
+      "released": "2019-12-06",
+      "revised": "2023-09-27",
+      "effective": "2023-10-20"
+    },
+    "abstract": "Installation of the forward cargo door proximity sensor and target plate, with the sensing gap set by shims and the door warning functional test that closes the task out.",
+    "sections": {
+      "purpose": "This task gives the procedure to install the forward cargo door proximity sensor and its target plate and to set the sensing gap to the value given for the aircraft standard.",
+      "job_setup_note": "Use the shim stack recorded at removal as the starting point and adjust only if the measured gap is outside the range. The sensing gap tolerance is tight and the reference block must be used rather than the feeler gauge alone when the gap is at the edge of the range. Do not energise the door warning circuit until the sensor is connected and the sleeving is secured, or the connector can arc against the sill.",
+      "procedure": "1. Clean the sill mounting face and the target plate seat. 2. Install the outboard plate D5270114205406 where it was removed. 3. Install the target plate D5270117831041 on the sill and torque the fasteners. 4. Install the sensor 3WT6 on its bracket with the shim stack recorded at removal. 5. Measure the sensing gap with the feeler gauge and check it against the reference block. CAUTION: DO NOT SET THE SENSING GAP AT THE EDGE OF THE RANGE. A GAP AT THE LIMIT WILL GO OUT OF TOLERANCE UNDER SILL DEFLECTION WITH A LOADED PALLET ON THE SILL. 6. Adjust the shim stack until the gap is in the middle of the range. 7. Fit the protective sleeving LN209430K7 at the sensor tail and secure it clear of the sill edge. 8. Connect the sensor connector and lock it. 9. Energise the door warning circuit. 10. Do the door warning functional test with the door open and with the door closed and latched. 11. Confirm that the adjacent sensor target 23WT gives the correct indication. WARNING: KEEP CLEAR OF THE DOOR AND THE LATCH HOOKS DURING THE FUNCTIONAL TEST. 12. Close the door on the actuation system and repeat the indication check.",
+      "close_out": "Record the final shim stack and the measured sensing gap on the aircraft work card. Remove the maintenance stay and the warning notices. Confirm that no door warning message is present on the flight deck. If the aircraft is being loaded through the forward door on the same shift, ask the loading team to report any door indication seen with a pallet on the sill."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5270117831041",
+        "D5270114205406",
+        "LN209430K7"
+      ],
+      "fins": [
+        "3WT6",
+        "23WT"
+      ],
+      "drawings": [
+        "D52701117658"
+      ],
+      "software": [],
+      "zones": [
+        "811",
+        "891"
+      ],
+      "figures": [
+        "FIG-52-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-160915",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-52-70-11-000-008-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "proximity sensor installation",
+      "sensing gap",
+      "shim adjustment",
+      "door warning test",
+      "sill deflection"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Door Systems Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "52-70-11-400-008-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. The sensing gap range in step 5 applies to the sill-mounted target plate of the delivered standard.",
+      "manhours": 5.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.5,
+      "access": {
+        "zones": [
+          "811",
+          "891"
+        ],
+        "access_panels": [
+          "811AR",
+          "891CL"
+        ],
+        "doors": [
+          "Fwd cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep the door warning circuit de-energised until step 9.",
+          "Keep clear of the latch hooks during the functional test.",
+          "Make sure that the door maintenance stay is installed."
+        ],
+        "tooling": [
+          {
+            "reference": "FG-015",
+            "description": "Feeler gauge set 0.05-1.50 mm"
+          },
+          {
+            "reference": "98D52701-060",
+            "description": "Sensing gap reference block"
+          },
+          {
+            "reference": "TW-010",
+            "description": "Torque wrench 1-10 Nm"
+          }
+        ],
+        "consumables": [
+          "Connector sealing compound",
+          "Cleaning agent, aqueous, general"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-52-70-11-000-008-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

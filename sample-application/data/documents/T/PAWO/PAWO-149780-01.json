@@ -1,0 +1,387 @@
+[
+  {
+    "doc_id": "PAWO-149780-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Repositioned Flight Bag Arm with Conducted Cooling",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-20",
+      "ata_6d": "46-20-11",
+      "title": "Flight Deck Information — Electronic Flight Bag Unit"
+    },
+    "secondary_ata": [
+      "46-20-12",
+      "46-40-12"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88E1"
+      ],
+      "msns": [
+        "T00018",
+        "T00127",
+        "T00149",
+        "T00166",
+        "T00227"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "PYR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-15",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the longer flight bag arm with conducted cooling, covering the ventilated arm it depends on, the escape path clearance question and the crew documentation consequence of a display that dims rather than fails.",
+    "sections": {
+      "objective": "Establish what the longer arm and the staged brightness behaviour conflict with, whether the escape path and sidestick clearances survive the additional 110 mm of reach, and what has to change in the crew documentation before the behaviour is introduced.",
+      "scope_note": "The search covers ATA 46-20 as the primary chapter and ATA 46-40 as secondary because the brightness state is recorded through the data server module. ATA 33-10 flight compartment lighting was included in the first pass and then excluded: the arm does not obstruct any lighting fitting and no shared identifier was found. ATA 25 was searched only for the escape path clearance requirement, which is a certification reference rather than a document conflict.",
+      "method_note": "Entity linking was seeded from the five part numbers, the two FINs, the two drawings and the two zones. Semantic similarity was run over the operator request text and the reason-for-change sections, deliberately including the crew documentation set, which entity linking cannot reach because flight crew entries carry no hardware identifiers at all. Two of the six findings came from semantic similarity alone and both are in that set; one of them is a maintenance system change in an entirely different chapter that turns out to describe the same problem of a state that has to be visible without being alarming.",
+      "findings_summary": "Six items are confirmed and one is blocking. The candidate cannot be embodied on an aircraft that has not taken the ventilated arm, because the conducted interface requires the matching unit rear face and the pivot base bolt pattern is the ventilated one. That is declared. The retrofit bulletin for the ventilated arm carries a clearance acceptance figure derived from the left hand seat geometry, and the longer arm changes it; the same figure appears in the installation task and both must move together. The crew description explains that the display dims progressively and that this is protective rather than a fault, which is exactly the behaviour the candidate extends, and it will need rewriting when the staging changes. The cockpit panel wiring sheet carries the unit FIN and is where the service loop constraint lives, which the longer arm makes tighter. And the illustrated parts figure gains a third arm state.",
+      "next_steps": "Measure the escape path clearance from the left hand seat with the longer arm on a representative flight deck before the design is frozen. Agree a single owner for the clearance acceptance figure so that the bulletin and the task cannot diverge. Draft the crew description change with the staging table rather than after it. Confirm with the maintenance system owner that the brightness state entry does not collide with the message suppression rules."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4620114030606",
+        "D4620117513908",
+        "D4620126779963",
+        "DE804651-11",
+        "D4640122620967"
+      ],
+      "fins": [
+        "510IU",
+        "66IU"
+      ],
+      "drawings": [
+        "D46201194513",
+        "D46401221924"
+      ],
+      "software": [],
+      "zones": [
+        "234",
+        "161"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149780",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-T-260401",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "flight bag",
+      "conducted cooling",
+      "clearance",
+      "crew documentation"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149780-01",
+      "subject_mod": "MOD-149780",
+      "source_io": "IO-T-260401",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-06-15",
+      "due_date": "2026-09-25",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ETGC"
+        ],
+        "estimated_manhours": 140,
+        "spent_manhours": 58
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "46",
+          "33",
+          "25"
+        ],
+        "ata_4d": [
+          "46-20",
+          "46-40",
+          "33-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "T00013",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4620114030606",
+            "D4620126779963",
+            "D4640122620967"
+          ],
+          "fins": [
+            "510IU",
+            "66IU"
+          ],
+          "drawings": [
+            "D46201194513"
+          ],
+          "zones": [
+            "234",
+            "161"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "display shutting down on a hot turnaround",
+          "equipment protecting itself by reducing output before it fails",
+          "state that must be visible to the user without reading as a failure"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released modifications and bulletins on ATA 46-20",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish the escape path clearance requirement and measure it",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the crew documentation for the dimming behaviour",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Check the brightness state entry against the message suppression rules",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-147210",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4620114030606",
+              "D4620117513908",
+              "D4620126779963",
+              "DE804651-11"
+            ],
+            "shared_fins": [
+              "510IU"
+            ],
+            "shared_zones": [
+              "234"
+            ],
+            "shared_ata_6d": [
+              "46-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The conducted interface requires the unit rear face introduced with the ventilated arm and the pivot base bolt pattern is the ventilated one. An aircraft on the original fixed arm cannot take the candidate without the intermediate standard.",
+          "resolution": "Retain the ventilated arm standard as a declared post-modification condition and state it in the bulletin effectivity."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-46-1005",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4620114030606",
+              "D4620126779963"
+            ],
+            "shared_fins": [
+              "510IU"
+            ],
+            "shared_zones": [
+              "234"
+            ],
+            "shared_ata_6d": [
+              "46-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin carries a clearance acceptance figure derived from the left hand seat geometry with the ventilated arm. The longer arm changes that figure and an operator working to the published one would accept an installation that is out of limits.",
+          "resolution": "Amend the bulletin and the installation task together, and name a single owner for the clearance figure so that they cannot diverge again."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-T-92-11-11",
+          "doc_type": "WDM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "510IU"
+            ],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The captain side cockpit panel wiring sheet lists the flight bag unit FIN in its equipment list and is where the service loop constraint is stated. The sheet is about panel harnesses and bus bars and says nothing about the flight bag; the connection is the FIN alone.",
+          "resolution": "Update the sheet with the extended service loop and use it as the reference for the harness length check."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "FCOM-T-DSC-46-20-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew description tells the pilot that the screen becomes harder to read on a hot stand, that this is the equipment protecting itself and that the arm should be swung away from the glass. The candidate changes the staging that produces that behaviour. Neither document names anything the other names: one is about illumination steps and thermal limits, the other about screens becoming hard to read."
+          },
+          "rationale": "The crew already have a description of a behaviour the candidate is about to change. If the staging is altered without the description following, the crew guidance to swing the arm away becomes the wrong advice for an arm that is already further from the glass.",
+          "resolution": "Rewrite the crew description with the new staging table, and remove the swing-away advice if the longer arm makes it unnecessary."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-147120",
+          "doc_type": "MOD",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both changes are about a state that must be recorded and presented without being mistaken for a fault. One writes correlation rules that suppress a downstream message; the other adds a brightness state that must not be read as a failure. Different chapters, no shared identifier, no common vocabulary."
+          },
+          "rationale": "The brightness state is written to the maintenance record. The correlation rules decide what a line engineer sees, and a state entry that arrives without a declared cause can be suppressed or can suppress others. Neither team is aware of the other.",
+          "resolution": "Confirm with the maintenance system owner how the brightness state is classified before the entry format is fixed."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-T-46-20-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4620114030606",
+              "D4620117513908",
+              "D4640122620967"
+            ],
+            "shared_fins": [
+              "510IU",
+              "66IU"
+            ],
+            "shared_zones": [
+              "234",
+              "161"
+            ],
+            "shared_ata_6d": [
+              "46-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure carries the fixed and ventilated arms as alternates and the console base bolt pattern already has to be checked before ordering. A third arm adds a third bolt pattern to the same check.",
+          "resolution": "Add the third arm state and put the bolt pattern in the figure note rather than leaving it to the ordering caution."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-146680",
+          "doc_type": "MOD",
+          "reason": "Ranks highly on any semantic search for equipment overheating in a confined installation and it does solve exactly that problem, but it moves an avionics rack unit into a cooling flow and shares no part, no FIN, no zone and no chapter with a flight deck console arm."
+        },
+        {
+          "doc_id": "AMM-T-23-70-11-400-002-A",
+          "doc_type": "AMM",
+          "reason": "Returned through the same thermal search and contains a duct seating check that reads like a cooling interface acceptance, but the duct is a rack shelf inlet in the upper avionics compartment and has no relationship to the conducted interface on the arm."
+        }
+      ],
+      "conclusion": "Not yet issued. One blocking prerequisite confirmed. The escape path clearance measurement is the critical open item.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

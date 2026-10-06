@@ -1,0 +1,183 @@
+[
+  {
+    "doc_id": "MOD-169302",
+    "doc_type": "MOD",
+    "title": "Dual Threshold Confirmation and Humidity Compensation for Aft Hold Smoke Detection",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-01",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "26-10",
+      "92-41"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00157",
+          "to": "M00475"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "NVC",
+        "ACL",
+        "OEA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168024"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-06-01",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposes a second sensing channel and a humidity compensated confirmation window for the aft hold, so that condensation after a wet loading no longer produces a warning the crew has to treat as a fire.",
+    "sections": {
+      "reason": "Relocating the sampling ports removed most but not all of the humidity driven events, and one cargo operator has had three diversions and two bottle discharges in eighteen months with a clean hold every time. Every event followed loading in rain or wet snow within four hours. The detection principle as installed cannot distinguish condensation aerosol from low density smoke, and the confirmation window is fixed, so a slow-forming condensation cloud eventually satisfies it.",
+      "description": "The proposal adds a second sensing element of a different principle at each aft hold sampling point and requires both to agree before a warning is raised, with the agreement window varied by a humidity measurement taken at the sampling regulator. The regulator is replaced by a variant carrying the humidity element and the second channel interface, and the detection actuator at the distribution point is changed for the additional channel. The screws at the ceiling rail are brought to the current standard. The extinguishing side is untouched. The forward hold keeps the single channel arrangement, which is a deliberate limitation of scope to the compartment that shows the problem.",
+      "effects": "Mass increase of four point six kilograms in the aft fuselage. Electrical load increases by thirty volt amperes. Not interchangeable with the single channel regulator. The crew procedure changes in an important way: the warning is later by up to eleven seconds in the humid case, and that has to be stated to the crew and accepted by the authority. Maintenance inspection, the parts catalogue figure and the aft cargo wiring sheet all require reissue.",
+      "embodiment_note": "Proposed for production cut-in with retrofit by bulletin at a base visit of about thirty hours, including a functional test with the smoke generator in both holds.",
+      "open_points": "Pre-analysis must establish whether an eleven second delay in the humid case is acceptable against the certification requirement, whether the second channel can share the existing wiring route without a new penetration, and whether the same argument would later be needed for the forward hold."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610121518371",
+        "D2610007769165",
+        "AES545422-2C"
+      ],
+      "fins": [
+        "2332WF",
+        "20WF"
+      ],
+      "drawings": [
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "143",
+        "145"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00475"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-M-260603",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-168024",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "cargo smoke detection",
+      "dual threshold",
+      "humidity compensation",
+      "confirmation window",
+      "aft hold"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "mod_number": 169302,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.858",
+          "CS 25.1309",
+          "CS 25.855"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 4.6,
+      "balance_impact": "Small aft shift, inside the loading manual tolerance",
+      "electrical_load_impact_va": 30,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D2610007769165"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2610121518371",
+        "AES545422-2C"
+      ],
+      "fins_affected": [
+        "2332WF",
+        "20WF"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 1850,
+      "estimated_cost_keur": 3400,
+      "lead_time_weeks": 70,
+      "production_impact": "Cut-in proposed at the first standard change after certification closure",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

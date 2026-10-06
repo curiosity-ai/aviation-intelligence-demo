@@ -1,0 +1,434 @@
+[
+  {
+    "doc_id": "MRD-45-1021",
+    "doc_type": "SB",
+    "title": "Maintenance System — Replacement of the Computer Rack, Concentrator and Flight Deck Display",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-12-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00419"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-164788"
+        ],
+        "pre_mod": [
+          "MOD-165240"
+        ],
+        "post_sb": [
+          "MRD-45-1015"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2023-06-15",
+      "released": "2023-12-11",
+      "revised": "2023-12-11",
+      "effective": "2024-01-15"
+    },
+    "abstract": "Replacement of the maintenance computer rack, addition of a data concentrator and installation of a higher resolution flight deck display, giving cross-system fault correlation on delivered aircraft.",
+    "sections": {
+      "planning_reason": "The initial display standard solved the access problem but left the maintenance system unable to correlate faults across systems, because there was no processing behind the screen and the rack had no spare slot. Operators reported that the screen was little more than a fixed window on the same fault list. The obsolescence of the original display backlight, notified in 2021, made a like-for-like replacement unattractive, so the rack, the concentrator and the display are changed together in one visit.",
+      "description": "The rack is replaced by a wider unit with two spare slots and a data concentrator is installed in one of them to host the cross-system fault correlation. The flight deck display is replaced by a higher resolution unit in the same aperture. The maintenance antenna is retained. The terminal control panel gains a correlation menu and the terminal computer is re-cabled to the concentrator.",
+      "accomplishment_summary": "Make the aircraft electrically safe and get access to the avionics rack area in zone 116 and to the flight deck station in zone 241. Do the removal task AMM-M-45-20-11-000-021-A for the display unit. Remove the existing rack and install the wider rack KEDE588674-53 on the revised mounting pattern. Install the data concentrator KAD366597-92 in the upper spare slot and connect it to the maintenance system bus. Re-cable the terminal computer 6796TN8 to the concentrator. Install the higher resolution display D4520115601387 in the existing aperture. Do the power-up test and confirm that the correlation menu appears on the terminal control panel 169TN8. Run the correlation self-test and compare the result with the expected report in the accomplishment instructions. Confirm that the maintenance antenna 72TN still reports correctly. Record the embodiment.",
+      "effectivity_note": "Applicable to all MERIDIAN models from MSN M00001 through M00419 that are post MOD-164788 and still pre MOD-165240. Aircraft that never took the initial display standard have no flight deck aperture and need a separate quotation covering the panel work; this Service Bulletin must not be used on them.",
+      "material_note": "Kit K4520-1021-01 contains the rack, the concentrator, the display, the cabling change content and the mounting hardware. Lead time is twenty-two weeks. The removed rack and display are to be returned to Aeralis. Operators are reminded that the fault report format changes on embodiment and that their maintenance system may need updating first."
+    },
+    "entities": {
+      "part_numbers": [
+        "KEDE588674-53",
+        "D4520115601387",
+        "KAD366597-92"
+      ],
+      "fins": [
+        "72TN",
+        "169TN8",
+        "6796TN8"
+      ],
+      "drawings": [
+        "D45201289920"
+      ],
+      "software": [],
+      "zones": [
+        "241",
+        "116"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00419"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-165240",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "MRD-45-1015",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-M-45-20-11-000-021-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "maintenance computer",
+      "rack replacement",
+      "data concentrator",
+      "fault correlation",
+      "flight deck display"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Avionics In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "MRD-45-1021",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 48 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-165240",
+      "manpower": {
+        "elapsed_time_hours": 26,
+        "manhours": 58,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K4520-1021-01",
+        "kit_available_from": "2024-04-08",
+        "parts_required": [
+          {
+            "part_number": "KEDE588674-53",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "KAD366597-92",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D4520115601387",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D4520115601387",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Connector sealing compound",
+          "Cable tie, flame resistant"
+        ],
+        "tooling": [
+          "Contact insertion and extraction tool set",
+          "Insulation resistance tester",
+          "Maintenance terminal interface cable"
+        ]
+      },
+      "weight_change_kg": 6.4,
+      "accomplishment_steps": 11,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-12-11",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MRD-45-1021",
+    "doc_type": "SB",
+    "title": "Maintenance System — Replacement of the Computer Rack, Concentrator and Flight Deck Display",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-05",
+      "reason": "Planning note added naming the software module bulletin as work to be booked into the same bay visit, with the sequencing consequence of treating the two as independent.",
+      "raised_by_pawo": "PAWO-164355-01",
+      "raised_by_finding": "F02",
+      "finding_type": "PREREQUISITE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00419"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-164788"
+        ],
+        "pre_mod": [
+          "MOD-165240"
+        ],
+        "post_sb": [
+          "MRD-45-1015"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2023-06-15",
+      "released": "2023-12-11",
+      "revised": "2026-08-05",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Replacement of the maintenance computer rack, addition of a data concentrator and installation of a higher resolution flight deck display, giving cross-system fault correlation on delivered aircraft.",
+    "sections": {
+      "planning_reason": "The initial display standard solved the access problem but left the maintenance system unable to correlate faults across systems, because there was no processing behind the screen and the rack had no spare slot. Operators reported that the screen was little more than a fixed window on the same fault list. The obsolescence of the original display backlight, notified in 2021, made a like-for-like replacement unattractive, so the rack, the concentrator and the display are changed together in one visit.",
+      "description": "The rack is replaced by a wider unit with two spare slots and a data concentrator is installed in one of them to host the cross-system fault correlation. The flight deck display is replaced by a higher resolution unit in the same aperture. The maintenance antenna is retained. The terminal control panel gains a correlation menu and the terminal computer is re-cabled to the concentrator.",
+      "accomplishment_summary": "Make the aircraft electrically safe and get access to the avionics rack area in zone 116 and to the flight deck station in zone 241. Do the removal task AMM-M-45-20-11-000-021-A for the display unit. Remove the existing rack and install the wider rack KEDE588674-53 on the revised mounting pattern. Install the data concentrator KAD366597-92 in the upper spare slot and connect it to the maintenance system bus. Re-cable the terminal computer 6796TN8 to the concentrator. Install the higher resolution display D4520115601387 in the existing aperture. Do the power-up test and confirm that the correlation menu appears on the terminal control panel 169TN8. Run the correlation self-test and compare the result with the expected report in the accomplishment instructions. Confirm that the maintenance antenna 72TN still reports correctly. Record the embodiment.",
+      "effectivity_note": "Applicable to all MERIDIAN models from MSN M00001 through M00419 that are post MOD-164788 and still pre MOD-165240. Aircraft that never took the initial display standard have no flight deck aperture and need a separate quotation covering the panel work; this Service Bulletin must not be used on them.",
+      "material_note": "Kit K4520-1021-01 contains the rack, the concentrator, the display, the cabling change content and the mounting hardware. Lead time is twenty-two weeks. The removed rack and display are to be returned to Aeralis. Operators are reminded that the fault report format changes on embodiment and that their maintenance system may need updating first. Planning note: on the three fleets that requested the software management module change, most aircraft already carry an open work package against Service Bulletin MRD-42-1013. That bulletin is not a design prerequisite of this one and neither depends on the other to function, but both open the same avionics bay and both invalidate the loading path validation, so in planning terms this Service Bulletin should be treated as having MRD-42-1013 as a practical prerequisite. Book them into one bay visit, do the module change first and run a single loading path validation at the end. An aircraft that takes them separately is opened twice and validated twice for one outcome, which is exactly what the sequencing condition on the modification is written to avoid."
+    },
+    "entities": {
+      "part_numbers": [
+        "KEDE588674-53",
+        "D4520115601387",
+        "KAD366597-92"
+      ],
+      "fins": [
+        "72TN",
+        "169TN8",
+        "6796TN8"
+      ],
+      "drawings": [
+        "D45201289920"
+      ],
+      "software": [],
+      "zones": [
+        "241",
+        "116"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00419"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-165240",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "MRD-45-1015",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "MRD-42-1013",
+        "doc_type": "SB",
+        "relation": "CONCURRENT_WITH"
+      },
+      {
+        "doc_id": "AMM-M-45-20-11-000-021-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "maintenance computer",
+      "rack replacement",
+      "data concentrator",
+      "planning note",
+      "bay visit"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Avionics In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "MRD-45-1021",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 48 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-165240",
+      "manpower": {
+        "elapsed_time_hours": 26,
+        "manhours": 58,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K4520-1021-01",
+        "kit_available_from": "2024-04-08",
+        "parts_required": [
+          {
+            "part_number": "KEDE588674-53",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "KAD366597-92",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D4520115601387",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D4520115601387",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Connector sealing compound",
+          "Cable tie, flame resistant"
+        ],
+        "tooling": [
+          "Contact insertion and extraction tool set",
+          "Insulation resistance tester",
+          "Maintenance terminal interface cable"
+        ]
+      },
+      "weight_change_kg": 6.4,
+      "accomplishment_steps": 11,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-12-11",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-08-05",
+          "reason": "Planning note added for the software module bulletin bay visit"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

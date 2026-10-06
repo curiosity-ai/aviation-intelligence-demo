@@ -1,0 +1,135 @@
+[
+  {
+    "doc_id": "FCOM-S-DSC-49-10-01",
+    "doc_type": "FCOM",
+    "title": "Auxiliary Power Unit — System Description",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2023-02-06",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-10",
+      "ata_6d": "49-10-00",
+      "title": "Power Plant — General"
+    },
+    "secondary_ata": [
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-04-18",
+      "released": "2017-11-27",
+      "revised": "2023-02-06",
+      "effective": "2023-02-24"
+    },
+    "abstract": "Flight crew description of the auxiliary power unit, covering what the crew commands, what the ECAM shows during the start sequence and what the automatic protections will do without crew action.",
+    "sections": {
+      "purpose": "This entry describes the auxiliary power unit as the flight crew sees it: the controls on the overhead panel, the indications on the ECAM, and the automatic protections that act without any crew input.",
+      "description": "The auxiliary power unit supplies bleed air and electrical power on the ground and, within its envelope, in flight. The crew commands it from the overhead panel with the MASTER SW and the START pushbutton. Selecting MASTER SW ON opens the air inlet flap and brings up the ECAM APU page; the START pushbutton is available once the flap has reached the open position, and the pushbutton light shows AVAIL when the unit is running and stable. There is no crew action associated with the flap itself: it opens on the master switch and closes some minutes after shutdown, and the only thing the crew sees is that the start is either available or it is not. If the flap does not reach the open position the START pushbutton stays unavailable and the ECAM shows APU FLAP NOT OPEN. Automatic shutdown protections cover overspeed, high exhaust gas temperature, low oil pressure and fire, and they act without any crew input. In flight the unit is available up to the altitude shown on the limitations page, with bleed availability limited above the second altitude given there.",
+      "crew_procedure": "To start: MASTER SW ON, wait for the flap to open and the page to appear, then START pushbutton. Monitor the exhaust gas temperature and the rotor speed on the ECAM page until AVAIL appears. To shut down: select the bleed and the generator off, allow the cooling period given on the page, then MASTER SW OFF. Do not select MASTER SW OFF with the bleed still supplying the packs. If AVAIL does not appear within the time shown, do not attempt a second start until the page shows the unit has stopped."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [
+        "52PB",
+        "5135PB"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-S-PRO-49-10-02",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "auxiliary power unit",
+      "master switch",
+      "avail",
+      "air inlet flap",
+      "automatic shutdown"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Systems Description — Auxiliary Power Unit",
+      "entry_number": "DSC-49-10-01",
+      "flight_phase": "ALL_PHASES",
+      "operational_impact": "NONE",
+      "crew_action": "Normal start and shutdown from the overhead panel; no action associated with the air inlet flap.",
+      "affects_qrh": false,
+      "affects_mel": true,
+      "mel_items": [
+        "49-10-02B"
+      ],
+      "systems": [
+        "Auxiliary Power Unit",
+        "Bleed Air",
+        "Electrical Generation"
+      ],
+      "related_entries": [
+        "FCOM-S-PRO-49-10-02",
+        "FCOM-S-PRO-80-10-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

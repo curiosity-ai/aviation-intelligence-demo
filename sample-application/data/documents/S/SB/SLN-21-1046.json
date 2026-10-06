@@ -1,0 +1,459 @@
+[
+  {
+    "doc_id": "SLN-21-1046",
+    "doc_type": "SB",
+    "title": "Air Conditioning — Cabin Pressure Outflow Valve Duplex Actuator and Manual Drive Installation",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-02-25",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-30",
+      "ata_6d": "21-30-11",
+      "title": "Pressurization Control — Outflow Valve Control"
+    },
+    "secondary_ata": [
+      "21-30-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00003",
+          "to": "S01020"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HVA",
+        "SRP",
+        "KRA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-136810"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2018-08-20",
+      "released": "2019-02-25",
+      "revised": "2019-02-25",
+      "effective": "2019-03-16"
+    },
+    "abstract": "Retrofit of the duplex-motor outflow valve actuator and the regeared manual drive on twin-engine aircraft, so that a single winding failure no longer removes automatic cabin pressure control.",
+    "sections": {
+      "planning_reason": "The fleet recorded thirty-one outflow valve actuator failures in flight over four years, of which nine required the crew to take manual control of cabin pressure for the rest of the sector. Crew reports from those nine were consistent: the manual mode moves the valve so slowly that the descent has to be flown shallower than planned and the rate cannot be modulated, so the cabin arrives with a step. Two ended with a cabin rate exceedance and an engineering inspection.",
+      "description": "The actuator gains a second, independent motor winding driven from the opposite essential bus, so that a single winding or drive channel failure no longer removes automatic control. The manual drive is regeared to give full valve travel in eighteen seconds instead of fifty-two and its control changes from a two-position switch to a proportional rocker. The accumulator is retained with a raised charge pressure, and the forward duct is re-clamped because the second motor cable runs alongside it.",
+      "accomplishment_summary": "Put the aircraft on ground power with the cabin pressure system unpowered. Do AMM-S-21-30-11-000-051-A to remove the outflow valve actuator. Install the duplex actuator D2130114939430 and connect both motor harnesses. Run the second feed from the spare position in the essential panel to the actuator, supporting it with the cushioned loop clamps AGS958367K4 at the four bracket positions already present on the forward duct route. Re-clamp the forward duct D2130115062812. Install the accumulator D2130117925957 and set the charge pressure to the raised value in the accomplishment instructions. Secure the new cable tray with the countersunk screws AGS149379-16 and AGS336823-99. Replace the two-position manual switch with the proportional rocker. Do the pressurisation ground test with each motor channel isolated in turn and confirm full valve travel on either. Time the manual drive from fully open to fully closed and confirm eighteen seconds plus or minus two.",
+      "effectivity_note": "Applicable to SOLANO-30 and SOLANO-34 aircraft from MSN S00003 to MSN S01020 that carry the single-motor actuator. Aircraft from MSN S01020 onward are post-modification from build. The four-engine aircraft are not covered by this issue.",
+      "material_note": "Kit K2130-1046-01 contains the duplex actuator, the accumulator, the proportional rocker, the cable tray and a clamp and screw set for four clamp positions. Lead time is twenty-eight weeks; the actuator is the long-lead item. The removed actuator is returned to Aeralis for winding analysis."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2130114939430",
+        "D2130115062812",
+        "D2130117925957",
+        "AGS149379-16",
+        "AGS336823-99",
+        "AGS958367K4"
+      ],
+      "fins": [
+        "141HM",
+        "6820HQ"
+      ],
+      "drawings": [
+        "D21301105897"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "242",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01020"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-136810",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-S-21-30-11-000-051-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-21-30-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-S-PRO-21-30-02",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "duplex actuator",
+      "manual drive",
+      "proportional rocker",
+      "essential bus",
+      "cabin rate"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-21-1046",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 48 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SAFETY",
+      "embodied_mod": "MOD-136810",
+      "manpower": {
+        "elapsed_time_hours": 20,
+        "manhours": 28,
+        "personnel": 2,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K2130-1046-01",
+        "kit_available_from": "2019-08-12",
+        "parts_required": [
+          {
+            "part_number": "D2130114939430",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2130117925957",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS958367K4",
+            "qty": 8,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS336823-99",
+            "qty": 20,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2130114939430",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Cable tie, self-locking",
+          "Sealant, low adhesion",
+          "Lockwire, 0.8 mm"
+        ],
+        "tooling": [
+          "Pressurisation ground test set",
+          "Stopwatch, calibrated",
+          "Torque wrench 2-20 Nm"
+        ]
+      },
+      "weight_change_kg": 2.9,
+      "accomplishment_steps": 13,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2019-02-25",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "SLN-21-1046",
+    "doc_type": "SB",
+    "title": "Air Conditioning — Cabin Pressure Outflow Valve Duplex Actuator and Manual Drive Installation",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-01-21",
+      "reason": "Effectivity extended to the four-engine aircraft and two further cushioned loop clamp positions added on the forward duct route.",
+      "raised_by_pawo": "PAWO-136810-01",
+      "raised_by_finding": "F03",
+      "finding_type": "EFFECTIVITY_INVALIDATION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-30",
+      "ata_6d": "21-30-11",
+      "title": "Pressurization Control — Outflow Valve Control"
+    },
+    "secondary_ata": [
+      "21-30-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00003",
+          "to": "S01020"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HVA",
+        "SRP",
+        "KRA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-136810"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2018-08-20",
+      "released": "2019-02-25",
+      "revised": "2026-01-21",
+      "effective": "2026-02-09"
+    },
+    "abstract": "Retrofit of the duplex-motor outflow valve actuator and the regeared manual drive, so that a single winding failure no longer removes automatic cabin pressure control.",
+    "sections": {
+      "planning_reason": "The fleet recorded thirty-one outflow valve actuator failures in flight over four years, of which nine required the crew to take manual control of cabin pressure for the rest of the sector. Crew reports from those nine were consistent: the manual mode moves the valve so slowly that the descent has to be flown shallower than planned and the rate cannot be modulated, so the cabin arrives with a step. Two ended with a cabin rate exceedance and an engineering inspection.",
+      "description": "The actuator gains a second, independent motor winding driven from the opposite essential bus, so that a single winding or drive channel failure no longer removes automatic control. The manual drive is regeared to give full valve travel in eighteen seconds instead of fifty-two and its control changes from a two-position switch to a proportional rocker. The accumulator is retained with a raised charge pressure, and the forward duct is re-clamped because the second motor cable runs alongside it.",
+      "accomplishment_summary": "Put the aircraft on ground power with the cabin pressure system unpowered. Do AMM-S-21-30-11-000-051-A to remove the outflow valve actuator. Install the duplex actuator D2130114939430 and connect both motor harnesses. Run the second feed from the spare position in the essential panel to the actuator. On the four-engine aircraft the duct route between the pressure bulkhead and the valve is two frame bays longer, so support the feed with the cushioned loop clamps AGS958367K4 at the four bracket positions already present and at the two additional positions given in figure 3 of this issue. No span may exceed four hundred millimetres. Re-clamp the forward duct D2130115062812. Install the accumulator D2130117925957 and set the charge pressure to the raised value in the accomplishment instructions. Secure the new cable tray with the countersunk screws AGS149379-16 and AGS336823-99. Replace the two-position manual switch with the proportional rocker. Do the pressurisation ground test with each motor channel isolated in turn and confirm full valve travel on either. Time the manual drive from fully open to fully closed and confirm eighteen seconds plus or minus two.",
+      "effectivity_note": "Applicable to twin-engine and four-engine aircraft from MSN S00003 to MSN S01020 that carry the single-motor actuator. Aircraft from MSN S01020 onward are post-modification from build. Revision 02 adds the VANTOR-64 and the VANTOR-68 to the effectivity and, with them, the two extra clamp positions the longer duct route needs.",
+      "material_note": "Kit K2130-1046-01 contains the duplex actuator, the accumulator, the proportional rocker, the cable tray and the clamp and screw set. From revision 02 the kit is supplied with six clamp positions for every aircraft; the two spare clamps are not installed on a twin-engine aircraft. Lead time is twenty-eight weeks; the actuator is the long-lead item. The removed actuator is returned to Aeralis for winding analysis."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2130114939430",
+        "D2130115062812",
+        "D2130117925957",
+        "AGS149379-16",
+        "AGS336823-99",
+        "AGS958367K4"
+      ],
+      "fins": [
+        "141HM",
+        "6820HQ"
+      ],
+      "drawings": [
+        "D21301105897"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "242",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01020"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-136810",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-S-21-30-11-000-051-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-21-30-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-S-PRO-21-30-02",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "duplex actuator",
+      "manual drive",
+      "proportional rocker",
+      "essential bus",
+      "cabin rate"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-21-1046",
+      "sb_revision": "03",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 48 months after the date of revision 02 of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SAFETY",
+      "embodied_mod": "MOD-136810",
+      "manpower": {
+        "elapsed_time_hours": 22,
+        "manhours": 32,
+        "personnel": 2,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K2130-1046-01",
+        "kit_available_from": "2019-08-12",
+        "parts_required": [
+          {
+            "part_number": "D2130114939430",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2130117925957",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS958367K4",
+            "qty": 12,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS336823-99",
+            "qty": 20,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2130114939430",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Cable tie, self-locking",
+          "Sealant, low adhesion",
+          "Lockwire, 0.8 mm"
+        ],
+        "tooling": [
+          "Pressurisation ground test set",
+          "Stopwatch, calibrated",
+          "Torque wrench 2-20 Nm"
+        ]
+      },
+      "weight_change_kg": 3.1,
+      "accomplishment_steps": 14,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2019-02-25",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-01-21",
+          "reason": "Effectivity extended to the VANTOR-64 and VANTOR-68; two cushioned loop clamp positions added on the forward duct route with a maximum span stated"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

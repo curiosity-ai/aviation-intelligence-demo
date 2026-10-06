@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_6/xml_schema_flat/fault.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="MRD" systemDiffCode="A" systemCode="21" subSystemCode="4" subSubSystemCode="0" assyCode="11" disassyCode="00" disassyCodeVariant="A" infoCode="420" infoCodeVariant="A" itemLocationCode="A" />
+        <language languageIsoCode="en" countryIsoCode="GB" />
+        <issueInfo issueNumber="001" inWork="00" />
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2021" month="01" day="13" />
+        <dmTitle>
+          <techName>Heating — Cargo Compartment Heating</techName>
+          <infoName>Cargo Compartment Low Temperature Indication After a Cold Soak</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01" />
+      <responsiblePartnerCompany enterpriseCode="U8025">
+        <enterpriseName>AERALIS S.A.S.</enterpriseName>
+      </responsiblePartnerCompany>
+      <originator enterpriseCode="U8025">
+        <enterpriseName>AERALIS S.A.S. — Troubleshooting Engineering, Valmont</enterpriseName>
+      </originator>
+      <applic>
+        <displayText>
+          <simplePara>MERIDIAN-42 and MERIDIAN-46, all aircraft</simplePara>
+        </displayText>
+      </applic>
+      <qualityAssurance>
+        <firstVerification verificationType="tabtop" />
+      </qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <faultIsolation>
+      <faultDescr>
+        <para>CARGO TEMP LO displayed after a cold soak, clearing within twenty minutes of heating</para>
+        <para>The cargo compartment temperature indication reads well below the actual compartment temperature after an overnight cold soak, and normalises within about twenty minutes of the heating system running. The behaviour is repeatable on the same aircraft and absent on others in the same fleet. Where live animals are carried the indication forces the shipment to be refused at the gate, so the operational consequence is out of proportion to the technical fault. There is no correlation with compartment loading.</para>
+        <para>Flight deck effect: <verbatimText>CARGO AFT TEMP LO</verbatimText>, <verbatimText>CARGO AFT HEAT FAULT</verbatimText>.</para>
+        <para>Maintenance fault codes: 214011002, 214011017.</para>
+        <table>
+          <title>Possible causes, most likely first</title>
+          <tgroup cols="3">
+            <colspec colname="c1" colwidth="3.2*" />
+            <colspec colname="c2" colwidth="0.8*" />
+            <colspec colname="c3" colwidth="0.9*" />
+            <thead>
+              <row>
+                <entry>Cause</entry>
+                <entry>FIN</entry>
+                <entry>Probability</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Moisture ingress at the vented transmitter body</entry>
+                <entry>9469HM</entry>
+                <entry>52 %</entry>
+              </row>
+              <row>
+                <entry>Water in the transmitter connector from a harness drip loop above the connector</entry>
+                <entry>9469HM</entry>
+                <entry>24 %</entry>
+              </row>
+              <row>
+                <entry>Heating loop actuator slow to drive from cold</entry>
+                <entry>181HM</entry>
+                <entry>15 %</entry>
+              </row>
+              <row>
+                <entry>Genuine loss of heating airflow to the compartment</entry>
+                <entry>181HM</entry>
+                <entry>9 %</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+        <figure>
+          <title>Heating — Cargo Compartment Heating — location, side view</title>
+          <graphic infoEntityIdent="ICN-MRD-A-214011-A-U8025-0A459A9C01-A-001-01" />
+        </figure>
+      </faultDescr>
+      <faultIsolationProcedure>
+        <isolationProcedure>
+          <preliminaryRqmts>
+            <reqCondGroup>
+              <reqCondNoRef>
+                <reqCond>The aircraft electrical power is available.</reqCond>
+              </reqCondNoRef>
+              <reqCondNoRef>
+                <reqCond>Access is available to zone 172, 273.</reqCond>
+              </reqCondNoRef>
+            </reqCondGroup>
+            <reqSupportEquips>
+              <supportEquipDescrGroup>
+                <supportEquipDescr>
+                  <name>Portable maintenance access terminal</name>
+                  <reqQuantity>1</reqQuantity>
+                </supportEquipDescr>
+              </supportEquipDescrGroup>
+            </reqSupportEquips>
+            <reqSupplies>
+              <noSupplies />
+            </reqSupplies>
+            <reqSpares>
+              <noSpares />
+            </reqSpares>
+          </preliminaryRqmts>
+          <isolationMainProcedure>
+            <isolationStep id="stp-001">
+              <isolationStepQuestion>
+                <para>Record the compartment temperature indication, the ambient temperature and the time since the aircraft was last powered.</para>
+              </isolationStepQuestion>
+              <isolationStepAnswer nextActionRefId="stp-002">
+                <isolationStepAnswerValue>DONE</isolationStepAnswerValue>
+                <para>If this identifies the fault, the cause is: Moisture ingress at the vented transmitter body (9469HM).</para>
+              </isolationStepAnswer>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>NOT APPLICABLE</isolationStepAnswerValue>
+                <correctiveAction>Go to the end of the procedure and do the confirmation task.</correctiveAction>
+              </isolationStepAnswer>
+            </isolationStep>
+            <isolationStep id="stp-002">
+              <isolationStepQuestion>
+                <para>Measure the actual compartment temperature with a calibrated thermometer at the transmitter position.</para>
+              </isolationStepQuestion>
+              <isolationStepAnswer nextActionRefId="stp-003">
+                <isolationStepAnswerValue>DONE</isolationStepAnswerValue>
+                <para>If this identifies the fault, the cause is: Water in the transmitter connector from a harness drip loop above the connector (9469HM).</para>
+              </isolationStepAnswer>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>NOT APPLICABLE</isolationStepAnswerValue>
+                <correctiveAction>Go to the end of the procedure and do the confirmation task.</correctiveAction>
+              </isolationStepAnswer>
+            </isolationStep>
+            <isolationStep id="stp-003">
+              <isolationStepQuestion>
+                <para>If the two agree, the indication is correct and the fault is in the heating system; go to step 7.</para>
+              </isolationStepQuestion>
+              <isolationStepAnswer nextActionRefId="stp-004">
+                <isolationStepAnswerValue>DONE</isolationStepAnswerValue>
+                <para>If this identifies the fault, the cause is: Heating loop actuator slow to drive from cold (181HM).</para>
+              </isolationStepAnswer>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>NOT APPLICABLE</isolationStepAnswerValue>
+                <correctiveAction>Go to the end of the procedure and do the confirmation task.</correctiveAction>
+              </isolationStepAnswer>
+            </isolationStep>
+            <isolationStep id="stp-004">
+              <isolationStepQuestion>
+                <para>If the indication reads low, isolate the transmitter and measure its resistance at the connector.</para>
+              </isolationStepQuestion>
+              <isolationStepAnswer nextActionRefId="stp-005">
+                <isolationStepAnswerValue>DONE</isolationStepAnswerValue>
+                <para>If this identifies the fault, the cause is: Genuine loss of heating airflow to the compartment (181HM).</para>
+              </isolationStepAnswer>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>NOT APPLICABLE</isolationStepAnswerValue>
+                <correctiveAction>Go to the end of the procedure and do the confirmation task.</correctiveAction>
+              </isolationStepAnswer>
+            </isolationStep>
+            <isolationStep id="stp-005">
+              <isolationStepQuestion>
+                <para>Compare the resistance with the temperature reference table and record both values.</para>
+              </isolationStepQuestion>
+              <isolationStepAnswer nextActionRefId="stp-006">
+                <isolationStepAnswerValue>DONE</isolationStepAnswerValue>
+                <para>Continue with the next step.</para>
+              </isolationStepAnswer>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>NOT APPLICABLE</isolationStepAnswerValue>
+                <correctiveAction>Go to the end of the procedure and do the confirmation task.</correctiveAction>
+              </isolationStepAnswer>
+            </isolationStep>
+            <isolationStep id="stp-006">
+              <isolationStepQuestion>
+                <para>Inspect the transmitter body and its connector for moisture, and check whether the vent is present on the installed transmitter standard.</para>
+              </isolationStepQuestion>
+              <isolationStepAnswer nextActionRefId="stp-007">
+                <isolationStepAnswerValue>DONE</isolationStepAnswerValue>
+                <para>Continue with the next step.</para>
+              </isolationStepAnswer>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>NOT APPLICABLE</isolationStepAnswerValue>
+                <correctiveAction>Go to the end of the procedure and do the confirmation task.</correctiveAction>
+              </isolationStepAnswer>
+            </isolationStep>
+            <isolationStep id="stp-007">
+              <isolationStepQuestion>
+                <para>Do the confirmation task and record the stabilisation time.</para>
+              </isolationStepQuestion>
+              <isolationStepAnswer nextActionRefId="stp-008">
+                <isolationStepAnswerValue>DONE</isolationStepAnswerValue>
+                <para>Continue with the next step.</para>
+              </isolationStepAnswer>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>NOT APPLICABLE</isolationStepAnswerValue>
+                <correctiveAction>Go to the end of the procedure and do the confirmation task.</correctiveAction>
+              </isolationStepAnswer>
+            </isolationStep>
+            <isolationStep id="stp-008">
+              <isolationStepQuestion>
+                <para>Check the loop actuator 181HM drive time and the solenoid 9469HM energisation against the values in the maintenance documentation.</para>
+              </isolationStepQuestion>
+              <isolationStepAnswer nextActionRefId="stp-009">
+                <isolationStepAnswerValue>DONE</isolationStepAnswerValue>
+                <para>Continue with the next step.</para>
+              </isolationStepAnswer>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>NOT APPLICABLE</isolationStepAnswerValue>
+                <correctiveAction>Go to the end of the procedure and do the confirmation task.</correctiveAction>
+              </isolationStepAnswer>
+            </isolationStep>
+            <isolationStep id="stp-009">
+              <isolationStepQuestion>
+                <para>Where moisture is found at the transmitter vent or in the connector, dry the installation, re-seal the connector and repeat the confirmation task.</para>
+              </isolationStepQuestion>
+              <isolationStepAnswer nextActionRefId="stp-010">
+                <isolationStepAnswerValue>DONE</isolationStepAnswerValue>
+                <para>Continue with the next step.</para>
+              </isolationStepAnswer>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>NOT APPLICABLE</isolationStepAnswerValue>
+                <correctiveAction>Go to the end of the procedure and do the confirmation task.</correctiveAction>
+              </isolationStepAnswer>
+            </isolationStep>
+            <isolationStep id="stp-010">
+              <isolationStepQuestion>
+                <para>Where the fault repeats after drying, replace the transmitter with the sealed standard and record the aircraft as modified.</para>
+              </isolationStepQuestion>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>DONE</isolationStepAnswerValue>
+                <para>Continue with the next step.</para>
+              </isolationStepAnswer>
+              <isolationStepAnswer nextActionRefId="stp-end">
+                <isolationStepAnswerValue>NOT APPLICABLE</isolationStepAnswerValue>
+                <correctiveAction>Go to the end of the procedure and do the confirmation task.</correctiveAction>
+              </isolationStepAnswer>
+            </isolationStep>
+            <isolationProcedureEnd id="stp-end">
+              <para>Do the confirmation task AMM-M-21-40-11-700-016-A and make sure that the fault does not return.</para>
+            </isolationProcedureEnd>
+          </isolationMainProcedure>
+          <closeRqmts>
+            <reqCondGroup>
+              <reqCondNoRef>
+                <reqCond>Do the confirmation task AMM-M-21-40-11-700-016-A.</reqCond>
+              </reqCondNoRef>
+              <reqCondNoRef>
+                <reqCond>Make sure that no fault message is shown and make an entry in the aircraft technical log.</reqCond>
+              </reqCondNoRef>
+            </reqCondGroup>
+          </closeRqmts>
+        </isolationProcedure>
+      </faultIsolationProcedure>
+      <correlatedFaultInfo>
+        <para>Dispatch is permitted with the cargo temperature indication inoperative provided no temperature-sensitive cargo is carried. Dispatch with the compartment heating itself inoperative is subject to the route and cargo restrictions of the master minimum equipment list.</para>
+        <table>
+          <title>Dispatch</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*" />
+            <colspec colname="c2" colwidth="2.2*" />
+            <tbody>
+              <row>
+                <entry>
+                  <para>MEL item</para>
+                </entry>
+                <entry>
+                  <para>21-43-01B</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>Dispatchable</para>
+                </entry>
+                <entry>
+                  <para>Yes</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>Condition</para>
+                </entry>
+                <entry>
+                  <para>Cargo temperature indication inoperative, no temperature-sensitive cargo carried.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </correlatedFaultInfo>
+    </faultIsolation>
+  </content>
+</dmodule>

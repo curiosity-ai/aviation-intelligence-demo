@@ -1,0 +1,426 @@
+[
+  {
+    "doc_id": "PAWO-169302-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Dual Threshold Confirmation for Aft Hold Smoke Detection",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "26-10",
+      "92-41"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00157",
+          "to": "M00475"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "NVC"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-03",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the dual threshold smoke detection proposal, covering the relocation standard it builds on, the wiring and inspection content it changes, and the crew procedure that an eleven second delay in the humid case would touch.",
+    "sections": {
+      "objective": "Establish what the second sensing channel and the humidity compensated confirmation window conflict with, what has to change in the aft hold before the channel can be routed, and whether a later warning in the humid case can be justified to the authority and to the crew.",
+      "scope_note": "The search covers ATA 26-10 as the primary chapter and ATA 92-41 because the second channel needs a route through the aft fuselage wiring. The extinguishing chapter was searched and excluded deliberately: the candidate does not touch it, and the review wanted that recorded rather than assumed. ATA 21-40 appeared through similarity on the cargo heating text and was reviewed and dropped. The forward hold is out of scope by decision, not by omission.",
+      "method_note": "Entity linking was seeded from the three part numbers, the two functional item numbers, the drawing and the two zones, which returned the relocation family and the aft cargo wiring sheet. Similarity was run over the operator's diversion narrative rather than over detection vocabulary, on the argument that what matters is the consequence of an unconfirmable warning, and that returned the crew procedure — which shares no identifier with the candidate and never uses the word detector.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the relocation standard: the shielded inlet and its relocated tube run are the physical basis for the second sensing element, and an aircraft that still has the open port has neither the position nor the drain the candidate assumes. The relocation bulletin itself becomes partly wrong, because its accomplishment reuses the ceiling rail holes that the second channel now also needs. The inspection task changes substantially — a second element means a second flow check and a second response time — and the troubleshooting entry loses its most useful step, since a single-channel response time comparison no longer distinguishes anything. The aft cargo wiring sheet came back from the zone seed alone: it carries the heating and detection feeds through the same zone and its wire count and segregation table would both change. The inspection bulletin that precedes the relocation records ceiling rail hole condition, and the candidate adds load to those same holes. The item the review did not expect is the crew procedure: it states that every warning is treated as genuine and that the diversion decision is set by agent duration from first discharge. An eleven second later warning is inside the crew's decision chain and cannot be introduced silently.",
+      "next_steps": "Get the certification position on a delayed warning in the humid case before any hardware is committed. Ask the wiring owner whether the second channel can share the existing route without a new penetration. Establish the additional load on the ceiling rail holes and compare it against the inspection bulletin limits. Send the crew procedure question to flight operations with the measured delay attached."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610121518371",
+        "D2610007769165",
+        "AES545422-2C"
+      ],
+      "fins": [
+        "2332WF",
+        "20WF"
+      ],
+      "drawings": [
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "143",
+        "145"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-169302",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-M-260603",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "smoke detection",
+      "dual threshold",
+      "humidity",
+      "warning delay"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-169302-01",
+      "subject_mod": "MOD-169302",
+      "source_io": "IO-M-260603",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-06-03",
+      "due_date": "2026-08-21",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EYIS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ELSC",
+          "EGAM",
+          "ETGC"
+        ],
+        "estimated_manhours": 220,
+        "spent_manhours": 128
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "26",
+          "92",
+          "21"
+        ],
+        "ata_4d": [
+          "26-10",
+          "26-20",
+          "92-41",
+          "21-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "M00022",
+          "to": "M00475"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2610121518371",
+            "D2610007769165",
+            "AES545422-2C"
+          ],
+          "fins": [
+            "2332WF",
+            "20WF"
+          ],
+          "drawings": [
+            "D26101223994"
+          ],
+          "zones": [
+            "143",
+            "145"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "a warning the crew must act on and cannot verify",
+          "a hold found clean after every diversion"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search the detection family on the entity seeds",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search for comparable unverifiable-warning changes on other chapters",
+          "method": "SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Establish the ceiling rail load with the second channel",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Obtain the certification position on a delayed warning",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T05",
+          "title": "Review the crew procedure impact with flight operations",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-168024",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES545422-2C",
+              "D2610121518371"
+            ],
+            "shared_fins": [
+              "2332WF"
+            ],
+            "shared_zones": [
+              "143",
+              "145"
+            ],
+            "shared_ata_6d": [
+              "26-10-12"
+            ],
+            "similarity_note": "Both documents answer the same in-service problem in the same compartment, one by moving the sampling out of the wet air path and the other by making the detection able to tell condensation from smoke."
+          },
+          "rationale": "The candidate assumes the shielded inlet position, the labyrinth drain and the relocated tube run introduced by the relocation modification. It supersedes that standard functionally while depending on it physically, and the two cannot be described as independent changes.",
+          "resolution": "Declare the relocation as a post-modification condition and state the supersession of its detection behaviour explicitly."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-26-1012",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES545422-2C",
+              "D2610121518371"
+            ],
+            "shared_fins": [
+              "2332WF"
+            ],
+            "shared_zones": [
+              "143",
+              "145"
+            ],
+            "shared_ata_6d": [
+              "26-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The relocation bulletin reuses the existing ceiling rail holes for the shielded inlet and states that no new penetrations are made. The candidate adds a second element and its interface at the same positions, so the statement and the fastener call-out in that bulletin no longer describe the installed configuration.",
+          "resolution": "Re-issue the relocation bulletin, or state in the candidate that it supersedes the relevant accomplishment steps."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-26-10-12-200-033-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES545422-2C",
+              "D2610121518371"
+            ],
+            "shared_fins": [
+              "2332WF"
+            ],
+            "shared_zones": [
+              "143",
+              "145"
+            ],
+            "shared_ata_6d": [
+              "26-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The inspection task does one flow check and one functional response per position. With two elements of different principle at each position it needs two of each, an agreement check between them, and a humidity reading to interpret the result.",
+          "resolution": "Rewrite the task for the dual channel arrangement and reissue it with the modification."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "FCOM-M-PRO-26-10-01",
+          "doc_type": "FCOM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew procedure describes treating every warning as genuine, discharging the agent and planning the diversion inside the published agent duration. It names no part, no functional item and no zone, and never uses the vocabulary of sampling, thresholds or elements."
+          },
+          "rationale": "The candidate delays the warning by up to eleven seconds in the humid case. The crew's decision chain starts at the warning, and the agent duration that sets the diversion is measured from the first discharge, so a later warning shifts the whole sequence. This is a crew-facing consequence of a maintenance-side change and it was not in the design scope.",
+          "resolution": "Quantify the delay, present it to certification and to flight operations together, and reissue the crew procedure if the delay is accepted."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "WDM-M-92-41-11",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "143"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The aft cargo wiring sheet carries the heating, detection and equipment rack feeds through the same zone the second channel must cross. Its wire count and its segregation table both change, and there may not be room in the existing route without a new penetration.",
+          "resolution": "Ask the wiring owner to confirm the route capacity and reissue the sheet with the second channel."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "TSM-M-26-10-12-810-809",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2610121518371"
+            ],
+            "shared_fins": [
+              "2332WF"
+            ],
+            "shared_zones": [
+              "143",
+              "145"
+            ],
+            "shared_ata_6d": [
+              "26-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure closes an event by comparing a single response time against a limit. With two elements that must agree, that comparison no longer distinguishes a humidity response from a detector fault, which is the whole purpose of the procedure.",
+          "resolution": "Rewrite the isolation logic around channel agreement and the humidity reading."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "MRD-26-1019",
+          "doc_type": "SB",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES545422-2C"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "143",
+              "145"
+            ],
+            "shared_ata_6d": [
+              "26-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The inspection bulletin measures ceiling rail hole condition against limits set for the shielded inlet load. The second element and its interface add load at the same holes, so the acceptance limits in that bulletin have to be re-derived before it can be used to clear an aircraft for the candidate.",
+          "resolution": "Re-derive the hole acceptance limits for the dual channel load and re-issue the inspection bulletin alongside the modification."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-168074",
+          "doc_type": "MOD",
+          "reason": "Returns on similarity because it is also about an unwanted airflow path in a compartment, described with the same vocabulary of gaps, seals and air being drawn the wrong way. It is a lavatory bowl interface, it shares no part number, no functional item number and no zone with the candidate, and nothing about it changes if the detection is dualised."
+        },
+        {
+          "doc_id": "AMM-M-21-20-13-100-052-A",
+          "doc_type": "AMM",
+          "reason": "Surfaces on the flow check and airflow measurement wording, which is almost identical, but it is the recirculation filter cleaning task in the ceiling void of the cabin, with no detection content and no shared identifier."
+        }
+      ],
+      "conclusion": "Not yet issued. The certification position on a delayed warning in the humid case is the item that decides whether the change proceeds in this form.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

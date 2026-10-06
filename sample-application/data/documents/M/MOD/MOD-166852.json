@@ -1,0 +1,162 @@
+[
+  {
+    "doc_id": "MOD-166852",
+    "doc_type": "MOD",
+    "title": "Relocation of the Fwd Cargo Door Proximity Sensor Target Plate and Bracket",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-10-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-70",
+      "ata_6d": "52-70-11",
+      "title": "Door Warning — Door Proximity Sensing"
+    },
+    "secondary_ata": [
+      "52-30",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00104",
+          "to": "M00419"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-10-21",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "The forward cargo door proximity sensor target plate is moved off the door sill and onto the door structure itself, so that sill deflection under a loaded pallet no longer opens the sensing gap beyond tolerance.",
+    "sections": {
+      "reason": "Thirty-one door-not-locked indications were recorded in two years on aircraft loading through the forward cargo door with heavy single pallets. In every investigated case the door was correctly latched and the indication cleared once the pallet was moved off the sill. Strain measurement during a loading trial showed sill deflection of up to 1.9 mm under a pallet at maximum floor loading, against a sensing gap tolerance of 1.4 mm. The target plate is mounted on the sill and the sensor on the door, so the deflection goes straight into the gap.",
+      "description": "The target plate D5270117831041 is moved from the door sill to a bracket on the door structure, and the sensing pair is re-oriented so that the gap is measured across a joint that does not deflect with floor loading. The outboard plate D5270114205406 is replaced by a shorter item because the new bracket occupies part of its footprint, and protective sleeving LN209430K7 is added where the sensor tail crosses the new bracket edge. Revised detail is planned on drawing D52701117658. The forward door proximity sensor 3WT6 is retained but is re-shimmed, and the sensor target 23WT on the adjacent latch is refitted unchanged. Work is at the door and its inboard surround, zones 811 and 891, with the door on the maintenance stay and the sill trim removed.",
+      "effects": "Estimated mass increase of 0.4 kg per aircraft. Electrical load unchanged. Not interchangeable: the sill mounting holes are dressed and sealed on embodiment and cannot be reinstated without a repair. Spurious door indications are expected to fall to zero on the loading cases measured. Dispatch relief under the master minimum equipment list for one door sensing channel is unchanged. Wiring routing on the door side changes locally, which affects the wiring documentation for the forward fuselage, and the troubleshooting procedure for the door warning has to be reissued because the sensing geometry moves.",
+      "embodiment_note": "Retrofit and spares. One shift with two people at a line station with the door open, provided the door does not need to be lifted. No long-lead item; the bracket is a machined detail with a twelve-week supplier lead.",
+      "open_points": "Pre-analysis must check that the new bracket footprint does not collide with structural work being studied on the same door surround, and must confirm that the door warning wiring can be re-clipped without exceeding the bend radius at the door hinge crossing."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5270117831041",
+        "D5270114205406",
+        "LN209430K7"
+      ],
+      "fins": [
+        "3WT6",
+        "23WT"
+      ],
+      "drawings": [
+        "D52701117658"
+      ],
+      "software": [],
+      "zones": [
+        "811",
+        "891"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [],
+    "keywords": [
+      "door proximity sensing",
+      "target plate",
+      "sill deflection",
+      "spurious indication",
+      "cargo loading"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Door Systems Design Office"
+    },
+    "type_data": {
+      "mod_number": 166852,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.783",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.4,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "LN209430K7"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5270117831041",
+        "D5270114205406"
+      ],
+      "fins_affected": [
+        "3WT6",
+        "23WT"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 26,
+      "estimated_cost_keur": 165,
+      "lead_time_weeks": 24,
+      "production_impact": "Production cut-in to be assessed once the retrofit design is frozen",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

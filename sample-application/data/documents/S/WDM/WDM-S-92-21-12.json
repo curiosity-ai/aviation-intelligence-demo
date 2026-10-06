@@ -1,0 +1,170 @@
+[
+  {
+    "doc_id": "WDM-S-92-21-12",
+    "doc_type": "WDM",
+    "title": "Cargo Compartment Wiring — Cabin Interphone and Passenger Address Distribution",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-03-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-12",
+      "title": "Forward Fuselage Wiring — Cargo Compartment Wiring"
+    },
+    "secondary_ata": [
+      "23-50",
+      "44-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-08-27",
+      "released": "2020-03-16",
+      "revised": null,
+      "effective": "2020-04-03"
+    },
+    "abstract": "Wiring sheet for the interphone and passenger address distribution through the forward equipment area, showing the analogue pair routing and the screen terminations that the aft station audio depends on.",
+    "sections": {
+      "purpose": "This sheet shows the cabin interphone and passenger address distribution from the amplifier rack in the forward equipment area to the cabin station outlets, with the screen termination at each break.",
+      "sheet_note": "The distribution is analogue on the delivered standard, which is why the sheet carries a screen termination note at every break: a single missing termination in the aft run is enough to make the aft galley call unreadable while every forward station is perfect. The pair numbering runs from the rack outward and does not follow the station numbering, which is a frequent source of confusion when a station is traced from the cabin end. Where the digital distribution standard is embodied, the pairs beyond the rack are not used and the sheet is retained for the retrofit boundary only.",
+      "routing_note": "The distribution leaves the rack in zone 133, runs aft above the cargo compartment ceiling to the aft equipment area and then rises into the cabin at the station positions. The run passes the avionics bay feedthrough in zone 165 at one point, where a single pair is picked up for the flight deck station; that pair is the only part of this sheet that leaves the cabin distribution. Nothing in this group runs below the cargo floor line."
+    },
+    "entities": {
+      "part_numbers": [
+        "EN424241-33",
+        "UMB618969-17",
+        "D2350122256689",
+        "XADE368523-89"
+      ],
+      "fins": [
+        "4154VC5",
+        "5017VU",
+        "2922RC",
+        "95RC"
+      ],
+      "drawings": [
+        "D92211253715",
+        "D92211295947"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "165",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-23-50-11-400-035-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "interphone distribution",
+      "screen termination",
+      "pair numbering",
+      "aft station",
+      "cargo ceiling"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Wiring Data"
+    },
+    "type_data": {
+      "sheet_number": "92-21-12",
+      "sheet_title": "CARGO COMPARTMENT WIRING — CABIN INTERPHONE AND PASSENGER ADDRESS DISTRIBUTION",
+      "diagram_type": "SCHEMATIC",
+      "harnesses": [
+        "1330W",
+        "1652W",
+        "2630W"
+      ],
+      "connectors": [
+        {
+          "reference": "1332VC",
+          "part_number": "UMB618969-17",
+          "location_zone": "133",
+          "contacts": 37
+        },
+        {
+          "reference": "2631VC",
+          "part_number": "EN424241-33",
+          "location_zone": "263",
+          "contacts": 19
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "4154VC5",
+          "description": "BUS BAR, CARGO COMPARTMENT WIRING, OUTBD",
+          "zone": "133"
+        },
+        {
+          "fin": "5017VU",
+          "description": "SUPPORT BRACKET, CARGO COMPARTMENT WIRING",
+          "zone": "165"
+        },
+        {
+          "fin": "2922RC",
+          "description": "MODULE, FLIGHT INTERPHONE, LOWER",
+          "zone": "133"
+        }
+      ],
+      "wire_count": 96,
+      "wire_gauge_range": "AWG 26 to AWG 20",
+      "routes": [
+        "Amplifier rack in zone 133 aft above the cargo compartment ceiling",
+        "Aft equipment area rise into the cabin station positions",
+        "Single flight deck pair picked up at the avionics bay feedthrough in zone 165"
+      ],
+      "related_sheets": [
+        "WDM-S-92-21-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

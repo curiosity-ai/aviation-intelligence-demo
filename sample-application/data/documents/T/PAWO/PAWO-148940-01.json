@@ -1,0 +1,283 @@
+[
+  {
+    "doc_id": "PAWO-148940-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Over-Centre Detent and Guard for the Engine Fire Handle",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-20",
+      "ata_6d": "76-20-11",
+      "title": "Engine Controls — Fire Handle Assembly"
+    },
+    "secondary_ata": [
+      "76-20-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-15",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the fire handle detent standard, opened after two converted aircraft were found with a microswitch out of adjustment, and validated with a task and training change.",
+    "sections": {
+      "objective": "Establish why two aircraft were found with the fire handle microswitch out of adjustment shortly after conversion, and whether the detent standard itself, the accomplishment instructions or the maintenance task is responsible.",
+      "findings_summary": "The standard was validated and the cause was found in the accomplishment path. The microswitch actuation point moves by four millimetres with the detent standard, and the bulletin does instruct the technician to re-terminate and check it, but the check is described in terms of the pre-conversion reference and reads as if no adjustment is needed. Both affected aircraft had been converted by the same organisation, which is consistent with a wording problem rather than a design problem. Two items were confirmed. The maintenance inspection task checks the actuation point against the value for the standard fitted and would have found the condition at the first scheduled check. The troubleshooting procedure already puts the guard assembly ahead of the microswitch, which is the right order and was validated by these two cases.",
+      "next_steps": "Amend the bulletin wording so that the microswitch adjustment is stated as a required step with the post-conversion reference. Issue a service query response to the organisation concerned. No change to the design and no change to the maintenance task."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7620110697976",
+        "D7620118982319",
+        "KAD86061-43"
+      ],
+      "fins": [
+        "57EC",
+        "90EC"
+      ],
+      "drawings": [
+        "D76201138009"
+      ],
+      "software": [],
+      "zones": [
+        "481",
+        "432"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-148940",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "fire handle",
+      "microswitch adjustment",
+      "accomplishment wording",
+      "historical"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-148940-01",
+      "subject_mod": "MOD-148940",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-28",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-06-15",
+      "due_date": "2026-08-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 126
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "76",
+          "26"
+        ],
+        "ata_4d": [
+          "76-20",
+          "26-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00206"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D7620110697976",
+            "D7620118982319"
+          ],
+          "fins": [
+            "57EC",
+            "90EC"
+          ],
+          "drawings": [
+            "D76201138009"
+          ],
+          "zones": [
+            "481"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "control with no stable intermediate position",
+          "switch actuation point moved by a mechanism change"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Review the accomplishment wording for the microswitch step",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm the inspection task would detect the condition",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TTN-76-1008",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D7620110697976",
+              "D7620118982319",
+              "KAD86061-43"
+            ],
+            "shared_fins": [
+              "57EC",
+              "90EC"
+            ],
+            "shared_zones": [
+              "481",
+              "432"
+            ],
+            "shared_ata_6d": [
+              "76-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The instruction to check the actuation point is written against the pre-conversion reference and reads as a confirmation rather than an adjustment. Both affected aircraft were converted by the same organisation, which points at wording and not at design.",
+          "resolution": "Amend the wording so that the adjustment is a required step against the post-conversion reference."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-T-76-20-11-810-813",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D7620110697976",
+              "KAD86061-43"
+            ],
+            "shared_fins": [
+              "57EC",
+              "90EC"
+            ],
+            "shared_zones": [
+              "481"
+            ],
+            "shared_ata_6d": [
+              "76-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure puts the guard assembly check ahead of the microswitch check, which both cases confirmed as the right order.",
+          "resolution": "No change. Validated by the two cases."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-T-76-20-11-200-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D7620118982319",
+              "KAD86061-43"
+            ],
+            "shared_fins": [
+              "57EC"
+            ],
+            "shared_zones": [
+              "432"
+            ],
+            "shared_ata_6d": [
+              "76-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The inspection task reads the actuation point against the standard fitted and would have found the condition at the first scheduled check, which bounds the exposure.",
+          "resolution": "No change required."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Design validated. One bulletin wording amendment and a service query response raised.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

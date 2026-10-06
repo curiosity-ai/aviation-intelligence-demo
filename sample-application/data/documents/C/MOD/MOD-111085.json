@@ -1,0 +1,398 @@
+[
+  {
+    "doc_id": "MOD-111085",
+    "doc_type": "MOD",
+    "title": "Brake and Steering Control Unit Configuration Standard 1.5 with Revised Touchdown Protection",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-09-29",
+      "reason": "Original issue of the brake and steering control unit configuration standard 1.5 dossier.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00482",
+      "production_cut_in_date": "2022-02-22",
+      "retrofit_via": [
+        "CRN-32-1027"
+      ]
+    },
+    "dates": {
+      "created": "2020-07-13",
+      "released": "2021-09-29",
+      "revised": "2021-09-29",
+      "effective": "2021-10-20"
+    },
+    "abstract": "A configuration change to the brake and steering control unit that delays anti-skid authority until both main gear wheels have spun up, ending a run of brake pressure transients on contaminated runways.",
+    "sections": {
+      "reason": "Twenty-nine reports of a brief brake pressure transient at touchdown were received over two winters, concentrated on operators using contaminated runways. Recorded data showed the anti-skid loop taking authority before the second main wheel had spun up, so the control law read the still-slow wheel as a locked wheel and released pressure that the crew had not commanded. No runway excursion resulted and no tyre damage was found, but the transient is felt in the flight deck and had been reported by three operators as a handling concern.",
+      "description": "The brake and steering control unit adopts configuration standard 1.5, loadable part LA5CCE9DE6B, which delays anti-skid authority until both main gear wheels report spin-up or until 1.8 seconds after weight-on-wheels, whichever comes first. The change is a loadable configuration file and no hardware is altered on aircraft already at the current unit standard. On earlier aircraft the pressure regulator D3240120310957 is replaced because its response time is outside the tolerance the new law assumes, and the accumulator D3240121944667 is re-charged to the higher pre-load. Clamp D3240128079286 is added to the new sense line run. The unit itself carries functional item numbers 210WS9 and 248WS. Revised installation detail is on drawing D32401216639, and work is done in zones 721, 734 and 771.",
+      "effects": "No mass change on aircraft at the current hardware standard; 1.3 kg on aircraft that also need the regulator change. No electrical load change. The configuration file is interchangeable in both directions but reverting it is not permitted once the higher accumulator pre-load is set. Minimum equipment list dispatch with one anti-skid channel inoperative is unchanged. The anti-skid system test in the maintenance manual gains a spin-up simulation step and the trouble shooting content for brake pressure transients has to be re-issued.",
+      "embodiment_note": "Cut in on the production line at MSN C00482 in February 2022. Retrofit is through Service Bulletin CRN-32-1027, which is a line-level task on aircraft at the current hardware standard and an A-check task where the regulator has to be replaced."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240120310957",
+        "D3240121944667",
+        "D3240128079286"
+      ],
+      "fins": [
+        "210WS9",
+        "248WS"
+      ],
+      "drawings": [
+        "D32401216639"
+      ],
+      "software": [
+        "LA5CCE9DE6B"
+      ],
+      "zones": [
+        "721",
+        "734",
+        "771"
+      ],
+      "figures": [
+        "FIG-32-40-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00482"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-32-1027",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-000-004-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-400-004-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-700-002-A",
+        "doc_type": "AMM",
+        "relation": "DOCUMENTED_IN"
+      },
+      {
+        "doc_id": "IPC-C-32-40-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-32-40-12-810-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "anti-skid",
+      "touchdown protection",
+      "brake control unit",
+      "spin-up",
+      "contaminated runway"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111085,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.735",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 1.3,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "D3240128079286"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3240120310957",
+        "D3240121944667"
+      ],
+      "fins_affected": [
+        "210WS9",
+        "248WS"
+      ],
+      "software_affected": [
+        "LA5CCE9DE6B"
+      ],
+      "estimated_manhours": 64,
+      "estimated_cost_keur": 410,
+      "lead_time_weeks": 24,
+      "production_impact": "Cut-in at MSN C00482, configuration loaded at the flight line",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-111085",
+    "doc_type": "MOD",
+    "title": "Brake and Steering Control Unit Configuration Standard 1.5 with Revised Touchdown Protection",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-03",
+      "reason": "Clearance from the control unit bracket to the gear bay case drain run recorded on the installation drawing; no change to either installation.",
+      "raised_by_pawo": "PAWO-111117-01",
+      "raised_by_finding": "F04",
+      "finding_type": "ZONE_CONFLICT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00482",
+      "production_cut_in_date": "2022-02-22",
+      "retrofit_via": [
+        "CRN-32-1027"
+      ]
+    },
+    "dates": {
+      "created": "2020-07-13",
+      "released": "2021-09-29",
+      "revised": "2026-08-03",
+      "effective": "2026-08-07"
+    },
+    "abstract": "A configuration change to the brake and steering control unit that delays anti-skid authority until both main gear wheels have spun up, ending a run of brake pressure transients on contaminated runways.",
+    "sections": {
+      "reason": "Twenty-nine reports of a brief brake pressure transient at touchdown were received over two winters, concentrated on operators using contaminated runways. Recorded data showed the anti-skid loop taking authority before the second main wheel had spun up, so the control law read the still-slow wheel as a locked wheel and released pressure that the crew had not commanded. No runway excursion resulted and no tyre damage was found, but the transient is felt in the flight deck and had been reported by three operators as a handling concern.",
+      "description": "The brake and steering control unit adopts configuration standard 1.5, loadable part LA5CCE9DE6B, which delays anti-skid authority until both main gear wheels report spin-up or until 1.8 seconds after weight-on-wheels, whichever comes first. The change is a loadable configuration file and no hardware is altered on aircraft already at the current unit standard. On earlier aircraft the pressure regulator D3240120310957 is replaced because its response time is outside the tolerance the new law assumes, and the accumulator D3240121944667 is re-charged to the higher pre-load. Clamp D3240128079286 is added to the new sense line run. The unit itself carries functional item numbers 210WS9 and 248WS. Revised installation detail is on drawing D32401216639, and work is done in zones 721, 734 and 771.",
+      "effects": "No mass change on aircraft at the current hardware standard; 1.3 kg on aircraft that also need the regulator change. No electrical load change. The configuration file is interchangeable in both directions but reverting it is not permitted once the higher accumulator pre-load is set. Minimum equipment list dispatch with one anti-skid channel inoperative is unchanged. The anti-skid system test in the maintenance manual gains a spin-up simulation step and the trouble shooting content for brake pressure transients has to be re-issued. Nothing in this installation moves, but the volume it occupies in the gear bay is shared: with the case drain anti-cavitation relief valve fitted the clearance from the control unit bracket to the drain run falls to eight millimetres, which is inside the limit and above the minimum, and is now dimensioned on the installation drawing so that neither installation can be moved later without the other being looked at.",
+      "embodiment_note": "Cut in on the production line at MSN C00482 in February 2022. Retrofit is through Service Bulletin CRN-32-1027, which is a line-level task on aircraft at the current hardware standard and an A-check task where the regulator has to be replaced. Drawing D32401216639 now carries the eight millimetre clearance to the case drain run in the gear bay as a controlled dimension; any bracket change at either end of it is a change to both installations."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240120310957",
+        "D3240121944667",
+        "D3240128079286"
+      ],
+      "fins": [
+        "210WS9",
+        "248WS"
+      ],
+      "drawings": [
+        "D32401216639"
+      ],
+      "software": [
+        "LA5CCE9DE6B"
+      ],
+      "zones": [
+        "721",
+        "734",
+        "771"
+      ],
+      "figures": [
+        "FIG-32-40-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00482"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-32-1027",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-000-004-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-400-004-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-700-002-A",
+        "doc_type": "AMM",
+        "relation": "DOCUMENTED_IN"
+      },
+      {
+        "doc_id": "IPC-C-32-40-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-32-40-12-810-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "anti-skid",
+      "touchdown protection",
+      "gear bay clearance",
+      "brake control unit",
+      "spin-up"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111085,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.735",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 1.3,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "D3240128079286"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3240120310957",
+        "D3240121944667"
+      ],
+      "fins_affected": [
+        "210WS9",
+        "248WS"
+      ],
+      "software_affected": [
+        "LA5CCE9DE6B"
+      ],
+      "estimated_manhours": 64,
+      "estimated_cost_keur": 410,
+      "lead_time_weeks": 24,
+      "production_impact": "Cut-in at MSN C00482, configuration loaded at the flight line",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

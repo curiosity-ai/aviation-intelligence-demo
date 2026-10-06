@@ -1,0 +1,293 @@
+[
+  {
+    "doc_id": "PAWO-160560-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Main Deck Cargo Door Surround Frame Strengthening, Freighter",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-03-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-11",
+      "title": "Fuselage Section 13 — Forward — Frames"
+    },
+    "secondary_ata": [
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-10-20",
+      "released": "2021-03-24",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the local strengthening of the freighter main deck door surround frames. The work confirmed that the passenger fleet content read across only at the level of the doubler family and not at the level of the part.",
+    "sections": {
+      "objective": "Determine whether the freighter main deck door surround strengthening could reuse any of the passenger door surround content already released, and what the strengthening does to the frame lower web repair scheme and to the illustrated parts content shared across the forward frame family. The freighter build standard was new enough that the design office wanted the read-across question answered explicitly rather than assumed either way.",
+      "findings_summary": "Three items were confirmed and one deliberately dismissed. The illustrated parts figure for the forward frames already carries the doubler, the web and the cleat as a single family across both fuselage variants, so adding the freighter items to it is a content change rather than a new figure — the item numbering scheme it uses was the constraint, not the geometry. The frame lower web repair scheme shares the fastener standard with the new doublers and its permitted patch thickness was set below the new local web thickness, which makes the repair conservative rather than invalid but leaves a gap operators will notice. The recurring inspection of the passenger door surround shares the same fastener standard and needed a statement that it does not extend to the main deck opening. Read-across at part level was rejected outright.",
+      "next_steps": "Add the freighter doubler, web and cleat items to the forward frame figure under the existing family numbering. Ask the repair design owner to state the permitted patch thickness against the post-modification web rather than leave it implicit. Add an explicit non-applicability note to the passenger surround inspection so line stations do not apply it to the main deck opening. No further round required."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5321005304351",
+        "D5321118422296",
+        "AES645587-2A"
+      ],
+      "fins": [],
+      "drawings": [
+        "D53210052179"
+      ],
+      "software": [],
+      "zones": [
+        "123",
+        "125"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-160560",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "freighter",
+      "main deck cargo door",
+      "frame doubler",
+      "read-across"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-160560-01",
+      "subject_mod": "MOD-160560",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2021-03-24",
+      "outcome": "VALIDATED",
+      "raised_date": "2020-10-20",
+      "due_date": "2021-04-16",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 96
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42F"
+        ],
+        "ata_2d": [
+          "53",
+          "52"
+        ],
+        "ata_4d": [
+          "53-21",
+          "52-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "M00300",
+          "to": "M00520"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5321005304351",
+            "D5321118422296",
+            "AES645587-2A"
+          ],
+          "fins": [],
+          "drawings": [
+            "D53210052179"
+          ],
+          "zones": [
+            "123",
+            "125"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "frame doubler at a large fuselage cutout corner",
+          "fastener standard shared between a new doubler and an existing repair"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search the forward frame family for reusable doubler content",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the frame lower web repair against the strengthened web thickness",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm the passenger surround inspection does not read across",
+          "method": "MANUAL_REVIEW",
+          "owner": "ESZS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "IPC-M-53-21-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5321005304351",
+              "D5321118422296",
+              "AES645587-2A"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "123"
+            ],
+            "shared_ata_6d": [
+              "53-21-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The forward frame figure already carries the doubler, web and cleat family for both fuselage variants under one item numbering scheme. The freighter items belong in it, but the scheme has no spare positions in the range the family uses.",
+          "resolution": "Extend the family numbering rather than open a second figure, and agree the renumbering with technical publications in one pass."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SRM-M-53-21-11-002",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES645587-2A"
+            ],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "53-21-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The internal patch repair uses the same fastener standard as the new doublers and states a permitted patch thickness derived from the pre-modification web. Against the strengthened web the repair is conservative rather than unsafe, but the scheme does not say so and an MRO reading it will assume it does not apply.",
+          "resolution": "State the permitted patch thickness against the post-modification web explicitly and add a post-modification effectivity line."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-53-21-11-200-011-A",
+          "doc_type": "AMM",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES645587-2A"
+            ],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "53-21-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The recurring detailed inspection of the passenger door surround frames shares the fastener standard and the chapter, and its effectivity is written by aircraft type rather than by door. Nothing in it prevents a line station applying it to the main deck opening, where the substantiation does not hold.",
+          "resolution": "Add an explicit non-applicability note for the main deck cargo door opening."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-160142",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both are described as local reinforcement of a cargo door surround against fatigue at the lower corner, one in the vocabulary of corner fittings and the other in the vocabulary of frame doublers and cleats. They share no part number, no functional item number and no zone."
+          },
+          "rationale": "The passenger corner fitting standardisation reached the same fatigue problem from a different design direction. The load-path reasoning behind it is directly reusable for the freighter case even though nothing in the parts list is, and the design office had not been aware of it.",
+          "resolution": "Reuse the corner fitting substantiation method for the freighter case and record the read-across decision in the design justification."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MRD-53-1012",
+          "doc_type": "SB",
+          "reason": "Same chapter, same words — cargo door surround, replacement of fittings — but it is the passenger forward cargo door on the opposite side of the fuselage station range, applicable only to pre-freighter MSNs, and shares no part number, zone or fastener with the main deck opening."
+        }
+      ],
+      "conclusion": "Closed. Read-across at part level was rejected and read-across at substantiation level accepted. The three documentation items were carried into the release package without further round.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

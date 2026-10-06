@@ -1,0 +1,193 @@
+[
+  {
+    "doc_id": "MOD-147040",
+    "doc_type": "MOD",
+    "title": "Thermal Redesign of the Avionics Full Duplex Network Switch Line Card",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-06-29",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Integrated Modular Avionics — Network Switch"
+    },
+    "secondary_ata": [
+      "42-20-12",
+      "45-20-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00190"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00193",
+      "production_cut_in_date": "2022-01-20",
+      "retrofit_via": [
+        "TTN-42-1003",
+        "TTN-42-1007"
+      ]
+    },
+    "dates": {
+      "created": "2019-05-14",
+      "released": "2021-06-29",
+      "revised": null,
+      "effective": "2021-08-10"
+    },
+    "abstract": "Replaces the line card of the avionics network switch with a version whose power supply stage runs cooler at low ambient start-up, and adds a controlled warm-up so the card does not restart during the climb.",
+    "sections": {
+      "reason": "Operators reported bursts of maintenance messages in the early climb, always with the same switch identifier at the head of the burst and always after a cold night stop. Laboratory reproduction showed that the line card power supply stage draws a higher inrush at low junction temperature and that the resulting rail dip is enough to restart the card. The condition is transient and self-clearing, but each burst produces a maintenance assessment before the next dispatch, and three operators reported spending several hours a week proving that nothing was wrong. Two hundred and forty events were logged across the fleet in eighteen months.",
+      "description": "The line card D4220115959692 is replaced by a variant with a redesigned power supply stage using a soft-start controller and a wider input capacitance. The card carrier is unchanged, and the spacer set AES271290K2 is renewed because the new card is fractionally thicker at the heat spreader. A controlled warm-up is added: the card holds its ports inactive until the measured junction temperature reaches the qualified range, and reports the hold as a maintenance state rather than a fault. The configuration load LC9R67A042E declares the warm-up threshold and the revised port initialisation order. Wiring at FIN 2029CP1 is unchanged; the card status discrete is re-terminated at the rack. Work is in the forward avionics compartment in zone 163 and is detailed on drawings D42201115709 and D42201186509. Switch throughput, port allocation and the network configuration table are untouched.",
+      "effects": "Mass increase of 0.3 kg per aircraft, which is not significant. Electrical load is unchanged in the steady state and the inrush transient falls by approximately 40 per cent. The new card is one-way interchangeable: it works in a pre-modification carrier, but a pre-modification card must not be fitted to a switch carrying the new configuration load because the port initialisation order differs. Dispatch is unchanged. Maintenance messages produced during the warm-up hold are new and must be added to the troubleshooting content, together with the illustrated parts and the loadable software list.",
+      "embodiment_note": "Production cut-in at MSN T00193 in January 2022. Retrofit through the modification bulletin, a two hour card change on the line. A separate software bulletin delivers the configuration load and must be applied after the card change; the two are cross-referenced as a prerequisite pair."
+    },
+    "entities": {
+      "part_numbers": [
+        "AES271290K2",
+        "D4220115959692"
+      ],
+      "fins": [
+        "2029CP1"
+      ],
+      "drawings": [
+        "D42201115709",
+        "D42201186509"
+      ],
+      "software": [
+        "LC9R67A042E"
+      ],
+      "zones": [
+        "163"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00193"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-42-1003",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "TTN-42-1007",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-42-20-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-T-42-20-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "TSM-T-42-20-11-810-811",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "network switch",
+      "line card",
+      "cold start",
+      "soft start",
+      "maintenance message"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 147040,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.3,
+      "balance_impact": "Not significant",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4220115959692",
+        "AES271290K2"
+      ],
+      "fins_affected": [
+        "2029CP1"
+      ],
+      "software_affected": [
+        "LC9R67A042E"
+      ],
+      "estimated_manhours": 240,
+      "estimated_cost_keur": 980,
+      "lead_time_weeks": 52,
+      "production_impact": "Cut-in at MSN T00193, no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

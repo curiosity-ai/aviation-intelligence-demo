@@ -1,0 +1,377 @@
+[
+  {
+    "doc_id": "PAWO-147860-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Aft Pressure Bulkhead Radial Splice Reinforcement for the Extended Service Goal",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-28",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-31",
+      "ata_6d": "53-31-13",
+      "title": "Fuselage Section 15/16 — Aft — Pressure Bulkhead"
+    },
+    "secondary_ata": [
+      "53-31-12",
+      "51-70"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00107"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-28",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the aft pressure bulkhead radial splice reinforcement, centred on the aircraft that already carry an approved splice repair and on the airworthiness limitation the reinforcement is meant to remove.",
+    "sections": {
+      "objective": "Determine whether the radial splice reinforcement can be embodied on the earliest airframes, which of them already carry a splice repair that would conflict with it, and what has to happen to the airworthiness limitation that the reinforcement is intended to replace.",
+      "scope_note": "The search covers ATA 53-31 as the primary chapter and ATA 51-70 as secondary, because the published repair schemes for this area are written against the metallic repair practices chapter. ATA 25-50 cargo lining was included because the aft compartment has to be stripped for access. ATA 55 empennage was included late for a scheduling reason rather than a technical one. Systems chapters were not searched; the reinforcement carries no system interface.",
+      "method_note": "Entity linking was seeded from the six part numbers, the two drawings and the three zones of the candidate, and found the repairs, the inspection task and the parts figure immediately, all of them sharing hardware. The similarity pass added one finding that entity linking could not have produced: an external doubler repair on the belly fairing skin that shares no part number, no zone and no drawing with the candidate, but that describes the same load diffusion problem in the language of skin repair rather than of bulkhead reinforcement.",
+      "findings_summary": "Six items have been confirmed and one is blocking. The approved splice doubling repair is the hard problem. It puts a plate on the forward face of the splice over the outer fastener row, using the same tubular spacer standard, in exactly the area the reinforcement occupies, and it carries a repeat eddy current inspection of the reamed fastener positions that the reinforcement would make inaccessible. Three of the fifteen aircraft in the candidate range already carry it. The airworthiness limitation that the reinforcement is meant to remove is expressed in the bulkhead inspection task, and the certification route for cancelling it is not a maintenance manual change but an approved change to the limitations section, which is a longer path than the design office had assumed. The remaining findings are a parts figure that needs a post-reinforcement state, an access dependency on the cargo lining removal task, and a scheduling conflict with the fin box bonding work that uses the same hangar slot and the same tail cone access.",
+      "next_steps": "Establish the position on repaired aircraft: either exclude them from the effectivity or develop a variant of the reinforcement that lands clear of the repair. Start the airworthiness limitations change early, since its lead time now drives the programme. Coordinate the hangar slot with the empennage bonding campaign for operators that have both outstanding. Confirm the cargo lining removal scope needed for access."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5331130307744",
+        "D5331132123084",
+        "BR831677-93",
+        "VAD427622-70",
+        "EN347648-1B"
+      ],
+      "fins": [],
+      "drawings": [
+        "D53311304904",
+        "D53311323805"
+      ],
+      "software": [],
+      "zones": [
+        "146",
+        "383",
+        "385"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147860",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "pressure bulkhead",
+      "splice repair",
+      "airworthiness limitation",
+      "access dependency"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-147860-01",
+      "subject_mod": "MOD-147860",
+      "source_io": null,
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-28",
+      "due_date": "2026-08-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA",
+          "EYIS"
+        ],
+        "estimated_manhours": 200,
+        "spent_manhours": 124
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "53",
+          "51",
+          "25",
+          "55"
+        ],
+        "ata_4d": [
+          "53-31",
+          "51-70",
+          "25-50",
+          "55-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00107"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5331130307744",
+            "D5331132123084",
+            "BR831677-93",
+            "VAD427622-70",
+            "EN347648-1B"
+          ],
+          "fins": [],
+          "drawings": [
+            "D53311304904",
+            "D53311323805"
+          ],
+          "zones": [
+            "146",
+            "383",
+            "385"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "load diffusion away from an outer fastener row on a pressurised joint",
+          "extension of a design service goal on an ageing airframe"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Identify aircraft in the range carrying an approved splice repair",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish the certification route for cancelling the repeat inspection",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Search published repairs in the aft fuselage for coexistence problems",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Confirm access scope and hangar slot coordination",
+          "method": "MANUAL_REVIEW",
+          "owner": "ESZS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-T-53-31-13-003",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN347648-1B"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "146",
+              "383",
+              "385"
+            ],
+            "shared_ata_6d": [
+              "53-31-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The approved repair puts a doubling plate on the forward face of the splice over the outer fastener row, in the same area and to the same standoff standard as the reinforcement, and it carries a repeat eddy current inspection of the reamed positions that the reinforcement would cover. Three aircraft in the candidate range already carry it and none of them could be reinforced as the design stands.",
+          "resolution": "Either exclude repaired aircraft from the effectivity, or develop a reinforcement variant that lands clear of the repaired positions. The decision has to be taken before design freeze because it changes the reinforcement footprint."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-53-31-13-200-001-A",
+          "doc_type": "AMM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331130307744",
+              "D5331132123084",
+              "BR831677-93",
+              "VAD427622-70"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "146",
+              "383",
+              "385"
+            ],
+            "shared_ata_6d": [
+              "53-31-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The repeat inspection that the reinforcement is intended to remove is an airworthiness limitation, not an ordinary scheduled task. Cancelling it needs an approved change to the limitations section supported by the revised fatigue substantiation, which is a considerably longer path than the maintenance manual revision the design office had planned for.",
+          "resolution": "Start the limitations change in parallel with the design rather than after it, and make the inspection cancellation a separate deliverable of the programme with its own schedule."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-T-53-31-13-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331130307744",
+              "D5331132123084",
+              "BR831677-93",
+              "VAD427622-70",
+              "EN347648-1B"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "146",
+              "383",
+              "385"
+            ],
+            "shared_ata_6d": [
+              "53-31-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries one item that is no longer supplied and is shown for identification only. The reinforcement deletes that item outright and replaces the lower stringer at every splice position, so the figure needs a post-reinforcement state rather than another identification-only note.",
+          "resolution": "Issue a second figure for the reinforced standard and cross reference it, rather than adding alternates to a figure that is already carrying legacy items."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-T-53-31-12-006",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents solve a load path problem in the aft fuselage by adding material over a fastener row, one calling it an external doubler on the lower shell skin and the other a radial splice reinforcement on the bulkhead forward face. They share no part number, no zone and no drawing, and neither uses a single term the other uses. Only the descriptive text connects them."
+          },
+          "rationale": "An aircraft carrying the belly fairing skin doubler has an ultrasonic inspection of a routed edge that runs along the lower shell immediately forward of the bulkhead. The reinforcement changes the local stiffness at the bulkhead attachment and the interaction between the two has never been substantiated, and the doubler inspection access is through the same opened area.",
+          "resolution": "Ask the repair design owner to assess the combined configuration, and record the doubler as a pre-embodiment check item in the retrofit bulletin even though no identifier links the two documents."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-144610",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The fin box bonding work and the reinforcement both need the aircraft in a hangar with the empennage area opened, and several operators in the candidate range still have the bonding work outstanding. Doing them separately costs an extra eighteen day hangar slot per aircraft for no technical reason.",
+          "resolution": "Recommend the two are packaged in the same visit for operators that have both outstanding, and say so in the retrofit bulletin planning information."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "AMM-T-25-50-11-000-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "Access to the bulkhead forward face needs the aft compartment lining removed, and the lining removal task is written from the aft bulkhead forward with the panels stored by position. The reinforcement occupies the space the aft bulkhead panel returns to, so the task will need a note about the panel standoff after reinforcement.",
+          "resolution": "Add a post-reinforcement standoff note to the lining installation task, and confirm that the existing panel remains usable rather than needing a new part."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "SRM-T-53-50-11-002",
+          "doc_type": "SRM",
+          "reason": "Uses almost the same vocabulary as the candidate, crack arrest, stop drilling, reinforcement angle and load path restoration, and sits in the same ATA 2D chapter. It is an upper deck floor beam web repair at the other end of the aircraft, with no shared part number, no shared zone and no relationship to the pressurised bulkhead."
+        },
+        {
+          "doc_id": "MOD-141760",
+          "doc_type": "MOD",
+          "reason": "Surfaces on fatigue, fastener hole and high cycle aircraft language, and on the phrase reserve factor. It reinforces a flap track fairing attachment rib in the wing trailing edge and shares nothing with the bulkhead beyond the general subject of ageing structure."
+        }
+      ],
+      "conclusion": "Not yet issued. The repaired aircraft question is blocking and the airworthiness limitations route now drives the programme schedule rather than the design.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

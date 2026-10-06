@@ -1,0 +1,180 @@
+[
+  {
+    "doc_id": "SLN-27-1063",
+    "doc_type": "SB",
+    "title": "Flight Controls — Primary Computers — Configuration Data Set Standard 2.4 Load",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-10-29",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-90",
+      "ata_6d": "27-90-11",
+      "title": "Flight Control Computing — Flight Control Primary Computer"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-135520"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2019-05-20",
+      "released": "2019-10-29",
+      "revised": null,
+      "effective": "2019-11-18"
+    },
+    "abstract": "Data load of the standard 2.4 configuration set into both flight control primary computers, clearing the two production deviations that had been open since 2017 and correcting four fault attributions.",
+    "sections": {
+      "planning_reason": "Two production deviations had been open against the flight control primary computer configuration since 2017: a lateral and directional gain table revision needed after the aerodynamic database was updated from the extended flight test campaign, and an alignment of the fault reporting words with the maintenance system standard. In service the visible effect is that four maintenance messages are attributed to the wrong line replaceable unit, which sends line stations to the wrong item and generates unnecessary removals.",
+      "description": "The configuration data set is loaded as standard 2.4 into both primary computers. The gain tables that schedule roll and yaw authority against airspeed and configuration are replaced wholesale; the control law structure is untouched. Fault reporting words 41 through 68 are re-mapped so that the heat exchanger and non-return valve positions are reported against those items rather than against the actuator.",
+      "accomplishment_summary": "Put the aircraft on ground power and make sure that no maintenance action is in progress on the flight control system. CAUTION: BOTH PRIMARY COMPUTERS MUST CARRY THE SAME STANDARD. THE AIRCRAFT IS NOT DISPATCHABLE WITH A MIXED PAIR. Connect the portable data loader at the loading panel in the avionics bay, zone 162. Record the configuration standard currently loaded on each computer. Load the standard 2.4 data set into computer 1 and confirm the checksum. Load the same data set into computer 2 and confirm the checksum. Check the rigging tolerance of the primary computer solenoid kit D2790113238523 against the revised table in the accomplishment instructions and adjust if required. Do AMM-S-27-90-11-700-021-A as the flight control system test, including a full surface sweep in normal law. Confirm on the maintenance terminal in zone 216 that the fault reporting words for the heat exchanger position 435EV and the non-return valve position 52CE now report against those items. Record the embodiment in the software configuration index.",
+      "effectivity_note": "Applicable to twin-engine and four-engine aircraft delivered before the production cut-in at MSN S01508. Aircraft delivered from that MSN carry standard 2.4 from new. The standard has since been superseded and operators embodying this Service Bulletin now should check with their focal whether the successor standard is available.",
+      "material_note": "No hardware kit. The data set is supplied on the standard data load medium against a licence request; there is no lead time beyond the licence issue. The only tooling is a portable data loader at the current standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2790113238523"
+      ],
+      "fins": [
+        "435EV",
+        "52CE"
+      ],
+      "drawings": [
+        "D27901146283"
+      ],
+      "software": [
+        "LG8L72901CB"
+      ],
+      "zones": [
+        "162",
+        "216"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01508"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-135520",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-S-27-90-11-700-021-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-27-90-11-810-807",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "data load",
+      "configuration standard",
+      "gain table",
+      "fault attribution",
+      "software configuration index"
+    ],
+    "originator": {
+      "department": "EYAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-27-1063",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled A-check, or within 24 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SOFTWARE_DEFECT",
+      "embodied_mod": "MOD-135520",
+      "manpower": {
+        "elapsed_time_hours": 4,
+        "manhours": 6,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": null,
+        "parts_required": [],
+        "parts_returned": [],
+        "consumables": [],
+        "tooling": [
+          "Portable data loader",
+          "Maintenance terminal, current standard"
+        ]
+      },
+      "weight_change_kg": 0,
+      "accomplishment_steps": 9,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2019-10-29",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

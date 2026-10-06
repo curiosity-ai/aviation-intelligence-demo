@@ -1,0 +1,330 @@
+[
+  {
+    "doc_id": "PAWO-143680-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Withdrawal of the First Generation Entertainment Head End Server",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-04-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-12",
+      "title": "Inflight Entertainment — Head End Server"
+    },
+    "secondary_ata": [
+      "44-20-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00122"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-12-10",
+      "released": "2019-04-02",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the withdrawal of the first generation entertainment head end server, which rejected the change as originally scoped because the interim replacement left the cabin without a supported load path.",
+    "sections": {
+      "objective": "Determine whether the first generation head end server can be withdrawn from the fleet and replaced by the interim standard without leaving any aircraft without a supported software load path, and establish the documentation and troubleshooting impact of running two server generations in one cabin. The order was raised by the cabin systems office once the original supplier confirmed that log analysis support would end, and had to reach a position before the support contract lapsed.",
+      "findings_summary": "The withdrawal was rejected as scoped. The decisive item was the troubleshooting procedure for a partial entertainment loss late in the cruise, which resolves the fault by reading a log the withdrawn server writes and the interim standard does not; without that log the procedure has no starting point and the cabin crew report is the only evidence left. The installation task and the parts list both carry the two generations as alternates on the same rack, and the analysis showed that the alternate pairing is only valid while the older chassis remains available as a spare, which the withdrawal removes. None of this makes the withdrawal impossible, but the scope as written removed the old standard without providing anything that reproduces its diagnostic output.",
+      "next_steps": "The work order was closed with a rejection of the scope and a recommendation that the withdrawal be re-cut. The cabin systems office was asked to retain the first generation chassis as a spares standard, to specify a log equivalent in the interim server before any aircraft is converted, and to raise the withdrawal again once both are in place. The troubleshooting procedure was to be rewritten around the cabin crew report rather than the server log in either case."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420121334529",
+        "D4420125490996",
+        "D4420127529323",
+        "D4420129816843",
+        "EN258434K3"
+      ],
+      "fins": [
+        "7RK6"
+      ],
+      "drawings": [
+        "D44200016279"
+      ],
+      "software": [
+        "LC5R2884353",
+        "LC4RABC2783"
+      ],
+      "zones": [
+        "916",
+        "941"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-143680",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "head end server",
+      "withdrawal",
+      "server log",
+      "spares standard"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-143680-01",
+      "subject_mod": "MOD-143680",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2019-04-02",
+      "outcome": "REJECTED",
+      "raised_date": "2018-12-10",
+      "due_date": "2019-04-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 77
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "44"
+        ],
+        "ata_4d": [
+          "44-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00122"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4420121334529",
+            "D4420125490996",
+            "D4420127529323",
+            "EN258434K3"
+          ],
+          "fins": [
+            "7RK6"
+          ],
+          "drawings": [
+            "D44200016279"
+          ],
+          "zones": [
+            "916",
+            "941"
+          ],
+          "software": [
+            "LC5R2884353",
+            "LC4RABC2783"
+          ]
+        },
+        "similarity_seeds": [
+          "withdrawal of a cabin server generation and its diagnostic log",
+          "entertainment partial loss reported by the cabin crew"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search all data referencing the first generation server and its loads",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish what depends on the withdrawn server's diagnostic log",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the rack alternate pairing and the spares position",
+          "method": "SME_INTERVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TSM-T-44-20-12-810-803",
+          "doc_type": "TSM",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4420121334529",
+              "D4420125490996",
+              "EN258434K3"
+            ],
+            "shared_fins": [
+              "7RK6"
+            ],
+            "shared_zones": [
+              "916",
+              "941"
+            ],
+            "shared_ata_6d": [
+              "44-20-12"
+            ],
+            "shared_software": [
+              "LC4RABC2783"
+            ],
+            "shared_drawings": [
+              "D44200016279"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure for a partial entertainment loss late in the cruise resolves the fault by reading the seat group state history from the server log. The interim standard does not write that history, so on a converted aircraft the procedure has nothing to read and the mechanic is left with the cabin crew report alone.",
+          "resolution": "Specify a log equivalent in the interim server before any aircraft is converted, and rewrite the procedure around the cabin crew report in the meantime."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-44-20-12-400-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4420121334529",
+              "D4420125490996",
+              "D4420129816843",
+              "EN258434K3"
+            ],
+            "shared_fins": [
+              "7RK6"
+            ],
+            "shared_zones": [
+              "916",
+              "941"
+            ],
+            "shared_ata_6d": [
+              "44-20-12",
+              "44-20-11"
+            ],
+            "shared_software": [
+              "LC5R2884353",
+              "LC4RABC2783"
+            ],
+            "shared_drawings": [
+              "D44200016279"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The chassis installation task carries the two generations as alternates on the same rack with one load sequence. That pairing is only valid while the older chassis is available as a spare, which is exactly what the withdrawal removes, so the task would describe a configuration that can no longer be assembled.",
+          "resolution": "Retain the first generation chassis as a spares standard and keep the alternate, or split the task by generation if the spares position is dropped."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-T-44-20-12-FIG-02",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4420127529323",
+              "D4420129816843",
+              "EN258434K3"
+            ],
+            "shared_fins": [
+              "7RK6"
+            ],
+            "shared_zones": [
+              "916",
+              "941"
+            ],
+            "shared_ata_6d": [
+              "44-20-12",
+              "44-20-11"
+            ],
+            "shared_drawings": [
+              "D44200016279"
+            ],
+            "similarity_note": "Both describe the rack front assembly and name the chassis, the retention hardware and the front panel in the same terms."
+          },
+          "rationale": "The figure lists the two generations as an alternate pair. Withdrawing one of them without settling the spares position would leave an alternate entry pointing at an item with no source, which is the most common cause of a wrong order in this chapter.",
+          "resolution": "Decide the spares position first; the figure follows it in one line either way."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "AMM-T-44-20-13-400-003-A",
+          "doc_type": "AMM",
+          "reason": "Shares an anchor nut standard and the rack drawing with the subject and appears near the top of the entity pass. It installs the seat group power distribution unit at the seat, which takes its supply downstream of the head end and is indifferent to which server generation is fitted."
+        }
+      ],
+      "conclusion": "Issued 2019-04-02. The withdrawal was rejected as scoped: the interim standard reproduces neither the diagnostic log nor the spares position the fleet depends on. To be re-raised once both are provided.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

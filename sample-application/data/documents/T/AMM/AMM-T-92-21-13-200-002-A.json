@@ -1,0 +1,179 @@
+[
+  {
+    "doc_id": "AMM-T-92-21-13-200-002-A",
+    "doc_type": "AMM",
+    "title": "Forward Fuselage Door Warning Harness — Segregation and Continuity Check",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-04-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-13",
+      "title": "Forward Fuselage Wiring — Door Warning Wiring"
+    },
+    "secondary_ata": [
+      "52-70"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-141020"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-08-30",
+      "released": "2022-04-05",
+      "revised": null,
+      "effective": "2022-04-25"
+    },
+    "abstract": "Check that the two cargo door warning channels remain electrically and physically independent through the forward fuselage, with a continuity and insulation measurement on each channel and a clamp-by-clamp separation survey.",
+    "sections": {
+      "purpose": "This task gives the check of physical separation and electrical independence of the two cargo door warning channels between the door stations and the avionics bay. Do it after any wiring work in the forward cargo compartment or in the avionics bay.",
+      "job_setup_note": "Remove power from the door warning system and put the warning notice on the flight deck panel. The check needs both the forward cargo compartment lining panels and the avionics bay racks open at the same time, so plan it as one task and not as two. Have the insulation tester set to 500 volts and confirm its calibration date before you connect it.",
+      "procedure": "WARNING: MAKE SURE THAT POWER IS REMOVED FROM THE DOOR WARNING SYSTEM BEFORE YOU DISCONNECT ANY CONNECTOR. A LIVE CIRCUIT WILL GIVE A FALSE INSULATION READING AND MAY DAMAGE THE TESTER. Remove the forward cargo compartment lining panels along the harness run and open the avionics bay racks. Identify both channels at each clamp position listed in the illustration and record whether they share a clamp, a support or a shell. Disconnect the connector HOL285457-83 at the forward fuselage transition and separate the two shells. Measure the continuity of each conductor of channel one from the door station to the splice module D9221004365569 and record the resistance. Repeat for channel two on the cable assembly D9221113867714. CAUTION: DO NOT PULL ON THE HARNESS TO GAIN ACCESS TO A CLAMP. RELEASE THE CLAMP FIRST, BECAUSE A STRAINED CONDUCTOR WILL PASS THIS CHECK AND FAIL IN SERVICE. Measure the insulation resistance between the two channels at the connector and confirm that it is above the limit in the illustration. Check the circuit breaker allocation at FIN 4387VC against the panel legend. Measure the bonding resistance at each new support and record it. Reconnect the connector and torque the coupling ring by hand only.",
+      "close_out": "Install the avionics bay rack covers and the forward cargo compartment lining panels. Restore power to the door warning system and remove the warning notice. Do the cargo door operational test and confirm that both channels agree at every latching station. Record the continuity, insulation and bonding readings against the aircraft registration."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221113867714",
+        "D9221004365569",
+        "HOL285457-83",
+        "AGS573791-88"
+      ],
+      "fins": [
+        "4387VC",
+        "646VU",
+        "85VU4"
+      ],
+      "drawings": [
+        "D92211305618"
+      ],
+      "software": [],
+      "zones": [
+        "834",
+        "891",
+        "192"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146050",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-T-92-21-13",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door warning harness",
+      "segregation",
+      "insulation resistance",
+      "continuity",
+      "bonding"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "92-21-13-200-002-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "Aircraft post the duplicated latch position sensing standard. Not applicable to aircraft with a single sensor per latching station.",
+      "manhours": 11.0,
+      "personnel": 2,
+      "elapsed_time_hours": 7.0,
+      "access": {
+        "zones": [
+          "834",
+          "891",
+          "192"
+        ],
+        "access_panels": [
+          "834BL",
+          "891AL",
+          "192AR"
+        ],
+        "doors": [
+          "Fwd cargo door",
+          "Avionics bay access door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Remove power from the door warning system and put the warning notice on the flight deck panel.",
+          "Do not disconnect a connector with the system energised.",
+          "Confirm the calibration date of the insulation tester."
+        ],
+        "tooling": [
+          {
+            "reference": "98D92211-018",
+            "description": "Insulation resistance tester, 500 V"
+          },
+          {
+            "reference": "98D92211-023",
+            "description": "Bonding resistance meter, four-wire"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, non-residue",
+          "Identification sleeve set"
+        ],
+        "expendables": [
+          {
+            "part_number": "AGS573791-88",
+            "qty": 12
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-52-30-13-400-001-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

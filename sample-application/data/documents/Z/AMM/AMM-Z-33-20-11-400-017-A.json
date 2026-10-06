@@ -1,0 +1,196 @@
+[
+  {
+    "doc_id": "AMM-Z-33-20-11-400-017-A",
+    "doc_type": "AMM",
+    "title": "Installation of the Solid State Ceiling and Wall Wash Light Strips and Scene Configuration",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-05-07",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "33",
+      "ata_4d": "33-20",
+      "ata_6d": "33-20-11",
+      "title": "Passenger Compartment Lighting — Ceiling and Wall Wash Lights"
+    },
+    "secondary_ata": [
+      "44-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-156345"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-11-16",
+      "released": "2021-05-07",
+      "revised": null,
+      "effective": "2021-05-28"
+    },
+    "abstract": "Installation of the light-emitting diode ceiling and wall wash strips with their drivers, and entry of the operator scene definitions through the cabin intercommunication system database load.",
+    "sections": {
+      "purpose": "This task installs the solid state ceiling and wall wash light strips and their drivers in one cabin zone, and configures the colour scenes through the cabin intercommunication system so that the zone behaves consistently with the rest of the cabin.",
+      "job_setup_note": "A cabin zone must be converted in full. The dimming protocol of the light-emitting diode driver is not compatible with the fluorescent ballast, so a partly converted zone will show a visible step at the boundary. The scene configuration sheet is produced per operator from the cabin layout and must be available before the database load is started.",
+      "procedure": "1. Isolate the cabin lighting circuit and confirm it is dead at the panel of FIN 51RH. 2. Lower the ceiling panels in zones 265, 271 and 291. 3. Remove the fluorescent tubes and the ballasts from the stowage envelope D3320117509271. WARNING: FLUORESCENT TUBES CONTAIN MERCURY VAPOUR. DO NOT BREAK THEM AND DISPOSE OF THEM THROUGH THE APPROVED ROUTE. 4. Install the light-emitting diode strips in the envelope and secure with the shear head bolts LN983579-8C. 5. Install the drivers on the curtain rail sub-assembly D3320000585452 and connect the power and data lines. 6. Confirm the polarity of the data line at each driver. CAUTION: A REVERSED DATA LINE WILL NOT DAMAGE THE DRIVER BUT THE STRIP WILL DEFAULT TO FULL COOL WHITE AND WILL NOT FOLLOW A SCENE. 7. Restore the ceiling panels and check the diffuser alignment at the lining of FIN 9RH. 8. Load the cabin intercommunication database LG9N7BD4A16 through the director at FIN 3RK. 9. Enter the operator scene definitions from the configuration sheet, one zone at a time. 10. Restore power and run every defined scene, confirming that the colour temperature and level match across the zone boundary. 11. Do the emergency lighting proof test and confirm that the strips do not inhibit it.",
+      "close_out": "Confirm that the ceiling panels are secure and that no diffuser is displaced. Remove the tools and the packaging from the cabin. Record the database part number, the scene configuration sheet reference and the zones converted against the aircraft. Dispose of the removed tubes through the approved route and record the disposal."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3320117509271",
+        "D3320000585452",
+        "LN983579-8C",
+        "D2550114658909"
+      ],
+      "fins": [
+        "9RH",
+        "51RH",
+        "3RK",
+        "3596DQ"
+      ],
+      "drawings": [
+        "D33201360941"
+      ],
+      "software": [
+        "LG9N7BD4A16"
+      ],
+      "zones": [
+        "265",
+        "271",
+        "291",
+        "131"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-33-1102",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-156345",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "light emitting diode strip",
+      "driver installation",
+      "scene configuration",
+      "database load",
+      "emergency lighting proof"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "33-20-11-400-017-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "Aircraft post MOD-156345",
+      "manhours": 22.0,
+      "personnel": 3,
+      "elapsed_time_hours": 12.0,
+      "access": {
+        "zones": [
+          "265",
+          "271",
+          "291",
+          "131"
+        ],
+        "access_panels": [
+          "265CR",
+          "271AR",
+          "291BR",
+          "131BR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Isolate the cabin lighting circuit and confirm it is dead.",
+          "Do not break fluorescent tubes; they contain mercury vapour.",
+          "Support the ceiling panels while they are lowered.",
+          "Do not start the database load without the scene configuration sheet."
+        ],
+        "tooling": [
+          {
+            "reference": "98D33201-018",
+            "description": "Ceiling panel support set"
+          },
+          {
+            "reference": "98D33201-025",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D33201-033",
+            "description": "Colour meter, tristimulus"
+          }
+        ],
+        "consumables": [
+          "Cable ties, flame retardant",
+          "Contact cleaner",
+          "Adhesive tape, aluminium foil"
+        ],
+        "expendables": [
+          {
+            "part_number": "LN983579-8C",
+            "qty": 96
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-Z-25-50-11-400-016-A",
+        "AMM-Z-44-30-11-400-018-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

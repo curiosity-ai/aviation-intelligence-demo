@@ -1,0 +1,338 @@
+[
+  {
+    "doc_id": "PAWO-111833-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Form-Fit Successor for the Obsolete Avionics Network Switch",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-10-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Network Components — AFDX Switch"
+    },
+    "secondary_ata": [
+      "42-10",
+      "42-40"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-10-20",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the network switch obsolescence replacement, covering competing claims on the avionics rack bay, the loadable software paths that pass through the switch and the certification read-across for the systems behind it.",
+    "sections": {
+      "objective": "Establish which documentation and which other change proposals depend on the avionics network switch, so that the obsolescence replacement can be specified as a true form-fit successor and so that no system behind the network is left with an invalid loading procedure or an unsupported certification argument.",
+      "scope_note": "The search covers ATA 42 as the primary chapter and reaches into every chapter whose loadable software or recorded data passes through the network, which in practice means ATA 27, 30, 31, 32 and 46. Cabin systems were included in the first pass and then excluded: the cabin network is separate and does not use these switches. Structural chapters were not searched. No MSN restriction was applied because the switch is fitted to every aircraft of both types.",
+      "method_note": "Entity linking was seeded from the four part numbers, the two functional item numbers and the two zones carried by the candidate, which returns the rack and bay competition immediately but almost nothing else, because the switch has very few part-level relationships. The bulk of the result set came from semantic similarity over the loadable software and data loading vocabulary, run with the two seed phrases below. This is the clearest case in the programme where entity linking alone would have found one conflict out of six.",
+      "findings_summary": "Six items have been confirmed and one is blocking. Another candidate change claims the same avionics rack bay and re-uses the same mounting tray, so the two proposals are competing for one physical space and neither of them knows it; that conflict is a hard blocker because both are currently scheduled for the same production standard. Three further findings concern loadable software: the brake control configuration and the flap control test standard are both loaded through the network, and the successor switch changes the loading path from the maintenance port to a network route, which invalidates part of the accomplishment instruction in each case. The recorded parameter set for the flight data recorder is acquired across the same network, and the certification argument for the recorder installation cites the switch by its qualification standard, so a read-across is needed rather than a similarity statement. None of these were found by entity linking.",
+      "next_steps": "Convene a joint review with the maintenance information change team to allocate the avionics rack bay before either proposal is frozen. Ask the systems owners for the flap control and brake control loadable parts to confirm whether the network loading route is acceptable to them. Open a certification read-across item for the recorder installation and obtain the switch qualification standard from the successor supplier."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4220115537484",
+        "D4220003425395",
+        "D4210120617730",
+        "AES1492K6"
+      ],
+      "fins": [
+        "4624CP",
+        "549CP3"
+      ],
+      "drawings": [
+        "D42200067340"
+      ],
+      "software": [],
+      "zones": [
+        "162",
+        "164"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111833",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "network switch",
+      "obsolescence",
+      "rack bay",
+      "loadable software"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111833-01",
+      "subject_mod": "MOD-111833",
+      "source_io": null,
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2025-10-20",
+      "due_date": "2026-01-30",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ETGC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "EVAA"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 61
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "42",
+          "46",
+          "31",
+          "32",
+          "27",
+          "30"
+        ],
+        "ata_4d": [
+          "42-10",
+          "42-20",
+          "42-40",
+          "46-40",
+          "31-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D4220115537484",
+            "D4210120617730",
+            "AES1492K6"
+          ],
+          "fins": [
+            "4624CP",
+            "549CP3"
+          ],
+          "drawings": [
+            "D42200067340"
+          ],
+          "zones": [
+            "162",
+            "164"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "loadable software part loaded through the aircraft network rather than the maintenance port",
+          "avionics rack bay space and cooling claimed by a new equipment installation"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search candidate changes claiming avionics rack bay space",
+          "method": "ENTITY",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search loadable software procedures that pass through the network",
+          "method": "SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Certification read-across for systems acquiring data across the network",
+          "method": "SME_INTERVIEW",
+          "owner": "EVAA",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111841",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4210120617730"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "164"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "Both candidates re-use the same rack mounting tray in the same avionics bay and both claim the bay as untouched. The maintenance information proposal also adds an antenna feed into the same bay. Only one of the two can keep the bay unchanged and neither proposal is aware of the other.",
+          "resolution": "Allocate the bay in a joint review before either proposal is frozen, and record the outcome as a concurrency constraint on whichever change is second."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-111085",
+          "doc_type": "MOD",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The two documents share no identifier of any kind. The connection is entirely in the description: one says the brake configuration is loaded through the maintenance port, the other says the successor switch moves configuration loading onto the network."
+          },
+          "rationale": "The brake and steering control configuration is loaded through the maintenance port today, and the successor switch changes the network configuration table loading route in a way that also changes how the portable loader reaches the unit. The accomplishment instruction for the brake configuration would no longer be correct.",
+          "resolution": "Confirm the loading route with the brake system owner and, if it changes, raise a revision of the loading step in the affected bulletin at the same time as the switch cut-in."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-111196",
+          "doc_type": "MOD",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The recorder installation acquires nineteen of its added parameters across the network, and the certification argument for the recorder cites the network switch by its qualification standard. A different switch, even a form-fit one, needs a read-across rather than a similarity statement, and the recorder change is mandated by an operational rule so the argument cannot be left open.",
+          "resolution": "Open a certification read-across item and obtain the qualification standard of the successor switch from the supplier before the design review."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-C-30-30-11-900-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Connected only by the description of the software loading route; the two documents share no part number, no functional item number and no zone."
+          },
+          "rationale": "The probe heat software loading task instructs the technician to connect the portable data loader at the maintenance port and warns against interrupting the supply. If the network route replaces the maintenance port for configuration loading, the task prerequisite and the warning both need re-writing.",
+          "resolution": "Review every loadable software task that names the maintenance port and re-issue those affected at the switch cut-in."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "CRN-27-1040",
+          "doc_type": "SB",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "This bulletin exists only to load a software part at line level and its whole accomplishment is a data load through the maintenance port. If the switch cut-in changes that route the bulletin becomes unusable as written on post cut-in aircraft, which is precisely the population that will still need it.",
+          "resolution": "Establish whether the bulletin needs a revision or a post cut-in variant, and time that revision to the switch cut-in rather than to the bulletin's own revision cycle."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "TSM-C-46-40-12-812-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaces on the shared description of on-board data movement and interface errors, with no identifier in common."
+          },
+          "rationale": "The trouble shooting procedure for missing condition monitoring records reads write errors from the maintenance interface unit. The successor switch reports interface errors with a different code set, so the step that reads the fault log will return values the procedure does not describe.",
+          "resolution": "Obtain the successor code set from the supplier and re-issue the fault log step; no change to the isolation logic is expected."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111904",
+          "doc_type": "MOD",
+          "reason": "Surfaces strongly on the loadable software and built-in test vocabulary and is a candidate on the same production standard, but its loadable part is delivered on physical media through the flight control maintenance port and never touches the avionics network, so the switch change cannot affect it."
+        },
+        {
+          "doc_id": "IPC-C-24-50-12-FIG-01",
+          "doc_type": "IPC",
+          "reason": "Returned by the entity search because it lists a spacer part number of the same standard family used in the switch installation. The figure covers an electrical distribution box in a different rack in a different zone and has no relationship to the network installation."
+        }
+      ],
+      "conclusion": "Not yet issued. One blocking bay allocation conflict and three loadable software route findings are confirmed; the certification read-across is open.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "doc_id": "AMM-S-28-20-11-800-012-A",
+    "doc_type": "AMM",
+    "title": "Centre Tank Sump — Water Drain and Sample Assessment",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2024-08-05",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-01-30",
+      "released": "2019-10-21",
+      "revised": "2024-08-05",
+      "effective": "2024-08-22"
+    },
+    "abstract": "Routine draining of the centre tank sump with the settling wait, the sample volume and the assessment criteria that decide whether a second drain or an engineering action is required.",
+    "sections": {
+      "purpose": "This task removes free water from the centre tank sump and assesses the sample, so that water is not left where the boost pump inlet can take it up.",
+      "job_setup_note": "Do this task before the first flight of the day and after the aircraft has been stationary long enough for the water to settle. The settling time is not negotiable; a sample taken too early looks clean because the water has not reached the drain point yet. The aircraft must be within one degree of its normal ground attitude, because at a nose-up attitude the water sits forward of the drain valve on aircraft that have not had the sump re-profiled.",
+      "procedure": "1. Make sure that the aircraft has been stationary for at least the settling time given in the standard practice. 2. Check that the aircraft attitude is within one degree of normal. CAUTION: AT A NOSE-UP ATTITUDE THE WATER SITS FORWARD OF THE DRAIN VALVE AND THE SAMPLE WILL BE FALSELY CLEAN. 3. Earth the aircraft and lay out the spill containment below the drain valve in zone 183. 4. Put a clean glass sample jar under the drain valve. 5. Open the drain valve and take at least 500 millilitres. WARNING: FUEL UNDER TANK HEAD PRESSURE WILL FLOW FREELY. KEEP THE CONTAINER UNDER THE VALVE AT ALL TIMES. 6. Close the drain valve and check that it seals. 7. Let the sample stand for two minutes and look for a separated water layer at the bottom of the jar. 8. If water is present, record the volume and repeat the drain until two consecutive samples are clear. 9. If three consecutive samples still show water, stop and raise an engineering action; do not keep draining. 10. On aircraft with the water scavenge installed, note that the acceptance criterion is different and is given in the effectivity note. 11. Check the lower non-return valve position 34QA4 for leakage at the drain line. 12. Dispose of the sample to the local environmental procedure.",
+      "close_out": "Check the drain valve for leakage after the task and re-seat it if any drip is present. Record the number of drains, the water volume found and the aircraft attitude in the aircraft technical log. Report a repeated positive sample to the operator reliability department."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820111551992",
+        "D2820115755380"
+      ],
+      "fins": [
+        "34QA4"
+      ],
+      "drawings": [
+        "D28201202725"
+      ],
+      "software": [],
+      "zones": [
+        "183",
+        "591"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-28-20-11-000-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-139050",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "sump drain",
+      "water sample",
+      "settling time",
+      "ground attitude",
+      "drain valve"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "28-20-11-800-012-A",
+      "task_type": "SERVICING",
+      "effectivity_note": "All twin-engine aircraft; the acceptance criterion changes for aircraft that embody the centre tank water scavenge",
+      "manhours": 1.0,
+      "personnel": 1,
+      "elapsed_time_hours": 0.8,
+      "access": {
+        "zones": [
+          "183"
+        ],
+        "access_panels": [
+          "183AL",
+          "183CR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Earth the aircraft before the drain valve is opened.",
+          "Keep the container under the valve at all times.",
+          "Dispose of the sample to the local environmental procedure."
+        ],
+        "tooling": [
+          {
+            "reference": "98D28201-170",
+            "description": "Sample jar, glass, 1 litre"
+          },
+          {
+            "reference": "98D28201-162",
+            "description": "Fuel spill containment set"
+          }
+        ],
+        "consumables": [
+          "Absorbent pad, fuel",
+          "Water detecting capsule"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-28-20-11-000-011-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

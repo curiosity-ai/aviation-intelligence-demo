@@ -1,0 +1,182 @@
+[
+  {
+    "doc_id": "TTN-26-1018",
+    "doc_type": "SB",
+    "title": "Fire Protection — Borescope Inspection of the Cargo Smoke Sampling Lines",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-05-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00159"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-143950"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2018-11-27",
+      "released": "2019-05-16",
+      "revised": null,
+      "effective": "2019-06-10"
+    },
+    "abstract": "Borescope inspection of the existing cargo smoke sampling lines for standing water and internal deposits, to be completed before the dual loop standard is embodied so that the second loop is not routed into a contaminated system.",
+    "sections": {
+      "planning_reason": "Sampling lines that have run for years with condensation forming and drying at the low points accumulate a deposit that changes the flow split once a second loop is connected. Development work on twelve aircraft found deposits in the aft compartment run on nine of them, and on two the flow split after connecting the second loop was outside the tolerance the voting logic assumes. Cleaning the line first is a great deal cheaper than diagnosing a voting fault after embodiment.",
+      "description": "This Service Bulletin gives the borescope inspection of the sampling line runs in the forward, aft and bulk compartments, the acceptance criteria for internal deposit, and the flushing procedure where the criteria are not met. The upper detection sensor assembly D2610001304989 is removed at each compartment to give borescope access and is refitted unchanged. The clamp at FIN 2841WD is released and re-secured.",
+      "accomplishment_summary": "Empty the compartment and remove the lining panels local to the sampling line low points. Remove the upper detection sensor assembly D2610001304989 to open the line. Pass the borescope along the sampling run from the sensor position to the first branch and record the internal condition at each low point. Measure any standing water. Where deposit thickness exceeds the limit in the acceptance criteria, flush the run with the solvent given in the consumables list and repeat the borescope inspection. Dry the run with filtered air. Refit the sensor assembly D2610001304989 and re-secure the clamp at FIN 2841WD. Do the sampling flow check of AMM-T-26-10-12-200-001-A for the compartment and record the measured flow. Refit the lining panels. Report the borescope findings to Aeralis before the dual loop Service Bulletin is started.",
+      "effectivity_note": "Applicable to TITAN-88 aircraft up to and including MSN T00159, that is those built before the dual loop standard. This Service Bulletin must be completed and its findings closed before the dual loop modification Service Bulletin is started on the same compartment.",
+      "material_note": "No kit. The flushing solvent and the filtered air supply are operator-provided. The borescope is a standard workshop item; the extension probe needed to reach the aft compartment low point is available on loan from Aeralis."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610001304989"
+      ],
+      "fins": [
+        "2841WD"
+      ],
+      "drawings": [
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "115",
+        "131",
+        "151"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00159"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "TTN-26-1021",
+        "doc_type": "SB",
+        "relation": "PREREQUISITE_OF"
+      },
+      {
+        "doc_id": "AMM-T-26-10-12-200-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "sampling line",
+      "borescope",
+      "condensate deposit",
+      "flow split",
+      "cargo smoke"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-26-1018",
+      "sb_revision": "01",
+      "sb_type": "INSPECTION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Before the accomplishment of the dual sampling loop Service Bulletin on the same compartment.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-143950",
+      "manpower": {
+        "elapsed_time_hours": 24,
+        "manhours": 44,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": "2019-06-10",
+        "parts_required": [],
+        "parts_returned": [],
+        "consumables": [
+          "Solvent, sampling line flushing",
+          "Filtered dry air supply",
+          "Sealing caps, sampling line"
+        ],
+        "tooling": [
+          "Borescope, 4 mm, with 6 m extension probe",
+          "Sampling flow test set"
+        ]
+      },
+      "weight_change_kg": 0,
+      "accomplishment_steps": 11,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2019-05-16",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

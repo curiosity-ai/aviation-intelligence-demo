@@ -1,0 +1,246 @@
+[
+  {
+    "doc_id": "PAWO-149120-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Flexible Duct Section for the Air Starter Motor",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-29",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Starting — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "80-10-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-29",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the air starter motor duct change while the design is frozen, opened to decide how the fleet is managed until the modification is certified and available.",
+    "sections": {
+      "objective": "Establish how the flange cracking population is to be managed between design freeze and certification, and whether an interim inspection or an interim repair should be issued in the meantime.",
+      "findings_summary": "The interim management was delegated to the continued airworthiness organisation. The design is frozen and certification is expected to take at least a further year, during which the flange finding rate will continue to rise with fleet age. Three options were assessed: an interim repair scheme, a shortened inspection interval, and no action beyond the existing scheduled check. The analysis recommends the shortened interval rather than an interim repair, because a repaired flange would have to be removed again when the modification is embodied and the repair itself is not straightforward at that station. Two items were confirmed. The servicing task already carries the flange check and the inspection route through the mirror, so the shortened interval needs no new task. The dye penetrant step is present and correctly placed.",
+      "next_steps": "Delegate the interval decision to the continued airworthiness organisation with the recommendation to shorten rather than to repair. Publish an all-operator information notice describing the finding location and the mirror technique. Review again at certification."
+    },
+    "entities": {
+      "part_numbers": [
+        "D8010117036736",
+        "D8010117557935",
+        "PE187919-09"
+      ],
+      "fins": [
+        "5097ES",
+        "6408ES4"
+      ],
+      "drawings": [
+        "D80101152437"
+      ],
+      "software": [],
+      "zones": [
+        "463",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149120",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "starter motor",
+      "interim management",
+      "inspection interval",
+      "historical"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149120-01",
+      "subject_mod": "MOD-149120",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-08-06",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-06-29",
+      "due_date": "2026-08-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 130,
+        "spent_manhours": 118
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "80",
+          "36"
+        ],
+        "ata_4d": [
+          "80-10",
+          "36-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D8010117036736",
+            "D8010117557935"
+          ],
+          "fins": [
+            "5097ES",
+            "6408ES4"
+          ],
+          "drawings": [
+            "D80101152437"
+          ],
+          "zones": [
+            "463"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "flange cracking from relative movement at a duct joint",
+          "interim inspection while a modification is in certification"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Assess an interim repair scheme against a shortened interval",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm the servicing task supports the shortened interval",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-T-80-10-11-800-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D8010117036736",
+              "D8010117557935",
+              "PE187919-09"
+            ],
+            "shared_fins": [
+              "5097ES",
+              "6408ES4"
+            ],
+            "shared_zones": [
+              "463",
+              "433"
+            ],
+            "shared_ata_6d": [
+              "80-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The flange check is already in the servicing task with the mirror technique and the dye penetrant step, so a shortened interval requires no new task and no new training.",
+          "resolution": "Use the existing task at a shortened interval. No content change required."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-148830",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both add hardware to the same part of the fan compartment and both describe a clearance that has to be held against a neighbouring line, in entirely different vocabulary and with no shared identifier."
+          },
+          "rationale": "Both changes work in the same area of the engine and both add volume to it. The harness re-route was checked for interference with the bellows envelope and none was found.",
+          "resolution": "No action. Recorded for the certification package."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Interim management delegated with a recommendation to shorten the interval rather than repair.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,330 @@
+[
+  {
+    "doc_id": "PAWO-155471-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Retrofit Embodiment of Brake and Steering Control Unit Standard 2.6",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-28",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-04",
+      "released": "2026-07-28",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the request to make the production brake control standard available as a retrofit, taking account of the successor standard now in proposal and of the manual content that assumes the current anti-skid reference.",
+    "sections": {
+      "objective": "Decide whether the anti-skid reference speed standard now flying on production aircraft can be released as a retrofit to the delivered Evo fleet, and identify what the successor standard already in proposal does to that decision. The operators asking for it want the tyre wear benefit on aircraft delivered before the cut-in; the question for pre-analysis is whether releasing an intermediate standard creates a fleet with three brake control configurations that the fault-isolation and test content cannot describe.",
+      "findings_summary": "Four items were confirmed. The most significant is the successor standard in proposal, which changes the same control unit and reads the same wheel speed reference, and which would supersede the retrofit within roughly two years of it being offered. The analysis concluded that this is acceptable rather than blocking: the intermediate standard is a pure software load with no hardware change, so an aircraft that takes it now is not penalised when the successor arrives. The existing software load bulletin needs its effectivity widened to cover delivered aircraft. The functional test after a software load and the fault-isolation procedure written for the post-load symptom both carry the current reference speed in their acceptance bands, and both need a second column rather than a rewrite. No structural, hydraulic or wiring interaction was found.",
+      "next_steps": "Widen the software load bulletin effectivity to the delivered Evo population and state explicitly that the load is expected to be superseded. Ask the systems design office to confirm in writing that the successor standard will accept an aircraft at the intermediate standard without an intermediate step. Add pre and post reference speed acceptance bands to the functional test and to the fault-isolation procedure in the same publication batch. No conditions are attached to the retrofit itself."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240129735238",
+        "D3240121994833",
+        "D3240125686751"
+      ],
+      "fins": [
+        "998GM"
+      ],
+      "drawings": [
+        "D32401235626",
+        "D32401274246"
+      ],
+      "software": [
+        "LG3N06435DD"
+      ],
+      "zones": [
+        "754",
+        "744"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155471",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "brake control unit",
+      "anti-skid",
+      "software standard",
+      "retrofit"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-155471-01",
+      "subject_mod": "MOD-155471",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-28",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-05-04",
+      "due_date": "2026-07-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 76
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "32"
+        ],
+        "ata_4d": [
+          "32-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D3240129735238",
+            "D3240121994833"
+          ],
+          "fins": [
+            "998GM"
+          ],
+          "drawings": [
+            "D32401235626"
+          ],
+          "zones": [
+            "754",
+            "744"
+          ],
+          "software": [
+            "LG3N06435DD"
+          ]
+        },
+        "similarity_seeds": [
+          "anti-skid reference speed change and its effect on tyre wear",
+          "software standard load on a landing gear control unit",
+          "three concurrent control unit configurations in one fleet"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search candidate modifications acting on the same control unit",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the software load bulletin effectivity against the delivered fleet",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Sweep test and fault-isolation content for the current reference speed",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-159902",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240129735238"
+            ],
+            "shared_fins": [
+              "998GM"
+            ],
+            "shared_zones": [
+              "754"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The proposed successor standard changes the same control unit and adds a brake temperature feedback term to the same reference. It will supersede this standard shortly after the retrofit window opens, so the retrofit has to be offered in the knowledge that it is an intermediate step.",
+          "resolution": "State in the retrofit bulletin that the standard is expected to be superseded, and confirm that the successor accepts an aircraft at this standard directly."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "ZPH-32-1240",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240129735238",
+              "D3240121994833",
+              "D3240125686751"
+            ],
+            "shared_fins": [
+              "998GM"
+            ],
+            "shared_zones": [
+              "744",
+              "754"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The existing load bulletin covers production aircraft only. The delivered population the operators are asking about falls outside its effectivity statement, so the bulletin cannot be used as written.",
+          "resolution": "Revise the effectivity to the full delivered Evo population at the next bulletin batch."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-Z-32-40-12-810-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240129735238",
+              "D3240125686751"
+            ],
+            "shared_fins": [
+              "998GM"
+            ],
+            "shared_zones": [
+              "744",
+              "754"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The fault-isolation procedure written for the symptom that follows a software change quotes the acceptance band of the current reference speed. On a converted aircraft the observed value falls outside that band and the procedure sends the technician to a unit replacement that is not needed.",
+          "resolution": "Add a second acceptance band to the procedure, keyed to the software standard."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-Z-32-40-12-700-013-A",
+          "doc_type": "AMM",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240121994833",
+              "D3240125686751"
+            ],
+            "shared_fins": [
+              "998GM"
+            ],
+            "shared_zones": [
+              "744",
+              "754"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The functional test after a software load checks the loaded part number against a fixed list. The list does not contain the standard being retrofitted, so the closing check of the bulletin fails on a correctly converted aircraft.",
+          "resolution": "Extend the part number list in the functional test and publish it with the bulletin revision."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-150786",
+          "doc_type": "MOD",
+          "reason": "Sits in the same two-digit chapter and shares the landing gear vocabulary the semantic pass returned, but it changes the coating of the main gear sliding tube. It shares no part number, no functional item number and no zone with the control unit, and it is embodied at overhaul rather than by a software load."
+        }
+      ],
+      "conclusion": "Closed with a positive position and no conditions. The successor standard is understood and accepted; the three remaining items are publication actions that travel with the bulletin revision.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

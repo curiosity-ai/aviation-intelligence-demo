@@ -1,0 +1,289 @@
+[
+  {
+    "doc_id": "PAWO-154688-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Fan Cowl Door Hinge Bracket and Captive Seal Strip",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "71",
+      "ata_4d": "71-10",
+      "ata_6d": "71-10-11",
+      "title": "Cowling — Cowl Door Structure"
+    },
+    "secondary_ata": [
+      "71-10-12",
+      "54-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-22C4",
+        "ZPH-24C1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56B"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-24",
+      "released": "2026-06-16",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the fan cowl hinge and seal strip change, opened when the bushed land repair began to appear in the field, covering the repair limit, the shared bolt standard and the cowl history record.",
+    "sections": {
+      "objective": "Two years after the modification was released, operators began using the bushed land repair on cowls that had never been modified. The round was opened to establish whether the repair and the modification can coexist on one cowl, how many bushed lands a cowl may carry, and where that limit is recorded.",
+      "findings_summary": "Three items were confirmed. The repair task and the modification share the mount link and the bolt standard, so a repaired cowl is dimensionally at the modified standard at the repaired land and at the original standard everywhere else; the limit on the number of bushed lands is stated in the repair task and nowhere else, which means an operator embodying the modification will not see it. The retrofit bulletin records the elongation found at each land during embodiment, and that record is the only fleet-level source of the elongation rate; it should be fed back rather than filed. The third finding is an entity link that surprised the reviewers: the thrust reverser structure repair uses the same shear head bolt standard, which is why the two documents appear together in any parts-driven search even though the subjects have nothing to do with each other.",
+      "next_steps": "State the bushed land limit in the bulletin as well as in the repair task. Ask in-service engineering to collect the elongation records from embodied aircraft. No design change required."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7110112111633",
+        "IB779874-66",
+        "NY814392-02",
+        "AES484712-68"
+      ],
+      "fins": [
+        "71EN"
+      ],
+      "drawings": [
+        "D71101167094"
+      ],
+      "software": [],
+      "zones": [
+        "451",
+        "455",
+        "462"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-154688",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "bushed land repair",
+      "cowl history",
+      "bolt standard",
+      "elongation record"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-154688-01",
+      "subject_mod": "MOD-154688",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-16",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-02-24",
+      "due_date": "2026-06-12",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EDSA"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 103
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "71",
+          "54"
+        ],
+        "ata_4d": [
+          "71-10",
+          "54-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "Z00313",
+          "to": "Z08701"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D7110112111633",
+            "AES484712-68",
+            "IB779874-66"
+          ],
+          "fins": [
+            "71EN"
+          ],
+          "drawings": [
+            "D71101167094"
+          ],
+          "zones": [
+            "451",
+            "455"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "hinge land elongation on a frequently opened cowl door",
+          "bushed repair restoring a pin diameter to nominal"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish whether the repair and the modification can coexist on one cowl",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Find where the bushed land limit is recorded",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Screen parts-driven search hits outside the chapter",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-71-1013",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D7110112111633",
+              "IB779874-66"
+            ],
+            "shared_fins": [
+              "71EN"
+            ],
+            "shared_zones": [
+              "451",
+              "455"
+            ],
+            "shared_ata_6d": [
+              "71-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin records the elongation found at each land during embodiment, and that record is the only fleet-level source of the elongation rate. It is currently filed rather than fed back.",
+          "resolution": "State the bushed land limit in the bulletin and collect the elongation records."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-Z-71-10-11-300-034-A",
+          "doc_type": "AMM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D7110112111633",
+              "NY814392-02"
+            ],
+            "shared_fins": [
+              "71EN"
+            ],
+            "shared_zones": [
+              "462"
+            ],
+            "shared_ata_6d": [
+              "71-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "A repaired cowl is at the modified standard at the repaired land and at the original standard everywhere else. The limit on the number of bushed lands is stated in the repair task and nowhere else.",
+          "resolution": "Cross-refer the limit from the bulletin to the repair task."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-Z-54-10-13-914",
+          "doc_type": "SRM",
+          "finding_type": "PART_CONFLICT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES484712-68"
+            ],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The thrust reverser structure repair uses the same shear head bolt standard, which is why the two documents appear together in any parts-driven search even though the subjects are unrelated.",
+          "resolution": "No action beyond recording the link so that the search result is understood."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed with two documentation actions and no design change. The most useful outcome was finding that the elongation data collected at embodiment was being filed rather than used.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

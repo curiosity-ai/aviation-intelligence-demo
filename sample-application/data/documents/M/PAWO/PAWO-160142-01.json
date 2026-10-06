@@ -1,0 +1,306 @@
+[
+  {
+    "doc_id": "PAWO-160142-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Titanium Corner Fitting Standard at the Fwd Cargo Door Surround",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-04-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-13",
+      "title": "Fuselage Section 13 — Forward — Door Surround Structure"
+    },
+    "secondary_ata": [
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-07-03",
+      "released": "2018-04-19",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the titanium corner fitting standard at the forward cargo door surround. Four items were confirmed, one of them blocking on the in-service inspection bulletin whose threshold was written against the aluminium fitting.",
+    "sections": {
+      "objective": "Establish, ahead of design freeze, what the change from the aluminium corner fitting to the titanium alloy standard invalidates in the existing in-service package. The design office asked specifically whether the recurring inspection already mandated at the lower corner survives the change, whether the illustrated parts content can carry two fitting standards side by side, and whether the crack stop hole repair scheme written for the frame lower web remains usable once the fitting footprint moves inboard by eleven millimetres.",
+      "findings_summary": "Four items were confirmed. The blocking one is the recurring detailed inspection: its threshold and repeat interval were derived from the aluminium fitting crack growth curve, and a post-modification aircraft inspected on that interval would be inspected far more often than the substantiation requires, at real cost to the operator and with no safety benefit. The illustrated parts content and the removal task both carry a single fitting item and a single fastener release sequence, so both need a pre and post pair rather than a revision in place. The frame lower web repair scheme was the surprise: its stop hole positions are dimensioned from the fitting flange edge, and the new flange edge sits inboard, so two of the three permitted hole positions fall outside the permitted land.",
+      "next_steps": "Raise a revision request against the inspection bulletin so the post-modification threshold is issued at the same time as the modification, not afterwards. Ask the repair design owner to re-dimension the stop hole positions from a datum that does not move with the fitting. Agree the two-standard item numbering with technical publications before the parts content freeze, and confirm with in-service engineering that no aircraft is part way through the inspection campaign at cut-in."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5321003375416",
+        "AES495354-07",
+        "AES963502K7"
+      ],
+      "fins": [],
+      "drawings": [
+        "D53211308437"
+      ],
+      "software": [],
+      "zones": [
+        "113",
+        "115"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-160142",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "corner fitting",
+      "titanium",
+      "inspection threshold",
+      "cargo door surround"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-160142-01",
+      "subject_mod": "MOD-160142",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2018-04-19",
+      "outcome": "VALIDATED",
+      "raised_date": "2017-07-03",
+      "due_date": "2018-03-30",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA",
+          "EYIS"
+        ],
+        "estimated_manhours": 130,
+        "spent_manhours": 168
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "53",
+          "52"
+        ],
+        "ata_4d": [
+          "53-21",
+          "52-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00303"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5321003375416",
+            "AES495354-07",
+            "AES963502K7"
+          ],
+          "fins": [],
+          "drawings": [
+            "D53211308437"
+          ],
+          "zones": [
+            "113",
+            "115"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "corner fitting cracking at a cargo door lower sill",
+          "dissimilar metal corrosion at a titanium to aluminium interface"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Retrieve every released item on ATA 53-21-13 and the door surround interface",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the recurring inspection threshold against the new fitting substantiation",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the frame lower web repair scheme against the revised flange edge",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MRD-53-1008",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5321003375416"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "53-21-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The one-off and repeat detailed inspection in this bulletin is threshold-driven from the aluminium fitting crack growth curve. Post-modification aircraft carry a fitting with a different stiffness and a different residual stress state, so the interval is no longer representative and the bulletin says nothing about the new standard.",
+          "resolution": "Re-issue the bulletin with a post-modification effectivity statement and a revised repeat interval, timed to the modification release."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SRM-M-53-21-11-002",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "113"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The crack stop hole positions in the frame lower web repair are dimensioned from the corner fitting flange edge. The titanium fitting moves that edge inboard, so two of the three permitted positions fall outside the permitted land and the repair cannot be applied as written to a post-modification aircraft.",
+          "resolution": "Re-dimension the stop hole positions from the frame web centreline rather than the fitting flange, and re-substantiate the reduced edge margin."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-M-53-21-13-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5321003375416",
+              "AES495354-07",
+              "AES963502K7"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "53-21-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure carries one corner fitting item and one fastener set. Two standards will be in service simultaneously for the whole retrofit period, so the figure needs a pre and post item pair and a matching effectivity note.",
+          "resolution": "Raise an illustrated parts content change request and agree the item numbering with technical publications before parts content freeze."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-M-53-21-13-000-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES963502K7"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "53-21-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task was reached by following the impact edge from the earlier fitting standard rather than by text similarity. It carries a single fastener release sequence and a torque table that does not cover the titanium fastener set.",
+          "resolution": "Include the removal and installation tasks in the documentation change package and add the second torque table."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-160560",
+          "doc_type": "MOD",
+          "reason": "Reads as the same subject — cargo door surround structure, frame strengthening, ATA 53-21 — and scores high on similarity, but it is the freighter main deck door on a different fuselage station with no shared part number, no shared zone and no MSN overlap with the passenger fleet."
+        }
+      ],
+      "conclusion": "Closed. The inspection bulletin threshold was the pacing item and was re-issued in step with the modification; the repair scheme was re-dimensioned. The change went to release with the documentation package complete.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

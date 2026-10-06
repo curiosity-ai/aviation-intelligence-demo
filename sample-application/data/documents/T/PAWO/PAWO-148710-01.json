@@ -1,0 +1,262 @@
+[
+  {
+    "doc_id": "PAWO-148710-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Stiffened Hinge Beam and Aft Intercostals for the Fan Cowl Doors",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-01",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "54",
+      "ata_4d": "54-10",
+      "ata_6d": "54-10-12",
+      "title": "Nacelle Structure — Fan Cowl Doors"
+    },
+    "secondary_ata": [
+      "54-10-11"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-9070",
+        "AUR-9072"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-01",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the stiffened fan cowl door standard, opened to consider extending it to the CVX-7270 door and rejected when the door geometry was shown to be different enough to need its own design.",
+    "sections": {
+      "objective": "Establish whether the stiffened hinge beam standard developed for the Auran door can be extended to the CVX-7270 door, which has reported the same closing difficulty at a lower rate, and identify what would have to change if it could.",
+      "findings_summary": "The extension was rejected. The CVX-7270 door carries its hinge fittings at different stations and the aft intercostal positions of the Auran standard fall on a rib rather than in a bay, so the drilling template cannot be reused and the spar cap length is wrong. What began as an effectivity extension is in fact a new design, and the reported event rate on the CVX-7270 door does not currently justify one. Two further items were confirmed and remain valid. The published hinge beam repair scheme excludes a door already carrying the spar cap and that exclusion is correctly stated. The removal task records the aft hinge distortion measurement, which is the data that would justify a CVX-7270 design if the rate rises, and that step must be retained on all doors and not only on Auran doors.",
+      "next_steps": "Do not extend the standard to the CVX-7270 door. Retain the distortion measurement step on all doors so that the data continues to be collected. Review the position when the CVX-7270 measurement population reaches the size used for the Auran decision."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5410120303178",
+        "D5410123630218",
+        "D5410128007885"
+      ],
+      "fins": [
+        "6600PP"
+      ],
+      "drawings": [
+        "D54101222003",
+        "D54101234616"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "441"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-148710",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "fan cowl door",
+      "engine variant",
+      "distortion data",
+      "historical"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-148710-01",
+      "subject_mod": "MOD-148710",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-16",
+      "outcome": "REJECTED",
+      "raised_date": "2026-06-01",
+      "due_date": "2026-07-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EDSA",
+        "lead_site": "Ashcombe",
+        "contributing_departments": [
+          "EAAM"
+        ],
+        "estimated_manhours": 200,
+        "spent_manhours": 258
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "54",
+          "71"
+        ],
+        "ata_4d": [
+          "54-10",
+          "71-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5410128007885",
+            "D5410120303178"
+          ],
+          "fins": [
+            "6600PP"
+          ],
+          "drawings": [
+            "D54101222003"
+          ],
+          "zones": [
+            "443"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "door permanent set growing with opening cycles",
+          "latch that must be pulled into engagement by hand"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare the hinge station geometry between door variants",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess the CVX-7270 event and measurement population",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EAAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-T-54-10-12-002",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5410120303178",
+              "D5410123630218"
+            ],
+            "shared_fins": [
+              "6600PP"
+            ],
+            "shared_zones": [
+              "443",
+              "441"
+            ],
+            "shared_ata_6d": [
+              "54-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The repair scheme puts a splice plate exactly where the spar cap lands, and it correctly excludes a door already carrying the spar cap. It was reviewed because an extension would have brought a second door population into the same conflict.",
+          "resolution": "No change. The exclusion is correctly stated and remains valid."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-54-10-12-000-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5410120303178",
+              "D5410123630218"
+            ],
+            "shared_fins": [
+              "6600PP"
+            ],
+            "shared_zones": [
+              "443"
+            ],
+            "shared_ata_6d": [
+              "54-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task records the aft hinge distortion measurement. That measurement is the only fleet-wide data on the condition and it must continue to be taken on doors of both variants, not only on the ones being converted.",
+          "resolution": "Retain the step for all doors and make the applicability explicit in the effectivity note."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-149930",
+          "doc_type": "MOD",
+          "reason": "Same door, same ATA 6D and directly dependent on the stiffened standard, but it is a mass recovery proposal for the Auran door and says nothing about the CVX-7270 variant that this analysis was opened for."
+        }
+      ],
+      "conclusion": "Extension rejected. A CVX-7270 door change would be a new design and the event rate does not support one.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

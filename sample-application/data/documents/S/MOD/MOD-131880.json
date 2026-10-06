@@ -1,0 +1,175 @@
+[
+  {
+    "doc_id": "MOD-131880",
+    "doc_type": "MOD",
+    "title": "Windshield Heating Terminal Block and Interlayer Bus Bar Improvement",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-03-07",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "56",
+      "ata_4d": "56-10",
+      "ata_6d": "56-10-11",
+      "title": "Flight Compartment Windows — Windshield Assembly"
+    },
+    "secondary_ata": [
+      "30-40"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01547",
+      "production_cut_in_date": "2021-02-09",
+      "retrofit_via": [
+        "SLN-56-1006"
+      ]
+    },
+    "dates": {
+      "created": "2018-05-30",
+      "released": "2019-11-12",
+      "revised": "2023-03-07",
+      "effective": "2023-04-01"
+    },
+    "abstract": "Rework of the electrical terminal block and the interlayer bus bar of the flight compartment windshield to remove the local hot spot that has been delaminating the outer edge of the heated pane.",
+    "sections": {
+      "reason": "Windshield removals for delamination at the lower forward corner reached 0.31 per aircraft per year across the fleet, against a design expectation of 0.08. Laboratory examination of forty-one removed panes traced the delamination to a hot spot where the interlayer bus bar necks down to meet the terminal block: the current density at that transition is roughly twice the value elsewhere in the bus bar, and repeated thermal cycling separates the interlayer from the glass. The windshield is a long-lead item and the removals were driving a persistent spares shortage as well as the direct cost.",
+      "description": "The terminal block is moved 22 mm inboard and the bus bar is widened over the last 60 mm of its run so that the current density at the transition falls by about 45 per cent. The upper windshield stiffener DEL380600-05 is re-worked to clear the new terminal position, and the aft windshield spar cap sub-assembly TR874797-15 is re-drilled for the revised block attachment. Tension head bolts AES273284K7 retain the block, with a silicone edging grommet LN657141K4 where the harness passes through the frame. The harness is re-secured with cable ties AGS173307-59 on the new route. The pane itself is unchanged optically and no change is made to the heating control law. Work is done from inside the flight compartment in zones 211 and 215 with the glareshield and the side console panels removed. Revised detail is on drawing D56101163242.",
+      "effects": "Mass increase of 0.4 kg per aircraft. Steady-state electrical load is unchanged at 3 100 VA per pane; only the current distribution within the pane changes. The re-worked windshield is fully interchangeable with the previous standard at aircraft level provided the terminal block and the harness tail are changed as a set. Expected removal rate after embodiment is 0.09 per aircraft per year. The windshield removal and installation tasks and the associated wiring sheet require update, and the probe heat computer built-in test thresholds do not change.",
+      "embodiment_note": "Cut in on the production line at MSN S01547 in February 2021 across all variants. Retrofit is through Service Bulletin SLN-56-1006 and is normally done opportunistically at the next windshield change rather than as a dedicated event; the SB allows either."
+    },
+    "entities": {
+      "part_numbers": [
+        "DEL380600-05",
+        "TR874797-15",
+        "AES273284K7",
+        "LN657141K4",
+        "AGS173307-59"
+      ],
+      "fins": [],
+      "drawings": [
+        "D56101163242"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "215"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01547"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-56-1006",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "windshield delamination",
+      "bus bar",
+      "terminal block",
+      "current density",
+      "heated pane"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Electrical Design"
+    },
+    "type_data": {
+      "mod_number": 131880,
+      "mod_class": "MINOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "RELIABILITY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.773",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.4,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "AES273284K7",
+        "LN657141K4",
+        "AGS173307-59"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "DEL380600-05",
+        "TR874797-15"
+      ],
+      "fins_affected": [],
+      "software_affected": [],
+      "estimated_manhours": 38,
+      "estimated_cost_keur": 320,
+      "lead_time_weeks": 34,
+      "production_impact": "Cut-in at MSN S01547; supplier tooling change absorbed before cut-in",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

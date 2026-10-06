@@ -1,0 +1,498 @@
+[
+  {
+    "doc_id": "TSM-T-52-30-13-812-802",
+    "doc_type": "TSM",
+    "title": "CARGO DOOR NOT LOCKED Indication With the Door Correctly Latched",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2009-07-12",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2009-02-13",
+      "released": "2009-07-12",
+      "revised": "2009-07-12",
+      "effective": "2009-08-09"
+    },
+    "abstract": "Fault isolation for a cargo door not locked indication where the door is found correctly latched, separating a sensor that has drifted out of adjustment from a genuine unlatched condition.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a cargo door not locked indication with the door found correctly latched by physical inspection. Use it at the stand before any decision to return to stand or to delay departure.",
+      "fault_description": "The indication is raised when a latching station does not report locked. The station carries one sensor, so the indication cannot distinguish a sensor that has drifted out of adjustment from a genuine unlatched condition, and the sensor drifts as the latching intercostal roller face wears. The quickest way to separate the two at the stand is to substitute the sensor from an adjacent station and see whether the indication follows it.",
+      "isolation_procedure": "Confirm by physical inspection that the door is correctly latched at every station and that no obstruction is present. Read the maintenance store and record the fault code and the station identity. Measure the sensor gap at the reported station with the door latched and compare it against the tolerance; where the gap is out of tolerance, re-shim and repeat the door cycle. Where the gap is correct, substitute the sensor at the reported station with the sensor from an adjacent station and repeat the door cycle; where the indication follows the sensor, replace it. Where the indication stays at the station, do the continuity and insulation check of the door warning harness at that station. Where the harness is sound, inspect the latching intercostal roller face for wear and measure the wear track depth before any further work.",
+      "dispatch_note": "Despatch is not permitted with a cargo door not locked indication that has not been resolved. The indication is the only means by which the flight crew can establish that the door is secure."
+    },
+    "entities": {
+      "part_numbers": [
+        "CAL808635-46",
+        "D5230135992491",
+        "DED143603-69",
+        "LN143422-1C"
+      ],
+      "fins": [
+        "3323WT",
+        "2056WV",
+        "4387VC"
+      ],
+      "drawings": [
+        "D52301366003",
+        "D92211305618"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "143",
+        "834"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-52-30-13-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-141020",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cargo door",
+      "not locked",
+      "sensor gap",
+      "sensor substitution",
+      "intercostal wear"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "52-30-13-812-802",
+      "fault_symptom": "CARGO DOOR NOT LOCKED indication with the door found correctly latched",
+      "fault_codes": [
+        "523013002",
+        "523013019"
+      ],
+      "warning_messages": [
+        "DOOR CARGO FWD NOT LOCKED",
+        "DOOR CARGO AFT NOT LOCKED"
+      ],
+      "affected_fins": [
+        "3323WT",
+        "2056WV",
+        "4387VC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Sensor gap out of tolerance following intercostal roller face wear",
+          "probability_pct": 58,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "Door warning harness open or chafed between the station and the avionics bay",
+          "probability_pct": 24,
+          "fin": "4387VC"
+        },
+        {
+          "cause": "Latch shaft target displaced on the latching mechanism",
+          "probability_pct": 18,
+          "fin": "2056WV"
+        }
+      ],
+      "isolation_steps": 6,
+      "confirmation_task": "AMM-T-52-30-13-400-001-A",
+      "dispatch": {
+        "mel_item": "52-30-04A",
+        "dispatchable": false,
+        "dispatch_condition": "No dispatch with an unresolved cargo door not locked indication"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-T-52-30-13-812-802",
+    "doc_type": "TSM",
+    "title": "CARGO DOOR NOT LOCKED Indication With the Door Correctly Latched",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2016-09-26",
+      "reason": "Procedure split by embodiment condition and an inhibition step added so that the second channel is disabled before any sensor substitution is attempted.",
+      "raised_by_pawo": "PAWO-141020-01",
+      "raised_by_finding": "F02",
+      "finding_type": "EFFECTIVITY_INVALIDATION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2009-02-13",
+      "released": "2009-07-12",
+      "revised": "2016-09-26",
+      "effective": "2016-10-24"
+    },
+    "abstract": "Fault isolation for a cargo door not locked indication where the door is found correctly latched, keyed to whether the aircraft carries one sensor per latching station or two.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a cargo door not locked indication with the door found correctly latched by physical inspection. Use it at the stand before any decision to return to stand or to delay departure.",
+      "fault_description": "The indication is raised when a latching station does not report locked. On aircraft with one sensor per station the indication cannot distinguish a sensor that has drifted out of adjustment from a genuine unlatched condition, and the sensor drifts as the latching intercostal roller face wears. On aircraft with two sensors per station the two channels must agree, and a single channel disagreement is recorded as a maintenance message rather than raised to the flight deck; on those aircraft a flight deck indication is therefore a far stronger signal. Establish which standard the aircraft carries before you start, because the isolation path is different.",
+      "isolation_procedure": "Confirm by physical inspection that the door is correctly latched at every station and that no obstruction is present. Read the maintenance store and record the fault code and the station identity. Establish from the aircraft configuration list whether the station carries one sensor or two, and follow the branch for that standard. On a single sensor station, measure the sensor gap at the reported station with the door latched and compare it against the tolerance; where the gap is out of tolerance, re-shim and repeat the door cycle, and where the gap is correct, substitute the sensor from an adjacent station and repeat the cycle. On a two sensor station, read which channel disagreed and measure the gap on that channel only. Do not substitute a sensor on a duplicated station while the voting logic is active: the remaining channel will hold the station reporting locked and the substitution proves nothing. Inhibit the healthy channel at the door warning terminal first, then repeat the door cycle on the channel under test. Where the gap is correct on both channels, do the continuity and insulation check of the door warning harness at the reported station. Where the harness is sound and the fault is on one channel only, replace the sensor on that channel. Where both channels report not locked with the door physically latched, inspect the latching intercostal roller face for wear and measure the wear track depth before any further work. Release every inhibit before the aircraft is returned to service.",
+      "dispatch_note": "Despatch is not permitted with a cargo door not locked indication that has not been resolved. On an aircraft with two sensors per station, despatch is permitted with one channel inoperative at one station for three days, provided the other channel reports locked and the station has been physically checked."
+    },
+    "entities": {
+      "part_numbers": [
+        "CAL808635-46",
+        "D5230135992491",
+        "DED143603-69",
+        "LN143422-1C"
+      ],
+      "fins": [
+        "3323WT",
+        "2056WV",
+        "4387VC"
+      ],
+      "drawings": [
+        "D52301366003",
+        "D92211305618"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "143",
+        "834"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-52-30-13-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-141020",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cargo door",
+      "not locked",
+      "sensor gap",
+      "channel disagreement",
+      "intercostal wear"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "52-30-13-812-802",
+      "fault_symptom": "CARGO DOOR NOT LOCKED indication with the door found correctly latched",
+      "fault_codes": [
+        "523013002",
+        "523013019"
+      ],
+      "warning_messages": [
+        "DOOR CARGO FWD NOT LOCKED",
+        "DOOR CARGO AFT NOT LOCKED"
+      ],
+      "affected_fins": [
+        "3323WT",
+        "2056WV",
+        "4387VC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Sensor gap out of tolerance following intercostal roller face wear",
+          "probability_pct": 47,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "Sensor failed on one channel of a duplicated station",
+          "probability_pct": 23,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "Door warning harness open or chafed between the station and the avionics bay",
+          "probability_pct": 18,
+          "fin": "4387VC"
+        },
+        {
+          "cause": "Latch shaft target displaced on the latching mechanism",
+          "probability_pct": 12,
+          "fin": "2056WV"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-T-52-30-13-400-001-A",
+      "dispatch": {
+        "mel_item": "52-30-04A",
+        "dispatchable": true,
+        "dispatch_condition": "Duplicated stations only: one channel inoperative at one station for three days, other channel reporting locked and station physically checked"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-T-52-30-13-812-802",
+    "doc_type": "TSM",
+    "title": "CARGO DOOR NOT LOCKED Indication With the Door Correctly Latched",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2026-08-03",
+      "reason": "Aft channel numbering table added and the isolation steps keyed on door position instead of on channel name.",
+      "raised_by_pawo": "PAWO-146050-01",
+      "raised_by_finding": "F03",
+      "finding_type": "EFFECTIVITY_INVALIDATION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2009-02-13",
+      "released": "2009-07-12",
+      "revised": "2026-08-03",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Fault isolation for a cargo door not locked indication where the door is found correctly latched, keyed to the door position and to whether the station carries one sensing channel or two.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a cargo door not locked indication with the door found correctly latched by physical inspection. Use it at the stand before any decision to return to stand or to delay departure.",
+      "fault_description": "The indication is raised when a latching station does not report locked. On aircraft with one sensor per station the indication cannot distinguish a sensor that has drifted out of adjustment from a genuine unlatched condition, and the sensor drifts as the latching intercostal roller face wears. On aircraft with two sensors per station the two channels must agree, and a single channel disagreement is recorded as a maintenance message rather than raised to the flight deck; on those aircraft a flight deck indication is therefore a far stronger signal. Since the aft positions were segregated, the same channel names exist twice on the aircraft on different routes, so a channel name taken from a message means nothing until the door position is known. Establish the door position first, then the standard the station carries, and read the channel identity from the numbering table for that position.",
+      "isolation_procedure": "Confirm by physical inspection that the door is correctly latched at every station and that no obstruction is present. Read the maintenance store and record the fault code and the door position; do not record the channel name on its own, because the forward and aft positions use the same names on separate routes. Resolve the channel identity from the numbering table for the door position reported. Establish from the aircraft configuration list whether the station carries one sensor or two, and follow the branch for that standard. On a single sensor station, measure the sensor gap at the reported station with the door latched and compare it against the tolerance; where the gap is out of tolerance, re-shim and repeat the door cycle, and where the gap is correct, substitute the sensor from an adjacent station and repeat the cycle. On a two sensor station, measure the gap on the channel identified from the table only. Do not substitute a sensor on a duplicated station while the voting logic is active: the remaining channel will hold the station reporting locked and the substitution proves nothing. Inhibit the healthy channel at the door warning terminal for that door position, then repeat the door cycle on the channel under test. Where the gap is correct on both channels, do the continuity and insulation check of the door warning harness at the reported station, using the route for that door position. Where the harness is sound and the fault is on one channel only, replace the sensor on that channel. Where both channels report not locked with the door physically latched, inspect the latching intercostal roller face for wear and measure the wear track depth before any further work. Release every inhibit before the aircraft is returned to service.",
+      "dispatch_note": "Despatch is not permitted with a cargo door not locked indication that has not been resolved. On an aircraft with two sensors per station, despatch is permitted with one channel inoperative at one station for three days, provided the other channel reports locked and the station has been physically checked."
+    },
+    "entities": {
+      "part_numbers": [
+        "CAL808635-46",
+        "D5230135992491",
+        "DED143603-69",
+        "LN143422-1C"
+      ],
+      "fins": [
+        "3323WT",
+        "2056WV",
+        "4387VC"
+      ],
+      "drawings": [
+        "D52301366003",
+        "D92211305618"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "143",
+        "834"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-52-30-13-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-141020",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cargo door",
+      "not locked",
+      "door position",
+      "channel numbering",
+      "intercostal wear"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "52-30-13-812-802",
+      "fault_symptom": "CARGO DOOR NOT LOCKED indication with the door found correctly latched",
+      "fault_codes": [
+        "523013002",
+        "523013019"
+      ],
+      "warning_messages": [
+        "DOOR CARGO FWD NOT LOCKED",
+        "DOOR CARGO AFT NOT LOCKED"
+      ],
+      "affected_fins": [
+        "3323WT",
+        "2056WV",
+        "4387VC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Sensor gap out of tolerance following intercostal roller face wear",
+          "probability_pct": 47,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "Sensor failed on one channel of a duplicated station",
+          "probability_pct": 23,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "Door warning harness open or chafed between the station and the avionics bay",
+          "probability_pct": 18,
+          "fin": "4387VC"
+        },
+        {
+          "cause": "Latch shaft target displaced on the latching mechanism",
+          "probability_pct": 12,
+          "fin": "2056WV"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-T-52-30-13-400-001-A",
+      "dispatch": {
+        "mel_item": "52-30-04A",
+        "dispatchable": true,
+        "dispatch_condition": "Duplicated stations only: one channel inoperative at one station for three days, other channel reporting locked and station physically checked"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

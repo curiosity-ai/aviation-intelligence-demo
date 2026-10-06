@@ -1,0 +1,381 @@
+[
+  {
+    "doc_id": "PAWO-159570-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Roller and Track Pairing Change on the Inboard Flap Carriage",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-13",
+      "title": "Flaps — Flap Track and Carriage"
+    },
+    "secondary_ata": [
+      "57-30",
+      "92-51"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z01080",
+          "to": "Z09673"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-17",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the crowned roller and nitrided track pairing for the inboard flap carriage, covering the reinforced rib standard it depends on, the mandatory inspection bulletin it would make redundant and the clearance to the flap position sensing bracket.",
+    "sections": {
+      "objective": "Determine which released items applicable to ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 aircraft in the MSN Z01080 to Z09673 range constrain the proposed roller and track pairing change, and in particular whether the repeat wear check can be deleted rather than merely relaxed once the change is embodied.",
+      "scope_note": "The search covers ATA 27-50 as the primary chapter and ATA 57-30 as secondary, because the carriage load is introduced into the flap support rib at the rear spar. ATA 92-51 was added after the first pass because the trailing edge harness runs inside the carriage roller envelope at full extension. ATA 27-80 slats was searched and excluded: the slat carriage uses a different track profile and is not affected.",
+      "method_note": "Entity linking was seeded from the five part numbers, the single FIN and the four zones on the candidate. Semantic similarity was run over titles and reason text with two phrases about wear at a moving structural interface. The prerequisite finding was produced by both methods, which is unusual and reflects the fact that the reinforced rib and the nitrided track were raised from the same in-service data set and use very similar wording.",
+      "findings_summary": "Six items were confirmed and one blocks. The nitrided track cannot be run on an attachment that has not been reinforced: the nitriding process is applied to the track in situ and the additional clamp-up of the five-bolt attachment is what keeps the track from moving during the process. Aircraft that have not had the reinforced rib therefore cannot take the new track, which makes the rib a hard prerequisite rather than a recommendation and cuts the addressable population by about a third. The mandatory eddy current inspection bulletin is the second significant item. It is written to repeat until the reinforced rib is embodied, and it says nothing about the track, so an operator who embodies the roller change without the rib would believe the inspection had lapsed when it has not. Three manual documents need re-issue, and the trailing edge wiring sheet already states a forty millimetre clearance to the roller envelope that the crowned roller reduces.",
+      "next_steps": "Confirm with the track supplier whether nitriding can be qualified on the original three-bolt attachment, because that single answer decides the addressable population. Raise a change request against the inspection bulletin to state the track condition explicitly. Measure the harness clearance on a sample aircraft with the crowned roller fitted before the design review."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750134424647",
+        "D2750134493366",
+        "GR458189-31",
+        "AGS968429-4D",
+        "LN714541-64"
+      ],
+      "fins": [
+        "3416KS4"
+      ],
+      "drawings": [
+        "D27500077491",
+        "D27501286380"
+      ],
+      "software": [],
+      "zones": [
+        "525",
+        "562",
+        "565",
+        "662"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-159570",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-Z-259031",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "flap carriage",
+      "roller pairing",
+      "inspection deletion",
+      "clearance"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-159570-01",
+      "subject_mod": "MOD-159570",
+      "source_io": "IO-Z-259031",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-02-17",
+      "due_date": "2026-06-05",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EDSA",
+        "lead_site": "Ashcombe",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 72
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "27",
+          "57",
+          "92"
+        ],
+        "ata_4d": [
+          "27-50",
+          "57-30",
+          "92-51"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "Z01080",
+          "to": "Z09673"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2750134424647",
+            "D2750134493366",
+            "AGS968429-4D"
+          ],
+          "fins": [
+            "3416KS4"
+          ],
+          "drawings": [
+            "D27500077491",
+            "D27501286380"
+          ],
+          "zones": [
+            "525",
+            "562",
+            "565",
+            "662"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "wear and fretting at a moving structural interface under reversing load",
+          "deletion of a repeat inspection after a durability improvement"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search modifications and bulletins on ATA 27-50 and 57-30",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review fault isolation and maintenance content for the flap sensing circuit",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm nitriding qualification on the original attachment with the supplier",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-154120",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "525"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Both were raised from the same fretting and wear data set on high-utilisation aircraft and describe the load path through the flap support attachment in almost the same wording."
+          },
+          "rationale": "The track is nitrided in situ and the process relies on the clamp-up of the five-bolt attachment to hold the track stationary. On an aircraft with the original three-bolt attachment the track moves during the process and the hardness distribution cannot be guaranteed.",
+          "resolution": "Declare the reinforced rib as a post-mod applicability condition, and ask the supplier whether an in-situ process is qualifiable on the original attachment."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "ZPH-57-1039",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "525"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The mandatory eddy current inspection repeats until the reinforced rib is embodied and says nothing about the track. An operator who embodies the roller and track change alone could reasonably read the bulletin as satisfied when the airworthiness condition it addresses is untouched.",
+          "resolution": "Re-issue the bulletin effectivity to state the rib condition explicitly and to confirm that the track change does not terminate the inspection."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-Z-27-50-13-000-008-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2750134424647",
+              "AGS968429-4D"
+            ],
+            "shared_fins": [
+              "3416KS4"
+            ],
+            "shared_zones": [
+              "562",
+              "565",
+              "662"
+            ],
+            "shared_ata_6d": [
+              "27-50-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task measures the roller diameter and the track profile at three marked positions and compares them as a pair. The crowned roller and the nitrided track need different measurement positions and different limits, so the task cannot be used unchanged.",
+          "resolution": "Re-issue the removal task with a variant for the crowned roller, including the revised measurement positions and rejection limits."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-Z-27-50-12-810-801",
+          "doc_type": "TSM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "3416KS4"
+            ],
+            "shared_zones": [
+              "562",
+              "565",
+              "662"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The fault isolation procedure names a forty millimetre clearance between the sensing valve bracket and the roller envelope as its first check, and treats a smaller clearance as a defect. The crowned roller sits higher in the track and reduces that clearance by design, so the procedure would send line maintenance chasing a fault that does not exist.",
+          "resolution": "Measure the clearance with the crowned roller fitted and re-issue the procedure with the correct limit for each roller standard."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "SRM-Z-57-30-12-905",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The repair describes restoring a bearing surface elongated under reversing load, which is the same physical mechanism the candidate is trying to remove, but it does so entirely in the vocabulary of oversize bushings and hole ovality and shares no identifier with the candidate."
+          },
+          "rationale": "An aircraft carrying the oversize bushing repair has a different attachment stiffness from a standard aircraft, which changes the clamp-up that the nitriding process depends on. The interaction has not been assessed.",
+          "resolution": "Ask the repair design owner whether a bushed attachment is acceptable as the base condition for the in-situ nitriding process."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "WDM-Z-92-51-12",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "3416KS4"
+            ],
+            "shared_zones": [
+              "525",
+              "562",
+              "662"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The trailing edge wiring sheet states a minimum forty millimetre clearance from the carriage roller envelope at full extension and requires it to be re-checked whenever the roller or the track profile changes. The candidate changes both.",
+          "resolution": "Re-measure the clearance on a sample aircraft and re-issue the routing note with the revised envelope."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-158660",
+          "doc_type": "MOD",
+          "reason": "Surfaced strongly because it is another wing systems durability change aimed at deleting a repetitive check, written in very similar language and touching adjacent wing zones. It concerns the slat anti-ice ducting, shares no part number, no FIN and no zone with the flap carriage, and its embodiment does not touch the trailing edge."
+        },
+        {
+          "doc_id": "MOD-155908",
+          "doc_type": "MOD",
+          "reason": "Matched on the phrase 'attachment fitting reinforcement to restore an inspection threshold', which is almost the candidate's own justification, but it applies to the ZEPHYR-24 tailplane front spar. There is no shared zone, no shared part and no overlap in the work package."
+        }
+      ],
+      "conclusion": "Not yet issued. The prerequisite is confirmed and the addressable population depends entirely on the supplier answer about in-situ nitriding.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

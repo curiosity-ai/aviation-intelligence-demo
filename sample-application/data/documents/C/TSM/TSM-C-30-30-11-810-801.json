@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "TSM-C-30-30-11-810-801",
+    "doc_type": "TSM",
+    "title": "PROBE HEAT Caution on the Ground — Fault Isolation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "D",
+    "issue": {
+      "letter": "D",
+      "supersedes": "C",
+      "date": "2024-11-12",
+      "reason": "Issue D. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-05-22",
+      "released": "2019-01-15",
+      "revised": "2024-11-12",
+      "effective": "2024-12-03"
+    },
+    "abstract": "Isolation of a probe heat caution raised on the ground, separating a genuine element failure from the cold-soak declaration that clears in the climb and returns no fault in the shop.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a probe heat caution reported on the ground or on the first sector of the day, and gives the checks that distinguish a failed heating element from a cold-soak declaration.",
+      "fault_description": "The caution appears shortly after engine start and, in the cold-soak case, clears somewhere in the climb without crew action and does not return for the rest of the day. Reports concentrate on aircraft that have been parked outside below minus twenty degrees. The system tests serviceable on the ground once the aircraft has warmed, which is why units removed on the strength of this caution have repeatedly been returned as no fault found. The genuine case does not clear and repeats on every sector.",
+      "isolation_procedure": "1. Read out and record the built-in test standard reported by the probe heat computer, and record the outside air temperature at the time of the reported event if it is available. 2. If the built-in test standard is the fixed threshold standard and the reported event happened on a cold-soaked aircraft on the first sector, the cold-soak declaration is the probable cause and no component is at fault. 3. Do the probe heat system functional test with the aircraft warm and read the per-element result. 4. If every element passes, do not remove any unit. Record the event as a cold-soak declaration and raise the retrofit of the temperature compensated standard with the operator's engineering department. 5. If one element fails with the aircraft warm, measure the element resistance at the computer connector and compare it with the value in the task. 6. If the measured resistance is open, the heating element is the cause and the probe must be replaced. 7. If the measured resistance is correct at the connector, the fault is between the connector and the computer: check the continuity of the sense return for that element and the insulation resistance to structure. 8. If the continuity and the insulation are correct, replace the probe heat computer. 9. Repeat the functional test and confirm that the caution does not return through two power cycles.",
+      "dispatch_note": "Dispatch with one probe heat channel inoperative is permitted under the applicable minimum equipment list item with the associated operational restriction on flight into known icing. Dispatch is not permitted with two channels inoperative on the same side."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030115331360",
+        "D3030112916343"
+      ],
+      "fins": [
+        "4618WX",
+        "386WX5",
+        "274HA"
+      ],
+      "drawings": [
+        "D30301165123"
+      ],
+      "software": [
+        "LC5C5779B0E",
+        "LB8CAD816CB"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-30-30-11-700-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-900-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "probe heat caution",
+      "cold soak",
+      "no fault found",
+      "element resistance",
+      "fault isolation"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "30-30-11-810-801",
+      "fault_symptom": "PROBE HEAT caution displayed after engine start",
+      "fault_codes": [
+        "303011001",
+        "303011014",
+        "303011027"
+      ],
+      "warning_messages": [
+        "ANTI ICE PROBE HEAT",
+        "ANTI ICE PROBE HEAT L"
+      ],
+      "affected_fins": [
+        "4618WX",
+        "386WX5",
+        "274HA"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Cold-soak declaration by the fixed threshold monitoring standard",
+          "probability_pct": 52,
+          "fin": "4618WX"
+        },
+        {
+          "cause": "Open circuit heating element in a pitot or static probe",
+          "probability_pct": 21,
+          "fin": "274HA"
+        },
+        {
+          "cause": "Sense return open circuit between the probe connector and the computer",
+          "probability_pct": 15,
+          "fin": "386WX5"
+        },
+        {
+          "cause": "Probe heat computer internal failure",
+          "probability_pct": 12,
+          "fin": "4618WX"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-C-30-30-11-700-004-A",
+      "dispatch": {
+        "mel_item": "30-30-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One channel inoperative, flight into known icing prohibited"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

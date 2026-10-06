@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Aeralis.Presentation</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <!-- The presentation stylesheets ship inside the assembly; every one of them
+       is reachable by name through S1000DPresentation.GetStylesheet so callers
+       can copy, extend or replace them. -->
+  <ItemGroup>
+    <EmbeddedResource Include="Xsl/**/*.xsl" />
+  </ItemGroup>
+
+  <!-- The s1kd-tools core library, from NuGet: it carries the S1000D CSDB
+       helpers and RenderTool, which lays out XSL-FO and renders it through
+       FOP.Sharp (the C# port of Apache FOP) with no external processor. -->
+  <ItemGroup>
+    <PackageReference Include="S1kdTools.Core" Version="26.6.2329" />
+  </ItemGroup>
+
+</Project>

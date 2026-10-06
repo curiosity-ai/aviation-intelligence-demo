@@ -1,0 +1,165 @@
+[
+  {
+    "doc_id": "AMM-C-45-20-11-700-016-A",
+    "doc_type": "AMM",
+    "title": "Central Maintenance Computer — Fault History Read and Correlation Self-Test",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-02-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-09-30",
+      "released": "2023-02-17",
+      "revised": null,
+      "effective": "2023-03-15"
+    },
+    "abstract": "Read the stored fault history from the central maintenance computer, run the correlation self-test and confirm that the history survives a power cycle on aircraft at the upgraded application standard.",
+    "sections": {
+      "purpose": "To read the stored fault history from the central maintenance computer, to run the correlation self-test and to confirm that the history is retained across a power cycle.",
+      "job_setup_note": "The aircraft must be on external power throughout, and a second power source or a battery hold must be available for the power cycle step because a total power loss invalidates the test. The maintenance terminal must be connected at the flight compartment position. One person is enough. The task is normally done at the end of a flying day so that the history covers real events.",
+      "procedure": "Make sure that the aircraft is on external power and that no other maintenance work is in progress that would generate messages. Connect the maintenance terminal at the flight compartment position. Select the onboard maintenance page and then the fault history function. Download the stored history for the last forty flight legs and save it with the aircraft registration, the date and the download time. CAUTION: DO NOT CLEAR THE HISTORY BEFORE IT HAS BEEN SAVED. THE CLEAR FUNCTION IS NOT REVERSIBLE AND THE DATA CANNOT BE RECOVERED. Compare the number of legs returned with the number flown since the last download and record any gap. Start the correlation self-test and wait for it to complete. Confirm that the terminal reports the correlation window in use, which is four seconds on the delivered application and sixteen seconds on the upgraded one. Record the reported window against the aircraft configuration. Do a controlled power cycle with the battery hold in place. WARNING: MAKE SURE THAT NO PERSON IS WORKING ON A SYSTEM THAT WILL RESTART DURING THE POWER CYCLE. After the restart, read the history again and confirm that the same number of legs is returned. Disconnect the maintenance terminal.",
+      "close_out": "Make sure that the maintenance terminal is disconnected and that the access door is closed. Restore the aircraft to its normal electrical configuration. Record the correlation window reported, the number of legs before and after the power cycle and the file name of the saved history. Report any gap in the leg count to the engineering department."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4520114738386",
+        "D4520128145158",
+        "GRA258107-86"
+      ],
+      "fins": [
+        "4310TN",
+        "1TM"
+      ],
+      "drawings": [
+        "D45201180284"
+      ],
+      "software": [
+        "LH6CEDA1669",
+        "LH3C76AB34D"
+      ],
+      "zones": [
+        "244",
+        "164"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-45-45-11-700-030-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-45-20-11-810-812",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "fault history",
+      "correlation self-test",
+      "maintenance terminal",
+      "power cycle",
+      "leg count"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "45-20-11-700-016-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. The sixteen second correlation window is reported only on aircraft post MOD-111296.",
+      "manhours": 1.6,
+      "personnel": 1,
+      "elapsed_time_hours": 1.6,
+      "access": {
+        "zones": [
+          "244",
+          "164"
+        ],
+        "access_panels": [
+          "244AL"
+        ],
+        "doors": [
+          "Flight compartment maintenance panel"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Make sure that no person is working on a system that will restart during the power cycle.",
+          "Do not clear the fault history before it has been saved."
+        ],
+        "tooling": [
+          {
+            "reference": "98C45201-210",
+            "description": "Maintenance terminal and load media reader"
+          },
+          {
+            "reference": "98C45201-260",
+            "description": "Battery hold adapter"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-45-45-11-700-030-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

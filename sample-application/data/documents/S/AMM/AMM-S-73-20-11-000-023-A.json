@@ -1,0 +1,183 @@
+[
+  {
+    "doc_id": "AMM-S-73-20-11-000-023-A",
+    "doc_type": "AMM",
+    "title": "Engine Electronic Control Unit — Removal",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-07-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-20",
+      "ata_6d": "73-20-11",
+      "title": "Controlling — Engine Electronic Control Unit"
+    },
+    "secondary_ata": [
+      "71-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30R3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7720"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-11-08",
+      "released": "2023-07-19",
+      "revised": null,
+      "effective": "2023-08-04"
+    },
+    "abstract": "Removal of the engine electronic control unit from the fan case, including the shutdown cooling wait, the connector release order and the isolator handling that applies to the re-mounted standard.",
+    "sections": {
+      "purpose": "This task removes the engine electronic control unit from its mounting on the fan case so that the unit can be replaced or the mounting can be modified.",
+      "job_setup_note": "Do this task with the engine shut down and the aircraft on ground power. The unit and its shroud stay hot after shutdown; wait the cooling time given in the standard practice before touching either. On aircraft with the isolator mounting, the unit is soft-mounted and will move when the last connector is released, so support it before the connectors come off. The connector release order matters: the power connector comes off last.",
+      "procedure": "1. Make sure that the engine is shut down and that the start and ignition circuits are isolated and tagged. 2. Wait the cooling time given in the standard practice. WARNING: THE CONTROL UNIT SHROUD STAYS HOT AFTER SHUTDOWN AND CAN CAUSE A BURN. 3. Open the fan cowl doors and install the hold-open rods at zones 452 and 461. 4. Support the unit with the handling bracket before any connector is released. CAUTION: ON THE ISOLATOR MOUNTING THE UNIT IS SOFT-MOUNTED AND WILL SWING WHEN THE LAST CONNECTOR IS RELEASED. 5. Release the signal connectors first, then the harness connectors, then the power connector. 6. Cap every connector as it is released and label the harness ends. 7. Release the protective sleeving AES911172K8 where the control harness crosses the mounting. 8. Remove the outboard shroud D7320110360329 and put it on the padded mat. 9. Do a visual check of the shroud inner face for heat discoloration and of the rear vent for blockage. 10. Remove the unit mounting hardware and lift the unit clear. 11. Do a visual check of the outboard mounting bracket PEDE179202-26 and, where fitted, of each wire rope isolator for a broken strand. 12. Disturb and record the state of the pylon connector at position 189EF.",
+      "close_out": "Put the control unit in its transit container with the connectors capped and the shipping record completed. Make sure that no connector is left uncapped on the engine. Record the removal, the unit serial number, the shroud condition and the isolator condition in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7320110360329",
+        "PEDE179202-26",
+        "AES911172K8",
+        "EN25879-6A",
+        "LN953956K3"
+      ],
+      "fins": [
+        "189EF"
+      ],
+      "drawings": [
+        "D73201119154"
+      ],
+      "software": [
+        "LC7C004B308"
+      ],
+      "zones": [
+        "452",
+        "461"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-73-20-11-400-023-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-73-1015",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "control unit removal",
+      "fan cowl",
+      "connector order",
+      "wire rope isolator",
+      "shroud"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "73-20-11-000-023-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "Auran-powered SLN-30R3 and SLN-34R3 aircraft; step 11 isolator check applies post MOD-137030 only",
+      "manhours": 5.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "452",
+          "461"
+        ],
+        "access_panels": [
+          "452CL",
+          "452AR",
+          "461AL",
+          "461CR"
+        ],
+        "doors": [
+          "Fan cowl door LH",
+          "Fan cowl door RH"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Isolate and tag the start and ignition circuits.",
+          "Wait the cooling time before touching the shroud.",
+          "Support the unit before the last connector is released."
+        ],
+        "tooling": [
+          {
+            "reference": "98D73201-080",
+            "description": "Control unit handling bracket"
+          },
+          {
+            "reference": "98D73201-084",
+            "description": "Fan cowl hold-open rod set"
+          },
+          {
+            "reference": "98D73201-090",
+            "description": "Connector cap set"
+          }
+        ],
+        "consumables": [
+          "Anti-seize compound, high temperature",
+          "Label set, harness identification"
+        ],
+        "expendables": [
+          {
+            "part_number": "EN25879-6A",
+            "qty": 8
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-S-73-20-11-400-023-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

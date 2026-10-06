@@ -1,0 +1,161 @@
+[
+  {
+    "doc_id": "TSM-C-76-20-11-810-813",
+    "doc_type": "TSM",
+    "title": "Engine Fire Handle Second Discharge Position Not Recognised",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-20",
+      "ata_6d": "76-20-11",
+      "title": "Emergency Shutdown — Fire Handle Assembly"
+    },
+    "secondary_ata": [
+      "76-10",
+      "26-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-11-05",
+      "released": "2026-03-11",
+      "revised": null,
+      "effective": "2026-04-07"
+    },
+    "abstract": "Fault isolation for a fire handle whose second discharge position is not recognised by the system or whose legend does not illuminate, worked entirely with the bottles inhibited.",
+    "sections": {
+      "purpose": "To isolate the cause of a second discharge position that is not recognised, or of a legend that does not illuminate, without discharging a bottle.",
+      "fault_description": "The fault is reported either as a maintenance message after a functional check or as a crew observation during a training detail: the handle is pulled to the second position and nothing is annunciated, or the legend for that position does not light. On the delivered handle the two positions differ by about eight millimetres of travel and share one legend, so a crew report of this kind on a delivered handle may describe correct behaviour that the crew did not recognise. On the revised handle the two positions have a distinct detent and separate legends, and a report of this kind is always a fault.",
+      "isolation_procedure": "WARNING applies throughout this procedure. Fit and witness the discharge inhibit pins at both bottles before any work. Confirm from the configuration file which handle standard the aircraft carries. On a delivered handle, first demonstrate the correct behaviour with the technician operating the handle slowly through both positions; a large proportion of these reports close here. Read the position feedback at functional item 33EC on the maintenance terminal while the handle is moved through both detents and record the two states. If the second state is not reported, disconnect and inspect the feedback connector at the handle and repeat. If the state is reported but nothing is annunciated, the fault is downstream and the discharge circuit continuity check at functional items 47EC and 596EC must be done. If the legend does not illuminate but the state is reported, replace the legend cap before anything else; a failed cap accounts for about a third of these reports. If the continuity check fails on one circuit only, the wiring between the handle and that bottle is suspect. Do the installation task as the confirmation task after any handle replacement.",
+      "dispatch_note": "Dispatch with a second discharge position not recognised is not permitted. The aircraft may be dispatched with a failed legend cap for three days provided the position feedback is confirmed serviceable and the crew is briefed, which is the only relief in this entry."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOD830120-93",
+        "CID171471-49",
+        "VED464294-23",
+        "AES254025-97"
+      ],
+      "fins": [
+        "47EC",
+        "596EC",
+        "33EC"
+      ],
+      "drawings": [
+        "D76101142635"
+      ],
+      "software": [],
+      "zones": [
+        "413",
+        "483",
+        "453"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-76-20-11-400-021-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "fire handle",
+      "second discharge",
+      "position feedback",
+      "legend cap",
+      "discharge inhibit"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "76-20-11-810-813",
+      "fault_symptom": "Second discharge position not recognised, or second discharge legend not illuminated",
+      "fault_codes": [
+        "762011002",
+        "762011019"
+      ],
+      "warning_messages": [
+        "ENG FIRE BOTTLE 2 NOT ARMED"
+      ],
+      "affected_fins": [
+        "47EC",
+        "596EC",
+        "33EC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Legend cap failed",
+          "probability_pct": 32,
+          "fin": "596EC"
+        },
+        {
+          "cause": "Position feedback connector degraded at the handle",
+          "probability_pct": 28,
+          "fin": "33EC"
+        },
+        {
+          "cause": "Correct behaviour on the delivered handle, misreported",
+          "probability_pct": 22,
+          "fin": "47EC"
+        },
+        {
+          "cause": "Discharge circuit open between handle and bottle",
+          "probability_pct": 18,
+          "fin": "47EC"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-C-76-20-11-400-021-A",
+      "dispatch": {
+        "mel_item": "26-20-02A",
+        "dispatchable": false,
+        "dispatch_condition": "Not dispatchable with the second discharge position unrecognised; three days relief for a failed legend cap only"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

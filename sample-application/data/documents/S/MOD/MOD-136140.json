@@ -1,0 +1,175 @@
+[
+  {
+    "doc_id": "MOD-136140",
+    "doc_type": "MOD",
+    "title": "Full Spectrum Ceiling and Wall Wash Lighting with Scene Control",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-09-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "33",
+      "ata_4d": "33-20",
+      "ata_6d": "33-20-11",
+      "title": "Passenger Compartment Lighting — Ceiling and Wall Wash Lights"
+    },
+    "secondary_ata": [
+      "44-10",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "S01861",
+      "production_cut_in_date": "2024-02-08",
+      "retrofit_via": [
+        "SLN-33-1038"
+      ]
+    },
+    "dates": {
+      "created": "2021-04-07",
+      "released": "2023-09-21",
+      "revised": null,
+      "effective": "2023-10-09"
+    },
+    "abstract": "Replacement of the three-colour cabin ceiling and wall wash lighting by a full spectrum emitter with scene sequencing driven from the cabin attendant panel, offered as a differentiating cabin feature on the Evo variants.",
+    "sections": {
+      "reason": "The three-colour emitter fitted at build cannot reproduce the warm low-colour-temperature scenes that operators now specify as standard, and the two largest Evo customers made the capability a condition of their cabin definition for follow-on deliveries. There is also a maintenance driver: the existing emitter strings fail one segment at a time and a single failed segment is visible from the cabin, so the removal rate is driven by appearance rather than by function. Segment failures accounted for 0.9 removals per aircraft per year on aircraft older than four years.",
+      "description": "The ceiling and wall wash light assembly kit D3320112768387 is replaced by a full spectrum unit with individually addressable segments and local temperature compensation. The inboard partition assembly NY719919-92 is re-cut where the deeper emitter housing fouls it, the right-hand stowage bin QUD588949-34 gets a revised light shield, and the obsolete aft panel sub-assembly RO886925-91 is deleted. Scene sequencing is hosted in the cabin intercommunication data system director and is commanded from the cabin attendant panel; no new controller is added. The lower lighting position 24RH, the upper partition position 4864LP4, the left-hand lining position 9691LP and the aft trim position 8517LP6 are all re-addressed on the existing cabin bus. Work is in the cabin ceiling void with the ceiling panels dropped, zones 241, 253 and 265. Detail is on drawings D33201109538 and D33201121638.",
+      "effects": "Mass increase of 11 kg per aircraft, distributed along the cabin, with no reportable balance effect. Electrical load rises by 1 400 VA at full white output but the typical cruise scene draws less than the emitter it replaces. Not interchangeable, because the addressing scheme and the housing depth both change; a mixed cabin would show a visible colour step at the boundary. Emergency lighting is a separate system and is not touched. Cabin crew procedures gain a scene selection page on the attendant panel. The lighting removal and installation tasks and the cabin wiring sheet require update.",
+      "embodiment_note": "Cut in on the production line at MSN S01861 in February 2024 for both Evo variants. Retrofit is available through Service Bulletin SLN-33-1038, normally taken with a cabin refresh because the ceiling panels have to come down anyway; standalone embodiment is eight days and is rarely economic."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3320112768387",
+        "NY719919-92",
+        "QUD588949-34",
+        "RO886925-91"
+      ],
+      "fins": [
+        "24RH",
+        "4864LP4",
+        "9691LP",
+        "8517LP6"
+      ],
+      "drawings": [
+        "D33201109538",
+        "D33201121638"
+      ],
+      "software": [],
+      "zones": [
+        "241",
+        "253",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01861"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-33-1038",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "cabin lighting",
+      "full spectrum emitter",
+      "scene control",
+      "segment failure",
+      "cabin attendant panel"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Cabin Definition"
+    },
+    "type_data": {
+      "mod_number": 136140,
+      "mod_class": "MINOR",
+      "change_category": "CABIN",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1381",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 11.0,
+      "balance_impact": "Distributed along the cabin; no reportable shift",
+      "electrical_load_impact_va": 1400,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "QUD588949-34"
+      ],
+      "parts_removed": [
+        "RO886925-91"
+      ],
+      "parts_modified": [
+        "D3320112768387",
+        "NY719919-92"
+      ],
+      "fins_affected": [
+        "24RH",
+        "4864LP4",
+        "9691LP",
+        "8517LP6"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 320,
+      "estimated_cost_keur": 1250,
+      "lead_time_weeks": 42,
+      "production_impact": "Cut-in at MSN S01861; cabin dressing sequence unchanged",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

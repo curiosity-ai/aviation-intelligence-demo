@@ -1,0 +1,181 @@
+[
+  {
+    "doc_id": "MOD-169206",
+    "doc_type": "MOD",
+    "title": "Auxiliary Power Unit Load Acceptance Schedule Revision for High Field Elevation",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-9700"
+      ],
+      "operators": [
+        "KLE",
+        "SRP"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168086"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-05-19",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposes a revised load acceptance schedule in the auxiliary power unit control box so that bleed load can be taken earlier at high field elevation, together with a surge control valve nozzle change to hold the margin the earlier acceptance consumes.",
+    "sections": {
+      "reason": "An operator at two highland bases measures a median of two minutes fifty seconds between availability and load acceptance, against forty seconds at sea level, across two hundred and forty starts. The delay is produced by a fixed stabilisation period in the control box schedule that was set for the worst combination of altitude and temperature and is applied everywhere. The operator is paying ground handling penalties on every rotation at those fields and has twice damaged an air cart by extended running.",
+      "description": "The proposal replaces the fixed stabilisation period with a schedule that reads ambient pressure and exhaust gas temperature and releases the load when the measured margin is reached, typically forty to seventy seconds at two thousand metres. Because the earlier acceptance uses part of the surge margin, the surge control valve nozzle is replaced by a variant with a wider effective area and its cowl latch is changed to match, and the rivet standard at the valve bracket is brought to the current item. The control box hardware is unchanged; the change is carried in the application and navigation loads. The mount and heat shield standard introduced by the earlier mount modification is a prerequisite because the revised schedule raises the compartment temperature during the acceptance phase.",
+      "effects": "Mass increase of one point eight kilograms in the tail cone. No change in electrical load. Not interchangeable, because the nozzle area and the schedule must match. Start and load acceptance timings quoted in the flight crew procedure change, so the crew documentation is affected even though the crew action does not change. Compartment inspection interval is unchanged, but the maintenance test for load acceptance needs a new pass criterion.",
+      "embodiment_note": "Retrofit only, at a base visit with the auxiliary power unit compartment open, about eighteen hours including the load and the functional test.",
+      "open_points": "Pre-analysis must establish the surge margin actually available with the wider nozzle at the certified altitude limit, whether the compartment temperature during early acceptance stays inside the heat shield qualification, and whether the schedule change can be certified without a flight test campaign."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4950123850952",
+        "D4950121625398",
+        "AES689669-90"
+      ],
+      "fins": [
+        "5PB",
+        "244PB3"
+      ],
+      "drawings": [
+        "D49601217089"
+      ],
+      "software": [
+        "LD7PCEB6F22",
+        "LF2P41059D7"
+      ],
+      "zones": [
+        "394",
+        "323"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00351"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-M-260548",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-168086",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "auxiliary power unit",
+      "load acceptance",
+      "surge margin",
+      "field elevation",
+      "control schedule"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Port-Rivage",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "mod_number": 169206,
+      "mod_class": "MAJOR",
+      "change_category": "POWERPLANT",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1305",
+          "CS 25.1309",
+          "CS 25.939"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 1.8,
+      "balance_impact": "Negligible, tail cone installation",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D4950123850952"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4950121625398",
+        "AES689669-90"
+      ],
+      "fins_affected": [
+        "5PB",
+        "244PB3"
+      ],
+      "software_affected": [
+        "LD7PCEB6F22"
+      ],
+      "estimated_manhours": 1600,
+      "estimated_cost_keur": 2900,
+      "lead_time_weeks": 64,
+      "production_impact": "No cut-in proposed until the certification route is agreed",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

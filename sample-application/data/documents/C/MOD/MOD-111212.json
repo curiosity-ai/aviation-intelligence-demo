@@ -1,0 +1,197 @@
+[
+  {
+    "doc_id": "MOD-111212",
+    "doc_type": "MOD",
+    "title": "Introduction of the ATC Datalink Router with Continental Controller-Pilot Datalink Capability",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2019-01-30",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "92-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00479"
+        }
+      ],
+      "excluded_msns": [
+        "C00071"
+      ],
+      "engine_types": [
+        "PYR-1519G",
+        "PYR-1521G"
+      ],
+      "operators": [
+        "MTA",
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "C00137",
+      "production_cut_in_date": "2018-09-12",
+      "retrofit_via": [
+        "CRN-23-2001"
+      ]
+    },
+    "dates": {
+      "created": "2017-03-14",
+      "released": "2018-05-22",
+      "revised": "2019-01-30",
+      "effective": "2019-03-01"
+    },
+    "abstract": "First datalink router standard on the type, giving controller-pilot message exchange over the continental network and a single point of routing between the two radio sets, the flight management computer and the printer.",
+    "sections": {
+      "reason": "European and North American air navigation service providers set a date after which departure clearance and en-route message exchange would be handled by datalink in the upper airspace, and operators of this type had no means of complying. The two launch customers were both facing route restrictions from the winter of 2019, and a further six had written asking for a date. Nothing on the delivered standard could route a message between the two radio sets and the flight management computer without the crew retyping it, which had already produced eleven reported transcription errors in the first two years of service.",
+      "description": "An air traffic control datalink router is installed in the forward avionics rack and takes over message routing between the two radio sets, the flight management computer and the flight deck printer. The router display unit D2370118700860 is fitted in the lower rack position with the mounting provision already present on the delivered aircraft. The data concentrator VED805230-21 is added on the outboard shelf and is fastened with titanium bolts AGS119203K9 into the existing tray. The router assembly D2370006240541 carries the message store and the log-on state machine. A new harness runs from the forward avionics bay in zone 165 to the flight compartment overhead panel in zone 211, following the existing avionics bay route, and the router is identified as functional item 218RN. The flight deck interface is through the existing multifunction display, so no panel cut-out is needed. Installation detail is on drawing D23700095149.",
+      "effects": "Mass increase of 6.4 kg, all of it forward of the centre of gravity, with a longitudinal shift under 0.06 per cent mean aerodynamic chord. Electrical load increases by 210 volt-amperes on the essential bus. The router is not interchangeable with the pre-modification routing box because the connector pin allocation changes. Dispatch with the router inoperative is permitted for thirty days provided the operator does not plan into datalink-mandated airspace. Maintenance manual, illustrated parts and wiring content all need to be created rather than amended, because no equivalent installation exists on the delivered standard.",
+      "embodiment_note": "Production cut-in at MSN C00137 in September 2018. Retrofit is by Service Bulletin CRN-23-2001 and takes about two shifts with the aircraft on the ground, most of it harness routing in the forward avionics bay. Kits were available from the first quarter of 2019 and the two launch customers embodied their fleets before the winter deadline."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370118700860",
+        "D2370006240541",
+        "VED805230-21",
+        "AGS119203K9"
+      ],
+      "fins": [
+        "218RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00137"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-23-2001",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-111225",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "AMM-C-23-70-11-000-011-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-23-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "controller-pilot datalink",
+      "message routing",
+      "avionics rack",
+      "log-on"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Lorencourt",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111212,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CERTIFICATION",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 6.4,
+      "balance_impact": "Forward installation, longitudinal CG shift under 0.06 % MAC",
+      "electrical_load_impact_va": 210,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D2370118700860",
+        "D2370006240541",
+        "VED805230-21",
+        "AGS119203K9"
+      ],
+      "parts_removed": [],
+      "parts_modified": [],
+      "fins_affected": [
+        "218RN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 640,
+      "estimated_cost_keur": 3100,
+      "lead_time_weeks": 78,
+      "production_impact": "Cut-in at MSN C00137, harness pre-installed from MSN C00121 to avoid a line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

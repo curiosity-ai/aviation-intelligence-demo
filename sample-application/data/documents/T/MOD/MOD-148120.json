@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "MOD-148120",
+    "doc_type": "MOD",
+    "title": "Bulk Compartment Thermal Barrier Quilt for Live Animal Transport",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-40",
+      "ata_6d": "21-40-11",
+      "title": "Heating — Cargo Compartment Heating"
+    },
+    "secondary_ata": [
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [
+        "T00001",
+        "T00009",
+        "T00031",
+        "T00097",
+        "T00145",
+        "T00179"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "RVC"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-06-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposal to fit an insulating quilt to the bulk compartment walls and ceiling, so that the compartment holds temperature for live animal shipments without running the heating duct at continuous full flow.",
+    "sections": {
+      "reason": "Two operators carrying live animals report that the bulk compartment cannot hold the temperature band their veterinary approvals require on sectors above eleven hours, and that the heating system runs at continuous full flow trying. The heat loss is through the compartment wall rather than through the door, because the space between the frame and the wall panel is largely unfilled in this compartment. The consequence is a duct temperature that sits close to its protection threshold for most of the sector and a shipment that has twice been refused at destination on temperature grounds.",
+      "description": "An insulating quilt is fitted between the frames and behind the wall and ceiling panels of the bulk compartment, retained on the existing panel standoffs so that no structure is drilled. The quilt is a needled ceramic batt in a woven glass envelope, chosen for its behaviour in a compartment fire rather than for its thermal performance alone, and it is cut around every existing penetration. The heating duct kit D2140112244543 is retained but its outlet diffusers are re-aimed away from the new quilt face; the aft filter D2140117938347 is replaced by an item with a coarser element because the reduced flow demand lets the system run further from its filtration limit, and the lower sub-assembly filter D2140111489338 is deleted. The superseded transmitter HO312043-43 is replaced with the current standard so that the control loop sees the slower thermal response correctly. The heating transmitter at FIN 47HM2 and the compartment valve at FIN 4HQ7 are unchanged. Work is in zones 141, 151 and 153 with the wall panels removed.",
+      "effects": "Estimated mass increase of 88 kg per aircraft, concentrated aft of the wing and giving a centre-of-gravity shift of 0.09 per cent mean aerodynamic chord aft. No electrical load change; the benefit shows as a lower average duct demand rather than as a load reduction. The quilt is interchangeable in the sense that it can be removed and the compartment returned to the earlier configuration, but the filter and transmitter changes are not reversible without also reverting the control settings. Fire certification of the compartment must be revisited because a new material is introduced inside the liner. Servicing and heating fault isolation content require update.",
+      "embodiment_note": "Retrofit only, and only for operators with a live animal requirement, since the mass penalty is not worth carrying otherwise. Provisional estimate is five days with the bulk compartment stripped. No production cut-in is proposed.",
+      "open_points": "Pre-analysis must establish whether a new material behind the compartment liner affects the flame penetration qualification of the liner itself, whether the quilt can coexist with the panel standoff arrangement on aircraft at the later liner standard, and whether the reduced duct demand invalidates the published duct overheat protection settings."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2140112244543",
+        "D2140117938347",
+        "D2140111489338",
+        "HO312043-43"
+      ],
+      "fins": [
+        "47HM2",
+        "4HQ7"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "141",
+        "151",
+        "153"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00145",
+        "T00179"
+      ]
+    },
+    "references": [],
+    "keywords": [
+      "bulk compartment",
+      "thermal quilt",
+      "live animals",
+      "duct demand",
+      "insulation"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Cabin and Cargo Systems"
+    },
+    "type_data": {
+      "mod_number": 148120,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.855",
+          "CS 25.831"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 88.0,
+      "balance_impact": "0.09 % MAC aft",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "D2140117938347"
+      ],
+      "parts_removed": [
+        "D2140111489338"
+      ],
+      "parts_modified": [
+        "D2140112244543",
+        "HO312043-43"
+      ],
+      "fins_affected": [
+        "47HM2"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 260,
+      "estimated_cost_keur": 620,
+      "lead_time_weeks": 34,
+      "production_impact": "No production cut-in proposed",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,256 @@
+[
+  {
+    "doc_id": "PAWO-111251-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Solid State Radar Transceiver Spares and Repair Release",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-40",
+      "ata_6d": "34-40-11",
+      "title": "Independent Position Determining — Weather Radar Transceiver"
+    },
+    "secondary_ata": [
+      "34-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00408"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-20",
+      "released": "2026-04-15",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the solid state transceiver standard, run to release spares to a third-party maintenance organisation, which was delegated to the supplier support office once the shim stack question was resolved.",
+    "sections": {
+      "objective": "Assess whether the solid state transceiver standard can be released to a third-party maintenance organisation for spares and line replacement, and establish what the organisation would need beyond the published data.",
+      "findings_summary": "Two items were confirmed and the work was delegated. The substantive finding was the tray shim stack: the packer plates fitted with the magnetron unit are not re-used and the shim value at each of the four mounting points has to be built to the acceptance table for a new unit, but the acceptance table lives in the installation task rather than in the component maintenance data the third party would hold. Without it a correctly serviceable unit can be installed with a boresight outside limits and nothing on the aircraft will say so. The second finding was that the trouble shooting content built around a magnetron warm-up fault had never been withdrawn and would mislead a technician new to the type. Neither finding needed design work, so the remaining scope was handed to the supplier support office.",
+      "next_steps": "Publish the shim acceptance table in the component maintenance data as well as in the installation task. Withdraw the obsolete magnetron trouble shooting content. Supplier support office to complete the third-party release."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3440119270001",
+        "D3440005921121",
+        "AES311855K5",
+        "AGS393059-2A"
+      ],
+      "fins": [
+        "282TR7",
+        "2FE"
+      ],
+      "drawings": [
+        "D34401154303"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "216"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00273"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111251",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "spares release",
+      "shim stack",
+      "boresight",
+      "third party"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111251-01",
+      "subject_mod": "MOD-111251",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-04-15",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-01-20",
+      "due_date": "2026-04-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 52
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "34"
+        ],
+        "ata_4d": [
+          "34-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "C00001",
+          "to": "C00408"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3440119270001",
+            "D3440005921121",
+            "AES311855K5"
+          ],
+          "fins": [
+            "282TR7",
+            "2FE"
+          ],
+          "drawings": [
+            "D34401154303"
+          ],
+          "zones": [
+            "111",
+            "216"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "what a third party needs beyond the component data to install a unit correctly"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Review the installation acceptance data against the component data",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Identify obsolete trouble shooting content",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-C-34-40-11-400-013-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3440119270001",
+              "AES311855K5",
+              "AGS393059-2A"
+            ],
+            "shared_fins": [
+              "282TR7",
+              "2FE"
+            ],
+            "shared_zones": [
+              "111",
+              "216"
+            ],
+            "shared_ata_6d": [
+              "34-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The shim acceptance table for a new unit lives only in the installation task. A third party holding component data alone can install a serviceable unit with a boresight outside limits and get no indication of it.",
+          "resolution": "Table to be published in the component maintenance data as well; delegated to the supplier support office."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-C-34-40-11-810-811",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Returned on the shared subject of a radar picture that is not usable, expressed in entirely different terms in the two documents."
+          },
+          "rationale": "Trouble shooting content written around a magnetron warm-up fault had never been withdrawn and would mislead a technician new to the type.",
+          "resolution": "Obsolete content withdrawn at the next revision."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Delegated to the supplier support office. Two documentation actions raised, neither requiring design work.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,304 @@
+[
+  {
+    "doc_id": "TSM-T-76-20-11-810-813",
+    "doc_type": "TSM",
+    "title": "Engine Fire Handle Position Indication Disagreement — Fault Isolation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2008-08-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-20",
+      "ata_6d": "76-20-11",
+      "title": "Engine Controls — Fire Handle Assembly"
+    },
+    "secondary_ata": [
+      "76-20-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2008-02-24",
+      "released": "2008-08-03",
+      "revised": "2008-08-03",
+      "effective": "2008-09-12"
+    },
+    "abstract": "Fault isolation for a disagreement between the engine fire handle position and its reported state, covering microswitch adjustment after the detent modification and the guard interference case.",
+    "sections": {
+      "purpose": "Fault isolation for a reported disagreement between the physical position of an engine fire handle and the state reported by the microswitch, with the aircraft on the ground.",
+      "fault_description": "The reported case is a handle that is visibly stowed but reports pulled, or a handle that is pulled and does not report. On aircraft converted to the detent standard the microswitch actuation point moves by 4 mm, and a switch left at the pre-conversion adjustment gives exactly this disagreement. The second cause is the hinged guard: a guard that has not been assembled correctly can hold the handle a millimetre out of the stowed position, which is enough to make the switch and is not obvious to look at. The order of the checks below follows the design assessment; no in-service case has been recorded against the converted standard at the date of this issue.",
+      "isolation_procedure": "1. Isolate the fire extinguishing bottles before any handle is moved. 2. Establish the handle standard fitted from the configuration record. 3. Examine the guard on the affected handle for correct assembly and confirm the handle sits fully stowed with the guard closed. 4. Where the handle is held out of the stowed position by the guard, correct the guard assembly and re-check; this is the cause in roughly a third of reports on converted aircraft. 5. Where the handle is fully stowed, check the microswitch actuation point against the value for the standard fitted. 6. Where the actuation point is at the pre-conversion value on a converted aircraft, adjust it and re-check. 7. Do the break-out force check to confirm the detent is functioning, because a weak detent lets the handle rest short of stowed. 8. Where all three are excluded, the microswitch itself has failed and the handle mechanism must be removed.",
+      "dispatch_note": "Dispatch with a fire handle position indication disagreement is not permitted. The handle is the crew's means of shutting down and isolating the engine, and an indication that cannot be trusted removes that assurance. The aircraft must not be released until the disagreement is resolved and the functional test has passed on all four handles."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7620110697976",
+        "D7620118982319",
+        "KAD86061-43"
+      ],
+      "fins": [
+        "57EC",
+        "90EC",
+        "2EC5"
+      ],
+      "drawings": [
+        "D76201138009"
+      ],
+      "software": [],
+      "zones": [
+        "481",
+        "432",
+        "411"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-76-20-11-200-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "fire handle",
+      "position disagreement",
+      "microswitch",
+      "guard assembly",
+      "detent"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "76-20-11-810-813",
+      "fault_symptom": "ENG FIRE HANDLE position disagreement between the handle and the reported state",
+      "fault_codes": [
+        "762011008",
+        "762011017"
+      ],
+      "warning_messages": [
+        "ENG FIRE HANDLE FAULT"
+      ],
+      "affected_fins": [
+        "57EC",
+        "90EC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Microswitch left at the pre-conversion actuation point",
+          "probability_pct": 40,
+          "fin": "57EC"
+        },
+        {
+          "cause": "Hinged guard holding the handle out of the stowed position",
+          "probability_pct": 30,
+          "fin": "90EC"
+        },
+        {
+          "cause": "Weak detent letting the handle rest short of stowed",
+          "probability_pct": 20,
+          "fin": "2EC5"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-T-76-20-11-200-002-A",
+      "dispatch": {
+        "mel_item": "76-20-01A",
+        "dispatchable": false,
+        "dispatch_condition": "No dispatch with a fire handle position indication disagreement"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-T-76-20-11-810-813",
+    "doc_type": "TSM",
+    "title": "Engine Fire Handle Position Indication Disagreement — Fault Isolation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-04",
+      "reason": "Check order and cause weighting confirmed against the first two in-service cases; the guard assembly check stays ahead of the microswitch check.",
+      "raised_by_pawo": "PAWO-148940-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-20",
+      "ata_6d": "76-20-11",
+      "title": "Engine Controls — Fire Handle Assembly"
+    },
+    "secondary_ata": [
+      "76-20-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2008-02-24",
+      "released": "2008-08-03",
+      "revised": "2026-08-04",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Fault isolation for a disagreement between the engine fire handle position and its reported state, covering microswitch adjustment after the detent modification and the guard interference case.",
+    "sections": {
+      "purpose": "Fault isolation for a reported disagreement between the physical position of an engine fire handle and the state reported by the microswitch, with the aircraft on the ground.",
+      "fault_description": "The reported case is a handle that is visibly stowed but reports pulled, or a handle that is pulled and does not report. On aircraft converted to the detent standard the microswitch actuation point moves by 4 mm, and a switch left at the pre-conversion adjustment gives exactly this disagreement. The second cause is the hinged guard: a guard that has not been assembled correctly can hold the handle a millimetre out of the stowed position, which is enough to make the switch and is not obvious to look at. The order of the checks below was written from the design assessment and has since been confirmed by the first two in-service cases, both of which were resolved at the guard before the switch was touched; the guard check therefore stays ahead of the microswitch check.",
+      "isolation_procedure": "1. Isolate the fire extinguishing bottles before any handle is moved. 2. Establish the handle standard fitted from the configuration record. 3. Examine the guard on the affected handle for correct assembly and confirm the handle sits fully stowed with the guard closed. 4. Where the handle is held out of the stowed position by the guard, correct the guard assembly and re-check; this is the cause in roughly a third of reports on converted aircraft. 5. Where the handle is fully stowed, check the microswitch actuation point against the value for the standard fitted. 6. Where the actuation point is at the pre-conversion value on a converted aircraft, adjust it and re-check. 7. Do the break-out force check to confirm the detent is functioning, because a weak detent lets the handle rest short of stowed. 8. Where all three are excluded, the microswitch itself has failed and the handle mechanism must be removed.",
+      "dispatch_note": "Dispatch with a fire handle position indication disagreement is not permitted. The handle is the crew's means of shutting down and isolating the engine, and an indication that cannot be trusted removes that assurance. The aircraft must not be released until the disagreement is resolved and the functional test has passed on all four handles."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7620110697976",
+        "D7620118982319",
+        "KAD86061-43"
+      ],
+      "fins": [
+        "57EC",
+        "90EC",
+        "2EC5"
+      ],
+      "drawings": [
+        "D76201138009"
+      ],
+      "software": [],
+      "zones": [
+        "481",
+        "432",
+        "411"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-76-20-11-200-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "fire handle",
+      "position disagreement",
+      "microswitch",
+      "guard assembly",
+      "detent"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "76-20-11-810-813",
+      "fault_symptom": "ENG FIRE HANDLE position disagreement between the handle and the reported state",
+      "fault_codes": [
+        "762011008",
+        "762011017"
+      ],
+      "warning_messages": [
+        "ENG FIRE HANDLE FAULT"
+      ],
+      "affected_fins": [
+        "57EC",
+        "90EC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Hinged guard holding the handle out of the stowed position",
+          "probability_pct": 44,
+          "fin": "90EC"
+        },
+        {
+          "cause": "Microswitch left at the pre-conversion actuation point",
+          "probability_pct": 33,
+          "fin": "57EC"
+        },
+        {
+          "cause": "Weak detent letting the handle rest short of stowed",
+          "probability_pct": 15,
+          "fin": "2EC5"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-T-76-20-11-200-002-A",
+      "dispatch": {
+        "mel_item": "76-20-01A",
+        "dispatchable": false,
+        "dispatch_condition": "No dispatch with a fire handle position indication disagreement"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

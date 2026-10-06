@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "AMM-S-27-90-11-700-021-A",
+    "doc_type": "AMM",
+    "title": "Flight Control Primary Computers — Data Load and System Test",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2023-05-11",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-90",
+      "ata_6d": "27-90-11",
+      "title": "Flight Control Computing — Flight Control Primary Computer"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-08-27",
+      "released": "2019-03-18",
+      "revised": "2023-05-11",
+      "effective": "2023-05-29"
+    },
+    "abstract": "Loading of the flight control configuration data set into both primary computers and the surface sweep test that follows it, including the checksum confirmation and the fault attribution verification.",
+    "sections": {
+      "purpose": "This task loads the configuration data set into both flight control primary computers, confirms the checksum on each, and proves the installation by a full surface sweep in normal law.",
+      "job_setup_note": "Do this task with the aircraft on ground power, on jacks or with the hydraulic systems available for a surface sweep, and with no other maintenance action in progress on the flight control system. Both computers must end at the same standard; the aircraft is not dispatchable with a mixed pair and there is no intermediate state that is acceptable to leave overnight. Record the standard loaded on each computer before and after.",
+      "procedure": "1. Make sure that no other maintenance action is in progress on the flight control system. 2. Connect the portable data loader at the loading panel in the avionics bay, zone 162. 3. Record the configuration standard currently loaded on computer 1 and on computer 2. CAUTION: BOTH COMPUTERS MUST END AT THE SAME STANDARD. DO NOT LEAVE THE AIRCRAFT WITH A MIXED PAIR. 4. Load the data set into computer 1 and wait for the load to complete. 5. Confirm the checksum reported by computer 1 against the value on the load medium. 6. Load the same data set into computer 2 and confirm its checksum. 7. Check the rigging tolerance of the primary computer solenoid kit D2790113238523 against the table for the loaded standard and adjust if required. 8. Check the inboard sensor sub-assembly D2790119440485 bias against its acceptance band. 9. Pressurise the hydraulic systems and do a full surface sweep in normal law. WARNING: KEEP ALL PERSONNEL CLEAR OF THE CONTROL SURFACES DURING THE SWEEP. 10. Check the surface travel at each extreme against the limits table. 11. On the maintenance terminal in zone 216, confirm that the fault reporting words for the heat exchanger position 435EV, the non-return valve position 52CE and the restrictor position 78CE report against those items. 12. Clear the maintenance memory and confirm that no fault re-appears after a power cycle.",
+      "close_out": "Disconnect the data loader and depressurise the hydraulic systems. Record the standard loaded, both checksums, the surface travel values and the fault attribution check in the aircraft technical log, and update the software configuration index for the aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2790113238523",
+        "D2790119440485"
+      ],
+      "fins": [
+        "435EV",
+        "52CE",
+        "78CE"
+      ],
+      "drawings": [
+        "D27901146283"
+      ],
+      "software": [
+        "LG8L72901CB"
+      ],
+      "zones": [
+        "162",
+        "216"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "SLN-27-1063",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-27-90-11-810-807",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "data load",
+      "checksum",
+      "surface sweep",
+      "fault attribution",
+      "configuration index"
+    ],
+    "originator": {
+      "department": "EYAA",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "27-90-11-700-021-A",
+      "task_type": "TEST",
+      "effectivity_note": "All twin-engine and four-engine aircraft; the rigging tolerance table differs by loaded standard",
+      "manhours": 8.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "162",
+          "216"
+        ],
+        "access_panels": [
+          "162AL",
+          "216AL",
+          "216BL"
+        ],
+        "doors": [
+          "Avionics bay access door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep all personnel clear of the control surfaces during the sweep.",
+          "Do not leave the aircraft with a mixed computer pair.",
+          "Make sure no other flight control maintenance is in progress."
+        ],
+        "tooling": [
+          {
+            "reference": "98D27901-140",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D27901-144",
+            "description": "Maintenance terminal, current standard"
+          },
+          {
+            "reference": "98D27901-148",
+            "description": "Surface travel measurement set"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-27-20-12-900-022-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

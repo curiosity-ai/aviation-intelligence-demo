@@ -1,0 +1,501 @@
+[
+  {
+    "doc_id": "TSM-Z-29-10-11-810-807",
+    "doc_type": "TSM",
+    "title": "Green System Quantity Decreasing with Fluid Found in the Accessory Gearbox Drive Pad",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1991-07-31",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-11",
+      "title": "Main System — Engine Driven Pump"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-04-09",
+      "released": "1991-07-31",
+      "revised": null,
+      "effective": "1991-08-21"
+    },
+    "abstract": "Fault isolation for a slowly decreasing green system quantity with fluid present in the accessory gearbox drive pad, separating a shaft seal leak from an external joint leak or a quantity indication error.",
+    "sections": {
+      "purpose": "This procedure isolates a slowly decreasing green hydraulic system quantity where fluid is found in the accessory gearbox drive pad cavity, and establishes whether the pump shaft seal, an external joint or the quantity indication is at fault.",
+      "fault_description": "The first indication is usually a wet drive pad found at a transit check, or a reservoir that has needed replenishment more often than the fleet average. There is no warning before the reservoir reaches the refill line, because the loss is gradual, and no cockpit indication separates a shaft seal leak from an external joint leak. The only quantitative evidence available on the aircraft is the fluid that collects in the drive pad cavity between checks, so the isolation turns on measuring it accurately.",
+      "isolation_procedure": "1. Record the replenishment history and the quantity trend over the last twenty sectors. 2. Open the fan cowl and measure the quantity of fluid in the drive pad cavity before wiping it. 3. More than 8 millilitres accumulated over ten sectors confirms the shaft seal: remove the pump. 4. Where the cavity is dry, pressurise the system on the ground rig and inspect every external joint in zone 123 and along the case drain line in zone 193. 5. Pay particular attention to the clamp at FIN 280GG8, where line movement loosens the joint over time. 6. Where no external leak is found, check the reservoir quantity transducer calibration against a dipped measurement. 7. Where the indication is in error, no fluid is being lost: recalibrate and monitor. 8. Where the solenoid at FIN 16GG shows weeping at its connector, renew its seal before the pump is condemned.",
+      "dispatch_note": "Dispatch is permitted with the green system quantity above the minimum dispatch level and with the leak rate established and monitored at every transit. Where the drive pad cavity is wet, replenishment must be recorded on every sector. Rectify within five calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2910110251872",
+        "BE759984-33"
+      ],
+      "fins": [
+        "16GG",
+        "280GG8",
+        "6GG"
+      ],
+      "drawings": [
+        "D29101190176"
+      ],
+      "software": [],
+      "zones": [
+        "123",
+        "193"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-29-10-11-000-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-29-1067",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "green system quantity",
+      "drive pad cavity",
+      "shaft seal",
+      "cavity measurement",
+      "replenishment history"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "29-10-11-810-807",
+      "fault_symptom": "Green hydraulic quantity decreasing with fluid found in the accessory gearbox drive pad",
+      "fault_codes": [
+        "291011004",
+        "291011021"
+      ],
+      "warning_messages": [
+        "HYD G RSVR LO LVL"
+      ],
+      "affected_fins": [
+        "16GG",
+        "280GG8"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Engine driven pump shaft seal leaking into the drive pad cavity",
+          "probability_pct": 49,
+          "fin": "16GG"
+        },
+        {
+          "cause": "External joint leak at the case drain line clamp",
+          "probability_pct": 21,
+          "fin": "280GG8"
+        },
+        {
+          "cause": "Reservoir quantity transducer calibration error",
+          "probability_pct": 16,
+          "fin": "6GG"
+        },
+        {
+          "cause": "Solenoid connector seal weeping",
+          "probability_pct": 14,
+          "fin": "16GG"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-Z-29-10-11-400-014-A",
+      "dispatch": {
+        "mel_item": "29-11-01B",
+        "dispatchable": true,
+        "dispatch_condition": "Quantity above the minimum dispatch level, leak rate established and replenishment recorded at every transit"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-Z-29-10-11-810-807",
+    "doc_type": "TSM",
+    "title": "Green System Quantity Decreasing with Fluid Found in the Accessory Gearbox Drive Pad",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2017-03-14",
+      "reason": "The cavity leak rate threshold is split by seal standard so that a pump carrying the interim kit is not removed while it is still serviceable.",
+      "raised_by_pawo": "PAWO-151295-01",
+      "raised_by_finding": "F03",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-11",
+      "title": "Main System — Engine Driven Pump"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-04-09",
+      "released": "1991-07-31",
+      "revised": "2017-03-14",
+      "effective": "2017-04-04"
+    },
+    "abstract": "Fault isolation for a slowly decreasing green system quantity with fluid in the accessory gearbox drive pad, now carrying one confirmation threshold for the original shaft seal and a higher one for the interim seal kit.",
+    "sections": {
+      "purpose": "This procedure isolates a slowly decreasing green hydraulic system quantity where fluid is found in the accessory gearbox drive pad cavity, and establishes whether the pump shaft seal, an external joint or the quantity indication is at fault.",
+      "fault_description": "The first indication is usually a wet drive pad found at a transit check, or a reservoir that has needed replenishment more often than the fleet average. There is no warning before the reservoir reaches the refill line, because the loss is gradual, and no cockpit indication separates a shaft seal leak from an external joint leak. The only quantitative evidence available on the aircraft is the fluid that collects in the drive pad cavity between checks, so the isolation turns on measuring it accurately.",
+      "isolation_procedure": "1. Record the replenishment history and the quantity trend over the last twenty sectors. 2. Open the fan cowl and measure the quantity of fluid in the drive pad cavity before wiping it. 3. Establish the shaft seal standard from the pump data plate, because the confirmation threshold is not the same for both. 4. With the original shaft seal, more than 8 millilitres accumulated over ten sectors confirms the seal: remove the pump. 5. Where the interim seal kit of MOD-151295 is fitted, the scavenge lip returns part of the leakage to the case drain and the cavity fills more slowly, so the threshold is 15 millilitres over the same ten sectors. Below the applicable threshold the pump is serviceable and must not be removed. 6. Where the cavity is dry, pressurise the system on the ground rig and inspect every external joint in zone 123 and along the case drain line in zone 193. 7. Pay particular attention to the clamp at FIN 280GG8, where line movement loosens the joint over time. 8. Where no external leak is found, check the reservoir quantity transducer calibration against a dipped measurement, and where the indication is in error recalibrate and monitor. 9. Where the solenoid at FIN 16GG shows weeping at its connector, renew its seal before the pump is condemned.",
+      "dispatch_note": "Dispatch is permitted with the green system quantity above the minimum dispatch level and with the leak rate established and monitored at every transit. Where the drive pad cavity is wet, replenishment must be recorded on every sector. Rectify within five calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2910110251872",
+        "BE759984-33"
+      ],
+      "fins": [
+        "16GG",
+        "280GG8",
+        "6GG"
+      ],
+      "drawings": [
+        "D29101190176"
+      ],
+      "software": [],
+      "zones": [
+        "123",
+        "193"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-29-10-11-000-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-151295",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "green system quantity",
+      "drive pad cavity",
+      "leak rate threshold",
+      "shaft seal",
+      "replenishment history"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "29-10-11-810-807",
+      "fault_symptom": "Green hydraulic quantity decreasing with fluid found in the accessory gearbox drive pad",
+      "fault_codes": [
+        "291011004",
+        "291011021"
+      ],
+      "warning_messages": [
+        "HYD G RSVR LO LVL"
+      ],
+      "affected_fins": [
+        "16GG",
+        "280GG8"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Engine driven pump shaft seal leaking into the drive pad cavity",
+          "probability_pct": 49,
+          "fin": "16GG"
+        },
+        {
+          "cause": "External joint leak at the case drain line clamp",
+          "probability_pct": 21,
+          "fin": "280GG8"
+        },
+        {
+          "cause": "Reservoir quantity transducer calibration error",
+          "probability_pct": 16,
+          "fin": "6GG"
+        },
+        {
+          "cause": "Solenoid connector seal weeping",
+          "probability_pct": 14,
+          "fin": "16GG"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-Z-29-10-11-400-014-A",
+      "dispatch": {
+        "mel_item": "29-11-01B",
+        "dispatchable": true,
+        "dispatch_condition": "Quantity above the minimum dispatch level, leak rate established and replenishment recorded at every transit"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-Z-29-10-11-810-807",
+    "doc_type": "TSM",
+    "title": "Green System Quantity Decreasing with Fluid Found in the Accessory Gearbox Drive Pad",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2026-07-31",
+      "reason": "A pump standard identification step is placed at the front of the procedure and the spares release may not be opened before it is answered.",
+      "raised_by_pawo": "PAWO-156032-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-11",
+      "title": "Main System — Engine Driven Pump"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-04-09",
+      "released": "1991-07-31",
+      "revised": "2026-07-31",
+      "effective": "2026-08-06"
+    },
+    "abstract": "Fault isolation for a decreasing green system quantity with fluid in the accessory gearbox drive pad, opening with a pump standard identification step because the isolation route and the confirmation threshold both depend on it.",
+    "sections": {
+      "purpose": "This procedure isolates a slowly decreasing green hydraulic system quantity where fluid is found in the accessory gearbox drive pad cavity, and establishes whether the pump shaft seal, an external joint or the quantity indication is at fault.",
+      "fault_description": "The first indication is usually a wet drive pad found at a transit check, or a reservoir that has needed replenishment more often than the fleet average. There is no warning before the reservoir reaches the refill line, because the loss is gradual. On aircraft that carry the redesigned pump case, the rising case drain flow indication gives an earlier and much clearer signal, so the isolation differs depending on the pump standard fitted. Conversion is by attrition, so the two positions of one aircraft are often not at the same standard: the scavenge return is present on one side and absent on the other, and reading it as though both were redesigned points the isolation at the wrong pump.",
+      "isolation_procedure": "1. Identify the pump standard fitted at each position from the data plate before any other action, and write both on the job card. The redesigned case has a scavenge gallery and a case drain flow indication that neither the original nor the interim kit case has, and on a mixed aircraft the two positions may differ. 2. Do not open a spares release until both standards have been established, because the isolation route and the confirmation threshold depend on them. 3. Record the replenishment history and the quantity trend over the last twenty sectors. 4. On a redesigned case, read the case drain flow at the transmitter D2910110594226 and compare it with the band in the referenced data. A high reading confirms the shaft seal at that position and no further isolation is needed. 5. On an original or interim kit case, open the fan cowl and measure the quantity of fluid in the drive pad cavity before wiping it. 6. The threshold is 8 millilitres over ten sectors with the original shaft seal, and 15 millilitres over ten sectors where the interim seal kit of MOD-151295 is fitted, because the kit scavenge lip returns part of the leakage to the case drain. Below the applicable threshold the pump is serviceable. 7. Where the cavity is dry, pressurise the system on the ground rig and inspect every external joint in zone 123 and along the case drain line in zone 193. 8. Pay particular attention to the clamp at FIN 280GG8, where line movement loosens the joint over time. 9. Where no external leak is found, check the reservoir quantity transducer calibration against a dipped measurement, and where the indication is in error recalibrate and monitor. 10. Where the solenoid at FIN 16GG shows weeping at its connector, renew its seal before the pump is condemned.",
+      "dispatch_note": "Dispatch is permitted with the green system quantity above the minimum dispatch level and with the leak rate established and monitored at every transit. Where the drive pad cavity is wet, replenishment must be recorded on every sector. Rectify within five calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2910110251872",
+        "D2910110594226",
+        "GRDE393470-41",
+        "BE759984-33"
+      ],
+      "fins": [
+        "16GG",
+        "280GG8",
+        "6GG"
+      ],
+      "drawings": [
+        "D29101190176"
+      ],
+      "software": [],
+      "zones": [
+        "123",
+        "193"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-29-10-11-000-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-29-1067",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-151295",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "green system quantity",
+      "pump standard identification",
+      "drive pad cavity",
+      "case drain flow",
+      "mixed fleet"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "29-10-11-810-807",
+      "fault_symptom": "Green hydraulic quantity decreasing with fluid found in the accessory gearbox drive pad",
+      "fault_codes": [
+        "291011004",
+        "291011021"
+      ],
+      "warning_messages": [
+        "HYD G RSVR LO LVL"
+      ],
+      "affected_fins": [
+        "16GG",
+        "280GG8"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Engine driven pump shaft seal leaking into the drive pad cavity",
+          "probability_pct": 49,
+          "fin": "16GG"
+        },
+        {
+          "cause": "External joint leak at the case drain line clamp",
+          "probability_pct": 21,
+          "fin": "280GG8"
+        },
+        {
+          "cause": "Reservoir quantity transducer calibration error",
+          "probability_pct": 16,
+          "fin": "6GG"
+        },
+        {
+          "cause": "Solenoid connector seal weeping",
+          "probability_pct": 14,
+          "fin": "16GG"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-29-10-11-400-014-A",
+      "dispatch": {
+        "mel_item": "29-11-01B",
+        "dispatchable": true,
+        "dispatch_condition": "Quantity above the minimum dispatch level, leak rate established and replenishment recorded at every transit"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

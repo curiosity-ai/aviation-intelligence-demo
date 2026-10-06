@@ -1,0 +1,337 @@
+[
+  {
+    "doc_id": "TSM-C-27-50-11-810-803",
+    "doc_type": "TSM",
+    "title": "FLAP SYS FAULT with No Fault Found on the Ground — Fault Isolation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-02-07",
+      "reason": "Original issue of the fault isolation procedure for a flap system fault that clears on the ground.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [
+      "27-80"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2015-04-15",
+      "released": "2016-02-07",
+      "revised": "2016-02-07",
+      "effective": "2016-02-28"
+    },
+    "abstract": "Isolation of a flap system fault that clears on the ground, separating a torque limiter slip on a cold-soaked first extension from a genuine skew or a position sensor rigging error.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a flap system fault message that clears on the ground, and gives the checks that distinguish a torque limiter slip from a genuine asymmetry.",
+      "fault_description": "The message appears during the first flap extension of the day, usually after a cold overnight stop, and does not repeat on later sectors. On the ground the system tests serviceable and no mechanical damage is found. The recorded drive load signature for the reported extension shows a brief torque excursion that the built-in test cannot tell apart from a skew. A genuine skew leaves a permanent position mismatch that does not clear.",
+      "isolation_procedure": "1. Read out and record the fault snapshot for the reported extension. 2. Compare the recorded left and right surface positions in the snapshot; a genuine skew shows a persistent mismatch and a limiter slip does not. 3. If the mismatch is transient on a cold-soaked first extension, the limiter slip is the probable cause; verify the torque limiter setting and do not replace the computer. 4. If the mismatch is persistent, do the flap drive system test and record the transit time for each cycle. 5. If the transit time differs between sides by more than the limit in the task, examine the flap carriages and the drive for mechanical restriction. 6. If the transit times agree, do the flap position sensor rigging check and confirm the reported position against the measured surface position at both stops. 7. If the rigging is outside tolerance, adjust it and repeat the drive system test. 8. If the rigging is correct, replace the drive solenoid and repeat the test. 9. If the fault persists, replace the slat flap control computer.",
+      "dispatch_note": "Dispatch is permitted with one flap control channel inoperative under the applicable minimum equipment list item, with the flap operation restricted to the reduced schedule. Dispatch is not permitted with a persistent position mismatch between the two sides."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759",
+        "D2750008004169",
+        "D2750008046179"
+      ],
+      "fins": [
+        "345EV2",
+        "916EV9",
+        "6803KS4"
+      ],
+      "drawings": [
+        "D27501162228"
+      ],
+      "software": [],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-27-50-11-700-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-27-50-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flap fault",
+      "torque limiter slip",
+      "asymmetry",
+      "no fault found",
+      "position mismatch"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "27-50-11-810-803",
+      "fault_symptom": "FLAP SYS FAULT during the first extension of the day, clears on the ground",
+      "fault_codes": [
+        "275011002",
+        "275011016",
+        "275011031"
+      ],
+      "warning_messages": [
+        "F/CTL FLAP SYS FAULT",
+        "F/CTL FLAP SYS 1 FAULT"
+      ],
+      "affected_fins": [
+        "345EV2",
+        "916EV9",
+        "6803KS4"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Torque limiter slip on a cold-soaked first extension declared as asymmetry",
+          "probability_pct": 55,
+          "fin": "345EV2"
+        },
+        {
+          "cause": "Flap position sensor rigging outside tolerance",
+          "probability_pct": 19,
+          "fin": "6803KS4"
+        },
+        {
+          "cause": "Drive solenoid degraded response",
+          "probability_pct": 14,
+          "fin": "345EV2"
+        },
+        {
+          "cause": "Slat flap control computer internal failure",
+          "probability_pct": 12,
+          "fin": "916EV9"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-C-27-50-11-700-003-A",
+      "dispatch": {
+        "mel_item": "27-50-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One channel inoperative, flap operation restricted to the reduced schedule"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-C-27-50-11-810-803",
+    "doc_type": "TSM",
+    "title": "FLAP SYS FAULT with No Fault Found on the Ground — Fault Isolation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-26",
+      "reason": "Branch on the reported built-in test standard retained as written, with the third branch deferred to the re-issue that the trending standard will need.",
+      "raised_by_pawo": "PAWO-111094-01",
+      "raised_by_finding": "F04",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [
+      "27-80"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2015-04-15",
+      "released": "2016-02-07",
+      "revised": "2026-06-26",
+      "effective": "2026-07-17"
+    },
+    "abstract": "Isolation of a flap system fault that clears on the ground, separating a torque limiter slip on a cold-soaked first extension from a genuine skew or a position sensor rigging error.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a flap system fault message that clears on the ground, and gives the checks that distinguish a torque limiter slip from a genuine asymmetry.",
+      "fault_description": "The message appears during the first flap extension of the day, usually after a cold overnight stop, and does not repeat on later sectors. On the ground the system tests serviceable and no mechanical damage is found. The recorded drive load signature for the reported extension shows a brief torque excursion that the earlier built-in test standard could not tell apart from a skew. A genuine skew leaves a permanent position mismatch that does not clear.",
+      "isolation_procedure": "1. Read out and record the built-in test standard reported by the slat flap control computer and the fault snapshot for the reported extension. 2. Compare the recorded left and right surface positions in the snapshot; a genuine skew shows a persistent mismatch and a limiter slip does not. 3. If the built-in test standard is 6.7 or earlier and the mismatch is transient on a cold-soaked first extension, the limiter slip is the probable cause. 4. In that case do not replace the computer: verify the torque limiter setting and raise the loadable software retrofit with the operator's engineering department. 5. If the mismatch is persistent, do the flap drive system test and record the transit time for each cycle. 6. If the transit time differs between sides by more than the limit in the task, examine the flap carriages and the drive for mechanical restriction. 7. If the transit times agree, do the flap position sensor rigging check and confirm the reported position against the measured surface position at both stops. 8. If the rigging is outside tolerance, adjust it and repeat the drive system test. 9. If the rigging is correct, replace the drive solenoid and repeat the test. 10. If the fault persists, replace the slat flap control computer.",
+      "dispatch_note": "Dispatch is permitted with one flap control channel inoperative under the applicable minimum equipment list item, with the flap operation restricted to the reduced schedule. Dispatch is not permitted with a persistent position mismatch between the two sides. Note that this procedure branches on the built-in test standard reported at step 1 and currently carries two branches. A third standard is in pre-analysis; the branch for it is deliberately not written here and will be added with the manual impact of that change, so that the whole decision is re-written once rather than twice."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759",
+        "D2750008004169",
+        "D2750008046179"
+      ],
+      "fins": [
+        "345EV2",
+        "916EV9",
+        "6803KS4"
+      ],
+      "drawings": [
+        "D27501162228"
+      ],
+      "software": [
+        "LC8C8E906FE"
+      ],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-27-50-11-700-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-27-50-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111094",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flap fault",
+      "torque limiter slip",
+      "asymmetry",
+      "no fault found",
+      "drive load signature"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "27-50-11-810-803",
+      "fault_symptom": "FLAP SYS FAULT during the first extension of the day, clears on the ground",
+      "fault_codes": [
+        "275011002",
+        "275011016",
+        "275011031"
+      ],
+      "warning_messages": [
+        "F/CTL FLAP SYS FAULT",
+        "F/CTL FLAP SYS 1 FAULT"
+      ],
+      "affected_fins": [
+        "345EV2",
+        "916EV9",
+        "6803KS4"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Torque limiter slip on a cold-soaked first extension declared as asymmetry",
+          "probability_pct": 55,
+          "fin": "345EV2"
+        },
+        {
+          "cause": "Flap position sensor rigging outside tolerance",
+          "probability_pct": 19,
+          "fin": "6803KS4"
+        },
+        {
+          "cause": "Drive solenoid degraded response",
+          "probability_pct": 14,
+          "fin": "345EV2"
+        },
+        {
+          "cause": "Slat flap control computer internal failure",
+          "probability_pct": 12,
+          "fin": "916EV9"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-C-27-50-11-700-003-A",
+      "dispatch": {
+        "mel_item": "27-50-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One channel inoperative, flap operation restricted to the reduced schedule"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

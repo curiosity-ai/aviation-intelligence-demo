@@ -1,0 +1,298 @@
+[
+  {
+    "doc_id": "PAWO-111362-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Interim Service Instruction for the Cabin Interphone Crosstalk",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-50",
+      "ata_6d": "23-50-11",
+      "title": "Audio Integrating — Audio Management Unit"
+    },
+    "secondary_ata": [
+      "23-50-12",
+      "44-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [
+        "C00408",
+        "C00479",
+        "C00544",
+        "C00612",
+        "C00680"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-21",
+      "released": "2026-07-16",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the frozen audio management change, run to define the interim service instruction offered to affected operators, and delegated once the return stud allocation problem was documented.",
+    "sections": {
+      "objective": "Define an interim service instruction for the affected operators while the separated-return unit is certified, and establish why the effect appears on some aircraft and not others.",
+      "findings_summary": "Two items were confirmed and the remaining work was delegated. The reason the effect appears on some aircraft and not others is the return stud allocation, which is not consistent across the delivered fleet because two build standards of the ceiling rack were fitted and the wiring sheet documents only one. That is also why the interim instruction cannot simply name a dimming level: the level at which the effect appears depends on which rack an aircraft has. The instruction was therefore written to require the technician to record the allocation before changing anything, which is now also a step in the removal task. The second finding was that the wiring sheet needed to be re-drawn with the return studs shown explicitly, which is unusual for that manual but was judged necessary here.",
+      "next_steps": "Issue the interim instruction with the recording step. Re-draw the wiring sheet with the return studs shown. Delegate the residual work to customer services engineering until the unit is certified."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2350002635675",
+        "EL170895-98",
+        "D2350120530307",
+        "LN760279K5",
+        "LN112642-3C"
+      ],
+      "fins": [
+        "6383RC",
+        "509RC",
+        "7RN1"
+      ],
+      "drawings": [
+        "D23501294034"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "234",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00408",
+        "C00544"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111362",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "crosstalk",
+      "return stud",
+      "interim instruction",
+      "build standard"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111362-01",
+      "subject_mod": "MOD-111362",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-16",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-04-21",
+      "due_date": "2026-07-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "ETGC"
+        ],
+        "estimated_manhours": 55,
+        "spent_manhours": 34
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "23",
+          "92",
+          "44"
+        ],
+        "ata_4d": [
+          "23-50",
+          "92-11",
+          "44-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "AMM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "C00408",
+          "to": "C00680"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2350002635675",
+            "EL170895-98",
+            "D2350120530307"
+          ],
+          "fins": [
+            "6383RC",
+            "509RC",
+            "7RN1"
+          ],
+          "drawings": [
+            "D23501294034"
+          ],
+          "zones": [
+            "111",
+            "234",
+            "265"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "why a shared return produces an effect on some aircraft and not others"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the return stud allocation across build standards",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Draft the interim instruction",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "WDM-C-92-11-21",
+          "doc_type": "WDM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2350002635675",
+              "D2350120530307",
+              "LN112642-3C"
+            ],
+            "shared_fins": [
+              "6383RC",
+              "509RC",
+              "7RN1"
+            ],
+            "shared_zones": [
+              "111",
+              "234",
+              "265"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The wiring sheet documents one return stud allocation while two build standards of the ceiling rack are in service, which is why the crosstalk appears on some aircraft and not others and why an interim instruction cannot simply name a dimming level.",
+          "resolution": "Sheet re-drawn with the return studs shown explicitly and both allocations documented."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-C-23-50-11-000-023-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2350002635675",
+              "EL170895-98",
+              "D2350120530307",
+              "LN760279K5",
+              "LN112642-3C"
+            ],
+            "shared_fins": [
+              "6383RC",
+              "509RC",
+              "7RN1"
+            ],
+            "shared_zones": [
+              "111",
+              "234",
+              "265"
+            ],
+            "shared_ata_6d": [
+              "23-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task now requires the technician to record the return stud allocation as found, which was added as a direct result of this analysis and is the only reliable evidence of what an individual aircraft carries.",
+          "resolution": "Recording step retained and referenced from the interim instruction."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-111938",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "234"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "A data loading proposal in pre-analysis wants to run a new cable through the same aft cabin rack area, and the two installations will have to be coordinated whichever is embodied first.",
+          "resolution": "Passed to the data loading work order as a zone constraint."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Delegated to customer services engineering. The interim instruction cannot name a dimming level because the build standards differ, and that is now documented.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

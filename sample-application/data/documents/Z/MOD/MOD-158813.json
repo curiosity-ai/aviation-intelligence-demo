@@ -1,0 +1,198 @@
+[
+  {
+    "doc_id": "MOD-158813",
+    "doc_type": "MOD",
+    "title": "Ka-Band Connectivity Server and Ceiling Wireless Access Point Installation for Evo Aircraft",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-30",
+      "ata_6d": "44-30-11",
+      "title": "External Communication — Onboard Connectivity Server"
+    },
+    "secondary_ata": [
+      "24-30",
+      "33-20",
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-1226",
+        "VDK-1232",
+        "PYR-1127G",
+        "PYR-1133G"
+      ],
+      "operators": [
+        "SOL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-02-06",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposed factory solution for broadband connectivity on Evo aircraft, covering the fuselage antenna, the server, four ceiling access points and the tie-in to the cabin intercommunication system under a single approval.",
+    "sections": {
+      "reason": "An operator with ten Evo aircraft asked for a factory solution after concluding that the third-party installation it had been quoted would need a separate electrical load analysis and a separate cabin layout approval, adding around nine months to a programme that is already sold into a summer season. Two other customers have since made the same request. There is no in-service issue behind this modification; it exists because the aftermarket route does not fit the cabin arrangements these operators are simultaneously buying, and because the electrical margin the aftermarket vendor assumed is not present on the aircraft as delivered.",
+      "description": "A Ka-band antenna is installed on the fuselage crown above the forward cabin and connected to the onboard connectivity server mounted in the stowage assembly D4430002603184 in the ceiling void. Four wireless access points are carried in the partition kit D4430121624211 and the monument fittings D4430125051276, with the vendor decor panel JAR899476-98 closing the ceiling aperture at each position. Power is taken from the transformer rectifier unit harness D2430112027785, which is re-terminated at the contactor FIN 7GX. The external communication fitting FIN 40RM3 carries the server rack and the cabin attendant panel trim FIN 313RM is re-used for the crew control. The connectivity server runs the operational load LG9NEA81802 with the navigation database LE8N1773245, and the scene and announcement interface is provided through the cabin intercommunication database LG9N7BD4A16 addressed at the director FIN 3RK. Work is done in zones 215, 274, 291 and 294. Drawings D44301167656 issue G, D44301273500 issue D and D44301273782 issue B carry the server, the harness and the access point schematic.",
+      "effects": "Estimated mass increase of 78 kg per aircraft including the antenna, the radome adapter plate and the harness, of which roughly two-thirds sits forward of the centre of gravity. Electrical load increases by 2400 VA in the cruise case and by 3100 VA during antenna acquisition, which is the number that has to be reconciled with the direct current generation capacity actually installed. The installation is not interchangeable with any aftermarket fitment. Cruise drag increases by an estimated 0.15 per cent, which the performance database must reflect. AMM, IPC and WDM content for ATA 44-30, 24-30 and 92-31 will require creation or re-issue.",
+      "open_points": "Pre-analysis must reconcile the connectivity load with the direct current generation study now under way, confirm that the cabin intercommunication database load can carry both the lighting scenes already in service and the new announcement interface without a version conflict, and establish whether the ceiling void volume is already committed to another cabin change."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4430002603184",
+        "D4430121624211",
+        "D4430125051276",
+        "JAR899476-98",
+        "D2430112027785"
+      ],
+      "fins": [
+        "40RM3",
+        "3RK",
+        "7GX",
+        "313RM"
+      ],
+      "drawings": [
+        "D44301167656",
+        "D44301273500",
+        "D44301273782"
+      ],
+      "software": [
+        "LG9NEA81802",
+        "LE8N1773245",
+        "LG9N7BD4A16"
+      ],
+      "zones": [
+        "215",
+        "274",
+        "291",
+        "294"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z09301",
+        "Z11182"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-Z-260058",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      }
+    ],
+    "keywords": [
+      "ka-band antenna",
+      "connectivity server",
+      "wireless access point",
+      "ceiling void",
+      "electrical load"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Cabin Systems Design"
+    },
+    "type_data": {
+      "mod_number": 158813,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1431",
+          "CS 25.581"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 78.0,
+      "balance_impact": "Predominantly forward installation, CG shift 0.22 % MAC forward",
+      "electrical_load_impact_va": 2400,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D4430121624211",
+        "D4430125051276",
+        "JAR899476-98"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4430002603184",
+        "D2430112027785"
+      ],
+      "fins_affected": [
+        "40RM3",
+        "7GX",
+        "313RM",
+        "3RK"
+      ],
+      "software_affected": [
+        "LG9NEA81802",
+        "LE8N1773245",
+        "LG9N7BD4A16"
+      ],
+      "estimated_manhours": 420,
+      "estimated_cost_keur": 3400,
+      "lead_time_weeks": 56,
+      "production_impact": "Production cut-in to be assessed once the retrofit standard is frozen",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

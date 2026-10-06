@@ -1,0 +1,49 @@
+<!--
+  Reference template — see ../SKILL.md and curiosity-toolchain-and-packages.
+
+  The front end is C# compiled to JavaScript by the TRANSPOSE compiler, and rendered with the
+  TESSERAE component library. Note what is different from an ordinary project:
+
+    * the SDK is Transpose.Build.Target, not Microsoft.NET.Sdk;
+    * the target framework is netstandard2.0, with Transpose.BCL standing in for the BCL;
+    * the build shells out to a GLOBAL DOTNET TOOL — install it before building:
+          dotnet tool install --global Transpose.Compiler
+          export PATH="$PATH:$HOME/.dotnet/tools"
+      A missing tool surfaces as MSB3073 / exit code 127, not as a C# error.
+
+  Versions were current at the time of writing. UPDATE TO THE LATEST RELEASE FIRST, in its own
+  commit, then pin what you resolve.
+-->
+<Project Sdk="Transpose.Build.Target/26.7.2692">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <!-- CS1998 async-without-await, CA2007 ConfigureAwait: both are noise in transpiled
+         front-end code, and the Curiosity projects disable them too. -->
+    <NoWarn>CS1998,CA2007</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- App.Initialize, App.DefaultSettings, the sidebar, routing, NodeRendererBase,
+         SearchArea, ChatView -->
+    <PackageReference Include="Curiosity.FrontEnd"       Version="26.8.3828" />
+    <!-- helpers, request plumbing, UID128, route state -->
+    <PackageReference Include="Curiosity.FrontEnd.Core"  Version="26.8.3828" />
+    <!-- the typed server calls: API.Query, API.Nodes, API.ChatAI, API.Endpoints -->
+    <PackageReference Include="Curiosity.FrontEnd.API"   Version="26.8.3828" />
+    <!-- the admin area, lazily loaded -->
+    <PackageReference Include="Curiosity.FrontEnd.Admin" Version="26.8.3828" />
+    <!-- the BCL subset Transpose emits against -->
+    <PackageReference Include="Transpose.BCL"            Version="26.7.3303" />
+    <!-- the UI component library. Pin to what the Curiosity packages above were built
+         against; going ahead of it is only safe while the additions are additive. -->
+    <PackageReference Include="Tesserae"                 Version="2026.8.69318" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="tps.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,171 @@
+[
+  {
+    "doc_id": "AMM-M-34-50-11-200-036-A",
+    "doc_type": "AMM",
+    "title": "Multi-Mode Receiver — Operational Check",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2022-02-15",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-03-08",
+      "released": "2017-12-05",
+      "revised": "2022-02-15",
+      "effective": "2022-03-14"
+    },
+    "abstract": "Operational check of the multi-mode receiver, covering satellite acquisition, augmentation status and the database identification, with the acceptance times that depend on the routing and database standard fitted.",
+    "sections": {
+      "purpose": "This task gives the operational check of the multi-mode receiver after installation, after a database load or following a crew report of slow acquisition or loss of the augmented position solution.",
+      "job_setup_note": "The aircraft must be parked with a clear view of the sky; the check cannot be done in a hangar without the signal simulator. Note before you start which routing and database standard the aircraft carries, because the acceptance time for the first fix is three minutes on the aligned standard and eleven minutes on the delivered one, and using the wrong figure will either fail a serviceable receiver or pass an unserviceable one.",
+      "procedure": "1. Confirm the aircraft position is clear of buildings and that no ground equipment is transmitting close to the antenna. 2. Restore power to the receiver and let it initialise. 3. Read and record the database identification reported by the receiver. 4. Do the acquisition check and record the time to the first fix. 5. Confirm the number of satellites tracked is at least seven. 6. Confirm the augmentation status is reported as available. 7. CAUTION: DO NOT MOVE THE AIRCRAFT DURING THE CHECK. A POSITION CHANGE RESTARTS THE ACQUISITION AND INVALIDATES THE RECORDED TIME. 8. Do the position comparison against the surveyed gate position and confirm the error is within the limit in the table. 9. On aircraft with the delivered routing, do a taxi check with the ground equipment nearby if the complaint relates to ground manoeuvring. 10. WARNING: DO NOT USE THE SIGNAL SIMULATOR WITH THE AIRCRAFT ANTENNA RADIATING TO AN OPEN AREA. THE TRANSMISSION IS A LICENSED EMISSION. 11. Record the results and clear any maintenance message raised.",
+      "close_out": "Confirm the receiver reports no fault and that the flight deck shows a valid position. Record the database identification, the first fix time and the position error in the aircraft technical log. Return the signal simulator to the store."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450118136339",
+        "D3450119360685"
+      ],
+      "fins": [
+        "1038DA",
+        "3TR"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LA4PCFC53E5",
+        "LE4PC90617C"
+      ],
+      "zones": [
+        "183",
+        "222"
+      ],
+      "figures": [
+        "FIG-34-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-34-50-11-700-037-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-M-34-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-168155",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "multi-mode receiver",
+      "operational check",
+      "acquisition time",
+      "augmentation",
+      "database identification"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "34-50-11-200-036-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft; acceptance times differ between pre and post MOD-168155 standards",
+      "manhours": 2.0,
+      "personnel": 1,
+      "elapsed_time_hours": 1.5,
+      "access": {
+        "zones": [
+          "183",
+          "222"
+        ],
+        "access_panels": [
+          "183CL",
+          "222CR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not radiate the signal simulator into an open area.",
+          "Do not move the aircraft during the check."
+        ],
+        "tooling": [
+          {
+            "reference": "98D34501-381",
+            "description": "Satellite signal simulator"
+          },
+          {
+            "reference": "98D34501-330",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-34-50-11-700-037-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,291 @@
+[
+  {
+    "doc_id": "PAWO-156520-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Electronic Flight Bag Standard 3 Unit and Integrated Antenna",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-23",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-20",
+      "ata_6d": "46-20-11",
+      "title": "Flight Deck Information — Electronic Flight Bag Unit"
+    },
+    "secondary_ata": [
+      "46-20-12",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-31",
+      "released": "2026-07-23",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the standard 3 electronic flight bag, opened to test whether the unit bulletin could be embodied without the rack provision, and cancelled once the antenna clearance measurement settled it.",
+    "sections": {
+      "objective": "Operators wanting the faster rendering asked whether the standard 3 unit could be fitted into the existing rack position and the antenna provision deferred, on the argument that the airline data link is a separate function they do not all use. The round was opened to test that.",
+      "findings_summary": "Three items were confirmed and the round was stopped once the second one was measured. The unit bulletin explicitly requires the provision bulletin to have been embodied, and that requirement is not administrative: the integrated antenna fouls the sidewall structure in the earlier rack position by a margin that the installation drawing shows as negative. The provision bulletin carries the bonding requirement that the integrated antenna depends on for its ground plane, so even a unit fitted with the antenna disconnected would fail its own installation check. The trouble shooting procedure already tells the engineer that a lost data link on a standard 3 installation is most often a bonding problem, which is the same finding arrived at from the other direction. The round was cancelled rather than completed because there was nothing left to analyse.",
+      "next_steps": "Tell the requesting operators that the provision is not deferrable and that it is an overnight task. No change to either bulletin. Close the round."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4620114957774",
+        "D4620116309716",
+        "D4620121177406"
+      ],
+      "fins": [
+        "2IS8",
+        "37IS6"
+      ],
+      "drawings": [
+        "D46201115557"
+      ],
+      "software": [
+        "LE3NF0F3C1D",
+        "LF2N1D4CB64"
+      ],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-156520",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "provision deferral",
+      "antenna clearance",
+      "bonding ground plane",
+      "cancelled round"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-156520-01",
+      "subject_mod": "MOD-156520",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-23",
+      "outcome": "REJECTED",
+      "raised_date": "2026-03-31",
+      "due_date": "2026-08-14",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 41
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "46"
+        ],
+        "ata_4d": [
+          "46-20",
+          "46-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D4620114957774",
+            "D4620116309716",
+            "D4620121177406"
+          ],
+          "fins": [
+            "2IS8",
+            "37IS6"
+          ],
+          "drawings": [
+            "D46201115557"
+          ],
+          "zones": [
+            "211",
+            "214"
+          ],
+          "software": [
+            "LE3NF0F3C1D"
+          ]
+        },
+        "similarity_seeds": [
+          "integrated antenna depending on rack bonding for its ground plane",
+          "provision bulletin deferred so that a unit change can be done on the line"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Measure the antenna clearance in the earlier rack position",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check what the provision bulletin carries beyond the rack move",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-46-1009",
+          "doc_type": "SB",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4620114957774"
+            ],
+            "shared_fins": [
+              "2IS8"
+            ],
+            "shared_zones": [
+              "211"
+            ],
+            "shared_ata_6d": [
+              "46-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The unit bulletin requires the provision bulletin to have been embodied, and the requirement is physical: the integrated antenna fouls the sidewall structure in the earlier rack position.",
+          "resolution": "Tell the operators that the provision is not deferrable."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "ZPH-46-1005",
+          "doc_type": "SB",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4620121177406"
+            ],
+            "shared_fins": [
+              "2IS8"
+            ],
+            "shared_zones": [
+              "214"
+            ],
+            "shared_ata_6d": [
+              "46-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The provision bulletin carries the bonding requirement that the integrated antenna depends on for its ground plane, so a unit fitted with the antenna disconnected would still fail its installation check.",
+          "resolution": "No change; the coupling is correct as published."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-Z-46-20-11-810-816",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "37IS6",
+              "2IS8"
+            ],
+            "shared_zones": [
+              "214"
+            ],
+            "shared_ata_6d": [
+              "46-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure already tells the engineer that a lost data link on a standard 3 installation is most often a bonding problem, which is the same finding reached from the other direction.",
+          "resolution": "No change required."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-34-1211",
+          "doc_type": "SB",
+          "reason": "Surfaced by the shared vocabulary of an application software load and an antenna installation, but it loads the multi-mode receiver application and shares no rack, no antenna and no bonding interface with the electronic flight bag."
+        }
+      ],
+      "conclusion": "Cancelled once the antenna clearance was measured. The provision cannot be deferred and there was no engineering question left to answer.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,245 @@
+[
+  {
+    "doc_id": "FCOM-C-DSC-23-70-01",
+    "doc_type": "FCOM",
+    "title": "Datalink — Description of the Controller-Pilot Message Set and Log-On",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-03-01",
+      "reason": "Original issue of the crew description of the datalink message set and log-on.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-00",
+      "title": "Datalink — General"
+    },
+    "secondary_ata": [
+      "23-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-07-17",
+      "released": "2018-03-01",
+      "revised": "2018-03-01",
+      "effective": "2018-03-22"
+    },
+    "abstract": "Flight crew description of the datalink pages, the log-on sequence to a controlling authority with its immediate failure annunciation, the message types the crew can send and receive, and the automatic position reporting.",
+    "sections": {
+      "purpose": "To describe to the flight crew how the datalink pages are organised, how a log-on to a controlling authority is made and confirmed, and what happens automatically once the log-on is established.",
+      "description": "Datalink gives you a written exchange with the controlling authority in place of a voice call. Two pages carry it. The log-on page is where you enter the four-letter authority code and send the request; the status line answers with CONNECTING, then with the authority name once the connection is accepted. If the request is not accepted the status line goes to NO LINK straight away and the amber prompt is shown; send the request again if you want to try. From that point the message page shows incoming clearances at the top of the list, with an amber attention prompt on the glareshield and a single chime. You accept, reject or ask for standby with the three line keys under the message. An accepted route clearance is loaded into the active plan only after you confirm it on the flight plan page, so nothing changes under you. Position reporting runs on its own once the log-on is established and does not appear on the message page at all. If the connection drops the status line reverts to NO LINK and the amber prompt is shown once; revert to voice and log on again when the next authority is in range.",
+      "crew_procedure": "Before departure, on the log-on page enter the departure authority code and select SEND. If NO LINK is shown, send the request again; two or three attempts are normal at a busy field. Confirm that the status line shows the authority name before you use datalink for a clearance. In the cruise, when the attention prompt appears, read the message on the message page, confirm it against the flight plan and select ACCEPT, REJECT or STANDBY within the time shown. Load an accepted route change on the flight plan page and check it before you activate it. Approaching a boundary, log on to the next authority when it is within range; the previous connection closes itself. If NO LINK is shown, revert to voice and do not assume a message has been delivered."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-C-PRO-23-20-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink",
+      "log-on",
+      "clearance message",
+      "attention prompt",
+      "position reporting"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Systems Description — Communications",
+      "entry_number": "DSC-COM-23-70-01",
+      "flight_phase": "ALL_PHASES",
+      "operational_impact": "PROCEDURE_CHANGE",
+      "crew_action": "Log on to the controlling authority and manage clearance messages from the message page.",
+      "affects_qrh": false,
+      "affects_mel": true,
+      "mel_items": [
+        "23-70-01A"
+      ],
+      "systems": [
+        "ATC Datalink Router",
+        "Multifunction Display",
+        "Satellite Data Unit"
+      ],
+      "related_entries": [
+        "FCOM-C-PRO-23-20-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "FCOM-C-DSC-23-70-01",
+    "doc_type": "FCOM",
+    "title": "Datalink — Description of the Controller-Pilot Message Set and Log-On",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-02-10",
+      "reason": "Log-on description brought to the second router standard, in which a failed request is retried three times automatically before NO LINK is annunciated.",
+      "raised_by_pawo": "PAWO-111225-01",
+      "raised_by_finding": "F04",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-00",
+      "title": "Datalink — General"
+    },
+    "secondary_ata": [
+      "23-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-07-17",
+      "released": "2018-03-01",
+      "revised": "2026-02-10",
+      "effective": "2026-03-03"
+    },
+    "abstract": "Flight crew description of the datalink pages, the log-on sequence with its three automatic retries before NO LINK is shown, the message types the crew can send and receive, and the automatic position reporting.",
+    "sections": {
+      "purpose": "To describe to the flight crew how the datalink pages are organised, how a log-on to a controlling authority is made and confirmed, and what happens automatically once the log-on is established.",
+      "description": "Datalink gives you a written exchange with the controlling authority in place of a voice call. Two pages carry it. The log-on page is where you enter the four-letter authority code and send the request; the status line answers with CONNECTING, then with the authority name once the connection is accepted. A request that is not accepted is now retried automatically, three times at twenty second intervals, and CONNECTING stays displayed throughout. NO LINK and the amber prompt appear only when all three retries have failed, which can be a full minute after you pressed SEND. Do not send the request again while CONNECTING is displayed: a manual request restarts the sequence and makes the wait longer, which is the opposite of what it looks like. From that point the message page shows incoming clearances at the top of the list, with an amber attention prompt on the glareshield and a single chime. You accept, reject or ask for standby with the three line keys under the message. An accepted route clearance is loaded into the active plan only after you confirm it on the flight plan page, so nothing changes under you. Position reporting runs on its own once the log-on is established and does not appear on the message page at all. If the connection drops the status line reverts to NO LINK and the amber prompt is shown once; revert to voice and log on again when the next authority is in range.",
+      "crew_procedure": "Before departure, on the log-on page enter the departure authority code and select SEND. Wait for the status line to settle: CONNECTING can persist for up to a minute while the automatic retries run, and NO LINK before that time has not been reached. Confirm that the status line shows the authority name before you use datalink for a clearance. In the cruise, when the attention prompt appears, read the message on the message page, confirm it against the flight plan and select ACCEPT, REJECT or STANDBY within the time shown. Load an accepted route change on the flight plan page and check it before you activate it. Approaching a boundary, log on to the next authority when it is within range; the previous connection closes itself. If NO LINK is shown after the retries, revert to voice and do not assume a message has been delivered."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-C-PRO-23-20-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111225",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink",
+      "log-on retry",
+      "clearance message",
+      "attention prompt",
+      "position reporting"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Systems Description — Communications",
+      "entry_number": "DSC-COM-23-70-01",
+      "flight_phase": "ALL_PHASES",
+      "operational_impact": "PROCEDURE_CHANGE",
+      "crew_action": "Log on to the controlling authority and manage clearance messages from the message page.",
+      "affects_qrh": false,
+      "affects_mel": true,
+      "mel_items": [
+        "23-70-01A"
+      ],
+      "systems": [
+        "ATC Datalink Router",
+        "Multifunction Display",
+        "Satellite Data Unit"
+      ],
+      "related_entries": [
+        "FCOM-C-PRO-23-20-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

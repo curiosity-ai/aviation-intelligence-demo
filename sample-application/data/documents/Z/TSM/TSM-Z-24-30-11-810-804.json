@@ -1,0 +1,183 @@
+[
+  {
+    "doc_id": "TSM-Z-24-30-11-810-804",
+    "doc_type": "TSM",
+    "title": "DC BUS Fault with a Transformer Rectifier Unit Reported Inoperative",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-11-26",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-30",
+      "ata_6d": "24-30-11",
+      "title": "DC Generation — Transformer Rectifier Unit"
+    },
+    "secondary_ata": [
+      "24-60"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-06-19",
+      "released": "2018-11-26",
+      "revised": null,
+      "effective": "2018-12-17"
+    },
+    "abstract": "Fault isolation for a direct current bus fault with a transformer rectifier unit reported inoperative, separating a thermally damaged feeder lug from a genuine unit failure or a load shed condition.",
+    "sections": {
+      "purpose": "This procedure isolates a direct current bus fault where one transformer rectifier unit is reported inoperative, and identifies whether the cause is the unit, the feeder termination or a load condition.",
+      "fault_description": "The fault typically appears during a high-load ground phase with the auxiliary power unit supplying the aircraft and the cabin fully powered. The reported unit drops off the bus and returns after a short period, which points at a thermal cut-back rather than a failure. On aircraft carrying additional cabin equipment installed after delivery, the same picture can be produced by a genuine overload with a serviceable unit, so the load must be measured before any component is changed.",
+      "isolation_procedure": "1. Read the fault memory and record which unit and which bus is affected, with the flight phase and the electrical configuration. 2. Measure the direct current load on the affected bus in the reported configuration and compare it with the unit rating. 3. If the load is above 90 per cent of the rating, the condition is an overload and not a unit failure: report it to engineering with the measured value. 4. If the load is inside the rating, isolate the battery and prove the terminal dead. 5. Inspect the feeder lugs at the contactor FIN 7GX and at the harness FIN 28PC for discolouration, and photograph them. 6. Any discolouration at a lug is the cause: renew the lug and the local harness section and re-torque the terminal. 7. If the lugs are clean, measure the terminal torque against the value in the referenced data and re-torque if it is low. 8. Measure the unit output ripple with the aircraft on external power. 9. Ripple above the limit indicates a failed rectifier stage: replace the unit. 10. If the unit output is clean and the lugs are sound, inspect the lower cable assembly at FIN 846GX for chafing under the cabin floor.",
+      "dispatch_note": "Dispatch is permitted with one transformer rectifier unit inoperative provided the remaining units are serviceable and the affected bus is fed from the essential transfer. Extended twin operations are not permitted. Rectify within two calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2430112027785",
+        "D2430112037168",
+        "PE30449-35",
+        "AGS708559-04"
+      ],
+      "fins": [
+        "7GX",
+        "28PC",
+        "846GX"
+      ],
+      "drawings": [
+        "D24300067492"
+      ],
+      "software": [],
+      "zones": [
+        "274",
+        "244",
+        "222"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-24-30-11-000-019-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-158190",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "transformer rectifier unit",
+      "feeder lug",
+      "load measurement",
+      "output ripple",
+      "thermal cutback"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "24-30-11-810-804",
+      "fault_symptom": "ELEC TR 1 FAULT displayed on ECAM during a high load ground phase",
+      "fault_codes": [
+        "243011003",
+        "243011018"
+      ],
+      "warning_messages": [
+        "ELEC TR 1 FAULT",
+        "ELEC DC BUS 1 FAULT"
+      ],
+      "affected_fins": [
+        "7GX",
+        "28PC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Bus load above 90 per cent of the unit rating in the reported configuration",
+          "probability_pct": 31,
+          "fin": "7GX"
+        },
+        {
+          "cause": "Thermally damaged feeder lug at the contactor terminal",
+          "probability_pct": 29,
+          "fin": "7GX"
+        },
+        {
+          "cause": "Terminal torque below the specified value",
+          "probability_pct": 18,
+          "fin": "28PC"
+        },
+        {
+          "cause": "Rectifier stage failure giving output ripple above the limit",
+          "probability_pct": 14,
+          "fin": "28PC"
+        },
+        {
+          "cause": "Lower cable assembly chafing under the cabin floor",
+          "probability_pct": 8,
+          "fin": "846GX"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-24-30-11-000-019-A",
+      "dispatch": {
+        "mel_item": "24-31-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One transformer rectifier unit inoperative, affected bus fed from the essential transfer, extended twin operations not permitted"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

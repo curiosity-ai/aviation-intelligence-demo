@@ -1,0 +1,166 @@
+[
+  {
+    "doc_id": "AMM-Z-92-11-12-200-047-A",
+    "doc_type": "AMM",
+    "title": "Inspection of the Overhead Panel Wiring and the Circuit Breaker Bank Terminations",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-12-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-11",
+      "ata_6d": "92-11-12",
+      "title": "Flight Compartment Wiring — Overhead Panel Wiring"
+    },
+    "secondary_ata": [
+      "24-50",
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-05-19",
+      "released": "2022-12-08",
+      "revised": null,
+      "effective": "2022-12-29"
+    },
+    "abstract": "Inspection of the overhead panel wiring and the circuit breaker bank terminations, covering bundle support, separation between criticality classes and the torque check on the bus bar terminations.",
+    "sections": {
+      "purpose": "This task inspects the overhead panel wiring loom, its supports and the circuit breaker bank terminations, and confirms the separation between circuits of different criticality.",
+      "job_setup_note": "The overhead panel must be lowered on its hinge and supported; it must never be allowed to hang on the loom. The loom on the current build standard carries essential and non-essential circuits in one bundle, so the separation check is a measurement against the wiring sheet and not a judgement. De-power the aircraft and confirm at the bus bar before any termination is touched.",
+      "procedure": "1. Remove ground power and confirm zero volts at the bus bar FIN 6545VU1. WARNING: CONFIRM ZERO VOLTS AT THE BUS BAR ITSELF, NOT AT THE PANEL INDICATION. THE PANEL INDICATION CAN BE FED FROM A SEPARATE SOURCE. 2. Get access in zones 211 and 214 and lower the overhead panel on its hinge. 3. Support the panel on the prop and confirm that the loom carries no weight. CAUTION: DO NOT LET THE OVERHEAD PANEL HANG ON THE LOOM. THE TERMINATIONS AT THE CIRCUIT BREAKER BANK WILL BE OVERLOADED AND THE DAMAGE WILL NOT BE VISIBLE. 4. Do a detailed visual inspection of the loom over its full length for chafing, for sleeve damage and for heat marking. 5. Check every support at the bracket D9211126648738 for security and for correct clamp section. 6. Measure the separation between the essential and the non-essential bundles at the three stations given in the instructions and record the readings. 7. Check the terminal block D9211126163344 for security and for discolouration at any terminal. 8. Do a torque check on the bus bar terminations to the value in the instructions. 9. Check the circuit breaker at FIN 156VU2 and the relay at FIN 4784VC for security and for correct labelling. 10. Check the cable assembly D9211129111846 at the panel hinge crossing for repeated flexing damage. 11. Do an insulation resistance check on the circuits listed in the instructions. 12. Record every finding with its station.",
+      "close_out": "Raise the overhead panel and confirm that the loom is free and that no wire is trapped at the hinge. Remove the prop. Record the separation readings, the torque check result and the insulation resistance values on the maintenance record. Report any separation below the wiring sheet value before the aircraft is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9211126163344",
+        "D9211126648738",
+        "D9211129111846"
+      ],
+      "fins": [
+        "156VU2",
+        "4784VC",
+        "6545VU1"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "WDM-Z-92-11-12",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-159880",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "overhead panel wiring",
+      "circuit breaker bank",
+      "bundle separation",
+      "termination torque",
+      "hinge crossing"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "92-11-12-200-047-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. The separation values differ where the loom has been segregated by criticality.",
+      "manhours": 7.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "211",
+          "214"
+        ],
+        "access_panels": [
+          "211CR",
+          "214CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Confirm zero volts at the bus bar itself before any termination is touched.",
+          "Support the overhead panel on the prop.",
+          "Do not let the panel hang on the loom."
+        ],
+        "tooling": [
+          {
+            "reference": "Overhead panel support prop 98D92111-047",
+            "description": "Panel support"
+          },
+          {
+            "reference": "Insulation resistance tester",
+            "description": "Circuit check"
+          },
+          {
+            "reference": "Torque screwdriver 0.5-5 Nm",
+            "description": "Termination torque"
+          }
+        ],
+        "consumables": [
+          "Insulation sleeving, PTFE",
+          "Contact cleaner, non residue",
+          "Lint free wipes"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,181 @@
+[
+  {
+    "doc_id": "MOD-142240",
+    "doc_type": "MOD",
+    "title": "Brake Control Unit Replacement on Withdrawal of the Original Semiconductor Supply",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2020-07-08",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40-11",
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00152",
+      "production_cut_in_date": "2019-05-30",
+      "retrofit_via": [
+        "TTN-32-1055"
+      ]
+    },
+    "dates": {
+      "created": "2017-01-09",
+      "released": "2018-02-21",
+      "revised": "2020-07-08",
+      "effective": "2020-08-01"
+    },
+    "abstract": "Introduction of a redesigned brake and steering control unit after the original device family went out of production, together with the parameter and operational software standards that the new hardware requires.",
+    "sections": {
+      "reason": "The supplier of the signal conditioning devices used in the original brake and steering control unit issued a last-time-buy notice in 2016 with a final delivery date of 2019. The stock secured at that point covered repair demand to approximately 2027 on the then-current removal rate, which left no margin for the remaining life of the fleet. No form-fit-function substitute was qualified for the original board layout, so a redesign of the unit was the only route that kept the function supportable.",
+      "description": "The control unit is rebuilt around a current device family on a new motherboard, keeping the connector layout, the mounting tray and the cooling arrangement unchanged. Inside the hydraulic interface the solenoid manifold D3240129015656 is retained; the servo valve sub-assembly D3240126923160 is replaced by an item with a tighter null bias tolerance to suit the new drive stage, and the superseded restrictor D3240129963184 is deleted because its damping function is now performed in software. The unit runs operational software LA7RED5A42D and parameter set LD8R083EA4E, both of which are re-issued for the new hardware and are not loadable onto the original unit. The hose run at FIN 2GM2 is unchanged. Installation is in the left and right main gear bays, zones 734 and 754, and the electrical interface follows drawing D32401274246 without change.",
+      "effects": "Mass reduction of 1.6 kg per aircraft over two units. Electrical load is unchanged in steady state and 12 VA lower during the built-in test sequence. The new unit is not interchangeable with the original because the software standards are mutually exclusive; an aircraft must carry a matched pair. Despatch with one unit inoperative remains available under the existing minimum equipment list entry. Brake control troubleshooting content requires update because the built-in test message set is different, and the illustrated parts content for the unit and its hydraulic interface changes.",
+      "embodiment_note": "Cut in at MSN T00152 in May 2019. Retrofit is by service bulletin and is a line task of about nine hours per aircraft, with both units and both software standards changed in the same visit. The removed units are returned to the supplier for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126923160",
+        "D3240129015656",
+        "D3240129963184",
+        "AGS146031K9"
+      ],
+      "fins": [
+        "2GM2"
+      ],
+      "drawings": [
+        "D32401274246"
+      ],
+      "software": [
+        "LA7RED5A42D",
+        "LD8R083EA4E"
+      ],
+      "zones": [
+        "734",
+        "754"
+      ],
+      "figures": [
+        "FIG-32-40-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00152"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-32-1055",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-T-32-40-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "last-time-buy",
+      "semiconductor obsolescence",
+      "parameter set",
+      "main gear bay"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 142240,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.735"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": -1.6,
+      "balance_impact": "Negligible, units are symmetrically installed",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3240126923160"
+      ],
+      "parts_removed": [
+        "D3240129963184"
+      ],
+      "parts_modified": [
+        "D3240129015656"
+      ],
+      "fins_affected": [
+        "2GM2"
+      ],
+      "software_affected": [
+        "LA7RED5A42D",
+        "LD8R083EA4E"
+      ],
+      "estimated_manhours": 94,
+      "estimated_cost_keur": 2400,
+      "lead_time_weeks": 68,
+      "production_impact": "Cut-in at MSN T00152; no line stoppage, the unit is a bought-in item",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

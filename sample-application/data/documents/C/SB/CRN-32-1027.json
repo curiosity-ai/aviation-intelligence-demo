@@ -1,0 +1,217 @@
+[
+  {
+    "doc_id": "CRN-32-1027",
+    "doc_type": "SB",
+    "title": "Landing Gear — Brake and Steering Control Unit — Loading of Configuration Standard 1.5",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-05-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00479"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-111085"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-10-25",
+      "released": "2022-05-30",
+      "revised": null,
+      "effective": "2022-06-20"
+    },
+    "abstract": "Loading of the brake control configuration that delays anti-skid authority until both main wheels have spun up, with a regulator replacement on aircraft whose response time is outside the tolerance the new law assumes.",
+    "sections": {
+      "planning_reason": "Twenty-nine reports of a brief brake pressure transient at touchdown were received over two winters, concentrated on operators using contaminated runways. Recorded data shows the anti-skid loop taking authority before the second main wheel has spun up, so the control law reads the still-slow wheel as a locked wheel and releases pressure the crew has not commanded. No runway excursion resulted, but three operators raised it as a handling concern and the transient is clearly felt on the flight deck.",
+      "description": "The brake and steering control unit is loaded with configuration standard 1.5, which delays anti-skid authority until both main gear wheels report spin-up or until 1.8 seconds after weight-on-wheels. On aircraft whose pressure regulator response time is outside the tolerance the new law assumes, the regulator is replaced and the accumulator is re-charged to the higher pre-load.",
+      "accomplishment_summary": "Put the aircraft on jacks or use the wheel rotation rig, and make the brake system safe. Do the pre-load measurement on the accumulator D3240121944667 and record the value. Measure the response time of the pressure regulator D3240120310957 to the method in the accomplishment instructions. If the response time is outside the tolerance, replace the regulator and install the clamp D3240128079286 on the new sense line run. Re-charge the accumulator to the higher pre-load. Load the configuration standard LA5CCE9DE6B into the brake and steering control unit through the maintenance port. Do the anti-skid system test with the spin-up simulation step. Check the fault memory of the unit is clear and confirm the correct configuration part is reported. Lower the aircraft and record the embodiment.",
+      "effectivity_note": "Applicable to aircraft MSN C00001 through C00479 that are pre modification standard. Aircraft delivered from MSN C00482 onward carry the configuration from build. Aircraft that meet the regulator response tolerance need only the configuration load and can be accomplished at line level.",
+      "material_note": "No kit is issued for the configuration load. Kit K3240-1027-01, containing the regulator, the clamp and the accumulator charging adapter, is ordered only for aircraft that fail the response time measurement, which is expected to be about a third of the effectivity."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240120310957",
+        "D3240121944667",
+        "D3240128079286"
+      ],
+      "fins": [
+        "210WS9",
+        "248WS"
+      ],
+      "drawings": [
+        "D32401216639"
+      ],
+      "software": [
+        "LA5CCE9DE6B"
+      ],
+      "zones": [
+        "721",
+        "734",
+        "771"
+      ],
+      "figures": [
+        "FIG-32-40-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00479",
+        "C00482"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111085",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-000-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-400-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-700-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-32-40-12-810-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "anti-skid",
+      "configuration load",
+      "touchdown transient",
+      "pressure regulator",
+      "spin-up"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-32-1027",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled A-check, or within 24 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-111085",
+      "manpower": {
+        "elapsed_time_hours": 10,
+        "manhours": 16,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K3240-1027-01",
+        "kit_available_from": "2022-08-15",
+        "parts_required": [
+          {
+            "part_number": "D3240120310957",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D3240128079286",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D3240120310957",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Nitrogen, dry, charging grade"
+        ],
+        "tooling": [
+          "Accumulator charging adapter 98D32401-027",
+          "Wheel rotation rig 98D32401-011",
+          "Portable data loader"
+        ]
+      },
+      "weight_change_kg": 1.3,
+      "accomplishment_steps": 9,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2022-05-30",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

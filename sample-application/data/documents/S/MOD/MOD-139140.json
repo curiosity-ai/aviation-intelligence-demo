@@ -1,0 +1,181 @@
+[
+  {
+    "doc_id": "MOD-139140",
+    "doc_type": "MOD",
+    "title": "Cabin and Flight Interphone — Digital Amplifier with Zone Routing",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-50",
+      "ata_6d": "23-50-12",
+      "title": "Audio Integrating — Flight Interphone"
+    },
+    "secondary_ata": [
+      "44-20",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3"
+      ],
+      "msns": [
+        "S00688",
+        "S01020",
+        "S01317",
+        "S01466",
+        "S01552"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "AMA",
+        "HKA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-06-02",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "A digital interphone amplifier with per-zone routing, replacing the analogue obsolescence standard and giving the cabin crew intelligible calls from every station without a rewire.",
+    "sections": {
+      "reason": "The obsolescence replacement embodied from 2019 kept the analogue distribution and only changed the input stage, and the audio complaints have come back on aircraft with high cabin utilisation: a hum under the speech from the aft stations that gets worse through a sector. Fourteen amplifier removals in eighteen months at one operator, eleven of them serviceable on the bench, point at the distribution rather than the unit. The supplier of the current unit has now issued a last-order date of June 2027, so a second obsolescence step is needed anyway and the two problems are best solved together.",
+      "description": "The amplifier is replaced by a digital unit that carries the audio to each station as a packet stream and converts it locally at the handset outlet, which removes the long analogue runs that pick up the hum. The rack KE27719-48 introduced at the previous standard is retained and only its rear connector is changed. The inboard antenna D2350122256689 and the outboard assembly XADE368523-89 are unchanged. The distribution tail is re-terminated onto the avionics bay cable assembly D9221113760580 at the bay feedthrough, which is the one point outside the cabin that this modification touches. Module 2922RC in the lower position is replaced and transceiver 95RC in the aft position is retained. Work is in the forward equipment area in zone 133, in the avionics bay outboard area in zone 165 and at the aft cabin position in zone 263. No cabin lining is removed.",
+      "effects": "Estimated mass reduction of 2.2 kg, mostly in cable. Direct current load falls by about twenty-five volt-amperes. Not interchangeable with the analogue standard because the distribution protocol differs and a mixed installation would leave part of the cabin silent. Call intelligibility is expected to meet the specification at every station including the aft galley. Cabin crew see no change at the handset and no training is required, but the flight crew description of the interphone system changes because the call routing is now selectable by zone.",
+      "embodiment_note": "Retrofit only; the affected aircraft are all delivered and the line has moved on. Proposed as an overnight task of about ten manhours with the forward equipment area and the avionics bay open.",
+      "open_points": "Pre-analysis must establish whether the re-termination at the bay feedthrough conflicts with the harness segregation standard recently embodied in the same aperture, whether the existing retrofit bulletin for the analogue obsolescence standard must be withdrawn once this exists, what the digital distribution does to the passenger address priority chain, and whether the flight crew description needs a revision or only an editorial change."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2350122256689",
+        "XADE368523-89",
+        "KE27719-48",
+        "D9221113760580"
+      ],
+      "fins": [
+        "2922RC",
+        "95RC"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "133",
+        "165",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00688",
+        "S01317"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-S-260547",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-131210",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "digital interphone",
+      "zone routing",
+      "packet audio",
+      "obsolescence",
+      "cabin handset"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Vaubranche",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 139140,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -2.2,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": -25,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D9221113760580"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "KE27719-48"
+      ],
+      "fins_affected": [
+        "2922RC",
+        "95RC"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 64,
+      "estimated_cost_keur": 820,
+      "lead_time_weeks": 30,
+      "production_impact": "Retrofit only; no production cut-in proposed",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

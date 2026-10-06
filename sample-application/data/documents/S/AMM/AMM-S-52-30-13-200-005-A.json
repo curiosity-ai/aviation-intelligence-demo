@@ -1,0 +1,172 @@
+[
+  {
+    "doc_id": "AMM-S-52-30-13-200-005-A",
+    "doc_type": "AMM",
+    "title": "Fwd Cargo Door Latching Carriage — Travel Check and Running Surface Examination",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-04-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00003",
+          "to": "S01918"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-133110"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-09-15",
+      "released": "2021-04-08",
+      "revised": null,
+      "effective": "2021-04-26"
+    },
+    "abstract": "Scheduled measurement of the carriage travel at each of the eight hook stations of the forward cargo door, with the running surface examination that shows whether the carriage is taking up load progressively.",
+    "sections": {
+      "purpose": "This task measures the take-up travel of the load-sharing carriage at each hook station and examines the running surface, so that a carriage that has stopped sharing load is found before it produces a door indication.",
+      "job_setup_note": "Do this task with the door open and the safety struts installed. The travel gauge must be zeroed on the reference face at the start and at the end of the check; a gauge that has drifted invalidates the whole set of readings. The running surface must be clean before the measurement; residue changes the reading by more than the tolerance band.",
+      "procedure": "1. Open the forward cargo door and install the safety struts. 2. Clean the carriage rail with a lint-free cloth and the approved solvent. CAUTION: DO NOT USE A CHLORINATED SOLVENT ON THE RAIL. IT ATTACKS THE SURFACE TREATMENT. 3. Zero the carriage travel gauge on the reference face and record the zero. 4. At hook station 1, put the gauge on the carriage and cycle the latch slowly from unlocked to locked. Record the take-up travel. 5. Do the same at hook stations 2 to 8 in order. 6. Compare each reading against the tolerance band in the limits table. A reading below the band means the carriage is binding; a reading above it means the rail is worn. 7. Examine the running face at stations 1, 4 and 8 with a magnifier of at least ten times. Look for polishing on one flank only, which shows that the carriage is no longer taking up progressively. 8. Examine the inboard shear ties GRA7840-60 for fretting at the rail seat. 9. Re-zero the gauge on the reference face and confirm that the zero has not moved. WARNING: IF THE ZERO HAS MOVED, REPEAT THE WHOLE CHECK WITH A SERVICEABLE GAUGE. 10. Re-apply grease to the rail to the standard practice. 11. Record all eight readings, whether or not any is out of band.",
+      "close_out": "Do the forward cargo door operational test. Remove the safety struts. If any station is out of band, raise a maintenance action against the latching web kit D5230136217763 and do not defer it beyond the next check. Record the eight readings in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230136217763",
+        "GRA7840-60"
+      ],
+      "fins": [
+        "3323WT"
+      ],
+      "drawings": [
+        "D52301376901"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-52-30-13-000-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-52-1051",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "carriage travel",
+      "running surface",
+      "take-up",
+      "tolerance band",
+      "gauge zero"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "52-30-13-200-005-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "Aircraft post MOD-133110 only; aircraft at an earlier hook standard have no carriage to measure",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "891",
+          "893"
+        ],
+        "access_panels": [
+          "891CL",
+          "893BL"
+        ],
+        "doors": [
+          "Fwd cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Install the door safety struts before any person goes under the door.",
+          "Do not put a hand in the latch train while the latch is cycled."
+        ],
+        "tooling": [
+          {
+            "reference": "98D52301-320",
+            "description": "Carriage travel gauge"
+          },
+          {
+            "reference": "98D52301-331",
+            "description": "Magnifier, 10x, illuminated"
+          }
+        ],
+        "consumables": [
+          "Solvent, approved for latching mechanism",
+          "Grease, low temperature, MIL specification",
+          "Cloth, lint free"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-52-30-13-000-004-A",
+        "AMM-S-52-30-13-400-004-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

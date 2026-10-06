@@ -1,0 +1,440 @@
+[
+  {
+    "doc_id": "CRN-27-1033",
+    "doc_type": "SB",
+    "title": "Flight Controls — Flap Drive — Higher Rated Torque Limiter Solenoid and Test Standard 6.7",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-04-18",
+      "reason": "Initial issue of the higher rated torque limiter solenoid and test standard bulletin.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [
+      "27-80"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00503"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-111094"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2022-09-20",
+      "released": "2023-04-18",
+      "revised": "2023-04-18",
+      "effective": "2023-05-08"
+    },
+    "abstract": "Installation of the higher rated torque limiter solenoid together with the flap control test standard that separates a limiter slip from a genuine asymmetry, cutting no-fault-found flap events.",
+    "sections": {
+      "planning_reason": "Flap system fault messages are the third most frequent technical log entry on the type and about six in ten clear on the ground with no fault found. Recorded data shows the built-in test declaring an asymmetry when the torque limiter slips momentarily during a cold-soaked first extension. Fifty-eight occurrences were confirmed on a sample of forty aircraft in one winter and two led to an unnecessary computer replacement at an outstation. The change raises the limiter setting and gives the test enough information to tell the two signatures apart.",
+      "description": "The flap drive torque limiter solenoid is replaced by a higher rated item, the drive clamp is repositioned to suit, and the slat flap control computer is loaded with built-in test standard 6.7, which adds a temperature-compensated settling window before an asymmetry is declared.",
+      "accomplishment_summary": "Extend the flap fully and make the flap system safe. Get access to the drive unit in zone 561 through the trailing edge access panel. Remove the drive solenoid D2750116570759 and install the higher rated item. Reposition the drive clamp D2750008046179 to the dimension given in the accomplishment instructions and install washers AES606871-9E at the limiter mounting. Set the limiter to the new torque value using the calibration head from the tooling set. Repeat on the opposite side in zone 661. Load the built-in test standard LC8C8E906FE into the slat flap control computer through the maintenance port. Do the flap drive system test and confirm no asymmetry is declared during three full cycles. Do the flap position sensor rigging check. Install the access panels and record the embodiment.",
+      "effectivity_note": "Applicable to aircraft MSN C00001 through C00503 that are pre modification standard. Aircraft delivered from MSN C00506 onward carry both the solenoid and the test standard. Aircraft that already have the higher rated solenoid fitted as a spare replacement need only the loadable part, which is covered by the companion bulletin.",
+      "material_note": "Kit K2750-1033-01 contains two solenoids, the clamps, the washers and the loadable part media. Lead time is twenty-six weeks. Removed solenoids are returned to the vendor for credit and must not be re-used at the higher setting."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759",
+        "D2750008046179",
+        "AES606871-9E"
+      ],
+      "fins": [
+        "345EV2",
+        "916EV9"
+      ],
+      "drawings": [
+        "D27501162228"
+      ],
+      "software": [
+        "LC8C8E906FE"
+      ],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [
+        "FIG-27-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00503",
+        "C00506"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111094",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-C-27-50-11-700-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-27-50-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-27-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-27-50-11-810-803",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "torque limiter",
+      "flap drive solenoid",
+      "built-in test",
+      "asymmetry",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-27-1033",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled A-check, or within 30 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-111094",
+      "manpower": {
+        "elapsed_time_hours": 22,
+        "manhours": 38,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K2750-1033-01",
+        "kit_available_from": "2023-08-01",
+        "parts_required": [
+          {
+            "part_number": "D2750116570759",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES606871-9E",
+            "qty": 24,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2750116570759",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Lockwire, 0.8 mm",
+          "Corrosion inhibiting compound"
+        ],
+        "tooling": [
+          "Torque limiter calibration head 98D27501-033",
+          "Portable data loader"
+        ]
+      },
+      "weight_change_kg": 0.6,
+      "accomplishment_steps": 11,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-04-18",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "CRN-27-1033",
+    "doc_type": "SB",
+    "title": "Flight Controls — Flap Drive — Higher Rated Torque Limiter Solenoid and Test Standard 6.7",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-17",
+      "reason": "Bulletin closed to new embodiments and a cross-reference added for operators holding a loading record from both bulletins.",
+      "raised_by_pawo": "PAWO-111094-01",
+      "raised_by_finding": "F02",
+      "finding_type": "DUPLICATE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [
+      "27-80"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00503"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-111094"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2022-09-20",
+      "released": "2023-04-18",
+      "revised": "2026-06-17",
+      "effective": "2026-07-08"
+    },
+    "abstract": "Installation of the higher rated torque limiter solenoid together with the flap control test standard that separates a limiter slip from a genuine asymmetry, now closed to new embodiments in favour of the hardware-and-software split.",
+    "sections": {
+      "planning_reason": "Flap system fault messages are the third most frequent technical log entry on the type and about six in ten clear on the ground with no fault found. Recorded data shows the built-in test declaring an asymmetry when the torque limiter slips momentarily during a cold-soaked first extension. Fifty-eight occurrences were confirmed on a sample of forty aircraft in one winter and two led to an unnecessary computer replacement at an outstation. The change raises the limiter setting and gives the test enough information to tell the two signatures apart.",
+      "description": "The flap drive torque limiter solenoid is replaced by a higher rated item, the drive clamp is repositioned to suit, and the slat flap control computer is loaded with built-in test standard 6.7, which adds a temperature-compensated settling window before an asymmetry is declared.",
+      "accomplishment_summary": "Extend the flap fully and make the flap system safe. Get access to the drive unit in zone 561 through the trailing edge access panel. Remove the drive solenoid D2750116570759 and install the higher rated item. Reposition the drive clamp D2750008046179 to the dimension given in the accomplishment instructions and install washers AES606871-9E at the limiter mounting. Set the limiter to the new torque value using the calibration head from the tooling set. Repeat on the opposite side in zone 661. Load the built-in test standard LC8C8E906FE into the slat flap control computer through the maintenance port. Do the flap drive system test and confirm no asymmetry is declared during three full cycles. Do the flap position sensor rigging check. Install the access panels and record the embodiment.",
+      "effectivity_note": "Applicable to aircraft MSN C00001 through C00503 that are pre modification standard. Aircraft delivered from MSN C00506 onward carry both the solenoid and the test standard. This bulletin is closed to new embodiments: an aircraft still requiring the solenoid takes it as an unscheduled replacement and then embodies Service Bulletin CRN-27-1040 for the loadable part, which is the route the fleet has in practice been using since the vendor changed the delivered spare standard. The loading procedure in this bulletin and the one in CRN-27-1040 install the same part; eleven aircraft carry a completed record from each and the second record on those aircraft has no meaning, because the load was already there. Operators holding two records keep the earlier one as the embodiment and annotate the later one as a repeat load.",
+      "material_note": "Kit K2750-1033-01 contains two solenoids, the clamps, the washers and the loadable part media. Lead time is twenty-six weeks. Removed solenoids are returned to the vendor for credit and must not be re-used at the higher setting."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759",
+        "D2750008046179",
+        "AES606871-9E"
+      ],
+      "fins": [
+        "345EV2",
+        "916EV9"
+      ],
+      "drawings": [
+        "D27501162228"
+      ],
+      "software": [
+        "LC8C8E906FE"
+      ],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [
+        "FIG-27-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00503",
+        "C00506"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111094",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "CRN-27-1040",
+        "doc_type": "SB",
+        "relation": "PREREQUISITE_OF"
+      },
+      {
+        "doc_id": "AMM-C-27-50-11-700-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-27-50-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-27-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-27-50-11-810-803",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "torque limiter",
+      "flap drive solenoid",
+      "duplicate record",
+      "built-in test",
+      "closed bulletin"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-27-1033",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Closed to new embodiments. An aircraft that still needs the higher rated solenoid takes it as an unscheduled replacement and embodies Service Bulletin CRN-27-1040 for the loadable part.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-111094",
+      "manpower": {
+        "elapsed_time_hours": 22,
+        "manhours": 38,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K2750-1033-01",
+        "kit_available_from": "2023-08-01",
+        "parts_required": [
+          {
+            "part_number": "D2750116570759",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES606871-9E",
+            "qty": 24,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2750116570759",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Lockwire, 0.8 mm",
+          "Corrosion inhibiting compound"
+        ],
+        "tooling": [
+          "Torque limiter calibration head 98D27501-033",
+          "Portable data loader"
+        ]
+      },
+      "weight_change_kg": 0.6,
+      "accomplishment_steps": 11,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-04-18",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-06-17",
+          "reason": "Closed to new embodiments; duplicate loading record clarification added to the effectivity information and a cross-reference made to CRN-27-1040"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

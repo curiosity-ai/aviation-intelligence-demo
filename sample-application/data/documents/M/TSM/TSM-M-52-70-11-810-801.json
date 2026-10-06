@@ -1,0 +1,164 @@
+[
+  {
+    "doc_id": "TSM-M-52-70-11-810-801",
+    "doc_type": "TSM",
+    "title": "Fwd Cargo Door Not Locked Indication with the Door Correctly Latched",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-07-15",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-70",
+      "ata_6d": "52-70-11",
+      "title": "Door Warning — Door Proximity Sensing"
+    },
+    "secondary_ata": [
+      "52-30",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-03-09",
+      "released": "2020-10-19",
+      "revised": "2024-07-15",
+      "effective": "2024-08-12"
+    },
+    "abstract": "Fault isolation for a forward cargo door not locked indication that appears with the door correctly latched, most often during loading with a heavy single pallet on the door sill.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a forward cargo door not locked indication when the door is correctly latched and the mechanical indication agrees that it is locked.",
+      "fault_description": "The flight deck and the loading panel show the forward cargo door as not locked while the latch hooks are visibly closed and the mechanical latch indicator agrees. The indication is usually seen during loading and clears when the pallet is moved off the sill or shortly after the loader bridge is withdrawn. In a small number of cases the indication persists into the taxi phase and the crew reject the departure. There is no correlation with ambient temperature and none with the age of the aircraft.",
+      "isolation_procedure": "1. Ask the loading team whether the indication appeared with a pallet on the sill and record the pallet mass if they know it. 2. Open the door and confirm the latch mechanism is at the fully locked stop when commanded closed. 3. Measure the sensing gap between the sensor 3WT6 and the target plate with the door closed and no load on the sill. Record the reading. 4. If the gap is outside the range in the maintenance documentation, do the confirmation task and set the shim stack. 5. If the gap is inside the range but at the upper edge, repeat the measurement with a loaded pallet on the sill if that can be arranged safely, and record the second reading. 6. If the gap changes by more than 1.0 mm between the two readings, the fault is sill deflection and not the sensor; report it and set the shim stack to the middle of the range. 7. Check the adjacent sensor target 23WT for the same behaviour. 8. Inspect the sensor tail and its sleeving for chafing at the sill edge. 9. Do a continuity check of the sensing loop back to the door warning computing rack. 10. If all of the above are satisfactory, replace the target plate D5270117831041 and repeat the functional test.",
+      "dispatch_note": "Dispatch with the door not locked indication present is not permitted. The master minimum equipment list allows dispatch with one of the two sensing channels inoperative provided the door is confirmed locked by the mechanical indicator and the flight is a positioning sector only."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5270117831041",
+        "D5270114205406"
+      ],
+      "fins": [
+        "3WT6",
+        "23WT"
+      ],
+      "drawings": [
+        "D52701117658"
+      ],
+      "software": [],
+      "zones": [
+        "811",
+        "891"
+      ],
+      "figures": [
+        "FIG-52-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-52-70-11-400-008-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-M-52-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door not locked",
+      "proximity sensing",
+      "sensing gap",
+      "sill deflection",
+      "loading"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "52-70-11-810-801",
+      "fault_symptom": "CARGO DOOR FWD NOT LOCKED displayed with the door correctly latched",
+      "fault_codes": [
+        "527011001",
+        "527011014"
+      ],
+      "warning_messages": [
+        "DOOR CARGO FWD NOT LOCKED",
+        "DOOR CARGO FWD NOT CLOSED"
+      ],
+      "affected_fins": [
+        "3WT6",
+        "23WT"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Sensing gap opened beyond tolerance by door sill deflection under a loaded pallet",
+          "probability_pct": 55,
+          "fin": "3WT6"
+        },
+        {
+          "cause": "Shim stack set at the upper edge of the sensing gap range",
+          "probability_pct": 25,
+          "fin": "3WT6"
+        },
+        {
+          "cause": "Chafed sensor tail at the sill edge giving an intermittent open circuit",
+          "probability_pct": 12,
+          "fin": "23WT"
+        },
+        {
+          "cause": "Target plate loose on the sill mounting",
+          "probability_pct": 8,
+          "fin": "3WT6"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-M-52-70-11-400-008-A",
+      "dispatch": {
+        "mel_item": "52-70-01B",
+        "dispatchable": false,
+        "dispatch_condition": "Not dispatchable with the indication present. One sensing channel may be inoperative for a positioning sector only."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

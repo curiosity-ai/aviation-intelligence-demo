@@ -1,0 +1,124 @@
+[
+  {
+    "doc_id": "FCOM-M-DSC-34-50-01",
+    "doc_type": "FCOM",
+    "title": "Navigation — Satellite Position Determining and Augmentation Status",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-05-23",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-00",
+      "title": "Dependent Position Determining — General"
+    },
+    "secondary_ata": [
+      "34-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-07-24",
+      "released": "2018-03-19",
+      "revised": "2022-05-23",
+      "effective": "2022-06-20"
+    },
+    "abstract": "Flight crew description of satellite position determining, the augmentation status shown on the navigation display and what to do when the augmented solution is lost on the ground or in flight.",
+    "sections": {
+      "purpose": "This entry describes satellite position determining to the flight crew, the meaning of the augmentation status and the crew action when the augmented solution is not available.",
+      "description": "The aeroplane determines position from several sources and blends them, with satellite position as the primary contributor when it is available and augmented. The navigation display shows the status of the augmented solution, and the flight management system indicates when the navigation performance required for the procedure in use can no longer be met. Satellite reception can be degraded on the ground by structures, by other aircraft and by ground equipment operating near the aeroplane, and the solution may be lost briefly while taxiing without any aeroplane fault. After a long period without power the aeroplane may take several minutes to obtain its first position, which is normal and depends on how long the aeroplane has been unpowered rather than on any crew action.",
+      "crew_procedure": "When the augmented solution is lost, check the navigation performance annunciation against the procedure in use. If the required performance can no longer be met, advise air traffic control and revert to a procedure the aeroplane can support. Do not attempt to reset the navigation system while taxiing. If the first position after a long turnaround has not been obtained by the time the aeroplane is ready to taxi, allow additional time at the stand rather than starting to taxi without a position.",
+      "limitation_note": "Procedures requiring the augmented solution must not be commenced when the augmentation status shows unavailable, regardless of the position accuracy displayed."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-M-DSC-22-30-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "satellite position",
+      "augmentation status",
+      "navigation performance",
+      "taxi",
+      "first position"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Operations"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Systems Description — Navigation",
+      "entry_number": "DSC-34-50-01",
+      "flight_phase": "ALL_PHASES",
+      "operational_impact": "NONE",
+      "crew_action": "Check the navigation performance annunciation; revert to a supported procedure if required.",
+      "affects_qrh": false,
+      "affects_mel": true,
+      "mel_items": [
+        "34-50-01B"
+      ],
+      "systems": [
+        "Multi-Mode Receiver",
+        "Flight Management System",
+        "Navigation Display"
+      ],
+      "related_entries": [
+        "FCOM-M-DSC-22-30-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

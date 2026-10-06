@@ -1,0 +1,163 @@
+[
+  {
+    "doc_id": "TSM-C-49-60-11-810-806",
+    "doc_type": "TSM",
+    "title": "Auxiliary Power Unit Hung Start at High Elevation — Fault Isolation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2025-05-06",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-11-15",
+      "released": "2022-07-01",
+      "revised": "2025-05-06",
+      "effective": "2025-05-27"
+    },
+    "abstract": "Isolation of an auxiliary power unit hung start, separating the fuel schedule shortfall seen at high elevation on hot days from a genuine starter, fuel or bleed system fault.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an auxiliary power unit hung start and gives the checks that identify the high elevation fuel schedule shortfall before any component is removed.",
+      "fault_description": "The unit accelerates normally to about half speed and then stops accelerating, with the exhaust gas temperature rising slowly and the start eventually timing out or being aborted by the crew. It happens on hot afternoons at airfields above 2500 metres, at a rate of roughly one start in fourteen, and a second attempt usually succeeds. At sea level the same aircraft starts normally, which is the strongest single indicator of the fuel schedule cause.",
+      "isolation_procedure": "1. Record the field elevation, the ambient temperature and the parameter standard reported by the control box for the reported start. 2. Read the start snapshot and confirm the speed at which the acceleration stopped and the exhaust gas temperature trend. 3. If the elevation is above 2500 metres, the ambient is above 25 degrees, and a later attempt succeeded, the fuel schedule shortfall is the probable cause. 4. In that case do not replace any component: record the event and raise the parameter standard retrofit with the operator's engineering department. 5. If the conditions do not match, check the starter duty cycle history; repeated attempts within the duty cycle produce a hung start that looks identical. 6. Do the auxiliary power unit functional test and record the start time and the peak exhaust gas temperature against the criteria for the reported parameter standard. 7. If the test start is also hung, check the fuel supply pressure at the unit inlet during the start. 8. If the supply pressure is low, isolate the fault to the fuel feed rather than to the unit. 9. If the supply pressure is correct, examine the surge control valve position during the acceleration phase. 10. If the valve is correct, replace the control box and repeat the functional test.",
+      "dispatch_note": "Dispatch is permitted with the auxiliary power unit inoperative under the applicable minimum equipment list item, subject to the ground power and air start provisions at every planned station. No operational restriction applies in flight."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4960112246671",
+        "D4960117781398",
+        "D4960118355783"
+      ],
+      "fins": [
+        "6PA",
+        "8121PA9",
+        "62PA"
+      ],
+      "drawings": [
+        "D49601238355"
+      ],
+      "software": [
+        "LC8C343F033",
+        "LG6CA9A3A9B"
+      ],
+      "zones": [
+        "391",
+        "394",
+        "396"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-49-60-11-700-005-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "hung start",
+      "fuel schedule",
+      "high elevation",
+      "starter duty cycle",
+      "surge control valve"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "49-60-11-810-806",
+      "fault_symptom": "Auxiliary power unit acceleration stops at about half speed and the start times out",
+      "fault_codes": [
+        "496011007",
+        "496011024"
+      ],
+      "warning_messages": [
+        "APU START FAULT",
+        "APU AUTO SHUT DOWN"
+      ],
+      "affected_fins": [
+        "6PA",
+        "8121PA9",
+        "62PA"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Fuel schedule shortfall at high elevation and high ambient temperature",
+          "probability_pct": 47,
+          "fin": "6PA"
+        },
+        {
+          "cause": "Starter duty cycle exceeded by repeated attempts",
+          "probability_pct": 20,
+          "fin": "8121PA9"
+        },
+        {
+          "cause": "Low fuel supply pressure at the unit inlet",
+          "probability_pct": 18,
+          "fin": "62PA"
+        },
+        {
+          "cause": "Electronic control box internal failure",
+          "probability_pct": 15,
+          "fin": "6PA"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-C-49-60-11-700-005-A",
+      "dispatch": {
+        "mel_item": "49-60-01B",
+        "dispatchable": true,
+        "dispatch_condition": "Auxiliary power unit inoperative, ground power and air start available at every planned station"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

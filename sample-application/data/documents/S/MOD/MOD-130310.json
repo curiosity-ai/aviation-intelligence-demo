@@ -1,0 +1,207 @@
+[
+  {
+    "doc_id": "MOD-130310",
+    "doc_type": "MOD",
+    "title": "Transformer Rectifier Unit Output Bus Bar and Battery Contactor Standard",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2021-06-08",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-30",
+      "ata_6d": "24-30-11",
+      "title": "DC Generation — Transformer Rectifier Unit"
+    },
+    "secondary_ata": [
+      "24-60",
+      "92-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00003",
+          "to": "S01552"
+        }
+      ],
+      "excluded_msns": [
+        "S00521"
+      ],
+      "engine_types": [],
+      "operators": [
+        "AUN",
+        "GBA",
+        "JTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01020",
+      "production_cut_in_date": "2018-03-12",
+      "retrofit_via": [
+        "SLN-24-1071"
+      ]
+    },
+    "dates": {
+      "created": "2017-03-14",
+      "released": "2018-02-19",
+      "revised": "2021-06-08",
+      "effective": "2021-07-01"
+    },
+    "abstract": "Replacement of the laminated output bus bar and the battery contactor set on the direct current generation installation, after a run of overheated terminal joints traced to relaxation of the original bolted stack.",
+    "sections": {
+      "reason": "Between 2015 and 2017 nine operators reported discoloured insulation and, in two cases, a smell of hot varnish in the forward avionics bay after a long ground power period. Teardown of eleven bus bars showed the bolted stack relaxed by up to a fifth of its assembly preload, with the resulting joint resistance producing a local temperature rise of forty degrees at full rectifier output. The condition is not detectable in flight and the first indication an operator gets is a burnt smell. Fleet exposure at the time was three hundred and eighty aircraft, of which about a third were operating routes with routine two-hour ground power sessions.",
+      "description": "The laminated output bus bar D2430110204063 is replaced by an item with a machined contact land and a captive Belleville stack at every terminal, so that the joint preload is maintained through the thermal cycle instead of relying on the bolt alone. The transformer rectifier unit relay assembly D2430113213358 is superseded by the outboard relay kit GIDE140223-63, which carries a silver-plated rather than tin-plated contact set. The backshell PE30449-35 is added at the outboard feed so that the harness screen terminates on the bus bar housing instead of on a separate stud. Contactor 169XU and circuit breaker 17XU are re-torqued to the new value and the ground stud 1GX3 in zone 121 is re-faced. Work is in zone 121, zone 272 and, on the four-engine aircraft only, zone 591. Detail is on drawing D24301146104.",
+      "effects": "Mass increase of 1.9 kg per aircraft, symmetric about the centreline, with no reportable balance effect. No change to rated output or to the direct current load analysis. The new bus bar is one-way interchangeable: an aircraft at the new standard may not be reverted without also reverting the relay kit, because the contact land geometry differs. The scheduled terminal torque check at the six-year interval is deleted and replaced by a thermographic survey at the twelve-year check. Spares provisioning changes for the relay assembly, which is no longer procurable at the pre-modification standard.",
+      "embodiment_note": "Cut into production at MSN S01020 in March 2018. Retrofit is through the associated service bulletin during any check with avionics bay access, typically eighteen manhours with the aircraft on ground power isolated. One aircraft is excluded because it carries a non-standard rectifier arrangement fitted for a flight test programme."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2430110204063",
+        "D2430113213358",
+        "GIDE140223-63",
+        "PE30449-35"
+      ],
+      "fins": [
+        "169XU",
+        "17XU",
+        "1GX3"
+      ],
+      "drawings": [
+        "D24301146104"
+      ],
+      "software": [],
+      "zones": [
+        "121",
+        "272",
+        "591"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01020",
+        "S00521"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-24-1071",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-S-24-30-11-000-031-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-S-24-30-11-400-031-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-S-24-30-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "bus bar",
+      "terminal joint",
+      "transformer rectifier",
+      "contactor",
+      "overheating"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 130310,
+      "mod_class": "MAJOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "SAFETY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1353",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.9,
+      "balance_impact": "Symmetric about the centreline; no reportable shift",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "GIDE140223-63",
+        "PE30449-35"
+      ],
+      "parts_removed": [
+        "D2430113213358"
+      ],
+      "parts_modified": [
+        "D2430110204063"
+      ],
+      "fins_affected": [
+        "169XU",
+        "17XU",
+        "1GX3"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 112,
+      "estimated_cost_keur": 410,
+      "lead_time_weeks": 26,
+      "production_impact": "Cut-in at MSN S01020, no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

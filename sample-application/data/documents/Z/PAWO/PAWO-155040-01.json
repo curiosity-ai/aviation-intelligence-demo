@@ -1,0 +1,288 @@
+[
+  {
+    "doc_id": "PAWO-155040-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Oil Filter Housing Firewall Panel Rolled Edge Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-23",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "79",
+      "ata_4d": "79-20",
+      "ata_6d": "79-20-12",
+      "title": "Distribution — Oil Filter Housing"
+    },
+    "secondary_ata": [
+      "79-30",
+      "71-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56B",
+        "VNT-2500A"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-24",
+      "released": "2026-06-23",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the rolled edge firewall panel change, opened to decide whether the harness re-clipping can be released as a standalone action for operators who cannot get panels.",
+    "sections": {
+      "objective": "Panel supply became the pacing item for the retrofit and two operators asked whether the harness could simply be re-clipped outboard without changing the panel, on the argument that the clearance is what matters. The round was opened to test that argument.",
+      "findings_summary": "Three items were confirmed and the standalone re-clipping was recommended as an interim, with the decision on whether to publish it handed to in-service engineering. The clearance created by re-clipping alone is smaller than the clearance created by the rolled edge, because the original panel edge is square and remains the nearest point; the calculation shows the interim clearance to be acceptable but with no margin for a subsequent re-clip. The removal task already records the latch position and the clearance readings, which makes it the natural place to publish an interim instruction. The third finding is a zone link to the bleed duct work in the same pylon area, which shares the engine one pylon forward section and would compete for the same access if both were done at one visit.",
+      "next_steps": "Publish the interim re-clipping as a temporary revision to the removal task rather than as a bulletin. Hand the decision on how long the interim may stand to in-service engineering. Flag the pylon access overlap to maintenance planning."
+    },
+    "entities": {
+      "part_numbers": [
+        "FJD382676-90",
+        "AES837153-84"
+      ],
+      "fins": [
+        "14EO",
+        "227EO"
+      ],
+      "drawings": [
+        "D79201225675",
+        "D79201232627"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "421",
+        "413"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155040",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "interim clearance",
+      "harness re-clipping",
+      "panel supply",
+      "pylon access"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-155040-01",
+      "subject_mod": "MOD-155040",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-23",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-02-24",
+      "due_date": "2026-06-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 75,
+        "spent_manhours": 96
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "79",
+          "71",
+          "36"
+        ],
+        "ata_4d": [
+          "79-20",
+          "71-10",
+          "36-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM"
+        ],
+        "msn_range": {
+          "from": "Z03884",
+          "to": "Z10389"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "FJD382676-90",
+            "AES837153-84"
+          ],
+          "fins": [
+            "14EO",
+            "227EO"
+          ],
+          "drawings": [
+            "D79201225675"
+          ],
+          "zones": [
+            "431",
+            "421"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "harness chafing against a panel edge after repeated shop visits",
+          "interim clearance obtained by re-routing rather than by changing a part"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Calculate the clearance achieved by re-clipping alone",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Identify the natural publication vehicle for an interim instruction",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-79-1007",
+          "doc_type": "SB",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "FJD382676-90",
+              "AES837153-84"
+            ],
+            "shared_fins": [
+              "14EO"
+            ],
+            "shared_zones": [
+              "431",
+              "421"
+            ],
+            "shared_ata_6d": [
+              "79-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin ships the panel and the washer set together and its clearance figure assumes the rolled edge. An interim that re-clips only cannot quote that figure.",
+          "resolution": "Publish the interim clearance separately and state that it has no margin for a further re-clip."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-Z-79-20-12-000-035-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "FJD382676-90"
+            ],
+            "shared_fins": [
+              "227EO"
+            ],
+            "shared_zones": [
+              "413"
+            ],
+            "shared_ata_6d": [
+              "79-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task already records the latch position and three clearance readings, which makes it the natural vehicle for an interim instruction rather than a new bulletin.",
+          "resolution": "Publish the interim as a temporary revision to the removal task."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-153726",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "431"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The bleed duct and sensor work occupies the same engine one pylon forward section and would compete for the same access if both were embodied at one visit.",
+          "resolution": "Flag the access overlap to maintenance planning so that the two are sequenced deliberately."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "AMM-Z-71-10-11-300-034-A",
+          "doc_type": "AMM",
+          "reason": "Same nacelle area and the same vocabulary of panel edges and clearances, but it repairs a cowl door hinge land and has no interface with the oil filter housing panel or the engine harness route."
+        }
+      ],
+      "conclusion": "Closed by delegation. The interim is technically acceptable but how long it may stand is a fleet decision rather than an engineering one.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

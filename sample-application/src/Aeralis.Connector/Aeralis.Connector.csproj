@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Aeralis.Connector</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Curiosity.Library" Version="26.8.3830" />
+    <PackageReference Include="CsvHelper" Version="33.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The dataset project is the read model for data/documents: it is already the
+         gate the dataset is validated against, so the connector reads through it
+         rather than re-declaring the document envelope. -->
+    <ProjectReference Include="..\Aeralis.Dataset\Aeralis.Dataset.csproj" />
+
+    <!-- Renders each document to the file it would be published as, which the connector
+         uploads and hangs off the document's node. -->
+    <ProjectReference Include="..\Aeralis.Attachments\Aeralis.Attachments.csproj" />
+  </ItemGroup>
+
+</Project>

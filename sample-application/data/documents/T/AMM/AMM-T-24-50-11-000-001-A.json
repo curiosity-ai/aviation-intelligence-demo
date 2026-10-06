@@ -1,0 +1,166 @@
+[
+  {
+    "doc_id": "AMM-T-24-50-11-000-001-A",
+    "doc_type": "AMM",
+    "title": "Contactor Module — Removal from the Forward Primary Distribution Centre",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-09-13",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-11",
+      "title": "Electrical Load Distribution — Primary Distribution Centre"
+    },
+    "secondary_ata": [
+      "24-50-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-06-14",
+      "released": "2016-10-25",
+      "revised": "2022-09-13",
+      "effective": "2022-10-24"
+    },
+    "abstract": "Removal of a contactor module and its auxiliary contact block from the forward primary distribution centre, including the isolation steps and the handling precautions for the latching module standard.",
+    "sections": {
+      "purpose": "This task gives the procedure to remove a contactor module and its auxiliary contact block from the forward primary distribution centre, for replacement or for access to the rack behind it.",
+      "job_setup_note": "The distribution centre must be de-energised and the aircraft must be off all external and internal power sources before the rack front cover is removed. A latching module holds its last commanded state with no power applied, so the module position must be recorded before removal and cannot be assumed. Antistatic precautions apply to the auxiliary contact block. Two persons are needed because the module is removed horizontally into a confined bay.",
+      "procedure": "1. Make sure that the aircraft is on no external power and that the batteries are disconnected. 2. Put the warning notices in position in the flight compartment and at the external power receptacle. WARNING: DO NOT TOUCH THE BUS BAR ASSEMBLY. THE BUS BAR CAN HOLD A RESIDUAL CHARGE FOR UP TO FIVE MINUTES AFTER POWER REMOVAL. 3. Open the forward avionics bay access in zone 292. 4. Remove the rack front cover. 5. Record the commanded state of the module before you do anything else. 6. Disconnect the status wiring from the auxiliary contact block. 7. Remove the auxiliary contact block. CAUTION: DO NOT LET THE CONTACT BLOCK TOUCH THE ADJACENT MODULE. THE CONTACT FINGERS BEND EASILY AND ARE NOT REPAIRABLE. 8. Loosen the four mounting screws equally, one turn at a time. 9. Remove the module horizontally, keeping it square to the rack. 10. Put the module in an antistatic bag. 11. Install the protective cover on the open rack position. 12. If the rack is to be left open, install the temporary cover on the front face.",
+      "close_out": "Make sure that the work area is clean and that no tool or loose article is left in the rack. Install the rack front cover if no further work is planned. Remove the warning notices when electrical power is to be restored, and do the distribution centre functional test before the aircraft is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450112131298",
+        "D2450115910023",
+        "EN575431K5"
+      ],
+      "fins": [
+        "1198GX9",
+        "3102GX"
+      ],
+      "drawings": [
+        "D24501125799"
+      ],
+      "software": [],
+      "zones": [
+        "292",
+        "682"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-24-50-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "contactor module",
+      "removal",
+      "distribution centre",
+      "latching",
+      "antistatic"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "24-50-11-000-001-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All aircraft. Steps 5 and 8 apply only to aircraft post MOD-146420.",
+      "manhours": 2.5,
+      "personnel": 2,
+      "elapsed_time_hours": 1.5,
+      "access": {
+        "zones": [
+          "292",
+          "682"
+        ],
+        "access_panels": [
+          "292AL",
+          "292BL"
+        ],
+        "doors": [
+          "Fwd avionics bay access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Put the warning notices in position in the flight compartment.",
+          "Make sure that the aircraft is on no external power.",
+          "Disconnect the batteries."
+        ],
+        "tooling": [
+          {
+            "reference": "98D24501-076",
+            "description": "Module extraction handle"
+          },
+          {
+            "reference": "98D24501-081",
+            "description": "Rack position protective cover"
+          }
+        ],
+        "consumables": [
+          "Antistatic bag",
+          "Contact lubricant, electrical"
+        ],
+        "expendables": [
+          {
+            "part_number": "EN575431K5",
+            "qty": 8
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-24-50-11-400-001-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

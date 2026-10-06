@@ -1,0 +1,331 @@
+[
+  {
+    "doc_id": "TSM-S-29-10-11-810-805",
+    "doc_type": "TSM",
+    "title": "HYD G RSVR LO LVL Following an Engine Driven Pump Event",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1994-05-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-11",
+      "title": "Main System — Engine Driven Pump"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7720",
+        "CVX-6080"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1993-11-20",
+      "released": "1994-05-30",
+      "revised": "1994-05-30",
+      "effective": "1994-06-17"
+    },
+    "abstract": "Fault isolation for a green reservoir low level indication after an engine driven pump event, using case drain flow and fluid analysis to decide whether the pump has begun to break up.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a green system reservoir low level indication and, where a pump has failed, establishes whether debris has been contained at the pump or has reached the reservoir.",
+      "fault_description": "The indication appears with normal system pressure or shortly after a pressure fluctuation, and is often accompanied by a rise in fluid temperature. Where an engine driven pump has failed, the debris it generates reaches the reservoir and from there the whole circuit, so the recovery is a system flush with every downstream filter and accumulator changed. The earliest sign of internal distress is a rising case drain flow: the pump leaks more across its worn clearances than it did when new, and the flow figure is therefore read directly as a measure of pump condition.",
+      "isolation_procedure": "1. Record the fault codes and the reservoir quantity, and check for an external leak at every accessible joint before anything is disturbed. 2. Check the fluid temperature history; a rise with no leak points at internal pump distress. 3. Measure the case drain flow at the test connection with the engine at idle and compare it with the limits table. A flow above the limit confirms internal pump wear and the pump is condemned. 4. If the flow is inside the limit and no leak is found, check the reservoir quantity transmitter at position 791GG for an indication error. 5. Take a case drain sample and send it for fluid analysis; do not release the aircraft on the sample result alone. 6. If the pump is confirmed failed, remove it under AMM-S-29-10-11-000-014-A and examine the drive shaft shear section. 7. Assume the circuit is contaminated and flush the green system, changing every filter and accumulator downstream. 8. Check the clamp position 9247GG for security after the pipe is disturbed.",
+      "dispatch_note": "Dispatch is permitted with the green engine driven pump inoperative under the applicable MMEL item, with the electric motor pump available and the associated landing distance penalty applied. Dispatch is not permitted with a reservoir low level indication displayed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2910110297925",
+        "BE759984-33",
+        "FJO107150-27",
+        "AGS207234-50"
+      ],
+      "fins": [
+        "9247GG",
+        "791GG"
+      ],
+      "drawings": [
+        "D29101105513"
+      ],
+      "software": [],
+      "zones": [
+        "433",
+        "443",
+        "721"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-29-10-11-000-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "reservoir low level",
+      "case drain flow",
+      "fluid analysis",
+      "system flush",
+      "pump wear"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "29-10-11-810-805",
+      "fault_symptom": "HYD G RSVR LO LVL displayed with no external leak found",
+      "fault_codes": [
+        "291011002",
+        "291011026"
+      ],
+      "warning_messages": [
+        "HYD G RSVR LO LVL",
+        "HYD G SYS LO PR"
+      ],
+      "affected_fins": [
+        "9247GG",
+        "791GG"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Engine driven pump internal wear giving a case drain flow above the limit",
+          "probability_pct": 40,
+          "fin": "9247GG"
+        },
+        {
+          "cause": "External leak at a disturbed joint not found on the first walk-round",
+          "probability_pct": 28,
+          "fin": "9247GG"
+        },
+        {
+          "cause": "Reservoir quantity transmitter indication error",
+          "probability_pct": 20,
+          "fin": "791GG"
+        },
+        {
+          "cause": "Depressurisation solenoid creeping towards the depressurised position",
+          "probability_pct": 12,
+          "fin": "9247GG"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-S-29-10-11-000-014-A",
+      "dispatch": {
+        "mel_item": "29-10-03A",
+        "dispatchable": true,
+        "dispatch_condition": "Green engine driven pump inoperative with the electric motor pump available and the landing distance penalty applied; no dispatch with a low level indication displayed"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-S-29-10-11-810-805",
+    "doc_type": "TSM",
+    "title": "HYD G RSVR LO LVL Following an Engine Driven Pump Event",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2020-03-30",
+      "reason": "Case drain flow is no longer read as a pump condition on its own: the interpretation is now conditional on whether the full-flow case drain filter is installed, and the differential pressure indicator carries the decision.",
+      "raised_by_pawo": "PAWO-131570-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-11",
+      "title": "Main System — Engine Driven Pump"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7720",
+        "CVX-6080"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1993-11-20",
+      "released": "1994-05-30",
+      "revised": "2020-03-30",
+      "effective": "2020-04-17"
+    },
+    "abstract": "Fault isolation for a green reservoir low level indication after an engine driven pump event, with the debris containment decision that determines whether the whole circuit has to be flushed.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a green system reservoir low level indication and, where a pump has failed, establishes whether debris has been contained at the pump or has reached the reservoir.",
+      "fault_description": "The indication appears with normal system pressure or shortly after a pressure fluctuation, and is often accompanied by a rise in fluid temperature. Where an engine driven pump has failed, the important question is not the pump itself but where its debris went: on aircraft without case drain filtration the debris reaches the reservoir and from there the whole circuit, and the recovery is a system flush with every downstream filter and accumulator changed. On aircraft with the case drain filter the differential pressure indicator answers the question in one look. Note that a rising case drain flow does not mean the same thing on the two standards. Unfiltered, it is a measure of pump wear. With the full-flow filter installed, the flow figure at the test connection also rises as the element loads, so a reading above the unfiltered limit on a filtered aircraft points at an element approaching bypass and not at a worn pump.",
+      "isolation_procedure": "1. Record the fault codes and the reservoir quantity, and check for an external leak at every accessible joint before anything is disturbed. 2. Check the fluid temperature history; a rise with no leak points at internal pump distress. 3. On aircraft with the case drain filter, read the differential pressure indicator. A tripped indicator confirms that debris has been generated and contained at the pump. 4. If the indicator is clear and no leak is found, check the reservoir quantity transmitter at position 791GG for an indication error. 5. Take a case drain sample and send it for fluid analysis; do not release the aircraft on the sample result alone. 6. If the pump is confirmed failed, remove it under AMM-S-29-10-11-000-014-A and examine the drive shaft shear section. 7. On aircraft without case drain filtration, assume the circuit is contaminated and flush the green system, changing every filter and accumulator downstream. 8. On aircraft with the filter, change the filter element and the pump only, and prove the system by a leak check at operating pressure. 9. Check the clamp position 9247GG for security after the pipe is disturbed.",
+      "dispatch_note": "Dispatch is permitted with the green engine driven pump inoperative under the applicable MMEL item, with the electric motor pump available and the associated landing distance penalty applied. Dispatch is not permitted with a reservoir low level indication displayed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2910110297925",
+        "BE759984-33",
+        "FJO107150-27",
+        "AGS207234-50"
+      ],
+      "fins": [
+        "9247GG",
+        "791GG"
+      ],
+      "drawings": [
+        "D29101105513"
+      ],
+      "software": [],
+      "zones": [
+        "433",
+        "443",
+        "721"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-29-10-11-000-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-131570",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "reservoir low level",
+      "case drain filter",
+      "debris containment",
+      "fluid analysis",
+      "system flush"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "29-10-11-810-805",
+      "fault_symptom": "HYD G RSVR LO LVL displayed with no external leak found",
+      "fault_codes": [
+        "291011002",
+        "291011026"
+      ],
+      "warning_messages": [
+        "HYD G RSVR LO LVL",
+        "HYD G SYS LO PR"
+      ],
+      "affected_fins": [
+        "9247GG",
+        "791GG"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Engine driven pump internal failure releasing bearing debris",
+          "probability_pct": 38,
+          "fin": "9247GG"
+        },
+        {
+          "cause": "External leak at a disturbed joint not found on the first walk-round",
+          "probability_pct": 27,
+          "fin": "9247GG"
+        },
+        {
+          "cause": "Reservoir quantity transmitter indication error",
+          "probability_pct": 20,
+          "fin": "791GG"
+        },
+        {
+          "cause": "Depressurisation solenoid creeping towards the depressurised position",
+          "probability_pct": 15,
+          "fin": "9247GG"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-S-29-10-11-000-014-A",
+      "dispatch": {
+        "mel_item": "29-10-03A",
+        "dispatchable": true,
+        "dispatch_condition": "Green engine driven pump inoperative with the electric motor pump available and the landing distance penalty applied; no dispatch with a low level indication displayed"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

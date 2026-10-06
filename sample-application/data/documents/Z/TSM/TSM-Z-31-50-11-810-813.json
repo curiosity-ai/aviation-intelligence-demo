@@ -1,0 +1,165 @@
+[
+  {
+    "doc_id": "TSM-Z-31-50-11-810-813",
+    "doc_type": "TSM",
+    "title": "Spurious or Out of Order Aural Alert after a Flight Warning Computer Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-08-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-50-12",
+      "31-60"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-01-25",
+      "released": "2023-08-11",
+      "revised": null,
+      "effective": "2023-09-01"
+    },
+    "abstract": "Fault isolation for a spurious aural alert or an unexpected alert order after a flight warning computer change, separating an incomplete software load from a discrete input fault.",
+    "sections": {
+      "purpose": "This procedure isolates a spurious aural alert or an unexpected alert priority order reported after a flight warning computer exchange or a software load, and distinguishes an incomplete load from a discrete input fault.",
+      "fault_description": "The crew reports either an alert that should not have sounded or a set of alerts that sounded in an order they did not expect. Both are commonly reported after a computer change and both have the same first cause: a boot software load that did not complete leaves the priority table partly written, and the computer reports serviceable because the table checksum is not verified until the alert is generated. A change of the alert order is not necessarily a fault at all, because the H2 standard deliberately re-orders the table, and that must be established before any component is changed.",
+      "isolation_procedure": "1. Read the loaded boot software part number at the computer FIN 7462FW and compare it with the aircraft software list. 2. If the part numbers differ, the load did not complete: repeat the load and re-test before any component is changed. 3. If the part numbers match, confirm which priority table the loaded standard uses and compare the reported alert order with that table. 4. An order that matches the table for the loaded standard is not a fault; brief the crew and close the report. 5. If the order does not match the table, run the aural priority sequence in the maintenance test mode and record the actual order. 6. For a spurious alert, identify the source function and read its discrete input state at the aural generation interface. 7. Check the interface unit D3150128195373 connector for a bent or backed-out contact at the discrete concerned. 8. Measure the discrete at the aircraft side of the connector with the source function inhibited; a signal present with the source inhibited indicates a wiring fault. 9. Check the rack position at FIN 668FP2 and the data concentrator at FIN 2993FW for correct seating. 10. Replace the computer only after the load, the table and the discrete input have all been cleared.",
+      "dispatch_note": "Dispatch with a known spurious aural alert is not permitted. Dispatch with a confirmed change of alert order that matches the loaded standard is permitted after the crew has been briefed. Rectify a spurious alert before the next revenue sector."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150128195373",
+        "DE823727-50",
+        "IBE53464-77"
+      ],
+      "fins": [
+        "7462FW",
+        "2993FW",
+        "668FP2"
+      ],
+      "drawings": [
+        "D31501108484"
+      ],
+      "software": [
+        "LB6NE4646B3"
+      ],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-31-50-11-700-033-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-31-1005",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "spurious aural alert",
+      "priority table",
+      "incomplete load",
+      "discrete input",
+      "alert order"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "31-50-11-810-813",
+      "fault_symptom": "Spurious aural alert or unexpected aural alert order after a computer change",
+      "fault_codes": [
+        "315011005",
+        "315011017"
+      ],
+      "warning_messages": [
+        "FWS FWC 1 FAULT"
+      ],
+      "affected_fins": [
+        "7462FW",
+        "2993FW",
+        "668FP2"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Boot software load did not complete and the priority table is partly written",
+          "probability_pct": 44,
+          "fin": "7462FW"
+        },
+        {
+          "cause": "Reported order is correct for the loaded standard and no fault exists",
+          "probability_pct": 26,
+          "fin": "7462FW"
+        },
+        {
+          "cause": "Discrete input wiring fault at the aural generation interface",
+          "probability_pct": 19,
+          "fin": "2993FW"
+        },
+        {
+          "cause": "Computer internal failure",
+          "probability_pct": 11,
+          "fin": "668FP2"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-31-50-11-700-033-A",
+      "dispatch": {
+        "mel_item": "31-50-01A",
+        "dispatchable": false,
+        "dispatch_condition": "Not dispatchable with a confirmed spurious aural alert"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

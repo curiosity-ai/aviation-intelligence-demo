@@ -1,0 +1,177 @@
+[
+  {
+    "doc_id": "MOD-147680",
+    "doc_type": "MOD",
+    "title": "Zone Controller Software Standard ZC_OPS_V14.5 with Independent Upper Deck Authority",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "21-60-11",
+      "44-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SIA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-142870"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-03-11",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "New operational software standard for the zone controller that splits the upper deck into two independently controlled zones and re-tunes the trim air authority, in answer to a persistent front-to-back temperature gradient at high passenger load.",
+    "sections": {
+      "reason": "One operator records cabin comfort complaints on the aft upper deck at 3.4 per thousand passengers against 0.6 on the main deck, and its own recordings show a steady three to four degree gradient between the front and the back of the upper deck once the cabin is above eighty per cent load. Trim air hardware has tested serviceable on every investigation. The cause is that the upper deck is controlled as a single zone whose sensor sits forward of the galley, so the controller never sees the heat load of the aft cabin and the crew compensate by biasing the whole deck cold. The current operational standard removed the nuisance shut-off but did not address the zoning.",
+      "description": "The operational load is re-issued as software LE6RAA1AA20, which supersedes the standard LB8R1DDEAAF now in service. The upper deck is split into a forward and an aft control zone, each with its own demand, its own authority limit and its own duct temperature prediction, and the parameter set LB6R17F3334 is re-issued with the split zone gains. The aft zone takes its feedback from the existing return air sensor at the aft upper deck rather than from the forward cabin sensor. The trim air actuator D2160117909333 and the zone controller valve D2160128690391 are unchanged, as is the manifold kit D2160120235977, but the valve authority table is re-tuned so that the aft zone can pull down without starving the forward one. Trim air manifold FIN 7982HM, heat exchanger FIN 7HQ5 and temperature control heat exchanger FIN 521HM are unaffected physically. Ceiling void routing in zones 292 and 293 is unchanged and no cabin trim is removed. Interface detail remains as drawings D21601284523 and D21601112657.",
+      "effects": "No mass change. No electrical load change. The software standard is not interchangeable with the one it replaces, and both controllers on an aircraft must carry the same standard. The cabin attendant panel gains a second upper deck selector, which is a labelling change and a cabin crew briefing item rather than a training item. Predicted benefit is a front-to-back gradient below one degree at full load. Trouble shooting content for cabin temperature complaints must be re-issued, the maintenance message set changes, and the cabin configuration load has to be re-issued in step because it carries the zone definition.",
+      "embodiment_note": "Retrofit only, applicable to aircraft already at the current operational standard because the parameter structure is derived from it. Embodiment is a line task of about three hours using the portable data loader, with no hardware change and no kit.",
+      "open_points": "Pre-analysis must confirm that the aft return air sensor has the accuracy the split control law assumes, whether the cabin configuration load and the controller load can be applied independently or must be applied together, and whether operators still on the pre-existing standard can be taken directly to this one."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160117909333",
+        "D2160128690391",
+        "D2160120235977"
+      ],
+      "fins": [
+        "7982HM",
+        "7HQ5",
+        "521HM"
+      ],
+      "drawings": [
+        "D21601284523",
+        "D21601112657"
+      ],
+      "software": [
+        "LE6RAA1AA20",
+        "LB8R1DDEAAF",
+        "LB6R17F3334"
+      ],
+      "zones": [
+        "265",
+        "292",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "IO-T-260145",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-142870",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "zone controller",
+      "split zone",
+      "trim air authority",
+      "software standard",
+      "cabin gradient"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 147680,
+      "mod_class": "MINOR",
+      "change_category": "SOFTWARE",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.831",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [],
+      "fins_affected": [
+        "7982HM"
+      ],
+      "software_affected": [
+        "LE6RAA1AA20",
+        "LB8R1DDEAAF",
+        "LB6R17F3334"
+      ],
+      "estimated_manhours": 16,
+      "estimated_cost_keur": 480,
+      "lead_time_weeks": 30,
+      "production_impact": "No production cut-in proposed",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

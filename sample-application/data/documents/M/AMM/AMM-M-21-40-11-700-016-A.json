@@ -1,0 +1,157 @@
+[
+  {
+    "doc_id": "AMM-M-21-40-11-700-016-A",
+    "doc_type": "AMM",
+    "title": "Operational Test of the Cargo Compartment Heating System",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-02-09",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-40",
+      "ata_6d": "21-40-11",
+      "title": "Heating — Cargo Compartment Heating"
+    },
+    "secondary_ata": [
+      "26-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-11-27",
+      "released": "2019-06-25",
+      "revised": "2022-02-09",
+      "effective": "2022-03-04"
+    },
+    "abstract": "Operational test of the cargo compartment heating system, checking the temperature indication stabilisation time and the response of the loop actuator and solenoid to a commanded temperature step.",
+    "sections": {
+      "purpose": "This task gives the operational test of the cargo compartment heating system, including the temperature indication stabilisation check that follows a transmitter replacement.",
+      "job_setup_note": "The aircraft must be on ground power with the air conditioning system running and the cargo doors closed. Ambient temperature must be recorded at the start, because the acceptance stabilisation time is quoted against ambient and the test cannot be assessed without it. If the aircraft has been cold soaked overnight, let the compartment come up to at least five degrees before the test starts, otherwise the first reading is meaningless.",
+      "procedure": "1. Put the aircraft on ground power and start the air conditioning system. 2. Close the cargo doors and confirm that the compartment is empty. 3. Record the ambient temperature and the compartment temperature at the start. WARNING: DO NOT ENTER THE CARGO COMPARTMENT DURING THIS TEST. THE HEATING SYSTEM CAN RAISE LOCAL DUCT TEMPERATURES ABOVE THE TOUCH LIMIT. 4. Select the cargo heating on at the cabin control panel. 5. Command a temperature step of ten degrees above the recorded compartment temperature. 6. Watch the response of the loop actuator 181HM and confirm that it drives within the time in the illustration. 7. Confirm that the solenoid 9469HM energises and that the flow indication changes. 8. Record the time for the compartment temperature indication to stabilise. CAUTION: DO NOT ADJUST THE TRANSMITTER DURING THE TEST. AN ADJUSTMENT MADE BEFORE THE INDICATION HAS STABILISED WILL PUT THE LOOP OUT OF CALIBRATION. 9. Compare the stabilisation time with the value for the aircraft standard. 10. Command a temperature step of ten degrees below and repeat the observation. 11. Select the cargo heating off and confirm that the actuator returns to the closed position.",
+      "close_out": "Record the ambient temperature, both stabilisation times and the actuator response times on the aircraft work card. Where the stabilisation time is outside the value for the aircraft standard, do the fault isolation procedure before the aircraft is released. Confirm that the cargo heating selection is left in the operator's normal configuration."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2140118706760",
+        "EN889198-3B"
+      ],
+      "fins": [
+        "181HM",
+        "9469HM"
+      ],
+      "drawings": [
+        "D21401127591"
+      ],
+      "software": [],
+      "zones": [
+        "172",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-162530",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cargo heating",
+      "operational test",
+      "stabilisation time",
+      "actuator response",
+      "temperature step"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "21-40-11-700-016-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. Post MOD-162530 aircraft use the shorter stabilisation time in the second column of the acceptance table, because the sealed transmitter responds faster.",
+      "manhours": 3.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "172",
+          "273"
+        ],
+        "access_panels": [
+          "172CL",
+          "273CR"
+        ],
+        "doors": [
+          "Aft cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not enter the cargo compartment during the test.",
+          "Put the warning notices in position at the cabin control panel.",
+          "Make sure that the compartment is empty before the test."
+        ],
+        "tooling": [
+          {
+            "reference": "TM-CAB",
+            "description": "Cabin maintenance terminal"
+          },
+          {
+            "reference": "TH-020",
+            "description": "Calibrated thermometer, ambient"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-25-50-11-400-003-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

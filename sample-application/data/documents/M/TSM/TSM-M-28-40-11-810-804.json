@@ -1,0 +1,158 @@
+[
+  {
+    "doc_id": "TSM-M-28-40-11-810-804",
+    "doc_type": "TSM",
+    "title": "Fuel Quantity Indication Step or Freeze on One Wing Tank",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-04-12",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-40",
+      "ata_6d": "28-40-11",
+      "title": "Indicating — Fuel Quantity Probes"
+    },
+    "secondary_ata": [
+      "28-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-06-27",
+      "released": "2020-02-05",
+      "revised": "2023-04-12",
+      "effective": "2023-05-09"
+    },
+    "abstract": "Fault isolation for a step change or a frozen reading in the fuel quantity indication of one wing tank, separating a probe fault from a harness fault and from a genuine transfer problem.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a step change or a frozen reading in the fuel quantity indication of one wing tank.",
+      "fault_description": "The indicated quantity of one wing tank jumps by several hundred kilogrammes with no corresponding change in the other tank, or stops moving while fuel is clearly being used. Crews often notice it as a growing imbalance indication rather than as a quantity fault. The behaviour can be continuous or intermittent, and an intermittent case usually correlates with a particular fuel load band rather than with flight phase. A frozen reading at a fixed value is nearly always a probe or a harness fault; a slow drift is more often a transfer problem.",
+      "isolation_procedure": "1. Record the indicated quantity of every tank and the total, and compare the total with the uplift figure from the refuelling receipt. 2. Read the fuel quantity computer fault memory and record which probe channel is reported. 3. Do a capacitance check of the reported probe channel at the tank connector and compare it with the empty-tank reference. 4. If the capacitance is out of range, isolate the probe from its harness and repeat the check at the probe terminals. 5. If the reading is correct at the probe but wrong at the connector, the fault is in the harness; check the pipe run 35QT and the duct run 59QA for a chafed loom. 6. If the reading is wrong at the probe, replace the probe and do the confirmation task. 7. Where the indication is frozen rather than stepped, check the manifold D2840114562313 for a blocked compensator port. 8. Do a densitometer cross-check against the refuelling figure at two fuel states. 9. Where the total is correct but the split is wrong, look for a transfer valve that is not closing rather than for an indication fault. 10. Repeat the confirmation task and confirm that the indication tracks a controlled defuel.",
+      "dispatch_note": "Dispatch is permitted with one probe channel inoperative provided the tank quantity can be confirmed by the magnetic level indicators before departure. Dispatch is not permitted with a frozen indication on a tank that is being used in flight."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2840114562313",
+        "D2820117143540"
+      ],
+      "fins": [
+        "35QT",
+        "59QA"
+      ],
+      "drawings": [
+        "D28401163511"
+      ],
+      "software": [],
+      "zones": [
+        "591",
+        "691"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-28-20-11-400-006-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "fuel quantity",
+      "probe channel",
+      "capacitance check",
+      "frozen indication",
+      "imbalance"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "28-40-11-810-804",
+      "fault_symptom": "FUEL QTY indication of one wing tank steps or freezes",
+      "fault_codes": [
+        "284011005",
+        "284011031"
+      ],
+      "warning_messages": [
+        "FUEL WING TK LO LVL",
+        "FUEL IMBALANCE"
+      ],
+      "affected_fins": [
+        "35QT",
+        "59QA"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Fuel quantity probe channel open or shorted",
+          "probability_pct": 42,
+          "fin": "35QT"
+        },
+        {
+          "cause": "Chafed probe harness in the tank loom run",
+          "probability_pct": 26,
+          "fin": "59QA"
+        },
+        {
+          "cause": "Blocked compensator port in the probe manifold",
+          "probability_pct": 18,
+          "fin": "35QT"
+        },
+        {
+          "cause": "Transfer valve not closing, giving a genuine quantity change",
+          "probability_pct": 14,
+          "fin": "59QA"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-M-28-20-11-400-006-A",
+      "dispatch": {
+        "mel_item": "28-41-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One probe channel inoperative with the tank quantity confirmed by magnetic level indicators before departure."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,179 @@
+[
+  {
+    "doc_id": "MOD-111174",
+    "doc_type": "MOD",
+    "title": "Continuous LED Wall Wash Strip in Place of the Segmented Ceiling Luminaires",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2024-10-29",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "33",
+      "ata_4d": "33-20",
+      "ata_6d": "33-20-11",
+      "title": "Passenger Compartment Lighting — Ceiling and Wall Wash Lights"
+    },
+    "secondary_ata": [
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "KLE",
+        "MTA",
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00591",
+      "production_cut_in_date": "2023-08-25",
+      "retrofit_via": [
+        "CRN-33-1005"
+      ]
+    },
+    "dates": {
+      "created": "2020-11-16",
+      "released": "2022-04-07",
+      "revised": "2024-10-29",
+      "effective": "2024-11-18"
+    },
+    "abstract": "A single continuous LED strip replacing the segmented ceiling luminaires, removing the visible scalloping between segments and cutting cabin lighting removals to a third of their previous rate.",
+    "sections": {
+      "reason": "The segmented ceiling luminaire arrangement produced a visible scalloped pattern on the ceiling that three operators raised as a cabin appearance issue, and the individual segments were failing at a rate of eleven per aircraft per year, driven by the connector at each segment joint rather than by the light engines themselves. Cabin lighting was the second most common cabin defect on the type. The connector count was the root cause, so the answer was to reduce the number of joints rather than to improve the connector.",
+      "description": "The eleven ceiling luminaire segments per side are replaced by a single continuous LED strip carried in an extruded channel, with one power and control connection at each end instead of eleven. The ceiling panel D3320113544835 is replaced by an item with the channel moulded in, the wall wash panel D3320114693851 is re-profiled to suit, and the strip is clipped to the extrusion by curtain rail ESC169948-27 sections. Shear head bolts LN983579-8C secure the channel to the ceiling former. The wall wash light assembly 9557LP and the ceiling lining 9RH keep their identifiers. Revised detail is on drawing D33201253855. Work is done from the ceiling void and the cabin, zones 265, 275 and 293.",
+      "effects": "Mass reduction of 4.2 kg per aircraft. Electrical load falls by 620 VA on the cabin bus at full brightness. The strip is not interchangeable with the segmented arrangement because the ceiling panel carries the channel. Cabin lighting removals are expected to fall to about a third of the previous rate. Illustrated parts content changes from eleven segments to one strip per side, and the cabin lighting removal task is replaced in full.",
+      "embodiment_note": "Cut in on the production line at MSN C00591 in August 2023. Retrofit through Service Bulletin CRN-33-1005 is offered as a cabin refresh option and takes two night stops for a full cabin. Segmented luminaires remain available as spares for aircraft that stay at the previous standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3320113544835",
+        "D3320114693851",
+        "ESC169948-27",
+        "LN983579-8C"
+      ],
+      "fins": [
+        "9557LP",
+        "9RH"
+      ],
+      "drawings": [
+        "D33201253855"
+      ],
+      "software": [],
+      "zones": [
+        "265",
+        "275",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00591"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-33-1005",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-111166",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cabin lighting",
+      "led strip",
+      "segment connector",
+      "scalloping",
+      "cabin refresh"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Cabin Design"
+    },
+    "type_data": {
+      "mod_number": 111174,
+      "mod_class": "MINOR",
+      "change_category": "CABIN",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.812",
+          "CS 25.1353"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -4.2,
+      "balance_impact": "Distributed along the cabin, no reportable shift",
+      "electrical_load_impact_va": -620,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "ESC169948-27",
+        "LN983579-8C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3320113544835",
+        "D3320114693851"
+      ],
+      "fins_affected": [
+        "9557LP",
+        "9RH"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 190,
+      "estimated_cost_keur": 580,
+      "lead_time_weeks": 30,
+      "production_impact": "Cut-in at MSN C00591, ceiling installation shortened by one hour",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

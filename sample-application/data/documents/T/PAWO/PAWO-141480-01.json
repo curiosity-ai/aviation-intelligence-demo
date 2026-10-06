@@ -1,0 +1,320 @@
+[
+  {
+    "doc_id": "PAWO-141480-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Sealed Seat Track Sections in the Upper Deck Wet Bays",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-06-07",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-50",
+      "ata_6d": "53-50-12",
+      "title": "Floor Structure — Seat Tracks"
+    },
+    "secondary_ata": [
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00130"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-02-04",
+      "released": "2016-06-07",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the replacement of upper deck seat track sections by sealed items in the galley and lavatory bays, covering the published track repairs, the corrosion inspection task and the seat track part list.",
+    "sections": {
+      "objective": "Determine whether sealed seat track sections can be introduced in the upper deck wet bays without invalidating the published repair scheme, and identify the maintenance data that changes when a drained track profile replaces an open one. The order was raised internally after five operators reported track corrosion at the same galley bays inside the first heavy check. The analysis was scoped to the bays between the forward galley and the mid lavatory group; the main deck was deliberately left out because its floor drains differently.",
+      "findings_summary": "Three impacts were confirmed and none blocked the change. The published local section splice repair for the galley bays is the most affected item: it reinstates an open track profile, so an aircraft repaired to that standard and then modified would carry two different profiles in the same bay, with a step at the splice that no seat fitting tolerance covers. The detailed corrosion inspection in the wet bays was found to be written around the drain path of the open profile, and its access and lighting instructions do not apply to a sealed section. The illustrated parts list needs the sealed section and its end caps as new items. A fourth item surfaced only through the similarity pass and was recorded as informational.",
+      "next_steps": "The change was cleared without conditions. The repair scheme owner was asked to publish a sealed-profile variant of the splice repair before the first retrofit slot, and the inspection task owner to restate the access instructions for a drained section. The parts list update was folded into the next scheduled issue rather than being pulled forward, since no aircraft can reach the sealed standard before that issue is published."
+    },
+    "entities": {
+      "part_numbers": [
+        "ARD386097-40",
+        "D5350129109541",
+        "LN666073-13"
+      ],
+      "fins": [],
+      "drawings": [
+        "D53501208297"
+      ],
+      "software": [],
+      "zones": [
+        "242",
+        "265",
+        "971"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-141480",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "seat track",
+      "corrosion protection",
+      "wet bay",
+      "galley"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-141480-01",
+      "subject_mod": "MOD-141480",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2016-06-07",
+      "outcome": "VALIDATED",
+      "raised_date": "2016-02-04",
+      "due_date": "2016-06-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA"
+        ],
+        "estimated_manhours": 70,
+        "spent_manhours": 52
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "53",
+          "25"
+        ],
+        "ata_4d": [
+          "53-50",
+          "25-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00130"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "ARD386097-40",
+            "D5350129109541",
+            "LN666073-13"
+          ],
+          "fins": [],
+          "drawings": [
+            "D53501208297"
+          ],
+          "zones": [
+            "242",
+            "265",
+            "971"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "standing water and corrosion at a cabin floor interface",
+          "sealed track profile in a galley bay"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search published repairs and inspections on the upper deck seat tracks",
+          "method": "ENTITY",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Compare the drain path of the open and sealed profiles",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Search for prior art on wet bay floor corrosion in other chapters",
+          "method": "SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-T-53-50-12-004",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "242",
+              "265",
+              "971"
+            ],
+            "shared_ata_6d": [
+              "53-50-12"
+            ],
+            "shared_drawings": [
+              "D53501208297"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The local section splice repair reinstates the open track profile in exactly the bays the modification seals. An aircraft that carries the repair and is then modified ends up with two profiles in one bay and a step at the splice that no published seat fitting tolerance covers.",
+          "resolution": "Publish a sealed-profile variant of the splice repair and add a note that the repair standard must match the track standard of the bay."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-53-50-12-200-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ARD386097-40"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "242",
+              "265",
+              "971"
+            ],
+            "shared_ata_6d": [
+              "53-50-12"
+            ],
+            "shared_drawings": [
+              "D53501208297"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The detailed corrosion inspection is written around the drain path of the open profile: it tells the mechanic where water collects and how to light the channel. On a sealed section neither instruction applies and the inspection would be recorded as satisfactory without anything having been looked at.",
+          "resolution": "Restate the access, lighting and acceptance criteria for a drained section, and split the task by embodiment condition."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-T-53-50-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "ARD386097-40",
+              "D5350129109541",
+              "LN666073-13"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "242",
+              "265",
+              "971"
+            ],
+            "shared_ata_6d": [
+              "53-50-12"
+            ],
+            "shared_drawings": [
+              "D53501208297"
+            ],
+            "similarity_note": "Both documents describe the same bay of seat track installation and use the same wording for the track section, the end cap and the attachment lug."
+          },
+          "rationale": "The figure carries one track section standard. The sealed section and its end caps are not interchangeable with the open items in the same bay and cannot be listed as alternates without misleading the reader.",
+          "resolution": "List the sealed section and end caps as new items with their own effectivity and cross reference the open items as pre-modification."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-T-53-50-11-002",
+          "doc_type": "SRM",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "shared_drawings": [],
+            "similarity_note": "The repair speaks of a crack arrest hole and an angle reinforcement at the floor beam web; the modification speaks of a sealed track profile. No identifier and no chapter is common to the two, but both are responses to the same standing water in the same galley bays, and the repair's background text describes the moisture trap the modification removes."
+          },
+          "rationale": "Recorded as informational rather than as a conflict. The beam web repair is driven by the same wet bay environment and its incidence should fall once the tracks are sealed, which is useful evidence for the business case but changes nothing in the design.",
+          "resolution": "Feed the finding to the fleet reliability review; no action on either document."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "SRM-T-56-20-12-001",
+          "doc_type": "SRM",
+          "reason": "Shares the upper deck cabin zone and surfaces on a zone search of the passenger compartment, but it is a window frame surround strap repair. It touches no floor structure and no track section, and its crazing blend out has nothing to do with track corrosion."
+        }
+      ],
+      "conclusion": "Issued 2016-06-07. Three documentation impacts and one informational overlap. No blocking conflict, no prerequisite and no effectivity clash; the change was cleared to proceed.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

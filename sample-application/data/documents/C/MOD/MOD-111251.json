@@ -1,0 +1,189 @@
+[
+  {
+    "doc_id": "MOD-111251",
+    "doc_type": "MOD",
+    "title": "Weather Radar Transceiver Change to a Solid State Unit with Increased Scan Rate",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-07-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-40",
+      "ata_6d": "34-40-11",
+      "title": "Independent Position Determining — Weather Radar Transceiver"
+    },
+    "secondary_ata": [
+      "34-40",
+      "53-31"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00408"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "NVT",
+        "CDW"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "C00273",
+      "production_cut_in_date": "2019-11-26",
+      "retrofit_via": [
+        "CRN-34-2003"
+      ]
+    },
+    "dates": {
+      "created": "2018-02-20",
+      "released": "2019-07-11",
+      "revised": null,
+      "effective": "2019-08-20"
+    },
+    "abstract": "Replacement of the magnetron weather radar transceiver by a solid state unit, roughly doubling the scan rate and removing the transmitter life limit that had been driving scheduled removals.",
+    "sections": {
+      "reason": "The magnetron transceiver delivered on the type carried a hard life limit on the transmitter tube and was being removed at about six thousand five hundred flight hours regardless of condition, which cost the fleet roughly one hundred and forty scheduled removals a year. The supplier had also given notice that the tube would go out of production. Separately, crews had asked for a faster picture refresh in convective weather, and the scan rate of the delivered unit was the limiting factor.",
+      "description": "The magnetron transceiver is replaced by a solid state unit of part number D3440119270001 mounted on the existing radome bulkhead tray with the packer plates removed. The mounting hardware changes to washers AES311855K5 and AGS393059-2A because the new unit is 9 mm shallower in the mounting direction. The antenna and its drive are unchanged at this standard. The interface unit D3440005921121 is re-loaded to accept the higher data rate on the display bus, and the control panel D3440004285173 is retained. Functional item 282TR7 keeps its identity and functional item 2FE, the transceiver rack, is re-shimmed. The work is at the nose in zone 111 with the radome removed, and the display path runs to the flight compartment in zone 216. Installation detail is on drawing D34401154303.",
+      "effects": "Mass reduction of 3.1 kg at the extreme nose, giving a forward centre of gravity movement of 0.09 per cent mean aerodynamic chord that is inside the reporting threshold but is declared. Electrical load falls by 180 volt-amperes because the high-voltage supply is removed. The unit is not interchangeable with the magnetron transceiver: the tray shim stack and the bus loading both change. The scheduled transmitter removal is deleted from the maintenance programme, and the trouble shooting content built around a magnetron warm-up fault becomes obsolete.",
+      "embodiment_note": "Production cut-in at MSN C00273 in November 2019. Retrofit is by Service Bulletin CRN-34-2003 and takes one shift with the radome off. Kit availability was staged over eighteen months because the supplier could not build ahead of the production line."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3440119270001",
+        "D3440005921121",
+        "D3440004285173",
+        "AES311855K5",
+        "AGS393059-2A"
+      ],
+      "fins": [
+        "282TR7",
+        "2FE"
+      ],
+      "drawings": [
+        "D34401154303"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "216"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00273"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-34-2003",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-111263",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "AMM-C-34-40-11-000-013-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "weather radar",
+      "solid state transceiver",
+      "scan rate",
+      "magnetron",
+      "life limit"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111251,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -3.1,
+      "balance_impact": "Forward mass reduction, CG movement 0.09 % MAC aft, declared",
+      "electrical_load_impact_va": -180,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3440119270001",
+        "AES311855K5",
+        "AGS393059-2A"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3440005921121"
+      ],
+      "fins_affected": [
+        "282TR7",
+        "2FE"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 180,
+      "estimated_cost_keur": 1450,
+      "lead_time_weeks": 56,
+      "production_impact": "Cut-in at MSN C00273, supplier build rate limited the retrofit kit release",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

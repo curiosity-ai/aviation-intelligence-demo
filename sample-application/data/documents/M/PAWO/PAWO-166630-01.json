@@ -1,0 +1,395 @@
+[
+  {
+    "doc_id": "PAWO-166630-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Retention of Landing Fault Context in the Brake Control Unit Load",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-12-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "KLE"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-12-09",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the brake control unit software standard that retains landing fault context, covering the software supersession chain, the two retrofit routes it affects, and the maintenance and troubleshooting content that reads the snapshot.",
+    "sections": {
+      "objective": "Establish which documents the new brake control unit software load supersedes or invalidates, which of the two existing retrofit routes remain valid once it exists, and what has to change in the maintenance and troubleshooting content so that a line engineer can actually use the extended snapshot the load produces.",
+      "scope_note": "The search covers ATA 32-40 as the primary chapter and ATA 45-20 as secondary, because the snapshot is read through the maintenance terminal and the reader has to understand the new record format. ATA 42-40 was added in the second pass once it became clear that the signed load package route depends on the software management module standard. Landing gear extension and retraction content was searched and produced nothing: the load does not touch that function.",
+      "method_note": "Entity linking was seeded from the single part number, the single functional item number, the zone and the software part number on the candidate, and the software supersession field was followed explicitly, which is how the current in-service load and both of its retrofit bulletins were recovered in one hop. Semantic similarity added one finding on a different chapter with no shared identifiers. The software part number is by far the strongest link in this candidate and carries most of the result set on its own.",
+      "findings_summary": "Seven items have been confirmed and one is blocking. The candidate load supersedes the software standard currently in service, and because the record format changes, the maintenance terminal reader has to be updated at the same time or the snapshot is unreadable. That is the blocking item: it is not a conflict with another change, it is a dependency that has no owner yet. The two existing retrofit routes behave differently: the combined hardware and software bulletin remains valid because the hardware it installs is what the candidate needs, while the load-only bulletin becomes a dead end for any aircraft that has not yet taken it, because it installs a load the candidate immediately replaces. Below that, the built-in test task, the fault isolation procedure and the illustrated parts figure all describe the snapshot window and all need reissue. One similarity-only finding points at the software management module change, which the load-only route depends on for signed package staging.",
+      "next_steps": "Find an owner for the maintenance terminal reader update and confirm whether it travels with this load or needs its own change. Decide whether the load-only bulletin is cancelled or re-issued against the candidate. Confirm the eligibility of aircraft that took the software-only retrofit. Agree the documentation package scope with technical publications before design freeze."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126111041"
+      ],
+      "fins": [
+        "1GM5"
+      ],
+      "drawings": [],
+      "software": [
+        "LG9P59363BC"
+      ],
+      "zones": [
+        "721"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-166630",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-M-250912",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "brake control unit",
+      "software supersession",
+      "fault snapshot",
+      "reader update"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-166630-01",
+      "subject_mod": "MOD-166630",
+      "source_io": "IO-M-250912",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2025-12-09",
+      "due_date": "2026-03-06",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EYIS",
+        "lead_site": "Ashcombe",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 70,
+        "spent_manhours": 52
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "32",
+          "45",
+          "42"
+        ],
+        "ata_4d": [
+          "32-40",
+          "45-20",
+          "42-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00478"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3240126111041"
+          ],
+          "fins": [
+            "1GM5"
+          ],
+          "drawings": [],
+          "zones": [
+            "721"
+          ],
+          "software": [
+            "LG9P59363BC"
+          ]
+        },
+        "similarity_seeds": [
+          "fault record lost at shutdown leaving no context for the line engineer",
+          "no fault found removals driven by an incomplete recorded snapshot"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Follow the software supersession chain on the brake control unit",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess both retrofit routes against the candidate load",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Identify the owner of the maintenance terminal reader update",
+          "method": "SME_INTERVIEW",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Search for comparable recording changes on other systems",
+          "method": "SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-163460",
+          "doc_type": "MOD",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126111041"
+            ],
+            "shared_fins": [
+              "1GM5"
+            ],
+            "shared_zones": [
+              "721"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The candidate load supersedes the standard introduced by MOD-163460 and changes the snapshot record format. The maintenance terminal reader shipped with that standard cannot decode the new record, so an aircraft loaded with the candidate would produce a snapshot that nobody can read until the reader is updated. No owner has been identified for that update.",
+          "resolution": "Find an owner for the reader update and make it a declared dependency of the candidate, either inside the same change or as a named concurrent change."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-32-1110",
+          "doc_type": "SB",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126111041"
+            ],
+            "shared_fins": [
+              "1GM5"
+            ],
+            "shared_zones": [
+              "721"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The combined hardware and software bulletin installs the faster sampling interface that the candidate needs, so its hardware step stays valid, but its software step is superseded. Operators reading only the bulletin will load the older standard and then need a second visit. The document was reached by following the embodiment edge from the superseded modification rather than by any text match.",
+          "resolution": "Re-issue the bulletin with the software step pointing at the candidate load once the candidate is released, keeping the hardware step unchanged."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MRD-32-1126",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126111041"
+            ],
+            "shared_fins": [
+              "1GM5"
+            ],
+            "shared_zones": [
+              "721"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The load-only bulletin is written for aircraft that already carry the faster interface and installs the software standard that the candidate replaces. For any aircraft that has not yet taken it, embodying it becomes a wasted visit as soon as the candidate is released, and its effectivity statement gives no warning.",
+          "resolution": "Cancel the load-only bulletin or re-issue it against the candidate load, and tell the operators that have it in their work plan before the candidate is released."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-M-32-40-12-810-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "1GM5"
+            ],
+            "shared_zones": [
+              "721"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The fault isolation procedure branches on whether the snapshot is present and complete, and it explicitly treats a truncated record as expected on the current standard. With the candidate load a truncated record becomes a real fault, so the branch logic inverts.",
+          "resolution": "Rewrite the procedure branch for the candidate standard and add a pre and post effectivity note so that both fleets can use the same document."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-M-32-40-12-700-018-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126111041"
+            ],
+            "shared_fins": [
+              "1GM5"
+            ],
+            "shared_zones": [
+              "721"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": "The task text describes the snapshot self-test and the recorded window in nearly the same words as the candidate description, which is why it also came out of the similarity pass."
+          },
+          "rationale": "The built-in test task checks that the recorded window matches the aircraft software standard, and it names the forty second window of the current standard. The candidate extends it to one hundred and twenty seconds and adds two recorded parameters.",
+          "resolution": "Update the acceptance table in the task and add the two new parameters to the expected snapshot content."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-M-32-40-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126111041"
+            ],
+            "shared_fins": [
+              "1GM5"
+            ],
+            "shared_zones": [
+              "721"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure note tells the reader to check the hardware identifier before ordering, because the software standard depends on the switch assembly variant. With a third software standard in play the note is no longer sufficient to tell an operator what it can load.",
+          "resolution": "Extend the figure note to reference the software standard as well as the hardware identifier."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "MOD-164355",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents describe on-board handling of a software package and the integrity of what is loaded, in similar language about staging, read-back and configuration reporting. They share no part number, no functional item number and no zone."
+          },
+          "rationale": "The load-only retrofit route depends on the aircraft being able to stage a signed load package, which only the newer software management module can do. Any aircraft that has not taken that module change can only be loaded from a portable loader, which changes the embodiment story for a large part of the fleet.",
+          "resolution": "State the module dependency explicitly in the candidate embodiment note and check how many aircraft in the requesting operator fleet still carry the earlier module."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-163208",
+          "doc_type": "MOD",
+          "reason": "Surfaces on similarity through shared vocabulary about brackets, thermal effects and repeat findings, but it is a leading edge duct support change with no software content, no shared identifier and no relationship to the brake system."
+        },
+        {
+          "doc_id": "TSM-M-29-30-11-810-806",
+          "doc_type": "TSM",
+          "reason": "Another troubleshooting procedure built around an indication that disagrees with a reference reading, with similar structure and phrasing. It is on the hydraulic indicating system, shares no functional item number, no zone and no software with the candidate."
+        }
+      ],
+      "conclusion": "Not yet issued. The maintenance terminal reader dependency is blocking and has no owner; the two retrofit routes need a decision before the candidate is released.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

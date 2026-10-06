@@ -1,0 +1,158 @@
+[
+  {
+    "doc_id": "TSM-T-36-20-11-810-810",
+    "doc_type": "TSM",
+    "title": "Bleed Shutdown With No Confirmed Overpressure — Fault Isolation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-05-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-20",
+      "ata_6d": "36-20-11",
+      "title": "Pneumatic Indicating — Bleed Monitoring Computer"
+    },
+    "secondary_ata": [
+      "36-20-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-12-04",
+      "released": "2021-05-06",
+      "revised": null,
+      "effective": "2021-06-15"
+    },
+    "abstract": "Fault isolation for a bleed shutdown commanded without a confirmed overpressure, separating sensor drift, an overheat confirmation window that is too short and a genuine duct condition.",
+    "sections": {
+      "purpose": "Fault isolation for a bleed shutdown commanded in flight where the recorded pressure and temperature do not confirm an overpressure or an overheat condition.",
+      "fault_description": "The aircraft continues to destination on a single bleed source after a shutdown, and the recorded data does not show the condition the shutdown was supposed to protect against. On a single sensing installation a drift of one sensor is enough to command the shutdown, and the sensor then tests serviceable on the bench because the drift is temperature dependent. On aircraft with the higher bleed pressure schedule a normal transient during engine acceleration can trip a short overheat confirmation window. The two are separated by reading the recorded transient rather than by testing the sensor.",
+      "isolation_procedure": "1. Read the recorded pressure and temperature for the shutdown event and note the duration of any excursion. 2. Establish the sensing standard fitted from the configuration record. 3. On a dual sensing installation, read the disagreement message; a recorded disagreement identifies the drifted channel directly and the isolation ends there. 4. On a single sensing installation, compare the recorded pressure against the opposite side for the same phase of flight; a difference outside the stated band identifies the drifted sensor. 5. Where the excursion is short and coincident with an engine acceleration, check the overheat confirmation window setting against the standard fitted. 6. Where the confirmation window is at the original setting on an aircraft with the higher pressure schedule, the shutdown is explained and the modification bulletin applies. 7. Where the excursion is genuine and sustained, the isolation continues as a duct condition and the manifold must be leak checked. 8. Do not replace a sensor that has not been identified by steps 3 or 4; the no-fault-found rate on this item is high.",
+      "dispatch_note": "Dispatch on a single bleed source is permitted under the minimum equipment list item with the associated altitude and air conditioning restrictions. A recorded sensor disagreement on a dual sensing installation is a maintenance message and not a dispatch item, but it must be cleared before the aircraft is released with both bleeds available."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3620112949513",
+        "D3620115643168",
+        "D3620117912452",
+        "D3620117993254"
+      ],
+      "fins": [
+        "154PU",
+        "4PU9",
+        "5172PN"
+      ],
+      "drawings": [
+        "D36201195418"
+      ],
+      "software": [
+        "LC8RC1C4C75",
+        "LG2RD2CCF4D"
+      ],
+      "zones": [
+        "683",
+        "531",
+        "141"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-36-20-11-400-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bleed shutdown",
+      "sensor drift",
+      "confirmation window",
+      "dual sensing",
+      "single bleed"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "36-20-11-810-810",
+      "fault_symptom": "BLEED 1(2) FAULT with shutdown and no confirmed overpressure in the recorded data",
+      "fault_codes": [
+        "362011005",
+        "362011018"
+      ],
+      "warning_messages": [
+        "AIR BLEED FAULT"
+      ],
+      "affected_fins": [
+        "154PU",
+        "4PU9",
+        "5172PN"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Single pressure sensor drift, temperature dependent",
+          "probability_pct": 45,
+          "fin": "4PU9"
+        },
+        {
+          "cause": "Overheat confirmation window too short for the bleed pressure schedule",
+          "probability_pct": 30,
+          "fin": "5172PN"
+        },
+        {
+          "cause": "Genuine duct leak or restriction at the cross-bleed manifold",
+          "probability_pct": 15,
+          "fin": "154PU"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-T-36-20-11-400-003-A",
+      "dispatch": {
+        "mel_item": "36-20-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Single bleed source, altitude and air conditioning restrictions applied"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

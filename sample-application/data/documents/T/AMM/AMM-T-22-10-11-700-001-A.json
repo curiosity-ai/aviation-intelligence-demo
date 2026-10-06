@@ -1,0 +1,330 @@
+[
+  {
+    "doc_id": "AMM-T-22-10-11-700-001-A",
+    "doc_type": "AMM",
+    "title": "Flight Guidance Computer — Rack Contact Resistance Measurement and System Functional Test",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2007-06-07",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-10",
+      "ata_6d": "22-10-11",
+      "title": "Auto Flight — Flight Guidance Computer"
+    },
+    "secondary_ata": [
+      "22-80-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-03-26",
+      "released": "2007-06-07",
+      "revised": "2007-06-07",
+      "effective": "2007-07-05"
+    },
+    "abstract": "Contact resistance measurement at the flight guidance computer rack connector and the system functional test, used as the acceptance check after a rack change and after an intermittent autopilot disconnect report.",
+    "sections": {
+      "purpose": "This task gives the contact resistance measurement at the flight guidance computer rack connector and the flight guidance system functional test, and states the acceptance limit the measurement is judged against.",
+      "job_setup_note": "The measurement is only valid with the computer fully seated and latched and with the harness left where it lies. On an isolated rack the harness carries a deliberate service loop and the measurement must be taken with that loop in its natural position, not with the harness pulled aside for access. Electrical power is removed for the measurement and restored for the functional test.",
+      "procedure": "1. Remove electrical power and put the warning notice in position. 2. Open the avionics compartment and gain access to the rack in zone 124. 3. Confirm both computers are fully seated and that the rack latches are made. 4. Connect the contact resistance meter at the test points given in the figure. CAUTION: DO NOT PULL THE HARNESS ASIDE FOR ACCESS. THE SERVICE LOOP POSITION AFFECTS THE READING AND THE READING IS THEN NOT COMPARABLE WITH THE LIMIT. 5. Measure the contact resistance at each of the contacts listed and confirm that each is inside the limit. 6. Where a reading exceeds the limit, do not clean the contact; report the contact as failed, because the cleaning removes the evidence of fretting. 7. Disconnect the meter. 8. Restore electrical power. 9. Load the built-in test software where it is being changed, and confirm the part number. 10. Do the flight guidance system functional test, including the autopilot engagement and disengagement check on both channels. WARNING: THE AUTOPILOT DISENGAGEMENT WARNING SOUNDS DURING THIS TEST. WARN ANYONE WORKING IN THE FLIGHT COMPARTMENT. 11. Confirm no maintenance message remains active. 12. Close the avionics compartment.",
+      "close_out": "Remove the warning notice. Record the measurement as a pass or a fail against the limit and record the functional test result. Where the measurement failed, report it and quarantine the rack for shop assessment."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2210112806118",
+        "D2210114091568",
+        "AES764786K6",
+        "ESC385904-77"
+      ],
+      "fins": [
+        "7CC",
+        "872CE",
+        "897CC"
+      ],
+      "drawings": [
+        "D22801194445"
+      ],
+      "software": [
+        "LG7R957079B"
+      ],
+      "zones": [
+        "124",
+        "223",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-31-50-11-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight guidance computer",
+      "contact resistance",
+      "fretting",
+      "functional test",
+      "acceptance limit"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "22-10-11-700-001-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. The service loop caution at step 4 applies only to aircraft post MOD-149230, which carry an isolated rack.",
+      "manhours": 3.5,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "124",
+          "223",
+          "263"
+        ],
+        "access_panels": [
+          "124AL",
+          "223BR"
+        ],
+        "doors": [
+          "Avionics compartment access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Remove electrical power before the meter is connected.",
+          "Warn the flight compartment before the functional test.",
+          "Put the warning notice in position."
+        ],
+        "tooling": [
+          {
+            "reference": "98D22101-015",
+            "description": "Contact resistance meter"
+          },
+          {
+            "reference": "98D31501-027",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [
+          "Antistatic bag"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-31-50-11-700-001-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-T-22-10-11-700-001-A",
+    "doc_type": "AMM",
+    "title": "Flight Guidance Computer — Rack Contact Resistance Measurement and System Functional Test",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-08",
+      "reason": "Contact resistance readings are now recorded as values against contact identifiers and compared with the previous set rather than reported as a pass or a fail.",
+      "raised_by_pawo": "PAWO-149230-01",
+      "raised_by_finding": "F01",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-10",
+      "ata_6d": "22-10-11",
+      "title": "Auto Flight — Flight Guidance Computer"
+    },
+    "secondary_ata": [
+      "22-80-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-03-26",
+      "released": "2007-06-07",
+      "revised": "2026-06-08",
+      "effective": "2026-07-06"
+    },
+    "abstract": "Contact resistance measurement at the flight guidance computer rack connector and the system functional test, used as the acceptance step after a rack change and as the trend measurement for fretting.",
+    "sections": {
+      "purpose": "This task gives the contact resistance measurement at the flight guidance computer rack connector and the flight guidance system functional test, and establishes the baseline reading used for the fretting trend.",
+      "job_setup_note": "The measurement is a trend, so it is only useful if it is taken the same way each time: the same instrument type, the same contacts, and with the computer fully seated and latched. On an isolated rack the harness carries a deliberate service loop and the measurement must be taken with that loop in its natural position, not with the harness pulled aside for access. Electrical power is removed for the measurement and restored for the functional test.",
+      "procedure": "1. Remove electrical power and put the warning notice in position. 2. Open the avionics compartment and gain access to the rack in zone 124. 3. Confirm both computers are fully seated and that the rack latches are made. 4. Connect the contact resistance meter at the test points given in the figure. CAUTION: DO NOT PULL THE HARNESS ASIDE FOR ACCESS. THE SERVICE LOOP POSITION AFFECTS THE READING AND THE TREND IS THEN MEANINGLESS. 5. Measure and record the contact resistance at each of the contacts listed. 6. Compare each reading against the baseline recorded at the last measurement and against the limit. 7. Where a reading exceeds the limit, do not clean the contact; record it and report it, because the cleaning removes the evidence of fretting. 8. Disconnect the meter. 9. Restore electrical power. 10. Load the built-in test software where it is being changed, and confirm the part number. 11. Do the flight guidance system functional test, including the autopilot engagement and disengagement check on both channels. WARNING: THE AUTOPILOT DISENGAGEMENT WARNING SOUNDS DURING THIS TEST. WARN ANYONE WORKING IN THE FLIGHT COMPARTMENT. 12. Confirm no maintenance message remains active. 13. Close the avionics compartment.",
+      "close_out": "Remove the warning notice. Record every contact resistance reading against the contact identifier so that the trend can be followed, and record the functional test result. Where a reading was reported, attach the reading set to the report; the shop uses the pattern across contacts to distinguish fretting from a single damaged contact."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2210112806118",
+        "D2210114091568",
+        "AES764786K6",
+        "ESC385904-77"
+      ],
+      "fins": [
+        "7CC",
+        "872CE",
+        "897CC"
+      ],
+      "drawings": [
+        "D22801194445"
+      ],
+      "software": [
+        "LG7R957079B"
+      ],
+      "zones": [
+        "124",
+        "223",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-31-50-11-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight guidance computer",
+      "contact resistance",
+      "fretting",
+      "functional test",
+      "trend"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "22-10-11-700-001-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. The service loop caution at step 4 applies only to aircraft post MOD-149230, which carry an isolated rack.",
+      "manhours": 3.5,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "124",
+          "223",
+          "263"
+        ],
+        "access_panels": [
+          "124AL",
+          "223BR"
+        ],
+        "doors": [
+          "Avionics compartment access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Remove electrical power before the meter is connected.",
+          "Warn the flight compartment before the functional test.",
+          "Put the warning notice in position."
+        ],
+        "tooling": [
+          {
+            "reference": "98D22101-015",
+            "description": "Contact resistance meter"
+          },
+          {
+            "reference": "98D31501-027",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [
+          "Antistatic bag"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-31-50-11-700-001-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,337 @@
+[
+  {
+    "doc_id": "PAWO-156032-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Spares and Retrofit Release of the Green System Engine Driven Pump Case Drain Standard",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-11",
+      "title": "Main System — Engine Driven Pump"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-26",
+      "released": "2026-05-15",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of releasing the new case drain and shaft seal pump standard through spares, so that an unserviceable pump is replaced by the new standard rather than by a rebuilt interim unit.",
+    "sections": {
+      "objective": "Establish whether the pump standard released against the recurring fluid loss finding can be pushed through the spares channel, so that the fleet converts by attrition rather than by a campaign. The commercial attraction is obvious; the pre-analysis question is what happens on an aircraft that ends up with one pump at each standard, and whether the fault-isolation and servicing content can tell a technician which one is fitted without removing it.",
+      "findings_summary": "Four items were confirmed and two of them shape the answer. The interim shaft seal kit standard is still fitted across a large part of the fleet and its own bulletin remains open, so attrition conversion produces a long period in which both standards fly, sometimes on the same aircraft. That is acceptable hydraulically but it defeats the fault-isolation logic: the procedure for a decreasing green quantity with fluid in the accessory gearbox area reads a scavenge return that only exists on the new standard, and on a mixed aircraft it sends the technician to the wrong pump. The installation task calls up the new flow sensor unconditionally and would have a technician fitting a sensor to a pump that has no port for it. The interim bulletin's effectivity has to close rather than be left open.",
+      "next_steps": "Release the standard through spares on condition that the fault-isolation procedure gains a standard identification step at its front, so that a technician establishes which pump is fitted before following the logic. Split the installation task into two standard-specific variants rather than adding notes. Close the interim kit bulletin with a statement that the kit is no longer supplied. Review the conversion rate after twelve months and decide then whether a campaign is still needed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2910110251872",
+        "GRDE393470-41",
+        "EN529286-2D",
+        "D2910110594226"
+      ],
+      "fins": [
+        "16GG",
+        "280GG8"
+      ],
+      "drawings": [
+        "D29101190176"
+      ],
+      "software": [],
+      "zones": [
+        "123",
+        "193"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-156032",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "engine driven pump",
+      "case drain",
+      "spares release",
+      "mixed standard fleet"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-156032-01",
+      "subject_mod": "MOD-156032",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-15",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-01-26",
+      "due_date": "2026-05-08",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EYIS",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 120,
+        "spent_manhours": 141
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "29"
+        ],
+        "ata_4d": [
+          "29-10",
+          "29-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D2910110251872",
+            "GRDE393470-41",
+            "D2910110594226"
+          ],
+          "fins": [
+            "16GG",
+            "280GG8"
+          ],
+          "drawings": [
+            "D29101190176"
+          ],
+          "zones": [
+            "123",
+            "193"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "case drain architecture change on a hydraulic engine driven pump",
+          "mixed pump standards flying on one aircraft",
+          "shaft seal leak reaching the accessory gearbox area"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the interim kit population and its attrition rate",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Walk the fault-isolation logic against a mixed standard aircraft",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review installation and servicing content for unconditional steps",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-151295",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2910110251872"
+            ],
+            "shared_fins": [
+              "16GG",
+              "280GG8"
+            ],
+            "shared_zones": [
+              "123",
+              "193"
+            ],
+            "shared_ata_6d": [
+              "29-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The interim kit standard is still fitted across a large part of the fleet. Attrition conversion means both standards fly for years, and on a twin installation they can be fitted to the same aircraft.",
+          "resolution": "Accept the mixed period but close the interim standard formally so that no further kits are supplied."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-Z-29-10-11-810-807",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2910110251872",
+              "D2910110594226",
+              "GRDE393470-41"
+            ],
+            "shared_fins": [
+              "16GG",
+              "280GG8"
+            ],
+            "shared_zones": [
+              "123",
+              "193"
+            ],
+            "shared_ata_6d": [
+              "29-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The fault-isolation procedure for a decreasing green quantity reads a scavenge return that only exists on the new standard. On a mixed aircraft it identifies the wrong pump and the leaking unit stays on wing.",
+          "resolution": "Add a pump standard identification step at the front of the procedure before the spares release is opened."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-Z-29-10-11-400-014-A",
+          "doc_type": "AMM",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2910110251872",
+              "GRDE393470-41",
+              "EN529286-2D",
+              "D2910110594226"
+            ],
+            "shared_fins": [
+              "16GG",
+              "280GG8"
+            ],
+            "shared_zones": [
+              "123",
+              "193"
+            ],
+            "shared_ata_6d": [
+              "29-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task calls up the flow sensor unconditionally. Fitted to an interim standard pump there is no port for it, and a technician following the task on a spares exchange has no instruction to stop.",
+          "resolution": "Split the installation task into two standard-specific variants rather than adding a note."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "ZPH-29-1051",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2910110251872"
+            ],
+            "shared_fins": [
+              "16GG",
+              "280GG8"
+            ],
+            "shared_zones": [
+              "123",
+              "193"
+            ],
+            "shared_ata_6d": [
+              "29-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The interim kit bulletin is still open and still describes the kit as available. Leaving it open through an attrition conversion would let an operator order a kit for a pump that has already been replaced.",
+          "resolution": "Close the bulletin with a statement that the kit is no longer supplied."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-55-1015",
+          "doc_type": "SB",
+          "reason": "Returned by the entity pass only because it shares the tail cone zone the pump bay backs onto. It concerns the stabiliser front spar attachment fittings, shares no part number, no functional item number and no system with the hydraulic installation, and cannot be affected by a pump standard change."
+        }
+      ],
+      "conclusion": "Closed with a positive position subject to the fault-isolation identification step being published before the spares channel is opened, and to the installation task being split by standard.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

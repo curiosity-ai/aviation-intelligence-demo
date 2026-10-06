@@ -1,0 +1,164 @@
+[
+  {
+    "doc_id": "TSM-C-24-50-12-810-804",
+    "doc_type": "TSM",
+    "title": "Loss of Aft Cabin Outlet Power on Ground Supply — Fault Isolation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-10-24",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-12",
+      "title": "AC Distribution — Secondary Distribution Box"
+    },
+    "secondary_ata": [
+      "44-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-06-25",
+      "released": "2020-02-11",
+      "revised": "2023-10-24",
+      "effective": "2023-11-14"
+    },
+    "abstract": "Isolation of aft cabin outlet power loss on ground supply, separating a feeder group overload from a genuine relay or termination failure in the secondary distribution box.",
+    "sections": {
+      "purpose": "This procedure isolates the loss of aft cabin outlet power reported on ground supply, and gives the checks that distinguish a feeder group overload from a component failure.",
+      "fault_description": "The cabin crew report that seat sockets in the aft third of the cabin go dead in blocks during boarding on ground power, and recover unattended after a few minutes. No flight deck indication is produced. The pattern is strongly associated with the aft galley drawing load at the same time and with cabins where the fitted socket count has been increased by a refit. A genuine failure does not recover on its own.",
+      "isolation_procedure": "1. Establish the box standard and the feeder group allocation from the aircraft technical record, and confirm whether the cabin has been through a socket count increase. 2. Confirm from the cabin crew report whether the loss recovered without action; a self-recovering loss points at the protection rather than at a component. 3. Measure the current drawn by each aft feeder group during a simulated boarding load with the galley loaded. 4. If a group exceeds its rating, the overload is the cause: check the fitted socket count against the supply rating and raise the finding with the operator's engineering department. 5. If no group exceeds its rating, do the insulation resistance check on the aft feeders. 6. Examine the terminations on the distribution harness for discolouration and measure the terminal temperature under load with the thermal probe. 7. If a terminal runs above the limit in the task, re-terminate it and repeat the measurement. 8. If the terminations are correct, exercise the feeder relay ten times and confirm that it latches on each operation. 9. If the relay is intermittent, replace it and repeat the load test. 10. If the fault persists, remove and replace the secondary distribution box.",
+      "dispatch_note": "Dispatch is permitted with aft cabin outlet power inoperative under the applicable minimum equipment list item, with the cabin crew informed and the sockets placarded. Dispatch is not permitted with a terminal that has been found above the temperature limit and not re-terminated."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450122851975",
+        "HAR83831-56",
+        "CIDE636017-51"
+      ],
+      "fins": [
+        "403XU2",
+        "89PC",
+        "9177PC5"
+      ],
+      "drawings": [
+        "D24501217521"
+      ],
+      "software": [],
+      "zones": [
+        "244",
+        "252",
+        "272"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-24-50-12-400-007-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-C-92-31-12",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cabin outlet power",
+      "feeder overload",
+      "terminal temperature",
+      "distribution box",
+      "self recovering"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "24-50-12-810-804",
+      "fault_symptom": "Aft cabin seat sockets dead in blocks on ground supply, recovering unattended",
+      "fault_codes": [
+        "245012005",
+        "245012021"
+      ],
+      "warning_messages": [
+        "ELEC CABIN OUTLET FAULT"
+      ],
+      "affected_fins": [
+        "403XU2",
+        "89PC",
+        "9177PC5"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Feeder group overload from an increased fitted socket count",
+          "probability_pct": 49,
+          "fin": "403XU2"
+        },
+        {
+          "cause": "Terminal running above the temperature limit at the feeder termination",
+          "probability_pct": 22,
+          "fin": "9177PC5"
+        },
+        {
+          "cause": "Feeder relay intermittent latching",
+          "probability_pct": 18,
+          "fin": "89PC"
+        },
+        {
+          "cause": "Secondary distribution box internal failure",
+          "probability_pct": 11,
+          "fin": "403XU2"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-C-24-50-12-400-007-A",
+      "dispatch": {
+        "mel_item": "24-50-03C",
+        "dispatchable": true,
+        "dispatch_condition": "Aft cabin outlets inoperative and placarded, cabin crew informed"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

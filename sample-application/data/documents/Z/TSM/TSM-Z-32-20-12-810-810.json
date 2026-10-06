@@ -1,0 +1,321 @@
+[
+  {
+    "doc_id": "TSM-Z-32-20-12-810-810",
+    "doc_type": "TSM",
+    "title": "Nose Wheel Steering Jitter or Slow Response during the Landing Roll",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1991-10-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-20",
+      "ata_6d": "32-20-12",
+      "title": "Nose Gear — Steering Actuation"
+    },
+    "secondary_ata": [
+      "29-10",
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-02-22",
+      "released": "1991-10-02",
+      "revised": null,
+      "effective": "1991-10-23"
+    },
+    "abstract": "Fault isolation for nose wheel steering jitter or slow response on the landing roll of an aircraft with the built-up steering manifold, separating servo contamination from trapped air and from a sensing fault.",
+    "sections": {
+      "purpose": "This procedure isolates nose wheel steering jitter or slow response reported during the landing roll, and distinguishes servo contamination from trapped air and from a position sensing fault.",
+      "fault_description": "The crew reports that the nose wheel hunts around the commanded angle or that it responds late to a tiller input, most often during the landing roll and most often on the first flights after hydraulic work on the green system. There is usually no alert and no maintenance message, which is what makes the complaint difficult: the system passes every ground check and the symptom only appears with the aircraft rolling. A report that follows a manifold or accumulator change within the previous ten flights should be treated as trapped air until that is ruled out.",
+      "isolation_procedure": "1. Establish when the last green system component change was done and how many flights have been made since. 2. If the change was within the previous ten flights, bleed the steering circuit completely at the bleed points and release the aircraft for one flight before any component is changed. 3. If the symptom persists, put the aircraft on jacks with the ground locks fitted and do a full travel sweep in both directions, watching for a step or a hesitation. 4. Record the accumulator charge pressure at the external charging hose sensing point FIN 25GB and compare it with the value in the instructions; a low charge produces exactly this symptom. 5. Remove the filter from the manifold body and examine the element for particulate. A loaded element indicates servo contamination and the servo must be flushed. 6. Check the position sensor at FIN 9WS for free movement and measure its output through the full travel; a flat spot in the output produces a hesitation at that angle. 7. Check the non-return valve at FIN 2820WS5 for correct orientation, which is a common error after a manifold rebuild. 8. If every check passes, replace the servo and repeat the rig check. 9. Do the confirmation task after any component change and before the aircraft is released.",
+      "dispatch_note": "Dispatch is not permitted with reported steering jitter. Nose wheel steering may be deactivated and the aircraft dispatched with towbar taxi only, subject to the operational limitations in the minimum equipment list. Rectify before the next revenue sector where practicable."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3220123507496",
+        "D3220121572714"
+      ],
+      "fins": [
+        "9WS",
+        "2820WS5",
+        "25GB"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "711",
+        "714",
+        "741"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-32-20-12-400-025-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-32-1258",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "steering jitter",
+      "trapped air",
+      "servo contamination",
+      "accumulator charge",
+      "position sensor flat spot"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Ashcombe",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "32-20-12-810-810",
+      "fault_symptom": "Nose wheel steering hunts or responds late during the landing roll",
+      "fault_codes": [
+        "322012006",
+        "322012022"
+      ],
+      "warning_messages": [
+        "WHEEL N/W STRG FAULT"
+      ],
+      "affected_fins": [
+        "9WS",
+        "2820WS5",
+        "25GB"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Trapped air in the steering circuit after recent hydraulic work",
+          "probability_pct": 38,
+          "fin": "25GB"
+        },
+        {
+          "cause": "Particulate contamination in the servo metering lands",
+          "probability_pct": 31,
+          "fin": "2820WS5"
+        },
+        {
+          "cause": "Position sensor flat spot in the output",
+          "probability_pct": 18,
+          "fin": "9WS"
+        },
+        {
+          "cause": "Non-return valve fitted in the wrong orientation after a rebuild",
+          "probability_pct": 13,
+          "fin": "2820WS5"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-Z-32-20-12-400-025-A",
+      "dispatch": {
+        "mel_item": "32-20-02B",
+        "dispatchable": true,
+        "dispatch_condition": "Nose wheel steering deactivated, towbar taxi only, no autoland credit"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-Z-32-20-12-810-810",
+    "doc_type": "TSM",
+    "title": "Nose Wheel Steering Jitter or Slow Response during the Landing Roll",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-27",
+      "reason": "The charge pressure reading, the filter removal and the valve orientation check are split by manifold standard because all three move onto the machined block face.",
+      "raised_by_pawo": "PAWO-154905-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-20",
+      "ata_6d": "32-20-12",
+      "title": "Nose Gear — Steering Actuation"
+    },
+    "secondary_ata": [
+      "29-10",
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-02-22",
+      "released": "1991-10-02",
+      "revised": "2026-06-27",
+      "effective": "2026-07-18"
+    },
+    "abstract": "Fault isolation for nose wheel steering jitter or slow response on the landing roll, separating servo contamination from trapped air and from a sensing fault, with the three access steps that differ between the two manifold standards.",
+    "sections": {
+      "purpose": "This procedure isolates nose wheel steering jitter or slow response reported during the landing roll, and distinguishes servo contamination from trapped air and from a position sensing fault.",
+      "fault_description": "The crew reports that the nose wheel hunts around the commanded angle or that it responds late to a tiller input, most often during the landing roll and most often on the first flights after hydraulic work on the green system. There is usually no alert and no maintenance message, which is what makes the complaint difficult: the system passes every ground check and the symptom only appears with the aircraft rolling. A report that follows a manifold or accumulator change within the previous ten flights should be treated as trapped air until that is ruled out. Read the manifold standard before you start. Three steps of this procedure act on hardware that moved when the manifold was machined into one block, and following the wrong variant sends the technician to a port that does not exist.",
+      "isolation_procedure": "1. Establish when the last green system component change was done and how many flights have been made since, and read the manifold standard from the aircraft configuration record. 2. If the change was within the previous ten flights, bleed the steering circuit completely at the bleed points and release the aircraft for one flight before any component is changed. 3. If the symptom persists, put the aircraft on jacks with the ground locks fitted and do a full travel sweep in both directions, watching for a step or a hesitation. 4. Record the accumulator charge pressure at the sensing point FIN 25GB. On the built-up manifold this is on the external charging hose; on the machined block D3220127361550 it is the face port on the block, and the external hose does not exist. Compare with the value in the instructions; a low charge produces exactly this symptom. 5. Remove the filter D3220123507496 and examine the element for particulate. On the built-up manifold the filter is in the manifold body and a loaded element indicates servo contamination. On the machined block the filter sits in the block cavity on a 5000 flight hour interval, so a loaded element there is expected near the end of the interval and is not on its own evidence of contamination. 6. Check the position sensor at FIN 9WS for free movement and measure its output through the full travel; a flat spot in the output produces a hesitation at that angle. 7. Check the non-return valve at FIN 2820WS5 for correct orientation. On the built-up manifold this is an in-line fitting; on the machined block it is a cartridge in the block face and cannot be fitted reversed, so this step is omitted on that standard. 8. If every check passes, replace the servo and repeat the rig check. 9. Do the confirmation task after any component change and before the aircraft is released.",
+      "dispatch_note": "Dispatch is not permitted with reported steering jitter. Nose wheel steering may be deactivated and the aircraft dispatched with towbar taxi only, subject to the operational limitations in the minimum equipment list. Rectify before the next revenue sector where practicable."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3220127361550",
+        "D3220123507496",
+        "D3220121572714"
+      ],
+      "fins": [
+        "9WS",
+        "2820WS5",
+        "25GB"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "711",
+        "714",
+        "741"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-32-20-12-400-025-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-32-1258",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "steering jitter",
+      "manifold standard",
+      "servo contamination",
+      "accumulator charge",
+      "position sensor flat spot"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Ashcombe",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "32-20-12-810-810",
+      "fault_symptom": "Nose wheel steering hunts or responds late during the landing roll",
+      "fault_codes": [
+        "322012006",
+        "322012022"
+      ],
+      "warning_messages": [
+        "WHEEL N/W STRG FAULT"
+      ],
+      "affected_fins": [
+        "9WS",
+        "2820WS5",
+        "25GB"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Trapped air in the steering circuit after recent hydraulic work",
+          "probability_pct": 38,
+          "fin": "25GB"
+        },
+        {
+          "cause": "Particulate contamination in the servo metering lands",
+          "probability_pct": 31,
+          "fin": "2820WS5"
+        },
+        {
+          "cause": "Position sensor flat spot in the output",
+          "probability_pct": 18,
+          "fin": "9WS"
+        },
+        {
+          "cause": "Non-return valve fitted in the wrong orientation after a rebuild",
+          "probability_pct": 13,
+          "fin": "2820WS5"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-Z-32-20-12-400-025-A",
+      "dispatch": {
+        "mel_item": "32-20-02B",
+        "dispatchable": true,
+        "dispatch_condition": "Nose wheel steering deactivated, towbar taxi only, no autoland credit"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

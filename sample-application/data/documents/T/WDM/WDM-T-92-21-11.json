@@ -1,0 +1,180 @@
+[
+  {
+    "doc_id": "WDM-T-92-21-11",
+    "doc_type": "WDM",
+    "title": "Avionics Bay — Inertial Reference and Navigation Rack Harnesses",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2022-06-14",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-11",
+      "title": "Forward Fuselage Wiring — Avionics Bay Harnesses"
+    },
+    "secondary_ata": [
+      "34-20",
+      "31-60"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-10-06",
+      "released": "2021-05-21",
+      "revised": "2022-06-14",
+      "effective": "2022-07-05"
+    },
+    "abstract": "Wiring diagram of the avionics bay harnesses serving the three inertial reference positions and the navigation display interfaces, including the shell bonding paths that alignment performance depends on.",
+    "sections": {
+      "purpose": "This sheet shows the avionics bay harnesses serving the three inertial reference unit positions, their display interfaces and the shell bonding paths at each mounting tray.",
+      "sheet_note": "Sheet 1 shows the rack side and sheet 2 the flight deck interfaces. The alignment control panel interface is shown on sheet 2 and is annotated as deleted on aircraft where all three units are at the current production standard; on those aircraft the panel aperture carries a blanking plate and the harness is capped at the panel end. The shell bonding path at each tray is drawn explicitly because an out of limit bonding resistance produces an intermittent alignment fault that is otherwise hard to find.",
+      "routing_note": "The rack harnesses run from the three unit positions in zones 164 and 192 along the bay upper cable route to the flight deck penetration. The display interface continues to zones 241 and 272. Bonding straps at each mounting tray terminate on the rack structure and are shown with their measurement points, which are the points used by the installation task."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221113867714",
+        "JO191099-01",
+        "EN491538-6A",
+        "AGS573791-88",
+        "D3420114778684"
+      ],
+      "fins": [
+        "85VU4",
+        "646VU",
+        "2326FE",
+        "2TR3",
+        "708TR"
+      ],
+      "drawings": [
+        "D34201126638"
+      ],
+      "software": [],
+      "zones": [
+        "164",
+        "192",
+        "241",
+        "272"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-144880",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-34-20-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "avionics bay",
+      "inertial reference",
+      "shell bonding",
+      "rack harness",
+      "alignment control panel"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Electrical Installation Design"
+    },
+    "type_data": {
+      "sheet_number": "92-21-11",
+      "sheet_title": "AVIONICS BAY — INERTIAL REFERENCE AND NAVIGATION RACK HARNESSES",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1641W",
+        "1642W",
+        "1921W"
+      ],
+      "connectors": [
+        {
+          "reference": "1641VC",
+          "part_number": "JO191099-01",
+          "location_zone": "164",
+          "contacts": 88
+        },
+        {
+          "reference": "1921VC",
+          "part_number": "D9221113867714",
+          "location_zone": "192",
+          "contacts": 55
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "2326FE",
+          "description": "CIRCUIT CARD, INERTIAL REFERENCE UNIT, LH",
+          "zone": "164"
+        },
+        {
+          "fin": "2TR3",
+          "description": "CONTROL PANEL, INERTIAL REFERENCE UNIT",
+          "zone": "241"
+        },
+        {
+          "fin": "708TR",
+          "description": "INTERFACE UNIT, INERTIAL REFERENCE UNIT, LH",
+          "zone": "253"
+        },
+        {
+          "fin": "85VU4",
+          "description": "CABLE ASSY, AVIONICS BAY HARNESSES, LH",
+          "zone": "192"
+        }
+      ],
+      "wire_count": 186,
+      "wire_gauge_range": "AWG 26 to AWG 12",
+      "routes": [
+        "Zone 164 and zone 192 to the flight deck penetration on the bay upper cable route",
+        "Flight deck penetration to zones 241 and 272 for the display interfaces"
+      ],
+      "related_sheets": [
+        "WDM-T-92-21-13",
+        "WDM-T-92-31-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

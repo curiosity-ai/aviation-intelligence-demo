@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "AMM-M-31-30-11-000-035-A",
+    "doc_type": "AMM",
+    "title": "Flight Data Recorder — Removal",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-05-27",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-30",
+      "ata_6d": "31-30-11",
+      "title": "Recorders — Flight Data Recorder"
+    },
+    "secondary_ata": [
+      "31-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-11-14",
+      "released": "2017-07-31",
+      "revised": "2024-05-27",
+      "effective": "2024-06-24"
+    },
+    "abstract": "Removal of the flight data recorder from the aft avionics rack, with the data preservation step that must be done before power is removed and the isolator handling rules for post modification aircraft.",
+    "sections": {
+      "purpose": "This task gives the procedure to remove the flight data recorder for replacement, for a mandatory readout or for access to the rack behind it.",
+      "job_setup_note": "Decide before you start whether a readout is required. Once power is removed the recorder holds its data, but the aircraft-side configuration record is not preserved and has to be read first. Get the antistatic equipment and, on aircraft with the isolated tray, the isolator holding tool that stops the tray moving while the recorder is lifted out. The recorder is a mandatory item and its serial number must be recorded before and after any work.",
+      "procedure": "1. Read and export the recorder configuration record at the maintenance terminal. 2. Open the applicable circuit breaker and attach the do-not-close tag. 3. Open the avionics bay access and put the antistatic mat in position. 4. WARNING: DO NOT REMOVE THE RECORDER AFTER AN ACCIDENT OR SERIOUS INCIDENT WITHOUT AUTHORISATION FROM THE INVESTIGATION AUTHORITY. 5. Disconnect the recorder connector and install a protective cap. 6. On aircraft post MOD-168036, install the isolator holding tool on the tray before the recorder fasteners are loosened. 7. CAUTION: DO NOT LOAD THE ISOLATORS SIDEWAYS. THE ELASTOMER WILL TAKE A PERMANENT SET AND THE TRAY WILL NOT RETURN TO ITS FREE POSITION. 8. Loosen and remove the four recorder fasteners. 9. Lift the recorder squarely out of the tray and put it on the antistatic mat. 10. Record the recorder serial number and put the unit in its transport container. 11. Install the protective cover on the vacated position.",
+      "close_out": "Leave the isolator holding tool in position if the installation does not follow immediately. Leave the circuit breaker open with the tag attached. Record the removal, the serial number and the exported configuration reference in the aircraft technical log, and note whether a readout was taken."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3130116611592",
+        "LN760453-5C"
+      ],
+      "fins": [
+        "4FP",
+        "63FW7"
+      ],
+      "drawings": [
+        "D31301163625"
+      ],
+      "software": [],
+      "zones": [
+        "221",
+        "242"
+      ],
+      "figures": [
+        "FIG-31-30-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-31-30-11-400-035-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-M-31-30-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-168036",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight data recorder",
+      "removal",
+      "isolator",
+      "configuration record",
+      "avionics rack"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "31-30-11-000-035-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All aircraft; steps 6 and 7 apply to aircraft post MOD-168036 only",
+      "manhours": 2.5,
+      "personnel": 1,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "221",
+          "242"
+        ],
+        "access_panels": [
+          "221BL",
+          "242AR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not remove the recorder after an accident or serious incident without authorisation.",
+          "Open the applicable circuit breaker and attach the do-not-close tag."
+        ],
+        "tooling": [
+          {
+            "reference": "98D31301-351",
+            "description": "Antistatic wrist strap and mat"
+          },
+          {
+            "reference": "98D31301-358",
+            "description": "Isolator holding tool"
+          }
+        ],
+        "consumables": [
+          "Protective cap, recorder connector",
+          "Identification label set"
+        ],
+        "expendables": [
+          {
+            "part_number": "LN760453-5C",
+            "qty": 2
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-M-31-30-11-400-035-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

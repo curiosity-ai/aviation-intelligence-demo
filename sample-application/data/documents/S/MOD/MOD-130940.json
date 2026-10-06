@@ -1,0 +1,172 @@
+[
+  {
+    "doc_id": "MOD-130940",
+    "doc_type": "MOD",
+    "title": "Wing Anti-Ice Valve Butterfly Profile and Position Feedback Rework",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-11-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Airfoil Anti-Ice — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "S01798",
+      "production_cut_in_date": "2023-06-27",
+      "retrofit_via": [
+        "SLN-30-1011"
+      ]
+    },
+    "dates": {
+      "created": "2020-08-11",
+      "released": "2022-11-16",
+      "revised": null,
+      "effective": "2022-12-05"
+    },
+    "abstract": "Reprofiling of the wing anti-ice valve butterfly and replacement of the potentiometric position feedback by a non-contact sensor, to remove the valve stiction that produces intermittent anti-ice fault messages in the climb.",
+    "sections": {
+      "reason": "Intermittent wing anti-ice fault messages accumulated at a rate of 1.4 per 1 000 flight hours across the fleet, almost all in the climb between flight level 180 and flight level 280. Nearly two thirds of removed valves passed shop acceptance test, which is the classic signature of a condition that only appears under the real duct temperature gradient. Instrumented flight showed the butterfly binding against the housing as the duct heats unevenly, and the potentiometric feedback track wearing at the two commanded positions the valve actually uses in service. Operators were carrying an average of 2.3 spare valves per line station for a fault that in most cases did not exist.",
+      "description": "The butterfly is reprofiled with a relieved trailing edge and the housing bore is given a 0.08 mm cold clearance so that the assembly stays free through the full duct temperature range. The obsolete outboard heat exchanger kit D3010115902013 is deleted from the valve assembly and the bleed take-off is blanked. Position feedback moves from a wiper track to a non-contact magnetic sensor mounted outside the hot gas path; the sensor bracket is retained by countersunk screws EN229422-9A with washers EN906402-5B, replacing the previous screw set AGS997812-2C. The left-hand airfoil anti-ice switch 6HA is re-wired to the new three-wire feedback interface. The valve is accessible from the leading edge in zones 512 and 611 and from the slat area in zone 551 with the slats extended and locked. Detail is on drawing D30100042160.",
+      "effects": "Mass reduction of 1.9 kg per aircraft after deletion of the redundant heat exchanger. Electrical load falls by 18 VA per valve because the non-contact sensor draws less than the potentiometer excitation. The re-worked valve is one-way interchangeable: a post-modification valve fits a pre-modification aircraft if the harness adapter from the kit is used, but the reverse is not permitted. Expected fault message rate after embodiment is below 0.2 per 1 000 flight hours. Dispatch with one wing anti-ice valve inoperative is unchanged. The trouble shooting procedure for the anti-ice fault message needs a revised cause list because the dominant cause is removed.",
+      "embodiment_note": "Cut in on the production line at MSN S01798 in June 2023 on all twin-engine variants including the Evo. Retrofit is through Service Bulletin SLN-30-1011, revision 03, which may be done at a line station in a single shift per wing with the slats extended."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010115902013",
+        "EN229422-9A",
+        "EN906402-5B",
+        "AGS997812-2C"
+      ],
+      "fins": [
+        "6HA"
+      ],
+      "drawings": [
+        "D30100042160"
+      ],
+      "software": [],
+      "zones": [
+        "512",
+        "551",
+        "611"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01798"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-30-1011",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "wing anti-ice valve",
+      "butterfly stiction",
+      "position feedback",
+      "no fault found",
+      "fault message"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Ice Protection"
+    },
+    "type_data": {
+      "mod_number": 130940,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1419",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -1.9,
+      "balance_impact": "Symmetric; no reportable effect",
+      "electrical_load_impact_va": -72,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "EN229422-9A",
+        "EN906402-5B"
+      ],
+      "parts_removed": [
+        "D3010115902013",
+        "AGS997812-2C"
+      ],
+      "parts_modified": [],
+      "fins_affected": [
+        "6HA"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 44,
+      "estimated_cost_keur": 290,
+      "lead_time_weeks": 32,
+      "production_impact": "Cut-in at MSN S01798; valve supplier switched line at the same point",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,190 @@
+[
+  {
+    "doc_id": "MOD-139620",
+    "doc_type": "MOD",
+    "title": "Outflow Valve Actuator with Integrated Manual Override and Position Feedback",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-30",
+      "ata_6d": "21-30-11",
+      "title": "Pressurization Control — Outflow Valve Control"
+    },
+    "secondary_ata": [
+      "21-30-12",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00097",
+          "to": "S01552"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HVA",
+        "SRP"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-136810"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-03-30",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "A single actuator that carries the duplex drive, the manual override and a direct valve position feedback, replacing the bolted-on manual drive that the current standard introduced and that operators find hard to inspect.",
+    "sections": {
+      "reason": "The duplex motor standard removed the failure consequence but left the manual drive as a separate geared assembly bolted to the actuator, and eight years of service have shown three weaknesses: the coupling backlash grows and the crew feels it as a dead band, the assembly has no position feedback of its own so the indicated valve position comes from the failed automatic channel, and it cannot be functionally checked without opening the bay. Nineteen operators have raised the dead band, and two events are recorded in which the indicated position did not match the valve after a manual descent.",
+      "description": "The actuator D2130114939430 is replaced by an integrated unit in which the duplex windings, the manual drive and a resolver reading the valve shaft directly all sit in one housing. The accumulator D2130117925957 introduced at the current standard is retained and refitted. Because the housing is larger, the forward duct is re-clipped with cushioned loop clamps AGS958367K4 and the cable tray is re-secured with countersunk screws AGS336823-99. Filter 141HM and manifold 6820HQ in the lower position are unchanged. Indicated valve position now comes from the shaft resolver in every mode, so the indication is correct whichever channel is driving. The unit can be functionally checked from the maintenance terminal without opening the bay. Work is in the avionics bay outboard area in zone 165, at the forward cabin position in zone 242 and at the aft cabin equipment area in zone 273. Detail is on drawing D21301105897.",
+      "effects": "Estimated mass reduction of 1.8 kg against the current standard, because one housing replaces two. Direct current load is unchanged. Not interchangeable with either the delivered or the current standard: the connector gains two contacts for the resolver and the mounting pattern differs. Dead band in manual mode falls below the threshold at which crews report it. The abnormal procedure for excessive cabin altitude can be simplified because the crew no longer has to cross-check the indicated position, and the dispatch condition introduced for one motor inoperative needs restating.",
+      "embodiment_note": "Production cut-in is proposed after freeze. Retrofit through a new bulletin at a C-check, about twenty-six manhours, and only on aircraft that already carry the duplex standard because the second bus feed is assumed present.",
+      "open_points": "Pre-analysis must decide whether the existing retrofit bulletin for the duplex standard stays valid or is superseded, whether an aircraft at the delivered configuration can be taken straight to this standard, what the direct shaft feedback does to the cabin pressure indicating channel that currently derives position from the automatic controller, and whether the flight crew abnormal procedure change needs an operator evaluation before it is published."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2130114939430",
+        "D2130117925957",
+        "AGS958367K4",
+        "AGS336823-99"
+      ],
+      "fins": [
+        "141HM",
+        "6820HQ"
+      ],
+      "drawings": [
+        "D21301105897"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "242",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01020",
+        "S01317"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-136810",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "MOD-135180",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "outflow valve",
+      "integrated actuator",
+      "manual override",
+      "shaft resolver",
+      "dead band"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 139620,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.841",
+          "CS 25.1309",
+          "CS 25.1322"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": -1.8,
+      "balance_impact": "Aft of the reference datum; negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AGS336823-99"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2130114939430",
+        "D2130117925957",
+        "AGS958367K4"
+      ],
+      "fins_affected": [
+        "141HM",
+        "6820HQ"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 165,
+      "estimated_cost_keur": 1120,
+      "lead_time_weeks": 50,
+      "production_impact": "Cut-in proposed after design freeze",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

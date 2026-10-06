@@ -1,0 +1,404 @@
+[
+  {
+    "doc_id": "PAWO-147680-02",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis Round Two — Zone Controller Software Standard with Independent Upper Deck Authority",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "21-60-11",
+      "44-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SIA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-15",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Second round pre-analysis of the split upper deck zone control standard, re-run after the first round found that the aft return air sensor accuracy could not be confirmed and the scope was widened to the cabin configuration load.",
+    "sections": {
+      "objective": "Re-establish the conflict set for the split upper deck zone control standard after the scope was widened to include the cabin configuration load, and close the sensor accuracy question that stopped the first round.",
+      "scope_note": "The search covers ATA 21-60 as the primary chapter and ATA 44-10 as secondary, which is new in this round: the cabin configuration load carries the zone definition as well as the cabin equipment addressing, so any document that re-issues that load is now in scope. ATA 21-40 cargo compartment heating was added late in this round and produced the most interesting result. Airframe and avionics chapters were not searched, the change being confined to a software standard and its parameter set.",
+      "method_note": "The first round ran entity linking and similarity over ATA 21-60 only and closed with four findings. This round re-ran both passes over the widened scope, seeded from the three part numbers, the three FINs, the two drawings and the three software part numbers of the candidate. The similarity pass alone produced the cargo compartment finding: a proposal that changes the heating duct demand in a compartment nobody had connected to cabin zone control, sharing no part number, no FIN, no zone and no ATA chapter with the candidate.",
+      "findings_summary": "Six items have been confirmed and one is blocking. The candidate replaces the operational software standard in service and re-issues the parameter set derived from it, so an aircraft that never took the current operational standard cannot go directly to the new one; the parameter structure has no migration path. The service bulletin that carries the current standard states that both controllers must hold the same standard and that a mixed pair raises a configuration mismatch, which remains true and has to be repeated rather than superseded. Three documentation items follow from the software change and are straightforward. The finding that changed the shape of this round is a cargo compartment heating proposal whose stated open point is whether a reduced duct demand invalidates the published duct overheat protection settings; those settings are exactly what this candidate retunes, and the two teams had no idea the other existed.",
+      "next_steps": "Confirm the aft return air sensor accuracy against the split control law requirement, which is the action that closed the first round without a recommendation. Open a joint action with the cargo systems team on the duct overheat protection settings before either change is frozen. Agree with the cabin systems office whether the cabin configuration load and the controller load can be applied independently, and state the answer in the retrofit bulletin."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160117909333",
+        "D2160128690391",
+        "D2160120235977"
+      ],
+      "fins": [
+        "7982HM",
+        "7HQ5",
+        "521HM"
+      ],
+      "drawings": [
+        "D21601284523",
+        "D21601112657"
+      ],
+      "software": [
+        "LE6RAA1AA20",
+        "LB8R1DDEAAF",
+        "LB6R17F3334"
+      ],
+      "zones": [
+        "265",
+        "292",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147680",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-T-260145",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "zone controller",
+      "software standard",
+      "second round",
+      "duct overheat"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-147680-02",
+      "subject_mod": "MOD-147680",
+      "source_io": "IO-T-260145",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-06-15",
+      "due_date": "2026-08-07",
+      "analysis_round": 2,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EAAM",
+          "ETGC"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 54
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "21",
+          "44"
+        ],
+        "ata_4d": [
+          "21-60",
+          "21-40",
+          "44-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2160117909333",
+            "D2160128690391",
+            "D2160120235977"
+          ],
+          "fins": [
+            "7982HM",
+            "7HQ5",
+            "521HM"
+          ],
+          "drawings": [
+            "D21601284523",
+            "D21601112657"
+          ],
+          "zones": [
+            "265",
+            "292",
+            "293"
+          ],
+          "software": [
+            "LE6RAA1AA20",
+            "LB8R1DDEAAF",
+            "LB6R17F3334"
+          ]
+        },
+        "similarity_seeds": [
+          "cabin temperature gradient between the front and the back of a deck",
+          "duct temperature protection threshold and trim air valve authority"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Re-run the conflict search over the widened scope",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm aft return air sensor accuracy against the split control law",
+          "method": "SME_INTERVIEW",
+          "owner": "EVAA",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess cabin configuration load coupling with the cabin systems office",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Review duct overheat protection settings against cargo heating demand",
+          "method": "SEMANTIC",
+          "owner": "ETGC",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-142870",
+          "doc_type": "MOD",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2160117909333",
+              "D2160128690391",
+              "D2160120235977"
+            ],
+            "shared_fins": [
+              "7982HM",
+              "7HQ5"
+            ],
+            "shared_zones": [
+              "292",
+              "293"
+            ],
+            "shared_ata_6d": [
+              "21-60-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The candidate replaces the operational load introduced by this modification and re-issues the parameter set whose structure is derived from it. An aircraft that never took the current operational standard has a parameter structure the new load cannot read, and there is no migration path in either direction.",
+          "resolution": "Keep the current operational standard as a declared post-modification condition, and state in the software bulletin that an aircraft at an earlier standard must be taken through it in the same session."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-21-1033",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2160117909333",
+              "D2160128690391",
+              "D2160120235977"
+            ],
+            "shared_fins": [
+              "7982HM",
+              "7HQ5"
+            ],
+            "shared_zones": [
+              "292",
+              "293"
+            ],
+            "shared_ata_6d": [
+              "21-60-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin is effective on aircraft that are pre the current operational standard and instructs the technician to load that standard. Once the new standard exists, an operator loading the bulletin standard onto an aircraft that has already had the new one would downgrade it silently, because both loads report cleanly and the bulletin gives no version check.",
+          "resolution": "Add a version precedence check to the bulletin accomplishment instructions, and state in the new software bulletin that the earlier bulletin must not be re-accomplished afterwards."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-T-21-60-12-900-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2160120235977"
+            ],
+            "shared_fins": [
+              "7982HM"
+            ],
+            "shared_zones": [
+              "292",
+              "293"
+            ],
+            "shared_ata_6d": [
+              "21-60-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The loading task carries the pairing table between the operational standard and the parameter standard, and cautions against a power cycle between the two loads. Both need extending for the new pairing, and the task is the only place where the pairing is documented at all.",
+          "resolution": "Revise the pairing table in the same package as the candidate release, and consider moving it out of the task into the software configuration document."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-T-21-60-12-810-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2160117909333",
+              "D2160128690391",
+              "D2160120235977"
+            ],
+            "shared_fins": [
+              "7982HM",
+              "7HQ5",
+              "521HM"
+            ],
+            "shared_zones": [
+              "292",
+              "293"
+            ],
+            "shared_ata_6d": [
+              "21-60-12"
+            ],
+            "similarity_note": "Both documents describe the same symptom, a cabin zone that will not respond to a colder selection, and share every part number, every FIN and both zones."
+          },
+          "rationale": "The isolation procedure branches on the software standard loaded and uses the return air sensor as a late check. With the split zoning the aft sensor becomes the primary feedback for its own zone, so the sensor check moves to the front of the procedure and the branch set grows by one.",
+          "resolution": "Re-issue the procedure with a third software branch and move the sensor accuracy check ahead of the actuator check for converted aircraft."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-145340",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "265"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents re-issue the cabin configuration load and both describe an addressing or definition that is stored in it, using similar language about loading and configuration records."
+          },
+          "rationale": "The cabin configuration load carries both the lighting addressing and the zone definition. The candidate changes the zone definition and the lighting conversion changes the addressing, and each re-issues the whole load. An aircraft that takes one after the other without re-merging would lose the earlier change.",
+          "resolution": "Agree a single owner for the cabin configuration load and require that any change to it is merged rather than replaced. State the constraint in both retrofit bulletins."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-148120",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents are about a duct that is being asked to deliver more than the protection settings allow, one in a cabin zone and one in a cargo compartment. They share no part number, no FIN, no zone and no ATA chapter, and the only connection is that both discuss duct temperature protection thresholds in almost the same words."
+          },
+          "rationale": "The cargo compartment proposal states as an open point whether a reduced duct demand invalidates the published duct overheat protection settings. Those settings live in the same controller parameter set that this candidate retunes, and a change made for one system would land on the other without either team being aware of it.",
+          "resolution": "Open a joint action between the cabin and cargo systems teams on the protection settings, and add the cargo compartment demand case to the parameter validation before either change is frozen."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-142240",
+          "doc_type": "MOD",
+          "reason": "Ranks high on a search that uses software standard, parameter set and mutually exclusive load vocabulary, all of which it shares with the candidate. It is the brake and steering control unit and has no interface with air conditioning, no shared FIN, no shared zone and no shared software part number."
+        },
+        {
+          "doc_id": "AMM-T-33-20-11-400-002-A",
+          "doc_type": "AMM",
+          "reason": "Surfaces through the cabin configuration load and the addressing language, which is genuinely close. It is the lighting strip installation task and it neither reads nor writes the zone definition, so nothing in it changes with this candidate."
+        }
+      ],
+      "conclusion": "Not yet issued at round two. One blocking software dependency is confirmed, the sensor accuracy action from round one is still open, and a new cross-system overlap has been raised with the cargo systems team.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

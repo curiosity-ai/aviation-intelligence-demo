@@ -1,0 +1,140 @@
+[
+  {
+    "doc_id": "IO-C-250347",
+    "doc_type": "IO",
+    "title": "Spurious Probe Heat Caution Messages in Cold Soak Conditions",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-12-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "TJT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-11-24",
+      "released": "2025-12-02",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Northern operator reports probe heat caution messages appearing on the first flight of the day after cold overnight parking, clearing in the climb, and driving unnecessary computer replacements at outstations.",
+    "sections": {
+      "request": "On the first sector of the day in winter our crews get a probe heat caution shortly after engine start. It clears itself somewhere in the climb and does not come back for the rest of the day. It happens on aircraft that have sat outside overnight at minus twenty or colder, and it does not happen in the summer at all. The crews follow the checklist, we get a technical log entry, and at an outstation with no spare the aircraft goes out with the message accepted because the system tests serviceable on the ground. We have replaced four computers on the strength of this and none of them were faulty when they came back from the shop. Our engineers believe the system is reporting a fault that is really just a cold heating element taking longer than the test allows. We would like the logic changed so that a cold aeroplane is not reported as a broken one.",
+      "background": "We operate into eight airfields where the overnight minimum is regularly below minus twenty-five. The reports started in the 2023 winter and have grown with the fleet. Last winter we logged sixty-one occurrences across fourteen aircraft, all on the first flight of the day, all clearing before top of climb. Four probe heat computers were removed and all four were confirmed serviceable by the vendor. We are carrying the cost of those removals and the shop findings support our view that nothing is wrong with the hardware.",
+      "expected_outcome": "A change that stops the caution appearing on a cold but serviceable aircraft, without reducing the ability of the system to report a genuinely failed heating element, and loadable without removing the computer."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [
+        "4618WX"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00109",
+        "C00215",
+        "C00607"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111883",
+        "doc_type": "MOD",
+        "relation": "CREATED"
+      }
+    ],
+    "keywords": [
+      "probe heat",
+      "caution message",
+      "cold soak",
+      "no fault found",
+      "winter operation"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Customer Support Engineering"
+    },
+    "type_data": {
+      "io_number": "IO-C-250347",
+      "raised_by": {
+        "requester_type": "OPERATOR",
+        "operator_code": "TJT",
+        "contact_role": "Fleet Reliability Engineer",
+        "oem_focal_department": "EYIS",
+        "oem_focal_site": "Valmont"
+      },
+      "request_category": "SYSTEM",
+      "priority": "MEDIUM",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {
+        "aircraft_count": 14,
+        "msns": [
+          "C00109",
+          "C00215",
+          "C00607"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13"
+        ]
+      },
+      "business_justification": "Sixty-one spurious occurrences in one winter, four no-fault-found computer removals and repeated outstation acceptance decisions that the operator considers an avoidable crew workload and warranty exposure.",
+      "commercial": {
+        "funding": "WARRANTY",
+        "budget_keur": 95,
+        "contract_reference": "CSA-2025-TJT-0109"
+      },
+      "target_dates": {
+        "requested_response": "2026-03-20",
+        "requested_embodiment_start": "2026-10-01"
+      },
+      "created_mod": "MOD-111883"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

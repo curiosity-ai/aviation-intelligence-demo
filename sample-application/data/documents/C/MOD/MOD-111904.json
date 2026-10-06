@@ -1,0 +1,350 @@
+[
+  {
+    "doc_id": "MOD-111904",
+    "doc_type": "MOD",
+    "title": "Slat Flap Control Computer Test Standard 7.2 with Carriage Wear Trending",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-16",
+      "reason": "Original issue of the wear trending test standard proposal dossier.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [
+      "57-30",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111094"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-09-15",
+      "released": null,
+      "revised": "2026-01-16",
+      "effective": null
+    },
+    "abstract": "A test standard that records how the flap drive load signature changes over time, so that carriage wear is trended from data the aircraft already produces instead of being found at a scheduled inspection.",
+    "sections": {
+      "reason": "Flap carriage wear is currently found by a scheduled inspection that needs the flap extended and a technician under the wing, and the finding rate is low enough that most of those inspections produce nothing. At the same time the fleet has enough recorded drive load data to make a trend visible: the load signature during a normal extension changes measurably as the carriage bearing land wears, several hundred flight cycles before the inspection would find it. Making the computer record and compare the signature turns a calendar task into a condition indication and removes an access-driven inspection from the maintenance programme.",
+      "description": "The slat flap control computer adopts built-in test standard 7.2, loadable part LC6C191E572, which stores a reference drive load signature at first extension after installation and reports a drift index at every subsequent extension. The drive solenoid D2750116570759 is retained from the current standard, which is why the aircraft must already be at that standard, the drive actuator D2750008004169 is replaced by an item with a higher resolution position pick-off, and hose AS721224-40 is re-routed clear of the new pick-off lead. The drive pump 345EV2 and the flap sensor 6803KS4 keep their identifiers. Revised detail is on drawing D27501270713. Work is done in zones 522, 561 and 661 with the flap fully extended.",
+      "effects": "Mass increase of 0.4 kg per aircraft. Electrical load is unchanged. The loadable part is interchangeable in both directions but the higher resolution pick-off is not, because the earlier standard cannot read its output. No dispatch impact. If the trend indication is accepted by the maintenance programme, the scheduled carriage inspection interval can be doubled, which is the whole business case. Maintenance manual content for the flap system test and the position sensor rigging both change, and the drift index has to appear in the condition monitoring report.",
+      "embodiment_note": "Proposed for production cut-in with a retrofit path timed to a scheduled flap track lubrication visit. Embodiment on aircraft that have not had the current test standard applied is not possible because the drive solenoid rating is assumed.",
+      "open_points": "Pre-analysis must establish whether the drift index can be carried by the current condition monitoring store or whether it depends on the extended store proposed elsewhere, whether the higher resolution pick-off changes the flap position sensing safety case, whether the relationship to the released test standard is a supersession or a coexistence, and whether the carriage inspection interval extension needs a service experience justification before it can be offered."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759",
+        "D2750008004169",
+        "AS721224-40"
+      ],
+      "fins": [
+        "345EV2",
+        "6803KS4"
+      ],
+      "drawings": [
+        "D27501270713"
+      ],
+      "software": [
+        "LC6C191E572"
+      ],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111094",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "flap drive",
+      "load signature",
+      "wear trending",
+      "drift index",
+      "condition indication"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111904,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "COST_REDUCTION",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.671",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.4,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "AS721224-40"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2750008004169"
+      ],
+      "fins_affected": [
+        "345EV2",
+        "6803KS4"
+      ],
+      "software_affected": [
+        "LC6C191E572"
+      ],
+      "estimated_manhours": 58,
+      "estimated_cost_keur": 460,
+      "lead_time_weeks": 32,
+      "production_impact": "Cut-in proposed with the next flap drive standard change",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-111904",
+    "doc_type": "MOD",
+    "title": "Slat Flap Control Computer Test Standard 7.2 with Carriage Wear Trending",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-19",
+      "reason": "Supersession of the released test standard declared on this dossier, with the dependency on its hardware baseline stated alongside it.",
+      "raised_by_pawo": "PAWO-111094-01",
+      "raised_by_finding": "F01",
+      "finding_type": "SUPERSESSION"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [
+      "57-30",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111094"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-09-15",
+      "released": null,
+      "revised": "2026-06-19",
+      "effective": null
+    },
+    "abstract": "A test standard that records how the flap drive load signature changes over time, so that carriage wear is trended from data the aircraft already produces instead of being found at a scheduled inspection.",
+    "sections": {
+      "reason": "Flap carriage wear is currently found by a scheduled inspection that needs the flap extended and a technician under the wing, and the finding rate is low enough that most of those inspections produce nothing. At the same time the fleet has enough recorded drive load data to make a trend visible: the load signature during a normal extension changes measurably as the carriage bearing land wears, several hundred flight cycles before the inspection would find it. Making the computer record and compare the signature turns a calendar task into a condition indication and removes an access-driven inspection from the maintenance programme.",
+      "description": "The slat flap control computer adopts built-in test standard 7.2, loadable part LC6C191E572, which stores a reference drive load signature at first extension after installation and reports a drift index at every subsequent extension. The drive solenoid D2750116570759 is retained from the current standard, which is why the aircraft must already be at that standard, the drive actuator D2750008004169 is replaced by an item with a higher resolution position pick-off, and hose AS721224-40 is re-routed clear of the new pick-off lead. The drive pump 345EV2 and the flap sensor 6803KS4 keep their identifiers. Revised detail is on drawing D27501270713. Work is done in zones 522, 561 and 661 with the flap fully extended.",
+      "effects": "Mass increase of 0.4 kg per aircraft. Electrical load is unchanged. The loadable part is interchangeable in both directions but the higher resolution pick-off is not, because the earlier standard cannot read its output. No dispatch impact. This standard replaces the built-in test content of MOD-111094 in full: the settling window, the asymmetry declaration and the fault snapshot are all re-written, and no aircraft carries both sets of test logic. The dependency runs the other way round from the supersession, because the drive solenoid rating this standard assumes arrives with MOD-111094 and not with this one, so an aircraft has to take the earlier standard first and is then taken off it. If the trend indication is accepted by the maintenance programme, the scheduled carriage inspection interval can be doubled, which is the whole business case. Maintenance manual content for the flap system test and the position sensor rigging both change, and the drift index has to appear in the condition monitoring report.",
+      "embodiment_note": "Proposed for production cut-in with a retrofit path timed to a scheduled flap track lubrication visit. Embodiment on aircraft that have not had the current test standard applied is not possible because the drive solenoid rating is assumed. On embodiment this standard supersedes MOD-111094, and that statement is carried here rather than on the released dossier because the supersession only takes effect if this proposal is launched.",
+      "open_points": "Pre-analysis must establish whether the drift index can be carried by the current condition monitoring store or whether it depends on the extended store proposed elsewhere, whether the higher resolution pick-off changes the flap position sensing safety case, whether the carriage inspection interval extension needs a service experience justification before it can be offered, and how the trending baseline is defined on a fleet that mixes carriage support fitting standards."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759",
+        "D2750008004169",
+        "AS721224-40"
+      ],
+      "fins": [
+        "345EV2",
+        "6803KS4"
+      ],
+      "drawings": [
+        "D27501270713"
+      ],
+      "software": [
+        "LC6C191E572"
+      ],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111094",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "MOD-111094",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "MOD-111047",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flap drive",
+      "load signature",
+      "wear trending",
+      "supersession",
+      "drift index"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111904,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "COST_REDUCTION",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.671",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.4,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "AS721224-40"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2750008004169"
+      ],
+      "fins_affected": [
+        "345EV2",
+        "6803KS4"
+      ],
+      "software_affected": [
+        "LC6C191E572"
+      ],
+      "estimated_manhours": 58,
+      "estimated_cost_keur": 460,
+      "lead_time_weeks": 32,
+      "production_impact": "Cut-in proposed with the next flap drive standard change",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

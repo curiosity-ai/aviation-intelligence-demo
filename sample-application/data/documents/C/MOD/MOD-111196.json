@@ -1,0 +1,178 @@
+[
+  {
+    "doc_id": "MOD-111196",
+    "doc_type": "MOD",
+    "title": "Extended Recorded Parameter Set and Retention Period for the Flight Data Recorder",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-08-13",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-30",
+      "ata_6d": "31-30-11",
+      "title": "Recorders — Flight Data Recorder"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00612",
+      "production_cut_in_date": "2023-11-23",
+      "retrofit_via": [
+        "CRN-31-1014"
+      ]
+    },
+    "dates": {
+      "created": "2021-04-27",
+      "released": "2022-11-15",
+      "revised": "2024-08-13",
+      "effective": "2024-09-02"
+    },
+    "abstract": "A larger recorder memory and a wider parameter list that lifts the recorded duration from twenty-five to fifty hours, meeting the revised operational rule and the accident investigation recommendations that came with it.",
+    "sections": {
+      "reason": "The revised operational rule applicable from 2024 requires fifty hours of recorded flight data and adds thirty-one parameters to the mandatory list, of which nineteen were not previously recorded on the type. Two accident investigation authorities had separately recommended the additional flight control and engine parameters after events on other types. Operators cannot be issued an exemption, so the change had to be available across the delivered fleet before the rule date rather than on new production alone.",
+      "description": "The recorder unit is replaced by an item with four times the non-volatile memory and the acquisition rate for the added parameters is set in the data frame definition. The recorder computer D3130118235301 is replaced, the recorder control panel D3130006987696 keeps its position but gains a revised legend, and spacers AGS103845-6C set the new mounting tray depth. The recorder mounting tray 5347FP, the recorder computer 582FW and the data concentrator 6828FW keep their identifiers, but the concentrator is re-strapped for the additional acquisition channels. Revised detail is on drawing D31300014382. Work is done in the aft equipment area and the avionics compartment, zones 146, 171 and 251.",
+      "effects": "Mass increase of 1.4 kg per aircraft. Electrical load rises by 90 VA on the essential bus. The recorder is not interchangeable with the previous unit because the data frame definition differs, and an aircraft cannot be dispatched with a mixed standard between the recorder and the data concentrator. Minimum equipment list dispatch with the recorder inoperative is unchanged. Illustrated parts content needs the new unit, and the recorder readout and download tasks change because the download time roughly doubles.",
+      "embodiment_note": "Cut in on the production line at MSN C00612 in November 2023. Retrofit through Service Bulletin CRN-31-1014 is a line-level task of about six hours and had to be complete across the delivered fleet by the rule date. Units removed are returned to the vendor for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3130118235301",
+        "D3130006987696",
+        "AGS103845-6C"
+      ],
+      "fins": [
+        "5347FP",
+        "582FW",
+        "6828FW"
+      ],
+      "drawings": [
+        "D31300014382"
+      ],
+      "software": [],
+      "zones": [
+        "146",
+        "171",
+        "251"
+      ],
+      "figures": [
+        "FIG-31-30-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00612"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-31-1014",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-C-31-30-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "flight data recorder",
+      "parameter set",
+      "retention",
+      "data frame",
+      "operational rule"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Avionics Design"
+    },
+    "type_data": {
+      "mod_number": 111196,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "AIRWORTHINESS_DIRECTIVE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1459",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.4,
+      "balance_impact": "Aft equipment area, CG shift below 0.01 % MAC",
+      "electrical_load_impact_va": 90,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AGS103845-6C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3130118235301",
+        "D3130006987696"
+      ],
+      "fins_affected": [
+        "5347FP",
+        "582FW",
+        "6828FW"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 58,
+      "estimated_cost_keur": 690,
+      "lead_time_weeks": 34,
+      "production_impact": "Cut-in at MSN C00612, avionics rack loading unchanged",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

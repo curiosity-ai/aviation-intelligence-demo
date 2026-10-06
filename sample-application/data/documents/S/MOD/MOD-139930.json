@@ -1,0 +1,160 @@
+[
+  {
+    "doc_id": "MOD-139930",
+    "doc_type": "MOD",
+    "title": "Maintenance Report Correlation Hosted on the Onboard Information Domain",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-12",
+      "title": "Data Loading — Data Load Configuration"
+    },
+    "secondary_ata": [
+      "45-20",
+      "46-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HKA",
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-07-13",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "A proposal to move the maintenance report correlation off the avionics terminal and onto the onboard information domain, so that the ranking can be improved from the ground without touching a certified unit.",
+    "sections": {
+      "reason": "The correlation standard embodied from 2022 works, but its ranking is fixed at the standard of the unit and improving it means a new part number, a certification exercise and a fleet retrofit. Two operators who have supplied a year of raw report data have shown that the ranking could be materially better for their own route structures, and neither of them can get that benefit under the present arrangement. Moving the function to the open domain lets the ranking be updated as often as the evidence justifies.",
+      "description": "The proposal hosts the correlation function on the onboard information domain, taking the raw report stream across the existing one-way gateway and presenting the ranked result to the engineer on a tablet rather than on the fixed terminal. The transceiver D4545123669999 and the display unit CI510522-80 would gain a data path definition rather than new hardware, and the swaged collar AES133277-12 is listed only because the mounting tray is disturbed at the gateway. Transceiver 1466TN, data concentrator 1970TM and mounting tray 349TN keep their positions. Nothing crosses the gateway towards the certified side, so the avionics terminal continues to work exactly as it does today and remains the primary means. Work would be in the avionics bay inboard area in zone 166, at the forward cabin equipment area in zone 234 and at the left-hand lower area in zone 243. Detail is on drawing D45451245845.",
+      "effects": "No mass change of consequence. No load change. Fully interchangeable, because nothing certified is modified: the proposal adds a parallel presentation and removes nothing. The main effect is on how the ranking is maintained, which becomes a data activity with a service level rather than a modification programme. The maintenance terminal test procedure is unaffected.",
+      "embodiment_note": "Retrofit only and only on aircraft that carry the open domain provisions. Proposed as a data load with a short ground check, about four manhours, with no aircraft downtime beyond the check.",
+      "open_points": "Pre-analysis must establish whether hosting the function outside the certified domain leaves the terminal as the approved means of compliance, whether the one-way gateway definition covers the report stream as it stands, whether two ranked lists in the same hangar create a human factors risk, and whether the avionics correlation standard would then be frozen or withdrawn."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545123669999",
+        "CI510522-80",
+        "AES133277-12"
+      ],
+      "fins": [
+        "1466TN",
+        "1970TM",
+        "349TN"
+      ],
+      "drawings": [
+        "D45451245845"
+      ],
+      "software": [],
+      "zones": [
+        "166",
+        "234",
+        "243"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-133730",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "information domain",
+      "report correlation",
+      "one-way gateway",
+      "tablet",
+      "ranking"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 139930,
+      "mod_class": "MINOR",
+      "change_category": "SOFTWARE",
+      "trigger": "COST_REDUCTION",
+      "customer_driven": true,
+      "certification": {
+        "impact": "NO_IMPACT",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.0,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4545123669999"
+      ],
+      "fins_affected": [
+        "1466TN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 16,
+      "estimated_cost_keur": 210,
+      "lead_time_weeks": 14,
+      "production_impact": "None; retrofit data activity",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

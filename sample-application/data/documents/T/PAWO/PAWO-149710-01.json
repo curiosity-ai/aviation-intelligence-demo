@@ -1,0 +1,432 @@
+[
+  {
+    "doc_id": "PAWO-149710-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Load Diffusion Plate and Cold Expanded Row at the Forward Cargo Frame Feet",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-21",
+      "ata_6d": "53-21-11",
+      "title": "Fuselage Section 13 — Frames"
+    },
+    "secondary_ata": [
+      "53-21-12",
+      "51-10-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00013",
+          "to": "T00146"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ATS",
+        "GSA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-11",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the forward cargo frame foot reinforcement, covering the cold expansion standard it depends on, the published repairs already in the bay and the illustrated parts consequence of a third foot state.",
+    "sections": {
+      "objective": "Identify every released or candidate item of Aeralis technical documentation applicable to TITAN-88 aircraft in the MSN T00013 to T00146 range that the proposed frame foot diffusion plate would conflict with, depend on, or invalidate, and establish whether an aircraft carrying a published repair at a modified station can be reworked at all.",
+      "scope_note": "The search covers ATA 53-21 as the primary chapter and ATA 51-10 as secondary, because the attachment row is taken to the cold expanded standard and that standard is owned by the structures standard practice rather than by the fuselage chapter. ATA 52-30 cargo door structure was included in the first pass and then excluded: the diffusion plate footprint stops short of the door surround and no shared identifier or shared access route was found. Systems chapters were not searched except for the underfloor harness route, which is covered under the zone search rather than by chapter.",
+      "method_note": "Entity linking was run first, seeded from the seven part numbers, the single FIN, the two drawing numbers and the two zones carried by the candidate. Semantic similarity was then run over titles, abstracts and reason-for-change text using the three seed phrases below. The two result sets were merged and de-duplicated. One finding came only from semantic similarity: a nacelle door modification that describes the same physical mechanism, a local stiffening added because a structure was taking a permanent set under repeated load, in vocabulary that shares nothing with a fuselage frame. Two findings came only from entity linking, through the zone and the FIN rather than through any wording.",
+      "findings_summary": "Seven items are confirmed and two of them are blocking. The attachment row cannot be taken to the cold expanded standard on an aircraft whose holes have previously been reamed oversize, and the cold expansion standard practice says so explicitly; that makes the standard a hard prerequisite and it is already declared as a post-modification condition. More seriously, the published frame foot repair puts a bonded angle across exactly the corner radius that the diffusion plate has to seat on, and the two cannot coexist. The operator that raised the internal order has four aircraft carrying that repair and they are the four with the highest finding count, so the population that most needs the modification is the population least able to take it. Three further conflicts sit in the documentation rather than in the structure. The skin panel doubler scheme at the door lower corner shares the bay and the cargo door lock actuator FIN, which is how it surfaced at all; nothing in the two documents reads alike. The illustrated parts figure would carry a third state for the foot fitting on top of the two it already has. And the frame foot inspection task, which is the task the modification is intended to remove, cannot be cancelled until the substantiation is accepted.",
+      "next_steps": "Obtain a repair design position on whether the diffusion plate and the bonded angle repair can coexist, and if they cannot, whether a repaired foot can be replaced within the modification scope. Confirm from the structural repair records how many aircraft in the range have had a foot blended twice. Agree with the illustrated parts owner whether the figure is split by standard rather than carrying a third alternate. Raise the inspection task cancellation as a conditional change tied to the substantiation."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5321110873831",
+        "D5321112601390",
+        "D5321113910229",
+        "EN650523-18",
+        "AGS622474-67",
+        "EN824462K5"
+      ],
+      "fins": [
+        "21VU"
+      ],
+      "drawings": [
+        "D53211127822",
+        "D53211223501"
+      ],
+      "software": [],
+      "zones": [
+        "113",
+        "115"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149710",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-T-260312",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "frame foot",
+      "cold expansion",
+      "repair coexistence",
+      "forward cargo"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149710-01",
+      "subject_mod": "MOD-149710",
+      "source_io": "IO-T-260312",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-11",
+      "due_date": "2026-08-14",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA",
+          "EYIS"
+        ],
+        "estimated_manhours": 220,
+        "spent_manhours": 148
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "53",
+          "51",
+          "52"
+        ],
+        "ata_4d": [
+          "53-21",
+          "51-10",
+          "52-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "T00013",
+          "to": "T00146"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5321110873831",
+            "D5321113910229",
+            "EN824462K5"
+          ],
+          "fins": [
+            "21VU"
+          ],
+          "drawings": [
+            "D53211127822"
+          ],
+          "zones": [
+            "113",
+            "115"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "repeat cracking at a frame foot above a cargo floor beam",
+          "local reinforcement added because a structure takes a permanent set",
+          "fastener row taken to an improved fatigue detail"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released and candidate modifications on ATA 53-21",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check published repairs in the forward cargo bay",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the cold expansion applicability on previously reworked holes",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Establish the blend history population from the operator records",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T05",
+          "title": "Agree the illustrated parts figure structure",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-148640",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN824462K5"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "51-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The attachment row is taken to the cold expanded standard and uses the interference fit fastener that standard declares. The standard excludes a hole that has previously been reamed oversize, and a proportion of the target population has exactly that history, which the candidate does not currently acknowledge.",
+          "resolution": "Keep the cold expansion standard as a declared post-modification condition and add an explicit pre-embodiment check of the hole history at each station."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SRM-T-53-21-11-005",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5321110873831",
+              "D5321113910229"
+            ],
+            "shared_fins": [
+              "21VU"
+            ],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "53-21-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The published repair bonds an angle across the corner radius that the diffusion plate has to seat on. The two occupy the same surface and cannot coexist. Four aircraft in the target population carry the repair and they are the four with the highest finding count.",
+          "resolution": "Obtain a repair design position on coexistence. If none is possible, bring foot replacement into the modification scope for repaired stations, or exclude those stations and say so in the bulletin."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-T-51-10-11-001",
+          "doc_type": "SRM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN824462K5"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "51-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The cracked hole repair scheme claims a fatigue credit for an expanded hole and releases the location to the general sampling interval. The candidate claims the same credit for a whole fastener row. The substantiation for one hole does not automatically extend to a row, and the certification office has asked for that to be addressed explicitly.",
+          "resolution": "Extend the substantiation to the row case, or claim the sampling interval only where each hole is individually recorded."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-T-53-21-11-200-003-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5321110873831",
+              "D5321112601390",
+              "D5321113910229"
+            ],
+            "shared_fins": [
+              "21VU"
+            ],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "53-21-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "This is the inspection the modification is intended to remove. Its effectivity note already anticipates a modified standard that does not yet exist, and the cancellation cannot be made unconditional until the substantiation is accepted.",
+          "resolution": "Plan the task change in step with the release and make the cancellation conditional on all eight stations being modified rather than on the aircraft being modified."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "IPC-T-53-21-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5321110873831",
+              "D5321112601390",
+              "D5321113910229"
+            ],
+            "shared_fins": [
+              "21VU"
+            ],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "53-21-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries the diffusion plate and the intercostal as post-modification items. A third state for the foot fitting itself, which is replaced by a thicker item, would put three alternates on one item number and make the figure unusable at the counter.",
+          "resolution": "Split the figure by standard rather than adding a third alternate. Agree with the spares organisation before release."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-148710",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents describe adding local stiffening to a structure that has been found taking a permanent set under repeated load, and both justify it by a growing in-service finding rate at one identifiable station. One is written about a fuselage frame foot and the other about a nacelle door hinge beam; they share no part number, no zone, no FIN and no ATA chapter, and no word of their descriptive text is common."
+          },
+          "rationale": "The design office that solved the door hinge beam case developed a load introduction method and a drilling template approach that apply directly here, and the two teams were unaware of each other. The value is in the method, not in a conflict.",
+          "resolution": "Open a design coordination contact with the nacelle structures office. No applicability or documentation consequence."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "SRM-T-53-21-12-007",
+          "doc_type": "SRM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "21VU"
+            ],
+            "shared_zones": [
+              "113",
+              "115"
+            ],
+            "shared_ata_6d": [
+              "53-21-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The skin panel doubler scheme at the cargo door lower corner occupies the same bay and disturbs the same cargo door lock actuator. The two documents have nothing in common in their text, one being about an external stepped doubler and the other about an internal frame foot, and the link exists only through the zone and the FIN.",
+          "resolution": "List the doubler as a pre-embodiment check item so that the modification does not drill into a repaired panel from the inside."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-141480",
+          "doc_type": "MOD",
+          "reason": "Same ATA 2D and returned near the top of any search on fuselage frame reinforcement, but it applies to the aft fuselage above the wing box on a build standard that ended before the target range begins, and it shares no part number, no zone and no FIN with the candidate."
+        },
+        {
+          "doc_id": "IPC-T-53-31-13-FIG-01",
+          "doc_type": "IPC",
+          "reason": "Surfaces through the ATA 53 chapter search and lists frame hardware with similar nomenclature, but it is the centre fuselage breakdown and none of its items is in the forward cargo compartment or touched by the diffusion plate."
+        }
+      ],
+      "conclusion": "Not yet issued. Two blocking conflicts confirmed, the repair coexistence question is with the repair design owner and the blend history population is still being established.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

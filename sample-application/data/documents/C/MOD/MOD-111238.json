@@ -1,0 +1,188 @@
+[
+  {
+    "doc_id": "MOD-111238",
+    "doc_type": "MOD",
+    "title": "Bleed Isolation Valve Actuator Change to Correct Slow Response at Low Duct Temperature",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-10-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-12",
+      "title": "Distribution — Isolation Valves"
+    },
+    "secondary_ata": [
+      "36-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00342"
+        }
+      ],
+      "excluded_msns": [
+        "C00001"
+      ],
+      "engine_types": [
+        "PYR-1519G"
+      ],
+      "operators": [
+        "TJT",
+        "BCA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "C00205",
+      "production_cut_in_date": "2019-02-19",
+      "retrofit_via": [
+        "CRN-36-2002"
+      ]
+    },
+    "dates": {
+      "created": "2017-11-08",
+      "released": "2018-10-03",
+      "revised": null,
+      "effective": "2018-11-15"
+    },
+    "abstract": "First correction of the bleed isolation valve slow-response behaviour on cold soaked aircraft, replacing the actuator and the position regulator on the left and right isolation valves.",
+    "sections": {
+      "reason": "Operators in cold climates reported that the bleed isolation valve took between eleven and eighteen seconds to reach the commanded position on the first engine start of the day, against a design figure of four seconds. Twenty-nine occurrences were recorded on a fleet of about ninety aircraft during two northern winters, and nine of them produced a bleed configuration caution that had to be cleared before departure. The delay was traced to the grease specification in the actuator gearbox stiffening below minus twenty degrees.",
+      "description": "The isolation valve actuator is replaced by a unit built with a low-temperature grease and a higher stall torque, and the position regulator D3610120750241 is replaced at the same time so that the commanded rate and the achieved rate stay matched. The valve body D3610116310629 is retained. The duct clamp arrangement between the valve and the cross-bleed duct is changed to the cushioned clamp EN984959K3 to remove a chafing report that came out of the same investigation, and the swaged collars EN767708K2 at the duct joint are replaced on removal. Functional items 57PN6 and 198PU keep their identity. Work is done in the left and right pylon areas, zones 443 and 444, with the fan cowl open.",
+      "effects": "Mass change is negligible at 0.3 kg per side. No electrical load change. The actuator is interchangeable with the earlier unit in the removal direction only, because the regulator connector keying changes. The minimum equipment list entry for a single isolation valve inoperative is unchanged. The maintenance manual removal and installation tasks for the valve need re-issuing for the changed torque values and the new clamp, and the illustrated parts figure needs a pre and post modification item pair.",
+      "embodiment_note": "Production cut-in at MSN C00205 in February 2019. Retrofit is by Service Bulletin CRN-36-2002 at any line stop with the fan cowl open, about six hours per side. Kits were held at the two northern line stations through the following winter."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3610120750241",
+        "D3610116310629",
+        "EN984959K3",
+        "EN767708K2",
+        "GIR634074-45"
+      ],
+      "fins": [
+        "57PN6",
+        "198PU"
+      ],
+      "drawings": [
+        "D36201159645"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "444"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00205"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-36-2002",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-111244",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "AMM-C-36-10-12-000-012-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "isolation valve",
+      "actuator",
+      "cold soak",
+      "bleed configuration",
+      "grease"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111238,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.6,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "D3610120750241",
+        "EN984959K3"
+      ],
+      "parts_removed": [
+        "GIR634074-45"
+      ],
+      "parts_modified": [],
+      "fins_affected": [
+        "57PN6"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 95,
+      "estimated_cost_keur": 340,
+      "lead_time_weeks": 30,
+      "production_impact": "Cut-in at MSN C00205, actuator supplied to the line in the new build standard only",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "doc_id": "MOD-154310",
+    "doc_type": "MOD",
+    "title": "Flight Warning Computer Standard H2 with Revised Aural Alert Prioritisation and Inhibit Logic",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-03-18",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-50-12",
+      "31-60"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "Z11805",
+      "production_cut_in_date": "2024-10-09",
+      "retrofit_via": [
+        "ZPH-31-1005"
+      ]
+    },
+    "dates": {
+      "created": "2022-07-04",
+      "released": "2024-03-18",
+      "revised": null,
+      "effective": "2024-04-08"
+    },
+    "abstract": "New flight warning computer build standard that re-orders aural alert priority and extends the take-off and landing inhibit windows, following crew reports of alert pile-up during rejected take-offs and go-arounds.",
+    "sections": {
+      "reason": "Line operational safety audits collected across eleven operators between 2020 and 2022 recorded ninety-four events in which more than three aural alerts sounded within ten seconds during a rejected take-off or a go-around. Crews consistently reported that the sequence made it harder, not easier, to identify the governing failure, and two operators formally requested a change through their safety boards. Analysis of recorded data showed that the existing priority table dated from a period when fewer alerting functions were installed, and that the inhibit windows had never been widened to match the alerts added by later navigation and surveillance standards.",
+      "description": "The computer is built to standard H2. The priority table is re-ordered so that configuration and control alerts sit above advisory and surveillance alerts throughout the take-off and go-around phases, and the inhibit window is extended from eighty knots to the point of positive rate rather than to lift-off. The interface unit D3150128195373 in the aural generation chain is replaced to carry the additional discrete inputs, and the rack DE823727-50 receives a new backplane connector position. The control panel IBE53464-77 is unchanged in appearance but its lamp driver mapping is revised. The computer at FIN 7462FW, the data concentrator at FIN 2993FW and the rack position at FIN 668FP2 are all affected. The resident boot load LB6NE4646B3 is re-issued because the priority table now sits in protected memory. Work is in zones 211 and 214. The rack arrangement is on drawing D31501108484.",
+      "effects": "Mass increase of 0.8 kilograms. Electrical load increases by 25 volt amperes. Not interchangeable: a standard H2 computer requires the revised interface unit and will not communicate correctly with the earlier backplane position. The number of simultaneous aural alerts during a rejected take-off falls by design to at most two, and the master caution repetition rate is unchanged. The warning system test task, the fault isolation procedure for a spurious alert and the flight crew description of the alerting hierarchy all require re-issue; recurrent training material is affected and operators must be given six months notice.",
+      "embodiment_note": "Production cut-in at MSN Z11805 in October 2024. Retrofit is offered by service bulletin but is deliberately not encouraged as a standalone activity, because the crew training that must accompany it is the pacing item rather than the installation. Operators are advised to align embodiment with a recurrent training cycle."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150128195373",
+        "DE823727-50",
+        "IBE53464-77"
+      ],
+      "fins": [
+        "7462FW",
+        "2993FW",
+        "668FP2"
+      ],
+      "drawings": [
+        "D31501108484"
+      ],
+      "software": [
+        "LB6NE4646B3"
+      ],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z11805"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-31-1005",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-Z-31-50-11-700-033-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-Z-31-50-11-810-813",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "flight warning computer",
+      "aural alert priority",
+      "inhibit window",
+      "rejected take-off",
+      "alerting hierarchy"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 154310,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1302",
+          "CS 25.1309",
+          "CS 25.1322"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0.8,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 25,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3150128195373"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "DE823727-50",
+        "IBE53464-77"
+      ],
+      "fins_affected": [
+        "7462FW",
+        "2993FW"
+      ],
+      "software_affected": [
+        "LB6NE4646B3"
+      ],
+      "estimated_manhours": 620,
+      "estimated_cost_keur": 3400,
+      "lead_time_weeks": 72,
+      "production_impact": "Cut-in at MSN Z11805 aligned with a supplier build standard change",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

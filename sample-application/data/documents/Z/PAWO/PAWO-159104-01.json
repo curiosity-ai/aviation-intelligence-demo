@@ -1,0 +1,389 @@
+[
+  {
+    "doc_id": "PAWO-159104-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Web Doubler for the Rear Pressure Bulkhead Outer Radial Segments",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-31",
+      "ata_6d": "53-31-13",
+      "title": "Fuselage Section 15/16 — Aft — Pressure Bulkhead"
+    },
+    "secondary_ata": [
+      "55-10",
+      "53-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z02444",
+          "to": "Z10389"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56B",
+        "VNT-2500A"
+      ],
+      "operators": [
+        "HAT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-18",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the rear pressure bulkhead web doubler for high-cycle ZEPHYR-24 aircraft, covering the tailplane attachment work that shares the same access, the interim repairs already flying and the manual content that has to be re-issued.",
+    "sections": {
+      "objective": "Establish which released and candidate items applicable to high-cycle ZEPHYR-24 aircraft in the MSN Z02444 to Z10389 range constrain the proposed bulkhead web doubler, with particular attention to work that competes for the same shop visit and to aircraft that already carry an approved repair in the affected segments.",
+      "scope_note": "The search covers ATA 53-31 as the primary chapter and ATA 55-10 as secondary, because the doubler footprint reaches the tailplane front spar attachment and disturbs its lug. ATA 53-40 tail cone was included because access is through it. ATA 25 and 38 were searched and excluded: the rear galley and the aft lavatories are stripped for access but nothing in them is modified. Only ZEPHYR-24 aircraft were considered; the shorter fuselage variants have a different bulkhead and a different cycle rate.",
+      "method_note": "Entity linking was seeded from the five part numbers, the single FIN, the two drawing numbers and the three zones on the candidate. Semantic similarity was run over titles, abstracts and reason text with two seed phrases about high-cycle cracking at a pressure boundary. The concurrency finding was not produced by either search: it came from following the access and zone edges from the candidate to the tailplane attachment work, and is marked as graph traversal for that reason.",
+      "findings_summary": "Six items were confirmed and two of them block. The first is a concurrency rather than a conflict. The tailplane front spar attachment change disturbs the same lug that the doubler footprint reaches, and both operations need the aft cabin stripped and the tail cone opened. Embodying them separately means paying for the access twice and re-shimming the same joint twice, and the second embodiment would have to break a joint that the first had just sealed. The second blocker is the interim repair. Seven aircraft in the target population already carry the crack stop and reinforcing plate scheme, which occupies the exact area where the doubler lands, and no substantiation exists for the two together. The remaining findings are consequential: the tailplane retrofit bulletin uses the same forged lug that the doubler disturbs, so the two parts lists overlap; the scheduled bulkhead inspection task and the parts figure both need re-issue; and a search hit on the ZEPHYR-24 Evo cargo door surround work was retained only because its wording is close enough that a reviewer would expect it to be listed.",
+      "next_steps": "Agree with the tailplane attachment programme whether the two changes are declared concurrent or whether the doubler is written to be embodied on top of the attachment change only. Obtain a repair design position on the seven aircraft carrying the interim scheme, including whether the plate can be removed. Raise publication change requests for the inspection task and the parts figure once the doubler geometry is frozen."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5331135070611",
+        "D5331131182950",
+        "GIR251836-67",
+        "AGS566056-63",
+        "CI558884-44"
+      ],
+      "fins": [
+        "43VU"
+      ],
+      "drawings": [
+        "D53311318307",
+        "D53311387814"
+      ],
+      "software": [],
+      "zones": [
+        "143",
+        "146",
+        "193"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-159104",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-Z-260227",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "pressure bulkhead",
+      "concurrency",
+      "interim repair",
+      "access sharing"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-159104-01",
+      "subject_mod": "MOD-159104",
+      "source_io": "IO-Z-260227",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-03-18",
+      "due_date": "2026-07-10",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA",
+          "EYIS"
+        ],
+        "estimated_manhours": 140,
+        "spent_manhours": 58
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "53",
+          "55"
+        ],
+        "ata_4d": [
+          "53-31",
+          "55-10",
+          "53-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "Z02444",
+          "to": "Z10389"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5331135070611",
+            "D5331131182950",
+            "GIR251836-67",
+            "CI558884-44"
+          ],
+          "fins": [
+            "43VU"
+          ],
+          "drawings": [
+            "D53311318307",
+            "D53311387814"
+          ],
+          "zones": [
+            "143",
+            "146",
+            "193"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "cracking at the outermost fastener row of a pressure bulkhead web on high-cycle aircraft",
+          "reinforcement of an aft fuselage load introduction to restore an inspection threshold"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search structural modifications and bulletins on ATA 53-31 and 55-10",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Identify aircraft carrying the interim bulkhead repair scheme",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Agree access sharing with the tailplane attachment programme",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-155908",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "BLOCKING",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "CI558884-44"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "193"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The doubler footprint reaches the tailplane front spar attachment and disturbs its forged lug, which then has to be re-shimmed. Both changes need the aft cabin stripped and the tail cone opened, so embodying them separately pays for the access twice and breaks a joint that the first embodiment had just sealed.",
+          "resolution": "Declare the two changes concurrent, or write the doubler to be embodied only on aircraft already at the attachment standard, and agree which with the tailplane programme."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SRM-Z-53-31-13-903",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331135070611",
+              "D5331131182950"
+            ],
+            "shared_fins": [
+              "43VU"
+            ],
+            "shared_zones": [
+              "143",
+              "146",
+              "193"
+            ],
+            "shared_ata_6d": [
+              "53-31-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Seven aircraft in the target population carry the interim crack stop and reinforcing plate scheme in the exact area where the doubler lands. No substantiation exists for the doubler over the plate, and the plate's own repeat inspection cannot be performed once the doubler covers the stop holes.",
+          "resolution": "Obtain a repair design position on whether the plate can be removed and the segment restored, and add a pre-embodiment repair survey to the retrofit bulletin."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "ZPH-55-1015",
+          "doc_type": "SB",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "CI558884-44"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "193"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The tailplane retrofit bulletin calls up the same forged lug that the doubler disturbs, and its kit contains the lug as a fitted item. If both are embodied in one visit the lug is ordered twice unless the two kits are reconciled.",
+          "resolution": "Reconcile the two kit contents and issue a combined material list for the concurrent embodiment case."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-Z-53-31-13-200-011-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5331131182950",
+              "AGS566056-63"
+            ],
+            "shared_fins": [
+              "43VU"
+            ],
+            "shared_zones": [
+              "143",
+              "146",
+              "193"
+            ],
+            "shared_ata_6d": [
+              "53-31-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The scheduled inspection task scans the outermost fastener row of each segment. On a modified aircraft that row is covered by the doubler, so the task as written cannot be performed and its acceptance criteria no longer apply.",
+          "resolution": "Re-issue the task with a post-modification variant that scans the doubler perimeter instead, and revise the interval to match the new substantiation."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-151633",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both describe adding material to an aft fuselage load path on the ZEPHYR-24 in response to a deflection or cracking concern, in closely comparable wording, but they share no part number, no zone and no drawing."
+          },
+          "rationale": "The aft cargo door surround reinforcement sits two frame bays forward of the bulkhead and was raised for a different reason. It is retained because a reviewer would expect it in the list and because both changes add mass aft of the centre of gravity on the same aircraft type.",
+          "resolution": "Record the combined mass and balance effect for aircraft that carry both, and confirm the loading manual entry with weight and balance."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-Z-53-31-13-FIG-05",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "GIR251836-67"
+            ],
+            "shared_fins": [
+              "43VU"
+            ],
+            "shared_zones": [
+              "143",
+              "146",
+              "193"
+            ],
+            "shared_ata_6d": [
+              "53-31-13"
+            ],
+            "similarity_note": "The figure note and the candidate description both explain the segment numbering and the shim practice at the segment root in very similar wording."
+          },
+          "rationale": "The figure does not itemise shim packs because they are made to fit, but the doubler introduces a fixed shim at the segment root that must be a catalogued item. The figure also needs a post-modification sheet.",
+          "resolution": "Add the shim as an itemised part and raise a publication change request for the additional sheet."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "SRM-Z-52-30-11-904",
+          "doc_type": "SRM",
+          "reason": "A cracked-structure repair on the same aircraft type in the same rear fuselage region, described in similar language, but it applies to the aft cargo door stringer at the cut-out corner. It shares no part number, no drawing and no zone with the bulkhead work and cannot be affected by it."
+        },
+        {
+          "doc_id": "WDM-Z-92-41-11",
+          "doc_type": "WDM",
+          "reason": "Surfaced by the shared zones and by the words 'rear pressure bulkhead' in its sheet note, but the sheet exists precisely to state that no harness may be attached to a radial segment of the web. Nothing on the sheet is affected by adding material to the forward face of the segments."
+        }
+      ],
+      "conclusion": "Not yet issued. The concurrency question with the tailplane attachment programme is the critical path and the repair design position on the seven repaired aircraft is outstanding.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

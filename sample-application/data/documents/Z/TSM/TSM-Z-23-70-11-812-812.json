@@ -1,0 +1,163 @@
+[
+  {
+    "doc_id": "TSM-Z-23-70-11-812-812",
+    "doc_type": "TSM",
+    "title": "Datalink Log-On Fails or the Connection Drops Silently in Cruise",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-10-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-70-12",
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-03-17",
+      "released": "2021-10-06",
+      "revised": null,
+      "effective": "2021-10-27"
+    },
+    "abstract": "Fault isolation for a datalink log-on that fails at an airspace boundary or a connection that drops silently in cruise, separating a media path problem from an antenna or a router fault.",
+    "sections": {
+      "purpose": "This procedure isolates a datalink log-on failure or a silent connection loss reported in cruise, and distinguishes a degraded media path from an antenna installation fault and from a router failure.",
+      "fault_description": "The crew reports either that the log-on is rejected at the airspace boundary or that the connection is found to have been lost only when a controller calls. There is no flight deck indication of the loss on the earlier router standard, so the reported time of the failure is almost always later than the actual time. The avionics shop finds no fault on the ground because a ground test uses the strongest available path and the router keeps whatever path it selected at log-on for the whole session.",
+      "isolation_procedure": "1. Obtain the recorded session log and establish whether the failure was a rejected log-on or a mid-session loss. 2. Read the fault memory at the display unit FIN 252RN and at the control panel FIN 9407RN and record every entry with its timestamp. 3. Compare the reported failure time with the recorded loss time; a difference of more than a few minutes on the earlier standard is expected and is not itself a fault. 4. Do the operational test with the datalink test set and command a log-on on each available media path in turn from a fresh session. 5. A path that fails to log on with a good test set signal indicates a fault in that path; check the antenna feeder and the connector for that path. 6. A path that logs on and then degrades under a reduced test set signal indicates a marginal installation; measure the feeder loss and compare it with the limit. 7. Check the data concentrator D2370128065382 for reported bus errors. 8. If both paths log on and hold with normal feeder loss, the fault is most likely the router holding a degraded path in service; report the occurrence with the session log. 9. Replace the router only after the antenna feeder measurements have been recorded, because a router exchange without them cannot be assessed.",
+      "dispatch_note": "Dispatch is permitted with the datalink inoperative subject to the airspace requirements of the planned route, and voice communication procedures must be applied. Oceanic operation may require a route change. Rectify within three calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370128065382",
+        "AGS119203K9",
+        "D2370127995296"
+      ],
+      "fins": [
+        "252RN",
+        "9407RN",
+        "1RN"
+      ],
+      "drawings": [
+        "D23701172876"
+      ],
+      "software": [],
+      "zones": [
+        "123",
+        "145",
+        "211"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-23-70-11-700-030-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-Z-34-50-11-700-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink log-on",
+      "silent loss",
+      "media path",
+      "feeder loss",
+      "session log"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "23-70-11-812-812",
+      "fault_symptom": "ATC datalink log-on rejected or connection lost without flight deck indication",
+      "fault_codes": [
+        "237011003",
+        "237011021"
+      ],
+      "warning_messages": [
+        "ATC DATALINK FAULT"
+      ],
+      "affected_fins": [
+        "252RN",
+        "9407RN"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Router holds a degraded media path selected at log-on for the whole session",
+          "probability_pct": 40,
+          "fin": "252RN"
+        },
+        {
+          "cause": "Antenna feeder loss above the limit on one media path",
+          "probability_pct": 27,
+          "fin": "9407RN"
+        },
+        {
+          "cause": "Data concentrator bus errors on the router interface",
+          "probability_pct": 21,
+          "fin": "252RN"
+        },
+        {
+          "cause": "Router internal failure",
+          "probability_pct": 12,
+          "fin": "9407RN"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-Z-23-70-11-700-030-A",
+      "dispatch": {
+        "mel_item": "23-70-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Datalink inoperative, voice communication procedures applied, route replanning may be required for oceanic airspace"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

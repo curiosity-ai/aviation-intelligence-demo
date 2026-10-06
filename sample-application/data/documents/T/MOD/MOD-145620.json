@@ -1,0 +1,183 @@
+[
+  {
+    "doc_id": "MOD-145620",
+    "doc_type": "MOD",
+    "title": "Inner Tank Boost Pump Inlet Housing Replacement Under Airworthiness Directive",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-11-21",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-10",
+      "92-51"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00203",
+      "production_cut_in_date": "2023-05-24",
+      "retrofit_via": [
+        "TTN-28-1030"
+      ]
+    },
+    "dates": {
+      "created": "2021-01-15",
+      "released": "2022-06-29",
+      "revised": "2023-11-21",
+      "effective": "2023-12-08"
+    },
+    "abstract": "Replacement of the inner tank boost pump inlet housing after a fatigue crack was found at the inlet flange radius, mandated by airworthiness directive following a fuel leak into the dry bay on one aircraft.",
+    "sections": {
+      "reason": "A fuel leak into the left inner dry bay was traced to a fatigue crack in the boost pump inlet housing flange radius, at 26 900 flight cycles. Teardown of eight further housings returned from service found sub-critical indications in three of them. The crack initiates at a machining transition in the flange radius that carries a higher stress concentration than the original substantiation assumed, and the ignition risk associated with a leak into the dry bay made the finding safety significant. The airworthiness authority issued a directive requiring inspection and replacement within a defined compliance period.",
+      "description": "The inlet housing is replaced by an item machined with a continuous radius and a shot-peened flange face. The obsolete valve kit MON278175-36 is deleted and its function is taken by the revised restrictor NY844698-29, which is repositioned outboard of the flange so that its mounting no longer loads the radius. The upper sensor NYD659955-61 is retained; its harness is re-clipped clear of the new restrictor position. Anchor nuts EN968165-23 and swaged collars LN41340-8C are used at the revised flange joint. Access is through the wing tank access panels in zones 591 and 593, with the trailing edge area zone 523 opened for the harness run and the cargo compartment zone 114 used to reach the crossfeed manifold during the leak check. The boost pump duct at FIN 7953QT and the valve at FIN 99QT5 are both disturbed. Revised detail is on drawing D28201188199.",
+      "effects": "Mass increase of 5.6 kg per aircraft across four pumps. No electrical load change. The revised housing is not interchangeable with the original because the restrictor mounting position moves, and a pump must be fitted with the matching restrictor. Fuel system leak check content changes, and the pre-modification repetitive inspection required by the directive is cancelled once the replacement is embodied on all four positions. Illustrated parts content for the boost pump installation requires update.",
+      "embodiment_note": "Cut in on the production line at MSN T00203 in May 2023. In service the change is mandatory under an airworthiness directive, with a repetitive inspection required until it is done. Embodiment is a base task of about five days for all four pumps, with tank entry and a full leak check."
+    },
+    "entities": {
+      "part_numbers": [
+        "MON278175-36",
+        "NY844698-29",
+        "NYD659955-61",
+        "EN968165-23",
+        "LN41340-8C"
+      ],
+      "fins": [
+        "7953QT",
+        "99QT5"
+      ],
+      "drawings": [
+        "D28201188199"
+      ],
+      "software": [],
+      "zones": [
+        "591",
+        "593",
+        "523",
+        "114"
+      ],
+      "figures": [
+        "FIG-28-20-11-02"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00203"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-28-1030",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-T-28-20-11-FIG-02",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "boost pump",
+      "inlet housing",
+      "fatigue crack",
+      "dry bay leak",
+      "airworthiness directive"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Ashcombe",
+      "role": "Fuel Systems Design"
+    },
+    "type_data": {
+      "mod_number": 145620,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "AIRWORTHINESS_DIRECTIVE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.981",
+          "CS 25.571",
+          "CS 25.963"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 5.6,
+      "balance_impact": "Symmetric, no reportable effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "NY844698-29",
+        "EN968165-23",
+        "LN41340-8C"
+      ],
+      "parts_removed": [
+        "MON278175-36"
+      ],
+      "parts_modified": [
+        "NYD659955-61"
+      ],
+      "fins_affected": [
+        "7953QT",
+        "99QT5"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 290,
+      "estimated_cost_keur": 1600,
+      "lead_time_weeks": 34,
+      "production_impact": "Cut-in at MSN T00203; housing supplied to the wing build station as a finished item",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

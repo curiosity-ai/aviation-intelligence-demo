@@ -1,0 +1,173 @@
+[
+  {
+    "doc_id": "AMM-Z-32-20-12-400-025-A",
+    "doc_type": "AMM",
+    "title": "Installation of the Nose Wheel Steering Manifold and Steering Rig Check",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-05-21",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-20",
+      "ata_6d": "32-20-12",
+      "title": "Nose Gear — Steering Actuation"
+    },
+    "secondary_ata": [
+      "29-10",
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-08-30",
+      "released": "2017-03-14",
+      "revised": "2024-05-21",
+      "effective": "2024-06-11"
+    },
+    "abstract": "Installation of the nose wheel steering manifold, including pipe torque, accumulator recharge, bleeding of the steering circuit and the rig check that must pass before the aircraft is released.",
+    "sections": {
+      "purpose": "This task installs the nose wheel steering manifold in the nose gear bay and does the rig check and full travel operational test that release the steering system back to service.",
+      "job_setup_note": "Check the manifold standard against the aircraft record before you unpack it. The machined block standard uses different pipe end fittings and an accumulator face port; fitting it to an aircraft still on the built-up pipework will not seal. The steering circuit must be bled completely, because trapped air produces exactly the jitter symptom this system is known for and it will be reported as a fault after the first landing.",
+      "procedure": "1. Make sure that the green hydraulic system is depressurised and that the ground lock is installed. 2. Lift the manifold into the bay on the cradle. 3. Install the attachment bolts hand tight and check that the manifold sits flat on its hard points. 4. Torque the bolts in the sequence given in the instructions, in two stages. 5. Remove the caps and connect the hydraulic pipes to the correct end fittings. CAUTION: DO NOT MIX THE PIPE END FITTING STANDARDS. THE MACHINED BLOCK USES A DIFFERENT SEAT ANGLE AND A CROSS-FITTED JOINT WILL PASS A STATIC LEAK CHECK AND FAIL UNDER PRESSURE. 6. Install the filter D3220123507496 in the manifold cavity. 7. Connect the accumulator D3220121572714 and install the new charging seal. 8. Connect the electrical connector at the position sensor FIN 9WS and remove the label. 9. Check that the non-return valve at FIN 2820WS5 is correctly oriented. 10. Pressurise the green system slowly and check every joint for leakage. 11. Bleed the steering circuit at the bleed points until no air is seen in the return. 12. Charge the accumulator to the value in the instructions and record the reading at the sensing point FIN 25GB. WARNING: KEEP CLEAR OF THE NOSE WHEELS DURING THE STEERING TEST. THE WHEELS MOVE WITHOUT WARNING WHEN THE SYSTEM IS PRESSURISED. 13. Do the steering rig check and set the neutral position. 14. Do the full travel operational test in both directions and record the travel limits.",
+      "close_out": "Remove the ground lock only after the rig check has passed and the travel limits are recorded. Clear the technical log entry raised at removal. Collect the drain tray and dispose of the fluid as scheduled waste. Record the manifold serial number and standard on the component change record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3220127361550",
+        "D3220121572714",
+        "D3220123507496"
+      ],
+      "fins": [
+        "9WS",
+        "2820WS5",
+        "25GB"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "711",
+        "714",
+        "741"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-32-20-12-000-025-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-32-1258",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "steering manifold",
+      "rig check",
+      "circuit bleeding",
+      "accumulator charge",
+      "travel limits"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Ashcombe",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "32-20-12-400-025-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. Pipe end fitting standard differs pre and post MOD-154905.",
+      "manhours": 12.0,
+      "personnel": 2,
+      "elapsed_time_hours": 7.0,
+      "access": {
+        "zones": [
+          "711",
+          "714",
+          "741"
+        ],
+        "access_panels": [
+          "711AL",
+          "714AR",
+          "741CL"
+        ],
+        "doors": [
+          "Nose gear doors"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep clear of the nose wheels during the steering test.",
+          "Install the ground lock before you enter the bay.",
+          "Do not pressurise the system until every joint is torqued."
+        ],
+        "tooling": [
+          {
+            "reference": "98D32201-025",
+            "description": "Manifold support cradle"
+          },
+          {
+            "reference": "98D32201-258",
+            "description": "Steering rig check adapter"
+          },
+          {
+            "reference": "Nitrogen charging rig",
+            "description": "Accumulator charge"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Lockwire, corrosion resistant, 0.8 mm",
+          "Sealant, polysulphide, class A"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-Z-32-20-12-000-025-A"
+      ],
+      "steps": 14,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

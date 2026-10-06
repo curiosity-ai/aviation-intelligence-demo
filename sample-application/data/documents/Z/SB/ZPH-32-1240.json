@@ -1,0 +1,400 @@
+[
+  {
+    "doc_id": "ZPH-32-1240",
+    "doc_type": "SB",
+    "title": "Landing Gear — Brake and Steering Control Unit — Software Standard 2.6 Load and Pressure Transmitter Installation",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-01-28",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z11917",
+          "to": "Z12500"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-155471"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-08-06",
+      "released": "2025-01-28",
+      "revised": null,
+      "effective": "2025-02-17"
+    },
+    "abstract": "Software load bringing the brake and steering control unit to standard 2.6 with the brake pressure transmitter the standard requires, released for the late production build where the transmitter was not installed on the line.",
+    "sections": {
+      "planning_reason": "Operators flying into airfields with frequently contaminated runways report tyre wear roughly a third above the fleet average, together with occasional locked-wheel events at low ground speed during autobrake operation. Quick access recorder data from 41 aircraft showed the two-wheel anti-skid reference speed lagging the true ground speed when both reference wheels are on the same contaminated patch, after which the unit releases pressure late on the remaining wheels. Aircraft delivered before the production cut-in do not have the four-wheel reference logic.",
+      "description": "This Service Bulletin loads software standard 2.6 into the brake and steering control unit and installs the brake pressure transmitter that the standard needs. The new standard derives the anti-skid reference speed from all four main wheel tachometers with a weighted estimator and rejects any wheel whose deceleration exceeds a physical bound.",
+      "accomplishment_summary": "Get access to the unit in zone 754 and confirm the current software standard from the maintenance page. Install the transmitter D3240125686751 in the brake supply line in zone 744 and torque the union to the value given. Connect the transmitter harness to the spare pins on the unit connector. Load the software standard LG3N06435DD from the portable data loader and confirm that the part number is reported correctly on the maintenance page. Re-write the calibration table of the sensor D3240129735238 using the configuration file supplied with the load. Fit the regulator kit D3240121994833 with the tighter pressure hysteresis. Do the brake system functional test and the anti-skid built-in test at the unit FIN 998GM. Do a taxi test with at least two autobrake applications and confirm no fault message. Record the embodiment and the new software part number in the aircraft technical log.",
+      "effectivity_note": "Applicable to Evo model ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 aircraft from MSN Z11917, the production build in which the control unit was already wired for the transmitter. The bulletin is written around that build standard and around the line tooling used on it. It must not be embodied on classic aircraft, whose brake control unit is a different part number and does not accept this load.",
+      "material_note": "Kit K3240-1240-01 contains the pressure transmitter, the union, the harness tail and the data loader media. Lead time is eight weeks. The software media is also available for download by operators holding the electronic distribution agreement, in which case only the hardware kit needs ordering."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240129735238",
+        "D3240121994833",
+        "D3240125686751"
+      ],
+      "fins": [
+        "998GM"
+      ],
+      "drawings": [
+        "D32401235626",
+        "D32401274246"
+      ],
+      "software": [
+        "LG3N06435DD"
+      ],
+      "zones": [
+        "754",
+        "744"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z11917"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155471",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-Z-32-40-12-700-013-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-Z-32-40-12-810-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "software load",
+      "pressure transmitter",
+      "production build",
+      "anti-skid"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-32-1240",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, and in any case within 36 months after the date of this Service Bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-155471",
+      "manpower": {
+        "elapsed_time_hours": 10,
+        "manhours": 16,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K3240-1240-01",
+        "kit_available_from": "2025-04-14",
+        "parts_required": [
+          {
+            "part_number": "D3240125686751",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D3240121994833",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Lockwire, corrosion resistant"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Torque wrench 5-50 Nm",
+          "Brake system test set 98D32401-129"
+        ]
+      },
+      "weight_change_kg": 0.6,
+      "accomplishment_steps": 9,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2025-01-28",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "ZPH-32-1240",
+    "doc_type": "SB",
+    "title": "Landing Gear — Brake and Steering Control Unit — Software Standard 2.6 Load and Pressure Transmitter Installation",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-05",
+      "reason": "Effectivity is widened from the late production build to the whole delivered Evo population that the operators are asking about.",
+      "raised_by_pawo": "PAWO-155471-01",
+      "raised_by_finding": "F02",
+      "finding_type": "EFFECTIVITY_INVALIDATION"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-155471"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-08-06",
+      "released": "2025-01-28",
+      "revised": "2026-08-05",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Software load bringing the brake and steering control unit to standard 2.6, together with the brake pressure transmitter installation, re-issued against the whole delivered Evo population rather than the late production build.",
+    "sections": {
+      "planning_reason": "Operators flying into airfields with frequently contaminated runways report tyre wear roughly a third above the fleet average, together with occasional locked-wheel events at low ground speed during autobrake operation. Quick access recorder data from 41 aircraft showed the two-wheel anti-skid reference speed lagging the true ground speed when both reference wheels are on the same contaminated patch, after which the unit releases pressure late on the remaining wheels. Aircraft delivered before the production cut-in do not have the four-wheel reference logic.",
+      "description": "This Service Bulletin loads software standard 2.6 into the brake and steering control unit and installs the brake pressure transmitter that the standard needs. The new standard derives the anti-skid reference speed from all four main wheel tachometers with a weighted estimator and rejects any wheel whose deceleration exceeds a physical bound.",
+      "accomplishment_summary": "Get access to the unit in zone 754 and confirm the current software standard from the maintenance page. Install the transmitter D3240125686751 in the brake supply line in zone 744 and torque the union to the value given. Connect the transmitter harness to the spare pins on the unit connector. Load the software standard LG3N06435DD from the portable data loader and confirm that the part number is reported correctly on the maintenance page. Re-write the calibration table of the sensor D3240129735238 using the configuration file supplied with the load. Fit the regulator kit D3240121994833 with the tighter pressure hysteresis. Do the brake system functional test and the anti-skid built-in test at the unit FIN 998GM. Do a taxi test with at least two autobrake applications and confirm no fault message. Record the embodiment and the new software part number in the aircraft technical log.",
+      "effectivity_note": "Applicable to Evo model ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 aircraft delivered before the production cut-in of software standard 2.6. Aircraft delivered after the cut-in already carry the standard. The original issue was drawn around the late production build only, which left the delivered population that the operators were asking about outside the effectivity statement and made the bulletin unusable as written; the statement now covers that population and the transmitter installation carries the extra harness work those aircraft need. The bulletin must not be embodied on classic aircraft, whose brake control unit is a different part number and does not accept this load.",
+      "material_note": "Kit K3240-1240-01 contains the pressure transmitter, the union, the harness tail and the data loader media. Lead time is eight weeks. Aircraft outside the late production build also need the connector tail, which is supplied in the same kit and is not ordered separately. The software media is available for download by operators holding the electronic distribution agreement, in which case only the hardware kit needs ordering."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240129735238",
+        "D3240121994833",
+        "D3240125686751"
+      ],
+      "fins": [
+        "998GM"
+      ],
+      "drawings": [
+        "D32401235626",
+        "D32401274246"
+      ],
+      "software": [
+        "LG3N06435DD"
+      ],
+      "zones": [
+        "754",
+        "744"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z11917"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155471",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-Z-32-40-12-700-013-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-Z-32-40-12-810-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "software load",
+      "pressure transmitter",
+      "delivered population",
+      "anti-skid"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-32-1240",
+      "sb_revision": "02",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, and in any case within 36 months after the date of this Service Bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-155471",
+      "manpower": {
+        "elapsed_time_hours": 10,
+        "manhours": 16,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K3240-1240-01",
+        "kit_available_from": "2025-04-14",
+        "parts_required": [
+          {
+            "part_number": "D3240125686751",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D3240121994833",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Lockwire, corrosion resistant"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Torque wrench 5-50 Nm",
+          "Brake system test set 98D32401-129"
+        ]
+      },
+      "weight_change_kg": 0.6,
+      "accomplishment_steps": 9,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2025-01-28",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-08-05",
+          "reason": "Effectivity widened from the late production build to the full delivered Evo population"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

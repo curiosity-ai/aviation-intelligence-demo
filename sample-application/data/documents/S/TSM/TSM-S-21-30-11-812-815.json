@@ -1,0 +1,167 @@
+[
+  {
+    "doc_id": "TSM-S-21-30-11-812-815",
+    "doc_type": "TSM",
+    "title": "Cabin Pressure Outflow Valve Position Disagreement",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-05-16",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-30",
+      "ata_6d": "21-30-11",
+      "title": "Pressurization Control — Outflow Valve Control"
+    },
+    "secondary_ata": [
+      "21-30-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-01-30",
+      "released": "2018-08-13",
+      "revised": "2023-05-16",
+      "effective": "2023-06-04"
+    },
+    "abstract": "Fault isolation for a disagreement between the indicated and the actual outflow valve position, which on the duplex installation can be either channel and on the single-motor installation is nearly always the coupling.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a disagreement between the indicated outflow valve position and the actual valve position, including the case where the disagreement is only seen after a manual descent.",
+      "fault_description": "The indicated position does not match the valve. On the single-motor installation the indication is derived from the automatic controller and the most common cause is an actuator refitted one spline out at the coupling, which puts a fixed offset into every reading and which is invisible until someone measures the valve itself. On the duplex installation the indication still comes from the controller rather than from the valve shaft, so a failed channel can leave the indication frozen at the last automatic position while the manual drive moves the valve. Crews report this after a manual descent, when the cabin arrives correctly but the indication says otherwise.",
+      "isolation_procedure": "1. Establish whether the disagreement is a fixed offset or appears only after manual operation. 2. Where it is a fixed offset, measure the actual valve position mechanically and compare with the indication. 3. Where the offset matches one spline of the coupling, remove and refit the actuator with the output arm marked. CAUTION: MARK THE OUTPUT ARM BEFORE THE COUPLING IS RELEASED. REFITTING ONE SPLINE OUT REPRODUCES THE FAULT EXACTLY. 4. Where the offset is not a spline multiple, check the indicating channel calibration. 5. Where the disagreement appears only after manual operation, confirm from the aircraft record whether the duplex installation is fitted. 6. On the duplex installation, isolate each essential bus feed in turn and confirm that the actuator drives on either channel alone. WARNING: ISOLATING ONE BUS DOES NOT MAKE THE ACTUATOR SAFE. ISOLATE BOTH BEFORE ANY CONNECTOR IS BROKEN. 7. Where one channel does not drive, replace the actuator. 8. Where both channels drive, the indication is following the controller and not the valve; this is expected behaviour on this standard and should be recorded as such. 9. Check the filter 141HM and the manifold 6820HQ for a restriction that would slow the valve and produce an apparent lag. 10. Do the pressurisation ground test and time the manual drive from fully open to fully closed. 11. Compare the timing against the limits table for the standard fitted.",
+      "dispatch_note": "The aircraft may be dispatched with one motor channel inoperative on the duplex installation, under the applicable minimum equipment list item, with the manual drive proved serviceable. Dispatch is not permitted with a position disagreement that has not been resolved to either a coupling offset or a channel failure."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2130114939430",
+        "D2130115062812",
+        "D2130117925957",
+        "AGS958367K4"
+      ],
+      "fins": [
+        "141HM",
+        "6820HQ"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "165",
+        "242",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-21-30-11-000-051-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "position disagreement",
+      "coupling spline",
+      "duplex channel",
+      "manual drive timing",
+      "indication lag"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "21-30-11-812-815",
+      "fault_symptom": "Indicated outflow valve position does not agree with the actual valve position",
+      "fault_codes": [
+        "213011007",
+        "213011020"
+      ],
+      "warning_messages": [
+        "CAB PR OFV FAULT",
+        "CAB PR SYS 1 FAULT"
+      ],
+      "affected_fins": [
+        "141HM",
+        "6820HQ"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Actuator refitted one spline out at the valve coupling",
+          "probability_pct": 42,
+          "fin": "6820HQ"
+        },
+        {
+          "cause": "One motor channel failed on the duplex installation",
+          "probability_pct": 28,
+          "fin": "141HM"
+        },
+        {
+          "cause": "Indicating channel calibration drift",
+          "probability_pct": 18,
+          "fin": "141HM"
+        },
+        {
+          "cause": "Restriction in the filter causing an apparent lag",
+          "probability_pct": 12,
+          "fin": "141HM"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-S-21-30-11-000-051-A",
+      "dispatch": {
+        "mel_item": "21-30-02A",
+        "dispatchable": true,
+        "dispatch_condition": "One motor channel inoperative on the duplex installation with the manual drive proved serviceable"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

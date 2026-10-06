@@ -1,0 +1,181 @@
+[
+  {
+    "doc_id": "MOD-168264",
+    "doc_type": "MOD",
+    "title": "Throttle Actuation Circuit Card Replacement for Thermal Margin",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-01-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-12",
+      "title": "Auto Throttle — Throttle Actuation"
+    },
+    "secondary_ata": [
+      "22-30",
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "M00351",
+      "production_cut_in_date": "2023-02-14",
+      "retrofit_via": [
+        "MRD-22-1009"
+      ]
+    },
+    "dates": {
+      "created": "2021-06-15",
+      "released": "2023-01-11",
+      "revised": null,
+      "effective": "2023-02-14"
+    },
+    "abstract": "Replaces the throttle actuation circuit card with a variant carrying a wider thermal margin, after in-service removals clustered on aircraft operating from hot stations with the pedestal ventilation partly obstructed by cabin loading.",
+    "sections": {
+      "reason": "Removal rate for the throttle actuation function reached twice the predicted figure on aircraft based in hot regions, while temperate fleets sat at or below prediction. Bench testing of forty-one returned cards found no failure in twenty-nine of them, and thermal survey of the pedestal showed the card running within four degrees of its rated maximum whenever the forward galley loading blocks the pedestal outlet, which is normal practice on many operators.",
+      "description": "The circuit card is replaced by a variant built on the current process with a twenty degree wider rated margin and a revised conformal coating. The card fits the existing slot and connector, so the transceiver and interface unit in the pedestal are unchanged, and the grommet at the harness entry is changed to the current standard to close a small ventilation leak found during the survey. The pedestal ventilation path itself is not modified; that was assessed and rejected because it would have required a cabin monument change.",
+      "effects": "Mass change is negligible. Electrical load falls by eight volt amperes. Fully interchangeable in both directions, so operators may mix standards across the fleet. The functional test task is reissued because the built-in test reports a new card identification, and the autothrust description entry is reissued for the same reason. Dispatch is unaffected and the minimum equipment list is unchanged.",
+      "embodiment_note": "Cut in at MSN M00351. Retrofit is by bulletin, two hours at a line station with the pedestal panel removed, and is normally done at the next opportunity rather than scheduled."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2230121548877",
+        "AGS433103-4C"
+      ],
+      "fins": [
+        "363CC",
+        "41CE4",
+        "18CC"
+      ],
+      "drawings": [
+        "D22301213347"
+      ],
+      "software": [],
+      "zones": [
+        "226",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00351"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-22-1009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-M-22-30-12-700-051-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-M-22-30-11-812-803",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-M-DSC-22-30-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "throttle actuation",
+      "circuit card",
+      "thermal margin",
+      "pedestal ventilation",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168264,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1329"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.1,
+      "balance_impact": "None",
+      "electrical_load_impact_va": -8,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "D2230121548877"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "AGS433103-4C"
+      ],
+      "fins_affected": [
+        "363CC"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 280,
+      "estimated_cost_keur": 940,
+      "lead_time_weeks": 36,
+      "production_impact": "Cut in at MSN M00351, card supplied through the existing vendor channel",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

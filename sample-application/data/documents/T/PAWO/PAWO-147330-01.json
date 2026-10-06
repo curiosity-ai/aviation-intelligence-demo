@@ -1,0 +1,469 @@
+[
+  {
+    "doc_id": "PAWO-147330-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Upper Deck Seat Track and Floor Panel Rework for High Density Cabin Reconfiguration",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "53",
+      "ata_4d": "53-50",
+      "ata_6d": "53-50-12",
+      "title": "Floor Structure — Seat Tracks"
+    },
+    "secondary_ata": [
+      "25-20",
+      "44-20",
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00039",
+          "to": "T00186"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MPA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the upper deck seat track and floor panel rework, covering the two earlier track standards, their retrofit bulletins, the published floor repairs and the cabin equipment that mounts on the same track.",
+    "sections": {
+      "objective": "Identify every released or candidate item of Aeralis technical documentation applicable to TITAN-88 aircraft in the MSN T00039 to T00186 range that the proposed upper deck seat track and floor panel rework would conflict with, depend on, supersede or invalidate, and establish the ordering constraints that a retrofit bulletin would have to state.",
+      "scope_note": "The search covers ATA 53-50 as the primary chapter and ATA 25-20, 44-20 and 92-31 as secondary, because the rework changes the interface that cabin monuments, seat equipment and the underfloor harness routes all land on. ATA 33-20 cabin lighting was included in the first pass and then excluded: the lighting channel is in the ceiling and does not touch the floor structure, and no shared identifier or shared removal task was found. Powerplant, fuel and landing gear chapters were not searched.",
+      "method_note": "Entity linking was run first, seeded from the seven part numbers, the single FIN, the two drawing numbers and the four zones carried by the candidate. Semantic similarity was then run over titles, abstracts and reason-for-change text using the three seed phrases below, and the two result sets were merged. Two findings came only from entity linking and would have been missed by a text search, because the documents concerned describe cargo restraint and equipment mounting in vocabulary that shares nothing with a structural rework. One finding came only from applicability reasoning, since the document that is invalidated shares its identifiers with the candidate but says nothing that resembles it.",
+      "findings_summary": "Eight items have been confirmed and two of them are blocking. The rework re-uses the sealed track section web and the clevis pin standard introduced by the first of the two earlier modifications, so an aircraft that never took that standard cannot be reworked without buying the sealed sections new; that makes the earlier modification a hard prerequisite rather than a recommendation, and it is already declared as a post-modification applicability condition. Separately, the service bulletin that brings aircraft to the titanium attachment lug standard is written as pre-modification only against the standard this candidate supersedes, and its effectivity statement becomes ambiguous the moment the rework exists: an operator embodying the rework first would leave the bulletin nominally applicable to an aircraft it no longer describes. Three further conflicts sit in the same physical bay. The published seat track splice repair uses the same tension bolt standard and occupies the area where the new panel upstand lands, so an aircraft carrying that repair cannot take the rework without a repair assessment. The under-seat equipment relocation proposed by a second candidate mounts its cradle on the same track flange using the same tubular spacer, and neither candidate references the other. The cargo restraint seat track cover shares a FIN and a zone with the rework, which is how the cargo lining modification surfaced at all; there is no wording in common between the two documents.",
+      "next_steps": "Obtain a position from the repair design owner on whether the published seat track splice repair survives the panel upstand, and whether an aircraft carrying it can be reworked at all. Raise a change request against the titanium lug service bulletin effectivity statement before the rework is launched. Open a coordination action with the cabin systems design office on the shared track flange interface, and agree which of the two candidates owns the flange profile. Confirm with the operator whether any aircraft in the range is still at the pre-sealed-section standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5350006194262",
+        "LN231128K9",
+        "ARD386097-40",
+        "LN666073-13",
+        "EN187472K9"
+      ],
+      "fins": [
+        "12DL"
+      ],
+      "drawings": [
+        "D53501208297",
+        "D53501140817"
+      ],
+      "software": [],
+      "zones": [
+        "242",
+        "265",
+        "971",
+        "973"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147330",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-T-250312",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "seat track",
+      "upper deck",
+      "conflict search",
+      "effectivity"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-147330-01",
+      "subject_mod": "MOD-147330",
+      "source_io": "IO-T-250312",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": true,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-04-08",
+      "due_date": "2026-06-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA",
+          "EAAM",
+          "ELSC"
+        ],
+        "estimated_manhours": 180,
+        "spent_manhours": 112
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "53",
+          "25",
+          "44",
+          "92"
+        ],
+        "ata_4d": [
+          "53-50",
+          "25-20",
+          "44-20",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "T00039",
+          "to": "T00186"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5350006194262",
+            "LN231128K9",
+            "ARD386097-40",
+            "LN666073-13",
+            "EN187472K9"
+          ],
+          "fins": [
+            "12DL"
+          ],
+          "drawings": [
+            "D53501208297",
+            "D53501140817"
+          ],
+          "zones": [
+            "242",
+            "265",
+            "971",
+            "973"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "corrosion under a galley or lavatory at the cabin floor interface",
+          "seat track attachment standard change on a twin deck aircraft",
+          "cabin equipment mounted on the passenger floor track flange"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released and candidate modifications on ATA 53-50",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check published repairs on the upper deck floor structure",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review service bulletin effectivity statements on the two earlier track standards",
+          "method": "MANUAL_REVIEW",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Assess cabin equipment mounted on the seat track flange",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EAAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T05",
+          "title": "Confirm underfloor harness clearance at the reworked flange",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-141480",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ARD386097-40",
+              "LN666073-13"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "242",
+              "265",
+              "971"
+            ],
+            "shared_ata_6d": [
+              "53-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The rework re-uses the sealed track section web and renews the clevis pins at the splice positions, both of which were introduced by the sealed track section standard. On an aircraft that never took that standard the sections do not exist and the splice positions are 60 mm inboard of where the rework assumes them, so the panel upstand cannot be aligned.",
+          "resolution": "Keep the sealed track section standard as a declared post-modification applicability condition, and state in the retrofit bulletin that an aircraft at the original open section standard must be brought through it first."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-143110",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5350006194262",
+              "LN231128K9",
+              "ARD386097-40",
+              "LN666073-13"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "242",
+              "265",
+              "971"
+            ],
+            "shared_ata_6d": [
+              "53-50-12"
+            ],
+            "similarity_note": "Both documents describe the seat track to floor beam interface in the same wet bays and share four part numbers, three zones and the same ATA 6D. The candidate retains the titanium attachment lug and the tension bolt standard that this modification introduced, and replaces everything above it."
+          },
+          "rationale": "The titanium attachment lug standard remains physically present after the rework, but it is no longer the design standard for the interface, because the track flange profile and the panel edge above it both change. Leaving both modifications open as current standards would give two answers to the same configuration question.",
+          "resolution": "Declare the supersession explicitly and move the earlier modification to superseded status once the rework is released. Keep the lug itself in the illustrated parts content, because it is retained hardware and not a deleted item."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TTN-53-1027",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5350006194262",
+              "LN231128K9"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "242",
+              "265"
+            ],
+            "shared_ata_6d": [
+              "53-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "This service bulletin is effective only on aircraft that are pre the titanium attachment lug standard. Once the rework exists, an operator that reworks a bay before embodying the bulletin leaves that bay in a configuration the bulletin still claims to cover but no longer describes, and the accomplishment instructions would have the technician remove parts that the rework retains.",
+          "resolution": "Re-issue the effectivity statement with an explicit exclusion for reworked bays, and add an ordering note to both documents. The change request must be raised before the rework is launched, not at release."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-T-53-50-12-004",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "LN231128K9"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "242",
+              "265",
+              "971"
+            ],
+            "shared_ata_6d": [
+              "53-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The published splice repair puts a plate above the track joint in exactly the area that the new floor panel upstand occupies, and it is life limited with a repeat inspection of the seat leg slot that the upstand would obstruct. An aircraft carrying that repair cannot be reworked without an assessment, and the operator has four aircraft with it embodied.",
+          "resolution": "Obtain a repair design position on coexistence, and add a pre-embodiment check for this repair to the retrofit bulletin. Where the repair is present, the reworked bay must either exclude that bay or replace the repaired track length."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-147410",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN187472K9"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "242"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "A second candidate relocates the under-seat equipment boxes onto a cradle that mounts on the same seat track flange, using the same tubular spacer to set its standoff. That candidate assumes the present flange profile. Neither document references the other and their descriptive text has almost nothing in common, so only the shared part number and the shared zone connect them.",
+          "resolution": "Open a coordination action between the structural and the cabin systems design offices and agree the owner of the flange profile before either candidate is frozen. Whichever is launched first must carry the interface definition."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "AMM-T-53-50-12-200-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "ARD386097-40",
+              "D5350006194262"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "242",
+              "265",
+              "971",
+              "973"
+            ],
+            "shared_ata_6d": [
+              "53-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The repeat corrosion inspection of the upper deck wet bays is the task the rework is intended to remove. Its effectivity note already anticipates a reworked standard but no such standard exists yet, so the task cannot be cancelled until the rework is released and the substantiation is accepted.",
+          "resolution": "Plan the maintenance manual change in step with the rework release, and make the cancellation conditional on every bay of a deck being reworked rather than on the aircraft being reworked at all."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "IPC-T-53-50-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5350116635044",
+              "IND983416-78",
+              "EN187472K9"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "242",
+              "265",
+              "971"
+            ],
+            "shared_ata_6d": [
+              "53-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries two alternate pairs for the two earlier standards. The rework adds a third state for the track section, the floor panel and the stiffener, and re-uses three items at different quantities. A third alternate on the same item numbers would make the figure unreadable at the counter.",
+          "resolution": "Split the figure by standard rather than adding a third alternate, and agree the split with the spares organisation before the rework is released so that ordering does not break during the transition."
+        },
+        {
+          "finding_id": "F08",
+          "doc_id": "MOD-143420",
+          "doc_type": "MOD",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "12DL"
+            ],
+            "shared_zones": [
+              "973"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The cargo restraint seat track cover is renewed by the cargo lining modification and is disturbed again by the rework, because the same functional item appears at the mid galley position on the upper deck. The two documents share no vocabulary at all, one being about burnthrough qualification and the other about a floor interface, and the link exists only through the FIN and the zone.",
+          "resolution": "Confirm the part standard of the cover at the mid galley position on aircraft that have had the lining modification, and list it as disturbed hardware in the rework bulletin rather than as a changed item."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-148260",
+          "doc_type": "MOD",
+          "reason": "Near-identical title and the same ATA 6D, and it also seals a seat track under galleys and lavatories. It applies to the main deck of the TTN-88E1 only, on a build standard with a collected galley drain, over the MSN T00190 to T00232 range which does not overlap the candidate at all. It shares no part number, no FIN and no zone with the candidate."
+        },
+        {
+          "doc_id": "IPC-T-25-50-11-FIG-03",
+          "doc_type": "IPC",
+          "reason": "Surfaces through the shared seat track cover FIN and would be ranked highly by an entity-only search, but the figure is the aft cargo compartment lining breakdown. Nothing in it is on the upper deck and no item it lists is touched by the rework."
+        }
+      ],
+      "conclusion": "Not yet issued. Two blocking conflicts are confirmed, two coordination actions are open and the repair coexistence question is with the repair design owner.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

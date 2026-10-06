@@ -1,0 +1,178 @@
+[
+  {
+    "doc_id": "MOD-111891",
+    "doc_type": "MOD",
+    "title": "APU Electronic Control Box Parameter Standard 10.0 for High Elevation Starting",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-08-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "GBA",
+        "HAT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-08-14",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "A revised start envelope and fuel schedule for the auxiliary power unit control box, aimed at the hung starts that operators report at airfields above 2500 metres on hot afternoons.",
+    "sections": {
+      "reason": "Two operators serving high-elevation airfields report hung auxiliary power unit starts on hot afternoons, at a rate of about one start in fourteen above 2500 metres and 30 degrees ambient. The crew procedure is to wait and retry, which usually succeeds on the second attempt, but the delay costs a turnaround slot and repeated hot starts consume unit life. The current fuel schedule is derived from a sea-level acceleration model with a fixed altitude correction that under-fuels the unit in the middle of the start when ambient density is lowest.",
+      "description": "The control box adopts parameter standard 10.0, loadable part LC8C343F033, which replaces the fixed altitude correction with a density-based fuel schedule and widens the permitted exhaust gas temperature band during the acceleration phase only. No change is made to the shutdown protections or to the over-temperature limits at steady state. The control box heat shield D4960112246671 is replaced by a version with a larger cooling aperture because the box runs warmer with the extended acceleration, the box seal D4960117781398 is re-profiled to suit, and the sense line D4960118355783 is re-clamped clear of the new aperture. The box mount link 6PA and the start sequencing firewall panel 8121PA9 keep their identifiers. Revised detail is on drawing D49601238355. Work is done in the auxiliary power unit compartment, zones 391, 394 and 396.",
+      "effects": "Mass increase of 0.5 kg per aircraft. No electrical load change. The loadable part is interchangeable in both directions but the larger cooling aperture is a permanent change to the heat shield, so an aircraft that has had the hardware fitted may run either standard. No dispatch impact and no change to the auxiliary power unit minimum equipment list items. The auxiliary power unit functional test in the maintenance manual gains a high-elevation acceptance criterion, and the trouble shooting content for hung starts is re-written.",
+      "embodiment_note": "Retrofit only and offered to operators with high-elevation exposure rather than as a fleet campaign. The loadable part is a line-level task; the heat shield change needs the auxiliary power unit compartment doors open and about six hours.",
+      "open_points": "Pre-analysis must confirm that the widened exhaust gas temperature band does not overlap any condition the auxiliary power unit fire detection logic treats as an event, that the larger cooling aperture does not compromise the compartment fire seal, and that the parameter standard can be loaded on units that are still at the earlier application software level."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4960112246671",
+        "D4960117781398",
+        "D4960118355783"
+      ],
+      "fins": [
+        "6PA",
+        "8121PA9"
+      ],
+      "drawings": [
+        "D49601238355"
+      ],
+      "software": [
+        "LC8C343F033"
+      ],
+      "zones": [
+        "391",
+        "394",
+        "396"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00092",
+        "C00271"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-49-60-11-700-005-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-49-60-11-810-806",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "auxiliary power unit",
+      "hung start",
+      "fuel schedule",
+      "high elevation",
+      "exhaust gas temperature"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Powerplant Design"
+    },
+    "type_data": {
+      "mod_number": 111891,
+      "mod_class": "MAJOR",
+      "change_category": "POWERPLANT",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.903"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0.5,
+      "balance_impact": "Aft fuselage, no reportable shift",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4960112246671",
+        "D4960117781398",
+        "D4960118355783"
+      ],
+      "fins_affected": [
+        "6PA",
+        "8121PA9"
+      ],
+      "software_affected": [
+        "LC8C343F033"
+      ],
+      "estimated_manhours": 44,
+      "estimated_cost_keur": 420,
+      "lead_time_weeks": 34,
+      "production_impact": "No production cut-in proposed; offered to exposed operators only",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

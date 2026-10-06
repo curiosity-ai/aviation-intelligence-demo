@@ -1,0 +1,188 @@
+[
+  {
+    "doc_id": "MOD-132070",
+    "doc_type": "MOD",
+    "title": "Air Starter Motor Duct Clamping and Start Valve Position Indication",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-05-22",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "36-10",
+      "49-50"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7000"
+      ],
+      "operators": [
+        "VIA",
+        "ACL",
+        "SRP"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "S01232",
+      "production_cut_in_date": "2020-10-15",
+      "retrofit_via": [
+        "SLN-80-1003"
+      ]
+    },
+    "dates": {
+      "created": "2019-06-18",
+      "released": "2020-08-07",
+      "revised": "2023-05-22",
+      "effective": "2023-06-12"
+    },
+    "abstract": "Revised clamping of the starter supply duct and a discrete position indication for the start valve, introduced after duct joint leakage lengthened starts and left the crew without a positive indication of valve state.",
+    "sections": {
+      "reason": "Twenty-three operators reported starts running long in warm ambient conditions, and borescope inspection of the starter supply duct found joint faces fretted at the forward clamp on nineteen of twenty-four engines examined. The leak is small enough to pass a ground leak check and large enough to cost about four per cent of the delivered mass flow, which at high ambient temperature is the difference between a normal start and a hung one. The valve at the time gave only a pressure-derived indication, so a crew facing a slow start could not tell whether the valve had opened.",
+      "description": "The forward clamp PE187919-09 is replaced by a two-piece item with a captive spherical seat that tolerates the angular misalignment the single-piece clamp did not, and the aft clamp D8010119758805 is re-tensioned to a revised value. The joint face on the nozzle WES955482-79 is re-machined and the titanium bolt EN290030-3C replaces the original steel fastener at all six positions so that the joint preload does not fall away with thermal cycling. A discrete position switch is added to the valve body and wired to the existing engine interface, giving a valve-open signal independent of duct pressure. Duct 2788ES3 in the forward position and seal 5193ES are renewed; firewall panel 983ES is refitted. Work is in the fan cowl in zones 421 and 456 and at the thrust reverser interface in zone 481. Detail is on drawings D80101134147 and D80101186512.",
+      "effects": "Mass increase of 1.1 kg per engine, 2.2 kg per aircraft. Electrical load increases by two volt-amperes for the position switch. The clamp is not interchangeable with the original and both clamps on one duct must be at the same standard. Start duration at high ambient temperature improves by about eight seconds, which keeps the auxiliary power unit inside its duty cycle for a two-engine start. The trouble shooting procedure for a slow start is rewritten around the new discrete, and the flight crew procedure gains a positive check that the valve has opened.",
+      "embodiment_note": "Production cut-in at MSN S01232. Retrofit is done at an engine change or at a C-check with the fan cowls open, sixteen manhours per engine. The kit contains both clamps, the bolt set and the switch harness tail."
+    },
+    "entities": {
+      "part_numbers": [
+        "D8010119758805",
+        "EN290030-3C",
+        "PE187919-09",
+        "WES955482-79"
+      ],
+      "fins": [
+        "983ES",
+        "5193ES",
+        "2788ES3"
+      ],
+      "drawings": [
+        "D80101134147",
+        "D80101186512"
+      ],
+      "software": [],
+      "zones": [
+        "421",
+        "456",
+        "481"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01232"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-80-1003",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-S-80-10-11-000-040-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-S-80-10-11-400-040-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "starter duct",
+      "clamp fretting",
+      "start valve",
+      "hung start",
+      "position switch"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 132070,
+      "mod_class": "MAJOR",
+      "change_category": "POWERPLANT",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1305",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.2,
+      "balance_impact": "Distributed at the nacelles; no reportable shift",
+      "electrical_load_impact_va": 2,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "EN290030-3C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "PE187919-09",
+        "D8010119758805",
+        "WES955482-79"
+      ],
+      "fins_affected": [
+        "983ES",
+        "2788ES3"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 128,
+      "estimated_cost_keur": 640,
+      "lead_time_weeks": 30,
+      "production_impact": "Cut-in at MSN S01232 on the Auran 7000 line",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,159 @@
+[
+  {
+    "doc_id": "AMM-S-22-30-11-700-042-A",
+    "doc_type": "AMM",
+    "title": "Autothrust Servo Loop — Functional Test and Gain Set Verification",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-01-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-11",
+      "title": "Auto Throttle — Thrust Control Computer"
+    },
+    "secondary_ata": [
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-06-14",
+      "released": "2022-01-21",
+      "revised": null,
+      "effective": "2022-02-09"
+    },
+    "abstract": "Functional test of the autothrust servo loop with a verification that the installed gain set matches the number of engines, which is the check that a cross-fitted card would fail.",
+    "sections": {
+      "purpose": "This task proves the autothrust servo loop response against the tolerance band and confirms that the gain set strapping in the throttle actuation concentrator matches the aircraft configuration.",
+      "job_setup_note": "The test drives the thrust levers under power with the engines shut down. Nobody may be in the pedestal area with a hand on a lever while the test runs. The test set must be at the software standard listed in the tooling table; an older standard does not contain the four-engine tolerance band and will report a pass on a cross-fitted card.",
+      "procedure": "1. Put the aircraft on ground power with the engines shut down and the fuel shut-off levers off. 2. Tell everyone in the flight compartment that the thrust levers will move. WARNING: THE THRUST LEVERS MOVE UNDER POWER DURING THIS TEST. KEEP HANDS CLEAR OF THE PEDESTAL. 3. Connect the test set at the rack in zone 141. 4. Read the gain set strapping from the throttle actuation concentrator D2230122881931 and record it. 5. Confirm that the strapping matches the four-engine table. CAUTION: A TWO-ENGINE GAIN SET ON A FOUR-ENGINE AIRCRAFT WILL PASS EVERY STATIC CHECK AND WILL OSCILLATE IN FLIGHT. VERIFY THE STRAPPING, NOT ONLY THE PART NUMBER. 6. Read the part number and serial number of the circuit card HOL769933-05 and record them. 7. Run the step response test at each of the four lever paths in turn and record the overshoot and the settling time. 8. Compare each result against the four-engine tolerance band. 9. Run the disturbance rejection test with the injected accelerometer signal and confirm that the lever movement is inside the limit. 10. Confirm that the rack 16CE carries the correct identification label for the gain set fitted. 11. Check the module 86CE in the inboard position for security. 12. Disconnect the test set and restore the installation.",
+      "close_out": "Record the strapping read, the card part and serial numbers, the four step responses and the disturbance rejection result. Where the strapping does not match the aircraft, do not release the aircraft; a cross-fitted gain set is a defect and not a deferred item."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL769933-05",
+        "D2230122881931"
+      ],
+      "fins": [
+        "7CE4",
+        "86CE",
+        "16CE"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "141",
+        "192",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-76-10-12-900-046-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "servo loop",
+      "gain set",
+      "step response",
+      "disturbance rejection",
+      "strapping"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "22-30-11-700-042-A",
+      "task_type": "TEST",
+      "effectivity_note": "VANTOR-64 and VANTOR-68 aircraft only; the tolerance band is the four-engine one",
+      "manhours": 3.5,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "141",
+          "192",
+          "265"
+        ],
+        "access_panels": [
+          "141CL",
+          "192AR",
+          "265CR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep hands clear of the pedestal during the test.",
+          "Confirm the fuel shut-off levers are off.",
+          "Use the test set software standard listed."
+        ],
+        "tooling": [
+          {
+            "reference": "98D22301-029",
+            "description": "Autothrust test set, standard 4 or later"
+          },
+          {
+            "reference": "98D22301-033",
+            "description": "Electrostatic discharge mat"
+          }
+        ],
+        "consumables": [
+          "Test record sheet"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-76-10-12-900-046-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

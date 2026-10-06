@@ -1,0 +1,400 @@
+[
+  {
+    "doc_id": "PAWO-111854-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Higher Rated In-Seat Power Supply and Revised Aft Cabin Feeder Allocation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-13",
+      "title": "Inflight Entertainment — IFE Power Supply"
+    },
+    "secondary_ata": [
+      "24-50",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [
+        "C00001",
+        "C00165",
+        "C00186",
+        "C00339",
+        "C00404",
+        "C00523",
+        "C00544"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-16",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the in-seat power supply uprating, covering the distribution box standard the additional load depends on, the superseded derating that some aircraft still carry, and the manual content built around the present feeder allocation.",
+    "sections": {
+      "objective": "Establish whether the aft electrical distribution can carry the additional continuous load that the uprated in-seat power supply will draw, on the specific aircraft in the operator's refitted sub-fleet, and identify every document that describes the present feeder group allocation and would become wrong.",
+      "scope_note": "The search covers ATA 44-20 as the primary chapter with ATA 24-50 as secondary, because the load lands in the aft secondary distribution box and the feeder allocation is the whole subject of the change. ATA 92 wiring content was included through the distribution box relationships. Cabin furnishing chapters were included for the sidewall and overhead clearance and returned one item. No structural search was made. The MSN list is taken directly from the candidate applicability and is the operator's refitted sub-fleet.",
+      "method_note": "Entity linking dominates this analysis because the candidate shares a harness part number, a bus bar functional item number and two zones with the distribution content, so the seeds return the relevant set almost completely. Semantic similarity was run over cabin electrical load vocabulary as a check and added one item that shares no identifier: a released cabin lighting change that reduces load in the same cabin and therefore affects the margin the analysis depends on.",
+      "findings_summary": "Six items have been confirmed and one is blocking. The additional continuous load only fits inside the ventilated distribution box standard; on an aircraft still carrying the interim derating the feeder group cannot supply it at all, and two aircraft in the operator's list have not been through that retrofit. That makes the ventilated standard a concurrency requirement rather than a recommendation, and the two changes must be embodied in the same visit on those aircraft. The superseded derating modification is also implicated, because its cabin placard is still fitted on those two aircraft and would become actively misleading. The retrofit bulletin for the ventilated box, the trouble shooting procedure for cabin outlet loss and the illustrated parts figure for the seat power installation all describe the present allocation and all need re-issuing. Finally, the cabin lighting change already released takes six hundred and twenty volt-amperes off the same bus, which improves the margin and should be taken into account rather than ignored.",
+      "next_steps": "Confirm the embodiment standard of each of the seven aircraft in the list and identify the two that need concurrent work. Ask the electrical design owner whether the additional load is inside the thermal case of the ventilated box rather than merely inside its rating. Raise the placard removal as a closing step on the concurrent embodiment. Prepare the allocation table revision for the wiring and trouble shooting content."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420139171185",
+        "D4420139649717",
+        "D2450122851975",
+        "AES140047-2A"
+      ],
+      "fins": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "drawings": [
+        "D24501217521"
+      ],
+      "software": [],
+      "zones": [
+        "252",
+        "272",
+        "922"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00001",
+        "C00165"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111854",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-260127",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "seat power",
+      "feeder allocation",
+      "distribution box",
+      "concurrency"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111854-01",
+      "subject_mod": "MOD-111854",
+      "source_io": "IO-C-260127",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-03-16",
+      "due_date": "2026-06-05",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 80,
+        "spent_manhours": 47
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "44",
+          "24",
+          "25",
+          "92"
+        ],
+        "ata_4d": [
+          "44-20",
+          "24-50",
+          "25-20",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "C00001",
+          "to": "C00544"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4420139171185",
+            "D4420139649717",
+            "D2450122851975",
+            "AES140047-2A"
+          ],
+          "fins": [
+            "1RM",
+            "335RM",
+            "403XU2"
+          ],
+          "drawings": [
+            "D24501217521"
+          ],
+          "zones": [
+            "252",
+            "272",
+            "922"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "continuous cabin electrical load raised by a seat product change",
+          "feeder group allocation between the galley and the cabin outlets"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the distribution box standard of each aircraft in the list",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search documentation describing the present feeder allocation",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the cabin electrical load balance after the lighting change",
+          "method": "SEMANTIC",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111138",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450122851975"
+            ],
+            "shared_fins": [
+              "403XU2"
+            ],
+            "shared_zones": [
+              "252",
+              "272"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The uprated supply draws an additional 2400 volt-amperes continuously with every socket connected. Only the ventilated distribution box standard can carry that on the aft feeder groups; the earlier standard is derated to twelve amperes per group and physically cannot. Two aircraft in the operator's list are still at the earlier standard.",
+          "resolution": "Declare the ventilated box standard as a post-mod applicability condition and require concurrent embodiment on the two aircraft that need it."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-111132",
+          "doc_type": "MOD",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450122851975"
+            ],
+            "shared_fins": [
+              "403XU2"
+            ],
+            "shared_zones": [
+              "252"
+            ],
+            "shared_ata_6d": [
+              "24-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The interim derating is superseded but is still embodied on two aircraft in the list, and it fitted a cabin placard limiting simultaneous galley insert use. If the uprated supply is installed on such an aircraft the placard is both still fitted and no longer correct for the installed configuration.",
+          "resolution": "Add the placard removal as an explicit closing step on the concurrent embodiment and confirm the placard status on every aircraft in the list."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "CRN-24-1031",
+          "doc_type": "SB",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450122851975"
+            ],
+            "shared_fins": [
+              "403XU2"
+            ],
+            "shared_zones": [
+              "252",
+              "272"
+            ],
+            "shared_ata_6d": [
+              "24-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin instructs the technician to restore the strapping of the distribution bus bar to the recorded allocation, which is the same bus bar that this change re-straps to a different allocation. An aircraft that has both embodied would be strapped by whichever was done last, with no document saying which is correct.",
+          "resolution": "Define the combined strapping arrangement and issue it as a revision to the bulletin rather than leaving the two instructions to contradict each other."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-C-24-50-12-810-804",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450122851975"
+            ],
+            "shared_fins": [
+              "403XU2"
+            ],
+            "shared_zones": [
+              "252",
+              "272"
+            ],
+            "shared_ata_6d": [
+              "24-50-12"
+            ],
+            "similarity_note": "Both describe the same symptom of cabin outlets failing in blocks under load, in almost the same words, and share the harness, the bus bar and two zones."
+          },
+          "rationale": "The procedure already identifies feeder group overload as the most probable cause and instructs the technician to check the fitted socket count against the supply rating. After this change that check has a different answer and the probability weighting is wrong, because the overload cause largely disappears.",
+          "resolution": "Re-issue the procedure with revised probabilities and a step that reads the installed supply rating from the aircraft record."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "IPC-C-44-20-13-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4420139171185",
+              "D4420139649717"
+            ],
+            "shared_fins": [
+              "1RM",
+              "335RM"
+            ],
+            "shared_zones": [
+              "252",
+              "272",
+              "922"
+            ],
+            "shared_ata_6d": [
+              "44-20-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure lists the mounting trim and the overhead housing that set the available depth for the supply, and both are re-profiled by this change. The figure note also says that operators fit different ratings, which becomes a configuration statement that has to be tied to the trim standard.",
+          "resolution": "Issue the figure with a pre and post item pair for the trim and the housing and tie the supply rating note to the trim standard."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-111174",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Connected only by the shared subject of cabin electrical load; the lighting change and the seat power change have no identifier in common and describe entirely different equipment."
+          },
+          "rationale": "The continuous LED strip removes 620 volt-amperes from the cabin bus at full brightness. On aircraft that carry it the margin available for the uprated seat supply is materially better, and the load case used to size this change did not account for it.",
+          "resolution": "Re-run the cabin load case with and without the lighting change and state which case the supply rating is sized against."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111166",
+          "doc_type": "MOD",
+          "reason": "Returned on the shared cabin refit and lining vocabulary and on the same aircraft type, but it changes cargo compartment lining panels in the hold with no cabin electrical content, no shared zone and no shared identifier."
+        },
+        {
+          "doc_id": "CRN-33-1005",
+          "doc_type": "SB",
+          "reason": "Surfaces because it is a cabin retrofit bulletin on the same operator fleet with overlapping cabin zones in its accomplishment text, but it removes load rather than adding it and touches no distribution equipment, so it cannot conflict with the supply uprating."
+        }
+      ],
+      "conclusion": "Not yet issued. The concurrency requirement against the ventilated distribution box standard is confirmed and blocking on two of the seven aircraft.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

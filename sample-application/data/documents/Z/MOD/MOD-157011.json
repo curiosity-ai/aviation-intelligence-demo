@@ -1,0 +1,175 @@
+[
+  {
+    "doc_id": "MOD-157011",
+    "doc_type": "MOD",
+    "title": "Flight Management Computer Standard L23 with Required Navigation Performance Authorisation Required Capability",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-05-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-11",
+      "title": "Flight Management Computing — Flight Management Computer"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "Z12092",
+      "production_cut_in_date": "2025-11-19",
+      "retrofit_via": [
+        "ZPH-22-1145"
+      ]
+    },
+    "dates": {
+      "created": "2022-08-05",
+      "released": "2025-05-16",
+      "revised": null,
+      "effective": "2025-06-02"
+    },
+    "abstract": "New flight management computer standard that adds required navigation performance authorisation required approach capability down to 0.1 nautical miles, opening terrain-constrained airfields that currently need a circling procedure.",
+    "sections": {
+      "reason": "Several operators fly into terrain-constrained airfields where the only published instrument approach without authorisation required capability is a circling procedure with a high minimum. Two of them recorded diversion rates above four per cent at a single airfield over a winter season. The current flight management standard supports basic required navigation performance but not the radius-to-fix legs and the lateral containment monitoring that the authorisation required procedures need. Regulators in two regions have also signalled that they will withdraw the conventional procedures at the affected airfields.",
+      "description": "The flight management computer is loaded with standard L23, part number LB3NAB376EB, which adds radius-to-fix leg construction, lateral and vertical containment monitoring and the associated crew alerting. The display units D2280112713549 and D2280114354601 are replaced by items with the higher symbol generation rate that the containment display requires, and the data concentrator D2280006212108 is renewed to carry the additional label set. The computing FIN 2854CE2 is the load target, the data concentrator FIN 4581CC is replaced in place, and the database loading rack FIN 49CE is unchanged. Work is done from zones 151 and 263 in the avionics bay and the flight compartment. Drawing D22801149726 issue C carries the display unit and concentrator wiring.",
+      "effects": "Mass increase of 2.2 kg per aircraft, forward, with a centre-of-gravity shift below 0.03 per cent MAC. Electrical load increases by 90 VA for the faster display units. The standard is not interchangeable with the previous one because the label set differs, so both flight management computers on an aircraft must be at the same standard. The aircraft flight manual gains a new supplement and the operator needs a specific operational approval before using the capability. A flight test campaign of eighteen hours was required for the containment monitoring demonstration.",
+      "embodiment_note": "Cut in on the production line at MSN Z12092 in November 2025. Retrofit is delivered as a software load with a display unit change, about ten hours per aircraft, and is only worth doing for operators pursuing the operational approval."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2280112713549",
+        "D2280114354601",
+        "D2280006212108"
+      ],
+      "fins": [
+        "2854CE2",
+        "4581CC",
+        "49CE"
+      ],
+      "drawings": [
+        "D22801149726"
+      ],
+      "software": [
+        "LB3NAB376EB"
+      ],
+      "zones": [
+        "151",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z12092"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-22-1145",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "flight management computer",
+      "required navigation performance",
+      "radius to fix",
+      "containment monitoring",
+      "operational approval"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Avionics Design Office"
+    },
+    "type_data": {
+      "mod_number": 157011,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1329",
+          "CS 25.1322"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 2.2,
+      "balance_impact": "Forward installation, CG shift below 0.03 % MAC",
+      "electrical_load_impact_va": 90,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2280112713549",
+        "D2280114354601",
+        "D2280006212108"
+      ],
+      "fins_affected": [
+        "2854CE2",
+        "4581CC"
+      ],
+      "software_affected": [
+        "LB3NAB376EB"
+      ],
+      "estimated_manhours": 22,
+      "estimated_cost_keur": 2750,
+      "lead_time_weeks": 68,
+      "production_impact": "Cut-in at MSN Z12092, software loaded at the flight line station",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

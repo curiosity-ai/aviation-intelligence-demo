@@ -1,0 +1,292 @@
+[
+  {
+    "doc_id": "PAWO-146540-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — High Force Solenoid and Resolved Position Feedback for the Wing Anti-Ice Valves",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Ice Protection — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "30-10-12",
+      "36-20-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-9070",
+        "AUR-9072"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-06",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the wing anti-ice valve solenoid standard, opened after modified aircraft continued to report slow-open events and closed when the residual population was shown to have a different cause.",
+    "sections": {
+      "objective": "Establish whether the high force solenoid standard, as released, is still the correct answer to the slow-open reports being received from modified aircraft, and whether an extension of its effectivity to the remaining fleet would close the reports out.",
+      "findings_summary": "The analysis concluded against extending the standard. Nine events were reported last winter from aircraft that already carry the high force solenoid, and the borescope evidence from two of them shows ice in the butterfly seat rather than a mechanical restriction. The solenoid overcomes cold seal friction but it cannot break an ice bond, so the released standard addresses a different mechanism from the one now driving the residual reports. Two further items were confirmed. The bleed monitoring threshold widening applied with the standard is correct and is not implicated. The troubleshooting procedure was found to send the engineer to a warm functional test first, which passes regardless of the cause and had been sending several operators down the wrong path; that has been corrected.",
+      "next_steps": "Do not extend the effectivity of this standard. Open a separate work order against the seat ice mechanism, which is the subject of the candidate now in pre-analysis. Publish the corrected troubleshooting procedure with the cold travel time measurement as the first discriminating step."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010110579750",
+        "D3010113429790",
+        "D3010119771166"
+      ],
+      "fins": [
+        "2649WX2",
+        "273HA",
+        "2HA"
+      ],
+      "drawings": [
+        "D30101189914"
+      ],
+      "software": [],
+      "zones": [
+        "533",
+        "231",
+        "652"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146540",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "anti-ice valve",
+      "solenoid",
+      "residual events",
+      "historical"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-146540-01",
+      "subject_mod": "MOD-146540",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-21",
+      "outcome": "REJECTED",
+      "raised_date": "2026-04-06",
+      "due_date": "2026-05-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "ELSC"
+        ],
+        "estimated_manhours": 140,
+        "spent_manhours": 198
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "30",
+          "36"
+        ],
+        "ata_4d": [
+          "30-10",
+          "36-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00166"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3010110579750",
+            "D3010113429790"
+          ],
+          "fins": [
+            "2649WX2",
+            "273HA"
+          ],
+          "drawings": [
+            "D30101189914"
+          ],
+          "zones": [
+            "533"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "valve slow to open after a cold soak",
+          "solenoid pull-in force against cold seal friction"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Review the residual event population on modified aircraft",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the bleed monitoring threshold applied with the standard",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the troubleshooting entry path",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TSM-T-30-10-11-810-809",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3010110579750",
+              "D3010113429790"
+            ],
+            "shared_fins": [
+              "2649WX2",
+              "273HA"
+            ],
+            "shared_zones": [
+              "533"
+            ],
+            "shared_ata_6d": [
+              "30-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure began with a warm functional test, which passes for every cause and had been sending operators to remove serviceable valves. The cold travel time measurement is the only discriminating step and it was not first.",
+          "resolution": "Reorder the procedure so that the cold travel time measurement is the first step and the warm test is explicitly excluded at the start."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-30-1021",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3010110579750",
+              "D3010119771166"
+            ],
+            "shared_fins": [
+              "2649WX2"
+            ],
+            "shared_zones": [
+              "533"
+            ],
+            "shared_ata_6d": [
+              "30-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "An extension of effectivity to the remaining fleet was considered and would have required the mandatory bulletin to be re-issued. Since the extension was rejected, the bulletin remains as written.",
+          "resolution": "No change. Recorded so that a later proposal to extend does not assume the bulletin can simply be broadened."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-146910",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both describe a threshold in the pneumatic monitoring path being widened to accommodate a changed valve behaviour, in different chapters and with no shared identifier."
+          },
+          "rationale": "The threshold widening applied with the solenoid standard sits in the bleed monitoring computer and had to be checked against the dual sensing change made there, to confirm the two do not both move the same threshold.",
+          "resolution": "Confirmed independent. No concurrency constraint applies."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-149880",
+          "doc_type": "MOD",
+          "reason": "Same ATA 6D and the same valve, and it would rank first on any search, but it addresses the seat ice mechanism rather than solenoid force and is the reason this work order was closed rather than a conflict with it."
+        }
+      ],
+      "conclusion": "Extension of the standard rejected. The residual population has a different cause and is handled by a separate candidate.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "doc_id": "WDM-C-92-51-12",
+    "doc_type": "WDM",
+    "title": "Wing — Trailing Edge Harnesses and Flap Drive Sensing",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-09-05",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-51",
+      "ata_6d": "92-51-12",
+      "title": "Wing Wiring — Trailing Edge Harnesses"
+    },
+    "secondary_ata": [
+      "27-50",
+      "57-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-07-11",
+      "released": "2018-02-08",
+      "revised": "2024-09-05",
+      "effective": "2024-09-26"
+    },
+    "abstract": "Wiring diagram for the wing trailing edge harnesses, covering the flap drive sensing, the position pick-off leads and the carriage locking mechanism proximity feeds on both wings.",
+    "sections": {
+      "purpose": "This sheet shows the trailing edge harness wiring for the flap drive sensing, the position pick-off leads and the carriage locking mechanism proximity feeds.",
+      "sheet_note": "The position pick-off lead is shown as a screened pair terminated at both ends, and the screen is earthed at the wing root only. A screen earthed at both ends produces an intermittent position error that is very hard to find at the gate, so the single earth point is called out explicitly on the diagram. The higher resolution pick-off introduced on some aircraft uses the same connector but a different core allocation, shown as an inset on sheet 2.",
+      "routing_note": "The harness leaves the wing root at the rear spar and runs outboard along the fixed trailing edge behind the flap support ribs, dropping to each carriage position on a short branch. The branch to the outboard carriage crosses the flap support rib web and is the run most often disturbed by a rib repair. Support is at 200 mm pitch with the branches clipped clear of the carriage travel."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9251120335970",
+        "AES239700-5A",
+        "D9251007583585",
+        "D9251009825827"
+      ],
+      "fins": [
+        "272VU",
+        "91VU7",
+        "79VU"
+      ],
+      "drawings": [
+        "D92511157276"
+      ],
+      "software": [],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-27-50-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-57-30-12-200-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "trailing edge harness",
+      "position pick-off",
+      "screen earthing",
+      "carriage proximity",
+      "rear spar exit"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Kingsmoor",
+      "role": "Electrical Design"
+    },
+    "type_data": {
+      "sheet_number": "92-51-12",
+      "sheet_title": "WING TRAILING EDGE HARNESSES — FLAP DRIVE SENSING",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1510W",
+        "1511W",
+        "1515W"
+      ],
+      "connectors": [
+        {
+          "reference": "1510VC",
+          "part_number": "D9251120335970",
+          "location_zone": "561",
+          "contacts": 22
+        },
+        {
+          "reference": "1511VC",
+          "part_number": "D9251007583585",
+          "location_zone": "522",
+          "contacts": 37
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "272VU",
+          "description": "BACKSHELL, TRAILING EDGE HARNESSES, UPPER",
+          "zone": "522"
+        },
+        {
+          "fin": "91VU7",
+          "description": "GROUND STUD, TRAILING EDGE HARNESSES, OUTBD",
+          "zone": "561"
+        },
+        {
+          "fin": "79VU",
+          "description": "CONNECTOR, LEADING EDGE HARNESSES, LOWER",
+          "zone": "661"
+        }
+      ],
+      "wire_count": 64,
+      "wire_gauge_range": "AWG 24 to AWG 18",
+      "routes": [
+        "Wing root rear spar exit outboard along the fixed trailing edge",
+        "Branch to each flap carriage position behind the support rib",
+        "Screened pick-off pair earthed at the wing root only"
+      ],
+      "related_sheets": [
+        "WDM-C-92-31-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

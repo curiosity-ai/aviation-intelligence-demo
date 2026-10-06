@@ -1,0 +1,276 @@
+[
+  {
+    "doc_id": "PAWO-152735-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Audio Management Unit Mounting Tray and Rack Cooling Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-50",
+      "ata_6d": "23-50-11",
+      "title": "Audio Integrating — Audio Management Unit"
+    },
+    "secondary_ata": [
+      "23-50-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-24C1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-20",
+      "released": "2026-05-19",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the audio management unit tray change, opened when an operator asked for it to be extended to the lower rack position, and closed with a rejection after the thermal survey was re-read.",
+    "sections": {
+      "objective": "An operator with a large fleet of the affected aircraft asked whether the perforated tray should be fitted at the lower rack position as well, on the argument that a cooler unit lasts longer wherever it sits. The round was opened to test that argument against the original thermal survey and against the published content.",
+      "findings_summary": "Three items were confirmed and the request was rejected. The original thermal survey shows the lower position running eighteen degrees cooler than the upper one with the solid tray fitted, which is inside the unit qualification band with margin; the perforated tray at the lower position would remove heat that is not causing a problem and would open a cooling path that the rack design uses to feed the column above. The retrofit bulletin states the forward seating dimension for the revised guide, and that dimension is specific to the upper position; fitting it lower would put the unit against the rear bulkhead. The parts figure carries the two trays with a screw length difference that a mechanic working from the figure alone would not notice. The recommendation was to leave the lower position alone.",
+      "next_steps": "Reply to the operator with the thermal survey figures. Add a note to the parts figure stating that the perforated tray applies to the upper position only. No design work required."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2350116486608",
+        "LU507538-19",
+        "GRA872629-19",
+        "AES832388-10"
+      ],
+      "fins": [
+        "8830RC"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-152735",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "rack cooling",
+      "thermal survey",
+      "seating dimension",
+      "screw length"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-152735-01",
+      "subject_mod": "MOD-152735",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-19",
+      "outcome": "REJECTED",
+      "raised_date": "2026-01-20",
+      "due_date": "2026-05-15",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 55,
+        "spent_manhours": 49
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "23"
+        ],
+        "ata_4d": [
+          "23-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "Z01868",
+          "to": "Z08218"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2350116486608",
+            "LU507538-19",
+            "AES832388-10"
+          ],
+          "fins": [
+            "8830RC"
+          ],
+          "drawings": [],
+          "zones": [
+            "211",
+            "214"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "perforated mounting tray opening a rack cooling path",
+          "unit thermal throttling reported as an intermittent fault"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Re-read the thermal survey for the lower rack position",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the published content for position-specific dimensions",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-23-1006",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2350116486608"
+            ],
+            "shared_fins": [
+              "8830RC"
+            ],
+            "shared_zones": [
+              "211"
+            ],
+            "shared_ata_6d": [
+              "23-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin states a forward seating dimension for the revised guide that is specific to the upper position. Applied at the lower position it would put the unit against the rear bulkhead.",
+          "resolution": "Do not extend the bulletin; state the position restriction explicitly."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-Z-23-50-11-000-029-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "LU507538-19"
+            ],
+            "shared_fins": [
+              "8830RC"
+            ],
+            "shared_zones": [
+              "214"
+            ],
+            "shared_ata_6d": [
+              "23-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task warns against restoring power with an open rack position and no blanking plate, which is the same cooling path argument that makes the lower position change undesirable.",
+          "resolution": "No change; the existing caution already covers the case."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-Z-23-50-11-FIG-14",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES832388-10"
+            ],
+            "shared_fins": [
+              "8830RC"
+            ],
+            "shared_zones": [
+              "211"
+            ],
+            "shared_ata_6d": [
+              "23-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure carries the two trays with a screw length difference at the thinner flange that a mechanic working from the figure alone would not notice.",
+          "resolution": "Add an effectivity note to the figure restricting the perforated tray to the upper position."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed with the request rejected. The lower rack position is already inside the qualification band and opening its cooling path would take flow away from the column above.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

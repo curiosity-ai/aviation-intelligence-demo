@@ -1,0 +1,392 @@
+[
+  {
+    "doc_id": "PAWO-111841-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Wireless Offload and Extended Store for the Aircraft Condition Monitoring Function",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-40",
+      "ata_6d": "46-40-12",
+      "title": "Maintenance Information — Data Server Module"
+    },
+    "secondary_ata": [
+      "45-20",
+      "44-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-09",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the condition monitoring offload and store change, covering the overlap with the recorder parameter extension, the competing claim on the avionics rack bay and the manual content that assumes a manual gate collection.",
+    "sections": {
+      "objective": "Establish whether the proposed condition monitoring store and offload change duplicates recording capability that the aircraft already has, whether the avionics bay can carry the installation, and what maintenance and trouble shooting content assumes the present manual collection route.",
+      "scope_note": "The search covers ATA 46 as the primary chapter with ATA 45 and ATA 31 as secondary, because all three hold on-board data and any of them could already provide what the operator has asked for. ATA 44 was included for the connectivity installation, since the proposed antenna sits close to the existing connectivity antenna. Structural and powerplant chapters were not searched. No MSN restriction was applied because the change is proposed for both types across the fleet.",
+      "method_note": "Semantic similarity was run first in this case, using the two seed phrases below, because the operator request was written in operational language and the entity set of the candidate is small. Entity linking was then seeded from the four part numbers, the single functional item number and the two zones, and it returned the rack bay competition and the manual content that names the same equipment. The most valuable finding of the whole analysis came from similarity alone and shares no identifier with the candidate at all.",
+      "findings_summary": "Seven items have been confirmed and one is blocking. The most significant finding is a released modification that already extended on-board data retention on the same aircraft for a different reason: it quadrupled recorder memory and added nineteen parameters to meet an operational rule. It shares no part number, no functional item number and no zone with this proposal and uses entirely different vocabulary, yet roughly a third of the parameters the operator wants are already being recorded and retained for fifty hours. Whether that overlap is real duplication or a genuinely different data set is the first question the design review has to answer. The blocking finding is more mundane: another candidate change claims the same avionics rack bay and re-uses the same mounting tray. The remaining findings are the maintenance and trouble shooting content that assumes a technician with a laptop at the gate, and a candidate flight control change that expects to publish a wear index into whichever store exists.",
+      "next_steps": "Compare the parameter list of the recorder standard with the condition monitoring parameter list and quantify the true overlap before the design review. Settle the avionics bay allocation jointly with the network switch obsolescence team. Confirm with the flight control team whether their wear index depends on this store or can use the present one. Check the proposed antenna position against the connectivity installation on a delivered aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4640127537278",
+        "D4640005187792",
+        "BRD874218-55",
+        "D4210120617730"
+      ],
+      "fins": [
+        "1923IU"
+      ],
+      "drawings": [
+        "D46401233203"
+      ],
+      "software": [
+        "LC6CB8536A6",
+        "LF2CDCC2FCB"
+      ],
+      "zones": [
+        "164",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111841",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-260142",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "condition monitoring",
+      "data retention",
+      "rack bay",
+      "duplication"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111841-01",
+      "subject_mod": "MOD-111841",
+      "source_io": "IO-C-260142",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-03-09",
+      "due_date": "2026-06-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ETGC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "ELSC"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 52
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "46",
+          "45",
+          "31",
+          "44",
+          "42"
+        ],
+        "ata_4d": [
+          "46-40",
+          "45-20",
+          "31-30",
+          "44-30",
+          "42-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D4640127537278",
+            "D4640005187792",
+            "D4210120617730"
+          ],
+          "fins": [
+            "1923IU"
+          ],
+          "drawings": [
+            "D46401233203"
+          ],
+          "zones": [
+            "164",
+            "173"
+          ],
+          "software": [
+            "LC6CB8536A6",
+            "LF2CDCC2FCB"
+          ]
+        },
+        "similarity_seeds": [
+          "keeping more recorded aircraft data on board for longer before it is collected",
+          "moving recorded data off the aircraft without a technician connecting at the gate"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search for existing on-board data retention capability",
+          "method": "SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check avionics rack bay and antenna position claims",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review manual content that assumes manual gate collection",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Quantify parameter overlap with the recorder standard",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111196",
+          "doc_type": "MOD",
+          "finding_type": "DUPLICATE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The two documents share no identifier at all and no vocabulary in common: one speaks of recorded parameter sets, data frames and retention periods, the other of health records, store fill level and wireless offload. Only the underlying intent — keep more aircraft data on board and get it off the aeroplane — connects them, and it connects them strongly."
+          },
+          "rationale": "The released recorder standard quadrupled non-volatile memory and lifted recorded duration from twenty-five to fifty hours, adding nineteen parameters that were not previously recorded on the type. A substantial part of what this proposal intends to capture is therefore already captured and already retained. Proceeding without quantifying the overlap risks paying twice for the same data.",
+          "resolution": "Compare the two parameter lists line by line before the design review and either narrow the scope of this proposal to the genuine gap or justify the duplication explicitly."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-111833",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4210120617730"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "164"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The network switch obsolescence proposal re-uses the same rack mounting tray in the same avionics bay and states that the bay cut-out and cooling plenum are untouched. This proposal makes the same claim. Both cannot be true and both are currently aimed at the same production standard.",
+          "resolution": "Allocate the bay jointly with the network team before either proposal is frozen and record the outcome as a concurrency constraint on the second change."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-C-46-40-12-200-005-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4640127537278",
+              "D4640005187792"
+            ],
+            "shared_fins": [
+              "1923IU"
+            ],
+            "shared_zones": [
+              "164",
+              "173"
+            ],
+            "shared_ata_6d": [
+              "46-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The store integrity task instructs the technician to connect a maintenance laptop and start an offload manually, and its whole method assumes that the collection is an event a person performs. With an automatic offload manager the fill level reading is no longer representative and the record count comparison has a different meaning.",
+          "resolution": "Re-issue the task with the automatic offload as the primary route and the manual laptop connection as a fall-back, and change the fill level acceptance criterion accordingly."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-C-46-40-12-812-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4640127537278",
+              "D4640005187792"
+            ],
+            "shared_fins": [
+              "1923IU"
+            ],
+            "shared_zones": [
+              "164",
+              "173"
+            ],
+            "shared_ata_6d": [
+              "46-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation logic of this procedure rests on comparing the retention achieved with the elapsed time since the last successful collection, and its most probable cause is that collection was later than the retention. Automatic offload removes that cause entirely and makes the first three steps meaningless, while introducing a new failure mode the procedure does not cover, namely a successful write with a failed transfer.",
+          "resolution": "Re-write the isolation procedure around the transfer log rather than around the collection interval, and add the failed transfer branch."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "CRN-31-1014",
+          "doc_type": "SB",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Connected by the shared subject of on-board data retention and by nothing else; the two documents have no identifier in common."
+          },
+          "rationale": "The recorder bulletin is mandatory against an airworthiness directive and states that a mixed standard between the recorder and the data concentrator is not a dispatchable configuration. If the condition monitoring store starts to hold data that an authority regards as equivalent, the relationship between the two installations has to be stated explicitly rather than left implicit.",
+          "resolution": "Obtain a position from the certification office on whether the extended condition monitoring store carries any obligation under the recorder rule."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-111904",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both describe publishing a derived indicator into an on-board store for later analysis, in different chapters and with no shared identifier."
+          },
+          "rationale": "The flap carriage wear trending proposal publishes a drift index at every extension and its own open points ask whether the present store can carry it. If this proposal is approved the answer changes, and if it is not the flap change may have to carry its own storage.",
+          "resolution": "Agree between the two teams which store carries the drift index and record the dependency on whichever change is second."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "IPC-C-31-30-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The recorder figure lists the data concentrator that also feeds the condition monitoring function. No part number changes with this proposal, but the figure note explaining which unit feeds which store will be misleading once a second store exists.",
+          "resolution": "Amend the figure note at cut-in; no item list change is required."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111875",
+          "doc_type": "MOD",
+          "reason": "Returned by the semantic search on the shared vocabulary of detection, sampling and reporting, but it is a cargo smoke detection change in the aft hold with no on-board data storage content, no shared identifier and no relationship to the avionics bay."
+        },
+        {
+          "doc_id": "AMM-C-49-60-11-700-005-A",
+          "doc_type": "AMM",
+          "reason": "Surfaces on the phrases 'read out and record' and 'fault stored during the cycle', which are common to almost every avionics task. The auxiliary power unit functional test has no connection to the condition monitoring store and shares no identifier with the candidate."
+        }
+      ],
+      "conclusion": "Not yet issued. The duplication question against the recorder standard is the decisive open point and the avionics bay allocation is blocking.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

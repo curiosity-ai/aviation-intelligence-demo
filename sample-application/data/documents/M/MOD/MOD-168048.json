@@ -1,0 +1,342 @@
+[
+  {
+    "doc_id": "MOD-168048",
+    "doc_type": "MOD",
+    "title": "Multi-Mode Receiver Antenna Feed Reroute — Issue 1",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-05-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42"
+      ],
+      "models": [
+        "MRD-42K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00165"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SIA",
+        "FRR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "M00165",
+      "production_cut_in_date": "2018-06-18",
+      "retrofit_via": [
+        "MRD-34-1022"
+      ]
+    },
+    "dates": {
+      "created": "2017-06-05",
+      "released": "2018-05-22",
+      "revised": "2018-05-22",
+      "effective": "2018-06-18"
+    },
+    "abstract": "First issue of the multi-mode receiver feed change, moving the antenna feed away from a harness bundle whose switching noise was degrading satellite acquisition during ground manoeuvring at two congested airports.",
+    "sections": {
+      "reason": "Two operators reported slow satellite acquisition and occasional loss of the augmented position solution while taxiing, always at the same two airports and always with a particular ground system configuration. Bench work reproduced the effect when the antenna feed ran parallel to a switched bundle for more than one and a half metres, which is the case in the delivered routing between the receiver rack and the bay wall penetration.",
+      "description": "The antenna feed between the receiver mounting tray and the bay penetration is rerouted along the opposite side of the rack, giving a minimum separation of two hundred millimetres from the switched bundle over the whole run and reducing the parallel length to four hundred millimetres. The data concentrator position is unchanged. A revised mounting tray with an additional feed-through grommet is fitted to support the new route, and the receiver detail drawing is reissued to show the new routing. The receiver database load is unchanged at this issue.",
+      "effects": "Mass change is negligible. No electrical load change. Interchangeable at aircraft level. The maintenance manual check task changes only in the illustration, not in the procedure. No dispatch or crew procedure effect. Spares provisioning for the delivered mounting tray continues for the unmodified population.",
+      "embodiment_note": "Cut in at MSN M00165 and retrofitted by bulletin during any overnight stop; the work is inside the avionics bay and takes one shift with two technicians."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450118136339",
+        "D3450119360685"
+      ],
+      "fins": [
+        "1038DA"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LA4PCFC53E5"
+      ],
+      "zones": [
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00165"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-34-1022",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "multi-mode receiver",
+      "antenna feed",
+      "routing separation",
+      "satellite acquisition",
+      "avionics bay"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168048,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.3,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "D3450119360685"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3450118136339"
+      ],
+      "fins_affected": [
+        "1038DA"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 180,
+      "estimated_cost_keur": 260,
+      "lead_time_weeks": 22,
+      "production_impact": "Cut in at MSN M00165, harness route change only",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-168048",
+    "doc_type": "MOD",
+    "title": "Multi-Mode Receiver Antenna Feed Reroute — Issue 1",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-20",
+      "reason": "Recorded as a prerequisite of the extended standard, whose freighter accomplishment now carries this routing work rather than assuming it, and marked superseded by that standard.",
+      "raised_by_pawo": "PAWO-168155-01",
+      "raised_by_finding": "F01",
+      "finding_type": "PREREQUISITE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42"
+      ],
+      "models": [
+        "MRD-42K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00165"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SIA",
+        "FRR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "M00165",
+      "production_cut_in_date": "2018-06-18",
+      "retrofit_via": [
+        "MRD-34-1022"
+      ]
+    },
+    "dates": {
+      "created": "2017-06-05",
+      "released": "2018-05-22",
+      "revised": "2026-07-20",
+      "effective": "2026-08-06"
+    },
+    "abstract": "First issue of the multi-mode receiver feed change, moving the antenna feed away from a harness bundle whose switching noise was degrading satellite acquisition during ground manoeuvring at two congested airports.",
+    "sections": {
+      "reason": "Two operators reported slow satellite acquisition and occasional loss of the augmented position solution while taxiing, always at the same two airports and always with a particular ground system configuration. Bench work reproduced the effect when the antenna feed ran parallel to a switched bundle for more than one and a half metres, which is the case in the delivered routing between the receiver rack and the bay wall penetration.",
+      "description": "The antenna feed between the receiver mounting tray and the bay penetration is rerouted along the opposite side of the rack, giving a minimum separation of two hundred millimetres from the switched bundle over the whole run and reducing the parallel length to four hundred millimetres. The data concentrator position is unchanged. A revised mounting tray with an additional feed-through grommet is fitted to support the new route, and the receiver detail drawing is reissued to show the new routing. The receiver database load is unchanged at this issue.",
+      "effects": "Mass change is negligible. No electrical load change. Interchangeable at aircraft level. The maintenance manual check task changes only in the illustration, not in the procedure. No dispatch or crew procedure effect. Spares provisioning for the delivered mounting tray continues for the unmodified population. This routing is a prerequisite of the extended standard MOD-168155 and not merely an earlier step towards it: the database alignment of that standard assumes the two hundred millimetre separation introduced here, and an aircraft that never had this routing does not obtain the acquisition behaviour the later standard is substantiated against.",
+      "embodiment_note": "Cut in at MSN M00165 and retrofitted by bulletin during any overnight stop; the work is inside the avionics bay and takes one shift with two technicians. The MERIDIAN-42 fleet below the cut-in was retrofitted between 2018 and 2021 and the smaller variant therefore carries the routing before the extended standard is applied to it. The freighter has never carried either standard, so the freighter accomplishment of MOD-168155 includes this routing work in full rather than treating it as already done; the assumption that it was present is the reason the freighter extension was first scoped as a database load alone. Superseded by MOD-168155 for new embodiment."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450118136339",
+        "D3450119360685"
+      ],
+      "fins": [
+        "1038DA"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LA4PCFC53E5"
+      ],
+      "zones": [
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00165"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-34-1022",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-168155",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "MOD-168155",
+        "doc_type": "MOD",
+        "relation": "PREREQUISITE_OF"
+      }
+    ],
+    "keywords": [
+      "multi-mode receiver",
+      "antenna feed",
+      "routing separation",
+      "prerequisite",
+      "freighter extension"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168048,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.3,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "D3450119360685"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3450118136339"
+      ],
+      "fins_affected": [
+        "1038DA"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 180,
+      "estimated_cost_keur": 260,
+      "lead_time_weeks": 22,
+      "production_impact": "Cut in at MSN M00165, harness route change only",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

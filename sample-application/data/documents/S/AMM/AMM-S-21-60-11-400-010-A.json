@@ -1,0 +1,361 @@
+[
+  {
+    "doc_id": "AMM-S-21-60-11-400-010-A",
+    "doc_type": "AMM",
+    "title": "Trim Air Pressure Regulating Valve — Installation",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1996-07-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1995-09-14",
+      "released": "1996-07-09",
+      "revised": "1996-07-09",
+      "effective": "1996-07-27"
+    },
+    "abstract": "Installation of one trim air pressure regulating valve on its manifold position, ending in the rigging step in which the reference line is pressurised and the decay time read against the acceptance figure.",
+    "sections": {
+      "purpose": "This task installs a trim air pressure regulating valve on its manifold position and proves that the valve responds to the zone controller across its full commanded range.",
+      "job_setup_note": "Do this task with the bleed system depressurised. The valve is rigged after installation by pressurising the pneumatic reference line and reading the decay time, so the reference line must be clean and the test set gauge must be in calibration. A decay reading taken on a warm duct will read short; let the installation stabilise. Two persons are needed at the ceiling positions.",
+      "procedure": "1. Make sure that the duct ends are clean and that no cap is left in the duct. 2. Check the valve part number against the aircraft configuration. 3. Fit new gaskets at the valve inlet and outlet. 4. Offer the valve to the outboard manifold D2160118677637 and install the mounting bolts hand tight. 5. Install and tighten the duct clamps, then torque the mounting bolts to the value in the torque table. 6. Connect the pneumatic reference line and check it for restriction. 7. Install a new inboard filter sub-assembly KAD437362-51 if the removed element was discoloured. 8. Check the outboard duct NOD212962-03 alignment and the clearance to the adjacent structure. 9. Restore the zone controller supply and remove the tags. 10. Rig the valve. Pressurise the reference line to the figure in the rigging table, isolate the test set and read the decay over sixty seconds. The acceptance is a decay of 0.10 to 0.25 bar; below it the diaphragm is stiff and above it the reference line or the diaphragm is leaking. 11. Do the trim air functional test at all four zones, commanding each valve from fully closed to fully open and back. WARNING: DO NOT PUT A HAND NEAR THE VALVE BUTTERFLY DURING THE FUNCTIONAL TEST. 12. Confirm that the right-hand transmitter DED83110-55 reads within its band.",
+      "close_out": "Close the belly fairing or install the ceiling panels. Do a leak check of the disturbed joints with the bleed system pressurised. Record the installation, the valve serial number, the measured decay time and the functional test result in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160115682504",
+        "D2160118677637",
+        "DED83110-55",
+        "KAD437362-51",
+        "NOD212962-03"
+      ],
+      "fins": [
+        "2431HM8"
+      ],
+      "drawings": [
+        "D21601215648"
+      ],
+      "software": [],
+      "zones": [
+        "193",
+        "241",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-21-60-11-000-010-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "trim air valve",
+      "rigging",
+      "decay time",
+      "reference line",
+      "functional test"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "21-60-11-400-010-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All twin-engine and four-engine aircraft",
+      "manhours": 8.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "193",
+          "241",
+          "242"
+        ],
+        "access_panels": [
+          "193BR",
+          "241BR",
+          "242BL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not put a hand near the valve butterfly during the functional test.",
+          "Make sure the bleed system is depressurised before the joints are made.",
+          "Let the installation stabilise before the decay reading is taken."
+        ],
+        "tooling": [
+          {
+            "reference": "98D21601-071",
+            "description": "Trim air test set"
+          },
+          {
+            "reference": "98D21601-083",
+            "description": "Torque wrench 2-25 Nm"
+          },
+          {
+            "reference": "98D21601-085",
+            "description": "Continuity tester"
+          }
+        ],
+        "consumables": [
+          "Gasket set, trim air valve",
+          "Anti-seize compound, high temperature",
+          "Contact grease, electrical"
+        ],
+        "expendables": [
+          {
+            "part_number": "KAD437362-51",
+            "qty": 1
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-S-21-60-11-000-010-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-S-21-60-11-400-010-A",
+    "doc_type": "AMM",
+    "title": "Trim Air Pressure Regulating Valve — Installation",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2017-11-27",
+      "reason": "The rigging acceptance is replaced by a table with one column per regulator standard, and the feedback continuity check and divergence message check are added for the torque motor valve.",
+      "raised_by_pawo": "PAWO-130510-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1995-09-14",
+      "released": "1996-07-09",
+      "revised": "2017-11-27",
+      "effective": "2017-12-15"
+    },
+    "abstract": "Installation of one trim air pressure regulating valve, with the feedback wiring check that applies to the torque motor standard and the four-zone functional test that closes the task.",
+    "sections": {
+      "purpose": "This task installs a trim air pressure regulating valve on its manifold position and proves that the valve responds to the zone controller across its full commanded range.",
+      "job_setup_note": "Do this task with the bleed system depressurised. On aircraft at the torque motor standard the valve carries a position feedback pair and the zone controller parameter set must already be at the matching standard; installing a torque motor valve on an aircraft with the old parameter set will raise a permanent maintenance message. Check the aircraft standard before the valve goes in, because it also selects which acceptance column the rigging step is read against: the pneumatic decay figures describe a diaphragm and a torque motor valve will fail them however well it is installed. Two persons are needed at the ceiling positions.",
+      "procedure": "1. Make sure that the duct ends are clean and that no cap is left in the duct. 2. Check the aircraft configuration against the valve standard. CAUTION: A TORQUE MOTOR VALVE ON AN AIRCRAFT WITH THE PREVIOUS ZONE CONTROLLER PARAMETER SET WILL RAISE A PERMANENT MAINTENANCE MESSAGE. 3. Fit new gaskets at the valve inlet and outlet. 4. Offer the valve to the outboard manifold D2160118677637 and install the mounting bolts hand tight. 5. Install and tighten the duct clamps, then torque the mounting bolts to the value in the torque table. 6. Connect the electrical connector, or on the diaphragm standard connect the pneumatic reference line and check it for restriction. 7. On the torque motor standard, check continuity of the feedback pair back to the switch position 2431HM8 and record the resistance. 8. Install a new inboard filter sub-assembly KAD437362-51 if the removed element was discoloured. 9. Check the outboard duct NOD212962-03 alignment and the clearance to the adjacent structure. 10. Restore the zone controller supply and remove the tags. 11. Do the trim air functional test at all four zones, commanding each valve from fully closed to fully open and back. WARNING: DO NOT PUT A HAND NEAR THE VALVE BUTTERFLY DURING THE FUNCTIONAL TEST. 12. Confirm that no divergence message is raised and that the right-hand transmitter DED83110-55 reads within its band.",
+      "close_out": "Close the belly fairing or install the ceiling panels. Do a leak check of the disturbed joints with the bleed system pressurised. Record the installation, the valve serial number, the acceptance column used, the feedback resistance where it applies and the functional test result in the aircraft technical log. Do not record a decay time against a torque motor valve; the field is left blank and the column reference is entered instead."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160115682504",
+        "D2160118677637",
+        "DED83110-55",
+        "KAD437362-51",
+        "NOD212962-03"
+      ],
+      "fins": [
+        "2431HM8"
+      ],
+      "drawings": [
+        "D21601215648"
+      ],
+      "software": [],
+      "zones": [
+        "193",
+        "241",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-21-60-11-000-010-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-130510",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "trim air valve",
+      "feedback pair",
+      "functional test",
+      "zone controller",
+      "divergence message"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "21-60-11-400-010-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All twin-engine and four-engine aircraft; steps 7 and 12 apply to aircraft post MOD-130510 only",
+      "manhours": 8.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "193",
+          "241",
+          "242"
+        ],
+        "access_panels": [
+          "193BR",
+          "241BR",
+          "242BL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not put a hand near the valve butterfly during the functional test.",
+          "Make sure the bleed system is depressurised before the joints are made.",
+          "Restore the zone controller supply only after the wiring check."
+        ],
+        "tooling": [
+          {
+            "reference": "98D21601-071",
+            "description": "Trim air test set"
+          },
+          {
+            "reference": "98D21601-083",
+            "description": "Torque wrench 2-25 Nm"
+          },
+          {
+            "reference": "98D21601-085",
+            "description": "Continuity tester"
+          }
+        ],
+        "consumables": [
+          "Gasket set, trim air valve",
+          "Anti-seize compound, high temperature",
+          "Contact grease, electrical"
+        ],
+        "expendables": [
+          {
+            "part_number": "KAD437362-51",
+            "qty": 1
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-S-21-60-11-000-010-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

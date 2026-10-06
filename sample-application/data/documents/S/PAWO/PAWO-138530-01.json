@@ -1,0 +1,433 @@
+[
+  {
+    "doc_id": "PAWO-138530-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Sealed Intake Flap Actuator Housing and Four-Engine Effectivity",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-10",
+      "ata_6d": "49-10-11",
+      "title": "Power Plant — APU Installation"
+    },
+    "secondary_ata": [
+      "26-10",
+      "49-10-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00014",
+          "to": "S01503"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "KLE",
+        "AUN",
+        "JTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the sealed intake flap actuator housing and its extension to the four-engine fleet, covering the bulletin whose effectivity it invalidates, the fire detection work in the same compartment and the crew description nobody thought to search.",
+    "sections": {
+      "objective": "Identify every released or candidate item applicable to the twin-engine and four-engine aircraft in the MSN S00014 to S01503 range that the sealed actuator housing would conflict with, depend on, supersede or invalidate, and establish whether the four-engine bracket can be installed without disturbing other work recently done in the same compartment.",
+      "scope_note": "The search covers ATA 49-10 as the primary chapter and ATA 26-10 for the fire detection installation that shares the compartment. ATA 36-10 pneumatic was included in the first pass because of the breather heater load and then excluded: the load is electrical and the bleed system is untouched. ATA 24 electrical was searched for the load case only and returned nothing beyond the load analysis itself. The four-engine effectivity was searched in full because this is the first change offered to those aircraft on this installation.",
+      "method_note": "Entity linking was run from the three part numbers, the three equipment positions and the three compartment zones the candidate carries. Semantic similarity was then run over titles, abstracts and reason-for-change text with the two seed phrases below. The fire detection candidate was returned by entity linking alone, through a shared equipment position and a shared zone, and shares no vocabulary with the candidate whatsoever. The flight crew description was returned by similarity alone and shares no identifier at all; it was very nearly missed because nobody searches crew documentation from a power plant installation change.",
+      "findings_summary": "Six items are confirmed and one is blocking. The blocking item is the effectivity of the existing retrofit bulletin, which is written for aircraft not yet at the shrouded bearing standard and which explicitly excludes the four-engine fleet on the grounds that no bracket exists. The candidate qualifies that bracket. From the day it is released the bulletin's exclusion is false and its population is ambiguous, and an operator could be sold the earlier retrofit for an aircraft that should be waiting for the candidate. Behind that sits the supersession itself, which is straightforward and which both retrieval strategies found immediately. The two findings that matter for the design are the ones only one strategy found. The fire detection rerouting embodied on this fleet last year established a minimum standoff from the hot duct and re-clipped the loop regulator to suit; the candidate's housing and four-engine bracket occupy part of the same envelope. Nothing in either document refers to the other and they share no vocabulary at all, only an equipment position and a compartment zone. Separately, the flight crew description of the intake flap states that there is no crew action associated with it, which is a statement the breather heater load may make untrue during a cold start. Finally the parts figure cannot express a third variant without being restructured, which the parts data office recorded two years ago and which is still true.",
+      "next_steps": "Decide the fate of the existing bulletin before launch. Open the coordination item with the fire protection office on the compartment envelope and agree the clip positions. Ask flight operations whether the breather heater load has any crew-visible consequence during a cold start. Cost the parts figure restructuring into the candidate. Coordinate retrofit planning with the brake candidate where the twin-engine effectivities overlap."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4910119498267",
+        "AGS522879K5",
+        "LN685489-2E"
+      ],
+      "fins": [
+        "52PB",
+        "5135PB",
+        "25WD"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "393",
+        "394",
+        "396"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00020",
+        "S00429",
+        "S00781"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-138530",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-260533",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-49-1004",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-130680",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-137250",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "FCOM-S-DSC-49-10-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-49-10-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-138760",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "intake flap",
+      "sealed housing",
+      "compartment envelope",
+      "conflict search"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-138530-01",
+      "subject_mod": "MOD-138530",
+      "source_io": "IO-S-260533",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-08",
+      "due_date": "2026-08-18",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EVAA",
+          "ESZS",
+          "EYIS"
+        ],
+        "estimated_manhours": 120,
+        "spent_manhours": 96
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34",
+          "VANTOR-64",
+          "VANTOR-68"
+        ],
+        "ata_2d": [
+          "49",
+          "26",
+          "36"
+        ],
+        "ata_4d": [
+          "49-10",
+          "49-50",
+          "26-10",
+          "36-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "S00014",
+          "to": "S01503"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4910119498267",
+            "AGS522879K5",
+            "LN685489-2E"
+          ],
+          "fins": [
+            "52PB",
+            "5135PB",
+            "25WD"
+          ],
+          "drawings": [],
+          "zones": [
+            "393",
+            "394",
+            "396"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "intake flap stiff on the first movement of a cold morning",
+          "de-icing residue entering an actuator output bearing"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released and candidate MODs on ATA 49-10 and 26-10",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish the fate of the existing retrofit bulletin",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Survey the compartment envelope against the fire loop routing",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Confirm the four-engine bracket has no other interference",
+          "method": "MANUAL_REVIEW",
+          "owner": "ESZS",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T05",
+          "title": "Ask flight operations about the breather heater load",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SLN-49-1004",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "49-10-11"
+            ],
+            "similarity_note": "Found through the applicability chain rather than through shared vocabulary: the bulletin embodies the modification the candidate supersedes, and its effectivity is written against the pre-modification population."
+          },
+          "rationale": "The retrofit bulletin for the shrouded bearing standard is written for aircraft that are not yet at that standard, and its effectivity note states explicitly that the four-engine aircraft are excluded because no bracket has been qualified. The candidate qualifies exactly that bracket and takes the same aircraft to a different destination, so the bulletin's exclusion becomes false and its retrofit population becomes ambiguous the day the candidate is released.",
+          "resolution": "Decide before launch whether the existing bulletin is reissued with a pre-modification condition against the candidate or withdrawn, and do not leave both open to the same twin-engine aircraft."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-130680",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4910119498267",
+              "AGS522879K5",
+              "LN685489-2E"
+            ],
+            "shared_fins": [
+              "52PB",
+              "5135PB"
+            ],
+            "shared_zones": [
+              "393",
+              "394",
+              "396"
+            ],
+            "shared_ata_6d": [
+              "49-10-11"
+            ],
+            "similarity_note": "Both strategies return it. The two share the shroud, the anchor nut, the barrel nut, two cowl and shroud positions, all three compartment zones and the ATA 6D, and their descriptions of the actuator installation are close enough to rank together on similarity."
+          },
+          "rationale": "The candidate replaces the shrouded bearing installation with a fully sealed housing on the same shroud and the same mounting pattern. The two cannot coexist on one aircraft and the earlier standard is the assumed starting point for the twin-engine population.",
+          "resolution": "Declare the supersession and state whether an aircraft at the delivered configuration can go directly to the candidate or must pass through the earlier standard."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-137250",
+          "doc_type": "MOD",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "25WD"
+            ],
+            "shared_zones": [
+              "393"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The fire detection rerouting establishes a minimum standoff from the hot duct in the same compartment and re-clips the auxiliary power unit loop regulator to a position chosen for that standoff. The candidate's four-engine bracket and its sealed housing occupy part of the same envelope. The two documents have no vocabulary in common at all: one is a fire protection document and the other is a power plant installation document, and neither mentions the other. Only the regulator position and the compartment zone connect them.",
+          "resolution": "Open a coordination item with the fire protection design office and agree the clip positions and the housing envelope before the candidate design is frozen."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "FCOM-S-DSC-49-10-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by similarity alone. The crew entry describes the same intake flap in crew register, saying only that the start is either available or it is not, while the candidate describes bearings, breathers and de-icing residue. No part number, FIN, zone or drawing is shared, and the two texts have almost no vocabulary in common."
+          },
+          "rationale": "The crew description states that there is no crew action associated with the flap and that the start is simply available or not. The candidate adds a breather heater that draws ninety volt-amperes during a cold start, which changes what is available to the starter, and the crew entry is the place where any crew-visible consequence would have to be stated. Nobody looking at a power plant installation change would think to search the flight crew documentation.",
+          "resolution": "Confirm with flight operations whether the breather heater load has any crew-visible consequence, and amend the entry only if it does."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "IPC-S-49-10-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4910119498267",
+              "AGS522879K5"
+            ],
+            "shared_fins": [
+              "52PB",
+              "5135PB"
+            ],
+            "shared_zones": [
+              "393",
+              "394"
+            ],
+            "shared_ata_6d": [
+              "49-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The parts figure already carries a two-way pre and post modification split on the shroud and the mounting nut. The candidate introduces a third state on the same items and, on the four-engine aircraft, a bracket that has no entry at all. The figure note already records that a third variant cannot be shown without restructuring onto a second sheet.",
+          "resolution": "Raise an illustrated parts change request to restructure the figure onto two sheets, and cost it into the candidate rather than leaving it to the parts data office."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-138760",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found through the applicability overlap rather than through any shared identifier: both candidates target overlapping twin-engine effectivities with retrofit at a shop or heavy visit."
+          },
+          "rationale": "Both candidates are retrofit changes competing for the same maintenance opportunities on an overlapping population, and both are quoted against a check slot rather than against a date. If they are launched independently the operator is asked to plan two visits for work that could share one.",
+          "resolution": "Coordinate the retrofit planning of the two candidates so that operators are offered a combined embodiment where the effectivities overlap."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-132070",
+          "doc_type": "MOD",
+          "reason": "Ranks high on similarity because it is a power plant installation change about start reliability using much of the same vocabulary — duct, clamp, seal, cold, start. It is on the engine air starter and not on the auxiliary power unit, its effectivity is the Auran 7000 models only, and it shares no part number, no equipment position and no zone with the candidate."
+        },
+        {
+          "doc_id": "TSM-S-49-10-11-810-810",
+          "doc_type": "TSM",
+          "reason": "Returned by both strategies and is genuinely about the same symptom, but it is a trouble shooting procedure that separates a mechanical restriction from a sensing problem and requires no change: the candidate does not alter the sensing, the target face or the indication, so the procedure remains correct as written."
+        }
+      ],
+      "conclusion": "Not yet issued. The bulletin effectivity is blocking and the compartment coordination item is open.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,160 @@
+[
+  {
+    "doc_id": "TSM-M-26-10-12-810-809",
+    "doc_type": "TSM",
+    "title": "Cargo Smoke Detection — Aft Hold Warning With No Source Found",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-06-07",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "26-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-11-26",
+      "released": "2020-08-11",
+      "revised": "2022-06-07",
+      "effective": "2022-07-05"
+    },
+    "abstract": "Fault isolation for an aft hold smoke warning where the compartment inspection finds nothing, covering the humidity pattern, the sampling path and the detector condition before any component is changed.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an aft hold smoke warning that is not supported by any finding in the compartment, and establishes whether the event is a humidity response, a sampling path condition or a detector fault.",
+      "fault_description": "The warning is raised in the climb or shortly after loading, the crew actions the procedure and the compartment is found clean on arrival. The event is strongly associated with loading in rain, wet snow or high humidity, and with holds loaded in the open. Repeat events cluster on the same aircraft only where the sampling path condition is poor; otherwise they follow the weather rather than the airframe.",
+      "isolation_procedure": "1. Record the station, the loading conditions and the elapsed time between loading and the warning. A warning within four hours of a wet loading is the pattern this procedure addresses. 2. Read the maintenance messages and note which sampling position raised the warning. 3. Do the detailed inspection and flow check in AMM-M-26-10-12-200-033-A at both positions. A flow outside the band points at the sampling path, not at the detector. 4. On aircraft with the shielded inlet, examine the labyrinth drain with the borescope. A blocked drain returns the aircraft to the pre modification behaviour and is the most common finding on aircraft that have had the relocation embodied. 5. Examine the sampling tube for a low point holding water where it crosses the ceiling rail. 6. If the flow, the drain and the tube are all correct, do a detection functional check with the smoke generator and record the response time. 7. If the response time is inside the limit, do not change the regulator; record the event with the loading conditions and report it. 8. If the response time is outside the limit or the built-in test reports a channel fault, replace the regulator.",
+      "dispatch_note": "Dispatch with the aft hold detection inoperative is permitted under MEL 26-10-02A only with the compartment empty and locked out for the affected sectors. An operator carrying freight in that hold has no dispatch relief and the fault must be cleared before loading."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610121518371",
+        "D2610003829972"
+      ],
+      "fins": [
+        "2332WF",
+        "1WF8"
+      ],
+      "drawings": [
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "143",
+        "145"
+      ],
+      "figures": [
+        "FIG-26-10-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-26-10-12-200-033-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "smoke warning",
+      "no source found",
+      "humidity",
+      "labyrinth drain",
+      "sampling flow"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Neuhafen",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "26-10-12-810-809",
+      "fault_symptom": "SMOKE AFT CARGO warning with no source found on compartment inspection",
+      "fault_codes": [
+        "261012003",
+        "261012021"
+      ],
+      "warning_messages": [
+        "SMOKE AFT CARGO",
+        "SMOKE DET FAULT"
+      ],
+      "affected_fins": [
+        "2332WF",
+        "1WF8"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Condensation aerosol at the sampling port after a wet loading",
+          "probability_pct": 50,
+          "fin": "1WF8"
+        },
+        {
+          "cause": "Labyrinth drain blocked on the shielded inlet",
+          "probability_pct": 20,
+          "fin": "1WF8"
+        },
+        {
+          "cause": "Water held in a low point of the sampling tube",
+          "probability_pct": 18,
+          "fin": "2332WF"
+        },
+        {
+          "cause": "Detection regulator channel fault",
+          "probability_pct": 12,
+          "fin": "2332WF"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-M-26-10-12-200-033-A",
+      "dispatch": {
+        "mel_item": "26-10-02A",
+        "dispatchable": true,
+        "dispatch_condition": "Affected compartment empty and locked out; no relief when the compartment is loaded"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "doc_id": "AMM-M-28-20-11-400-006-A",
+    "doc_type": "AMM",
+    "title": "Installation of a Fuel Boost Pump Inlet Filter Assembly",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-06-15",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-01-24",
+      "released": "2019-09-05",
+      "revised": "2022-06-15",
+      "effective": "2022-07-07"
+    },
+    "abstract": "Installation of a boost pump inlet filter assembly, the differential pressure switch check and the leak check that must be satisfactory before the tank access panel is closed.",
+    "sections": {
+      "purpose": "This task gives the procedure to install a boost pump inlet filter assembly in the wing tank and to check the differential pressure switch trip point before the tank is closed.",
+      "job_setup_note": "Confirm the part number of the housing against the aircraft standard before it goes in: the taller housing and the longer element must be installed as a pair and neither will work with the other standard. Keep the tank ventilated and the entry control in place throughout. The differential pressure switch check needs the test rig connected at the panel and a second person outside the tank to read it.",
+      "procedure": "1. Confirm that the housing part number matches the aircraft standard. 2. Remove the blanking cap from the pump inlet. 3. Do a general visual inspection of the pump inlet face and of the seal groove. 4. Install a new seal in the groove and put a light film of the approved lubricant on it. CAUTION: DO NOT USE A PETROLEUM-BASED LUBRICANT ON THE SEAL. THE SEAL WILL SWELL AND THE JOINT WILL LEAK. 5. Put the housing D2820117143540 in position and engage it squarely on the inlet face. 6. Install the self-locking nuts EN968165-23 and torque them in the sequence given in the illustration. 7. Re-shim the regulator D2820116810419 to the dimension given for the aircraft standard. 8. Connect the differential pressure test rig and check the switch trip point. 9. Reconnect the inlet duct 7953QT and tighten the clamp. 10. Reconnect the electrical connector at the pump 41QA. 11. Do a leak check at operating pressure. WARNING: DO NOT CLOSE THE ACCESS PANEL BEFORE THE LEAK CHECK IS SATISFACTORY. A LEAK BEHIND A CLOSED PANEL WILL NOT BE FOUND UNTIL THE TANK IS FILLED. 12. Close the tank access panel and remove the entry control.",
+      "close_out": "Refuel the tank and do the boost pump functional test with the output check at the pump. Record the switch trip point, the torque values and the leak check result on the aircraft work card. Update the filter replacement interval in the maintenance programme if the aircraft standard has changed. Confirm that the tank entry certificate is closed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820117143540",
+        "D2820116810419",
+        "EN968165-23"
+      ],
+      "fins": [
+        "41QA",
+        "7953QT"
+      ],
+      "drawings": [
+        "D28201127242"
+      ],
+      "software": [],
+      "zones": [
+        "591",
+        "691"
+      ],
+      "figures": [
+        "FIG-28-20-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163011",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-28-20-11-000-006-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "filter installation",
+      "differential pressure switch",
+      "leak check",
+      "tank closure",
+      "boost pump test"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Fuel Systems Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "28-20-11-400-006-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. Post MOD-163011 aircraft use the taller housing, the 74 micron element and the revised regulator shim dimension.",
+      "manhours": 16.0,
+      "personnel": 2,
+      "elapsed_time_hours": 10.0,
+      "access": {
+        "zones": [
+          "591",
+          "691"
+        ],
+        "access_panels": [
+          "591CR",
+          "691BL"
+        ],
+        "doors": [
+          "Wing tank access panel"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep the tank entry control in place until the panel is closed.",
+          "Keep the forced ventilation running for the whole task.",
+          "Do not use a petroleum-based lubricant on the seal."
+        ],
+        "tooling": [
+          {
+            "reference": "98D28201-052",
+            "description": "Differential pressure test rig"
+          },
+          {
+            "reference": "TV-100",
+            "description": "Tank entry ventilation set"
+          },
+          {
+            "reference": "TW-050",
+            "description": "Torque wrench 5-50 Nm"
+          }
+        ],
+        "consumables": [
+          "Sealant, fuel resistant, PR-1776",
+          "Lubricant, fuel resistant, seal assembly"
+        ],
+        "expendables": [
+          {
+            "part_number": "EN968165-23",
+            "qty": 12
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-M-28-20-11-000-006-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

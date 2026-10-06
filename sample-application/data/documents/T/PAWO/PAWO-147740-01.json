@@ -1,0 +1,432 @@
+[
+  {
+    "doc_id": "PAWO-147740-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Main Landing Gear Brake Assembly with Extended Life Carbon Heat Stack",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-12",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-11",
+      "title": "Wheels and Brakes — Brake Assembly"
+    },
+    "secondary_ata": [
+      "32-40-12",
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2"
+      ],
+      "msns": [
+        "T00018",
+        "T00127",
+        "T00149",
+        "T00166",
+        "T00184",
+        "T00209",
+        "T00227"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "PYR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-12",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the extended life carbon heat stack, concentrating on the anti-skid parameter set the new stack requires and on what a mixed brake standard means during a spares-driven transition.",
+    "sections": {
+      "objective": "Establish whether the extended life heat stack can be introduced through spares rather than as a campaign, what the retuned anti-skid parameter set means for an aircraft carrying a mixed brake standard, and which documents have to change with it.",
+      "scope_note": "The search covers ATA 32-40 as the primary chapter and ATA 92-31 as secondary, because the wear and pressure sensing runs to each brake position are shown on the landing gear bay wiring sheet. ATA 29 hydraulic power was included in the first pass and excluded: the brake supply pressure and the accumulator sizing are unchanged and no hydraulic document is affected. The certification chapters were reviewed manually rather than searched.",
+      "method_note": "Entity linking was seeded from the five part numbers, the four FINs, the single drawing and the four zones of the candidate, and produced almost the whole result set, because everything in this area shares hardware. Semantic similarity was run with two seed phrases about brake wear rate and sector length and added nothing that entity linking had not already found. This is the opposite of the pattern seen on the cabin candidates and is worth noting: in a tightly coupled mechanical system, entity linking is the stronger method and the similarity pass mostly returns noise.",
+      "findings_summary": "Six items have been confirmed and one is blocking. The retuned anti-skid parameter set is the whole difficulty. It supersedes the parameter set introduced with the redesigned control unit, it cannot be loaded onto the original control unit at all, and it is not valid against the existing heat stack, which means the spares-driven introduction the operator wants creates a window in which the aircraft carries brakes of two standards and a parameter set that matches only one of them. Either the parameter set has to accommodate both stacks or the introduction has to become a campaign, and the two answers have very different costs. The service bulletin that carries the redesigned control unit specifies the parameter set by part number and would be wrong from the day the candidate is released. The remaining findings are documentation and are straightforward: the parts figure, the installation task, the fault isolation procedure and the wiring sheet all carry the wear pin scale or the sensing arrangement that changes with the new stack.",
+      "next_steps": "Establish with the supplier whether a single parameter set can cover both heat stack standards, and if not, cost the campaign option against the spares option. Re-issue the control unit bulletin parameter reference. Confirm with the operator whether a mixed standard would ever be acceptable to its authority. Plan the four documentation changes as one package tied to the parameter decision."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240117630916",
+        "D3240119425378",
+        "LN606496-25",
+        "AGS646986-7C",
+        "AGS146031K9"
+      ],
+      "fins": [
+        "3278WS",
+        "1WS",
+        "7GM",
+        "2644GM8"
+      ],
+      "drawings": [
+        "D32401274246"
+      ],
+      "software": [
+        "LF1R11939FF",
+        "LD8R083EA4E"
+      ],
+      "zones": [
+        "721",
+        "734",
+        "754",
+        "771"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147740",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-T-260208",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "brake heat stack",
+      "anti-skid parameter",
+      "mixed standard",
+      "spares introduction"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Ashcombe",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-147740-01",
+      "subject_mod": "MOD-147740",
+      "source_io": "IO-T-260208",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-12",
+      "due_date": "2026-07-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Ashcombe",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 130,
+        "spent_manhours": 81
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "32",
+          "92"
+        ],
+        "ata_4d": [
+          "32-40",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "T00018",
+          "to": "T00227"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3240117630916",
+            "D3240119425378",
+            "LN606496-25",
+            "AGS646986-7C",
+            "AGS146031K9"
+          ],
+          "fins": [
+            "3278WS",
+            "1WS",
+            "7GM",
+            "2644GM8"
+          ],
+          "drawings": [
+            "D32401274246"
+          ],
+          "zones": [
+            "721",
+            "734",
+            "754",
+            "771"
+          ],
+          "software": [
+            "LF1R11939FF",
+            "LD8R083EA4E"
+          ]
+        },
+        "similarity_seeds": [
+          "brake wear rate driven by short sector operation",
+          "carbon heat stack wear volume and change interval"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search modifications and bulletins on the brake and its control",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish parameter set validity against both heat stack standards",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Identify documentation carrying the wear pin scale or the sensing arrangement",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Check landing gear bay wiring capacity for the revised sensing",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-142240",
+          "doc_type": "MOD",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS146031K9"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "734",
+              "754"
+            ],
+            "shared_ata_6d": [
+              "32-40-12",
+              "32-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The retuned anti-skid parameter set supersedes the parameter set introduced with the redesigned control unit and will not load onto the original unit. It is also not valid against the existing heat stack, so during a spares-driven introduction an aircraft would carry two brake standards and a parameter set that matches only one of them.",
+          "resolution": "Establish with the supplier whether one parameter set can cover both stacks. If it cannot, the introduction must become a campaign and the candidate embodiment note has to be rewritten."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-32-1055",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS146031K9"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "734",
+              "754"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin instructs the technician to load a parameter set identified by part number and to confirm that the unit reports it. From the day the candidate is released, an aircraft with the new heat stack that has this bulletin accomplished afterwards would be left with a parameter set that does not match its brakes and would fail the system test for a reason the bulletin does not explain.",
+          "resolution": "Re-issue the parameter reference in the bulletin as a table keyed on the heat stack standard fitted, and add a configuration check before the load step."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-T-32-40-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240117630916",
+              "D3240119425378",
+              "LN606496-25",
+              "AGS646986-7C",
+              "AGS146031K9"
+            ],
+            "shared_fins": [
+              "3278WS",
+              "1WS",
+              "7GM",
+              "2644GM8"
+            ],
+            "shared_zones": [
+              "721",
+              "734",
+              "754",
+              "771"
+            ],
+            "shared_ata_6d": [
+              "32-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure lists the accumulator kit that the candidate replaces with a larger gas volume item and the countersunk washer that the candidate deletes in favour of the standard already used at the control unit. Both changes need alternates by heat stack standard, and the figure note already warns that the wear pin scale is not a catalogue item.",
+          "resolution": "Add alternates keyed on the heat stack standard for the accumulator and the washer, and cross reference the wear pin scale from the installation task."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-T-32-40-12-810-801",
+          "doc_type": "TSM",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS146031K9"
+            ],
+            "shared_fins": [
+              "1WS"
+            ],
+            "shared_zones": [
+              "734",
+              "754"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": "Both documents turn on the relationship between the loaded parameter set and the brake standard fitted, and use the same pairing table language."
+          },
+          "rationale": "The isolation procedure already identifies a parameter set that does not match the brake standard as the single most likely cause of a cross channel fault, at 42 per cent. The candidate adds a third combination to that pairing, which makes the procedure incomplete on the day the candidate is released.",
+          "resolution": "Extend the pairing table in the procedure and raise the probability weighting for the configuration cause during the transition period."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-T-32-40-11-400-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240117630916",
+              "D3240119425378",
+              "LN606496-25",
+              "AGS146031K9"
+            ],
+            "shared_fins": [
+              "3278WS",
+              "1WS",
+              "2644GM8"
+            ],
+            "shared_zones": [
+              "721",
+              "734",
+              "754",
+              "771"
+            ],
+            "shared_ata_6d": [
+              "32-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task carries the caution that all positions must be at the same standard and records the wear pin datum against a scale that changes with the new stack. It also sets the parking brake decay limit, which the larger accumulator affects.",
+          "resolution": "Revise the task with a scale table by heat stack standard and a revised decay limit, and keep the mixed standard caution but strengthen it to a warning."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "WDM-T-92-31-12",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "3278WS",
+              "1WS"
+            ],
+            "shared_zones": [
+              "721",
+              "734",
+              "754",
+              "771"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The wear indication run terminates at each brake position and the sheet shows it as a single conductor pair per position. The new wear pin geometry reads on a different scale but uses the same sensing arrangement, so no wiring change is expected; the sheet nevertheless carries the wear indication description and would be misleading if left alone.",
+          "resolution": "Amend the sheet note to describe the scale by heat stack standard. No wiring change is required and no new conductor is needed."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-142590",
+          "doc_type": "MOD",
+          "reason": "Surfaces on accumulator and hydraulic vocabulary that it genuinely shares with the candidate, and both documents talk about a component that is replaced when nothing is actually wrong with it. It is the green system reservoir head and has no interface with the brakes, no shared FIN, no shared zone and no shared part number."
+        },
+        {
+          "doc_id": "SRM-T-57-30-11-002",
+          "doc_type": "SRM",
+          "reason": "Ranks on wear and hole elongation language and on the phrase high cycle aircraft. It is a wing trailing edge panel repair behind a flap track fairing, with no relationship to the landing gear, no shared zone and no shared identifier of any kind."
+        }
+      ],
+      "conclusion": "Not yet issued. The parameter set validity question decides whether this candidate is a spares introduction or a fleet campaign, and no other finding can be closed until it is answered.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

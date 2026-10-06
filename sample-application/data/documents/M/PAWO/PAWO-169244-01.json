@@ -1,0 +1,403 @@
+[
+  {
+    "doc_id": "PAWO-169244-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Data Load Session Integrity and Configuration Rollback",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-29",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-12",
+      "title": "Data Loading — Data Load Configuration"
+    },
+    "secondary_ata": [
+      "45-20",
+      "31-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-29",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the atomic data load proposal, covering the production standard it depends on, the bulletin and manual content that describe the current behaviour, and the software load mechanism on another chapter that may already do part of the job.",
+    "sections": {
+      "objective": "Establish whether an atomic load session with rollback can be built on the production load record standard, what content describes the behaviour it replaces, and whether any existing mechanism already provides the commit confirmation the proposal introduces.",
+      "scope_note": "The search covers ATA 45-45 as the primary chapter and ATA 45-20 because the maintenance computer database has to read the new states. ATA 31-30 was included because the recorder configuration work is loading the same kind of record through the same terminal in the same period, and the two teams have not spoken. Navigation database loading on ATA 34-50 was added late, after the similarity pass returned a bulletin that carries its own commit confirmation. Structure, cabin and powerplant chapters were excluded.",
+      "method_note": "Entity linking was seeded from the three part numbers, the three functional item numbers and the two zones, which returned the data loading family cleanly and one unexpected result: the recorder installation on a different chapter shares the cushioned loop clamp introduced with the production standard. Similarity was run over the failure narrative — an action left half done that nobody notices until later — rather than over software vocabulary, and that is what returned the crew-facing description of the maintenance system and the navigation database bulletin.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the production load record standard: the shadow area the proposal needs is carved out of memory that only exists in that standard, so an aircraft without it cannot take the change and the retrofit population is smaller than the proposal assumes. The retrofit bulletin for that standard states that the computer and the database must be embodied in the same visit, which stays true but for a different reason once rollback exists, and the statement has to be rewritten rather than deleted. The troubleshooting entry and the configuration check task both tell the engineer what to do with an incomplete session, which is precisely the situation the proposal makes impossible; both would be substantially shorter afterwards. The recorder installation task shares the clamp part number and nothing else, and was returned by entity linking alone. The crew description entry tells the flight crew that a maintenance status may be displayed and that they must not clear it — behaviour that changes if the aeroplane rolls back automatically. Finally the navigation database bulletin already carries a commit confirmation for its own load, and the review has not established whether that mechanism could be reused rather than a second one built.",
+      "next_steps": "Confirm the free memory in the production standard before anything else. Ask the navigation database owner how their commit confirmation works and whether it generalises. Get flight operations to agree the crew description change. Decide with the documentation owner whether the troubleshooting entry is rewritten or withdrawn."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545120504726",
+        "LN760453-5C",
+        "JA751423-16"
+      ],
+      "fins": [
+        "228TN",
+        "480TM1",
+        "822TM8"
+      ],
+      "drawings": [
+        "D45450007012"
+      ],
+      "software": [
+        "LH4PE007934"
+      ],
+      "zones": [
+        "273",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-169244",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "atomic load",
+      "rollback",
+      "configuration record",
+      "commit confirmation"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-169244-01",
+      "subject_mod": "MOD-169244",
+      "source_io": null,
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-04-29",
+      "due_date": "2026-09-30",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 160,
+        "spent_manhours": 72
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46",
+          "MERIDIAN-42F"
+        ],
+        "ata_2d": [
+          "45",
+          "31",
+          "34"
+        ],
+        "ata_4d": [
+          "45-45",
+          "45-20",
+          "31-30",
+          "34-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00475"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4545120504726",
+            "LN760453-5C"
+          ],
+          "fins": [
+            "228TN",
+            "822TM8"
+          ],
+          "drawings": [
+            "D45450007012"
+          ],
+          "zones": [
+            "273"
+          ],
+          "software": [
+            "LH4PE007934"
+          ]
+        },
+        "similarity_seeds": [
+          "an action left half finished that nobody notices until the next inspection",
+          "a record that says what was done but not whether it was completed"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search the data loading family on the entity seeds",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search for comparable interrupted-action failures on other chapters",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm the free memory in the production load record standard",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Review the navigation database commit confirmation for reuse",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T05",
+          "title": "Agree the crew description change with flight operations",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-168300",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4545120504726",
+              "LN760453-5C"
+            ],
+            "shared_fins": [
+              "228TN"
+            ],
+            "shared_zones": [
+              "273"
+            ],
+            "shared_ata_6d": [
+              "45-45-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The shadow area required for an atomic session is carved out of the non-volatile store introduced by the extended record standard. On an aircraft without that standard there is no memory to hold an uncommitted session, so the change cannot be embodied at all.",
+          "resolution": "Declare the extended record standard as a post-modification condition and re-scope the retrofit population accordingly."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-45-1029",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4545120504726"
+            ],
+            "shared_fins": [
+              "228TN"
+            ],
+            "shared_zones": [
+              "273"
+            ],
+            "shared_ata_6d": [
+              "45-45-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin requires the computer and the database to be embodied in the same visit because the extended format is unreadable by the delivered database. With rollback the reason changes: an aircraft with a rollback-capable computer and an older database would display committed and uncommitted states it cannot label. The requirement survives but its justification and its wording do not.",
+          "resolution": "Re-issue the bulletin with the requirement restated against the commit states rather than against the record format."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-M-45-20-11-812-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4545120504726"
+            ],
+            "shared_fins": [
+              "228TN"
+            ],
+            "shared_zones": [
+              "273"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure exists to work out what is actually on the aircraft after an interrupted session. On a modified aircraft the session either committed or rolled back, so most of the procedure describes a state that cannot occur, and leaving it in place would send engineers looking for a partial load that is not there.",
+          "resolution": "Rewrite the procedure for the rollback case and keep the current text as a legacy branch for unmodified aircraft."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-M-45-45-12-900-053-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4545120504726",
+              "LN760453-5C"
+            ],
+            "shared_fins": [
+              "228TN"
+            ],
+            "shared_zones": [
+              "273"
+            ],
+            "shared_ata_6d": [
+              "45-45-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The record format check tells the engineer to list the items loaded by an incomplete session and compare them against the load sheet. That comparison has no meaning once a session cannot be partially applied, and the task's warning about releasing an aircraft with an incomplete session would never fire.",
+          "resolution": "Reissue the task with the commit and rollback states, and move the incomplete session steps into the legacy branch."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-168036",
+          "doc_type": "MOD",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "LN760453-5C"
+            ],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The recorder tray change and this proposal both consume the same cushioned loop clamp, from the same store, in the same bay, and both are planned for the same retrofit window. The clamp is a small part but its lead time is long and the two programmes have not been reconciled with the supplier.",
+          "resolution": "Reconcile the clamp demand across both changes with procurement before either retrofit is offered."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "FCOM-M-DSC-45-20-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew entry explains that a maintenance status may be displayed before departure, that the crew cannot clear it and that the configuration of the affected system is not confirmed until maintenance closes the record. It shares no identifier with the candidate and uses no software vocabulary at all."
+          },
+          "rationale": "The entry describes the aeroplane leaving a loading action unresolved and the crew having to ask maintenance. With automatic rollback the aeroplane resolves it itself and the status the crew sees means something different.",
+          "resolution": "Reissue the crew entry with the rollback behaviour described, and agree the wording with flight operations before the change is launched."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "MRD-34-1036",
+          "doc_type": "SB",
+          "finding_type": "DUPLICATE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both describe loading a data set into an aeroplane system and confirming afterwards that what is on the aeroplane is what was intended. The navigation bulletin does it by reading back a part number, the candidate by committing a session. No identifier is shared and the two sit in different chapters."
+          },
+          "rationale": "The navigation database bulletin already requires a read-back confirmation after loading, which is a commit confirmation by another name for that one load type. Building a second, incompatible mechanism for the general case without understanding the first is how two ways of doing the same thing end up on the same aeroplane.",
+          "resolution": "Review the navigation read-back mechanism with its owner and state explicitly in the design justification why it is or is not generalisable."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "AMM-M-31-30-11-400-035-A",
+          "doc_type": "AMM",
+          "reason": "Returned high on similarity because it also warns against releasing an aircraft whose reported configuration disagrees with the configuration record, in almost the same words. It is a recorder installation task, the check it describes is manual and would be unaffected by an atomic load session."
+        },
+        {
+          "doc_id": "TSM-M-24-20-12-810-808",
+          "doc_type": "TSM",
+          "reason": "Also mentions a configuration standard that does not match the aircraft record, which makes it look relevant, but the standard in question is a generator protection setting, there is no loading involved and no identifier is shared with the candidate."
+        }
+      ],
+      "conclusion": "Not yet issued. Memory availability in the production standard decides feasibility; the navigation read-back review decides whether this is one mechanism or two.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

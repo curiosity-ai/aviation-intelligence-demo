@@ -1,0 +1,361 @@
+[
+  {
+    "doc_id": "TTN-42-1007",
+    "doc_type": "SB",
+    "title": "Integrated Modular Avionics — Network Switch — Load the Controlled Warm-Up Configuration File",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-02-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Integrated Modular Avionics — Network Switch"
+    },
+    "secondary_ata": [
+      "45-20-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00190"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-147040"
+        ],
+        "pre_mod": [],
+        "post_sb": [
+          "TTN-42-1003"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-07-14",
+      "released": "2022-02-17",
+      "revised": "2022-02-17",
+      "effective": "2022-03-28"
+    },
+    "abstract": "Software-only bulletin that enables the controlled warm-up and the revised port initialisation order on switches already carrying the thermally redesigned line card.",
+    "sections": {
+      "planning_reason": "The redesigned line card removes most of the cold-start restarts on its own, but the residual events are only closed out when the card is allowed to hold its ports inactive until the junction temperature reaches the qualified range. That behaviour is declared in the configuration load rather than in hardware. Applying the card without the load leaves the aircraft in a combination that has not been qualified and that produces port initialisation messages the troubleshooting content does not describe.",
+      "description": "This Service Bulletin gives the instructions to load the configuration file that declares the controlled warm-up threshold and the revised port initialisation order into both avionics network switches. No hardware is changed and the switch carriers are not removed. The warm-up hold is reported as a maintenance state rather than a fault, which is the behaviour the troubleshooting content has been rewritten around.",
+      "accomplishment_summary": "Confirm from the configuration record that both switches carry the thermally redesigned line card installed under TTN-42-1003. Connect the portable data loader at the avionics loading port. Load the configuration file into the first switch and confirm the part number on the maintenance terminal. Repeat for the second switch. Confirm that neither load was rejected and that no port remains held after the aircraft has been powered for the period given in AMM-T-42-20-11-900-001-A. Do the network integrity check. Disconnect the loader. Record the modification and update the loadable software list in the aircraft file. Report any switch that fails to release its ports, because that indicates a card at the earlier standard.",
+      "effectivity_note": "Applicable to TITAN-88 aircraft in the MSN T00001 to T00190 range that have embodied TTN-42-1003. Aircraft delivered from MSN T00193 already carry both the card and the load. The loader rejects the file on a switch with the earlier line card, so the ordering is enforced by the equipment as well as by this bulletin.",
+      "material_note": "No kit and no parts. The software media is issued with this bulletin. Operators holding spare switch carriers should load the file into their spares before the next installation, otherwise a spare fitted after conversion reverts that position to the earlier behaviour."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4220115959692"
+      ],
+      "fins": [
+        "2029CP1"
+      ],
+      "drawings": [
+        "D42201115709"
+      ],
+      "software": [
+        "LC9R67A042E"
+      ],
+      "zones": [
+        "163"
+      ],
+      "figures": [
+        "FIG-42-20-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147040",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "TTN-42-1003",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-T-42-20-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "configuration load",
+      "warm-up",
+      "port initialisation",
+      "network switch",
+      "software"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-42-1007",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Concurrently with TTN-42-1003, and in any case before the aircraft is released to service after that bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SOFTWARE_DEFECT",
+      "embodied_mod": "MOD-147040",
+      "manpower": {
+        "elapsed_time_hours": 2,
+        "manhours": 3,
+        "personnel": 1,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": null,
+        "parts_required": [],
+        "parts_returned": [],
+        "consumables": [],
+        "tooling": [
+          "Portable data loader",
+          "Maintenance terminal"
+        ]
+      },
+      "weight_change_kg": 0.0,
+      "accomplishment_steps": 8,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2022-02-17",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TTN-42-1007",
+    "doc_type": "SB",
+    "title": "Integrated Modular Avionics — Network Switch — Load the Controlled Warm-Up Configuration File",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-27",
+      "reason": "Spares warning moved out of the material note into the accomplishment instructions and cross-referenced from the maintenance task.",
+      "raised_by_pawo": "PAWO-147040-01",
+      "raised_by_finding": "F01",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Integrated Modular Avionics — Network Switch"
+    },
+    "secondary_ata": [
+      "45-20-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00190"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-147040"
+        ],
+        "pre_mod": [],
+        "post_sb": [
+          "TTN-42-1003"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-07-14",
+      "released": "2022-02-17",
+      "revised": "2026-07-27",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Software-only bulletin that enables the controlled warm-up and the revised port initialisation order on switches already carrying the thermally redesigned line card.",
+    "sections": {
+      "planning_reason": "The redesigned line card removes most of the cold-start restarts on its own, but the residual events are only closed out when the card is allowed to hold its ports inactive until the junction temperature reaches the qualified range. That behaviour is declared in the configuration load rather than in hardware. Applying the card without the load leaves the aircraft in a combination that has not been qualified and that produces port initialisation messages the troubleshooting content does not describe.",
+      "description": "This Service Bulletin gives the instructions to load the configuration file that declares the controlled warm-up threshold and the revised port initialisation order into both avionics network switches. No hardware is changed and the switch carriers are not removed. The warm-up hold is reported as a maintenance state rather than a fault, which is the behaviour the troubleshooting content has been rewritten around.",
+      "accomplishment_summary": "Confirm from the configuration record that both switches carry the thermally redesigned line card installed under TTN-42-1003. Connect the portable data loader at the avionics loading port. Load the configuration file into the first switch and confirm the part number on the maintenance terminal. Repeat for the second switch. Confirm that neither load was rejected and that no port remains held after the aircraft has been powered for the period given in AMM-T-42-20-11-900-001-A. Do the network integrity check. Disconnect the loader. WARNING: A SWITCH CARRIER FITTED FROM STORES AFTER THIS BULLETIN HAS BEEN EMBODIED REVERTS THAT POSITION TO THE EARLIER CONFIGURATION. THE AIRCRAFT WILL NOT ANNOUNCE IT. READ THE CONFIGURATION FILE PART NUMBER BACK AFTER EVERY CARRIER EXCHANGE, USING AMM-T-42-20-11-900-001-A, AND LOAD THE RECORDED FILE IF THE TWO DISAGREE. Record the modification and update the loadable software list in the aircraft file. Report any switch that fails to release its ports, because that indicates a card at the earlier standard.",
+      "effectivity_note": "Applicable to TITAN-88 aircraft in the MSN T00001 to T00190 range that have embodied TTN-42-1003. Aircraft delivered from MSN T00193 already carry both the card and the load. The loader rejects the file on a switch with the earlier line card, so the ordering is enforced by the equipment as well as by this bulletin.",
+      "material_note": "No kit and no parts. The software media is issued with this bulletin. Operators holding spare switch carriers should load the file into their spares before the next installation; the consequence of not doing so is stated as a warning in the accomplishment instructions, where it is read at the point of work rather than at the point of ordering."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4220115959692"
+      ],
+      "fins": [
+        "2029CP1"
+      ],
+      "drawings": [
+        "D42201115709"
+      ],
+      "software": [
+        "LC9R67A042E"
+      ],
+      "zones": [
+        "163"
+      ],
+      "figures": [
+        "FIG-42-20-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147040",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "TTN-42-1003",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-T-42-20-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "configuration load",
+      "warm-up",
+      "port initialisation",
+      "network switch",
+      "software"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-42-1007",
+      "sb_revision": "02",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Concurrently with TTN-42-1003, and in any case before the aircraft is released to service after that bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SOFTWARE_DEFECT",
+      "embodied_mod": "MOD-147040",
+      "manpower": {
+        "elapsed_time_hours": 2,
+        "manhours": 3,
+        "personnel": 1,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": null,
+        "parts_required": [],
+        "parts_returned": [],
+        "consumables": [],
+        "tooling": [
+          "Portable data loader",
+          "Maintenance terminal"
+        ]
+      },
+      "weight_change_kg": 0.0,
+      "accomplishment_steps": 9,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2022-02-17",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-07-27",
+          "reason": "Spares reversion warning moved into the accomplishment instructions and referenced from the maintenance task"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

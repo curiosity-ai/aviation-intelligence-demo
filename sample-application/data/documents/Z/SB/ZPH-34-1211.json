@@ -1,0 +1,195 @@
+[
+  {
+    "doc_id": "ZPH-34-1211",
+    "doc_type": "SB",
+    "title": "Navigation — Multi-Mode Receiver — Application Software Load and Surveillance Configuration",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-05-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [
+          "ZPH-34-1207"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2017-12-08",
+      "released": "2018-05-14",
+      "revised": null,
+      "effective": "2018-06-04"
+    },
+    "abstract": "Load of the multi-mode receiver application software and entry of the aircraft surveillance configuration, completing the compliance package begun by the receiver installation bulletin.",
+    "sections": {
+      "planning_reason": "The receiver installed by the companion bulletin is delivered with a factory load that does not carry the aircraft-specific surveillance configuration, so the transmitted position quality indicators are not accepted by ground surveillance systems until this bulletin is embodied. An aircraft that has had the hardware fitted but not the software load is therefore still non-compliant with the mandate, and several operators discovered this only during a ramp check.",
+      "description": "This Service Bulletin loads the multi-mode receiver application software and enters the aircraft surveillance configuration, which includes the aircraft identification, the antenna offset, the emitter category and the length and width codes. The superseded parameter load left over from the previous receiver is withdrawn from the aircraft configuration record.",
+      "accomplishment_summary": "Confirm from the aircraft technical record that Service Bulletin ZPH-34-1207 has been embodied. Get access to the receiver in zone 263. Connect the portable data loader and record the software part number currently loaded. Load the application software LF2NDF3D474 and confirm that the receiver reports it correctly. Remove the superseded parameter load LF5N0045592 from the aircraft configuration record. Enter the surveillance configuration from the data sheet supplied for the aircraft registration, including the antenna offset measured from the tray at FIN 172TR7. Do the receiver built-in test. Do a ground surveillance broadcast check with the ramp test set and verify every transmitted field against the data sheet. Have the entries independently checked and signed. Record the embodiment and the new software part number.",
+      "effectivity_note": "Applicable to all aircraft that have embodied the receiver installation bulletin. It must not be embodied before that bulletin, because the load will be rejected by the previous receiver. Aircraft delivered after the production cut-in already carry both the hardware and the software.",
+      "material_note": "No hardware kit. The software media is supplied against the aircraft registration together with the surveillance configuration data sheet, which is produced individually because it carries the aircraft identification and the measured antenna offset. Allow four weeks for the data sheet to be issued."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450125988160"
+      ],
+      "fins": [
+        "172TR7",
+        "4DA1"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LF2NDF3D474",
+        "LF5N0045592"
+      ],
+      "zones": [
+        "262",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155126",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "ZPH-34-1207",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-Z-34-50-11-700-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-Z-34-50-11-810-805",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "software load",
+      "surveillance configuration",
+      "antenna offset",
+      "emitter category",
+      "ramp check"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Avionics In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-34-1211",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Immediately after the embodiment of Service Bulletin ZPH-34-1207, and in any case before operation in mandated airspace.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SAFETY",
+      "embodied_mod": "MOD-155126",
+      "manpower": {
+        "elapsed_time_hours": 6,
+        "manhours": 12,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": null,
+        "parts_required": [
+          {
+            "part_number": "D3450125988160",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Contact cleaner"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Ramp surveillance test set"
+        ]
+      },
+      "weight_change_kg": 0.0,
+      "accomplishment_steps": 9,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2018-05-14",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,296 @@
+[
+  {
+    "doc_id": "PAWO-111324-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Windshield Standard Extension to the Right Hand Pane Population",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "56",
+      "ata_4d": "56-10",
+      "ata_6d": "56-10-11",
+      "title": "Flight Compartment Windows — Windshield Assembly"
+    },
+    "secondary_ata": [
+      "30-30",
+      "92-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00071",
+          "to": "C00612"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-18",
+      "released": "2026-06-16",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the windshield standard, run to confirm that the relocated heater terminal is worth embodying on the right hand pane where the delamination rate is far lower, and to settle the mixed standard recording rule.",
+    "sections": {
+      "objective": "Establish whether the relocated heater terminal standard should be offered for the right hand pane, where the delamination rate is roughly a fifth of the left hand rate, and settle how a mixed left and right standard is recorded and controlled.",
+      "findings_summary": "Three items were confirmed and the extension was approved. The delamination rate on the right hand pane is low but not zero, and the analysis found that the difference is explained by cumulative heater-on time rather than by anything about the pane itself, which means the rate will converge as operators change their de-icing practice. That made the extension worth doing on its own terms. The second finding was the frame packing: the shim differs between the two standards and a mixed aircraft therefore carries two shim records, which the installation task handled but the repair scheme did not. The third was that the crew limitation entry treats delamination identically on both panes, which remains correct and needed no change, and this was recorded explicitly so the question is not re-opened.",
+      "next_steps": "Offer the standard for both panes with the mixed installation recorded per pane. Add the shim distinction to the repair scheme. Record that the crew limitation is unchanged and why. Advise operators that the right hand rate is expected to converge with the left."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5610112086631",
+        "D5610119127963",
+        "ARD967927-47",
+        "AES273284K7",
+        "AES757493-5D",
+        "D5610001982294"
+      ],
+      "fins": [],
+      "drawings": [
+        "D56101153469"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "213"
+      ],
+      "figures": [
+        "FIG-56-10-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00479"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111324",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "windshield",
+      "heater terminal",
+      "mixed standard",
+      "shim record"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Lorencourt",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111324-01",
+      "subject_mod": "MOD-111324",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-16",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-02-18",
+      "due_date": "2026-06-26",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EDSA",
+        "lead_site": "Lorencourt",
+        "contributing_departments": [
+          "EYIS",
+          "EGAM"
+        ],
+        "estimated_manhours": 130,
+        "spent_manhours": 118
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "56",
+          "30",
+          "92"
+        ],
+        "ata_4d": [
+          "56-10",
+          "30-30",
+          "92-11"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "C00071",
+          "to": "C00612"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5610112086631",
+            "D5610119127963",
+            "ARD967927-47",
+            "D5610001982294"
+          ],
+          "fins": [],
+          "drawings": [
+            "D56101153469"
+          ],
+          "zones": [
+            "211",
+            "213"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "why one side of a symmetric installation fails five times as often as the other"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Analyse the left and right delamination rates against heater-on time",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check how a mixed standard is recorded",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm the crew limitation is unaffected",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-C-56-10-11-913",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5610001982294",
+              "ARD967927-47",
+              "AES273284K7",
+              "AES757493-5D",
+              "D5610112086631"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "211",
+              "213"
+            ],
+            "shared_ata_6d": [
+              "56-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The repair scheme sets the shim to the recorded value plus the doubler thickness but does not distinguish between the two windshield standards, which carry different frame packing. On a mixed aircraft the wrong shim base could be used.",
+          "resolution": "Shim distinction added to the repair scheme."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-C-56-10-11-000-019-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5610112086631",
+              "D5610119127963",
+              "ARD967927-47",
+              "AES273284K7",
+              "AES757493-5D"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "211",
+              "213"
+            ],
+            "shared_ata_6d": [
+              "56-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task already records the shim by position and notes the heater terminal position difference, so it handles a mixed aircraft correctly and needed only a cross-reference to the repair scheme.",
+          "resolution": "Cross-reference added."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "FCOM-C-LIM-56-10-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "No shared identifier; the crew entry and the modification describe the same failure mode in entirely different words, one as a dispatch decision and the other as a heater terminal position."
+          },
+          "rationale": "The crew limitation treats delamination identically on both panes and remains correct at both standards. This was checked deliberately and recorded so that the question is not re-opened at the next revision.",
+          "resolution": "No change; the reasoning recorded in the analysis file."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Extension to the right hand pane approved. The rate difference is explained by heater-on time and is expected to converge.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

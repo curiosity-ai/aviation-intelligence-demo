@@ -1,0 +1,165 @@
+[
+  {
+    "doc_id": "TSM-T-29-10-12-810-806",
+    "doc_type": "TSM",
+    "title": "HYD GREEN RSVR LO LEVEL With No Leak Found",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-05-11",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-12",
+      "title": "Main System — Reservoir Assembly"
+    },
+    "secondary_ata": [
+      "29-10-13"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-10-28",
+      "released": "2020-06-09",
+      "revised": "2021-05-11",
+      "effective": "2021-06-01"
+    },
+    "abstract": "Fault isolation for a green system reservoir low level indication with no external leak found, covering the level reading conditions, the gland weep and the accumulator charge before any component change.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a green system reservoir low level indication where no external leak has been found. Use it before any reservoir removal, because most of these events are not reservoir failures.",
+      "fault_description": "The reservoir level is only meaningful under a defined set of conditions: aircraft on the ground, landing gear down, flight controls neutral and the accumulator discharged. A level read outside those conditions will read low and has led to a great many unnecessary reservoir replacements. The second common cause is a weep at the pressurisation gland, which leaves a film that clouds the sight glass and stains the surrounding structure without producing a drip anybody can find. Only after both have been excluded is a genuine internal leak likely. Record the conditions under which the level was read before you do anything else.",
+      "isolation_procedure": "Record the conditions under which the low level was reported: aircraft attitude, landing gear position, flight control position and accumulator state. Where any condition was not met, discharge the accumulator, set the controls neutral and read the level again by the servicing task. Where the level is then normal, close the event and brief the reporting station. Where the level is genuinely low, clean and inspect the area around the reservoir head and the hose at FIN 8893GA1 for staining, and record what you find. Where staining is present at the upper land, the cause is gland weep and the reservoir head should be reworked rather than the reservoir replaced. Where no staining is present, pressurise the system and inspect the return line, the accumulator charging line and the case drain connections for weeping. Measure the accumulator pre-charge and compare it against the limit, because a low pre-charge will hold fluid in the accumulator and read as a low reservoir. Only where all of these are correct should the reservoir be removed.",
+      "dispatch_note": "Despatch is permitted with the green system reservoir at or above the minimum dispatch level marked on the sight glass, with a level check required before every departure. Despatch is not permitted below that level, and a level that falls by more than the daily allowance between checks must be investigated before the next flight."
+    },
+    "entities": {
+      "part_numbers": [
+        "KE634291-03",
+        "NO46703-01",
+        "LN745829-02"
+      ],
+      "fins": [
+        "8893GA1",
+        "244GG",
+        "4079GG"
+      ],
+      "drawings": [
+        "D29101228651",
+        "D29101262441"
+      ],
+      "software": [],
+      "zones": [
+        "162",
+        "723"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-29-10-12-800-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-142590",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "reservoir level",
+      "gland weep",
+      "accumulator pre-charge",
+      "no fault found",
+      "sight glass"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "29-10-12-810-806",
+      "fault_symptom": "HYD GREEN RSVR LO LEVEL with no external leak found",
+      "fault_codes": [
+        "291012008",
+        "291012021"
+      ],
+      "warning_messages": [
+        "HYD G RSVR LO LEVEL",
+        "HYD G RSVR LO AIR PR"
+      ],
+      "affected_fins": [
+        "8893GA1",
+        "244GG",
+        "4079GG"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Level read outside the defined reading conditions",
+          "probability_pct": 41,
+          "fin": "244GG"
+        },
+        {
+          "cause": "Pressurisation gland weep at the upper land",
+          "probability_pct": 29,
+          "fin": "8893GA1"
+        },
+        {
+          "cause": "Accumulator pre-charge low, holding fluid out of the reservoir",
+          "probability_pct": 18,
+          "fin": "4079GG"
+        },
+        {
+          "cause": "Internal leak past the transfer pump",
+          "probability_pct": 12,
+          "fin": "8893GA1"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-T-29-10-12-800-002-A",
+      "dispatch": {
+        "mel_item": "29-10-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Level at or above the minimum dispatch mark, level check required before every departure"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

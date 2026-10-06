@@ -1,0 +1,408 @@
+[
+  {
+    "doc_id": "PAWO-147520-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Conversion of the Aft Cargo Door Actuation to Electromechanical Drive",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-12",
+      "title": "Cargo Doors — Cargo Door Actuation"
+    },
+    "secondary_ata": [
+      "29-10",
+      "92-21",
+      "52-70"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00193"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "RVC"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-24",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the aft cargo door electromechanical conversion, covering the door warning architecture it depends on, the wiring segregation it must be embodied with, and the procedures the deleted hydraulic supply makes obsolete.",
+    "sections": {
+      "objective": "Establish what the aft cargo door electromechanical conversion depends on, what it makes obsolete, and whether the ground service busbar can carry the door cycle peak with the aircraft on external power at a cold stand.",
+      "scope_note": "The search covers ATA 52-30 as the primary chapter and ATA 92-21 and 52-70 as secondary, because the conversion takes its control from the door warning computing function over the forward fuselage harness. ATA 29-10 was searched because the hydraulic supply to this door is deleted. ATA 24 ground service distribution was reviewed manually rather than searched, since the peak load question is an analysis rather than a document conflict.",
+      "method_note": "Entity linking was seeded from the five part numbers, the two FINs, the two drawings and the three zones of the candidate. Semantic similarity was run with two seed phrases about door opening time and about hydraulic leakage at a door bay. One finding came from the semantic pass alone and is the least obvious of the seven: a hydraulic reservoir modification on a completely different part of the aircraft that shares no identifier with the candidate but addresses the same underlying complaint, fluid where it should not be and a level reading nobody trusts.",
+      "findings_summary": "Seven items have been confirmed and three are blocking. The conversion takes its control from the second sensing channel of the door warning function, which only exists on aircraft at the duplicated latch sensing standard, and that channel is only genuinely independent on aircraft that have had the forward fuselage harness segregation rework. Both are therefore hard preconditions and both are already declared, but the segregation rework is currently declared as a post-modification condition when the engineering position is that it must be embodied in the same visit; an aircraft left between the two states has an electromechanical actuator commanded over a bundle that carries both channels. The wiring diagram sheet, the fault isolation procedure and the door operational test all describe a hydraulically driven door and must be re-issued rather than amended, because the failure modes change completely. The door bay hydraulic leak inspection disappears with the supply and its removal has to be coordinated with the operator scheduled maintenance programme.",
+      "next_steps": "Change the segregation rework from a post-modification condition to a concurrency requirement and state it in the retrofit bulletin. Complete the ground service busbar peak load analysis at minus twenty degrees with two doors cycling. Plan the wiring, fault isolation and operational test re-issues as one documentation package. Agree with the operator how the deleted leak inspection is removed from the maintenance programme."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230124385707",
+        "D5230126176648",
+        "FJO180206-65",
+        "AES684992-82"
+      ],
+      "fins": [
+        "2056WV",
+        "3323WT"
+      ],
+      "drawings": [
+        "D52301272875",
+        "D52301281228"
+      ],
+      "software": [],
+      "zones": [
+        "143",
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147520",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-T-260031",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "cargo door actuation",
+      "harness segregation",
+      "concurrency",
+      "documentation re-issue"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-147520-01",
+      "subject_mod": "MOD-147520",
+      "source_io": "IO-T-260031",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-02-24",
+      "due_date": "2026-05-15",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ELSC",
+          "EVAA"
+        ],
+        "estimated_manhours": 150,
+        "spent_manhours": 97
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "52",
+          "92",
+          "29"
+        ],
+        "ata_4d": [
+          "52-30",
+          "52-70",
+          "92-21",
+          "29-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "WDM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00193"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5230124385707",
+            "D5230126176648",
+            "FJO180206-65",
+            "AES684992-82"
+          ],
+          "fins": [
+            "2056WV",
+            "3323WT"
+          ],
+          "drawings": [
+            "D52301272875",
+            "D52301281228"
+          ],
+          "zones": [
+            "143",
+            "891",
+            "893"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "cargo door opening time in cold weather at a line station",
+          "hydraulic fluid found in a door bay at a scheduled check"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search modifications and bulletins on the cargo door architecture",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm the independence of the second sensing channel per aircraft standard",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Identify maintenance content that assumes a hydraulic door drive",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Ground service busbar peak load analysis at low temperature",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-146050",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "BLOCKING",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The conversion commands the actuator over the second channel of the door warning function. On an aircraft that has not had the forward fuselage harness segregation rework, both channels share a bundle for part of their run, so a single chafe would take out the command path and the monitoring path together. The candidate declares the rework as a post-modification condition, which permits an aircraft to sit between the two states.",
+          "resolution": "Change the declaration from a post-modification condition to a concurrency requirement, and state in the retrofit bulletin that the aircraft may not be released between the two."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-141020",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "2056WV",
+              "3323WT"
+            ],
+            "shared_zones": [
+              "891",
+              "893",
+              "143"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The second sensing channel does not exist at all on an aircraft at the single sensor standard, so there is no command path for the actuator. This is a hard prerequisite and is correctly declared, but the retrofit bulletin must also state it, because an operator with a mixed fleet will otherwise order kits for aircraft that cannot take them.",
+          "resolution": "Keep the post-modification condition and add an explicit effectivity note and a pre-embodiment configuration check to the retrofit bulletin."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TTN-92-1004",
+          "doc_type": "SB",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "This is the vehicle by which the segregation rework reaches delivered aircraft, and it explicitly forbids accomplishment on an aircraft still at the single sensor standard. The conversion therefore inherits a two-step ordering constraint that no single document currently states end to end.",
+          "resolution": "Publish the full ordering chain in the conversion retrofit bulletin, and cross reference this bulletin from it."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-142590",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents are answers to the same operator complaint: hydraulic fluid appearing where it should not, and a maintenance response driven by what cannot be seen rather than by what has failed. They share no part number, no FIN, no zone and no ATA chapter, and neither cites the other. Only the reason-for-change text connects them."
+          },
+          "rationale": "The operator that raised the request also reported reservoir staining and unnecessary reservoir replacements, and the reservoir rework was offered as the answer to that. The conversion removes one of the leak paths that feeds the same complaint. Neither team knew of the other, and the combined benefit case is stronger than either alone.",
+          "resolution": "Note the overlap in the business case and inform the customer support focal, so that the operator is offered both changes as a package rather than sequentially."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "TSM-T-52-30-13-812-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "2056WV",
+              "3323WT"
+            ],
+            "shared_zones": [
+              "891",
+              "893",
+              "143"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The fault isolation procedure branches on whether the station carries one sensor or two and assumes throughout that the door is hydraulically driven. With an electromechanical actuator the symptom set changes: a slow door is no longer a fluid viscosity question and the actuator reports its own faults. The procedure cannot be amended and must be re-issued.",
+          "resolution": "Plan a full re-issue of the procedure for the conversion release, with a separate branch for converted aircraft, and keep the existing branches for the unconverted fleet."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "AMM-T-52-30-12-700-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230124385707",
+              "FJO180206-65"
+            ],
+            "shared_fins": [
+              "2056WV"
+            ],
+            "shared_zones": [
+              "143",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-12"
+            ],
+            "similarity_note": "Both describe the aft cargo door drive and its behaviour with temperature, and share two part numbers, one FIN and both zones."
+          },
+          "rationale": "The operational test measures opening time against an ambient temperature curve and closes with a door bay leak inspection. Neither survives the conversion: the temperature curve becomes flat and the door bay has no hydraulic supply to leak. The test as written would fail a correctly converted aircraft.",
+          "resolution": "Re-issue the task with a converted-aircraft variant, replacing the temperature curve with a fixed time band and the leak inspection with an actuator current check."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "WDM-T-92-21-13",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "2056WV",
+              "3323WT"
+            ],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The actuator command and its position feedback have to be added to the second channel route through zone 891, which the wiring sheet shows as fully allocated after the segregation rework. There is no spare conductor in the segregated bundle and the sheet does not show a growth allowance.",
+          "resolution": "Confirm the conductor count with the electrical installation office and, if a new run is needed, include it in the conversion kit rather than assuming spare capacity."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-148120",
+          "doc_type": "MOD",
+          "reason": "Surfaces strongly on any search that uses cargo compartment vocabulary, and it is a candidate on the same aircraft, but it fits an insulating quilt behind the bulk compartment wall panels. It shares no zone with the aft cargo door and touches nothing in the door or its actuation."
+        },
+        {
+          "doc_id": "TSM-T-29-10-12-810-806",
+          "doc_type": "TSM",
+          "reason": "Ranks high on the hydraulic leak seed phrase because it is entirely about fluid that cannot be found. It concerns the green system reservoir in the avionics bay, which does not supply the aft cargo door, and shares no FIN, no zone and no part number with the candidate."
+        }
+      ],
+      "conclusion": "Not yet issued. Three blocking preconditions are confirmed, one of which needs its declaration changed from a condition to a concurrency; the busbar peak load analysis is outstanding.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

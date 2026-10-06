@@ -1,0 +1,244 @@
+[
+  {
+    "doc_id": "PAWO-168276-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Closed) — Recirculation Filter Housing, Interval Reduction Proposal",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-11-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-20",
+      "ata_6d": "21-20-13",
+      "title": "Distribution — Recirculation"
+    },
+    "secondary_ata": [
+      "21-20",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00102",
+          "to": "M00412"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-11-19",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of a proposal to shorten the recirculation filter interval on modified aircraft, cancelled when the underlying complaint was traced to element quality at one supplier rather than to the interval.",
+    "sections": {
+      "objective": "Establish whether the six month filter interval should be shortened on aircraft with the quarter turn housing, following cabin air quality complaints from two operators.",
+      "findings_summary": "Two items were confirmed and the work order was cancelled. The complaints came from two operators using the same third-party element, and element loading measured at removal was well inside the design capacity in both cases, which pointed at element quality rather than at the interval. Shortening the interval would have doubled the task frequency across the whole modified fleet to address a supply problem affecting two operators. The cleaning task was found to have no element specification reference at all, which is the actual gap and was raised as a documentation change. The work order was cancelled once the element analysis came back.",
+      "next_steps": "Cancelled. The element specification reference was added to the task and the two operators were advised on approved element sources."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2120112750655",
+        "D2120006111409"
+      ],
+      "fins": [
+        "482HM",
+        "3HQ"
+      ],
+      "drawings": [
+        "D21201107143"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168276",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "closed pre-analysis",
+      "filter interval",
+      "element quality",
+      "cabin air",
+      "cancelled"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-168276-01",
+      "subject_mod": "MOD-168276",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-02-25",
+      "outcome": "REJECTED",
+      "raised_date": "2025-11-19",
+      "due_date": "2026-03-06",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ETGC"
+        ],
+        "estimated_manhours": 65,
+        "spent_manhours": 58
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "21",
+          "25"
+        ],
+        "ata_4d": [
+          "21-20",
+          "25-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM"
+        ],
+        "msn_range": {
+          "from": "M00102",
+          "to": "M00412"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2120112750655",
+            "D2120006111409"
+          ],
+          "fins": [
+            "482HM",
+            "3HQ"
+          ],
+          "drawings": [
+            "D21201107143"
+          ],
+          "zones": [
+            "111",
+            "293"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "an interval blamed for a problem that belongs to the consumable"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Measure element loading at removal for both operators",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the task for an element specification reference",
+          "method": "ENTITY",
+          "owner": "ETGC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-M-21-20-13-100-052-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "21-20-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The cleaning task names the element as a consumable but gives no specification, so an operator can fit any element that fits the housing and the interval carries the blame when it under-performs.",
+          "resolution": "Add the element specification reference to the task."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-21-1063",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "21-20-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin supplies two elements for the initial fit and does not state the specification either, which propagates the same gap to every retrofit aircraft.",
+          "resolution": "Add the specification to the material note at the next bulletin revision."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Cancelled. The interval was not the problem; an element specification reference was added instead.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

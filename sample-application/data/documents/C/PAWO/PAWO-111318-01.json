@@ -1,0 +1,304 @@
+[
+  {
+    "doc_id": "PAWO-111318-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Two Stage Treatment Practice as a Fleet Inspection Programme",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-10",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "51",
+      "ata_4d": "51-20",
+      "ata_6d": "51-20-11",
+      "title": "Processes — Surface Treatment"
+    },
+    "secondary_ata": [
+      "51-20-12",
+      "53-31"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00544"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-03",
+      "released": "2026-06-10",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the two stage treatment practice, run on a proposal to convert the inspect-and-treat bulletin into a mandatory fleet programme, which the analysis rejected in favour of merging it with the sealant release already in work.",
+    "sections": {
+      "objective": "Assess a proposal to convert the inspect-and-treat bulletin into a mandatory fleet inspection programme with a fixed interval, on the argument that the finding rate justified it.",
+      "findings_summary": "The proposal was rejected and merged instead. Three items were confirmed. The finding rate did justify attention, but the analysis showed that the population at risk is defined by the joining station process rather than by aircraft age, and a fixed calendar interval across the whole fleet would inspect a large number of aircraft that were never exposed. The second finding was decisive in another way: the chromate-free sealant release already in work re-issues the same practice text and touches the same drawings, and running two changes over the same content within a year would have produced two revisions of every affected procedure. The third was that the repair scheme already carries a repeat inspection requirement keyed to the environment, which is a better rule than a calendar interval and which nobody in the proposal had read.",
+      "next_steps": "Reject the fleet programme and merge the intent into the sealant release, which is re-issuing the same content anyway. Keep the environment-keyed repeat inspection in the repair scheme as the governing rule. Identify the exposed population from the joining station records rather than from delivery dates."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5120110715725",
+        "D5120111806797",
+        "D5120118402300",
+        "D5120120637267",
+        "AES445369-54"
+      ],
+      "fins": [],
+      "drawings": [
+        "D51201114548",
+        "D51201185443"
+      ],
+      "software": [],
+      "zones": [
+        "131",
+        "141",
+        "191"
+      ],
+      "figures": [],
+      "repair_drawings": [
+        "RD-51-20-11-911"
+      ],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111318",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "treatment practice",
+      "fleet programme",
+      "exposed population",
+      "merge"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Alcadara",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111318-01",
+      "subject_mod": "MOD-111318",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-10",
+      "outcome": "REJECTED",
+      "raised_date": "2026-03-03",
+      "due_date": "2026-06-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EDSA",
+        "lead_site": "Alcadara",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 100,
+        "spent_manhours": 132
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "51",
+          "53",
+          "20"
+        ],
+        "ata_4d": [
+          "51-20",
+          "53-31",
+          "20-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "C00001",
+          "to": "C00544"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5120110715725",
+            "D5120111806797",
+            "D5120118402300",
+            "AES445369-54"
+          ],
+          "fins": [],
+          "drawings": [
+            "D51201114548",
+            "D51201185443"
+          ],
+          "zones": [
+            "131",
+            "141",
+            "191"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "which aircraft were actually exposed to a process that was corrected at the joining station"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Define the exposed population from the joining station records",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check overlap with the sealant release in work",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the repeat inspection rule in the repair scheme",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111303",
+          "doc_type": "MOD",
+          "finding_type": "DUPLICATE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "141",
+              "191"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The sealant release already in work re-issues the same practice text and touches the same drawings in the same zones. Running two changes over the same content within a year would have produced two revisions of every affected procedure for no additional benefit.",
+          "resolution": "Fleet programme rejected and the intent merged into the sealant release."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SRM-C-51-20-11-911",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5120110715725",
+              "D5120111806797",
+              "D5120120637267",
+              "AES445369-54"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "141",
+              "191"
+            ],
+            "shared_ata_6d": [
+              "51-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The repair scheme already keys its repeat inspection to the operating environment rather than to a calendar, which is a better rule than the fixed interval the proposal wanted and which nobody in the proposal had read.",
+          "resolution": "Environment-keyed rule retained as the governing requirement."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "CRN-51-2001",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5120110715725",
+              "D5120111806797",
+              "D5120118402300",
+              "AES445369-54"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "131",
+              "141",
+              "191"
+            ],
+            "shared_ata_6d": [
+              "51-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Converting the bulletin to a mandatory programme would have changed its effectivity from a defined MSN range to the whole fleet, inspecting a large number of aircraft that were never exposed to the process error.",
+          "resolution": "Effectivity left unchanged; exposed population to be identified from the joining station records."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "AMM-C-51-20-11-200-018-A",
+          "doc_type": "AMM",
+          "reason": "Returned at the top of every search in this chapter and obviously related, but the inspection task itself was not in question. The proposal was about who has to do it and how often, not about how it is done."
+        }
+      ],
+      "conclusion": "Fleet programme rejected. The intent was merged into the sealant release, which was re-issuing the same content in any case.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,163 @@
+[
+  {
+    "doc_id": "WDM-S-92-21-13",
+    "doc_type": "WDM",
+    "title": "Fwd Cargo Door Warning Wiring — LH Side and Compartment Run",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2023-08-17",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-13",
+      "title": "Forward Fuselage Wiring — Door Warning Wiring"
+    },
+    "secondary_ata": [
+      "52-70",
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-04-27",
+      "released": "2017-12-14",
+      "revised": "2023-08-17",
+      "effective": "2023-09-01"
+    },
+    "abstract": "Wiring sheet for the forward cargo door warning installation, covering the sensing pair from the door to the door warning computing input, the compartment ground stud and the door crossing loom.",
+    "sections": {
+      "purpose": "This sheet shows the wiring of the forward cargo door warning sensing and its ground return, from the door-mounted sensor through the compartment run to the door warning computing input.",
+      "sheet_note": "The sheet shows the left-hand side; the right-hand side is symmetrical and carries the same wire numbering with the suffix changed. The sensing pair is a shielded twisted pair and the shield is grounded at the compartment end only; grounding it at both ends produces a circulating current that shows as an intermittent indication. The door crossing loom is the only part of the run that flexes, and it is the part that fails. Wire gauges are given on the sheet and are not the same across the run: the sensing pair is AWG 22 and the ground return is AWG 12.",
+      "routing_note": "The loom leaves the door at the upper hinge line, crosses the door aperture in a service loop sized for the full door travel, and enters the compartment at the sill. From there it runs outboard along the frame line to the equipment rack area and up to the door warning computing input. The service loop dimension is critical: a loop set too short pulls the connector at full door travel and a loop set too long chafes on the sill closing panel."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221139139564",
+        "D9221138277429"
+      ],
+      "fins": [
+        "3323WT",
+        "8VC5"
+      ],
+      "drawings": [
+        "D52701135292"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "812"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-S-52-30-13-810-801",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-138410",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door warning wiring",
+      "sensing pair",
+      "service loop",
+      "ground stud",
+      "shielded twisted pair"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Wiring Data"
+    },
+    "type_data": {
+      "sheet_number": "92-21-13",
+      "sheet_title": "FWD CARGO DOOR WARNING — LH SIDE AND COMPARTMENT RUN",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "8910W",
+        "8911W"
+      ],
+      "connectors": [
+        {
+          "reference": "8910VC",
+          "part_number": "D9221139139564",
+          "location_zone": "891",
+          "contacts": 19
+        },
+        {
+          "reference": "8121VC",
+          "part_number": "D9221138277429",
+          "location_zone": "812",
+          "contacts": 37
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "3323WT",
+          "description": "WARNING SENSOR, CARGO DOOR STRUCTURE, UPPER",
+          "zone": "893"
+        },
+        {
+          "fin": "8VC5",
+          "description": "GROUND STUD, DOOR WARNING WIRING, AFT",
+          "zone": "812"
+        }
+      ],
+      "wire_count": 24,
+      "wire_gauge_range": "AWG 22 to AWG 12",
+      "routes": [
+        "Zone 893 door mount to zone 891 sill via the upper hinge service loop",
+        "Zone 891 sill to zone 812 equipment rack along the frame line"
+      ],
+      "related_sheets": [
+        "WDM-S-92-41-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

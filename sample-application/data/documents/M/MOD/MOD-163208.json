@@ -1,0 +1,172 @@
+[
+  {
+    "doc_id": "MOD-163208",
+    "doc_type": "MOD",
+    "title": "Redesign of the Slat Piccolo Duct Support Brackets in the Fixed Leading Edge",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-11-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-12",
+      "title": "Airfoil Anti-Ice — Slat Piccolo Ducts"
+    },
+    "secondary_ata": [
+      "57-20",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "M00393",
+      "production_cut_in_date": "2023-06-08",
+      "retrofit_via": [
+        "MRD-30-1037"
+      ]
+    },
+    "dates": {
+      "created": "2021-04-13",
+      "released": "2022-11-02",
+      "revised": null,
+      "effective": "2022-11-29"
+    },
+    "abstract": "The sliding support brackets of the slat piccolo ducts are replaced by a bellows-compensated arrangement, removing the thermal ratcheting that was walking the ducts out of position between anti-ice cycles.",
+    "sections": {
+      "reason": "Leading edge surveys during heavy checks found piccolo ducts displaced from their nominal position by up to 14 mm, always in the outboard bays and always in the same direction. Bench work reproduced the effect: the sliding bracket lets the duct grow under anti-ice heating but grips it slightly on cool-down, so the duct ratchets outboard over thousands of cycles. Left uncorrected the displacement eventually loads the duct end fitting in bending and, on two aircraft, had cracked a bracket foot. No anti-ice performance loss had been reported.",
+      "description": "Each sliding bracket is replaced by a fixed foot with a short bellows section that takes the axial growth. The duct non-return valve assembly D3010128666060 is repositioned 25 mm inboard so that the bellows sits in a straight run, and the heat exchanger D3010120571398 mounting is re-drilled to suit. Countersunk rivets LN907384-1B secure the new bracket feet and pan head screws AGS212130-5E hold the bellows guard. Detail is on drawings D30101276854 and D30101252737. Work is in the slat area and leading edge, zones 551, 553 and 512, with the slats extended and the leading edge panels removed. The duct hose 203WX is disconnected and refitted unchanged.",
+      "effects": "Mass increase of 3.4 kg per aircraft. No electrical load change. Not interchangeable: the fixed foot needs a different rib hole pattern and the bellows duct is longer than the item it replaces. The leading edge duct position check at heavy maintenance is deleted for post-modification aircraft. The wing anti-ice functional test is unchanged. Spares for the sliding bracket remain available for pre-modification aircraft until 2029.",
+      "embodiment_note": "Cut in at MSN M00393 in June 2023. Service Bulletin MRD-30-1037 covers retrofit but takes a full leading edge opening on both wings, so it is offered as a heavy check item and has been taken by only a handful of operators so far."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010128666060",
+        "D3010120571398",
+        "LN907384-1B",
+        "AGS212130-5E"
+      ],
+      "fins": [
+        "203WX"
+      ],
+      "drawings": [
+        "D30101276854",
+        "D30101252737"
+      ],
+      "software": [],
+      "zones": [
+        "551",
+        "553",
+        "512"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00393"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-30-1037",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-M-30-10-12-200-017-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "piccolo duct",
+      "support bracket",
+      "thermal ratcheting",
+      "bellows",
+      "fixed leading edge"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Wendmark",
+      "role": "Ice Protection Design Office"
+    },
+    "type_data": {
+      "mod_number": 163208,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1419"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 3.4,
+      "balance_impact": "Symmetric across both wings",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "LN907384-1B",
+        "AGS212130-5E"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3010128666060",
+        "D3010120571398"
+      ],
+      "fins_affected": [
+        "203WX"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 150,
+      "estimated_cost_keur": 420,
+      "lead_time_weeks": 32,
+      "production_impact": "Cut-in at MSN M00393, leading edge sub-assembly change at Kingsmoor",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

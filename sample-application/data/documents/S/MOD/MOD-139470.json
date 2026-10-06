@@ -1,0 +1,179 @@
+[
+  {
+    "doc_id": "MOD-139470",
+    "doc_type": "MOD",
+    "title": "Thrust Control Quadrant Resolver Redundancy and Friction Setting for Four-Engine Aircraft",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-12-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-10",
+      "ata_6d": "76-10-12",
+      "title": "Power Control — Throttle Control Unit"
+    },
+    "secondary_ata": [
+      "22-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56C",
+        "AUR-5560"
+      ],
+      "operators": [
+        "JTA",
+        "TMK",
+        "HVA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-12-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "A second resolver channel and a four-engine friction setting for the thrust control quadrant, extending the serviceable damper standard to the aircraft it was never offered on.",
+    "sections": {
+      "reason": "The serviceable friction damper standard was released for the twin-engine aircraft and stopped there, because the four-engine quadrant has four lever paths in the same envelope and the access latch does not fit. Operators of the four-engine aircraft are living with the original arrangement, which means quadrant removal for a friction adjustment, and their removal rate is three times the twin-engine rate. A single-channel resolver on a four-lever quadrant is also a dispatch problem: the loss of one channel takes a lever out of autothrust rather than degrading it.",
+      "description": "A second resolver channel is added to each lever path, reading the same shaft through an independent gear train, and the friction pack is made adjustable through a side access rather than through the top latch that the twin-engine standard uses. Cowl latch HED768198-70 is refitted on the four-engine bracket and seal VAL944782-67 at the quadrant base is renewed. The cowl latch kit VA715631-98, which the twin-engine standard deletes, is retained here because the side access needs it. Heat shields 10EC and 83EC are refitted. Work is at the pedestal and at the pylon interface areas in zones 413 and 432. Detail is on drawing D76101264759.",
+      "effects": "Estimated mass increase of 2.9 kg. Electrical load increases by twelve volt-amperes for the second resolver excitation on each of the four paths. Not interchangeable with the twin-engine standard and not with the original four-engine quadrant. Dispatch with one resolver channel failed becomes possible without losing autothrust on that engine. The friction adjustment becomes a line task on this fleet as well, and the quadrant removal interval is expected to match the twin-engine figure.",
+      "embodiment_note": "Design has been launched. Retrofit only, since the four-engine line is closed; about thirty manhours at an A-check with the pedestal opened. Kits are expected to be available eighteen months after freeze.",
+      "open_points": "Pre-analysis concluded that the change may proceed subject to agreeing the dispatch condition wording with the authority and confirming that the four-engine autothrust gain set already embodied does not need a further change to accept the second channel."
+    },
+    "entities": {
+      "part_numbers": [
+        "HED768198-70",
+        "VAL944782-67",
+        "VA715631-98"
+      ],
+      "fins": [
+        "10EC",
+        "83EC"
+      ],
+      "drawings": [
+        "D76101264759"
+      ],
+      "software": [],
+      "zones": [
+        "413",
+        "432"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01578",
+        "S00966"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-134430",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-132860",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "resolver redundancy",
+      "friction setting",
+      "four-engine quadrant",
+      "side access",
+      "dispatch"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Port-Rivage",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 139470,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.777",
+          "CS 25.1309",
+          "CS 25.1329"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 2.9,
+      "balance_impact": "Forward of the reference datum; negligible",
+      "electrical_load_impact_va": 48,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "VA715631-98"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "HED768198-70",
+        "VAL944782-67"
+      ],
+      "fins_affected": [
+        "10EC",
+        "83EC"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 175,
+      "estimated_cost_keur": 990,
+      "lead_time_weeks": 52,
+      "production_impact": "Retrofit only; four-engine line closed",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

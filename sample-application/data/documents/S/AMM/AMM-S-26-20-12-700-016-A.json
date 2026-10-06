@@ -1,0 +1,181 @@
+[
+  {
+    "doc_id": "AMM-S-26-20-12-700-016-A",
+    "doc_type": "AMM",
+    "title": "Cargo Compartment Extinguishing — Concentration Test at 45 Seconds and at Duration",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-10-01",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-20",
+      "ata_6d": "26-20-12",
+      "title": "Extinguishing — Cargo Extinguishing Distribution"
+    },
+    "secondary_ata": [
+      "26-10",
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-02-19",
+      "released": "2021-10-01",
+      "revised": null,
+      "effective": "2021-10-20"
+    },
+    "abstract": "Measurement of extinguishing agent concentration in both cargo compartments at knock-down and through the sustaining period, used after any change to the distribution manifold or the compartment lining.",
+    "sections": {
+      "purpose": "This task measures the agent concentration in the forward and aft cargo compartments at 45 seconds and at the end of the sustaining period, and proves that the distribution still meets the certified profile.",
+      "job_setup_note": "Do this task with the compartments empty, the lining panels installed and every door and vent in its normal closed position. The compartment volume is part of the acceptance criterion, so a compartment with a lining panel missing will fail even if the distribution is correct. The analyser must be calibrated on the reference gas before and after the test. The test agent has a twelve-month shelf life; check the batch date before starting.",
+      "procedure": "1. Make sure that both compartments are empty and that every lining panel is installed and latched. 2. Close the cargo doors and set every vent and outflow to the normal closed position. 3. Position the analyser probes at the four sampling points in each compartment, zones 133 and 142 for the aft and the equivalent points forward. 4. Calibrate the concentration analyser on the reference gas and record the calibration. 5. Charge the test agent to the mass given in the test schedule. WARNING: THE SYSTEM IS PRESSURISED DURING THE TEST. DO NOT OPEN A CARGO DOOR UNTIL THE TEST IS DECLARED COMPLETE. 6. Discharge the knock-down stage and record the concentration at every probe at 45 seconds. 7. Record the concentration at each probe every fifteen minutes through the sustaining period. 8. On aircraft with the third metering stage, continue recording to the extended duration in the schedule. CAUTION: DO NOT STOP THE RECORD AT THE OLD DURATION ON A MODIFIED AIRCRAFT. THE THIRD STAGE IS ONLY PROVED BY THE LAST HOUR. 9. Compare every reading against the certified profile. 10. Check the right-hand switch position 1394WF2 and the left-hand non-return valve position 6WF4 for correct operation during the discharge. 11. Re-calibrate the analyser and confirm no drift. 12. Ventilate both compartments to the standard practice before entry.",
+      "close_out": "Record every concentration reading with its time and probe position. A single reading below the certified profile fails the test and the aircraft must not be released for the intended diversion approval. Send the record to the operator engineering department and, where the approval requires it, to the authority."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2620124013196",
+        "D2620124813243",
+        "AES155061-5B",
+        "LN413515-8E"
+      ],
+      "fins": [
+        "1394WF2",
+        "58WF",
+        "6WF4"
+      ],
+      "drawings": [
+        "D26200036707"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "142",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "SLN-26-1009",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-134860",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "concentration test",
+      "sustaining period",
+      "knock-down",
+      "sampling probe",
+      "certified profile"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "26-20-12-700-016-A",
+      "task_type": "TEST",
+      "effectivity_note": "All twin-engine aircraft; the recorded duration is 180 minutes pre MOD-134860 and 240 minutes post",
+      "manhours": 30.0,
+      "personnel": 3,
+      "elapsed_time_hours": 20.0,
+      "access": {
+        "zones": [
+          "133",
+          "142",
+          "183"
+        ],
+        "access_panels": [
+          "133CR",
+          "142CR",
+          "183BR"
+        ],
+        "doors": [
+          "Fwd cargo door",
+          "Aft cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not open a cargo door until the test is declared complete.",
+          "Ventilate both compartments before entry after the test.",
+          "Check the test agent batch date before starting."
+        ],
+        "tooling": [
+          {
+            "reference": "98D26200-311",
+            "description": "Concentration analyser"
+          },
+          {
+            "reference": "98D26200-315",
+            "description": "Sampling probe set, eight point"
+          },
+          {
+            "reference": "98D26200-318",
+            "description": "Reference gas, calibration"
+          }
+        ],
+        "consumables": [
+          "Test agent, concentration measurement",
+          "O-ring set, distribution manifold"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

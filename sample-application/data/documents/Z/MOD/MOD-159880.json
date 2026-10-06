@@ -1,0 +1,165 @@
+[
+  {
+    "doc_id": "MOD-159880",
+    "doc_type": "MOD",
+    "title": "Overhead Panel Wiring Segregation and Circuit Breaker Bank Rearrangement in the Flight Compartment",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-11",
+      "ata_6d": "92-11-12",
+      "title": "Flight Compartment Wiring — Overhead Panel Wiring"
+    },
+    "secondary_ata": [
+      "24-50",
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-24N3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "PRODUCTION"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-06-24",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Early proposal to segregate the overhead panel wiring by criticality and to rearrange the circuit breaker bank, so that adding a system to the overhead no longer requires the whole loom to be re-substantiated.",
+    "sections": {
+      "reason": "Every overhead panel change of the last decade has been slowed by the same problem: the loom behind the panel carries essential and non-essential circuits in the same bundle, so any addition requires the separation case for the whole bundle to be re-argued. Four recent modifications each spent between eight and fourteen weeks on that argument alone. The circuit breaker bank has also filled up unevenly, with two banks at capacity while a third has spare positions that no new system can reach without a re-route across the panel.",
+      "description": "The overhead loom is split into three bundles by criticality and routed on separate support rails, and the circuit breaker bank is rearranged so that spare positions are distributed across all three banks. The terminal block D9211126163344 is replaced by three smaller blocks, the support bracket D9211126648738 is replaced by a rail assembly, and the cable assembly D9211129111846 is rebuilt as three shorter looms. The circuit breaker at FIN 156VU2, the relay at FIN 4784VC and the bus bar at FIN 6545VU1 are all relocated within the panel. Work is in zones 211 and 214 with the overhead panel lowered. No system function changes and no equipment is added or removed.",
+      "effects": "Mass increase of about 2 kilograms, subject to the final rail design. No electrical load change. Not interchangeable: the panel harness connectors move and an unmodified panel cannot be fitted to a modified aircraft. The benefit is entirely in future change cost, which is estimated at eight to fourteen weeks saved per overhead modification. The wiring sheets for the flight compartment would require complete re-issue and the circuit breaker location chart changes throughout.",
+      "embodiment_note": "Production only. There is no retrofit case: the change buys nothing on an aircraft already delivered, and the panel would have to be rebuilt to do it.",
+      "open_points": "The proposal has not entered pre-analysis. The question that decides whether it is worth opening is whether the forward plan of overhead panel changes is large enough to repay a full wiring sheet re-issue, and whether the segregation rules can be agreed with the authority in advance rather than case by case."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9211126163344",
+        "D9211126648738",
+        "D9211129111846"
+      ],
+      "fins": [
+        "156VU2",
+        "4784VC",
+        "6545VU1"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-156940",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "overhead panel wiring",
+      "criticality segregation",
+      "circuit breaker bank",
+      "support rail",
+      "separation case"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Electrical Systems Design"
+    },
+    "type_data": {
+      "mod_number": 159880,
+      "mod_class": "MAJOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "PRODUCTION_IMPROVEMENT",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1353",
+          "CS 25.1357",
+          "CS 25.1707"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.0,
+      "balance_impact": "Flight deck overhead, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D9211126648738"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D9211126163344",
+        "D9211129111846"
+      ],
+      "fins_affected": [
+        "156VU2",
+        "4784VC",
+        "6545VU1"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 720,
+      "estimated_cost_keur": 2400,
+      "lead_time_weeks": 66,
+      "production_impact": "Would require a flight compartment harness build standard change",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

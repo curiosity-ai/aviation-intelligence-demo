@@ -1,0 +1,173 @@
+[
+  {
+    "doc_id": "MOD-166310",
+    "doc_type": "MOD",
+    "title": "Reprofiled Lug Radius and Cold-Expanded Bore on the Fwd Mount Side Link Fitting",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "54",
+      "ata_4d": "54-50",
+      "ata_6d": "54-50-12",
+      "title": "Pylon Structure — Engine Mount Fittings"
+    },
+    "secondary_ata": [
+      "71-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-9700"
+      ],
+      "operators": [
+        "ACL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-162044"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-03-03",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Reprofiling the side link lug radius and cold expanding the bore is proposed to remove the tracked life limit on the forward mount fitting, which operators find impossible to align with the engine overhaul cycle.",
+    "sections": {
+      "reason": "The steel fitting standard lifted the tracked life limit to 60 000 flight cycles but did not delete it, and freight operators flying at high thrust settings on short sectors reach that count well before the airframe does. Four fittings have been replaced across an eleven-aircraft operator group in three years, three of them found during an engine shop visit with the aircraft already committed to a return-to-service date. Fatigue analysis of the returned items shows initiation at the same lug radius each time, so a geometry change rather than a further material change is the right answer.",
+      "description": "The lug radius on the side link fitting is opened from 6 mm to 11 mm and blended into a reprofiled boss, and the lug bore is cold expanded to a controlled interference after machining. The interface plate D5450124639244 is re-machined to suit the taller boss, the aft clip D5450120563050 is replaced to keep the fairing line, and a new intercostal D5450124284638 picks up the redistributed load at the inboard attachment. Fairing screws AES177340K7 are unchanged. Revised detail is planned on drawings D54501157122 and D54501157594. Work is through the pylon in zones 431 and 443 with the engine removed. The link support handle 1756PP is retained in the position introduced by the steel fitting standard.",
+      "effects": "Estimated mass increase of 0.7 kg per pylon over the steel standard. No electrical load change. Not interchangeable, and a mixed fit across the two pylons of one aircraft is not acceptable because the two standards have different life counts. If the substantiation closes as predicted, the tracked life limit is deleted entirely and the fitting reverts to an on-condition item, which removes the separate counter the operators complain about. Illustrated parts content and the mount removal and installation tasks require reissue, and the pylon repair scheme for the lug area has to be re-cut for the new radius.",
+      "embodiment_note": "Retrofit at an engine change, with the fitting supplied as a completed assembly so that no cold expansion is done on the aircraft. Provisional estimate is one day per pylon on top of the engine change itself. A production cut-in would follow six months after the retrofit design is frozen.",
+      "open_points": "Pre-analysis must confirm that the reprofiled boss clears the pylon fairing at the inboard corner, that the existing lug repair scheme can be re-issued rather than withdrawn, and whether the retrofit Service Bulletin for the steel standard needs re-issuing once this modification exists."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5450124639244",
+        "D5450120563050",
+        "D5450124284638",
+        "AES177340K7"
+      ],
+      "fins": [
+        "1756PP"
+      ],
+      "drawings": [
+        "D54501157122",
+        "D54501157594"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "443"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "IO-M-260244",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-162044",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "side link fitting",
+      "lug radius",
+      "cold expansion",
+      "life limit",
+      "engine change"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Valmont",
+      "role": "Pylon Design Office"
+    },
+    "type_data": {
+      "mod_number": 166310,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.571",
+          "CS 25.361"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.7,
+      "balance_impact": "Symmetric across both pylons",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D5450124284638"
+      ],
+      "parts_removed": [
+        "D5450120563050"
+      ],
+      "parts_modified": [
+        "D5450124639244"
+      ],
+      "fins_affected": [
+        "1756PP"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 132,
+      "estimated_cost_keur": 690,
+      "lead_time_weeks": 50,
+      "production_impact": "Production cut-in to follow six months after the retrofit design freeze",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

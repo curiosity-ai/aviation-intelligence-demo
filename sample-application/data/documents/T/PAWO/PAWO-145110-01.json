@@ -1,0 +1,400 @@
+[
+  {
+    "doc_id": "PAWO-145110-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Second Generation Entertainment Head End Architecture",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-10-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-12",
+      "title": "Inflight Entertainment — Head End Server"
+    },
+    "secondary_ata": [
+      "44-20-13",
+      "44-30"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00218"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-05-12",
+      "released": "2021-10-19",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the second generation entertainment head end architecture and the associated rack rework, which settled the supersession of the interim server standard and the cancellation of its retrofit bulletin.",
+    "sections": {
+      "objective": "Establish what the second generation head end architecture supersedes, what has to be withdrawn before it can be embodied, and how a fleet that currently carries three server standards is brought to two without leaving an aircraft in an unsupported state. The order was raised by the cabin systems office with the explicit instruction to settle the configuration history first and the documentation impact second, because the previous attempt at this chapter had failed on exactly that ordering.",
+      "findings_summary": "Five items were confirmed, two of them blocking. The interim server standard is superseded outright: the second generation chassis occupies the same rack position with a different backplane, and no aircraft can carry both. Its retrofit bulletin is the second blocking item, and the more awkward one, because it is still open on aircraft that will now never take the interim standard; it has to be cancelled rather than left to expire, or an operator will accomplish it and immediately have to undo it. The partial loss troubleshooting procedure depends on log content that changes shape with the new architecture. The seat group power distribution task is touched only through the shared anchor nut standard. A vestibule concurrency with the vacuum toilet work was recorded for planning.",
+      "next_steps": "Release was authorised on condition that the interim bulletin is cancelled at the same date and that the troubleshooting procedure is republished with the modification. The cabin systems office was asked to publish a conversion matrix showing, for each of the three standards, what has to be removed and what is reused, because the rack rework reuses more than the operators expect. The vestibule concurrency was passed to the maintenance planning group rather than treated as an engineering condition."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420121334529",
+        "D4420125490996",
+        "D4420129816843",
+        "EN258434K3",
+        "D4420116103848"
+      ],
+      "fins": [
+        "7RK6",
+        "8385RM"
+      ],
+      "drawings": [
+        "D44200016279",
+        "D44201142928"
+      ],
+      "software": [
+        "LD8CA72D35B",
+        "LC5R2884353",
+        "LC4RABC2783"
+      ],
+      "zones": [
+        "916",
+        "941",
+        "942"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-145110",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "head end architecture",
+      "rack rework",
+      "supersession",
+      "bulletin cancellation"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-145110-01",
+      "subject_mod": "MOD-145110",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2021-10-19",
+      "outcome": "VALIDATED",
+      "raised_date": "2021-05-12",
+      "due_date": "2021-11-05",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 180,
+        "spent_manhours": 232
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "44",
+          "38"
+        ],
+        "ata_4d": [
+          "44-20",
+          "44-30",
+          "38-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00218"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4420121334529",
+            "D4420125490996",
+            "D4420129816843",
+            "EN258434K3",
+            "D4420116103848"
+          ],
+          "fins": [
+            "7RK6",
+            "8385RM"
+          ],
+          "drawings": [
+            "D44200016279",
+            "D44201142928"
+          ],
+          "zones": [
+            "916",
+            "941",
+            "942"
+          ],
+          "software": [
+            "LD8CA72D35B",
+            "LC5R2884353"
+          ]
+        },
+        "similarity_seeds": [
+          "head end server generation change and rack backplane rework",
+          "cabin entertainment configuration history across three standards"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Reconstruct the server standard history aircraft by aircraft",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search all data referencing the rack, its chassis and its loads",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Establish the position of the open interim bulletin",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Check the vestibule work planned in the same area",
+          "method": "SME_INTERVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-143680",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4420121334529",
+              "D4420125490996",
+              "D4420129816843",
+              "EN258434K3"
+            ],
+            "shared_fins": [
+              "7RK6"
+            ],
+            "shared_zones": [
+              "916",
+              "941"
+            ],
+            "shared_ata_6d": [
+              "44-20-12"
+            ],
+            "shared_software": [
+              "LC5R2884353",
+              "LC4RABC2783"
+            ],
+            "shared_drawings": [
+              "D44200016279"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The second generation chassis occupies the same rack position with a different backplane and a different cooling path. No aircraft can carry both standards, and the interim standard has no residual role once the second generation is available, so this is a supersession rather than a coexistence.",
+          "resolution": "Declare the supersession in the modification and publish a conversion matrix showing what is removed and what is reused from each standard."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-44-1019",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4420121334529",
+              "D4420125490996",
+              "D4420129816843",
+              "EN258434K3"
+            ],
+            "shared_fins": [
+              "7RK6"
+            ],
+            "shared_zones": [
+              "916",
+              "941"
+            ],
+            "shared_ata_6d": [
+              "44-20-12"
+            ],
+            "shared_drawings": [
+              "D44200016279"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The interim server bulletin is still open on aircraft that will now go straight to the second generation. Left in place it would be accomplished and immediately undone, at the cost of a rack strip and a week of cabin downtime for nothing.",
+          "resolution": "Cancel the bulletin at the same date as the modification release and notify the affected operators directly rather than through the revision service."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-T-44-20-12-810-803",
+          "doc_type": "TSM",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4420121334529",
+              "D4420125490996",
+              "EN258434K3"
+            ],
+            "shared_fins": [
+              "7RK6",
+              "8385RM"
+            ],
+            "shared_zones": [
+              "916",
+              "941",
+              "942"
+            ],
+            "shared_ata_6d": [
+              "44-20-12",
+              "44-20-13"
+            ],
+            "shared_software": [
+              "LC4RABC2783",
+              "LD8CA72D35B"
+            ],
+            "shared_drawings": [
+              "D44200016279",
+              "D44201142928"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The partial loss procedure walks the seat group state history from the server log. The second generation architecture writes that history per zone controller rather than per seat group, so the procedure's first step returns a structure it cannot parse.",
+          "resolution": "Republish the procedure with the modification, with the log walk restated per zone and the seat group mapping added as a table."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-T-44-20-13-400-003-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN258434K3"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "942"
+            ],
+            "shared_ata_6d": [
+              "44-20-13"
+            ],
+            "shared_drawings": [
+              "D44200016279"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Touched only through the shared anchor nut standard and the equipment area. The rack rework changes the torque value for that standard in the cabin, and the seat group task quotes the old value without saying where it comes from.",
+          "resolution": "Correct the torque value at the next revision and add the source reference so the dependency is visible next time."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-145890",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "941"
+            ],
+            "shared_ata_6d": [],
+            "shared_drawings": [],
+            "similarity_note": null
+          },
+          "rationale": "Both changes work in the same vestibule area and both need the monument panels off. Embodied separately the panels come off twice, which is two days of cabin downtime that nobody costed against either change.",
+          "resolution": "Passed to maintenance planning as a scheduling note rather than declared as an engineering condition."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "AMM-T-38-30-11-800-001-A",
+          "doc_type": "AMM",
+          "reason": "Shares the vestibule zone and is retrieved on any zone search of that area, which is why the vestibule concurrency was found in the first place. The servicing task itself is untouched: the toilet assembly takes no power and no data from the head end rack."
+        }
+      ],
+      "conclusion": "Issued 2021-10-19. Two blocking items, both resolved by cancelling the interim bulletin and declaring the supersession. Cleared to proceed with the troubleshooting procedure republished alongside.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

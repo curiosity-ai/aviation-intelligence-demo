@@ -1,0 +1,274 @@
+[
+  {
+    "doc_id": "PAWO-161902-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Aluminium Alloy Side Link Fitting at the Fwd Engine Mount",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-11-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "54",
+      "ata_4d": "54-50",
+      "ata_6d": "54-50-12",
+      "title": "Pylon Structure — Engine Mount Fittings"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-8400"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-05-10",
+      "released": "2016-11-22",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the first side link fitting standard at the forward engine mount, run early in the programme when very little in-service content existed against which to search.",
+    "sections": {
+      "objective": "Confirm the documentation and repair consequences of introducing the aluminium alloy side link fitting as the first tracked-life standard at the forward mount. Because the fleet was young the search was expected to return little, and the order was written to establish the baseline rather than to find conflicts: which parts content the fitting enters, which shop repair schemes claim the lug, and what the tracked life limit does to the removal and installation tasks.",
+      "findings_summary": "Three items were confirmed and one was blocking, which surprised the design office given how little content existed at the time. The oversize bush repair on the lug had been written against a generic pylon fitting family and claimed the lug bore without naming a fitting standard. With a life-limited fitting the repair changes the recorded life, and the scheme had no mechanism to record that. The parts content needed the fitting introduced as a life-limited item rather than an ordinary detail, which affects the way the figure groups the fastener set. The removal task needed the life recording step added at the point of removal, not at the point of scrap, because the fitting can be refitted to a different aircraft.",
+      "next_steps": "Have the repair design owner add a life recording rule to the oversize bush scheme and state the reduced limit that follows a first oversize. Introduce the fitting into the parts content as a life-limited item with its own group. Add the life recording step to the removal task at the point of removal. Close the order and re-open only if the life limit changes at certification."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5450125251057",
+        "D5450126830111",
+        "AES177340K7"
+      ],
+      "fins": [],
+      "drawings": [
+        "D54500067607"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "441"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-161902",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "side link fitting",
+      "tracked life limit",
+      "oversize bush repair",
+      "pylon"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-161902-01",
+      "subject_mod": "MOD-161902",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2016-11-22",
+      "outcome": "VALIDATED",
+      "raised_date": "2016-05-10",
+      "due_date": "2016-12-16",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EDSA"
+        ],
+        "estimated_manhours": 60,
+        "spent_manhours": 44
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "54"
+        ],
+        "ata_4d": [
+          "54-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00212"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5450125251057",
+            "D5450126830111",
+            "AES177340K7"
+          ],
+          "fins": [],
+          "drawings": [
+            "D54500067607"
+          ],
+          "zones": [
+            "431",
+            "441"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "life limited pylon fitting recorded at removal rather than at scrap",
+          "oversize bush repair that reduces a tracked life limit"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the ATA 54-50 baseline content for the mount fittings",
+          "method": "ENTITY",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review shop repair schemes claiming the side link lug bore",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Agree the life recording point with continued airworthiness",
+          "method": "SME_INTERVIEW",
+          "owner": "ESZS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-M-54-50-12-001",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES177340K7"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "431"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The oversize bush repair claims the side link lug bore without naming a fitting standard, and has no mechanism to record the effect of the repair on a tracked life. A life-limited fitting cannot be released with an unbounded repair scheme against it.",
+          "resolution": "Add a life recording rule and a stated reduced limit after a first oversize, before the fitting is released."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-M-54-50-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES177340K7",
+              "D5450125251057"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "431"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure groups the fitting with its fastener set as an ordinary detail. A life-limited item needs its own group so that the life record follows the part rather than the assembly, and the fastener set has to be separable from it.",
+          "resolution": "Introduce the fitting as a life-limited item with its own group and separate the fastener set."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-54-50-12-000-004-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES177340K7"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "431"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task records accumulated cycles at scrap. A fitting that can be refitted to another aircraft has to have its life recorded at removal, or the record is lost the moment the part moves.",
+          "resolution": "Move the life recording step to the point of removal in the same documentation package."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed. The repair scheme life recording rule was the pacing item. The baseline established by this order was reused by every later pre-analysis on the mount fittings.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

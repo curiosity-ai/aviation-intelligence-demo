@@ -1,0 +1,217 @@
+[
+  {
+    "doc_id": "SLN-26-1023",
+    "doc_type": "SB",
+    "title": "Fire Protection — Engine Fire Detection Loop Rerouting Away from the Pylon Drain Path",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2025-11-04",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-11",
+      "title": "Detection — Engine Fire Detection Loops"
+    },
+    "secondary_ata": [
+      "49-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7000"
+      ],
+      "operators": [
+        "SRP",
+        "OEA",
+        "KLE"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-137250"
+        ],
+        "post_sb": [
+          "SLN-26-1022"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-03-11",
+      "released": "2024-09-16",
+      "revised": "2025-11-04",
+      "effective": "2025-11-24"
+    },
+    "abstract": "Relocation of the engine fire detection loop break out of the pylon drain path and re-clipping of the auxiliary power unit loop clear of the hot duct, the structural half of the false-warning response.",
+    "sections": {
+      "planning_reason": "Water tracking into the loop connector at the pylon break produced seventeen false engine fire warnings in a single wet season, and a second contributor was found at the auxiliary power unit loop where the routing passes within forty millimetres of a hot duct and the resulting thermal cycling had opened the seal. Sealing the connectors addresses the symptom; this bulletin removes the two causes. Both bulletins are needed for the full benefit.",
+      "description": "The loop break at the pylon is moved one hundred and eighty millimetres inboard and up, out of the drain path, with a new bracket and a revised clip set. In the auxiliary power unit compartment the loop is re-clipped clear of the hot duct with a minimum standoff of one hundred millimetres. The loop harness length changes as a result, so the loop assembly is not interchangeable with the pre-modification one.",
+      "accomplishment_summary": "Remove the pylon fairing panels in accordance with the maintenance manual. WARNING: MAKE SURE THAT THE FIRE BOTTLES ARE SAFETIED AND THAT THE ENGINE IS COLD. Do AMM-S-26-10-11-200-052-A to record the insulation resistance at every connector before any work. Remove the existing loop break bracket and install the new bracket one hundred and eighty millimetres inboard and up, using the shear head bolts EN557658-57 and the rivets AGS49442-85. Reroute the loop to the new break position and install the revised clip set. Refit the transmitter D2610111824651 on the new bracket. In the auxiliary power unit compartment, re-clip the loop so that the standoff from the hot duct is not less than one hundred millimetres at any point, and refit the regulator 25WD to its new clip position. Re-measure the insulation resistance at every connector. Do the fire detection system operational test on both engine loops and on the auxiliary power unit loop, and do a water spray check at the pylon break.",
+      "effectivity_note": "Applicable to SOLANO-38 and SOLANO-39 aircraft with Auran 7000 engines that have not been rerouted. Aircraft from MSN S01741 onward are post-modification from build. The connector sealing bulletin must have been accomplished first, because the new routing assumes the sealed shells. Revision 02 adds the water spray check and corrects the auxiliary power unit standoff dimension.",
+      "material_note": "Kit K2610-1023-01 covers one aircraft and contains both loop assemblies, the break brackets, the clip sets and the fastener set. Lead time is seventeen weeks. Removed loop assemblies are returned to Aeralis for seal examination."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610111824651",
+        "EN557658-57",
+        "AGS49442-85"
+      ],
+      "fins": [
+        "126WF",
+        "939WF3",
+        "90WF",
+        "25WD"
+      ],
+      "drawings": [
+        "D26101127238",
+        "D26101195260"
+      ],
+      "software": [],
+      "zones": [
+        "393",
+        "431",
+        "472"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01741"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-137250",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "SLN-26-1022",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-S-26-10-11-200-052-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "loop rerouting",
+      "drain path",
+      "hot duct standoff",
+      "water spray check",
+      "pylon fairing"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-26-1023",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 30 months after the date of revision 02 of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-137250",
+      "manpower": {
+        "elapsed_time_hours": 26,
+        "manhours": 38,
+        "personnel": 2,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K2610-1023-01",
+        "kit_available_from": "2025-01-27",
+        "parts_required": [
+          {
+            "part_number": "D2610111824651",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "EN557658-57",
+            "qty": 16,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS49442-85",
+            "qty": 40,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2610111824651",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Sealant, high temperature",
+          "Primer, epoxy, chromate-free"
+        ],
+        "tooling": [
+          "Insulation resistance tester, 500 V",
+          "Water spray rig, low pressure",
+          "Rivet gun set"
+        ]
+      },
+      "weight_change_kg": 1.0,
+      "accomplishment_steps": 13,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2024-09-16",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2025-11-04",
+          "reason": "Water spray check added at the pylon break; auxiliary power unit standoff dimension corrected from 80 mm to 100 mm"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

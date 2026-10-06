@@ -1,0 +1,329 @@
+[
+  {
+    "doc_id": "PAWO-111056-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Two-Piece Aft Engine Mount Shear Tie at the Pylon Interface",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-02-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "54",
+      "ata_4d": "54-50",
+      "ata_6d": "54-50-12",
+      "title": "Pylon Structure — Engine Mount Fittings"
+    },
+    "secondary_ata": [
+      "71-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-02-10",
+      "released": "2021-02-19",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of the split shear tie, covering the interchangeability break the two-piece item creates, the removal and installation tasks written around a single item and the general repair practice that governs the fitting holes.",
+    "sections": {
+      "objective": "Establish whether the aft engine mount shear tie can be split into two bolted halves without breaking the spares position, and identify every piece of content written on the assumption that the tie is a single item. The work order was raised internally after the in-service data showed that a mount change was costing three shifts of pylon fairing work that the access panel was supposed to have removed, and it reported before the design freeze.",
+      "findings_summary": "Four items were confirmed and the interchangeability position was the difficult one. A two-piece tie is not interchangeable with the one-piece item in either direction: the halves are bolted through a joint the original does not have, and the original cannot be fitted to an airframe that has been re-drilled. That makes the part list entry a pre-mod and post-mod split rather than a replacement, and it makes the spares forecast a two-standard problem for as long as both are flying. The removal and installation tasks both assume one item and one torque sequence, and the oversize hole practice needed a statement for the new joint.",
+      "next_steps": "Publish the part list with an explicit pre-mod and post-mod split and give the spares organisation the two-standard forecast before the cut-in, since both items will be flying for the best part of a decade. Re-write both mount tasks around the two-piece item with the joint torque sequence, keeping the one-piece procedure for the unmodified fleet rather than replacing it. Add a statement to the general oversize hole practice covering the new bolted joint, and confirm with the pylon office that the access panel opening is large enough for the larger of the two halves before the drawing is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5450123089978",
+        "D5450121271272",
+        "CID666183-16",
+        "AES161398-12"
+      ],
+      "fins": [
+        "152PP",
+        "498PP5"
+      ],
+      "drawings": [
+        "D54501246440"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "443",
+        "452"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111056",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "shear tie",
+      "engine mount",
+      "interchangeability",
+      "pylon access"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111056-01",
+      "subject_mod": "MOD-111056",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2021-02-19",
+      "outcome": "VALIDATED",
+      "raised_date": "2020-02-10",
+      "due_date": "2021-01-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EDSA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ESZS",
+          "EYIS",
+          "EAAM"
+        ],
+        "estimated_manhours": 150,
+        "spent_manhours": 208
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "54",
+          "71",
+          "51"
+        ],
+        "ata_4d": [
+          "54-50",
+          "71-20",
+          "51-70"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D5450123089978",
+            "D5450121271272",
+            "CID666183-16"
+          ],
+          "fins": [
+            "152PP",
+            "498PP5"
+          ],
+          "drawings": [
+            "D54501246440"
+          ],
+          "zones": [
+            "431",
+            "443",
+            "452"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "engine mount change requiring pylon fairing structure to be opened",
+          "bolted joint introduced into a single-piece machined fitting"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the interchangeability position of the split item",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search mount removal and installation content",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check repair practices covering the fitting holes",
+          "method": "SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Take the spares position for a two-standard fleet",
+          "method": "SME_INTERVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "IPC-C-54-50-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES161398-12",
+              "CID666183-16",
+              "D5450121271272",
+              "D5450123089978"
+            ],
+            "shared_fins": [
+              "152PP",
+              "498PP5"
+            ],
+            "shared_zones": [
+              "431",
+              "443",
+              "452"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure carries the shear tie as one item with one item number. The two-piece standard is not interchangeable in either direction, so a straight replacement in the figure would let an unmodified airframe be issued a half tie and a modified one the original.",
+          "resolution": "Figure re-issued with an explicit pre-mod and post-mod item block and a no-interchange note; spares forecast raised to the material organisation."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-C-54-50-12-000-003-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES161398-12",
+              "CID666183-16",
+              "D5450121271272",
+              "D5450123089978"
+            ],
+            "shared_fins": [
+              "152PP",
+              "498PP5"
+            ],
+            "shared_zones": [
+              "431",
+              "443",
+              "452"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task opens the pylon fairing structure precisely because the tie cannot come out past the access panel. That step disappears on a modified airframe, and leaving it in the task would give away the whole benefit of the change.",
+          "resolution": "Task split by embodiment standard, with the fairing sequence retained for the unmodified fleet."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-C-54-50-12-400-003-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES161398-12",
+              "CID666183-16"
+            ],
+            "shared_fins": [
+              "152PP"
+            ],
+            "shared_zones": [
+              "431",
+              "443"
+            ],
+            "shared_ata_6d": [
+              "54-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task carries a single torque sequence for the tie into the pylon rib. The two-piece item adds a joint that has to be torqued before the fitting is loaded, and the order of the two sequences is not obvious from the drawing alone.",
+          "resolution": "Installation re-written with the joint sequence first and a torque check step added after the mount is loaded."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-C-51-70-11-908",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Reached only by similarity: the practice never names a mount fitting and shares no part number, functional item number or zone with the candidate. It was returned on the language of oversize holes in a highly loaded machined fitting."
+          },
+          "rationale": "The general oversize hole and plug practice is what a station will reach for if a joint bolt hole is found oversize during the change. It says nothing about a joint carrying mount shear load, and without a statement a station could plug a hole that has no margin for it.",
+          "resolution": "Statement added to the practice excluding the new joint from plug repair without design office concession."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Validated. The interchangeability break is real and was accepted with a pre-mod and post-mod part list split and a two-standard spares forecast.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,165 @@
+[
+  {
+    "doc_id": "TSM-M-79-30-11-810-813",
+    "doc_type": "TSM",
+    "title": "Engine Oil — Filter Clog Advisory With Normal Oil Pressure",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-02-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "79",
+      "ata_4d": "79-30",
+      "ata_6d": "79-30-11",
+      "title": "Indicating — Oil Pressure Transmitter"
+    },
+    "secondary_ata": [
+      "79-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-12-17",
+      "released": "2020-09-08",
+      "revised": "2023-02-21",
+      "effective": "2023-03-21"
+    },
+    "abstract": "Fault isolation for an oil filter clog advisory raised with normal oil pressure and no debris on the element, covering the transmitter, the housing drain condition and the cold oil case.",
+    "sections": {
+      "purpose": "This procedure isolates an oil filter clog advisory that is not supported by debris on the element or by an oil pressure change, and identifies whether the cause is the indication, the housing or a genuine restriction.",
+      "fault_description": "The advisory appears in the climb, most often on the first sector of the day, and clears in the cruise. Oil pressure and temperature stay normal throughout. The element removed at the next opportunity is clean and the debris examination finds nothing. Aircraft with oil staining on the pylon fairing tend to accumulate more of these reports, because the staining leads to the housing being disturbed more often than it needs to be.",
+      "isolation_procedure": "1. Read the maintenance messages and confirm the advisory came from the differential pressure sensing and not from the oil pressure transmitter. 2. Check the oil temperature at the time of the advisory. Cold oil on a first sector produces a differential that is normal and self clearing; an advisory that only appears cold is not a filter condition. 3. Examine the pylon lower fairing for staining and clean it, so that the next leak check starts from a clean reference. 4. Drain the housing to AMM-M-79-20-12-600-048-A and change the element, examining it for debris against the chart. 5. If debris is found above the chart limit, stop and follow the engine debris procedure; this procedure does not apply. 6. If the element is clean, check the differential pressure sensing line for a restriction and the transmitter for drift against the reference gauge. 7. Replace the oil pressure transmitter if the drift is outside the limit. 8. If the transmitter is inside limits and the element is clean, record the event with the oil temperature and monitor over the next ten sectors before changing anything else.",
+      "dispatch_note": "Dispatch is permitted with the advisory displayed under MEL 79-30-01A provided the oil pressure and quantity indications are normal and the element has been changed and found clean. A repeat advisory with normal oil pressure on three consecutive sectors ends the relief."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7930118322107",
+        "D7920128617478",
+        "AES133605K4"
+      ],
+      "fins": [
+        "14EO",
+        "64EO",
+        "29EO"
+      ],
+      "drawings": [
+        "D79301184918"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "483"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-79-20-12-600-048-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-79-20-12-100-049-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "filter clog advisory",
+      "differential pressure",
+      "cold oil",
+      "transmitter drift",
+      "debris examination"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "79-30-11-810-813",
+      "fault_symptom": "ENG OIL FILTER CLOG advisory in the climb with normal oil pressure",
+      "fault_codes": [
+        "793011007",
+        "793011018"
+      ],
+      "warning_messages": [
+        "ENG 1 OIL FILTER CLOG",
+        "ENG 2 OIL FILTER CLOG"
+      ],
+      "affected_fins": [
+        "14EO",
+        "64EO"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Cold oil differential on the first sector of the day",
+          "probability_pct": 46,
+          "fin": "14EO"
+        },
+        {
+          "cause": "Differential pressure sensing line restriction",
+          "probability_pct": 24,
+          "fin": "64EO"
+        },
+        {
+          "cause": "Oil pressure transmitter drift",
+          "probability_pct": 18,
+          "fin": "64EO"
+        },
+        {
+          "cause": "Genuine element restriction with fine contamination",
+          "probability_pct": 12,
+          "fin": "29EO"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-M-79-20-12-100-049-A",
+      "dispatch": {
+        "mel_item": "79-30-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Oil pressure and quantity normal, element changed and found clean; relief ends after three consecutive advisories"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,203 @@
+[
+  {
+    "doc_id": "MOD-136810",
+    "doc_type": "MOD",
+    "title": "Cabin Pressure Outflow Valve Actuator Duplex Motor and Manual Drive Rework",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2021-03-16",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-30",
+      "ata_6d": "21-30-11",
+      "title": "Pressurization Control — Outflow Valve Control"
+    },
+    "secondary_ata": [
+      "21-30-12",
+      "92-41"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00003",
+          "to": "S01317"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HVA",
+        "SRP",
+        "KRA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01020",
+      "production_cut_in_date": "2018-09-24",
+      "retrofit_via": [
+        "SLN-21-1046"
+      ]
+    },
+    "dates": {
+      "created": "2017-05-09",
+      "released": "2018-07-31",
+      "revised": "2021-03-16",
+      "effective": "2021-04-05"
+    },
+    "abstract": "A duplex motor and a reworked manual drive for the outflow valve actuator, after single-motor failures left crews depending on a manual control that was slow and hard to modulate.",
+    "sections": {
+      "reason": "Between 2013 and 2017 the fleet recorded thirty-one outflow valve actuator failures in flight, of which nine required the crew to take manual control of cabin pressure for the remainder of the sector. Crew reports from those nine were consistent: the manual mode moves the valve so slowly that a descent has to be flown shallower than planned, and the rate is not modulated so the cabin arrives with a step. Two of the nine ended with a cabin rate exceedance and an engineering inspection. The actuator itself is reliable in absolute terms but the consequence of its failure was disproportionate.",
+      "description": "The actuator D2130114939430 gains a second, independent motor winding driven from the opposite essential bus, so that a single winding or a single drive channel failure no longer removes automatic control. The manual drive is regeared to give full valve travel in eighteen seconds instead of fifty-two and its control is changed from a two-position switch to a proportional rocker. The accumulator D2130117925957 is retained and its charge pressure is raised. The forward duct D2130115062812 is re-clamped with cushioned loop clamps AGS958367K4 because the second motor cable is routed alongside it, and countersunk screws AGS149379-16 and AGS336823-99 secure the new cable tray. Filter 141HM and manifold 6820HQ in the lower position are refitted. Work is in the avionics bay outboard area in zone 165, at the forward cabin position in zone 242 and at the aft cabin equipment area in zone 273. Detail is on drawing D21301105897.",
+      "effects": "Mass increase of 3.1 kg. Direct current load rises by twenty-eight volt-amperes on the second essential bus during valve movement only, which is inside the existing margin but is recorded in the load analysis. The actuator is not interchangeable with the original because the connector gains four contacts. In-flight failures requiring manual control fall by an order of magnitude in the trial population. The flight crew abnormal procedure for excessive cabin altitude changes, because the manual drive now behaves differently, and the dispatch condition for one motor inoperative is new.",
+      "embodiment_note": "Production cut-in at MSN S01020. Retrofit is thirty-two manhours at a C-check, including the second bus feed which is run from an existing spare in the panel. The removed actuator is returned for winding analysis."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2130114939430",
+        "D2130115062812",
+        "D2130117925957",
+        "AGS149379-16",
+        "AGS336823-99",
+        "AGS958367K4"
+      ],
+      "fins": [
+        "141HM",
+        "6820HQ"
+      ],
+      "drawings": [
+        "D21301105897"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "242",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01020"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-21-1046",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-S-21-30-11-000-051-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-S-21-30-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "FCOM-S-PRO-21-30-02",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "outflow valve",
+      "duplex motor",
+      "manual drive",
+      "cabin rate",
+      "essential bus"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 136810,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.841",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 3.1,
+      "balance_impact": "Aft of the reference datum; negligible",
+      "electrical_load_impact_va": 28,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D2130117925957",
+        "AGS958367K4",
+        "AGS336823-99"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2130114939430",
+        "D2130115062812"
+      ],
+      "fins_affected": [
+        "141HM",
+        "6820HQ"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 190,
+      "estimated_cost_keur": 940,
+      "lead_time_weeks": 44,
+      "production_impact": "Cut-in at MSN S01020",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

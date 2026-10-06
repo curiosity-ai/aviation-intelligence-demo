@@ -1,0 +1,331 @@
+[
+  {
+    "doc_id": "TSM-C-44-20-13-810-805",
+    "doc_type": "TSM",
+    "title": "In-Seat Power Dropout in Blocks During Boarding — Fault Isolation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-01-23",
+      "reason": "Original issue of the in-seat power block dropout isolation procedure.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-13",
+      "title": "Inflight Entertainment — IFE Power Supply"
+    },
+    "secondary_ata": [
+      "24-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-09-22",
+      "released": "2017-01-23",
+      "revised": "2017-01-23",
+      "effective": "2017-02-13"
+    },
+    "abstract": "Isolation of in-seat power dropouts that affect whole blocks of seats during boarding, working through the supply unit, the seat harness and the socket module to find the failed item.",
+    "sections": {
+      "purpose": "This procedure isolates in-seat power dropouts that affect a block of seats rather than an individual socket, and gives the checks that identify supply current limiting.",
+      "fault_description": "Sockets in a block of consecutive seat rows go dead together during boarding, most often in the aft cabin, and come back after a few minutes with no crew action. A single dead socket, or a block that does not recover, has a different cause and is not covered here. The dropout is almost always reported on ground power with the packs running and with a high proportion of passengers charging devices at the same time.",
+      "isolation_procedure": "1. Apply the socket load test set to the affected block and load every socket. 2. Measure the supply output voltage at the block feed while the load is applied and hold for ten minutes. 3. If the output collapses and recovers cyclically, the supply is entering current limit: check the seat harness for a low resistance fault that adds load to the block. 4. If no harness fault is found, replace the supply unit with a serviceable item of the same rating and repeat the load test. 5. If the output is stable at the block feed, measure at the first and the last socket of the block to find the volt drop. 6. If the volt drop exceeds the limit in the task, the seat harness or a connector in it is the cause. 7. If every measurement passes, replace the socket module for the affected block and repeat the load test. 8. If the block still drops, replace the block feed connector and repeat the load test.",
+      "dispatch_note": "Dispatch is permitted with in-seat power inoperative in one or more blocks under the applicable minimum equipment list item, with the affected sockets placarded. There is no operational restriction and no flight deck indication is associated with this item."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420139171185",
+        "D4420139649717",
+        "D2450122851975"
+      ],
+      "fins": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "drawings": [
+        "D24501217521"
+      ],
+      "software": [],
+      "zones": [
+        "252",
+        "272",
+        "922"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-44-20-13-400-009-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-24-50-12-810-804",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "seat power dropout",
+      "current limit",
+      "volt drop",
+      "seat harness",
+      "socket module"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "44-20-13-810-805",
+      "fault_symptom": "In-seat power lost in blocks of rows during boarding, recovers unattended",
+      "fault_codes": [
+        "442013004",
+        "442013017"
+      ],
+      "warning_messages": [
+        "CABIN IFE POWER FAULT"
+      ],
+      "affected_fins": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Supply unit entering current limit during boarding",
+          "probability_pct": 58,
+          "fin": "1RM"
+        },
+        {
+          "cause": "Low resistance fault in the seat harness adding load to the block",
+          "probability_pct": 19,
+          "fin": "335RM"
+        },
+        {
+          "cause": "Excessive volt drop along the seat harness to the last socket",
+          "probability_pct": 14,
+          "fin": "335RM"
+        },
+        {
+          "cause": "Socket module failure for the affected block",
+          "probability_pct": 9,
+          "fin": "1RM"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-C-44-20-13-400-009-A",
+      "dispatch": {
+        "mel_item": "44-20-05A",
+        "dispatchable": true,
+        "dispatch_condition": "Affected sockets placarded inoperative, no operational restriction"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-C-44-20-13-810-805",
+    "doc_type": "TSM",
+    "title": "In-Seat Power Dropout in Blocks During Boarding — Fault Isolation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-17",
+      "reason": "Procedure re-worded to separate a genuine component fault from the ground supply limit case, which is a design condition and not a defect.",
+      "raised_by_pawo": "PAWO-111138-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-13",
+      "title": "Inflight Entertainment — IFE Power Supply"
+    },
+    "secondary_ata": [
+      "24-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-09-22",
+      "released": "2017-01-23",
+      "revised": "2026-07-17",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Isolation of in-seat power dropouts that affect whole blocks of seats during boarding, distinguishing supply current limiting from a seat harness or socket module fault.",
+    "sections": {
+      "purpose": "This procedure isolates in-seat power dropouts that affect a block of seats rather than an individual socket, and gives the checks that identify supply current limiting.",
+      "fault_description": "Sockets in a block of consecutive seat rows go dead together during boarding, most often in the aft cabin, and come back after a few minutes with no crew action. A single dead socket, or a block that does not recover, has a different cause and is not covered here. The dropout is almost always reported on ground power with the packs running and with a high proportion of passengers charging devices at the same time. Read that pattern carefully before any component is disturbed: on a refitted cabin it usually means the installation is being asked for more than it was sized to give, which is a limit and not a fault. Nothing is broken, no replacement will change it, and the answer is an engineering one. The steps below establish which of the two situations is in front of you before they go anywhere near a component.",
+      "isolation_procedure": "1. Establish the fitted socket count for the cabin from the seat plan and verify it physically if the cabin has been refitted. 2. Read the supply unit rating from its label and compare it with the fitted socket count. 3. If the fitted count exceeds the rating, supply current limiting is the probable cause and no component is faulty. 4. In that case record the finding and raise the supply rating question with the operator's engineering department; do not replace the supply with an identical unit. 5. If the fitted count is inside the rating, apply the socket load test set to the affected block and load every socket. 6. Measure the supply output voltage at the block feed while the load is applied and hold for ten minutes. 7. If the output collapses and recovers cyclically, the supply is entering current limit: check the seat harness for a low resistance fault that adds load. 8. If the output is stable at the block feed, measure at the first and the last socket of the block to find the volt drop. 9. If the volt drop exceeds the limit in the task, the seat harness or a connector in it is the cause. 10. If every measurement passes, replace the socket module for the affected block and repeat the load test.",
+      "dispatch_note": "Dispatch is permitted with in-seat power inoperative in one or more blocks under the applicable minimum equipment list item, with the affected sockets placarded. There is no operational restriction and no flight deck indication is associated with this item. Where step 3 has identified the ground supply limit case, no defect is raised against the aircraft: the finding is recorded against the cabin configuration and passed to the operator's engineering department, because the aircraft is serviceable."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420139171185",
+        "D4420139649717",
+        "D2450122851975"
+      ],
+      "fins": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "drawings": [
+        "D24501217521"
+      ],
+      "software": [],
+      "zones": [
+        "252",
+        "272",
+        "922"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-44-20-13-400-009-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-24-50-12-810-804",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111138",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "seat power dropout",
+      "current limit",
+      "socket count",
+      "volt drop",
+      "seat harness"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "44-20-13-810-805",
+      "fault_symptom": "In-seat power lost in blocks of rows during boarding, recovers unattended",
+      "fault_codes": [
+        "442013004",
+        "442013017"
+      ],
+      "warning_messages": [
+        "CABIN IFE POWER FAULT"
+      ],
+      "affected_fins": [
+        "1RM",
+        "335RM",
+        "403XU2"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Supply current limiting because the fitted socket count exceeds the unit rating",
+          "probability_pct": 61,
+          "fin": "1RM"
+        },
+        {
+          "cause": "Low resistance fault in the seat harness adding load to the block",
+          "probability_pct": 17,
+          "fin": "335RM"
+        },
+        {
+          "cause": "Excessive volt drop along the seat harness to the last socket",
+          "probability_pct": 13,
+          "fin": "335RM"
+        },
+        {
+          "cause": "Socket module failure for the affected block",
+          "probability_pct": 9,
+          "fin": "1RM"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-C-44-20-13-400-009-A",
+      "dispatch": {
+        "mel_item": "44-20-05A",
+        "dispatchable": true,
+        "dispatch_condition": "Affected sockets placarded inoperative, no operational restriction"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

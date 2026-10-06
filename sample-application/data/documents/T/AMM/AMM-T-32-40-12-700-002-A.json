@@ -1,0 +1,357 @@
+[
+  {
+    "doc_id": "AMM-T-32-40-12-700-002-A",
+    "doc_type": "AMM",
+    "title": "Brake and Steering Control System — Functional Test",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2008-10-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40-11",
+      "32-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-12-26",
+      "released": "2008-10-03",
+      "revised": "2008-10-03",
+      "effective": "2008-10-31"
+    },
+    "abstract": "Functional test of the brake and steering control units after a unit or software change, covering the anti-skid channels, the parking brake, the alternate braking mode and the cross-channel comparison.",
+    "sections": {
+      "purpose": "This task gives the functional test of the brake and steering control system. Do it after a control unit replacement, after a software or parameter load, and after any brake assembly change on a mixed-standard aircraft.",
+      "job_setup_note": "The aircraft must be on jacks with all wheels free to rotate, or the wheel-free part of the test must be omitted and recorded as such. Both control units must report the same software standard before the test starts; a mismatch will fail the cross-channel comparison for reasons that have nothing to do with the hardware. The pin programming of each unit is set at installation and is confirmed as part of this test. Station one person on the flight deck and one at the landing gear.",
+      "procedure": "Put the aircraft on jacks and confirm that all wheels turn freely. Apply ground power and pressurise the hydraulic systems. Record the software part numbers reported by both units at the maintenance terminal. Confirm the pin programming at each unit connector against the strapping diagram: pins 12, 14 and 19 made to ground and pin 15 open. WARNING: CONFIRM THAT ALL PERSONNEL AND EQUIPMENT ARE CLEAR OF THE WHEELS BEFORE THE FIRST BRAKE APPLICATION. THE WHEELS ARE DRIVEN DURING THE ANTI-SKID PART OF THE TEST. Apply and release the brakes from the flight deck and confirm the pressure at each position. Do the cross-channel comparison check and confirm that the two units agree within 40 milliseconds and 3 bar, the tolerance in the illustration. Drive each wheel in turn and apply the brake, confirming that the anti-skid channel modulates and that the wear indication at FIN 3278WS changes state. CAUTION: DO NOT RUN THE ANTI-SKID PART OF THE TEST FOR MORE THAN THREE CONSECUTIVE APPLICATIONS AT ONE POSITION. THE BRAKE WILL HEAT AND THE TEMPERATURE PROTECTION WILL INHIBIT THE REMAINDER OF THE TEST. Select the alternate braking mode and repeat the pressure check at each position. Apply the parking brake and record the pressure decay over fifteen minutes. Return to the normal mode and confirm that no maintenance message remains.",
+      "close_out": "Depressurise the hydraulic systems and remove ground power. Lower the aircraft from jacks. Record the pressure at each position in both modes, the parking brake decay, the pin programming confirmed and the reported software part numbers. Where the cross-channel comparison fails, do not release the aircraft and refer to the applicable fault isolation procedure."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126923160",
+        "D3240129015656",
+        "AGS146031K9"
+      ],
+      "fins": [
+        "2GM2",
+        "3278WS",
+        "891GM5"
+      ],
+      "drawings": [
+        "D32401274246"
+      ],
+      "software": [
+        "LA7RED5A42D",
+        "LD8R083EA4E",
+        "LF1R11939FF"
+      ],
+      "zones": [
+        "734",
+        "754",
+        "711"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142240",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-32-40-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake control",
+      "functional test",
+      "anti-skid",
+      "cross-channel comparison",
+      "parking brake decay"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Ashcombe",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "32-40-12-700-002-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. The strapping diagram and the comparison tolerance of the illustration apply at every position.",
+      "manhours": 12.0,
+      "personnel": 3,
+      "elapsed_time_hours": 6.0,
+      "access": {
+        "zones": [
+          "734",
+          "754",
+          "711"
+        ],
+        "access_panels": [
+          "734BL",
+          "754AR",
+          "711AR"
+        ],
+        "doors": [
+          "Left main gear door",
+          "Nose gear door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Confirm that all personnel and equipment are clear of the wheels before the first brake application.",
+          "Do not exceed three consecutive anti-skid applications at one position.",
+          "Confirm that both units report the same software standard before you start."
+        ],
+        "tooling": [
+          {
+            "reference": "98D32401-121",
+            "description": "Maintenance terminal interface cable"
+          },
+          {
+            "reference": "98D32401-134",
+            "description": "Wheel drive unit, test"
+          },
+          {
+            "reference": "98D32401-142",
+            "description": "Brake pressure gauge set"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-32-40-11-400-001-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 2
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-T-32-40-12-700-002-A",
+    "doc_type": "AMM",
+    "title": "Brake and Steering Control System — Functional Test",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2017-11-14",
+      "reason": "Pin strapping and the cross-channel comparison tolerance are now stated per control unit standard in a table read from the unit part number.",
+      "raised_by_pawo": "PAWO-142240-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40-11",
+      "32-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-12-26",
+      "released": "2008-10-03",
+      "revised": "2017-11-14",
+      "effective": "2017-12-12"
+    },
+    "abstract": "Functional test of the brake and steering control units after a unit or software change, covering the anti-skid channels, the parking brake, the alternate braking mode and the cross-channel comparison, with the strapping and the comparison tolerance taken per unit standard.",
+    "sections": {
+      "purpose": "This task gives the functional test of the brake and steering control system. Do it after a control unit replacement, after a software or parameter load, and after any brake assembly change on a mixed-standard aircraft.",
+      "job_setup_note": "The aircraft must be on jacks with all wheels free to rotate, or the wheel-free part of the test must be omitted and recorded as such. Both control units must report the same software standard before the test starts; a mismatch will fail the cross-channel comparison for reasons that have nothing to do with the hardware. Read the part number of each control unit before anything else: the strapping and the comparison tolerance are stated per unit standard, and a unit strapped to the other standard will pass every step of this test and behave incorrectly at the first rejected take-off. Station one person on the flight deck and one at the landing gear.",
+      "procedure": "Put the aircraft on jacks and confirm that all wheels turn freely. Apply ground power and pressurise the hydraulic systems. Read and record the part number of each control unit and select the row of the strapping table that matches it. Record the software part numbers reported by both units at the maintenance terminal. Confirm the pin programming at each unit connector against the strapping table row selected; the two standards do not share a strapping pattern and the original diagram must not be used on a requalified unit. WARNING: CONFIRM THAT ALL PERSONNEL AND EQUIPMENT ARE CLEAR OF THE WHEELS BEFORE THE FIRST BRAKE APPLICATION. THE WHEELS ARE DRIVEN DURING THE ANTI-SKID PART OF THE TEST. Apply and release the brakes from the flight deck and confirm the pressure at each position. Do the cross-channel comparison check against the tolerance stated for the unit standard fitted; the requalified unit samples faster and its tolerance is correspondingly tighter. Drive each wheel in turn and apply the brake, confirming that the anti-skid channel modulates and that the wear indication at FIN 3278WS changes state. CAUTION: DO NOT RUN THE ANTI-SKID PART OF THE TEST FOR MORE THAN THREE CONSECUTIVE APPLICATIONS AT ONE POSITION. THE BRAKE WILL HEAT AND THE TEMPERATURE PROTECTION WILL INHIBIT THE REMAINDER OF THE TEST. Select the alternate braking mode and repeat the pressure check at each position. Apply the parking brake and record the pressure decay over fifteen minutes. Return to the normal mode and confirm that no maintenance message remains.",
+      "close_out": "Depressurise the hydraulic systems and remove ground power. Lower the aircraft from jacks. Record the control unit part numbers and the strapping table row used, the pressure at each position in both modes, the parking brake decay and the reported software part numbers. Where the cross-channel comparison fails, do not release the aircraft and refer to the applicable fault isolation procedure."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126923160",
+        "D3240129015656",
+        "AGS146031K9"
+      ],
+      "fins": [
+        "2GM2",
+        "3278WS",
+        "891GM5"
+      ],
+      "drawings": [
+        "D32401274246"
+      ],
+      "software": [
+        "LA7RED5A42D",
+        "LD8R083EA4E",
+        "LF1R11939FF"
+      ],
+      "zones": [
+        "734",
+        "754",
+        "711"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142240",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-32-40-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake control",
+      "functional test",
+      "unit strapping",
+      "cross-channel comparison",
+      "parking brake decay"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Ashcombe",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "32-40-12-700-002-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. The strapping table and the comparison tolerance are keyed on the control unit part number; use the parameter pairing table of the illustration to confirm that the loaded standard matches the brake standard fitted.",
+      "manhours": 12.0,
+      "personnel": 3,
+      "elapsed_time_hours": 6.0,
+      "access": {
+        "zones": [
+          "734",
+          "754",
+          "711"
+        ],
+        "access_panels": [
+          "734BL",
+          "754AR",
+          "711AR"
+        ],
+        "doors": [
+          "Left main gear door",
+          "Nose gear door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Confirm that all personnel and equipment are clear of the wheels before the first brake application.",
+          "Do not exceed three consecutive anti-skid applications at one position.",
+          "Confirm that both units report the same software standard before you start.",
+          "Read the control unit part number before the strapping is confirmed."
+        ],
+        "tooling": [
+          {
+            "reference": "98D32401-121",
+            "description": "Maintenance terminal interface cable"
+          },
+          {
+            "reference": "98D32401-134",
+            "description": "Wheel drive unit, test"
+          },
+          {
+            "reference": "98D32401-142",
+            "description": "Brake pressure gauge set"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-32-40-11-400-001-A"
+      ],
+      "steps": 14,
+      "warnings": 1,
+      "cautions": 2
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

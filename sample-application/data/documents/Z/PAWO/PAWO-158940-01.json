@@ -1,0 +1,377 @@
+[
+  {
+    "doc_id": "PAWO-158940-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Datalink Router Standard C with Media Arbitration and Link Annunciation",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "34-50-11",
+      "46-20"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [
+        "Z09301",
+        "Z08381",
+        "Z06835",
+        "Z12092",
+        "Z11317"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SBW",
+        "SDA",
+        "GVA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-04",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the standard C datalink router, covering the surveillance standard that shares the concentrator port, the certification basis for in-session media switching and the crew-facing description of connection monitoring.",
+    "sections": {
+      "objective": "Establish whether the second concentrator bus port that media arbitration needs is already committed to another function, whether the existing datalink certification basis covers switching media inside an open session, and what the new flight deck annunciation does to the alerting philosophy already agreed for this variant.",
+      "scope_note": "The search covers ATA 23-70 as the primary chapter, 34-50 because the surveillance standard shares the avionics rack column and its concentrator, and 46-20 because the airline data application on the electronic flight bag competes for the same antenna feeders. ATA 92-21 avionics bay wiring was searched and retained only as a precision test. The search was restricted to the five long-sector aircraft in the operators' fleets, because the whole business case is built on the oceanic network.",
+      "method_note": "Entity linking was seeded from the two part numbers, the two FINs, the single schematic and the three zones on the candidate. Semantic similarity used three seed phrases about a connection lost without indication, about media selection held for the life of a session and about surveillance and communication sharing a data path. Two of the six findings came from similarity alone and neither shares a single identifier with the candidate; both are the kind of impact that an engineer working from the parts list would never reach.",
+      "findings_summary": "Six items are confirmed and one blocks. The blocking item is the certification basis: the surveillance standard released for these aircraft was approved against a communications and surveillance performance case that assumes a fixed media path for the duration of a connection, and arbitration inside an open session is outside that case. It is not a design problem; it is a question of whether the existing approval can be extended or whether a new one is needed, and the answer decides the programme. The crew-facing description of connection monitoring is the second significant finding and was reached only by similarity: it currently instructs crews to check the connection periodically because there is no annunciation, and the candidate makes that instruction obsolete. A shared titanium bolt standard links the candidate to a passenger door repair scheme, which is an entity hit with no engineering content and is recorded to show the search working and failing gracefully.",
+      "next_steps": "Obtain a certification position on in-session media switching against the existing communications and surveillance approval; this is the critical path item. Confirm with the avionics architecture office that the second concentrator port is uncommitted on all five aircraft. Raise the crew entry review with flight operations support and align it with the alerting philosophy agreed for the variant. Screen the antenna feeder budget against the electronic flight bag airline data link."
+    },
+    "entities": {
+      "part_numbers": [
+        "AGS119203K9",
+        "D2370128065382"
+      ],
+      "fins": [
+        "252RN",
+        "9407RN"
+      ],
+      "drawings": [
+        "D23701172876"
+      ],
+      "software": [],
+      "zones": [
+        "123",
+        "145",
+        "211"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z09301",
+        "Z08381"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-158940",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-Z-260388",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "media arbitration",
+      "certification basis",
+      "link annunciation",
+      "concentrator port"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-158940-01",
+      "subject_mod": "MOD-158940",
+      "source_io": "IO-Z-260388",
+      "pawo_status": "RAISED",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-04",
+      "due_date": "2026-08-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 165,
+        "spent_manhours": 34
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "23",
+          "34",
+          "46",
+          "92"
+        ],
+        "ata_4d": [
+          "23-70",
+          "34-50",
+          "46-20",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "SRM",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "AGS119203K9",
+            "D2370128065382"
+          ],
+          "fins": [
+            "252RN",
+            "9407RN"
+          ],
+          "drawings": [
+            "D23701172876"
+          ],
+          "zones": [
+            "123",
+            "145",
+            "211"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "connection to air traffic control lost without any flight deck indication",
+          "media path selected at log-on and held for the life of a session",
+          "surveillance and communication sharing one data concentrator"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Obtain a certification position on in-session media switching",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm the second concentrator port is uncommitted",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Screen crew-facing content on connection monitoring",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Test entity hits outside the chapter for precision",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-155126",
+          "doc_type": "MOD",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "BLOCKING",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "34-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The surveillance installation released for these aircraft was approved against a communications and surveillance performance case that assumes a fixed media path for the duration of a connection. Arbitration inside an open session falls outside that case and the question is whether the existing approval extends or whether a new one is required.",
+          "resolution": "Obtain a written certification position before the design is committed; the answer decides whether this is a build standard change or a new approval."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "FCOM-Z-DSC-23-70-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew entry describes requesting a log-on, confirming an authority identifier and checking the connection every twenty minutes; the candidate describes round trip time measurement, error rate and a second bus port. The two share no identifier and almost no vocabulary, and only the subject matter connects them."
+          },
+          "rationale": "The crew description instructs crews to check the connection periodically precisely because the earlier standard gives no annunciation. The candidate annunciates the loss directly and the periodic check becomes unnecessary, so the instruction is obsolete on modified aircraft and misleading on a mixed fleet.",
+          "resolution": "Rewrite the crew entry with a mixed fleet statement and issue it with the modification, not after it."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "ZPH-34-1211",
+          "doc_type": "SB",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents are about an application software standard that changes how position and message data reach the ground, and both are written for the same five aircraft, but they share no part number, no FIN and no zone. The overlap is one of function rather than of hardware."
+          },
+          "rationale": "The surveillance application load changes the reporting path that the datalink router will now arbitrate. Embodied separately, the two changes can each be shown to work and still produce a combination that has never been tested.",
+          "resolution": "Establish a combined test case with the surveillance programme before either change is released to the five aircraft."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-Z-52-10-11-912",
+          "doc_type": "SRM",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS119203K9"
+            ],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The passenger door hinge arm rib repair installs the same titanium bolt standard at its hinge load positions. The subjects have nothing in common and no aircraft is affected by both at once, but the shared standard is real and any parts-driven search will return it.",
+          "resolution": "No engineering action. Recorded so that the search result is understood as a precision limit rather than a miss."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-Z-23-70-11-700-030-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS119203K9",
+              "D2370128065382"
+            ],
+            "shared_fins": [
+              "252RN",
+              "9407RN"
+            ],
+            "shared_zones": [
+              "123",
+              "145",
+              "211"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The operational test explicitly forbids forcing a media switch during an open session on the earlier standard and tests each path from a fresh log-on. On the candidate that restriction disappears and the test must instead exercise the arbitration itself.",
+          "resolution": "Rewrite the test task around in-session arbitration and add an acceptance criterion for the annunciation delay."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "TSM-Z-23-70-11-812-812",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "9407RN"
+            ],
+            "shared_zones": [
+              "145"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure is built around the reported failure time being later than the actual loss, which is a consequence of there being no annunciation. On the candidate the two times converge and the procedure's opening comparison becomes redundant.",
+          "resolution": "Simplify the opening steps of the procedure once the annunciation behaviour is fixed."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "WDM-Z-92-21-11",
+          "doc_type": "WDM",
+          "reason": "Returned by the shared avionics bay zones and by the rack column feed vocabulary, but the candidate adds no unit and no feeder to a column; it uses a bus port that already exists. The sheet's column feed capacity statement is not approached and no harness is disturbed."
+        },
+        {
+          "doc_id": "ZPH-34-1207",
+          "doc_type": "SB",
+          "reason": "Same five aircraft, same avionics bay and almost identical wording about a receiver installation and position reporting, but it installs surveillance hardware on a different chapter and shares no part number, no FIN and no bus interface with the datalink router."
+        }
+      ],
+      "conclusion": "Not yet issued. The certification position on in-session media switching is the item everything else waits on; the crew entry and the surveillance interaction are both material and neither was found by entity linking.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

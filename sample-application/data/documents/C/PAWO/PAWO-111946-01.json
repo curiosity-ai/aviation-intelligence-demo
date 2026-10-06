@@ -1,0 +1,413 @@
+[
+  {
+    "doc_id": "PAWO-111946-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Duct Pressure Threshold and Sensing Damping Change",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-20",
+      "ata_6d": "36-20-11",
+      "title": "Indicating — Bleed Monitoring Computer"
+    },
+    "secondary_ata": [
+      "36-20-12",
+      "21-60"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00205",
+          "to": "C00612"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-06",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the bleed caution threshold and sensing damping change, covering the duct burst detection case it must not weaken, the pylon zone it shares with an engine mount change and the crew procedure written around the nuisance.",
+    "sections": {
+      "objective": "Establish whether the extended confirmation time weakens the duct burst detection case already accepted for the four-position valve standard, whether the smaller restrictor orifice is compatible with the position sensing now fitted, whether the parameter load can be released without the boot load, and what content assumes the caution appears in the climb.",
+      "scope_note": "The search covered ATA 36 as the primary chapter with ATA 21 as secondary for the trim air interface, and ATA 71 was added after the zone seed returned the pylon. ATA 45 was included because the fault history is where the pattern is established. Structural chapters were excluded, and so was ATA 80, which was a mistake in the first pass and was corrected: the starter duty cycle argument turns on bleed availability and is now included in the non-findings rather than being unsearched.",
+      "method_note": "Entity linking was run from the four functional item numbers, the two software part numbers and the three zones. Similarity was run on the operator wording about a caution that appears and clears itself, deliberately without any system name in the seed, which is what returned the pressurisation change in a different chapter. The two methods returned almost disjoint sets on this analysis, which is unusual and is worth showing at the review.",
+      "findings_summary": "Six items are confirmed and one is blocking. The blocking item is the pylon: the forward engine mount change wants the same pylon zone for a deeper heat shield, and the sensing line run that this change re-restricts passes through it. Neither team knew about the other. The most valuable finding came from similarity alone and is not a conflict at all: a pressurisation change frozen last month is doing exactly the same thing in a different chapter, extending a limiter time constant so that a transient no longer produces an indication, and it has already been through the certification argument this change will have to make. That argument is reusable. The remaining findings are the maintenance and trouble shooting content built around replacing a sensor, both of which stop making sense once the damping is corrected, and a minor software item about whether the parameter load can go without the boot load.",
+      "next_steps": "Take the certification argument from the pressurisation change and reuse it rather than starting again. Settle the pylon allocation with the powerplant office before either design is frozen. Confirm with the supplier whether the parameter load can be released independently of the boot load, because the operator has asked specifically for a load-only first stage. Re-issue the trouble shooting procedure before the parameter load reaches the fleet, not after."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3620127370378",
+        "FAR419327-35",
+        "D3620110073248",
+        "D3620115081319",
+        "EN521096K2"
+      ],
+      "fins": [
+        "4PU9",
+        "883PU",
+        "9PN1",
+        "3PN"
+      ],
+      "drawings": [
+        "D36201137521",
+        "D36201229644"
+      ],
+      "software": [
+        "LD1C8FF1C57",
+        "LC2CEC0676C"
+      ],
+      "zones": [
+        "531",
+        "583",
+        "443"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00273",
+        "C00544"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111946",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-260233",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "bleed caution",
+      "confirmation time",
+      "restrictor",
+      "nuisance message"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111946-01",
+      "subject_mod": "MOD-111946",
+      "source_io": "IO-C-260233",
+      "pawo_status": "RAISED",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-03-06",
+      "due_date": "2026-08-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EAAM",
+          "EYIS"
+        ],
+        "estimated_manhours": 80,
+        "spent_manhours": 29
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "36",
+          "21",
+          "71",
+          "45"
+        ],
+        "ata_4d": [
+          "36-20",
+          "36-10",
+          "21-30",
+          "71-20",
+          "45-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "C00205",
+          "to": "C00612"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3620127370378",
+            "FAR419327-35",
+            "D3620110073248"
+          ],
+          "fins": [
+            "4PU9",
+            "883PU",
+            "9PN1",
+            "3PN"
+          ],
+          "drawings": [
+            "D36201137521"
+          ],
+          "zones": [
+            "531",
+            "583",
+            "443"
+          ],
+          "software": [
+            "LD1C8FF1C57",
+            "LC2CEC0676C"
+          ]
+        },
+        "similarity_seeds": [
+          "a caution that appears at the same point in every climb and clears itself before the top",
+          "raising a threshold so that a normal transient stops producing a warning"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Entity search on the sensing chain and the two software loads",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Similarity search on the nuisance caution wording",
+          "method": "SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the pylon zone against powerplant changes",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Confirm the parameter and boot load release dependency",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T05",
+          "title": "Review the duct burst detection case",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111995",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "443"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The forward engine mount change fits a deeper heat shield that wraps the link ends in the same pylon zone through which the duct pressure sensing line runs. Its own open points ask whether the deeper shield clears the pylon bleed duct route. Neither team had found the other, and the two documents have nothing in common except the zone: one is about bushing liner temperature and the other about a caution threshold.",
+          "resolution": "Hold a joint clearance review with the powerplant office and fix the sensing line route before either design is frozen."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "FCOM-C-PRO-36-10-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "No shared identifier. The crew entry is written about waiting for a valve to show open and about actioning a caution in full even when it clears itself; the modification is written about orifice sizes, confirmation times and parameter loads."
+          },
+          "rationale": "The crew procedure explicitly tells the pilot that a caution which clears itself has been a known nuisance on part of the fleet, that it must still be actioned, and that the event must be written up with the level and the temperature. Those technical log entries are the evidence base for this very change. Once the caution stops appearing the instruction is stale and the evidence stream stops.",
+          "resolution": "Re-word the crew entry at embodiment and tell the operator explicitly that the reporting stream is being closed, so that the absence of reports is not later read as an unrelated improvement."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-111244",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "443"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The four-position valve standard introduced direct position reporting and its duct burst detection case was accepted on the basis of the current confirmation time. Extending that time changes an input to an argument that has already been made and accepted, and the two changes therefore have to be assessed together rather than separately.",
+          "resolution": "Re-run the duct burst detection case with the extended confirmation time and submit it as an amendment to the accepted argument rather than as new work."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-C-36-20-11-200-031-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3620127370378",
+              "FAR419327-35",
+              "D3620110073248",
+              "D3620115081319",
+              "EN521096K2"
+            ],
+            "shared_fins": [
+              "4PU9",
+              "883PU",
+              "9PN1",
+              "3PN"
+            ],
+            "shared_zones": [
+              "531",
+              "583",
+              "443"
+            ],
+            "shared_ata_6d": [
+              "36-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The inspection task already carries two acceptance bands, one for each restrictor. It was written when the smaller orifice was a proposal rather than a released standard, and its band for that orifice has never been validated against hardware.",
+          "resolution": "Validate the second acceptance band during the first embodiments and re-issue the task with measured values."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "TSM-C-36-20-11-810-816",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3620127370378",
+              "FAR419327-35",
+              "D3620110073248"
+            ],
+            "shared_fins": [
+              "4PU9",
+              "883PU",
+              "9PN1",
+              "3PN"
+            ],
+            "shared_zones": [
+              "531",
+              "583",
+              "443"
+            ],
+            "shared_ata_6d": [
+              "36-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure is built around the pattern this change removes: it tells the technician to extract every occurrence with its altitude and temperature and to look for the cluster. Once the caution no longer appears in the climb the whole entry condition disappears and a technician following it will find nothing to work with.",
+          "resolution": "Re-issue the procedure with a post-modification entry condition before the parameter load reaches the fleet, not after."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-111407",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Two changes in different chapters, sharing no identifier, both of which lengthen or re-shape a limiter time constant so that a transient in a narrow part of the envelope stops producing an indication the crew reacts to."
+          },
+          "rationale": "The pressurisation change has already been through the certification argument that a transient which recovers by itself does not need to be annunciated, and it is frozen with that argument accepted. This change has to make the same argument in a different chapter and can reuse it rather than starting again.",
+          "resolution": "Obtain the certification submission from the pressurisation team and reuse the reasoning, adjusting only the system-specific evidence."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111356",
+          "doc_type": "MOD",
+          "reason": "Returned by the entity search on the pylon zone and by the semantic search on bleed availability and duty cycles. The starter change is about clutch re-engagement speed and cooling periods; it consumes bleed air but it neither reads nor is read by the duct pressure sensing chain, and no functional item is common."
+        },
+        {
+          "doc_id": "TSM-C-21-30-11-812-803",
+          "doc_type": "TSM",
+          "reason": "A close semantic match on the phrase 'recovers itself without crew action' and on the whole idea of a transient that is a characteristic rather than a fault. It is a cabin rate procedure with no bleed content, no shared functional item and no shared zone, and treating it as a finding would mislead the review."
+        }
+      ],
+      "conclusion": "Not yet issued. The pylon clearance is blocking and the reusable certification argument from the pressurisation change is the most valuable thing the analysis has produced.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

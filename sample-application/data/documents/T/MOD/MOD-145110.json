@@ -1,0 +1,196 @@
+[
+  {
+    "doc_id": "MOD-145110",
+    "doc_type": "MOD",
+    "title": "Second Generation Entertainment Head End Architecture and Rack Rework",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-04-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-12",
+      "title": "Inflight Entertainment — Head End Server"
+    },
+    "secondary_ata": [
+      "44-20-13",
+      "44-30"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00218"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "TTN-44-1042"
+      ]
+    },
+    "dates": {
+      "created": "2021-03-25",
+      "released": "2022-04-14",
+      "revised": null,
+      "effective": "2022-05-09"
+    },
+    "abstract": "Introduction of the second generation head end architecture, in which content serving and network switching move onto a single chassis and the equipment rack is reworked to carry the higher continuous power the new units draw.",
+    "sections": {
+      "reason": "The interim server standard restored reliability but left the cabin on an architecture that could not carry wireless content delivery, and operators refitting their cabins were being asked to buy an entertainment system already two generations behind what they were selling. In parallel, three operators reported that the rack feeder ran close to its continuous rating whenever the cabin was fully loaded, which limited how much additional cabin equipment could be hung off the same distribution.",
+      "description": "The interim server and the separate network switch are replaced by a single second generation chassis occupying the same rack space. The partition D4420121334529 is retained, the upper partition D4420125490996 is replaced by a ventilated item, and the stowage bin D4420129816843 introduced by the interim standard is reused. Anchor nuts EN258434K3 are renewed at every rack front attachment. The rack feeder is uprated by replacing the distribution tail with a larger conductor and by moving the protection to a higher rating, which is the change that makes further cabin load growth possible. Software LC5R2884353 and LC4RABC2783 are superseded on the new chassis by the built-in test standard LD8CA72D35B. The galley insert at FIN 7RK6 and the seat display unit lining at FIN 8385RM are disturbed for access. Installation is in zones 916, 941 and 942, and the panel kit D4420116103848 at the forward seat display group is refitted unchanged.",
+      "effects": "Mass reduction of 8 kg per aircraft against the interim standard. Continuous electrical load rises by 900 VA on the entertainment busbar, which is inside the uprated feeder rating but not inside the original one, so the feeder rework is a mandatory part of the change. The chassis is not interchangeable with either earlier standard. No despatch change. Illustrated parts content, the rack removal and installation tasks and the entertainment fault isolation content all require update.",
+      "embodiment_note": "Retrofit only. Embodiment is a base task of about four days, driven by the feeder rework rather than by the chassis change. Kits include the feeder conductor, the protection device and the ventilated partition. Aircraft still at the original server standard must be brought through the interim standard first or converted directly using the same kit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420121334529",
+        "D4420125490996",
+        "D4420129816843",
+        "EN258434K3",
+        "D4420116103848"
+      ],
+      "fins": [
+        "7RK6",
+        "8385RM"
+      ],
+      "drawings": [
+        "D44200016279",
+        "D44201142928"
+      ],
+      "software": [
+        "LD8CA72D35B",
+        "LC5R2884353",
+        "LC4RABC2783"
+      ],
+      "zones": [
+        "916",
+        "941",
+        "942"
+      ],
+      "figures": [
+        "FIG-44-20-12-02"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TTN-44-1042",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-143680",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "IPC-T-44-20-12-FIG-02",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "head end server",
+      "rack feeder",
+      "network switch",
+      "wireless content",
+      "cabin load growth"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Cabin Systems"
+    },
+    "type_data": {
+      "mod_number": 145110,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1353",
+          "CS 25.869"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -8.0,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 900,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D4420125490996",
+        "EN258434K3"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4420121334529",
+        "D4420129816843"
+      ],
+      "fins_affected": [
+        "7RK6",
+        "8385RM"
+      ],
+      "software_affected": [
+        "LD8CA72D35B",
+        "LC5R2884353",
+        "LC4RABC2783"
+      ],
+      "estimated_manhours": 210,
+      "estimated_cost_keur": 3400,
+      "lead_time_weeks": 52,
+      "production_impact": "No production cut-in; retrofit product only",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

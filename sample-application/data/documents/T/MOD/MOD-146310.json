@@ -1,0 +1,158 @@
+[
+  {
+    "doc_id": "MOD-146310",
+    "doc_type": "MOD",
+    "title": "Flight Control Primary Computer Processor Board Redesign",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-03-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-90",
+      "ata_6d": "27-90-11",
+      "title": "Flight Control Computing — Flight Control Primary Computer"
+    },
+    "secondary_ata": [
+      "27-90-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "CANCELLED",
+      "points": [
+        "NONE"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-11-02",
+      "released": "2023-03-09",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposed redesign of the primary flight control computer processor board around a current device family, launched against an obsolescence forecast and cancelled when the supplier extended production to cover the remaining fleet life.",
+    "sections": {
+      "reason": "An obsolescence forecast issued in 2021 placed the last-time-buy for the processor and its companion memory device in 2024, which on the then-current removal rate would have exhausted the repairable population before 2032. Because the computer sits at the top of the flight control architecture, any change to it carries a full software requalification, so the work was launched early to protect the schedule rather than in response to any in-service problem.",
+      "description": "The intended change replaced the processor board with a design built on a current device family, retaining the chassis, the backplane, the power supply and the input and output boards. The clamp D2790110545678 at the board carrier would have been retained, the obsolete transmitter D2790117674650 deleted, and rivets LN39186K3 used at the revised card guide. Tension bolts AES54314K6 secure the carrier at the rack. The units are installed in the wing and empennage equipment areas, with the primary computer clamp at FIN 621KS in zone 583 and the actuator interface at FIN 77EV in zone 384; the restrictor at FIN 78CE in zone 363 is not affected. Software LB4RD628AB1 and the built-in test standard LD6RB5FDE24 were to be re-issued against the new board. Interface detail is on drawing D27900080636.",
+      "effects": "The change was assessed as carrying a full Level A software requalification and a flight test programme, which is the reason its cost and schedule were dominated by certification rather than by hardware. No weight, balance or electrical load effect was expected at aircraft level. Because the modification was cancelled before design freeze, no manual content was issued and no aircraft configuration is affected. Aircraft remain at the existing computer standard.",
+      "embodiment_note": "Cancelled in March 2023. The device supplier extended production of both devices to 2036 under a fleet support agreement, which covers the remaining life of the aircraft with margin, and the business case for a requalification no longer stood. No service bulletin was raised and no aircraft was modified."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2790110545678",
+        "D2790117674650",
+        "LN39186K3",
+        "AES54314K6"
+      ],
+      "fins": [
+        "621KS",
+        "77EV",
+        "78CE"
+      ],
+      "drawings": [
+        "D27900080636"
+      ],
+      "software": [
+        "LB4RD628AB1",
+        "LD6RB5FDE24"
+      ],
+      "zones": [
+        "583",
+        "384",
+        "363"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [],
+    "keywords": [
+      "flight control primary computer",
+      "processor obsolescence",
+      "last-time-buy",
+      "cancelled modification",
+      "software requalification"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Flight Control Systems"
+    },
+    "type_data": {
+      "mod_number": 146310,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.671"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2790110545678"
+      ],
+      "fins_affected": [],
+      "software_affected": [
+        "LB4RD628AB1",
+        "LD6RB5FDE24"
+      ],
+      "estimated_manhours": 3200,
+      "estimated_cost_keur": 8600,
+      "lead_time_weeks": 96,
+      "production_impact": "None; cancelled before design freeze",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

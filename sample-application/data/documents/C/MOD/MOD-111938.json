@@ -1,0 +1,188 @@
+[
+  {
+    "doc_id": "MOD-111938",
+    "doc_type": "MOD",
+    "title": "Cabin-Side Data Load Interface and Automatic Configuration Report",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-20",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HKA",
+        "OST"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111296"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-04-22",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposal to add a data load connector at the forward cabin attendant position and to have the aircraft publish its own software configuration statement, so that a load can run unattended and the standard on board can be evidenced without a technician's note.",
+    "sections": {
+      "reason": "One operator with twenty-four aircraft has quantified nine hundred technician hours a year spent standing in the flight compartment during software loads, and has restricted loading to the two stations where it employs its own people. The same operator recorded three mixed-standard events in twelve months that were only found at the following check, and two warranty claims that turned on what standard was actually on the aircraft. Two further operators have asked the same question through the technical liaison meeting. The maintenance terminal already lists the loaded software but the list is not trusted on the line because it does not refresh until the next power cycle.",
+      "description": "A data load connector is added at the forward cabin attendant position and wired to the portable data loader interface, so that a load can be started from the cabin and left to run with the flight compartment closed. The interface transceiver D4545112932616 is replaced by a two-port item, the module D4545119446504 is retained and the data concentrator kit BED484003-95 is added at the cabin end. The load configuration transceiver D4545128867418 is re-loaded so that it writes a signed configuration statement after every load and after every power-up, which the central maintenance computer application LH6CEDA1669 then makes available for download. The protective sleeve AES196920-75 is used over the new cabin run. Functional items 5TN9, 78TN and 62TM are affected. Work is in the avionics bay in zone 164, along the right-hand cabin route in zone 252 and at the attendant panel in zone 234. Reference detail is on drawings D45451245065 and D45450069919.",
+      "effects": "Estimated mass increase of 2.6 kg. Electrical load increases by 25 volt-amperes. The two-port interface is one-way interchangeable with the delivered item. There is no dispatch consequence: a failed cabin port leaves the flight compartment route working. The configuration statement is new content in the maintenance manual and will change the way the trouble shooting manual asks the technician to confirm a standard. The illustrated parts figure for the loading interface needs a new item for the cabin connector.",
+      "embodiment_note": "Both a production cut-in and a retrofit are intended. The provisional retrofit estimate is one shift, most of it pulling the cabin run, and it can be done with the cabin in service if the sidewall panels at two frames are removed overnight. The change depends on the aircraft being at the upgraded central maintenance computer application standard.",
+      "open_points": "Pre-analysis must confirm whether the signed configuration statement duplicates a reporting capability that already exists on the maintenance side, whether the cabin run can share the existing route without a segregation finding, whether the attendant panel position is already claimed by a cabin change, and whether the load can be certified as unattended at all given that a load in progress inhibits the flight compartment display."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545112932616",
+        "D4545119446504",
+        "BED484003-95",
+        "D4545128867418",
+        "AES196920-75"
+      ],
+      "fins": [
+        "5TN9",
+        "78TN",
+        "62TM"
+      ],
+      "drawings": [
+        "D45451245065",
+        "D45450069919"
+      ],
+      "software": [
+        "LH6CEDA1669"
+      ],
+      "zones": [
+        "164",
+        "252",
+        "234"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00612",
+        "C00680"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-260226",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-111296",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "data load connector",
+      "configuration statement",
+      "unattended load",
+      "cabin attendant panel",
+      "software standard"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111938,
+      "mod_class": "MINOR",
+      "change_category": "SOFTWARE",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1529"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.6,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 25,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "BED484003-95",
+        "AES196920-75"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4545112932616",
+        "D4545128867418"
+      ],
+      "fins_affected": [
+        "5TN9",
+        "78TN",
+        "62TM"
+      ],
+      "software_affected": [
+        "LH6CEDA1669"
+      ],
+      "estimated_manhours": 260,
+      "estimated_cost_keur": 890,
+      "lead_time_weeks": 42,
+      "production_impact": "Cut-in proposed once the cabin route is agreed with the furnishing installation station",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

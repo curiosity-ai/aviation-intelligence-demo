@@ -1,0 +1,204 @@
+[
+  {
+    "doc_id": "ZPH-46-1009",
+    "doc_type": "SB",
+    "title": "Information Systems — Electronic Flight Bag — Exchange for the Standard 3 Unit with Integrated Antenna",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-04-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-20",
+      "ata_6d": "46-20-11",
+      "title": "Flight Deck Information — Electronic Flight Bag Unit"
+    },
+    "secondary_ata": [
+      "46-20-12",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "NCA",
+        "BCA",
+        "HKA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [
+          "ZPH-46-1005"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2023-09-11",
+      "released": "2024-04-15",
+      "revised": null,
+      "effective": "2024-05-06"
+    },
+    "abstract": "Exchange of the electronic flight bag units for the standard 3 build with an integrated airline data antenna, which cuts chart rendering to under two seconds and removes the unapproved portable antenna installation.",
+    "sections": {
+      "planning_reason": "Eleven seconds to redraw an approach plate is long enough that crews revert to paper on a busy arrival, which defeats the purpose of the installation. Operators using the unit for airline data exchange have been fitting a portable antenna on a cabin window mount, which several regulators have begun to challenge as an unapproved installation. Aircraft that keep the earlier unit retain both the rendering delay and, where the portable antenna is in use, an unapproved configuration.",
+      "description": "This Service Bulletin exchanges the electronic flight bag units for the standard 3 build, which carries a dedicated graphics stage, four times the display memory and an integrated airline data antenna on the unit face. The parameter load and the built-in test load are re-issued at the same time. The rack provision must already be in place.",
+      "accomplishment_summary": "Confirm that the rack and antenna provision bulletin has been embodied; if it has not, this bulletin must not be started. De-energise the flight deck avionics. Get access in zones 211 and 214 by removing the sidewall panel at each pilot position. Remove the existing electronic flight bag unit from each position. Install the standard 3 transceiver D4620114957774 with the integrated antenna D4620116309716 in the prepared rack positions. Check the antenna clearance to the sidewall and confirm the bonding resistance. Restore power and load the parameter software LE3NF0F3C1D and the built-in test software LF2N1D4CB64. Confirm that the display at FIN 2IS8 renders a terminal chart in under two seconds and that the aircraft condition monitoring interface at FIN 37IS6 reports at the higher data rate. Remove any portable antenna installation and restore the cabin window mount. Do the installation check following task AMM-Z-46-20-11-400-039-A and record the embodiment.",
+      "effectivity_note": "Applicable to ZEPHYR-20, ZEPHYR-22 and ZEPHYR-24 Evo model aircraft on which the rack and antenna provision bulletin has been embodied. Aircraft delivered at the standard 3 configuration are excluded.",
+      "material_note": "Units are supplied on exchange with a twenty-two week lead time. The kit includes the two units, the software media and the bonding hardware. Removed units are returned to Aeralis and are not converted; they remain available as spares for unmodified aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4620114957774",
+        "D4620116309716",
+        "D4620121177406"
+      ],
+      "fins": [
+        "2IS8",
+        "37IS6"
+      ],
+      "drawings": [
+        "D46201115557"
+      ],
+      "software": [
+        "LE3NF0F3C1D",
+        "LF2N1D4CB64"
+      ],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-156520",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "ZPH-46-1005",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-Z-46-20-11-400-039-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-Z-46-20-11-810-816",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "standard 3 unit",
+      "integrated antenna",
+      "chart rendering",
+      "portable antenna removal",
+      "software load"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "ZPH-46-1009",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Within 36 months after the date of this Service Bulletin. Operators using a portable airline data antenna should embody at the earliest opportunity.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-156520",
+      "manpower": {
+        "elapsed_time_hours": 6,
+        "manhours": 10,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K4620-1009-01",
+        "kit_available_from": "2024-07-08",
+        "parts_required": [
+          {
+            "part_number": "D4620114957774",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D4620116309716",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Contact cleaner, non residue",
+          "Bonding jumper hardware set"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Bonding resistance meter"
+        ]
+      },
+      "weight_change_kg": 1.1,
+      "accomplishment_steps": 11,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2024-04-15",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

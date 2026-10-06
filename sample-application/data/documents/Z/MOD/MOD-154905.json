@@ -1,0 +1,195 @@
+[
+  {
+    "doc_id": "MOD-154905",
+    "doc_type": "MOD",
+    "title": "Nose Wheel Steering Standard 3 — Redesigned Manifold with Integrated Accumulator Charging",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-05-22",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-20",
+      "ata_6d": "32-20-12",
+      "title": "Nose Gear — Steering Actuation"
+    },
+    "secondary_ata": [
+      "29-10",
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "Z11472",
+      "production_cut_in_date": "2023-11-06",
+      "retrofit_via": [
+        "ZPH-32-1258"
+      ]
+    },
+    "dates": {
+      "created": "2021-02-17",
+      "released": "2023-05-22",
+      "revised": null,
+      "effective": "2023-06-12"
+    },
+    "abstract": "Permanent replacement of the nose wheel steering manifold. Filtration, accumulator charging and the position sensor pick-up are integrated into one machined block, ending the debris sensitivity that the 2016 interim kit only contained.",
+    "sections": {
+      "reason": "The interim filter kit released in 2016 cut the steering jitter reporting rate by four fifths but did not remove the cause, and it did so at the price of a filter change every 4000 flight hours that operators consistently described as intrusive. Fleet data from 2017 to 2021 showed that the residual events clustered on aircraft in the first hundred hours after a green system component change, which confirmed that debris was still reaching the servo. The manifold was also the single largest contributor to nose gear bay hydraulic leakage, at nineteen reported leaks per million flight hours, almost all of them at the accumulator charging port.",
+      "description": "The built-up manifold is replaced by the machined block D3220127361550, in which the filter cavity, the accumulator charging gallery and the position sensor pick-up are integrated. The accumulator D3220121572714 is retained but is now charged through a face port rather than through an external hose, which removes four fittings from the assembly. The filter D3220123507496 remains as the service item but sits in a cavity sized for a 5000 hour interval. The accumulator FIN 25GB, the non-return valve FIN 2820WS5 and the position sensor FIN 9WS are all re-located onto the new block face. Work is from the nose gear bay in zones 711 and 714, with the nose gear doors in zone 741 opened for access to the charging port. The steering rig check is repeated after installation.",
+      "effects": "Mass reduction of 2.8 kilograms per aircraft, forward of the centre of gravity, with a shift of less than 0.02 per cent MAC. No electrical load change. Not interchangeable: the pipework end fittings differ and the earlier manifold cannot be refitted to a modified gear. Hydraulic leakage in the nose gear bay is expected to fall by two thirds and the filter interval extends to 5000 flight hours. The steering fault isolation procedure, the removal and installation tasks and the parts figure all require re-issue, and the flight crew procedure for a steering fault on the runway is affected because the residual authority after a single channel failure is different.",
+      "embodiment_note": "Production cut-in at MSN Z11472 in November 2023. Retrofit is by service bulletin during a base maintenance visit; the nose gear must be depressurised and the bay opened, which is a twelve hour task, and the steering rig check adds four hours. Kits are available with a twenty-six week lead time."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3220127361550",
+        "D3220121572714",
+        "D3220123507496"
+      ],
+      "fins": [
+        "25GB",
+        "2820WS5",
+        "9WS"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "711",
+        "714",
+        "741"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z11472"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-32-1258",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-150955",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "AMM-Z-32-20-12-400-025-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-Z-32-20-12-FIG-12",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "TSM-Z-32-20-12-810-810",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "steering manifold",
+      "integrated charging",
+      "hydraulic leakage",
+      "filter interval",
+      "machined block"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Ashcombe",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 154905,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.745"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": -2.8,
+      "balance_impact": "Forward of the CG, shift below 0.02 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D3220127361550"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3220121572714",
+        "D3220123507496"
+      ],
+      "fins_affected": [
+        "25GB",
+        "2820WS5",
+        "9WS"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 320,
+      "estimated_cost_keur": 1640,
+      "lead_time_weeks": 48,
+      "production_impact": "Cut-in at MSN Z11472, gear supplier changeover managed over two months",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

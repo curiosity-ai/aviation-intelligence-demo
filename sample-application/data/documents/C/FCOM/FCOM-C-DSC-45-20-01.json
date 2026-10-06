@@ -1,0 +1,118 @@
+[
+  {
+    "doc_id": "FCOM-C-DSC-45-20-01",
+    "doc_type": "FCOM",
+    "title": "Onboard Maintenance — What the Crew Sees of the Maintenance System and What It Records",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-04-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-00",
+      "title": "Onboard Maintenance — General"
+    },
+    "secondary_ata": [
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-11-08",
+      "released": "2023-04-14",
+      "revised": null,
+      "effective": "2023-05-06"
+    },
+    "abstract": "Flight crew description of the onboard maintenance system, explaining what the crew can see of it, why a flight deck effect and a maintenance record are not the same thing, and what the crew should write in the technical log.",
+    "sections": {
+      "purpose": "To explain to the flight crew what the onboard maintenance system does, what part of it the crew can see and why the crew's own description of an event still matters.",
+      "description": "The aircraft keeps its own record of system events, entirely separately from what you see on the flight deck. What you see is the effect: a caution, a status message, a control that does not behave as expected. What the aircraft records is the underlying event, with a time stamp and the state of the systems around it. The two are linked automatically where the aircraft can do so, but the link is made on timing, and an event that produces its flight deck effect a little late may be recorded without ever being tied to what you saw. That is the reason maintenance sometimes finds nothing: they are looking at a record with no effect attached to it. On aircraft at the later standard the record survives a power cycle and the linking window is wider, so an intermittent event on the first sector of the day is still visible at the end of it; on the earlier standard it is not. Nothing on the flight deck tells you which standard the aeroplane carries.",
+      "crew_procedure": "When you write a technical log entry, give the time as accurately as you can, say what phase of flight you were in and describe what you actually observed rather than what you believe failed. If a caution appeared and cleared itself, say how long it stayed on. If the same effect has appeared before on the same aeroplane, say so. None of this is visible to the aircraft's own record, and it is often the only thing that lets maintenance tie the record to the event."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-C-DSC-23-70-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "onboard maintenance",
+      "technical log",
+      "flight deck effect",
+      "event record",
+      "intermittent fault"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Systems Description — Maintenance",
+      "entry_number": "DSC-MNT-45-20-01",
+      "flight_phase": "ALL_PHASES",
+      "operational_impact": "NONE",
+      "crew_action": "Record the time, the phase of flight and the observed effect in the technical log.",
+      "affects_qrh": false,
+      "affects_mel": false,
+      "mel_items": [],
+      "systems": [
+        "Central Maintenance Computer",
+        "Maintenance Terminal"
+      ],
+      "related_entries": [
+        "FCOM-C-DSC-23-70-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

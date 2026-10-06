@@ -1,0 +1,193 @@
+[
+  {
+    "doc_id": "MOD-133290",
+    "doc_type": "MOD",
+    "title": "Core Processing Module Rack — Obsolescence Replacement, Standard 2",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2017-10-24",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00029",
+          "to": "S00801"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "CKP",
+        "ZCT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "SLN-42-1009"
+      ]
+    },
+    "dates": {
+      "created": "2016-09-06",
+      "released": "2017-10-24",
+      "revised": null,
+      "effective": "2017-11-13"
+    },
+    "abstract": "The first replacement standard for the core processing rack, introduced when the original module family went out of support, retaining the delivered backplane and the delivered configuration table.",
+    "sections": {
+      "reason": "The module family delivered on the early aircraft went out of supplier support in 2018 with no repair route and a last-time-buy that covered about four years of attrition. At the time two hundred and twenty aircraft carried the standard. The replacement had to be transparent to every hosted function, because re-certifying the hosted applications was not affordable, and it had to fit the delivered rack because the rack is structurally attached and changing it opens the avionics bay floor.",
+      "description": "The interface unit HE750421-36 replaces the delivered module in each of the six slots, using the same connector and the same cooling path. The rack itself is retained and only its guide rails are renewed, using countersunk screws LN727699-25 and pan head screws EN873313K4 at the rail attachment. Data concentrator 493CP2 keeps its position and its configuration; the loadable configuration set LF6L52A03E3 is reloaded after the change but is not modified. The backplane is not touched. Work is in the avionics bay in zones 162 and 166 with the floor panels lifted, and the ground stud in zone 183 is re-faced because the rack bonding is broken. Detail is on drawing D42101237654.",
+      "effects": "Mass reduction of 2.8 kg. Direct current load falls by about ninety volt-amperes across the six slots, which is a measurable cooling benefit in the bay. Interchangeable at the aircraft level because every interface is preserved, but modules of the two standards must not be mixed in one rack. No change to any hosted function, to any display, or to any crew procedure. The maintenance terminal reads the new modules with the existing tooling.",
+      "embodiment_note": "Retrofit only; the standard was never cut into production because the line had already moved to a later rack. Thirty-two manhours with the avionics bay floor open, offered at a C-check. Superseded in 2022 by the backplane standard, which is the recommended entry point for any aircraft not yet modified."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2"
+      ],
+      "drawings": [
+        "D42101237654"
+      ],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "SLN-42-1009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-136750",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "AMM-S-42-10-12-000-043-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-S-42-10-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "core processing",
+      "module rack",
+      "obsolescence",
+      "last time buy",
+      "backplane"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 133290,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -2.8,
+      "balance_impact": "Forward of the reference datum; negligible",
+      "electrical_load_impact_va": -90,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "HE750421-36"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "LN727699-25",
+        "EN873313K4"
+      ],
+      "fins_affected": [
+        "493CP2"
+      ],
+      "software_affected": [
+        "LF6L52A03E3"
+      ],
+      "estimated_manhours": 180,
+      "estimated_cost_keur": 1450,
+      "lead_time_weeks": 56,
+      "production_impact": "Retrofit only; not cut into production",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

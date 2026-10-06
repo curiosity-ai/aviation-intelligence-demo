@@ -1,0 +1,162 @@
+[
+  {
+    "doc_id": "AMM-Z-31-50-11-700-033-A",
+    "doc_type": "AMM",
+    "title": "Warning System Test of the Flight Warning Computer and the Aural Alert Priority Order",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-06-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-50-12",
+      "31-60"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-11-14",
+      "released": "2023-06-09",
+      "revised": null,
+      "effective": "2023-06-30"
+    },
+    "abstract": "Warning system test of the flight warning computer, covering the alert inventory, the aural priority order and the inhibit windows, run after a computer exchange or a boot software load.",
+    "sections": {
+      "purpose": "This task tests the flight warning computer after an exchange or a software load, and confirms the aural alert priority order and the inhibit windows against the loaded standard.",
+      "job_setup_note": "The test is done on the ground with the aircraft powered and no engines running, using the maintenance test mode of the warning system. The aural output is loud in a closed flight deck; use hearing protection for the priority sequence part of the test. The priority order differs between the earlier standard and the H2 standard, so read the loaded boot part number first and use the matching table.",
+      "procedure": "1. Make sure that the aircraft is on a stable power source and that no maintenance is in progress on any monitored system. 2. Read the loaded boot software part number at the computer FIN 7462FW and select the matching priority table. WARNING: THE AURAL OUTPUT IN THE MAINTENANCE TEST MODE IS AT FULL VOLUME. USE HEARING PROTECTION AND WARN ANY PERSON IN THE FLIGHT DECK BEFORE YOU START. 3. Select the warning system maintenance test mode. 4. Run the alert inventory test and confirm that every expected alert is present and that no unexpected alert is listed. 5. Run the aural priority sequence with three simultaneous alerts injected and record the order in which they are annunciated. 6. Compare the recorded order with the table for the loaded standard. CAUTION: DO NOT ACCEPT A PRIORITY ORDER THAT DIFFERS FROM THE TABLE ON THE ASSUMPTION THAT THE TABLE IS OUT OF DATE. A DIFFERENCE MEANS THE LOAD DID NOT COMPLETE AND THE COMPUTER MUST BE RELOADED. 7. Run the take-off inhibit test and confirm the window boundary. 8. Run the go-around inhibit test and confirm the window boundary. 9. Check the aural generation interface at the data concentrator FIN 2993FW for reported faults. 10. Check the rack position at FIN 668FP2 for correct seating and for a locked hold-down. 11. Exit the maintenance test mode and confirm that the normal alert display is restored. 12. Read the fault memory and confirm that no new fault has been logged.",
+      "close_out": "Restore the flight deck to the normal configuration and remove the hearing protection notice. Record the priority order, the two inhibit boundaries and the loaded boot part number on the maintenance record. Notify the operator training focal if the priority order has changed from the previous standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150128195373",
+        "DE823727-50",
+        "IBE53464-77"
+      ],
+      "fins": [
+        "7462FW",
+        "2993FW",
+        "668FP2"
+      ],
+      "drawings": [
+        "D31501108484"
+      ],
+      "software": [
+        "LB6NE4646B3"
+      ],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-31-1005",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-Z-31-50-11-810-813",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight warning computer",
+      "alert inventory",
+      "aural priority",
+      "inhibit window",
+      "maintenance test mode"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "31-50-11-700-033-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. Use the priority table that matches the loaded boot software part number.",
+      "manhours": 4.5,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "211",
+          "214"
+        ],
+        "access_panels": [
+          "211CR",
+          "214CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Use hearing protection during the aural priority sequence.",
+          "Confirm that no maintenance is in progress on a monitored system.",
+          "Do not run the test with an unstable power source."
+        ],
+        "tooling": [
+          {
+            "reference": "Portable data loader",
+            "description": "Software part number verification"
+          },
+          {
+            "reference": "Hearing protection set",
+            "description": "Personal protection"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

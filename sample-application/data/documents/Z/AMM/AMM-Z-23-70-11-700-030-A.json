@@ -1,0 +1,167 @@
+[
+  {
+    "doc_id": "AMM-Z-23-70-11-700-030-A",
+    "doc_type": "AMM",
+    "title": "Operational Test of the Air Traffic Datalink Router and the Media Path Selection",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-03-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-70-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-06-17",
+      "released": "2021-01-13",
+      "revised": "2025-03-05",
+      "effective": "2025-03-26"
+    },
+    "abstract": "Operational test of the air traffic datalink router, covering the log-on sequence, the selection of each available media path and the reporting of a lost connection on the flight deck.",
+    "sections": {
+      "purpose": "This task tests the air traffic datalink router, confirms that a log-on completes on each available media path and checks that a lost connection is reported to the crew.",
+      "job_setup_note": "The test needs a datalink test set connected at the antenna port, because a live log-on cannot be commanded on the ground. Work in the avionics bay and at the flight deck at the same time, with two persons in communication. The router keeps its media selection until the session is closed, so each path must be tested from a fresh log-on and not by forcing a switch mid-session.",
+      "procedure": "1. Make sure that the aircraft is on a stable power source. 2. Connect the datalink test set at the antenna port and select the first media path. 3. Get access to the avionics bay in zones 123 and 145. 4. Read the router configuration and record the reported part numbers. 5. Command a log-on from the flight deck and confirm that the display unit at FIN 252RN shows the connected state within the time given in the instructions. 6. Send and acknowledge a test message in each direction. 7. Close the session and repeat the log-on on the second media path. CAUTION: DO NOT FORCE A MEDIA SWITCH DURING AN OPEN SESSION ON AIRCRAFT AT THE EARLIER ROUTER STANDARD. THE SESSION WILL BE HELD ON THE FAILED PATH AND THE TEST RESULT WILL BE INVALID. 8. With the session established, remove the test set signal and start the timer. 9. Record the time at which the control panel at FIN 9407RN reports the loss. WARNING: DO NOT TRANSMIT ON THE AIRCRAFT ANTENNA WITH PERSONNEL IN FRONT OF IT. USE THE TEST SET TERMINATION AT ALL TIMES. 10. Restore the test set signal and confirm that the connection re-establishes without crew action where the standard supports it. 11. Read the fault memory and confirm that no unexpected fault has been logged. 12. Disconnect the test set and refit the antenna port cap.",
+      "close_out": "Refit the avionics bay closeout and confirm the tool count. Record the log-on times, the loss reporting time and the router part numbers on the maintenance record. Clear the fault memory only after the readings are recorded."
+    },
+    "entities": {
+      "part_numbers": [
+        "AGS119203K9",
+        "D2370128065382",
+        "D2370127995296"
+      ],
+      "fins": [
+        "252RN",
+        "9407RN",
+        "1RN"
+      ],
+      "drawings": [
+        "D23701172876"
+      ],
+      "software": [],
+      "zones": [
+        "123",
+        "145",
+        "211"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-Z-23-70-11-812-812",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-Z-23-50-11-000-029-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "log-on sequence",
+      "media path",
+      "connection loss",
+      "test set"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "23-70-11-700-030-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. Step 10 automatic re-establishment applies to the later router standard only.",
+      "manhours": 5.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "123",
+          "145",
+          "211"
+        ],
+        "access_panels": [
+          "123AL",
+          "145CR"
+        ],
+        "doors": [
+          "Fwd cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not transmit on the aircraft antenna with personnel in front of it.",
+          "Use the test set termination at all times.",
+          "Keep two persons in communication during the test."
+        ],
+        "tooling": [
+          {
+            "reference": "Datalink test set",
+            "description": "Ground datalink simulator"
+          },
+          {
+            "reference": "Antenna port termination",
+            "description": "RF load"
+          }
+        ],
+        "consumables": [
+          "Lint free wipes"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-Z-23-50-11-000-029-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

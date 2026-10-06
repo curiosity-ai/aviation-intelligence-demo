@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "TSM-Z-30-40-11-812-803",
+    "doc_type": "TSM",
+    "title": "WINDOW HEAT Fault Appearing Intermittently in the Cruise",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2024-05-16",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-40",
+      "ata_6d": "30-40-11",
+      "title": "Windows and Windshields — Windshield Heating Control"
+    },
+    "secondary_ata": [
+      "56-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-02-08",
+      "released": "2017-07-22",
+      "revised": "2024-05-16",
+      "effective": "2024-06-06"
+    },
+    "abstract": "Fault isolation for an intermittent window heat fault reported in the cruise, distinguishing a corroded external heater termination from a sensing lead failure or a control computer channel fault.",
+    "sections": {
+      "purpose": "This procedure isolates an intermittent window heat fault reported in the cruise, and identifies whether the cause is the heater termination, the sensing lead or the control computer channel.",
+      "fault_description": "The crew report a window heat caption appearing in the cruise, usually after two to three hours, and clearing after the system is reset. The pattern is characteristic: the fault appears when the airframe is cold-soaked and the termination has contracted, and it does not reproduce on the ground in warm conditions. The same aircraft often shows a cloudy band along the lower edge of the affected windshield, which is the visible consequence of moisture reaching the same termination.",
+      "isolation_procedure": "1. Read the fault memory and record which windshield and which channel is reported, together with the flight phase. 2. Remove the internal trim from the affected window and inspect the heater termination and the sensing leads at FIN 1WX and FIN 1981WX for discolouration, greening or a powdery deposit. 3. Any deposit at the termination is the cause. Renew the windshield and record the finding. 4. If the termination is clean, measure the resistance of each heater channel cold and compare with the reference table. 5. A channel resistance more than 8 per cent above the reference indicates a degrading termination even where nothing is visible; renew the windshield. 6. If both channels are inside the table, measure the sensing lead resistance from the window connector to the computer. 7. If the sensing lead is open or high, repair or renew the lead. 8. If the sensing lead is correct, do the operational test with the aircraft cold-soaked overnight, which is the only reliable way to reproduce the fault on the ground. 9. If the fault appears with the window and the leads serviceable, replace the window heat computer channel. 10. Renew the regulator CIN170502-71 only if the computer change does not clear the fault.",
+      "dispatch_note": "Dispatch is not permitted into known or forecast icing conditions with any window heat channel inoperative. Dispatch outside icing conditions is permitted for one flight to a maintenance base. Rectify before the next flight into icing."
+    },
+    "entities": {
+      "part_numbers": [
+        "CIN170502-71",
+        "BE487996-76",
+        "AES963886-66"
+      ],
+      "fins": [
+        "1WX",
+        "1981WX"
+      ],
+      "drawings": [
+        "D30301107659"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "214",
+        "215"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-30-40-11-700-022-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-159775",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "window heat",
+      "intermittent fault",
+      "heater termination",
+      "sensing lead",
+      "cold soak"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "30-40-11-812-803",
+      "fault_symptom": "ANTI ICE L WINDSHIELD displayed on ECAM, intermittent in the cruise",
+      "fault_codes": [
+        "304011005",
+        "304011022"
+      ],
+      "warning_messages": [
+        "ANTI ICE L WINDSHIELD",
+        "ANTI ICE R WINDSHIELD"
+      ],
+      "affected_fins": [
+        "1WX",
+        "1981WX"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Corrosion at the external heater termination in the lower sill drain path",
+          "probability_pct": 46,
+          "fin": "1WX"
+        },
+        {
+          "cause": "Heater channel resistance drifted above the reference table",
+          "probability_pct": 24,
+          "fin": "1WX"
+        },
+        {
+          "cause": "Sensing lead open or high resistance",
+          "probability_pct": 18,
+          "fin": "1981WX"
+        },
+        {
+          "cause": "Window heat computer channel failure",
+          "probability_pct": 12,
+          "fin": "1981WX"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-30-40-11-700-022-A",
+      "dispatch": {
+        "mel_item": "30-42-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Not permitted into known or forecast icing; one ferry flight to a maintenance base permitted outside icing conditions"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

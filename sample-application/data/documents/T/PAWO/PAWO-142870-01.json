@@ -1,0 +1,323 @@
+[
+  {
+    "doc_id": "PAWO-142870-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Zone Controller Operational Software Standard ZC_OPS_V4.1",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-10-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "21-60-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-05-15",
+      "released": "2017-10-05",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the introduction of the zone controller operational software standard ZC_OPS_V4.1, covering the loading procedure, the operational test and the trim air fault isolation logic.",
+    "sections": {
+      "objective": "Establish what an operational software standard change on the air conditioning zone controller changes in the published maintenance data, confirm that the load can be applied without a hardware change on any aircraft in the fleet, and identify the procedures whose acceptance criteria are derived from timer and gain values the new standard alters. The order was raised internally by the environmental control systems office alongside the software qualification plan.",
+      "findings_summary": "Three impacts were confirmed and none blocked the release. The software loading task is the most affected: it names the load parts in a fixed order and the new standard changes the pairing between the controller part number and the loadable item, so a mechanic following the present revision could load a valid part into the wrong channel. The operational test quotes a stabilisation time derived from the old control gains and would report a satisfactory result before the new standard has settled. The trim air valve closed fault isolation procedure carries a timer value in its acceptance criteria which the new standard shortens by a third, and its published symptom would no longer be reproducible. No hardware change and no wiring impact was found anywhere in the search.",
+      "next_steps": "The change was cleared to proceed without conditions. The three affected documents were placed in one documentation package to be released at the same date as the software standard, on the argument that they only make sense together. The environmental control office was asked to publish the timer and gain deltas as an annex so that operators can reconcile their own troubleshooting notes, since the cabin crew reports that drive most of these findings are written against the old response times."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160117909333",
+        "D2160128690391",
+        "D2160120235977",
+        "QUI339334-79"
+      ],
+      "fins": [
+        "7982HM",
+        "7HQ5"
+      ],
+      "drawings": [
+        "D21601284523"
+      ],
+      "software": [
+        "LA1R2B6A257",
+        "LB8R1DDEAAF"
+      ],
+      "zones": [
+        "292",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142870",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "zone controller",
+      "software standard",
+      "trim air",
+      "loading procedure"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-142870-01",
+      "subject_mod": "MOD-142870",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2017-10-05",
+      "outcome": "VALIDATED",
+      "raised_date": "2017-05-15",
+      "due_date": "2017-10-20",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 100,
+        "spent_manhours": 84
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "21",
+          "45"
+        ],
+        "ata_4d": [
+          "21-60",
+          "45-45"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2160117909333",
+            "D2160128690391",
+            "D2160120235977"
+          ],
+          "fins": [
+            "7982HM",
+            "7HQ5"
+          ],
+          "drawings": [
+            "D21601284523"
+          ],
+          "zones": [
+            "292",
+            "293"
+          ],
+          "software": [
+            "LA1R2B6A257",
+            "LB8R1DDEAAF"
+          ]
+        },
+        "similarity_seeds": [
+          "operational software standard change on a cabin temperature controller",
+          "trim air valve response and zone temperature stabilisation"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search all data referencing the zone controller loadable items",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Identify acceptance criteria derived from the old timers and gains",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm no hardware or harness change is implied",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-T-21-60-12-900-002-A",
+          "doc_type": "AMM",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2160120235977",
+              "QUI339334-79"
+            ],
+            "shared_fins": [
+              "7982HM"
+            ],
+            "shared_zones": [
+              "292",
+              "293"
+            ],
+            "shared_ata_6d": [
+              "21-60-12"
+            ],
+            "shared_software": [
+              "LA1R2B6A257",
+              "LB8R1DDEAAF"
+            ],
+            "shared_drawings": [
+              "D21601284523"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The loading task names the loadable items in a fixed order and states one pairing between the controller part number and the load. The new standard changes that pairing, so a mechanic working to the present revision could load a valid part into the wrong channel and see no error until the cabin is occupied.",
+          "resolution": "Reissue the task with the pairing shown as a table keyed on the controller part number, and add a post load verification step that reads back the standard."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-21-60-12-700-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2160117909333",
+              "D2160128690391"
+            ],
+            "shared_fins": [
+              "7982HM",
+              "7HQ5"
+            ],
+            "shared_zones": [
+              "292",
+              "293"
+            ],
+            "shared_ata_6d": [
+              "21-60-12",
+              "21-60-11"
+            ],
+            "shared_software": [
+              "LA1R2B6A257",
+              "LB8R1DDEAAF"
+            ],
+            "shared_drawings": [
+              "D21601284523"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The operational test allows a stabilisation period derived from the old control gains. Under the new standard the loop settles differently and the test would be declared satisfactory before the zone has reached its commanded temperature.",
+          "resolution": "Restate the stabilisation period per software standard and add the read back of the loaded standard to the test preliminaries."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-T-21-60-12-810-802",
+          "doc_type": "TSM",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2160117909333",
+              "D2160120235977"
+            ],
+            "shared_fins": [
+              "7982HM",
+              "7HQ5"
+            ],
+            "shared_zones": [
+              "292",
+              "293"
+            ],
+            "shared_ata_6d": [
+              "21-60-12",
+              "21-60-11"
+            ],
+            "shared_software": [
+              "LA1R2B6A257",
+              "LB8R1DDEAAF"
+            ],
+            "shared_drawings": [
+              "D21601284523"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The degraded zone temperature procedure reproduces the symptom by commanding the trim air valve closed and waiting a fixed time. The new standard shortens that time by a third, so on a modified aircraft the published symptom cannot be reproduced and the mechanic is sent down the wrong branch.",
+          "resolution": "Split the procedure by software standard and publish the timer deltas as an annex so operators can reconcile their own troubleshooting notes."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Issued 2017-10-05. Three documentation impacts, no hardware change and no wiring impact. Cleared to proceed with the three documents released as one package alongside the software standard.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

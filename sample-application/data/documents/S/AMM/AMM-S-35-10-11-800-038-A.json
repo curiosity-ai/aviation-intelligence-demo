@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "AMM-S-35-10-11-800-038-A",
+    "doc_type": "AMM",
+    "title": "Crew Oxygen System — Depressurisation, Charging and Indicated Pressure Verification",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-11-09",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "35",
+      "ata_4d": "35-10",
+      "ata_6d": "35-10-11",
+      "title": "Crew Oxygen — Crew Oxygen Cylinder"
+    },
+    "secondary_ata": [
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-06-19",
+      "released": "2019-01-28",
+      "revised": "2021-11-09",
+      "effective": "2021-11-29"
+    },
+    "abstract": "Servicing task for the crew oxygen system covering controlled depressurisation, charging to the temperature-corrected pressure and verification of the indicated value against a reference gauge.",
+    "sections": {
+      "purpose": "This task depressurises the crew oxygen system for maintenance, recharges it after the work, and verifies that the indicated pressure agrees with a calibrated reference gauge at the recorded cylinder temperature.",
+      "job_setup_note": "Oxygen service requires an absolutely clean working area. Any hydrocarbon on a fitting, a tool or a glove can ignite in high-pressure oxygen. Use only tools reserved for oxygen work and check them before use. The charging trolley must have a current cleanliness certificate. Two people are needed: one at the charging point and one reading the indication in the flight compartment.",
+      "procedure": "1. WARNING: OXYGEN. NO OIL, NO GREASE, NO SMOKING WITHIN FIFTEEN METRES. CHECK THAT TOOLS, GLOVES AND HANDS ARE FREE OF HYDROCARBON BEFORE YOU TOUCH ANY FITTING. 2. Put the warning notices at the charging point and in the flight compartment. 3. Record the indicated pressure and the cylinder temperature before any work. 4. Open the access panel in zone 215 and gain access to the charging connection. 5. Open the system slowly to the overboard discharge and let it vent. CAUTION: DO NOT VENT QUICKLY. RAPID DEPRESSURISATION COOLS THE VALVE SEAT AND CAN CRACK IT. 6. Confirm zero pressure at the charging point before any fitting is broken. 7. Do the required maintenance. 8. Before charging, examine the valve 6908HE and the filter 5HD for contamination and replace them if any is present. 9. Connect the charging trolley and purge the hose to the vent for the time given in the limits table. 10. Charge slowly to the temperature-corrected pressure from the chart, stopping at each intermediate step to let the cylinder settle. 11. Close the charging valve, disconnect the trolley and cap the connection. 12. Do a leak check at all disturbed joints with the oxygen-compatible solution. 13. Record the indicated pressure in the flight compartment and compare it against the reference gauge on the trolley. The difference must be inside the limit in the table. 14. Repeat the comparison after two hours with the cylinder settled.",
+      "close_out": "Record both indicated and reference pressures, the cylinder temperature at each reading and the correction applied. Remove the warning notices. Where the difference between indicated and reference exceeds the limit, raise a defect against the pressure transducer and quote both readings."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3510118104447",
+        "YS788350-31"
+      ],
+      "fins": [
+        "5HD",
+        "6908HE",
+        "61HD"
+      ],
+      "drawings": [
+        "D35101107687"
+      ],
+      "software": [],
+      "zones": [
+        "215",
+        "233"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-35-10-11-000-039-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-35-10-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "oxygen charging",
+      "temperature correction",
+      "reference gauge",
+      "leak check",
+      "hydrocarbon"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "35-10-11-800-038-A",
+      "task_type": "SERVICING",
+      "effectivity_note": "All aircraft; the correction chart differs between the bourdon-tube and the solid-state transducer",
+      "manhours": 3.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "215",
+          "233"
+        ],
+        "access_panels": [
+          "215CL",
+          "215AR",
+          "233AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "No oil, no grease, no smoking within fifteen metres.",
+          "Use only tools reserved for oxygen service.",
+          "Vent slowly to protect the valve seat."
+        ],
+        "tooling": [
+          {
+            "reference": "98D35101-034",
+            "description": "Oxygen charging trolley"
+          },
+          {
+            "reference": "98D35101-037",
+            "description": "Reference pressure gauge, calibrated"
+          }
+        ],
+        "consumables": [
+          "Leak detection solution, oxygen compatible",
+          "Thread lubricant, oxygen service",
+          "Cleaning cloth, lint free"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-35-10-11-000-039-A"
+      ],
+      "steps": 14,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

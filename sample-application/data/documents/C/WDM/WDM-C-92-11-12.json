@@ -1,0 +1,183 @@
+[
+  {
+    "doc_id": "WDM-C-92-11-12",
+    "doc_type": "WDM",
+    "title": "Flight Compartment — Overhead Panel Wiring and Probe Heat Control",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2024-11-19",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-11",
+      "ata_6d": "92-11-12",
+      "title": "Flight Compartment Wiring — Overhead Panel Wiring"
+    },
+    "secondary_ata": [
+      "30-30",
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-10-04",
+      "released": "2017-05-10",
+      "revised": "2024-11-19",
+      "effective": "2024-12-10"
+    },
+    "abstract": "Wiring diagram for the overhead panel, showing the probe heat control and monitoring circuit including the per-element sense returns added by the monitoring modification.",
+    "sections": {
+      "purpose": "This sheet shows the overhead panel wiring for the probe heat control and monitoring circuit, from the selector switch through the computer to the probe supply and the sense returns.",
+      "sheet_note": "The sense return arrangement differs by embodiment standard: the original circuit carries one return for each probe and the post-modification circuit carries one return for each heating element, which needs two additional contacts at the computer connector. The two arrangements are drawn on separate sheets and the sheet applicable to an aircraft must be selected from its embodiment record rather than from its delivery date, because the retrofit was not applied in serial order.",
+      "routing_note": "The circuit leaves the overhead panel through the crown break-out and runs forward to the computer position in the avionics compartment. The probe supply legs drop down the forward frame webs to each probe base. The sense returns share the supply harness but are on the screened core group, which is earthed at the computer end only."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9211120243186",
+        "D9211123305995",
+        "D9211124779348",
+        "FAR901986-70"
+      ],
+      "fins": [
+        "2005VC",
+        "3855VU",
+        "70VC",
+        "907VC",
+        "4618WX"
+      ],
+      "drawings": [
+        "D92111168570"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "214",
+        "216"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-30-30-11-700-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-30-30-11-810-801",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "overhead panel wiring",
+      "probe heat control",
+      "sense return",
+      "screened core group",
+      "crown break-out"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Electrical Design"
+    },
+    "type_data": {
+      "sheet_number": "92-11-12",
+      "sheet_title": "OVERHEAD PANEL WIRING — PROBE HEAT CONTROL",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1110W",
+        "1112W",
+        "1119W"
+      ],
+      "connectors": [
+        {
+          "reference": "1110VC",
+          "part_number": "D9211124779348",
+          "location_zone": "211",
+          "contacts": 37
+        },
+        {
+          "reference": "1112VC",
+          "part_number": "FAR901986-70",
+          "location_zone": "216",
+          "contacts": 19
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "2005VC",
+          "description": "CONNECTOR, COCKPIT PANEL HARNESSES, INBD",
+          "zone": "211"
+        },
+        {
+          "fin": "3855VU",
+          "description": "TERMINAL BLOCK, COCKPIT PANEL HARNESSES, UPPER",
+          "zone": "216"
+        },
+        {
+          "fin": "70VC",
+          "description": "BUS BAR, COCKPIT PANEL HARNESSES",
+          "zone": "214"
+        },
+        {
+          "fin": "907VC",
+          "description": "CONNECTOR, FLIGHT COMPARTMENT WIRING, UPPER",
+          "zone": "214"
+        },
+        {
+          "fin": "4618WX",
+          "description": "REGULATOR, PITOT AND STATIC HEAT, RH",
+          "zone": "211"
+        }
+      ],
+      "wire_count": 96,
+      "wire_gauge_range": "AWG 24 to AWG 14",
+      "routes": [
+        "Overhead panel crown break-out forward to the avionics compartment computer position",
+        "Probe supply legs down the forward frame webs to each probe base",
+        "Screened sense return group earthed at the computer end only"
+      ],
+      "related_sheets": [
+        "WDM-C-92-21-13"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

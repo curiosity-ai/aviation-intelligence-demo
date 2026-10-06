@@ -1,0 +1,190 @@
+[
+  {
+    "doc_id": "MOD-149310",
+    "doc_type": "MOD",
+    "title": "Second Issue of the Warning Inhibit Standard Extended to the Approach and Landing Phases",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-06-25",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-50-12",
+      "31-60-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-146790"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "T00227",
+      "production_cut_in_date": "2024-10-08",
+      "retrofit_via": [
+        "TTN-31-1038"
+      ]
+    },
+    "dates": {
+      "created": "2023-01-16",
+      "released": "2024-06-25",
+      "revised": null,
+      "effective": "2024-08-01"
+    },
+    "abstract": "Carries the phase-aware inhibit standard established for take-off into the approach and landing phases, and moves the inhibit table out of the operational load into a separately loadable configuration file.",
+    "sections": {
+      "reason": "The first issue solved the take-off acceleration case and was well received, but crew reports of transient cautions continued at a lower rate on approach, particularly during configuration changes with one hydraulic system deliberately depressurised for a training detail. Eighty-one reports were collected in two years. The second driver is maintainability: the first issue put the inhibit table inside the operational software load, which means any table adjustment requires a full load requalification. Three operators asked whether the table could be adjusted without recertifying the whole computer.",
+      "description": "The input processing card and the display driver introduced by the first issue are retained unchanged. The inhibit declaration is extended to the approach and landing phases using the same combination of air-ground state, computed airspeed and thrust lever position, with the addition of the slat and flap configuration state. The table itself is separated from the operational load and delivered as the configuration load LC7R81E91AB, while the operational load moves to LE3RE34FC19. Only the two loads change on an aircraft already at the first issue standard; the hardware is untouched. Wiring at FIN 60FW is unchanged and FIN 7619FP7 on the central warning display is re-checked but not re-terminated. Work is from the flight deck rack in zone 292 and the central warning display position in zone 183. The aural warning path remains untouched.",
+      "effects": "No mass change and no electrical load change. The configuration load is one-way interchangeable with the first issue table: a second-issue configuration file cannot be applied to a first-issue operational load and the loader rejects it. Dispatch is unchanged. Because the inhibit table is now separately loadable, a future table adjustment is a data change rather than a software change, which shortens the certification path for the next issue. Flight crew documentation for the approach phase caution set, the troubleshooting procedure and the loadable software list all require update.",
+      "embodiment_note": "Production cut-in at MSN T00227 in October 2024. Retrofit is a software load only and takes under two hours on the line, provided the first issue is embodied. Aircraft that are not at the first issue standard must take that bulletin first; the loader will not accept the configuration file otherwise."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150111745067",
+        "D3150116156104"
+      ],
+      "fins": [
+        "60FW",
+        "7619FP7"
+      ],
+      "drawings": [
+        "D31501271700"
+      ],
+      "software": [
+        "LC7R81E91AB",
+        "LE3RE34FC19"
+      ],
+      "zones": [
+        "292",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00227"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-31-1038",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-146790",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "AMM-T-31-50-11-700-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-T-31-50-11-812-803",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-T-DSC-31-50-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "inhibit table",
+      "approach phase",
+      "configuration load",
+      "flight warning computer",
+      "loadable software"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149310,
+      "mod_class": "MAJOR",
+      "change_category": "SOFTWARE",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1322",
+          "CS 25.1309",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0.0,
+      "balance_impact": "No mass change",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [],
+      "fins_affected": [
+        "60FW",
+        "7619FP7"
+      ],
+      "software_affected": [
+        "LC7R81E91AB",
+        "LE3RE34FC19"
+      ],
+      "estimated_manhours": 410,
+      "estimated_cost_keur": 2100,
+      "lead_time_weeks": 70,
+      "production_impact": "Cut-in at MSN T00227, software load only",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

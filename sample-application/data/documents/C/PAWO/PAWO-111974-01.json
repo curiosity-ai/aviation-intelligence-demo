@@ -1,0 +1,457 @@
+[
+  {
+    "doc_id": "PAWO-111974-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Predictive Windshear Extension and Terrain Referenced Clutter Map",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-40",
+      "ata_6d": "34-40-11",
+      "title": "Independent Position Determining — Weather Radar Transceiver"
+    },
+    "secondary_ata": [
+      "34-50",
+      "22-80"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "NVT",
+        "CDW"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the radar windshear and clutter map extension, covering the navigation database partition it depends on, the bulletin effectivity it closes and the shelf position it shares with an unrelated cabin change.",
+    "sections": {
+      "objective": "Establish whether the terrain-referenced clutter map can be held in the navigation database partition the target aircraft actually carry, what happens to the effectivity of the stabilised drive bulletin, whether the shelf position and the flight compartment rack space are available, and how much of the crew and maintenance content has to be re-issued.",
+      "scope_note": "The search covered ATA 34 as the primary chapter with ATA 22 for the navigation database and ATA 45 for the load path, because the clutter map is data before it is a radar function. ATA 25 came in through the zone seed on the shelf position. Structural and powerplant chapters were excluded, and the operator restriction was kept because the change is scoped as a single campaign rather than a fleet standard.",
+      "method_note": "Entity linking from the six part numbers, the three functional item numbers and the three zones returned the radar family and the manual content immediately, as it always does in a chapter this densely instrumented. The valuable part of the analysis was semantic: the dependency on the enlarged database partition is stated nowhere in either document as a dependency, and it was found by searching on what the clutter map is rather than on what it is called.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is a data dependency that neither document declares: the terrain-referenced clutter map is derived from the navigation database, and the map for the operator's route structure will not fit in the delivered partition. Aircraft that have not had the partition increase would take the change and get a clutter map covering only part of their network, which is worse than a generic map because the behaviour would change from airfield to airfield. The effectivity item is straightforward but has to be done: the stabilised drive bulletin is the vehicle by which most of the target aircraft reached the current standard, and its relationship to this change has to be stated. The shelf position finding is the one that shows why an entity search is still worth running in a chapter this well understood: the overhead stowage change occupies the same centre cabin zone the computer card shelf sits behind, and nothing in either text hints at it. The remaining items are the trouble shooting content, the illustrated part list and the crew description, all of which change substantially.",
+      "next_steps": "Establish the partition size the operator's route structure needs and check it against the two fleet standards before the design review. Draft the bulletin effectivity statement now rather than at release. Confirm the shelf access with the cabin office. Decide with the flight operations office how much of the radar description and approach technique has to be re-taught, because the training cost is currently the largest single item in the estimate."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3440119270001",
+        "D3440008623827",
+        "DUD963936-57",
+        "D3440005921121",
+        "AES311855K5",
+        "AGS393059-2A"
+      ],
+      "fins": [
+        "282TR7",
+        "2FE",
+        "580DA"
+      ],
+      "drawings": [
+        "D34401154303",
+        "D34400093148"
+      ],
+      "software": [
+        "LA3C9E7BDD5"
+      ],
+      "zones": [
+        "111",
+        "216",
+        "251"
+      ],
+      "figures": [
+        "FIG-34-40-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00750",
+        "C00796"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111974",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-260255",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "predictive windshear",
+      "clutter map",
+      "database partition",
+      "training cost"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111974-01",
+      "subject_mod": "MOD-111974",
+      "source_io": "IO-C-260255",
+      "pawo_status": "RAISED",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-08",
+      "due_date": "2026-11-27",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "ETGC"
+        ],
+        "estimated_manhours": 115,
+        "spent_manhours": 18
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "34",
+          "22",
+          "45",
+          "25"
+        ],
+        "ata_4d": [
+          "34-40",
+          "34-50",
+          "22-80",
+          "45-45",
+          "25-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "C00408",
+          "to": "C00796"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3440119270001",
+            "D3440008623827",
+            "DUD963936-57",
+            "D3440005921121"
+          ],
+          "fins": [
+            "282TR7",
+            "2FE",
+            "580DA"
+          ],
+          "drawings": [
+            "D34401154303"
+          ],
+          "zones": [
+            "111",
+            "216",
+            "251"
+          ],
+          "software": [
+            "LA3C9E7BDD5"
+          ]
+        },
+        "similarity_seeds": [
+          "subtracting the ground from a radar picture using stored terrain for a known airfield",
+          "holding a large stored data set on board and keeping it current every cycle"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Entity search on the radar installation entities",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Semantic search on stored terrain and database capacity",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check shelf position and rack access",
+          "method": "ENTITY",
+          "owner": "ETGC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Draft the bulletin effectivity statement",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T05",
+          "title": "Estimate the training and re-qualification cost",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111375",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "251"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The computer card shelf sits behind the centre cabin zone in which the deeper overhead stowage bins are installed, and access to the shelf on an aircraft at that standard needs a trim panel that the bin change moved. There is nothing else connecting a radar shelf to a stowage bin, and no reader of either document would think to look.",
+          "resolution": "Confirm the shelf access on an aircraft at the deeper bin standard and adjust the installation task if a different panel has to come out."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "FCOM-C-DSC-34-40-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "No shared identifier and two different registers. The crew entry explains tilt, colours and what to expect below three thousand feet; the modification explains hazard factors, radial velocity fields and clutter maps. The overlap is entirely conceptual."
+          },
+          "rationale": "The crew description already distinguishes two radar standards and tells the crew that knowing which one the aircraft carries matters, because the two behave differently in the flare. This change introduces a third behaviour and an alert the crew has never had on the type, so the description and the approach technique both have to be rewritten rather than amended.",
+          "resolution": "Re-write the crew description and the approach technique for the third standard, and treat the training package as part of the change rather than as a consequence of it."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-111277",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Neither document mentions the other and they share no identifier. One is about carrying worldwide navigation coverage and loading it faster; the other is about subtracting ground return using stored terrain. The dependency exists only in the data and is stated nowhere."
+          },
+          "rationale": "The terrain-referenced clutter map is derived from the navigation database. On the operator's route structure the map does not fit in the delivered partition, and an aircraft that has not had the partition increase would take this change and receive terrain coverage for part of its network only. The result would be a radar that behaves differently from airfield to airfield, which is worse than the generic map it replaces.",
+          "resolution": "Make the enlarged partition an explicit prerequisite, establish the partition size the route structure needs, and check the standard of every aircraft in the campaign before kits are ordered."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-111263",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3440119270001",
+              "D3440008623827",
+              "DUD963936-57",
+              "AES311855K5",
+              "AGS393059-2A"
+            ],
+            "shared_fins": [
+              "282TR7",
+              "2FE",
+              "580DA"
+            ],
+            "shared_zones": [
+              "111",
+              "216",
+              "251"
+            ],
+            "shared_ata_6d": [
+              "34-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The stabilised drive standard is the direct predecessor and shares every significant identifier. It is still in production and the supersession has to be sequenced with the production cut-in rather than declared at release, or the line will be building an aircraft to a standard that has just been superseded.",
+          "resolution": "Sequence the supersession with the production plan and confirm the cut-in date with the production office before release."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "CRN-34-2006",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3440119270001",
+              "D3440008623827",
+              "DUD963936-57",
+              "AES311855K5",
+              "AGS393059-2A"
+            ],
+            "shared_fins": [
+              "282TR7",
+              "2FE",
+              "580DA"
+            ],
+            "shared_zones": [
+              "111",
+              "216",
+              "251"
+            ],
+            "shared_ata_6d": [
+              "34-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Most of the aircraft in the campaign reached the current standard through this bulletin, and it is still being embodied by a third operator. The relationship between it and this change is not stated anywhere, so an operator embodying the bulletin next year cannot tell whether it is a step towards this change or a dead end.",
+          "resolution": "State the relationship explicitly in the new bulletin and add a note to the existing one at its next revision."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "TSM-C-34-40-11-810-811",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3440119270001",
+              "D3440008623827",
+              "DUD963936-57",
+              "D3440005921121"
+            ],
+            "shared_fins": [
+              "282TR7",
+              "2FE",
+              "580DA"
+            ],
+            "shared_zones": [
+              "111",
+              "216",
+              "251"
+            ],
+            "shared_ata_6d": [
+              "34-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure already opens by establishing which radar standard the aircraft carries, because the same crew report means different things on the two standards. A third standard makes that first step decisive rather than merely useful, and the procedure gains a whole branch for a failed terrain reference.",
+          "resolution": "Re-issue the procedure with three standards and add the terrain reference branch before the first embodiment."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "IPC-C-34-40-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3440119270001",
+              "D3440008623827",
+              "D3440005921121",
+              "AES311855K5",
+              "AGS393059-2A"
+            ],
+            "shared_fins": [
+              "282TR7",
+              "2FE",
+              "580DA"
+            ],
+            "shared_zones": [
+              "111",
+              "216",
+              "251"
+            ],
+            "shared_ata_6d": [
+              "34-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure lists the interface unit as the pre-modification alternate of the display unit assembly. This change re-instates the interface unit as the terrain reference path, so a part that the figure currently shows as superseded becomes current again alongside its own replacement.",
+          "resolution": "Re-issue the figure with the interface unit as a current item in its own right rather than as an alternate, with a clear effectivity note."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111251",
+          "doc_type": "MOD",
+          "reason": "Top of every entity search because it shares the transceiver and both washers with this candidate. It is the magnetron replacement, superseded twice over, and this change cannot be embodied on an aircraft that has not moved past it, so it has no bearing on the analysis."
+        },
+        {
+          "doc_id": "AMM-C-34-40-11-000-013-A",
+          "doc_type": "AMM",
+          "reason": "Returned by every entity search in this chapter and superficially plausible as a manual impact. The change is a software load and a shelf card; the transceiver is not removed, the shim stack is not disturbed and the removal task does not change."
+        }
+      ],
+      "conclusion": "Not yet issued. The navigation database partition dependency is blocking and is stated nowhere in either document, which is the finding the review needs to see first.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

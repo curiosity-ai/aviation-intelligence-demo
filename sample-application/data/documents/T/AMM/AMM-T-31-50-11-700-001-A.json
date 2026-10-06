@@ -1,0 +1,160 @@
+[
+  {
+    "doc_id": "AMM-T-31-50-11-700-001-A",
+    "doc_type": "AMM",
+    "title": "Flight Warning Computer — Software Loading and Central Warning Functional Test",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2024-09-24",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-50-12",
+      "31-60-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-05-18",
+      "released": "2018-10-09",
+      "revised": "2024-09-24",
+      "effective": "2024-11-01"
+    },
+    "abstract": "Loading of the flight warning computer operational software and, where applicable, the inhibit configuration file, followed by the central warning functional test including the phase inhibit checks.",
+    "sections": {
+      "purpose": "This task gives the procedure to load the operational software and the inhibit configuration file into both flight warning computers, and to do the central warning functional test that confirms the aural, visual and inhibit behaviour.",
+      "job_setup_note": "The operational load must be applied before the configuration file; the loader rejects the file if the order is reversed and the computer is then left in a partial state that needs the whole sequence repeating. Both computers must be at the same standard before the functional test. The aircraft must be on stable ground power for the whole loading sequence, because a power interruption during a load leaves the computer unbootable and it must go to the shop.",
+      "procedure": "1. Put the aircraft on stable ground power and confirm that no other loading activity is in progress. 2. Put the warning notice in the flight compartment; the aural warnings will sound during this task. 3. Connect the portable data loader at the flight deck loading port. 4. Select the first flight warning computer and load the operational software. CAUTION: DO NOT INTERRUPT THE LOAD OR REMOVE POWER. AN INTERRUPTED LOAD LEAVES THE COMPUTER UNBOOTABLE AND IT MUST BE RETURNED TO THE SHOP. 5. Where the configuration file is applicable, load it after the operational software and confirm that the loader does not report a rejection. 6. Repeat for the second computer. 7. Confirm both part numbers on the maintenance terminal and confirm that the two computers agree. 8. Do the aural warning check at each level. WARNING: THE AURAL WARNINGS ARE LOUD. WEAR HEARING PROTECTION AND WARN ANYONE WORKING IN THE FLIGHT COMPARTMENT. 9. Do the master caution and master warning check on both sides. 10. Do the take-off phase inhibit check by simulating the phase transition on the maintenance terminal. 11. Where the configuration file is loaded, do the approach phase inhibit check with the aircraft in the approach configuration on the ground. 12. Confirm that no residual warning or caution remains active. 13. Disconnect the loader.",
+      "close_out": "Remove the warning notice. Record both software part numbers in the loadable software list and in the aircraft maintenance record. Confirm with the flight crew documentation supplement that the inhibit standard fitted matches the standard described to the crew."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150111745067",
+        "D3150116156104",
+        "D3150111234640"
+      ],
+      "fins": [
+        "60FW",
+        "7619FP7"
+      ],
+      "drawings": [
+        "D31501271700"
+      ],
+      "software": [
+        "LC2RA4D7C66",
+        "LC7R81E91AB",
+        "LE3RE34FC19"
+      ],
+      "zones": [
+        "292",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-22-10-11-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight warning computer",
+      "software load",
+      "functional test",
+      "inhibit check",
+      "aural warning"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "31-50-11-700-001-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. Steps 5 and 11 apply only to aircraft post MOD-149310.",
+      "manhours": 3.0,
+      "personnel": 1,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "292",
+          "183"
+        ],
+        "access_panels": [],
+        "doors": [
+          "Flight compartment"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Put the aircraft on stable ground power for the whole loading sequence.",
+          "Wear hearing protection during the aural warning check.",
+          "Put the warning notice in the flight compartment."
+        ],
+        "tooling": [
+          {
+            "reference": "98D31501-027",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D31501-033",
+            "description": "Maintenance terminal"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-22-10-11-700-001-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

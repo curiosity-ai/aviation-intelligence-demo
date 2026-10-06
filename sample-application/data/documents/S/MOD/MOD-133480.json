@@ -1,0 +1,361 @@
+[
+  {
+    "doc_id": "MOD-133480",
+    "doc_type": "MOD",
+    "title": "Powered Drive Unit and Roller Tray Upgrade in the Aft Cargo Compartment",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-06-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "25",
+      "ata_4d": "25-50",
+      "ata_6d": "25-50-12",
+      "title": "Cargo Compartment — Cargo Loading System"
+    },
+    "secondary_ata": [
+      "53-50",
+      "25-50-13"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00329",
+          "to": "S01840"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "SLN-25-1052"
+      ]
+    },
+    "dates": {
+      "created": "2019-08-19",
+      "released": "2021-06-15",
+      "revised": "2021-06-15",
+      "effective": "2021-07-05"
+    },
+    "abstract": "Replacement of the aft compartment powered drive units and roller trays by a brushless standard with load sensing, to cut container jams and the handling damage that follows them.",
+    "sections": {
+      "reason": "Ground handling reports across sixteen operators showed the aft compartment loading system as the largest single source of container damage on the type, at 4.1 damaged containers per 1 000 loads. The existing brushed drive units stall without warning when a container is out of square, and the loader then forces it, which damages both the container and the tray. Brush wear also drove a 1 200 flight hour inspection that operators disliked because it needs the compartment empty. Two operators had begun loading the aft compartment by hand on short turnarounds, which is slower and creates its own restraint problems.",
+      "description": "The powered drive units are replaced by brushless units with current-based load sensing that stops the drive and lights a fault indication at the loading panel when the resistance exceeds the set threshold. The cargo loading system kit D2550120953014 is re-worked to carry the new controller, and the left-hand cargo loading panel D2550128614202 is replaced by a version with the jam indication and a manual override. The outboard latch kit VAL324542-62 is retained. Roller trays are replaced across the aft compartment with a tray having a 25 mm shorter roller pitch, which is what actually reduces the tendency for a container to skew. The obsolete swaged collar set EN728781-4A is deleted from the tray joint in favour of a bolted arrangement. The loading panel position 46DL is re-labelled and the upper cargo lining panel position 9DQ is re-cut where the new tray fouls it. Work is inside the aft compartment, zones 133, 142 and 145. Detail is on drawing D25500094206.",
+      "effects": "Mass increase of 34 kg per aircraft, aft of the reference datum, giving a CG shift of 0.06 per cent MAC that must be entered in the weight and balance record. Electrical load rises by 900 VA during loading only, which is a ground condition and is inside the ground service bus rating. The brushless unit is not interchangeable with the brushed unit because the control interface differs. The 1 200 flight hour brush inspection is deleted. Expected container damage rate after embodiment is 1.2 per 1 000 loads. The loading system operating instructions and the IPC tray figure both require update.",
+      "embodiment_note": "Retrofit only, through Service Bulletin SLN-25-1052, which requires the compartment to be empty and the lining panels removed. Typical embodiment is five days at a C-check. The SB is written to be taken together with the freighter provision change where the operator intends a later conversion."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2550120953014",
+        "D2550128614202",
+        "VAL324542-62",
+        "EN728781-4A"
+      ],
+      "fins": [
+        "46DL",
+        "9DQ"
+      ],
+      "drawings": [
+        "D25500094206"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "142",
+        "145"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01840"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-25-1052",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "powered drive unit",
+      "roller tray",
+      "container jam",
+      "load sensing",
+      "cargo loading"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Cargo Systems"
+    },
+    "type_data": {
+      "mod_number": 133480,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.787",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 34.0,
+      "balance_impact": "Aft of the reference datum; CG shift of 0.06 % MAC, reportable",
+      "electrical_load_impact_va": 900,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "VAL324542-62"
+      ],
+      "parts_removed": [
+        "EN728781-4A"
+      ],
+      "parts_modified": [
+        "D2550120953014",
+        "D2550128614202"
+      ],
+      "fins_affected": [
+        "46DL",
+        "9DQ"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 240,
+      "estimated_cost_keur": 810,
+      "lead_time_weeks": 30,
+      "production_impact": "No cut-in; offered as an in-service upgrade only",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-133480",
+    "doc_type": "MOD",
+    "title": "Powered Drive Unit and Roller Tray Upgrade in the Aft Cargo Compartment",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-08",
+      "reason": "A transition tray is added at the four hard point stations, with its own part list, so that the short roller pitch meets the freighter restraint grid without the trays being lifted.",
+      "raised_by_pawo": "PAWO-132210-02",
+      "raised_by_finding": "F01",
+      "finding_type": "ZONE_CONFLICT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "25",
+      "ata_4d": "25-50",
+      "ata_6d": "25-50-12",
+      "title": "Cargo Compartment — Cargo Loading System"
+    },
+    "secondary_ata": [
+      "53-50",
+      "25-50-13"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00329",
+          "to": "S01840"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "SLN-25-1052"
+      ]
+    },
+    "dates": {
+      "created": "2019-08-19",
+      "released": "2021-06-15",
+      "revised": "2026-06-08",
+      "effective": "2026-06-26"
+    },
+    "abstract": "Replacement of the aft compartment powered drive units and roller trays by a brushless standard with load sensing, with a transition tray at the hard point stations so that a provisioned aircraft can still be converted.",
+    "sections": {
+      "reason": "Ground handling reports across sixteen operators showed the aft compartment loading system as the largest single source of container damage on the type, at 4.1 damaged containers per 1 000 loads. The existing brushed drive units stall without warning when a container is out of square, and the loader then forces it, which damages both the container and the tray. Brush wear also drove a 1 200 flight hour inspection that operators disliked because it needs the compartment empty. Two operators had begun loading the aft compartment by hand on short turnarounds, which is slower and creates its own restraint problems.",
+      "description": "The powered drive units are replaced by brushless units with current-based load sensing that stops the drive and lights a fault indication at the loading panel when the resistance exceeds the set threshold. The cargo loading system kit D2550120953014 is re-worked to carry the new controller, and the left-hand cargo loading panel D2550128614202 is replaced by a version with the jam indication and a manual override. The outboard latch kit VAL324542-62 is retained. Roller trays are replaced across the aft compartment with a tray having a 25 mm shorter roller pitch, which is what actually reduces the tendency for a container to skew. At the four stations where the main deck hard point grid of MOD-132210 lands, the short pitch does not fall on a hard point, so a transition tray D2550133757818 is fitted in place of the standard tray at those positions: it carries the short pitch inboard of the station and the original pitch over it, and the restraint latch DUD553278-62 bolts straight to the hard point through it. The obsolete swaged collar set EN728781-4A is deleted from the tray joint in favour of a bolted arrangement. The loading panel position 46DL is re-labelled and the upper cargo lining panel position 9DQ is re-cut where the new tray fouls it. Work is inside the aft compartment, zones 133, 142 and 145. Detail is on drawing D25500094206.",
+      "effects": "Mass increase of 36 kg per aircraft, aft of the reference datum, giving a CG shift of 0.06 per cent MAC that must be entered in the weight and balance record. Electrical load rises by 900 VA during loading only, which is a ground condition and is inside the ground service bus rating. The brushless unit is not interchangeable with the brushed unit because the control interface differs. The 1 200 flight hour brush inspection is deleted. Expected container damage rate after embodiment is 1.2 per 1 000 loads. The loading system operating instructions and the IPC tray figure both require update, and the tray figure now needs the transition tray as a separate item with its own effectivity. Without the transition tray a provisioned aircraft could not lay the freighter restraint grid without lifting and re-spacing trays that are not designed to move, so the two changes are compatible only in this configuration.",
+      "embodiment_note": "Retrofit only, through Service Bulletin SLN-25-1052, which requires the compartment to be empty and the lining panels removed. Typical embodiment is five days at a C-check. The SB is written to be taken together with the freighter provision change where the operator intends a later conversion."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2550120953014",
+        "D2550128614202",
+        "VAL324542-62",
+        "EN728781-4A",
+        "D2550133757818",
+        "DUD553278-62"
+      ],
+      "fins": [
+        "46DL",
+        "9DQ"
+      ],
+      "drawings": [
+        "D25500094206"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "142",
+        "145"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01840"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-25-1052",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-132210",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "powered drive unit",
+      "roller tray",
+      "transition tray",
+      "restraint grid",
+      "container jam"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Cargo Systems"
+    },
+    "type_data": {
+      "mod_number": 133480,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.787",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 36.0,
+      "balance_impact": "Aft of the reference datum; CG shift of 0.06 % MAC, reportable",
+      "electrical_load_impact_va": 900,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "VAL324542-62",
+        "D2550133757818",
+        "DUD553278-62"
+      ],
+      "parts_removed": [
+        "EN728781-4A"
+      ],
+      "parts_modified": [
+        "D2550120953014",
+        "D2550128614202"
+      ],
+      "fins_affected": [
+        "46DL",
+        "9DQ"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 258,
+      "estimated_cost_keur": 870,
+      "lead_time_weeks": 30,
+      "production_impact": "No cut-in; offered as an in-service upgrade only",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

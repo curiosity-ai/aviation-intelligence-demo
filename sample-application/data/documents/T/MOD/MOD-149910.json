@@ -1,0 +1,166 @@
+[
+  {
+    "doc_id": "MOD-149910",
+    "doc_type": "MOD",
+    "title": "Single Piece Generator Cradle for the Passenger Service Unit Oxygen Installation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "35",
+      "ata_4d": "35-20",
+      "ata_6d": "35-20-11",
+      "title": "Passenger Oxygen — Chemical Oxygen Generators"
+    },
+    "secondary_ata": [
+      "35-20",
+      "25-20-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-07-14",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposes a single piece moulded cradle that captures the chemical oxygen generator at both ends, replacing the strap-and-bracket arrangement with a part that cannot be assembled incorrectly.",
+    "sections": {
+      "reason": "The retention bracket already in service stops the generator walking forward, but it depends on the moulded end cap being fitted the right way round and on the strap being tensioned to a defined torque. Two cabin audits have found brackets fitted with the original end cap, which leaves the retention doing nothing. The condition is not detectable without opening the service unit, and there is no indication to the cabin crew. A cradle that captures the generator geometrically removes the assembly error entirely, and the cabin definition office has asked whether it can be introduced at the next cabin standard rather than as a further retrofit on top of a retrofit.",
+      "description": "The cradle, the retention bracket and the end cap are replaced by a single moulded item that captures the generator at both ends and cannot be closed unless the generator is correctly seated. The retention bracket D3520117585166 introduced by the current standard is deleted, the screws AES260727K2 and collars LN551613K3 that hold it are no longer required, and the end cap XAN326870-64 becomes part of the moulding. The firing lanyard geometry is unchanged and the generator itself is not affected. The service unit panel and its hinge are unchanged so that the change is invisible from the cabin. Wiring at FIN 957HD is disconnected and reconnected. Work is inside the passenger service units in zones 981 and 963, with the unit dropped on its hinge. Detail will be established on drawing D35200029961 at the next issue.",
+      "effects": "Estimated mass reduction of 2.1 kg on a full cabin against the current retrofit standard. No electrical effect. The moulded cradle is not interchangeable with either the plain cradle or the bracketed cradle, and a mixed installation within one service unit is not permitted. Dispatch is unaffected. The displacement measurement task disappears entirely rather than being extended, which is a larger maintenance programme benefit than the current standard delivers, but it requires a substantiation that the geometric capture cannot be defeated.",
+      "embodiment_note": "Proposal only. If accepted, production cut-in would be at the next cabin standard, with retrofit offered to operators taking a cabin refresh. Embodiment on an aircraft already carrying the bracketed cradle would remove parts rather than add them.",
+      "open_points": "Pre-analysis must establish whether a single moulded part can meet the flammability and the fifteen-year ageing requirements that the current assembly meets with separate items, whether the deleted bracket leaves any hole in the existing cradle that must be closed, and whether operators who have just embodied the bracketed standard would be asked to remove it. The cabin definition office also needs a position on whether this can wait for the next cabin standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3520117585166",
+        "AES260727K2",
+        "LN551613K3",
+        "XAN326870-64"
+      ],
+      "fins": [
+        "957HD",
+        "828HD"
+      ],
+      "drawings": [
+        "D35200029961"
+      ],
+      "software": [],
+      "zones": [
+        "981",
+        "963"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146830",
+        "doc_type": "MOD",
+        "relation": "CONFLICTS_WITH"
+      }
+    ],
+    "keywords": [
+      "oxygen generator",
+      "moulded cradle",
+      "assembly error",
+      "passenger service unit",
+      "retention"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Vaubranche",
+      "role": "Cabin Definition"
+    },
+    "type_data": {
+      "mod_number": 149910,
+      "mod_class": "MAJOR",
+      "change_category": "CABIN",
+      "trigger": "SAFETY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1441",
+          "CS 25.853",
+          "CS 25.1447"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -2.1,
+      "balance_impact": "Distributed along cabin length, no meaningful CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [
+        "D3520117585166",
+        "AES260727K2",
+        "LN551613K3"
+      ],
+      "parts_modified": [
+        "XAN326870-64"
+      ],
+      "fins_affected": [
+        "957HD"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 240,
+      "estimated_cost_keur": 780,
+      "lead_time_weeks": 48,
+      "production_impact": "Cut-in proposed at the next cabin standard",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,369 @@
+[
+  {
+    "doc_id": "WDM-C-92-21-13",
+    "doc_type": "WDM",
+    "title": "Forward Fuselage — Cargo Door Warning Wiring, Both Sides",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-03-17",
+      "reason": "Original issue of the cargo door warning wiring sheet for both sides.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-13",
+      "title": "Forward Fuselage Wiring — Door Warning Wiring"
+    },
+    "secondary_ata": [
+      "52-70",
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2015-12-01",
+      "released": "2016-03-17",
+      "revised": "2016-03-17",
+      "effective": "2016-04-07"
+    },
+    "abstract": "Wiring diagram for the cargo door warning circuit from the door proximity sensors to the door warning computing unit, showing both the sensor runs and the flight deck indication feed.",
+    "sections": {
+      "purpose": "This sheet shows the wiring of the cargo door warning circuit from the proximity sensors at each door to the door warning computing unit and on to the flight deck indication.",
+      "sheet_note": "The sheet covers both cargo doors on one diagram because the two circuits are identical apart from the harness routing. The proximity sensor at each door has two independent outputs that reach the computing unit on separate cores in the same harness, so a single harness damage event can affect both. Connector positions are shown at the door surround break-out where the harness crosses from the fixed structure into the door, which is the position that suffers most in-service damage. The bracket datum for the actuation sensor, functional item number 8511WT, is dimensioned on sheet 2 from the outer face of the greased bronze latch bearing.",
+      "routing_note": "The forward door harness runs from the door surround break-out in zone 891 up the frame web to the crown route and forward to the avionics compartment. The aft door harness joins the same crown route at the wing box crossing. Both runs are supported at 300 mm pitch and are separated from the cargo compartment lighting feed by the minimum given in the standard practice."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221131539978",
+        "D9221132008426",
+        "DED267519-33"
+      ],
+      "fins": [
+        "161VU",
+        "675VC8",
+        "2279VC",
+        "8511WT",
+        "3323WT"
+      ],
+      "drawings": [
+        "D92211326851"
+      ],
+      "software": [],
+      "zones": [
+        "113",
+        "144",
+        "173",
+        "891"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-52-30-12-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-52-70-11-812-801",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door warning wiring",
+      "proximity sensor",
+      "harness break-out",
+      "crown route",
+      "flight deck indication"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Lorencourt",
+      "role": "Electrical Design"
+    },
+    "type_data": {
+      "sheet_number": "92-21-13",
+      "sheet_title": "CARGO DOOR WARNING WIRING — BOTH SIDES",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1220W",
+        "1221W",
+        "1224W"
+      ],
+      "connectors": [
+        {
+          "reference": "1220VC",
+          "part_number": "D9221131539978",
+          "location_zone": "891",
+          "contacts": 19
+        },
+        {
+          "reference": "1221VC",
+          "part_number": "DED267519-33",
+          "location_zone": "173",
+          "contacts": 37
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "3323WT",
+          "description": "WARNING SENSOR, CARGO DOOR STRUCTURE, UPPER",
+          "zone": "891"
+        },
+        {
+          "fin": "8511WT",
+          "description": "WARNING SENSOR, CARGO DOOR ACTUATION, LH",
+          "zone": "891"
+        },
+        {
+          "fin": "161VU",
+          "description": "CONTACTOR, DOOR WARNING WIRING, LOWER",
+          "zone": "173"
+        },
+        {
+          "fin": "2279VC",
+          "description": "BUS BAR, DOOR WARNING WIRING, OUTBD",
+          "zone": "144"
+        },
+        {
+          "fin": "675VC8",
+          "description": "CABLE ASSY, DOOR WARNING WIRING, FWD",
+          "zone": "113"
+        }
+      ],
+      "wire_count": 52,
+      "wire_gauge_range": "AWG 24 to AWG 16",
+      "routes": [
+        "Zone 891 door surround break-out to zone 113 via the frame web",
+        "Zone 113 to zone 173 via the crown route and the avionics compartment entry",
+        "Zone 144 to zone 173 via the wing box crossing"
+      ],
+      "related_sheets": [
+        "WDM-C-92-41-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "WDM-C-92-21-13",
+    "doc_type": "WDM",
+    "title": "Forward Fuselage — Cargo Door Warning Wiring, Both Sides",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2019-12-11",
+      "reason": "Sensor bracket datum on sheet 2 re-dimensioned from the latch stiffener face after the bearing was found to be the wrong reference; no wiring change.",
+      "raised_by_pawo": "PAWO-111034-01",
+      "raised_by_finding": "F04",
+      "finding_type": "FIN_CONFLICT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-13",
+      "title": "Forward Fuselage Wiring — Door Warning Wiring"
+    },
+    "secondary_ata": [
+      "52-70",
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2015-12-01",
+      "released": "2016-03-17",
+      "revised": "2019-12-11",
+      "effective": "2020-01-08"
+    },
+    "abstract": "Wiring diagram for the cargo door warning circuit from the door proximity sensors to the door warning computing unit, showing both the sensor runs and the flight deck indication feed.",
+    "sections": {
+      "purpose": "This sheet shows the wiring of the cargo door warning circuit from the proximity sensors at each door to the door warning computing unit and on to the flight deck indication.",
+      "sheet_note": "The sheet covers both cargo doors on one diagram because the two circuits are identical apart from the harness routing. The proximity sensor at each door has two independent outputs that reach the computing unit on separate cores in the same harness, so a single harness damage event can affect both. Connector positions are shown at the door surround break-out where the harness crosses from the fixed structure into the door, which is the position that suffers most in-service damage. The bracket datum for the actuation sensor, functional item number 8511WT, is dimensioned on sheet 2 from the machined face of the latch stiffener. The earlier dimension was taken from the bearing outer face, which is not a datum: that face sits 0.3 mm differently on the two bush standards, so the same drawing gave two bracket positions for one part number. Nothing in the circuit changes with the bush standard.",
+      "routing_note": "The forward door harness runs from the door surround break-out in zone 891 up the frame web to the crown route and forward to the avionics compartment. The aft door harness joins the same crown route at the wing box crossing. Both runs are supported at 300 mm pitch and are separated from the cargo compartment lighting feed by the minimum given in the standard practice."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221131539978",
+        "D9221132008426",
+        "DED267519-33"
+      ],
+      "fins": [
+        "161VU",
+        "675VC8",
+        "2279VC",
+        "8511WT",
+        "3323WT"
+      ],
+      "drawings": [
+        "D92211326851"
+      ],
+      "software": [],
+      "zones": [
+        "113",
+        "144",
+        "173",
+        "891"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-52-30-12-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-52-70-11-812-801",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111034",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door warning wiring",
+      "proximity sensor",
+      "bracket datum",
+      "harness break-out",
+      "flight deck indication"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Lorencourt",
+      "role": "Electrical Design"
+    },
+    "type_data": {
+      "sheet_number": "92-21-13",
+      "sheet_title": "CARGO DOOR WARNING WIRING — BOTH SIDES",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1220W",
+        "1221W",
+        "1224W"
+      ],
+      "connectors": [
+        {
+          "reference": "1220VC",
+          "part_number": "D9221131539978",
+          "location_zone": "891",
+          "contacts": 19
+        },
+        {
+          "reference": "1221VC",
+          "part_number": "DED267519-33",
+          "location_zone": "173",
+          "contacts": 37
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "3323WT",
+          "description": "WARNING SENSOR, CARGO DOOR STRUCTURE, UPPER",
+          "zone": "891"
+        },
+        {
+          "fin": "8511WT",
+          "description": "WARNING SENSOR, CARGO DOOR ACTUATION, LH",
+          "zone": "891"
+        },
+        {
+          "fin": "161VU",
+          "description": "CONTACTOR, DOOR WARNING WIRING, LOWER",
+          "zone": "173"
+        },
+        {
+          "fin": "2279VC",
+          "description": "BUS BAR, DOOR WARNING WIRING, OUTBD",
+          "zone": "144"
+        },
+        {
+          "fin": "675VC8",
+          "description": "CABLE ASSY, DOOR WARNING WIRING, FWD",
+          "zone": "113"
+        }
+      ],
+      "wire_count": 52,
+      "wire_gauge_range": "AWG 24 to AWG 16",
+      "routes": [
+        "Zone 891 door surround break-out to zone 113 via the frame web",
+        "Zone 113 to zone 173 via the crown route and the avionics compartment entry",
+        "Zone 144 to zone 173 via the wing box crossing"
+      ],
+      "related_sheets": [
+        "WDM-C-92-41-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

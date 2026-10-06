@@ -1,0 +1,260 @@
+[
+  {
+    "doc_id": "PAWO-149510-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Latching Contactor Standard for the Secondary Distribution Boxes",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-05-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-11",
+      "title": "Electrical Load Distribution — Primary Distribution Centre"
+    },
+    "secondary_ata": [
+      "24-50-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-05-16",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the second issue distribution standard, opened to consider a combined conversion kit and delegated to the spares organisation when the kit structure proved to be the real question.",
+    "sections": {
+      "objective": "Establish whether a combined kit covering both issues of the latching contactor standard should be offered to operators who have not taken the first issue, and what the consequences would be for the two existing kits.",
+      "findings_summary": "The question was delegated to the spares organisation. Technically a combined kit is straightforward: the parts are additive and there is no rework in the first issue that the second issue undoes. The real question is commercial and catalogue structure rather than engineering, because a combined kit changes the return path for the removed modules and the core credit is priced against the first issue kit. Two items were confirmed. The second issue bulletin correctly requires the first issue as a prerequisite and states it in a way that a combined kit would have to preserve. The load-shed declaration made by the second issue assumes latched forward contactors, so a combined kit must sequence the forward rack first, and that sequencing is not obvious from the parts list alone.",
+      "next_steps": "Delegate the kit structure to the spares organisation with the engineering constraints recorded: parts are additive, the forward rack must be converted first, and the core credit path must be preserved. No documentation change is required from engineering."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450112131298",
+        "D2450115910023",
+        "D2450122086171",
+        "ASD216805-37"
+      ],
+      "fins": [
+        "1198GX9",
+        "3102GX",
+        "35GX"
+      ],
+      "drawings": [
+        "D24501125799",
+        "D24501284380"
+      ],
+      "software": [],
+      "zones": [
+        "292",
+        "682",
+        "254"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149510",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "combined kit",
+      "sequencing",
+      "core credit",
+      "historical"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149510-01",
+      "subject_mod": "MOD-149510",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2022-09-14",
+      "outcome": "DELEGATED",
+      "raised_date": "2022-05-16",
+      "due_date": "2022-09-30",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 85,
+        "spent_manhours": 92
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "24"
+        ],
+        "ata_4d": [
+          "24-50",
+          "24-60"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2450122086171",
+            "ASD216805-37"
+          ],
+          "fins": [
+            "35GX",
+            "1198GX9"
+          ],
+          "drawings": [
+            "D24501284380"
+          ],
+          "zones": [
+            "254"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "combined kit covering two issues of the same standard",
+          "conversion that must be sequenced rack by rack"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Check whether the two issues are additive at part level",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish the sequencing constraint for a combined conversion",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TTN-24-1112",
+          "doc_type": "SB",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450112131298",
+              "D2450122086171"
+            ],
+            "shared_fins": [
+              "1198GX9",
+              "35GX"
+            ],
+            "shared_zones": [
+              "292",
+              "254"
+            ],
+            "shared_ata_6d": [
+              "24-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The load-shed declaration assumes latched forward contactors. A combined kit that lets an operator convert the secondary boxes first would leave the declaration invalid until the forward rack follows.",
+          "resolution": "Record the sequencing constraint as an engineering condition on any combined kit."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-24-1105",
+          "doc_type": "SB",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450112131298",
+              "D2450115910023"
+            ],
+            "shared_fins": [
+              "1198GX9",
+              "3102GX"
+            ],
+            "shared_zones": [
+              "292",
+              "682"
+            ],
+            "shared_ata_6d": [
+              "24-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The first issue kit carries the core credit path for the removed modules. A combined kit would have to preserve it or the operator loses the credit without being told.",
+          "resolution": "Delegated to the spares organisation with the constraint recorded."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Kit structure delegated to the spares organisation with three engineering constraints recorded.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

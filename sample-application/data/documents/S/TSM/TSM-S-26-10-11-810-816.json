@@ -1,0 +1,171 @@
+[
+  {
+    "doc_id": "TSM-S-26-10-11-810-816",
+    "doc_type": "TSM",
+    "title": "False Engine Fire Warning After a Wet Turnaround",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-01-12",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-11",
+      "title": "Detection — Engine Fire Detection Loops"
+    },
+    "secondary_ata": [
+      "26-10-13"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-06-19",
+      "released": "2024-01-12",
+      "revised": null,
+      "effective": "2024-01-31"
+    },
+    "abstract": "Fault isolation for a fire warning that appears on the first flight after heavy rain and clears as the loop dries, with the instruction to measure before the evidence evaporates.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an engine or auxiliary power unit fire warning that appears after a wet turnaround and clears without any action.",
+      "fault_description": "The warning appears on the first flight after heavy rain, usually within twenty minutes of take-off, and clears during the same sector or by the next one. Nothing is found on the ground because by the time the aircraft is inspected the loop has dried and every reading is normal. The mechanism is water tracking into a loop connector, most often at the pylon break where the connector sits under a drain path, or into the auxiliary power unit loop where thermal cycling near a hot duct has opened the seal. The single most important instruction in this procedure is to measure before the loop dries.",
+      "isolation_procedure": "1. Where the aircraft is still wet, do the insulation resistance measurement immediately and before anything else. Everything after this step assumes you have that reading. 2. Record the weather in the four hours before the warning and whether the aircraft was washed or rained on. 3. Safety the fire bottles and disconnect the detection unit before applying the tester. WARNING: DO NOT DISCONNECT A LOOP WITH THE FIRE BOTTLE ARMED. 4. Measure the insulation resistance at every connector on both engine loops and on the auxiliary power unit loop, and record all readings. 5. Where a reading is below the limit, open that connector and look for water in the rear grommet and tracking on the insert face. Photograph what you find. 6. Where the sealed connector standard is fitted, check the moulded boot for a split at the cable entry. 7. Where all readings are normal on a dry aircraft, do not replace anything; arrange for the measurement to be repeated the next time the aircraft is wet. CAUTION: A NORMAL READING ON A DRY AIRCRAFT PROVES NOTHING. DO NOT CLOSE THE DEFECT ON IT. 8. Examine the loop routing at the pylon break and confirm it is clear of the drain path. 9. In the auxiliary power unit compartment, measure the standoff from the hot duct at the closest point. 10. Check the regulator 25WD clip positions and the sensor 939WF3 for security. 11. Where the routing is in the drain path or the standoff is short, the rerouting modification is the answer rather than a component change.",
+      "dispatch_note": "The aircraft may be dispatched after a false fire warning provided the fire detection system passes its operational test and the insulation resistance readings are inside limits at the time of dispatch. Where a reading was low and the connector has been dried and resealed, dispatch is permitted with a repeat measurement at the next wet turnaround."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610111824651",
+        "EN557658-57",
+        "AGS49442-85"
+      ],
+      "fins": [
+        "126WF",
+        "939WF3",
+        "90WF",
+        "25WD"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "393",
+        "431",
+        "472"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-26-10-11-200-052-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "false fire warning",
+      "insulation resistance",
+      "water tracking",
+      "drain path",
+      "hot duct standoff"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "26-10-11-810-816",
+      "fault_symptom": "ENG FIRE warning on the first flight after a wet turnaround, clearing without action",
+      "fault_codes": [
+        "261011008",
+        "261011022"
+      ],
+      "warning_messages": [
+        "ENG 1 FIRE",
+        "ENG 2 FIRE",
+        "APU FIRE"
+      ],
+      "affected_fins": [
+        "126WF",
+        "939WF3",
+        "90WF",
+        "25WD"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Water tracking into the loop connector at the pylon break",
+          "probability_pct": 54,
+          "fin": "126WF"
+        },
+        {
+          "cause": "Seal opened by thermal cycling near the auxiliary power unit hot duct",
+          "probability_pct": 24,
+          "fin": "25WD"
+        },
+        {
+          "cause": "Split moulded boot at a cable entry",
+          "probability_pct": 13,
+          "fin": "939WF3"
+        },
+        {
+          "cause": "Detection unit internal failure",
+          "probability_pct": 9,
+          "fin": "90WF"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-S-26-10-11-200-052-A",
+      "dispatch": {
+        "mel_item": "26-10-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Fire detection operational test passed and all insulation readings inside limits at the time of dispatch"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

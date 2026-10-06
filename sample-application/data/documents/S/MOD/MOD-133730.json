@@ -1,0 +1,192 @@
+[
+  {
+    "doc_id": "MOD-133730",
+    "doc_type": "MOD",
+    "title": "Onboard Maintenance Terminal Report Filtering and Built-In Test Correlation Standard",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-01-30",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-12",
+      "title": "Onboard Maintenance — Maintenance Terminal"
+    },
+    "secondary_ata": [
+      "31-50",
+      "42-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "CKP",
+        "HKA",
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01521",
+      "production_cut_in_date": "2022-08-30",
+      "retrofit_via": [
+        "SLN-45-1002"
+      ]
+    },
+    "dates": {
+      "created": "2021-02-09",
+      "released": "2022-04-12",
+      "revised": "2024-01-30",
+      "effective": "2024-02-19"
+    },
+    "abstract": "A filtering and correlation standard for the onboard maintenance terminal that collapses cascaded built-in test reports into a single ranked cause, cutting the no-fault-found removals that follow a long fault list.",
+    "sections": {
+      "reason": "A single failure in a shared bus can produce forty or more correlated reports, and line engineers working under a turnaround clock replace the first item on the list. Across a two-year sample of the fleet, thirty-eight per cent of avionics removals returned no fault found, and in two thirds of those cases a later report in the same list named the item that was actually faulty. The cost is carried entirely by the operator, in shop charges and in spares turnover, and it is invisible to the aircraft.",
+      "description": "The terminal interface unit D4520127216664 is replaced by an item with the correlation engine hosted on it, and the data concentrator D4520123766196 is re-strapped to feed it the raw report stream rather than the pre-filtered one. Loop clamp LN563558-5B and grommet AES4363-5C are renewed at the harness entry because the connector shell changes. The correlation application LE9L7F7E375 is loaded onto the receiver 2TM using the existing portable loader; mounting tray 3805TM and display unit 585TM are unchanged. The terminal now presents a ranked list of candidate causes with the supporting reports collapsed underneath, and it keeps the unfiltered list one key press away so that nothing is hidden from an engineer who wants it. Work is in the forward equipment area in zone 116 and at the terminal position in zone 193. Detail is on drawing D45201289920.",
+      "effects": "Mass reduction of 0.9 kg. No change to direct current load. Interchangeable, because the terminal presents the same interfaces and the raw report path is unchanged. No flight deck effect and no crew procedure change: everything happens on the ground. Trouble shooting procedures across several chapters are rewritten to enter from the ranked list rather than from the raw report, and the shop test requirement for a returned unit changes because a no-fault-found return now carries the correlation record with it.",
+      "embodiment_note": "Production cut-in at MSN S01521. Retrofit is fourteen manhours plus a data load, offered at any overnight stop. Operators embodying it are asked to keep the raw list available for six months so that the correlation ranking can be tuned against real fleet data."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4520123766196",
+        "D4520127216664",
+        "LN563558-5B",
+        "AES4363-5C"
+      ],
+      "fins": [
+        "3805TM",
+        "585TM",
+        "2TM"
+      ],
+      "drawings": [
+        "D45201289920"
+      ],
+      "software": [
+        "LE9L7F7E375"
+      ],
+      "zones": [
+        "116",
+        "193"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01521"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-45-1002",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-S-45-20-12-700-044-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "maintenance terminal",
+      "fault correlation",
+      "no fault found",
+      "report filtering",
+      "ranked cause"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 133730,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -0.9,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "D4520127216664"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4520123766196",
+        "LN563558-5B"
+      ],
+      "fins_affected": [
+        "2TM",
+        "3805TM"
+      ],
+      "software_affected": [
+        "LE9L7F7E375"
+      ],
+      "estimated_manhours": 96,
+      "estimated_cost_keur": 720,
+      "lead_time_weeks": 40,
+      "production_impact": "Cut-in at MSN S01521",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

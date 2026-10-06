@@ -1,0 +1,173 @@
+[
+  {
+    "doc_id": "WDM-S-92-41-11",
+    "doc_type": "WDM",
+    "title": "Aft Cargo Compartment Wiring and Bilge Ground Points",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-04-08",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-41",
+      "ata_6d": "92-41-11",
+      "title": "Aft Fuselage Wiring — Aft Cargo Wiring"
+    },
+    "secondary_ata": [
+      "53-31",
+      "26-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-08-06",
+      "released": "2019-03-25",
+      "revised": "2024-04-08",
+      "effective": "2024-04-24"
+    },
+    "abstract": "Wiring sheet for the aft cargo compartment run and the ground points that sit low in the bilge, with the bonding requirements that apply after any structural or corrosion treatment work in the area.",
+    "sections": {
+      "purpose": "This sheet shows the aft cargo compartment wiring run and identifies the ground points that sit below the cargo floor line, together with their bonding resistance requirements.",
+      "sheet_note": "The ground points on this sheet are the ones that matter after structural work in the bilge, because they sit in the area that gets washed, dried and sprayed with corrosion inhibiting compound. Inhibitor on a ground stud face raises the bonding resistance without any visible change, and the sheet gives the resistance limit for each point rather than a single fleet value. Wire numbering follows the compartment frame stations, not the harness build order, which is why the numbers are not consecutive along the run.",
+      "routing_note": "The main run enters the compartment at the forward bulkhead, runs aft along the outboard frame line above the cargo floor line, and drops to the bilge only at the two ground points and at the smoke detection loop take-off. Nothing else in this run is below the floor line. After any work in the bilge the two ground points must be masked before the inhibitor is applied and their bonding resistance re-measured afterwards."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9241118546644",
+        "D9241009583735"
+      ],
+      "fins": [
+        "551VC",
+        "82VC",
+        "313VU"
+      ],
+      "drawings": [
+        "D92411153794"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "142",
+        "191"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-53-31-11-100-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-138620",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bilge ground point",
+      "bonding resistance",
+      "cargo compartment run",
+      "inhibitor masking",
+      "frame station numbering"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Wiring Data"
+    },
+    "type_data": {
+      "sheet_number": "92-41-11",
+      "sheet_title": "AFT CARGO COMPARTMENT WIRING AND BILGE GROUND POINTS",
+      "diagram_type": "GROUND_POINT_LIST",
+      "harnesses": [
+        "1330W",
+        "1421W"
+      ],
+      "connectors": [
+        {
+          "reference": "1331VC",
+          "part_number": "D9241118546644",
+          "location_zone": "133",
+          "contacts": 37
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "551VC",
+          "description": "GROUND STUD, AFT CARGO WIRING, LH",
+          "zone": "133"
+        },
+        {
+          "fin": "82VC",
+          "description": "CABLE ASSY, EMPENNAGE HARNESSES, UPPER",
+          "zone": "142"
+        },
+        {
+          "fin": "313VU",
+          "description": "CONNECTOR, EMPENNAGE HARNESSES, AFT",
+          "zone": "191"
+        }
+      ],
+      "wire_count": 68,
+      "wire_gauge_range": "AWG 24 to AWG 8",
+      "routes": [
+        "Forward bulkhead to zone 133 along the outboard frame line above the floor line",
+        "Zone 133 drop to the bilge ground point and back to the frame line",
+        "Zone 142 to zone 191 aft run to the empennage junction"
+      ],
+      "related_sheets": [
+        "WDM-S-92-21-13",
+        "WDM-S-92-31-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

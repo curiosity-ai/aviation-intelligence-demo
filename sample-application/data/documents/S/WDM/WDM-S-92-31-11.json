@@ -1,0 +1,178 @@
+[
+  {
+    "doc_id": "WDM-S-92-31-11",
+    "doc_type": "WDM",
+    "title": "Wing Junction Harnesses — Brake Control and Main Gear Bay Group",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-04-18",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-31",
+      "ata_6d": "92-31-11",
+      "title": "Centre Fuselage Wiring — Wing Junction Harnesses"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-10-01",
+      "released": "2020-05-12",
+      "revised": "2023-04-18",
+      "effective": "2023-05-08"
+    },
+    "abstract": "Wiring sheet for the wing junction harnesses serving the brake control and main gear bay group, with the wear sensing pairs and the bay ground points that any brake work disturbs.",
+    "sections": {
+      "purpose": "This sheet shows the wing junction harness group that serves brake control and the main gear bay, including the wear sensing pairs and the bay ground points.",
+      "sheet_note": "The wear sensing pairs are shown per brake position rather than per wheel, which matters when a bogie carries brakes of two standards: the pairs are identical but the sensing they carry is not comparable between standards. The bay ground points are the ones disturbed by any brake or torque tube work, and the sheet carries a per-point resistance limit rather than a fleet value because the bay structure differs between the twin-engine and four-engine aircraft. Wire numbering follows the gear bay station and not the harness build order.",
+      "routing_note": "The group leaves the centre fuselage at the wing junction, runs outboard along the rear spar face and drops into the main gear bay at the bay forward bulkhead. Inside the bay the run follows the upper surface to each brake position, with a drop at each ground point. The run is exposed to gear bay wash-down and every break in it is a sealed connector; do not substitute an unsealed shell during a repair."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL252427-99",
+        "D3240121743237",
+        "FJ276235-54",
+        "LN606496-25"
+      ],
+      "fins": [
+        "15VU",
+        "3061VC",
+        "1GB",
+        "584GB"
+      ],
+      "drawings": [
+        "D92311115566",
+        "D92311148044",
+        "D32401274246"
+      ],
+      "software": [],
+      "zones": [
+        "753",
+        "731",
+        "774"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-32-40-11-200-050-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "wing junction",
+      "brake wear sensing",
+      "gear bay ground point",
+      "sealed connector",
+      "rear spar"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Wiring Data"
+    },
+    "type_data": {
+      "sheet_number": "92-31-11",
+      "sheet_title": "WING JUNCTION HARNESSES — BRAKE CONTROL AND MAIN GEAR BAY GROUP",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "7530W",
+        "7310W",
+        "7740W"
+      ],
+      "connectors": [
+        {
+          "reference": "7531VC",
+          "part_number": "HOL252427-99",
+          "location_zone": "753",
+          "contacts": 37
+        },
+        {
+          "reference": "7312VC",
+          "part_number": "D3240121743237",
+          "location_zone": "731",
+          "contacts": 26
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "15VU",
+          "description": "CABLE ASSY, LANDING GEAR BAY WIRING",
+          "zone": "753"
+        },
+        {
+          "fin": "3061VC",
+          "description": "BACKSHELL, LANDING GEAR BAY WIRING",
+          "zone": "731"
+        },
+        {
+          "fin": "1GB",
+          "description": "PUMP, BRAKE ASSEMBLY, RH",
+          "zone": "774"
+        }
+      ],
+      "wire_count": 118,
+      "wire_gauge_range": "AWG 24 to AWG 12",
+      "routes": [
+        "Wing junction outboard along the rear spar face",
+        "Rear spar to the main gear bay forward bulkhead",
+        "Bay upper surface to each brake position with a drop at each ground point"
+      ],
+      "related_sheets": [
+        "WDM-S-92-51-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

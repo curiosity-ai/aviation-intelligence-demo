@@ -1,0 +1,334 @@
+[
+  {
+    "doc_id": "TSM-M-34-50-11-810-810",
+    "doc_type": "TSM",
+    "title": "Navigation — Loss of the Augmented Position Solution on the Ground",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2015-03-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2014-06-21",
+      "released": "2015-03-18",
+      "revised": "2015-03-18",
+      "effective": "2015-04-15"
+    },
+    "abstract": "Fault isolation for slow acquisition or loss of the augmented position solution during ground manoeuvring, separating the interference path, the database standard and a receiver fault.",
+    "sections": {
+      "purpose": "This procedure isolates slow satellite acquisition and loss of the augmented position solution reported during taxi, and identifies whether the cause is the antenna feed routing, the database standard or the receiver.",
+      "fault_description": "The crew reports that the position solution degrades or is lost while taxiing, usually at the same airports and often with a particular ground system operating nearby, and that it recovers once the aircraft is airborne or clear of the area. On aircraft with the delivered feed routing the report is airport specific; on aircraft with the delivered database the report is instead a long time to first fix after a night stop, which is a different symptom with a different cause. Every aircraft in the effectivity falls into one of those two cases.",
+      "isolation_procedure": "1. Establish which symptom is being reported: degradation during taxi at specific airports, or a long first fix after a power-down. The two are not the same fault. 2. Read and record the receiver database part number and the aircraft routing standard from the configuration record. 3. For the taxi symptom, do the operational check in AMM-M-34-50-11-200-036-A including the taxi check with ground equipment nearby. 4. Examine the antenna feed routing in the avionics bay and measure the separation from the switched bundle over the run. A separation below two hundred millimetres on any part of the run is the finding. 5. For the first fix symptom, do the cold start test in AMM-M-34-50-11-700-037-A. 6. If the cold start time exceeds three minutes with the aligned database fitted, replace the receiver. 7. If the delivered database is fitted, load the aligned database and repeat the test before any component is replaced. 8. Record the airport, the ground system in use and the satellite count with every event; the interference finding depends on that history and cannot be closed from a single report.",
+      "dispatch_note": "Dispatch is permitted with the augmented solution unavailable under MEL 34-50-01B provided the required navigation performance for the intended route does not depend on it. Loss of the position solution entirely is not dispatchable on routes requiring the augmented capability."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450118136339",
+        "D3450119360685"
+      ],
+      "fins": [
+        "1038DA",
+        "3TR"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LE4PC90617C",
+        "LA4PCFC53E5"
+      ],
+      "zones": [
+        "183",
+        "222"
+      ],
+      "figures": [
+        "FIG-34-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-34-50-11-200-036-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-34-50-11-700-037-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "augmented position",
+      "acquisition",
+      "antenna feed",
+      "database standard",
+      "taxi interference"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "34-50-11-810-810",
+      "fault_symptom": "GPS PRIMARY LOST during taxi, or first fix longer than expected after a power-down",
+      "fault_codes": [
+        "345011002",
+        "345011019"
+      ],
+      "warning_messages": [
+        "NAV GPS PRIMARY LOST",
+        "NAV MMR 1 FAULT"
+      ],
+      "affected_fins": [
+        "1038DA",
+        "3TR"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Antenna feed routed parallel to a switched bundle in the avionics bay",
+          "probability_pct": 45,
+          "fin": "1038DA"
+        },
+        {
+          "cause": "Navigation database predating the current augmentation service",
+          "probability_pct": 30,
+          "fin": "3TR"
+        },
+        {
+          "cause": "External interference at the airport, aircraft serviceable",
+          "probability_pct": 15,
+          "fin": "1038DA"
+        },
+        {
+          "cause": "Multi-mode receiver internal failure",
+          "probability_pct": 10,
+          "fin": "1038DA"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-M-34-50-11-200-036-A",
+      "dispatch": {
+        "mel_item": "34-50-01B",
+        "dispatchable": true,
+        "dispatch_condition": "Augmented solution not required for the intended route navigation performance"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-M-34-50-11-810-810",
+    "doc_type": "TSM",
+    "title": "Navigation — Loss of the Augmented Position Solution on the Ground",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-02",
+      "reason": "Third case added for the freighter, which carries the aligned database on a different rack layout and matches neither of the two symptom descriptions.",
+      "raised_by_pawo": "PAWO-168155-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2014-06-21",
+      "released": "2015-03-18",
+      "revised": "2026-07-02",
+      "effective": "2026-07-30"
+    },
+    "abstract": "Fault isolation for slow acquisition or loss of the augmented position solution during ground manoeuvring, separating the interference path, the database standard and a receiver fault.",
+    "sections": {
+      "purpose": "This procedure isolates slow satellite acquisition and loss of the augmented position solution reported during taxi, and identifies whether the cause is the antenna feed routing, the database standard or the receiver.",
+      "fault_description": "The crew reports that the position solution degrades or is lost while taxiing, usually at the same airports and often with a particular ground system operating nearby, and that it recovers once the aircraft is airborne or clear of the area. On aircraft with the delivered feed routing the report is airport specific; on aircraft with the delivered database the report is instead a long time to first fix after a night stop, which is a different symptom with a different cause. There is a third case that the earlier issue of this procedure did not admit: the freighter carries the aligned database from delivery but on a rack layout of its own, in which the antenna feed leaves the tray on the opposite side and the run past the switched bundle is shorter but closer. A freighter reporting taxi degradation is therefore neither of the first two cases and must not be sent down the database branch.",
+      "isolation_procedure": "1. Establish which symptom is being reported: degradation during taxi at specific airports, or a long first fix after a power-down. The two are not the same fault. 2. Read and record the receiver database part number and the aircraft routing standard from the configuration record, and establish the aircraft type; the freighter rack layout is a separate case and is taken at step 5. 3. For the taxi symptom on a passenger aircraft, do the operational check in AMM-M-34-50-11-200-036-A including the taxi check with ground equipment nearby. 4. Examine the antenna feed routing in the avionics bay and measure the separation from the switched bundle over the run. A separation below two hundred millimetres on any part of the run is the finding. 5. For the taxi symptom on the freighter, measure the separation at the tray exit and at the bay wall penetration only. The freighter run is shorter and the two hundred millimetre criterion does not apply along its length; the acceptance figure is one hundred and forty millimetres at those two points, and a freighter that meets it is not carrying the interference path. 6. For the first fix symptom, do the cold start test in AMM-M-34-50-11-700-037-A. 7. If the cold start time exceeds three minutes with the aligned database fitted, replace the receiver. 8. If the delivered database is fitted, load the aligned database and repeat the test before any component is replaced. Note that a freighter always has the aligned database from delivery, so this branch does not apply to it and a freighter sent down it will be found to have nothing to load. 9. Record the airport, the ground system in use and the satellite count with every event; the interference finding depends on that history and cannot be closed from a single report.",
+      "dispatch_note": "Dispatch is permitted with the augmented solution unavailable under MEL 34-50-01B provided the required navigation performance for the intended route does not depend on it. Loss of the position solution entirely is not dispatchable on routes requiring the augmented capability."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450118136339",
+        "D3450119360685"
+      ],
+      "fins": [
+        "1038DA",
+        "3TR"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LE4PC90617C",
+        "LA4PCFC53E5"
+      ],
+      "zones": [
+        "183",
+        "222"
+      ],
+      "figures": [
+        "FIG-34-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-34-50-11-200-036-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-34-50-11-700-037-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "augmented position",
+      "acquisition",
+      "antenna feed",
+      "freighter rack",
+      "taxi interference"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "34-50-11-810-810",
+      "fault_symptom": "GPS PRIMARY LOST during taxi, or first fix longer than expected after a power-down",
+      "fault_codes": [
+        "345011002",
+        "345011019"
+      ],
+      "warning_messages": [
+        "NAV GPS PRIMARY LOST",
+        "NAV MMR 1 FAULT"
+      ],
+      "affected_fins": [
+        "1038DA",
+        "3TR"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Antenna feed routed parallel to a switched bundle in the avionics bay",
+          "probability_pct": 45,
+          "fin": "1038DA"
+        },
+        {
+          "cause": "Navigation database predating the current augmentation service",
+          "probability_pct": 30,
+          "fin": "3TR"
+        },
+        {
+          "cause": "External interference at the airport, aircraft serviceable",
+          "probability_pct": 15,
+          "fin": "1038DA"
+        },
+        {
+          "cause": "Multi-mode receiver internal failure",
+          "probability_pct": 10,
+          "fin": "1038DA"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-M-34-50-11-200-036-A",
+      "dispatch": {
+        "mel_item": "34-50-01B",
+        "dispatchable": true,
+        "dispatch_condition": "Augmented solution not required for the intended route navigation performance"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

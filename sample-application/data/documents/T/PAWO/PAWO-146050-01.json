@@ -1,0 +1,342 @@
+[
+  {
+    "doc_id": "PAWO-146050-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Extension of the Door Warning Harness Segregation to the Aft Fuselage",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-13",
+      "title": "Forward Fuselage Wiring — Door Warning Wiring"
+    },
+    "secondary_ata": [
+      "52-70",
+      "52-30"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00193"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-141020"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-18",
+      "released": "2026-07-24",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of a proposed revision extending the door warning channel segregation from the forward fuselage to the aft door positions, ahead of the electromechanical cargo door actuation candidate.",
+    "sections": {
+      "objective": "Establish whether the channel segregation carried out in the forward fuselage can be extended to the aft door positions as a revision, and settle the sequencing against the electromechanical cargo door actuation candidate, which takes the same channel pair at the aft cargo door and is currently drafted as if the segregation did not exist. The order was raised by the electrical installation office after the two design teams reached opposite assumptions about who owns the aft channel routing.",
+      "findings_summary": "Four items were confirmed and one of them determines the sequencing of two changes. The electromechanical actuation candidate takes the same aft channel pair the extension would resegregate, and if the extension is embodied second the candidate's harness has to be cut and reterminated on every aircraft that takes both. The wiring sheet impact is straightforward but large: the aft positions are drawn on the same sheet as the forward ones and the whole sheet is reissued rather than a portion. The cargo door indication troubleshooting procedure identifies channels by their forward numbering. The prerequisite on the latch sensing modification carries over unchanged to the aft positions and is already declared.",
+      "next_steps": "The extension was cleared to proceed on condition that it is released before the electromechanical actuation candidate and declared as a prerequisite of it, which both offices accepted at the review. The wiring sheet is to be reissued in one piece rather than split. The troubleshooting procedure gains an aft channel numbering table. The latch sensing prerequisite was confirmed as already covered by the existing embodiment condition and needs no further action."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221113867714",
+        "D9221004365569",
+        "HOL285457-83",
+        "EN491538-6A",
+        "AGS573791-88"
+      ],
+      "fins": [
+        "4387VC",
+        "646VU",
+        "85VU4"
+      ],
+      "drawings": [
+        "D92211305618"
+      ],
+      "software": [],
+      "zones": [
+        "834",
+        "891",
+        "192"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146050",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "door warning",
+      "channel segregation",
+      "aft fuselage",
+      "sequencing"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Port-Rivage",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-146050-01",
+      "subject_mod": "MOD-146050",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-24",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-05-18",
+      "due_date": "2026-08-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Port-Rivage",
+        "contributing_departments": [
+          "ESZS",
+          "EGAM"
+        ],
+        "estimated_manhours": 120,
+        "spent_manhours": 141
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "92",
+          "52"
+        ],
+        "ata_4d": [
+          "92-21",
+          "52-30",
+          "52-70"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00193"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D9221113867714",
+            "D9221004365569",
+            "HOL285457-83",
+            "AGS573791-88"
+          ],
+          "fins": [
+            "4387VC",
+            "646VU",
+            "85VU4"
+          ],
+          "drawings": [
+            "D92211305618"
+          ],
+          "zones": [
+            "834",
+            "891",
+            "192"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "segregation of duplicated warning channels in a fuselage harness",
+          "aft cargo door indication routing"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare the aft channel routing against the actuation candidate",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish the wiring sheet reissue boundary",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Agree the sequencing with the cargo door design office",
+          "method": "SME_INTERVIEW",
+          "owner": "ESZS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-147520",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [
+              "52-70"
+            ],
+            "shared_drawings": [],
+            "similarity_note": null
+          },
+          "rationale": "The electromechanical actuation candidate routes its position feedback on the same aft channel pair the extension would resegregate, and it is drafted as if the segregation did not exist. Embodied in the wrong order, its harness has to be cut and reterminated on every aircraft that takes both.",
+          "resolution": "Release the extension first and declare it as a prerequisite of the actuation candidate. Both offices accepted the ordering at the review."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "WDM-T-92-21-13",
+          "doc_type": "WDM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D9221113867714",
+              "D9221004365569",
+              "HOL285457-83",
+              "AGS573791-88"
+            ],
+            "shared_fins": [
+              "4387VC",
+              "646VU",
+              "85VU4"
+            ],
+            "shared_zones": [
+              "834",
+              "891",
+              "192"
+            ],
+            "shared_ata_6d": [
+              "92-21-13",
+              "52-70",
+              "52-30"
+            ],
+            "shared_drawings": [
+              "D92211305618"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The aft door positions are drawn on the same sheet as the forward ones, with a shared ground point block and a shared connector list. The sheet cannot be partially revised without leaving two segregation standards on one drawing.",
+          "resolution": "Reissue the sheet in one piece with both fuselage sections at the segregated standard, and hold it until the extension is released."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-T-52-30-13-812-802",
+          "doc_type": "TSM",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "4387VC"
+            ],
+            "shared_zones": [
+              "834",
+              "891"
+            ],
+            "shared_ata_6d": [
+              "52-70"
+            ],
+            "shared_drawings": [
+              "D92211305618"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure identifies the warning channels by the forward numbering scheme throughout. Once the aft positions are segregated the same channel names exist twice on the aircraft with different routes, and the mechanic has no way to tell which one the message refers to.",
+          "resolution": "Add an aft channel numbering table to the procedure and key the isolation steps on door position rather than on channel name."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-141020",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "891"
+            ],
+            "shared_ata_6d": [
+              "52-70"
+            ],
+            "shared_drawings": [],
+            "similarity_note": null
+          },
+          "rationale": "The segregation only makes sense on an aircraft that has two latch position channels to segregate, so the latch sensing modification is a prerequisite. It is already declared as an embodiment condition on the forward scope and carries over to the aft positions unchanged.",
+          "resolution": "No action; confirmed that the existing embodiment condition covers the extended scope."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "WDM-T-92-21-11",
+          "doc_type": "WDM",
+          "reason": "Shares three part numbers and two harness FINs with the subject and sits at the top of the entity pass, because the avionics bay and the door warning runs use the same connector and backshell standards. It carries no door warning channel and is unaffected by any segregation in the fuselage."
+        }
+      ],
+      "conclusion": "Issued 2026-07-24. The extension proceeds and must be released ahead of the electromechanical actuation candidate, which both design offices accepted.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

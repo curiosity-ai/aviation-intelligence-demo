@@ -1,0 +1,799 @@
+[
+  {
+    "doc_id": "MOD-134860",
+    "doc_type": "MOD",
+    "title": "Extended Duration Cargo Compartment Extinguishing Discharge for 240-Minute Diversion",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-02-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-20",
+      "ata_6d": "26-20-12",
+      "title": "Extinguishing — Cargo Extinguishing Distribution"
+    },
+    "secondary_ata": [
+      "25-50",
+      "26-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00669",
+          "to": "S01918"
+        }
+      ],
+      "excluded_msns": [
+        "S01029",
+        "S01232"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01632",
+      "production_cut_in_date": "2021-10-19",
+      "retrofit_via": [
+        "SLN-26-1009"
+      ]
+    },
+    "dates": {
+      "created": "2018-12-03",
+      "released": "2020-02-19",
+      "revised": "2020-02-19",
+      "effective": "2020-03-10"
+    },
+    "abstract": "Extension of the cargo compartment suppression discharge from 180 to 240 minutes by adding a third metering stage and re-balancing the distribution manifold, in support of longer overwater diversion times.",
+    "sections": {
+      "reason": "Three operators opening South Atlantic and mid-Pacific routings needed a 240-minute diversion approval, and the limiting item on this aircraft was the cargo compartment suppression duration rather than any propulsion or systems item. The existing installation meters the knock-down and the sustaining flow in two stages sized for 180 minutes. Rather than add bottle capacity, which costs weight and floor space, the change re-balances the distribution so that the sustaining concentration is held with less agent, and adds a third low-rate stage for the final hour.",
+      "description": "A third metering orifice stage is added downstream of the existing pair and the distribution manifold is re-balanced so that the forward and aft compartments reach the sustaining concentration within the same 45 seconds as before. The upper distribution pump D2620124013196 is re-worked with a smaller impeller, the aft distribution sensor D2620124813243 is replaced by a unit with a wider concentration range, and the forward heat exchanger D2620125756547 is deleted because the third stage runs cool enough not to need it. Nozzle positions are unchanged. The right-hand distribution switch 1394WF2, the left-hand heat exchanger position 58WF and the left-hand non-return valve position 6WF4 are all re-rated for the revised flow. Anchor nuts AES155061-5B and barrel nuts AES9630K5 secure the new orifice block and swaged collars LN413515-8E close the pipe joints. Work is in the cargo compartments and the belly fairing, zones 133, 142 and 183. Detail is on drawing D26200036707.",
+      "effects": "Mass reduction of 4.6 kg per aircraft because the deleted heat exchanger outweighs the added orifice block. No electrical load change. Not interchangeable: the third stage cannot be fitted without the re-balanced manifold and a mixed configuration would not hold the certified concentration. The change is a prerequisite for the 240-minute diversion approval and is stated as such in the aircraft flight manual supplement. The concentration test procedure in the AMM changes and the compartment must be re-tested after embodiment. No MMEL change; the dispatch conditions for the suppression system are unaltered.",
+      "embodiment_note": "Cut in on the production line at MSN S01632 in October 2021. Retrofit is through Service Bulletin SLN-26-1009 and takes three days at a C-check, of which one day is the concentration test. Two aircraft in the range are excluded because they were converted to a different compartment lining standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2620124013196",
+        "D2620124813243",
+        "D2620125756547",
+        "AES155061-5B",
+        "AES9630K5",
+        "LN413515-8E"
+      ],
+      "fins": [
+        "1394WF2",
+        "58WF",
+        "6WF4"
+      ],
+      "drawings": [
+        "D26200036707"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "142",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01632",
+        "S01029",
+        "S01232"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-26-1009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "cargo suppression",
+      "metering orifice",
+      "diversion time",
+      "sustaining concentration",
+      "distribution manifold"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Fire Protection"
+    },
+    "type_data": {
+      "mod_number": 134860,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.851",
+          "CS 25.855",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -4.6,
+      "balance_impact": "Distributed fore and aft of the datum; no reportable shift",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES155061-5B",
+        "AES9630K5",
+        "LN413515-8E"
+      ],
+      "parts_removed": [
+        "D2620125756547"
+      ],
+      "parts_modified": [
+        "D2620124013196",
+        "D2620124813243"
+      ],
+      "fins_affected": [
+        "1394WF2",
+        "58WF",
+        "6WF4"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 128,
+      "estimated_cost_keur": 700,
+      "lead_time_weeks": 38,
+      "production_impact": "Cut-in at MSN S01632; no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-134860",
+    "doc_type": "MOD",
+    "title": "Extended Duration Cargo Compartment Extinguishing Discharge for 240-Minute Diversion",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-04-08",
+      "reason": "The distribution manifold routing beneath frames 44, 48 and 52 is agreed with the floor structure office and a minimum clearance to the reinforced panel edge is placed on the installation drawing.",
+      "raised_by_pawo": "PAWO-132210-01",
+      "raised_by_finding": "F04",
+      "finding_type": "ZONE_CONFLICT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-20",
+      "ata_6d": "26-20-12",
+      "title": "Extinguishing — Cargo Extinguishing Distribution"
+    },
+    "secondary_ata": [
+      "25-50",
+      "26-10",
+      "53-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00669",
+          "to": "S01918"
+        }
+      ],
+      "excluded_msns": [
+        "S01029",
+        "S01232"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01632",
+      "production_cut_in_date": "2021-10-19",
+      "retrofit_via": [
+        "SLN-26-1009"
+      ]
+    },
+    "dates": {
+      "created": "2018-12-03",
+      "released": "2020-02-19",
+      "revised": "2021-04-08",
+      "effective": "2021-04-26"
+    },
+    "abstract": "Extension of the cargo compartment suppression discharge from 180 to 240 minutes by adding a third metering stage and re-balancing the distribution manifold, in support of longer overwater diversion times.",
+    "sections": {
+      "reason": "Three operators opening South Atlantic and mid-Pacific routings needed a 240-minute diversion approval, and the limiting item on this aircraft was the cargo compartment suppression duration rather than any propulsion or systems item. The existing installation meters the knock-down and the sustaining flow in two stages sized for 180 minutes. Rather than add bottle capacity, which costs weight and floor space, the change re-balances the distribution so that the sustaining concentration is held with less agent, and adds a third low-rate stage for the final hour.",
+      "description": "A third metering orifice stage is added downstream of the existing pair and the distribution manifold is re-balanced so that the forward and aft compartments reach the sustaining concentration within the same 45 seconds as before. The upper distribution pump D2620124013196 is re-worked with a smaller impeller, the aft distribution sensor D2620124813243 is replaced by a unit with a wider concentration range, and the forward heat exchanger D2620125756547 is deleted because the third stage runs cool enough not to need it. Nozzle positions are unchanged. The right-hand distribution switch 1394WF2, the left-hand heat exchanger position 58WF and the left-hand non-return valve position 6WF4 are all re-rated for the revised flow. Anchor nuts AES155061-5B and barrel nuts AES9630K5 secure the new orifice block and swaged collars LN413515-8E close the pipe joints. Work is in the cargo compartments and the belly fairing, zones 133, 142 and 183. Detail is on drawing D26200036707.",
+      "effects": "Mass reduction of 4.6 kg per aircraft because the deleted heat exchanger outweighs the added orifice block. No electrical load change. Not interchangeable: the third stage cannot be fitted without the re-balanced manifold and a mixed configuration would not hold the certified concentration. The change is a prerequisite for the 240-minute diversion approval and is stated as such in the aircraft flight manual supplement. The concentration test procedure in the AMM changes and the compartment must be re-tested after embodiment. No MMEL change; the dispatch conditions for the suppression system are unaltered. The re-balanced manifold runs beneath the main deck floor at frames 44, 48 and 52, which are three of the stations the freighter hard point provisioning reinforces. The routing at those stations is agreed with the floor structure office and drawn to a minimum clearance of 18 mm from the reinforced panel edge, measured to the manifold outer surface with the pipe at its hot dimension. The clearance is held on the installation drawing so that neither office can move it alone.",
+      "embodiment_note": "Cut in on the production line at MSN S01632 in October 2021. Retrofit is through Service Bulletin SLN-26-1009 and takes three days at a C-check, of which one day is the concentration test. Two aircraft in the range are excluded because they were converted to a different compartment lining standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2620124013196",
+        "D2620124813243",
+        "D2620125756547",
+        "AES155061-5B",
+        "AES9630K5",
+        "LN413515-8E"
+      ],
+      "fins": [
+        "1394WF2",
+        "58WF",
+        "6WF4"
+      ],
+      "drawings": [
+        "D26200036707"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "142",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01632",
+        "S01029",
+        "S01232"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-26-1009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-132210",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "cargo suppression",
+      "metering orifice",
+      "diversion time",
+      "sustaining concentration",
+      "distribution manifold"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Fire Protection"
+    },
+    "type_data": {
+      "mod_number": 134860,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.851",
+          "CS 25.855",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -4.6,
+      "balance_impact": "Distributed fore and aft of the datum; no reportable shift",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES155061-5B",
+        "AES9630K5",
+        "LN413515-8E"
+      ],
+      "parts_removed": [
+        "D2620125756547"
+      ],
+      "parts_modified": [
+        "D2620124013196",
+        "D2620124813243"
+      ],
+      "fins_affected": [
+        "1394WF2",
+        "58WF",
+        "6WF4"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 128,
+      "estimated_cost_keur": 700,
+      "lead_time_weeks": 38,
+      "production_impact": "Cut-in at MSN S01632; no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-134860",
+    "doc_type": "MOD",
+    "title": "Extended Duration Cargo Compartment Extinguishing Discharge for 240-Minute Diversion",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2026-06-10",
+      "reason": "Nozzle coverage is declared valid only with the passenger compartment lining installed, and any extension to a converted aircraft is made conditional on a written coverage position.",
+      "raised_by_pawo": "PAWO-132210-02",
+      "raised_by_finding": "F02",
+      "finding_type": "CERTIFICATION_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-20",
+      "ata_6d": "26-20-12",
+      "title": "Extinguishing — Cargo Extinguishing Distribution"
+    },
+    "secondary_ata": [
+      "25-50",
+      "26-10",
+      "53-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00669",
+          "to": "S01918"
+        }
+      ],
+      "excluded_msns": [
+        "S01029",
+        "S01232"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01632",
+      "production_cut_in_date": "2021-10-19",
+      "retrofit_via": [
+        "SLN-26-1009"
+      ]
+    },
+    "dates": {
+      "created": "2018-12-03",
+      "released": "2020-02-19",
+      "revised": "2026-06-10",
+      "effective": "2026-06-28"
+    },
+    "abstract": "Extension of the cargo compartment suppression discharge from 180 to 240 minutes by adding a third metering stage and re-balancing the distribution manifold, in support of longer overwater diversion times.",
+    "sections": {
+      "reason": "Three operators opening South Atlantic and mid-Pacific routings needed a 240-minute diversion approval, and the limiting item on this aircraft was the cargo compartment suppression duration rather than any propulsion or systems item. The existing installation meters the knock-down and the sustaining flow in two stages sized for 180 minutes. Rather than add bottle capacity, which costs weight and floor space, the change re-balances the distribution so that the sustaining concentration is held with less agent, and adds a third low-rate stage for the final hour.",
+      "description": "A third metering orifice stage is added downstream of the existing pair and the distribution manifold is re-balanced so that the forward and aft compartments reach the sustaining concentration within the same 45 seconds as before. The upper distribution pump D2620124013196 is re-worked with a smaller impeller, the aft distribution sensor D2620124813243 is replaced by a unit with a wider concentration range, and the forward heat exchanger D2620125756547 is deleted because the third stage runs cool enough not to need it. Nozzle positions are unchanged. The right-hand distribution switch 1394WF2, the left-hand heat exchanger position 58WF and the left-hand non-return valve position 6WF4 are all re-rated for the revised flow. Anchor nuts AES155061-5B and barrel nuts AES9630K5 secure the new orifice block and swaged collars LN413515-8E close the pipe joints. Work is in the cargo compartments and the belly fairing, zones 133, 142 and 183. Detail is on drawing D26200036707.",
+      "effects": "Mass reduction of 4.6 kg per aircraft because the deleted heat exchanger outweighs the added orifice block. No electrical load change. Not interchangeable: the third stage cannot be fitted without the re-balanced manifold and a mixed configuration would not hold the certified concentration. The change is a prerequisite for the 240-minute diversion approval and is stated as such in the aircraft flight manual supplement. The concentration test procedure in the AMM changes and the compartment must be re-tested after embodiment. No MMEL change; the dispatch conditions for the suppression system are unaltered. The re-balanced manifold runs beneath the main deck floor at frames 44, 48 and 52, which are three of the stations the freighter hard point provisioning reinforces. The routing at those stations is agreed with the floor structure office and drawn to a minimum clearance of 18 mm from the reinforced panel edge, measured to the manifold outer surface with the pipe at its hot dimension. The clearance is held on the installation drawing so that neither office can move it alone. The nozzle coverage substantiation is run against the free volume of the compartment with the passenger configuration lining installed, and the flow path it assumes follows the lining face. An aircraft converted to freighter configuration loses that lining, which changes both the free volume and the path the agent takes to the aft nozzles. Extension of the effectivity to a converted aircraft is conditional on a written coverage position from fire protection certification; without it, this modification is not applicable to a converted aircraft whatever its MSN.",
+      "embodiment_note": "Cut in on the production line at MSN S01632 in October 2021. Retrofit is through Service Bulletin SLN-26-1009 and takes three days at a C-check, of which one day is the concentration test. Two aircraft in the range are excluded because they were converted to a different compartment lining standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2620124013196",
+        "D2620124813243",
+        "D2620125756547",
+        "AES155061-5B",
+        "AES9630K5",
+        "LN413515-8E"
+      ],
+      "fins": [
+        "1394WF2",
+        "58WF",
+        "6WF4"
+      ],
+      "drawings": [
+        "D26200036707"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "142",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01632",
+        "S01029",
+        "S01232"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-26-1009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-132210",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "cargo suppression",
+      "metering orifice",
+      "diversion time",
+      "sustaining concentration",
+      "distribution manifold"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Fire Protection"
+    },
+    "type_data": {
+      "mod_number": 134860,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.851",
+          "CS 25.855",
+          "CS 25.857",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -4.6,
+      "balance_impact": "Distributed fore and aft of the datum; no reportable shift",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES155061-5B",
+        "AES9630K5",
+        "LN413515-8E"
+      ],
+      "parts_removed": [
+        "D2620125756547"
+      ],
+      "parts_modified": [
+        "D2620124013196",
+        "D2620124813243"
+      ],
+      "fins_affected": [
+        "1394WF2",
+        "58WF",
+        "6WF4"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 128,
+      "estimated_cost_keur": 700,
+      "lead_time_weeks": 38,
+      "production_impact": "Cut-in at MSN S01632; no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-134860",
+    "doc_type": "MOD",
+    "title": "Extended Duration Cargo Compartment Extinguishing Discharge for 240-Minute Diversion",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "D",
+    "issue": {
+      "letter": "D",
+      "supersedes": "C",
+      "date": "2026-07-02",
+      "reason": "An early coverage view for an insulated container in the bay is published, with the displaced volume and nozzle plane clearance a concept must respect.",
+      "raised_by_pawo": "PAWO-133480-01",
+      "raised_by_finding": "F03",
+      "finding_type": "CERTIFICATION_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-20",
+      "ata_6d": "26-20-12",
+      "title": "Extinguishing — Cargo Extinguishing Distribution"
+    },
+    "secondary_ata": [
+      "25-50",
+      "26-10",
+      "53-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00669",
+          "to": "S01918"
+        }
+      ],
+      "excluded_msns": [
+        "S01029",
+        "S01232"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01632",
+      "production_cut_in_date": "2021-10-19",
+      "retrofit_via": [
+        "SLN-26-1009"
+      ]
+    },
+    "dates": {
+      "created": "2018-12-03",
+      "released": "2020-02-19",
+      "revised": "2026-07-02",
+      "effective": "2026-07-20"
+    },
+    "abstract": "Extension of the cargo compartment suppression discharge from 180 to 240 minutes by adding a third metering stage and re-balancing the distribution manifold, with the coverage envelope now stated in terms a cargo bay concept can be scoped against.",
+    "sections": {
+      "reason": "Three operators opening South Atlantic and mid-Pacific routings needed a 240-minute diversion approval, and the limiting item on this aircraft was the cargo compartment suppression duration rather than any propulsion or systems item. The existing installation meters the knock-down and the sustaining flow in two stages sized for 180 minutes. Rather than add bottle capacity, which costs weight and floor space, the change re-balances the distribution so that the sustaining concentration is held with less agent, and adds a third low-rate stage for the final hour.",
+      "description": "A third metering orifice stage is added downstream of the existing pair and the distribution manifold is re-balanced so that the forward and aft compartments reach the sustaining concentration within the same 45 seconds as before. The upper distribution pump D2620124013196 is re-worked with a smaller impeller, the aft distribution sensor D2620124813243 is replaced by a unit with a wider concentration range, and the forward heat exchanger D2620125756547 is deleted because the third stage runs cool enough not to need it. Nozzle positions are unchanged. The right-hand distribution switch 1394WF2, the left-hand heat exchanger position 58WF and the left-hand non-return valve position 6WF4 are all re-rated for the revised flow. Anchor nuts AES155061-5B and barrel nuts AES9630K5 secure the new orifice block and swaged collars LN413515-8E close the pipe joints. Work is in the cargo compartments and the belly fairing, zones 133, 142 and 183. Detail is on drawing D26200036707.",
+      "effects": "Mass reduction of 4.6 kg per aircraft because the deleted heat exchanger outweighs the added orifice block. No electrical load change. Not interchangeable: the third stage cannot be fitted without the re-balanced manifold and a mixed configuration would not hold the certified concentration. The change is a prerequisite for the 240-minute diversion approval and is stated as such in the aircraft flight manual supplement. The concentration test procedure in the AMM changes and the compartment must be re-tested after embodiment. No MMEL change; the dispatch conditions for the suppression system are unaltered. The re-balanced manifold runs beneath the main deck floor at frames 44, 48 and 52, which are three of the stations the freighter hard point provisioning reinforces. The routing at those stations is agreed with the floor structure office and drawn to a minimum clearance of 18 mm from the reinforced panel edge, measured to the manifold outer surface with the pipe at its hot dimension. The clearance is held on the installation drawing so that neither office can move it alone. The nozzle coverage substantiation is run against the free volume of the compartment with the passenger configuration lining installed, and the flow path it assumes follows the lining face. An aircraft converted to freighter configuration loses that lining, which changes both the free volume and the path the agent takes to the aft nozzles. Extension of the effectivity to a converted aircraft is conditional on a written coverage position from fire protection certification; without it, this modification is not applicable to a converted aircraft whatever its MSN. The same question arises for an insulated container standing in the bay. Fire protection certification has given an early view rather than waiting for a concept drawing: a container of up to 4.2 cubic metres displaced volume is inside the substantiated envelope provided its top face stays 300 mm clear of the aft nozzle plane. A concept exceeding either figure needs its own coverage test, and the figures are published here so that a cargo bay study can be scoped against them from the start.",
+      "embodiment_note": "Cut in on the production line at MSN S01632 in October 2021. Retrofit is through Service Bulletin SLN-26-1009 and takes three days at a C-check, of which one day is the concentration test. Two aircraft in the range are excluded because they were converted to a different compartment lining standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2620124013196",
+        "D2620124813243",
+        "D2620125756547",
+        "AES155061-5B",
+        "AES9630K5",
+        "LN413515-8E"
+      ],
+      "fins": [
+        "1394WF2",
+        "58WF",
+        "6WF4"
+      ],
+      "drawings": [
+        "D26200036707"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "142",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01632",
+        "S01029",
+        "S01232"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-26-1009",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-132210",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      },
+      {
+        "doc_id": "MOD-133480",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cargo suppression",
+      "metering orifice",
+      "nozzle coverage",
+      "free volume",
+      "distribution manifold"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Fire Protection"
+    },
+    "type_data": {
+      "mod_number": 134860,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.851",
+          "CS 25.855",
+          "CS 25.857",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -4.6,
+      "balance_impact": "Distributed fore and aft of the datum; no reportable shift",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES155061-5B",
+        "AES9630K5",
+        "LN413515-8E"
+      ],
+      "parts_removed": [
+        "D2620125756547"
+      ],
+      "parts_modified": [
+        "D2620124013196",
+        "D2620124813243"
+      ],
+      "fins_affected": [
+        "1394WF2",
+        "58WF",
+        "6WF4"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 128,
+      "estimated_cost_keur": 700,
+      "lead_time_weeks": 38,
+      "production_impact": "Cut-in at MSN S01632; no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

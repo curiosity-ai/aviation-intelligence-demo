@@ -1,0 +1,161 @@
+[
+  {
+    "doc_id": "AMM-Z-21-60-12-700-024-A",
+    "doc_type": "AMM",
+    "title": "Operational Test of the Cabin Zone Controller and the Trim Air Regulation Loop",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-01-30",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "21-60-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-02-27",
+      "released": "2017-08-16",
+      "revised": "2023-01-30",
+      "effective": "2023-02-20"
+    },
+    "abstract": "Operational test of the cabin zone controller and of the complete trim air regulation loop, run after a valve change, a controller change or a parameter load, and used to release the zone back to service.",
+    "sections": {
+      "purpose": "This task tests the cabin zone controller and the trim air regulation loop from the zone selector to the delivered air temperature, and confirms that each zone responds within the published time.",
+      "job_setup_note": "The test needs a stable bleed source, so it is done with the auxiliary power unit running and both packs on, or on a ground air supply of the correct capacity. The cabin must be closed with the doors shut, because an open door makes the zone temperature unrepeatable. Allow the system to stabilise for the period given in the instructions before you take the first reading.",
+      "procedure": "1. Start the auxiliary power unit and select both packs on. 2. Close all doors and let the cabin stabilise. WARNING: THE TRIM AIR DUCT AND THE CEILING VOID BECOME HOT DURING THIS TEST. DO NOT WORK IN THE CEILING VOID WHILE THE TEST IS IN PROGRESS. 3. Select each zone selector to the mid position and record the delivered temperature at the zone outlet. 4. Read the zone controller maintenance page and record the reported valve position for each zone. 5. Select the forward zone to full cold and start the timer. 6. Record the time for the delivered temperature to reach the commanded value and compare it with the limit in the instructions. 7. Repeat for the aft zone and, on ZEPHYR-24 aircraft, for the third sensing point at FIN 872HQ. CAUTION: DO NOT LEAVE A ZONE AT FULL HOT FOR MORE THAN FIVE MINUTES DURING THE TEST. THE CEILING PANEL SURFACE TEMPERATURE LIMIT WILL BE EXCEEDED. 8. Select each zone back to the mid position and confirm that the valve returns to the reported mid position. 9. Read the fault memory of the zone controller at the pump FIN 3267HM and confirm that no new fault has been logged. 10. Where a parameter load has been done, confirm the loaded part number on the maintenance page. 11. Select the packs off and shut down the auxiliary power unit.",
+      "close_out": "Clear the fault memory only after the readings have been recorded. Restore the zone selectors to the operator standard position. Record the response times on the maintenance record; they are the acceptance evidence for a valve or controller change."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160114404059",
+        "AES731670-69"
+      ],
+      "fins": [
+        "726HQ",
+        "980HQ",
+        "872HQ",
+        "3267HM",
+        "7250HQ"
+      ],
+      "drawings": [
+        "D21601252810"
+      ],
+      "software": [
+        "LD9NC45B7FC"
+      ],
+      "zones": [
+        "254",
+        "291",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-21-60-11-400-023-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "zone controller",
+      "regulation loop",
+      "response time",
+      "fault memory",
+      "parameter load"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "21-60-12-700-024-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. Step 7 third sensing point applies to ZEPHYR-24 aircraft post MOD-153140 only.",
+      "manhours": 3.5,
+      "personnel": 2,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "254",
+          "291",
+          "273"
+        ],
+        "access_panels": [
+          "254AR",
+          "291BL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not work in the ceiling void during the test.",
+          "Make sure that the ground air supply has the correct capacity.",
+          "Do not leave a zone at full hot for more than five minutes."
+        ],
+        "tooling": [
+          {
+            "reference": "Calibrated thermometer, -20 to 120 C",
+            "description": "Zone outlet thermometer"
+          },
+          {
+            "reference": "Portable data loader",
+            "description": "Parameter verification"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-Z-21-60-11-400-023-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

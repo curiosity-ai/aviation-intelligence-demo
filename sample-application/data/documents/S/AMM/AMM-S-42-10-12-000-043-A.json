@@ -1,0 +1,366 @@
+[
+  {
+    "doc_id": "AMM-S-42-10-12-000-043-A",
+    "doc_type": "AMM",
+    "title": "Core Processing Module — Removal from the Avionics Bay Rack",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1994-10-25",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1994-05-30",
+      "released": "1994-10-25",
+      "revised": "1994-10-25",
+      "effective": "1994-11-12"
+    },
+    "abstract": "Removal of one or more core processing modules from the avionics bay rack, with the slot map recording that makes the reinstallation traceable and the insertion count entry that the backplane life depends on.",
+    "sections": {
+      "purpose": "This task removes a core processing module from the avionics bay rack, records the slot map and adds to the backplane insertion count so that the rack life can be tracked.",
+      "job_setup_note": "Every insertion and withdrawal counts against the backplane connector life, so no module is to be removed for inspection alone. Record the slot map before anything is withdrawn: the modules are physically identical and a module returned to the wrong slot will run but will not be the configuration in the aircraft record. Electrostatic precautions are mandatory.",
+      "procedure": "1. Put the aircraft on ground power and confirm that no data load is in progress. 2. Lift the avionics bay floor panels in zones 162 and 166. 3. Fit the wrist strap and connect it to the bay ground point. WARNING: STATIC DAMAGE IS CUMULATIVE AND INVISIBLE. DO NOT HANDLE A MODULE WITHOUT THE WRIST STRAP CONNECTED. 4. Photograph the rack front and record the part number and serial number in every slot on the slot map sheet. 5. Release the circuit breaker for the rack and tag it. 6. Release the front latch of the module to be removed. 7. Withdraw the module using the extraction tool, straight and without rocking. CAUTION: DO NOT ROCK A MODULE OUT OF ITS SLOT. THE BACKPLANE CONTACTS ARE DAMAGED BY SIDE LOAD AND THE DAMAGE IS NOT VISIBLE. 8. Put the module immediately into an anti-static bag and seal it. 9. Where more than one module is removed, keep each in its own bag with the slot number written on it. 10. Examine the backplane contacts in the empty slot with a magnifier and record any bent or recessed contact. 11. Add one to the insertion count for every slot disturbed and record the new total. 12. Where the rack ground stud in zone 183 must be disturbed, tag the strap before it is released. 13. Fit a slot blank in every empty slot before the bay is left.",
+      "close_out": "Keep the slot map sheet with the work pack. Record the new insertion count against the aircraft. Where a bent contact is found, do not fit a module into that slot; raise a defect against the backplane and quote the slot number."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "drawings": [
+        "D42101237654"
+      ],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-42-10-12-400-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-42-10-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "core processing module",
+      "slot map",
+      "insertion count",
+      "backplane contacts",
+      "electrostatic"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "42-10-12-000-043-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All aircraft; the insertion count of step 11 is recorded only on racks at the delivered backplane",
+      "manhours": 2.5,
+      "personnel": 1,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "162",
+          "166",
+          "183"
+        ],
+        "access_panels": [
+          "162BL",
+          "166BR",
+          "162AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Connect the wrist strap to the bay ground point.",
+          "Do not remove a module while a data load is in progress.",
+          "Do not rock a module out of its slot."
+        ],
+        "tooling": [
+          {
+            "reference": "98D42101-072",
+            "description": "Module extraction tool"
+          },
+          {
+            "reference": "98D42101-075",
+            "description": "Electrostatic discharge mat and wrist strap"
+          },
+          {
+            "reference": "98D42101-079",
+            "description": "Magnifier, 10x, with light"
+          }
+        ],
+        "consumables": [
+          "Anti-static bags",
+          "Slot blanks",
+          "Slot map sheet"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-42-10-12-400-043-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-S-42-10-12-000-043-A",
+    "doc_type": "AMM",
+    "title": "Core Processing Module — Removal from the Avionics Bay Rack",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-25",
+      "reason": "A count reset instruction is added so that a renewed backplane starts at zero instead of inheriting the aircraft total.",
+      "raised_by_pawo": "PAWO-133290-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1994-05-30",
+      "released": "1994-10-25",
+      "revised": "2026-06-25",
+      "effective": "2026-07-13"
+    },
+    "abstract": "Removal of one or more core processing modules from the avionics bay rack, with the slot map recording that makes the reinstallation traceable, the insertion count entry the backplane life depends on, and the reset that follows a backplane renewal.",
+    "sections": {
+      "purpose": "This task removes a core processing module from the avionics bay rack, records the slot map and adds to the backplane insertion count so that the rack life can be tracked.",
+      "job_setup_note": "Every insertion and withdrawal counts against the backplane connector life, so no module is to be removed for inspection alone. The count belongs to the backplane and not to the aircraft: read it from the rack record before you start and check that the rack record and the aircraft record agree, because they diverge as soon as a rack is changed and nobody notices until the count matters. Record the slot map before anything is withdrawn: the modules are physically identical and a module returned to the wrong slot will run but will not be the configuration in the aircraft record. Electrostatic precautions are mandatory.",
+      "procedure": "1. Put the aircraft on ground power and confirm that no data load is in progress. 2. Lift the avionics bay floor panels in zones 162 and 166. 3. Fit the wrist strap and connect it to the bay ground point. WARNING: STATIC DAMAGE IS CUMULATIVE AND INVISIBLE. DO NOT HANDLE A MODULE WITHOUT THE WRIST STRAP CONNECTED. 4. Photograph the rack front and record the part number and serial number in every slot on the slot map sheet. 5. Release the circuit breaker for the rack and tag it. 6. Release the front latch of the module to be removed. 7. Withdraw the module using the extraction tool, straight and without rocking. CAUTION: DO NOT ROCK A MODULE OUT OF ITS SLOT. THE BACKPLANE CONTACTS ARE DAMAGED BY SIDE LOAD AND THE DAMAGE IS NOT VISIBLE. 8. Put the module immediately into an anti-static bag and seal it. 9. Where more than one module is removed, keep each in its own bag with the slot number written on it. 10. Examine the backplane contacts in the empty slot with a magnifier and record any bent or recessed contact. 11. Add one to the insertion count for every slot disturbed and record the new total. 12. Where the backplane itself has been renewed since the last entry, do not carry the previous total forward. Set the count for every slot on the renewed backplane to zero, enter the renewal date beside it, and note the closing count of the removed backplane in the same record so that the history is not lost. A renewed backplane that inherits the old total reaches its qualified limit years early and drives an unnecessary rack change. 13. Where the rack ground stud in zone 183 must be disturbed, tag the strap before it is released. 14. Fit a slot blank in every empty slot before the bay is left.",
+      "close_out": "Keep the slot map sheet with the work pack. Record the new insertion count against the rack, and against the aircraft only where the rack has not been changed. Where a bent contact is found, do not fit a module into that slot; raise a defect against the backplane and quote the slot number."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "drawings": [
+        "D42101237654"
+      ],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-42-10-12-400-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-42-10-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "core processing module",
+      "slot map",
+      "insertion count",
+      "count reset",
+      "backplane contacts"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "42-10-12-000-043-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All aircraft. Step 11 is recorded on every rack; step 12 applies from the backplane and cooling standard onward and is the only place the count is allowed to go down",
+      "manhours": 2.5,
+      "personnel": 1,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "162",
+          "166",
+          "183"
+        ],
+        "access_panels": [
+          "162BL",
+          "166BR",
+          "162AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Connect the wrist strap to the bay ground point.",
+          "Do not remove a module while a data load is in progress.",
+          "Do not rock a module out of its slot."
+        ],
+        "tooling": [
+          {
+            "reference": "98D42101-072",
+            "description": "Module extraction tool"
+          },
+          {
+            "reference": "98D42101-075",
+            "description": "Electrostatic discharge mat and wrist strap"
+          },
+          {
+            "reference": "98D42101-079",
+            "description": "Magnifier, 10x, with light"
+          }
+        ],
+        "consumables": [
+          "Anti-static bags",
+          "Slot blanks",
+          "Slot map sheet"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-42-10-12-400-043-A"
+      ],
+      "steps": 14,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

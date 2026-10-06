@@ -1,0 +1,173 @@
+[
+  {
+    "doc_id": "MOD-158660",
+    "doc_type": "MOD",
+    "title": "Slat Piccolo Duct Support and Sealing Change to Remove the Repetitive Hot Air Leak Check",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-06-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-12",
+      "title": "Airfoil Anti-Ice — Slat Piccolo Ducts"
+    },
+    "secondary_ata": [
+      "57-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56B",
+        "VNT-2500A"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-06-11",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Redesigned duct supports and a metallic bellows seal for the slat anti-ice piccolo ducts, launched to end the hot air leaks that currently drive a repetitive borescope check of the leading edge on every C check.",
+    "sections": {
+      "reason": "Hot air leaks from the slat anti-ice piccolo duct joints have produced 84 findings across the tracked fleet in five years, of which nineteen caused heat damage to the leading edge rib webs and four required a rib replacement. The joints use a sliding sleeve to take up thermal growth, and the sleeve seal hardens after repeated cycles between ambient and 230 degrees. The condition is managed today by a borescope check of the leading edge at every C check, which takes two shifts and needs the slats driven to the maintenance position.",
+      "description": "Each sliding sleeve joint is replaced by a welded metallic bellows that accommodates the thermal growth without a sliding seal. The superseded restrictor kit D3010128517890 and the superseded switch assembly D3010128593091 are deleted, the vendor valve GIR866807-76 at the wing root is retained, and a new transmitter ROS306164-92 is fitted at the outboard end of each duct run so that a leak is detected by pressure decay rather than by inspection. Tubular spacers EN775052-5C carry the duct clear of the rib web and pan head screws AGS212130-5E secure the new support saddles. The duct accumulator FIN 335WX is unchanged and the duct pump FIN 7157WX is re-clipped. Work is done through the leading edge access panels in zones 551, 553, 652 and 654 with the slats at the maintenance position. Drawings D30100042160 issue B and D30100068526 issue F carry the bellows and support detail.",
+      "effects": "Estimated mass increase of 4.4 kg per wing. Electrical load increases by 10 VA per wing for the pressure transmitters. The bellows joint is not interchangeable with the sliding sleeve, and a duct run must be converted in full rather than joint by joint. If the leak detection substantiation holds, the repetitive borescope check at every C check is deleted and replaced by an automatic pressure decay test at power-up. AMM and IPC content for ATA 30-10 will need re-issue and a new fault isolation procedure is required for the pressure decay message.",
+      "open_points": "Pre-analysis must confirm that the pressure decay test detects the leak sizes that the borescope check currently finds, that the new transmitters do not need a dedicated wiring run through the leading edge, and whether the bellows can be replaced on wing or only with the slat removed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010128517890",
+        "D3010128593091",
+        "GIR866807-76",
+        "ROS306164-92",
+        "EN775052-5C",
+        "AGS212130-5E"
+      ],
+      "fins": [
+        "335WX",
+        "7157WX"
+      ],
+      "drawings": [
+        "D30100042160",
+        "D30100068526"
+      ],
+      "software": [],
+      "zones": [
+        "551",
+        "553",
+        "652",
+        "654"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [],
+    "keywords": [
+      "piccolo duct",
+      "metallic bellows",
+      "hot air leak",
+      "borescope check",
+      "leading edge"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 158660,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1419",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 8.8,
+      "balance_impact": "Symmetric installation, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 20,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "ROS306164-92",
+        "EN775052-5C",
+        "AGS212130-5E"
+      ],
+      "parts_removed": [
+        "D3010128517890",
+        "D3010128593091"
+      ],
+      "parts_modified": [
+        "GIR866807-76"
+      ],
+      "fins_affected": [
+        "335WX",
+        "7157WX"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 210,
+      "estimated_cost_keur": 1240,
+      "lead_time_weeks": 48,
+      "production_impact": "Production cut-in to be assessed after the retrofit standard is frozen",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

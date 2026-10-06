@@ -1,0 +1,208 @@
+[
+  {
+    "doc_id": "CRN-23-2001",
+    "doc_type": "SB",
+    "title": "Communications — Installation of the ATC Datalink Router in the Forward Avionics Rack",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-02-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00137"
+        }
+      ],
+      "excluded_msns": [
+        "C00071"
+      ],
+      "engine_types": [],
+      "operators": [
+        "MTA",
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2018-06-14",
+      "released": "2019-02-11",
+      "revised": null,
+      "effective": "2019-03-01"
+    },
+    "abstract": "Retrofit of the air traffic control datalink router on aircraft delivered before the production cut-in, so that operators can use datalink departure clearance and en-route message exchange in the upper airspace.",
+    "sections": {
+      "planning_reason": "Aircraft delivered before MSN C00137 have no datalink routing capability and cannot comply with the datalink mandate that applies in the upper airspace of the European and North American regions. Operators without this bulletin embodied lose the affected flight levels and have to plan lower, which on a typical medium-haul rotation costs between two and four per cent in fuel. Two launch customers requested the bulletin before the winter of 2019 and a further six have asked for a date.",
+      "description": "The bulletin installs the datalink router display unit in the lower forward rack position, adds the data concentrator on the outboard shelf and routes a new harness from the forward avionics bay to the flight compartment overhead panel. The flight deck interface uses the existing multifunction display and no panel cut-out is made.",
+      "accomplishment_summary": "Put the aircraft on external power and open the forward avionics bay. Remove the lower rack blanking plate. Install the router display unit D2370118700860 in the lower rack position and torque the four captive fasteners. Install the data concentrator VED805230-21 on the outboard shelf using titanium bolts AGS119203K9. Install the router assembly D2370006240541 and connect it to the rack backplane. Route the new harness from the avionics bay in zone 165 to the flight compartment overhead panel in zone 211 along the existing support line and secure it at every clip position. Do the installation task AMM-C-23-70-11-400-011-A and then the log-on test with the ground station simulator. Record the functional item 218RN allocation in the aircraft configuration file. Close the avionics bay and record the embodiment.",
+      "effectivity_note": "Applicable to CIRRANE-11 and CIRRANE-13 aircraft from MSN C00001 to MSN C00137 that were delivered without the datalink router. Aircraft from MSN C00137 onward are already at the standard in production. One withdrawn aircraft is excluded.",
+      "material_note": "Kit K2370-2001-01 contains the display unit, the data concentrator, the router assembly, the harness and the fastener set. Lead time is eighteen weeks from order. The blanking plate removed from the rack is not returned."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370118700860",
+        "D2370006240541",
+        "VED805230-21",
+        "AGS119203K9"
+      ],
+      "fins": [
+        "218RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00137"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111212",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-C-23-70-11-400-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-23-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "retrofit",
+      "avionics rack",
+      "harness routing",
+      "log-on test"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Lorencourt",
+      "role": "Customer Services Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-23-2001",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, and before the date on which the operator intends to plan into datalink-mandated airspace.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-111212",
+      "manpower": {
+        "elapsed_time_hours": 22,
+        "manhours": 38,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K2370-2001-01",
+        "kit_available_from": "2019-03-15",
+        "parts_required": [
+          {
+            "part_number": "D2370118700860",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2370006240541",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "VED805230-21",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS119203K9",
+            "qty": 24,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Cable ties, self-locking",
+          "Contact cleaner, electrical"
+        ],
+        "tooling": [
+          "Torque wrench 2-20 Nm",
+          "Datalink ground station simulator"
+        ]
+      },
+      "weight_change_kg": 6.4,
+      "accomplishment_steps": 11,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2019-02-11",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

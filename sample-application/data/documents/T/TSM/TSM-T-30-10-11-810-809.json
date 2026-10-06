@@ -1,0 +1,156 @@
+[
+  {
+    "doc_id": "TSM-T-30-10-11-810-809",
+    "doc_type": "TSM",
+    "title": "Wing Anti-Ice Valve Slow to Open in Cold Conditions — Fault Isolation",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-03-14",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Ice Protection — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "30-10-12",
+      "36-20-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-09-30",
+      "released": "2020-02-17",
+      "revised": "2022-03-14",
+      "effective": "2022-04-19"
+    },
+    "abstract": "Fault isolation for a wing anti-ice valve that is slow to open after a cold soak, separating solenoid force, seal friction, ice in the seat and a position sensing threshold problem.",
+    "sections": {
+      "purpose": "Fault isolation for a reported wing anti-ice fault indication at the first selection after a cold soak, where the valve subsequently operates normally.",
+      "fault_description": "The crew report a wing anti-ice fault at the first selection of the day, most often after a night stop outside in freezing conditions, and the indication clears on a second selection or after the duct has warmed. The valve tests serviceable at ambient temperature, which is why removed valves are almost always found no-fault. The condition has three distinct causes and they are separated by the cold travel time measurement rather than by any test done warm, so a warm functional test at the beginning of this procedure will send the isolation down the wrong path.",
+      "isolation_procedure": "1. Establish the solenoid standard fitted from the configuration record. 2. Do not do a warm functional test at this stage; it will pass regardless of the cause. 3. Measure the valve opening travel time after a cold soak, using the travel gauge at the valve connector. 4. Where the measured time is above the threshold on an aircraft with the original solenoid, the cause is solenoid pull-in force against cold seal friction and the modification bulletin applies. 5. Where the measured time is above the threshold on an aircraft with the high force solenoid, borescope the butterfly seat for ice and check the piccolo duct low point for standing water. 6. Where ice is found in the seat, the cause is water migration back to the valve after shutdown and not a valve fault. 7. Where the travel time is within the threshold but the fault indication still occurs, check the bleed monitoring computer threshold setting against the standard fitted; a valve converted without the widened threshold reports a failure it has not had. 8. Only where all four are excluded should the valve be removed.",
+      "dispatch_note": "Dispatch with one wing anti-ice valve inoperative is permitted under the minimum equipment list item, with the associated performance penalty and the icing conditions restriction applied. A valve that is slow but eventually opens is not an inoperative valve and must not be deferred under that item."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010110579750",
+        "D3010113429790",
+        "D3010122447896"
+      ],
+      "fins": [
+        "2649WX2",
+        "273HA",
+        "2HA",
+        "7887WX2"
+      ],
+      "drawings": [
+        "D30101189914"
+      ],
+      "software": [],
+      "zones": [
+        "533",
+        "231",
+        "652"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-30-10-11-000-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "anti-ice valve",
+      "slow open",
+      "cold soak",
+      "travel time",
+      "seat ice"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "30-10-11-810-809",
+      "fault_symptom": "WING ANTI ICE FAULT at first selection after a cold soak",
+      "fault_codes": [
+        "301011002",
+        "301011019"
+      ],
+      "warning_messages": [
+        "ANTI ICE WING FAULT"
+      ],
+      "affected_fins": [
+        "2649WX2",
+        "273HA",
+        "2HA"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Solenoid pull-in force marginal against cold seal friction",
+          "probability_pct": 40,
+          "fin": "2649WX2"
+        },
+        {
+          "cause": "Ice in the butterfly seat from water migration after shutdown",
+          "probability_pct": 25,
+          "fin": "2HA"
+        },
+        {
+          "cause": "Bleed monitoring computer threshold not widened after conversion",
+          "probability_pct": 20,
+          "fin": "273HA"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-T-30-10-11-000-001-A",
+      "dispatch": {
+        "mel_item": "30-10-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One valve inoperative, performance penalty applied and icing conditions restricted"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,183 @@
+[
+  {
+    "doc_id": "WDM-Z-92-31-11",
+    "doc_type": "WDM",
+    "title": "Wing Junction and Cabin Floor Harnesses — Direct Current Feeder Run",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-10-12",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-31",
+      "ata_6d": "92-31-11",
+      "title": "Centre Fuselage Wiring — Wing Junction Harnesses"
+    },
+    "secondary_ata": [
+      "24-30",
+      "44-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-09-05",
+      "released": "2018-02-17",
+      "revised": "2022-10-12",
+      "effective": "2022-11-02"
+    },
+    "abstract": "Wiring diagram sheet for the wing junction and cabin floor harnesses, showing the direct current feeder run from the rectifier units to the essential transfer and the bracket stations under the cabin floor.",
+    "sections": {
+      "purpose": "This sheet shows the wing junction harnesses and the cabin floor cable runs, including the direct current feeder from the transformer rectifier units to the essential bus transfer.",
+      "sheet_note": "The sheet is drawn as a plan view of the centre fuselage with the cabin floor panels removed. The feeder run shown in heavy line is the highest current path in the cabin and its separation from every signal harness is called out at each crossing. Bracket stations are lettered rather than numbered because they follow the seat track pitch rather than the frame pitch. Contact allocation at the rectifier unit connector is on sheet 3 and changes with the unit rating fitted.",
+      "routing_note": "The feeder leaves the rectifier unit rack in zone 274, runs forward under the cabin floor through zone 244 to the primary distribution centre, and a branch runs outboard to the wing junction in zone 593. Minimum separation from any signal harness is 100 millimetres at a parallel run and 50 millimetres at a crossing. The run is supported at eleven lettered bracket stations; a shortened feeder run of the type proposed for the uprated rectifier units would delete stations F to H and needs a revised separation study."
+    },
+    "entities": {
+      "part_numbers": [
+        "BED352373-29",
+        "D9231000064836",
+        "D2430112037168",
+        "HAD544426-68"
+      ],
+      "fins": [
+        "23VC",
+        "251VC",
+        "1396VC"
+      ],
+      "drawings": [
+        "D92311127849"
+      ],
+      "software": [],
+      "zones": [
+        "274",
+        "244",
+        "593"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-158190",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-Z-24-30-11-000-019-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "wing junction harness",
+      "direct current feeder",
+      "cabin floor run",
+      "separation",
+      "bracket station"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "sheet_number": "92-31-11",
+      "sheet_title": "WING JUNCTION AND CABIN FLOOR HARNESSES — DC FEEDER RUN",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "2310W",
+        "2311W",
+        "2344W"
+      ],
+      "connectors": [
+        {
+          "reference": "2310VC",
+          "part_number": "BED352373-29",
+          "location_zone": "274",
+          "contacts": 12
+        },
+        {
+          "reference": "2344VC",
+          "part_number": "D9231000064836",
+          "location_zone": "244",
+          "contacts": 48
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "23VC",
+          "description": "SUPPORT BRACKET, WING JUNCTION HARNESSES, OUTBD",
+          "zone": "593"
+        },
+        {
+          "fin": "251VC",
+          "description": "BUS BAR, CENTRE FUSELAGE WIRING, OUTBD",
+          "zone": "274"
+        },
+        {
+          "fin": "1396VC",
+          "description": "TERMINAL BLOCK, LANDING GEAR BAY WIRING, OUTBD",
+          "zone": "244"
+        }
+      ],
+      "wire_count": 96,
+      "wire_gauge_range": "AWG 22 to AWG 0",
+      "routes": [
+        "Zone 274 rectifier unit rack forward under the cabin floor to zone 244 primary distribution centre",
+        "Zone 244 outboard to the wing junction in zone 593"
+      ],
+      "related_sheets": [
+        "WDM-Z-92-51-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

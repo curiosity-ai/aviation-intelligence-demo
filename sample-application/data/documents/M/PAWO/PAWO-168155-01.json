@@ -1,0 +1,272 @@
+[
+  {
+    "doc_id": "PAWO-168155-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Closed) — Multi-Mode Receiver Database Alignment, Fleet Extension",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50",
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-11",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis carried out in 2026 to extend the database alignment to the freighter variant, using the four years of first fix data collected since the second issue entered service.",
+    "sections": {
+      "objective": "Establish whether the aligned navigation database and the associated routing could be offered to the freighter variant, which was not covered when the second issue was released, and whether the cold start acceptance time held up in service.",
+      "findings_summary": "Three items were confirmed and none blocking. The cold start data was the strongest part of the case: across eleven operators the first fix after a thirty minute power-down averaged one minute forty on the aligned database against seven minutes on the delivered one, comfortably inside the three minute acceptance in the test task. The freighter rack layout differs at the position where the revised mounting tray is fitted, and the review could not confirm the feed separation without a physical check, which is why the recommendation carried a condition. The troubleshooting entry needed one sentence changed because it distinguishes two symptoms by aircraft standard and the freighter would be a third case.",
+      "next_steps": "Extension approved subject to a physical separation check on the first freighter. The check was scheduled with the operator and the result closed the condition in August 2026."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450118136339",
+        "D3450119360685"
+      ],
+      "fins": [
+        "1038DA",
+        "3TR"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LE4PC90617C",
+        "LA4PCFC53E5"
+      ],
+      "zones": [
+        "183",
+        "222"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168155",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "closed pre-analysis",
+      "freighter variant",
+      "cold start",
+      "database alignment",
+      "feed separation"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-168155-01",
+      "subject_mod": "MOD-168155",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-09",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-03-11",
+      "due_date": "2026-06-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 118
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46",
+          "MERIDIAN-42F"
+        ],
+        "ata_2d": [
+          "34",
+          "45"
+        ],
+        "ata_4d": [
+          "34-50",
+          "45-45"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00475"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3450118136339",
+            "D3450119360685"
+          ],
+          "fins": [
+            "1038DA",
+            "3TR"
+          ],
+          "drawings": [
+            "D34501177112"
+          ],
+          "zones": [
+            "183",
+            "222"
+          ],
+          "software": [
+            "LE4PC90617C"
+          ]
+        },
+        "similarity_seeds": [
+          "a standard extended to a variant whose rack layout was never checked against it"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Collate cold start data from eleven operators",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Compare the freighter rack layout against the routing rule",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the troubleshooting entry for a third aircraft standard",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-168048",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "34-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The first issue routing is a prerequisite on the smaller variant, and the freighter has never had either standard, so the extension has to carry the routing work as well as the database.",
+          "resolution": "Include the routing in the freighter accomplishment rather than assuming it."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-M-34-50-11-700-037-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "34-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The cold start test is written for aircraft post the second issue and would need its effectivity extended to the freighter once the standard is offered there.",
+          "resolution": "Extend the task effectivity when the freighter embodiment is released."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-M-34-50-11-810-810",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "34-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure separates two symptoms by aircraft standard; a freighter carrying the database but a different rack layout is a third case that the text does not admit.",
+          "resolution": "Add the freighter case to the procedure at the next issue."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed. Extension approved subject to a physical separation check on the first freighter.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

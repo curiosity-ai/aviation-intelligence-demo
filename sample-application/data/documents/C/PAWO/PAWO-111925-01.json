@@ -1,0 +1,427 @@
+[
+  {
+    "doc_id": "PAWO-111925-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Number Two VHF Installation and Coaxial Route Change",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-10",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-20",
+      "ata_6d": "23-20-11",
+      "title": "VHF Communication — VHF Transceiver"
+    },
+    "secondary_ata": [
+      "23-20-12",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [
+        "C00342",
+        "C00408",
+        "C00479",
+        "C00544"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "KRA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-10",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the number two radio installation change, covering the antenna land preparation practice, the aft cabin coaxial route it wants to leave, and the crew and maintenance content that assumes both sets behave identically.",
+    "sections": {
+      "objective": "Establish whether the proposed transceiver, antenna and coaxial route change can be embodied on the operator's four aircraft without disturbing the overhead stowage installation, whether the antenna land preparation is compatible with the treatment practice now in force, and what content has to change once the two radio sets stop behaving differently.",
+      "scope_note": "The search covered ATA 23 as the primary chapter with ATA 92 for the wiring and ATA 51 for the land preparation practice, because the three parts of this change are owned by three different offices and none of them sees the whole of it. ATA 25 was added late, after the zone seed returned the cabin ceiling, and that is where the only blocking item came from. Structural chapters below 51 and all powerplant chapters were excluded. The MSN restriction follows the operator fleet rather than the type, because no other customer has reported the symptom.",
+      "method_note": "Entity linking was run first from the three functional item numbers and the three zones, because the candidate has a small and very specific entity set and the wiring and manual content fall straight out of it. Semantic similarity was then run on two seed phrases taken from the operator words rather than from the modification text, which is what surfaced the crew procedure content: the flight crew entry that deals with a weak radio set shares no identifier at all with this change and would never have been found by entity linking.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the aft cabin ceiling route: the coaxial run this change wants to move onto its own support line passes through the bay where the deeper overhead stowage bins are attached, and on aircraft at that standard the tie-rod positions moved. Two of the four aircraft in scope carry the deeper bins. The next most significant item is not a conflict but a constraint: the antenna land preparation called for by this change abrades only the bonding positions, which is correct, but the treatment practice released two years ago shortened the application window to ninety minutes and that is not compatible with the two-shift plan the change assumes. The remaining findings are content. The trouble shooting procedure for weak reception, the antenna installation task and the aft fuselage wiring sheet all name the same functional items and all change. The flight crew procedure for a weak radio set is the interesting one: it tells the crew to keep the weak set selected and report it, which is written on the assumption that a weak set is a fault rather than a characteristic, and that assumption is exactly what this change is trying to remove.",
+      "next_steps": "Confirm the bin standard on each of the four aircraft from the configuration file before the route is fixed. Ask the materials office whether the antenna land can be prepared in one shift and treated in the next, or whether the whole land has to be done inside one window. Agree with the flight operations office whether the crew procedure is re-worded now or at the fleet campaign. Obtain the insertion loss measurement on one unmodified aircraft so that the claimed four to six decibel recovery can be substantiated before the design review."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2320118505988",
+        "D2320128501183",
+        "D2320009698337",
+        "AGS216702-16",
+        "EN561587K4"
+      ],
+      "fins": [
+        "934RN",
+        "143RN",
+        "221RN6"
+      ],
+      "drawings": [
+        "D23200008256"
+      ],
+      "software": [],
+      "zones": [
+        "261",
+        "145",
+        "271"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00342",
+        "C00479"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111925",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-260218",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "vhf installation",
+      "coaxial route",
+      "antenna land",
+      "reception margin"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111925-01",
+      "subject_mod": "MOD-111925",
+      "source_io": "IO-C-260218",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-04-10",
+      "due_date": "2026-08-14",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "EYIS",
+          "EDSA",
+          "ETGC"
+        ],
+        "estimated_manhours": 95,
+        "spent_manhours": 61
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "23",
+          "92",
+          "51",
+          "25"
+        ],
+        "ata_4d": [
+          "23-20",
+          "23-70",
+          "92-41",
+          "51-20",
+          "25-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "C00342",
+          "to": "C00544"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2320118505988",
+            "D2320128501183",
+            "AGS216702-16",
+            "EN561587K4"
+          ],
+          "fins": [
+            "934RN",
+            "143RN",
+            "221RN6"
+          ],
+          "drawings": [
+            "D23200008256"
+          ],
+          "zones": [
+            "261",
+            "145",
+            "271"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "one radio set heard weakly on the approach in rain and in terrain",
+          "moving a coaxial feeder out of a shared bundle to recover reception"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Entity search on the three functional items and three zones",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the aft cabin ceiling route against the overhead stowage standard",
+          "method": "ENTITY",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the antenna land preparation against the treatment practice",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Similarity search on the operator wording for weak reception",
+          "method": "SEMANTIC",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T05",
+          "title": "Obtain an insertion loss baseline on an unmodified aircraft",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111375",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "271"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The deeper overhead stowage installation moved the bin tie-rod positions in the aft cabin ceiling, and the coaxial run this change wants to put on its own support line passes through the same bay. Two of the four aircraft in scope are at the deeper bin standard. Nothing in the two documents reads as related: one is a cabin product change driven by boarding time and the other is a radio installation change driven by reception, and the only thing they have in common is the zone.",
+          "resolution": "Confirm the bin standard per aircraft and fix the coaxial support line clear of the tie-rod positions, or accept two route variants."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "FCOM-C-PRO-23-20-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The two documents share no identifier of any kind. One is written in maintenance register about transceivers, ground plane skirts and coaxial insertion loss; the other is written in crew register about setting a frequency on both sets and reporting a set that is heard weakly. Only the underlying subject connects them."
+          },
+          "rationale": "The crew procedure tells the pilot to keep a weak set selected, use the other for the working exchange and write the sector and the weather in the technical log. That instruction exists because a weak second set is currently a characteristic the crew has to live with. If this change removes the characteristic, the instruction becomes misleading and the technical log entries it generates stop being useful evidence.",
+          "resolution": "Re-word the crew procedure at embodiment so that a weak set is reported as a fault rather than as an expected condition, and coordinate the wording with the flight operations office."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-C-51-20-11-911",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Connected only by the subject of preparing and treating a metallic land before something is bonded to it. The repair scheme speaks of filiform corrosion, blend-out ratios and two-stage treatment; the modification speaks of a ground plane skirt sealing against skin rather than paint. No identifier is common to both."
+          },
+          "rationale": "The modification requires the antenna to seal against bare metal rather than against paint, which means the land is prepared and treated to the same practice this repair scheme uses. That practice shortened the application window to ninety minutes after abrasion, and the modification assumes the land can be prepared in one shift and the antenna fitted in the next.",
+          "resolution": "Confirm with the materials office whether the land may be prepared and treated in separate shifts, and if not, re-plan the embodiment as a single continuous operation."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-C-23-20-11-810-815",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2320118505988",
+              "D2320128501183"
+            ],
+            "shared_fins": [
+              "934RN",
+              "143RN",
+              "221RN6"
+            ],
+            "shared_zones": [
+              "261",
+              "145",
+              "271"
+            ],
+            "shared_ata_6d": [
+              "23-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure is built around proving that the installation rather than the transceiver is at fault, and its whole ordering exists because the current installation is the usual cause. Once the installation is changed the probabilities move and the first three steps lose most of their value.",
+          "resolution": "Re-issue the procedure with the post-modification probabilities and add a branch that establishes which installation standard the aircraft carries before anything is measured."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "WDM-C-92-41-21",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2320128501183",
+              "AGS216702-16"
+            ],
+            "shared_fins": [
+              "934RN",
+              "143RN",
+              "221RN6"
+            ],
+            "shared_zones": [
+              "145",
+              "261",
+              "271"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The wiring sheet is the reference for restoring the original support positions of the shared bundle aft of the wing, and it already records that re-clipped aircraft show a higher insertion loss. This change takes the coaxial run out of that bundle entirely, which makes the sheet's note obsolete and requires a new support definition.",
+          "resolution": "Re-issue the sheet with the separated support line and delete the note about restoring the original positions, which will no longer apply to modified aircraft."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "AMM-C-23-20-11-400-029-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2320128501183",
+              "AGS216702-16",
+              "EN561587K4"
+            ],
+            "shared_fins": [
+              "934RN",
+              "143RN",
+              "221RN6"
+            ],
+            "shared_zones": [
+              "261",
+              "145"
+            ],
+            "shared_ata_6d": [
+              "23-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task already tells the technician to abrade only the bonding positions, which is right for an antenna sealing against paint. The new ground plane skirt seals against bare metal over a wider area and the abrasion instruction has to change with it.",
+          "resolution": "Amend the abrasion and treatment steps for the post-modification antenna and keep the existing steps for the delivered one."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "MOD-111318",
+          "doc_type": "MOD",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both are about how a metallic surface is prepared and protected before something is fastened to it, expressed in completely different vocabulary and with no shared identifier."
+          },
+          "rationale": "The two-stage treatment practice was released as a structural change with a stated application window. An antenna land prepared under it is a bonded electrical interface as well as a protected surface, and no one has confirmed that the two-stage treatment gives an acceptable bonding resistance at the skirt.",
+          "resolution": "Obtain a position from the materials office on the bonding resistance achievable with the two-stage treatment before the design is frozen."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111362",
+          "doc_type": "MOD",
+          "reason": "Returned by the chapter search because it is also an ATA 23 change on the same aircraft, and by the semantic search on the shared vocabulary of weak signals and shared returns. It is a cabin interphone crosstalk change in the ceiling rack with no antenna, no coaxial run and no shared functional item."
+        },
+        {
+          "doc_id": "MOD-111212",
+          "doc_type": "MOD",
+          "reason": "Surfaces strongly on the phrase 'log-on failure', which appears in both. The datalink router standard deals with the message routing box in the avionics rack and has nothing to do with the radio installation that carries the signal; it shares no functional item, no zone and no part with this candidate."
+        }
+      ],
+      "conclusion": "Not yet issued. The aft cabin ceiling route is blocking on two of the four aircraft and the land preparation window has to be settled before the embodiment plan can be believed.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

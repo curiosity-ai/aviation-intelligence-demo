@@ -1,0 +1,191 @@
+[
+  {
+    "doc_id": "MOD-149230",
+    "doc_type": "MOD",
+    "title": "Vibration Isolated Rack and Revised Interface Unit for the Flight Guidance Computer",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-09-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-10",
+      "ata_6d": "22-10-11",
+      "title": "Auto Flight — Flight Guidance Computer"
+    },
+    "secondary_ata": [
+      "22-80-11",
+      "31-60-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00027",
+          "to": "T00218"
+        }
+      ],
+      "excluded_msns": [
+        "T00152"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00221",
+      "production_cut_in_date": "2024-02-06",
+      "retrofit_via": [
+        "TTN-22-1024"
+      ]
+    },
+    "dates": {
+      "created": "2021-11-30",
+      "released": "2023-09-15",
+      "revised": null,
+      "effective": "2023-10-27"
+    },
+    "abstract": "Puts the flight guidance computer on an isolated rack and replaces its interface unit, after connector fretting traced to airframe vibration produced intermittent autopilot disconnects on rough-field operations.",
+    "sections": {
+      "reason": "Intermittent autopilot disconnects were reported by operators using unimproved runways, at a rate roughly four times the fleet average. Removed computers tested serviceable. Investigation found fretting corrosion on the rack connector contacts, produced by low amplitude relative movement between the computer and the rack under airframe vibration. The rack was designed to a vibration environment that the rough-field operation exceeds. A connector that frets does not fail cleanly; it produces exactly the intermittent behaviour operators were describing, and cleaning the contacts fixed it for a few months at a time.",
+      "description": "The computer rack D2210114091568 is replaced by a version mounted on four elastomeric isolators, and the interface unit D2210112806118 is replaced by a variant with a longer-wipe contact set and a positive rack latch that preloads the connector. The grommet AES764786K6 is renewed at every cable entry because the isolated rack moves relative to the structure and the harness must have controlled slack. The mounting plate ESC385904-77 is added between the isolators and the shelf. Wiring at FIN 7CC, FIN 872CE and FIN 897CC is re-terminated with a service loop; harness identification is unchanged. The built-in test load LG7R957079B is updated so that a contact resistance trend is reported before the disconnect occurs. Work is in the avionics compartment in zones 124, 223 and 263 and is detailed on drawing D22801194445.",
+      "effects": "Mass increase of 3.6 kg per aircraft for both racks. Electrical load is unchanged. The isolated rack is not interchangeable with the rigid rack: the shelf hole pattern is common but the connector datum moves 6 mm aft, and an unmodified interface unit will not preload correctly. Dispatch and the minimum equipment list entry for one flight guidance computer inoperative are unchanged. Maintenance, illustrated parts and troubleshooting content require update, together with the loadable software list.",
+      "embodiment_note": "Production cut-in at MSN T00221 in February 2024. Retrofit through the associated service bulletin, about eight hours with the avionics compartment open and both racks converted together. Kits contain the isolators, the plate and the interface unit; the computer itself is re-used."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2210112806118",
+        "D2210114091568",
+        "AES764786K6",
+        "ESC385904-77"
+      ],
+      "fins": [
+        "7CC",
+        "872CE",
+        "897CC"
+      ],
+      "drawings": [
+        "D22801194445"
+      ],
+      "software": [
+        "LG7R957079B"
+      ],
+      "zones": [
+        "124",
+        "223",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00152",
+        "T00221"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-22-1024",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-22-10-11-700-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "flight guidance computer",
+      "vibration isolator",
+      "connector fretting",
+      "autopilot disconnect",
+      "avionics rack"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149230,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1301",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 3.6,
+      "balance_impact": "Forward of reference station, negligible CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "ESC385904-77"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2210112806118",
+        "D2210114091568",
+        "AES764786K6"
+      ],
+      "fins_affected": [
+        "7CC",
+        "872CE",
+        "897CC"
+      ],
+      "software_affected": [
+        "LG7R957079B"
+      ],
+      "estimated_manhours": 350,
+      "estimated_cost_keur": 1490,
+      "lead_time_weeks": 56,
+      "production_impact": "Cut-in at MSN T00221, no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

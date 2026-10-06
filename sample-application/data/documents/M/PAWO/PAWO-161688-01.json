@@ -1,0 +1,282 @@
+[
+  {
+    "doc_id": "PAWO-161688-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Interference-Fit Fastener Standard at the Wing Lower Cover Spanwise Joints",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-03-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "57",
+      "ata_4d": "57-10",
+      "ata_6d": "57-10-12",
+      "title": "Wing Box Structure — Lower Cover Panels"
+    },
+    "secondary_ata": [
+      "51-70"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-02-21",
+      "released": "2023-03-15",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the interference-fit fastener standard at the wing lower cover spanwise joints, a production-driven certification change with a narrow MSN cut-in band and a large repair-scheme dependency.",
+    "sections": {
+      "objective": "Determine what the interference-fit fastener standard at the spanwise splices does to the composite repair schemes and inspection content that assume the current clearance-fit hole condition, and whether the cut-in band can be held to a single production block. The certification argument was already agreed; this order was about the downstream consequences of two hole conditions coexisting in the fleet for the life of the aircraft.",
+      "findings_summary": "Three items were confirmed and the first is blocking. The scarfed composite patch repair for the lower cover uses the existing fastener standard for its perimeter attachment and specifies a hole preparation that is incompatible with an interference fit into a composite laminate — applying it to a post-modification panel would either damage the bore or leave the repair under-clamped. The splice joint inspection carries a fastener protrusion criterion measured against the clearance-fit installed head height, which the new standard changes by a small but measurable amount, enough to generate false findings. The third is softer: a fin box rib web doubler repair in a different chapter reads almost identically and shares the structural repair chapter, but it uses its own fastener family and does not read across.",
+      "next_steps": "Ask the repair design owner to produce a post-modification variant of the scarfed patch repair, and make the modification release conditional on it. Correct the protrusion criterion in the splice inspection. Record the deliberate decision that the fin box repair does not read across so the question is not reopened. Confirm the cut-in band with production before the effectivity is fixed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5710120386639",
+        "D5710123576997",
+        "INN928999-53",
+        "AGS17834-4B"
+      ],
+      "fins": [],
+      "drawings": [
+        "D57101268761"
+      ],
+      "software": [],
+      "zones": [
+        "532",
+        "633"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-161688",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "interference fit",
+      "wing lower cover",
+      "spanwise splice",
+      "composite repair"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-161688-01",
+      "subject_mod": "MOD-161688",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2023-03-15",
+      "outcome": "VALIDATED",
+      "raised_date": "2022-02-21",
+      "due_date": "2023-02-10",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EDSA",
+        "lead_site": "Ashcombe",
+        "contributing_departments": [
+          "ESZS",
+          "EYIS"
+        ],
+        "estimated_manhours": 150,
+        "spent_manhours": 205
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46",
+          "MERIDIAN-42F"
+        ],
+        "ata_2d": [
+          "57",
+          "51"
+        ],
+        "ata_4d": [
+          "57-10",
+          "51-70"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "SRM"
+        ],
+        "msn_range": {
+          "from": "M00400",
+          "to": "M00520"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5710120386639",
+            "D5710123576997",
+            "INN928999-53",
+            "AGS17834-4B"
+          ],
+          "fins": [],
+          "drawings": [
+            "D57101268761"
+          ],
+          "zones": [
+            "532",
+            "633"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "hole preparation for an interference fit fastener into a composite laminate",
+          "fastener protrusion acceptance at a wing cover splice"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search repair and inspection content on ATA 57-10 and 51-70",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess the scarfed patch repair against the interference-fit bore",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check protrusion criteria in the splice joint inspection",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-M-57-10-12-001",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5710123576997",
+              "INN928999-53"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "532",
+              "633"
+            ],
+            "shared_ata_6d": [
+              "57-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The perimeter attachment of the scarfed patch specifies a clearance-fit hole preparation. Driving the new fastener into that bore either crushes the laminate at the hole wall or, if the bore is opened, leaves the repair under-clamped. The repair cannot be applied as written to a post-modification panel.",
+          "resolution": "Produce a post-modification variant of the repair scheme and make the modification release conditional on its availability."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-M-57-10-12-200-015-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5710120386639",
+              "D5710123576997",
+              "INN928999-53",
+              "AGS17834-4B"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "532",
+              "633"
+            ],
+            "shared_ata_6d": [
+              "57-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The protrusion acceptance criterion is measured against the clearance-fit installed head height. The interference-fit head sits marginally proud of that figure by design, so the task would generate a finding on every post-modification splice inspected.",
+          "resolution": "Issue a second acceptance figure under a post-modification effectivity condition before the first inspection falls due."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-M-55-30-11-002",
+          "doc_type": "SRM",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "INFORMATIONAL",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "51-70"
+            ],
+            "similarity_note": "Retrieved by both the shared structural repair chapter and by similarity on doubler, edge margin and fastener pattern language. The two repairs read almost identically at the level of prose."
+          },
+          "rationale": "The fin box rib web doubler repair uses its own fastener family and is not affected by the wing cover standard. The similarity is entirely in the vocabulary, which is exactly why it needed to be looked at and dismissed in writing.",
+          "resolution": "Record the deliberate no-read-across decision in the design justification."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed. The repair scheme variant was the pacing item and gated the release; the protrusion criterion was corrected in the same package.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

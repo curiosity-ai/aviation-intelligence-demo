@@ -1,0 +1,371 @@
+[
+  {
+    "doc_id": "PAWO-166418-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Relocation of the Bleed Duct Overheat Sensing Elements",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-07",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "36-20",
+      "54-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00061",
+          "to": "M00341"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "BCA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-07",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the bleed overheat sensing relocation, covering the pylon zone it shares with a reverser candidate, the troubleshooting and inspection content it invalidates, and the leading edge duct change it must be embodied with.",
+    "sections": {
+      "objective": "Establish what the relocation of the bleed duct overheat sensing elements conflicts with in the pylon and leading edge area, which maintenance and troubleshooting content becomes wrong on embodiment, and whether the bleed monitoring threshold has to move with the sensing position or can be left alone.",
+      "scope_note": "The search covers ATA 36-10 as the primary chapter, ATA 36-20 because the monitoring computer threshold may have to move, and ATA 54-50 because the sensing run crosses the pylon firewall penetration and shares brackets with pylon hardware. ATA 30-10 was added after the first pass, when it became clear that the leading edge duct support arrangement uses the same rib holes further outboard. Cabin, avionics and landing gear chapters were not searched.",
+      "method_note": "Entity linking was seeded from the four part numbers, the two functional item numbers, the drawing number and the two zones on the candidate. Semantic similarity was run over reason-for-change text with an emphasis on nuisance warnings and sensing installations rather than on bleed hardware, which is what surfaced the cargo heating transmitter change on a completely different chapter. The two methods overlap very little on this candidate: the entity results are all in the pylon, the similarity results are all elsewhere.",
+      "findings_summary": "Six items have been confirmed and one is blocking. The blocking item is the leading edge duct support redesign: from rib twelve outboard the duct supports and the sensing harness brackets pick up the same rib holes, and the two changes cannot be embodied independently without one of them being re-worked. Neither document shares a single identifier with the other, so this was a pure similarity result and would have been missed by an entity search. Below that, the fault isolation procedure for the descent-phase caution sends the engineer to the wrong end of the duct once the elements move, and the corresponding inspection task carries a resistance balance limit that assumes the delivered element position. A candidate on the thrust reverser shares the inboard pylon zone and will be competing for the same access. Finally the retrofit bulletin for the leading edge change carries a certification statement that the relocation touches.",
+      "next_steps": "Confirm with the ice protection design office whether the shared rib holes can carry both arrangements or whether one bracket family must be redesigned. Ask the troubleshooting owner to rewrite the descent caution procedure against the relocated position. Establish whether the monitoring computer threshold moves with the sensing elements. Coordinate the pylon access window with the reverser candidate owner."
+    },
+    "entities": {
+      "part_numbers": [
+        "FJD499716-77",
+        "HAD174896-54",
+        "D3610117518658",
+        "AES665355K7"
+      ],
+      "fins": [
+        "26PN",
+        "2PN"
+      ],
+      "drawings": [
+        "D36101141546"
+      ],
+      "software": [],
+      "zones": [
+        "443",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-166418",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-M-260357",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "bleed overheat",
+      "sensing relocation",
+      "shared bracket",
+      "nuisance warning"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-166418-01",
+      "subject_mod": "MOD-166418",
+      "source_io": "IO-M-260357",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-04-07",
+      "due_date": "2026-07-03",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ETGC",
+          "EVAA"
+        ],
+        "estimated_manhours": 80,
+        "spent_manhours": 44
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "36",
+          "54",
+          "30"
+        ],
+        "ata_4d": [
+          "36-10",
+          "36-20",
+          "54-50",
+          "30-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "M00061",
+          "to": "M00341"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "FJD499716-77",
+            "HAD174896-54",
+            "D3610117518658"
+          ],
+          "fins": [
+            "26PN",
+            "2PN"
+          ],
+          "drawings": [
+            "D36101141546"
+          ],
+          "zones": [
+            "443",
+            "433"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "nuisance overheat caution that cannot be reproduced on the ground",
+          "sensing element exposed to a local cold air wash at a firewall penetration"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search pneumatic and pylon documents on the sensing run",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search for comparable nuisance warning changes on other chapters",
+          "method": "SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the shared rib holes with the leading edge duct supports",
+          "method": "SME_INTERVIEW",
+          "owner": "ETGC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Review the monitoring computer threshold against the new position",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-163208",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "BLOCKING",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents describe a support arrangement in the same physical region being changed to remove a thermal effect, one on ducting in the leading edge and one on sensing elements at the pylon. They share no part number, no functional item number and no zone, and they sit in different ATA chapters. Only the descriptive text connects them."
+          },
+          "rationale": "From rib twelve outboard the leading edge duct supports and the sensing harness brackets pick up the same rib holes. If the duct support redesign is embodied first, the sensing bracket positions assumed by the candidate no longer exist; if the candidate is embodied first, the duct bellows guard fouls the relocated sensing shield.",
+          "resolution": "Declare a concurrency constraint between the two changes and agree a single bracket family with the ice protection design office before either footprint is frozen."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-M-36-10-11-810-803",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "HAD174896-54"
+            ],
+            "shared_fins": [
+              "26PN",
+              "2PN"
+            ],
+            "shared_zones": [
+              "443",
+              "433"
+            ],
+            "shared_ata_6d": [
+              "36-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The fault isolation procedure is written against the delivered sensing position at the firewall penetration and its first productive step is an inspection of the element routing there. Once the elements move 220 mm inboard onto a common shield, that step sends the engineer to a position that no longer holds the sensing pair.",
+          "resolution": "Rewrite the procedure against the relocated position and reissue it in the same documentation package as the modification."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-36-10-11-200-019-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3610117518658"
+            ],
+            "shared_fins": [
+              "26PN"
+            ],
+            "shared_zones": [
+              "443"
+            ],
+            "shared_ata_6d": [
+              "36-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The inspection task carries a resistance balance limit that explicitly assumes the elements are at the delivered position at the penetration. With both elements on a common shield the balance will read differently and the existing limit would generate false findings.",
+          "resolution": "Recalculate the balance limit for the relocated position and reissue the task with a pre and post effectivity note."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-162530",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both changes answer an erroneous indication produced by the sensing installation rather than by a real system condition, and both are described in terms of a small population, a seasonal pattern and a clean system behind the false reading. They share nothing else at all."
+          },
+          "rationale": "The cargo heating transmitter change solved the same class of problem by sealing the sensor rather than by moving it. The design office should understand why the sealing route was chosen there and whether it was considered here, because a sealed element would be a much cheaper answer if it works.",
+          "resolution": "Record the comparison in the design justification and state explicitly why relocation was preferred to a sealed element."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-167130",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "433"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The reverser cascade box candidate works in the inboard pylon zone that the sensing relocation also uses. Both need the pylon lower fairings off and both are proposed for the same engine access window, so they will compete for downtime even though they do not touch the same hardware.",
+          "resolution": "Agree the access window with the nacelle design office and consider offering the two as a combined embodiment at the next reverser overhaul."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MRD-30-1037",
+          "doc_type": "SB",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The retrofit bulletin for the leading edge duct change carries a statement that the duct support arrangement is unchanged aft of rib twelve. If the sensing relocation moves a bracket in that region the statement becomes untrue, and the bulletin is the document an operator reads before it does the work.",
+          "resolution": "Review the bulletin statement once the bracket family is agreed and re-issue it if the relocation reaches aft of rib twelve."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-163011",
+          "doc_type": "MOD",
+          "reason": "Surfaces on similarity because it also describes a filter and sensing change driven by an in-service indication, but it is a fuel system change inside the wing tank with no shared zone, no shared part number and no access overlap with the pylon."
+        },
+        {
+          "doc_id": "TSM-M-21-40-11-810-805",
+          "doc_type": "TSM",
+          "reason": "Very close in wording to the descent caution procedure — an erroneous indication, a seasonal pattern, a clean system behind it — but it is the cargo compartment temperature procedure, with no shared functional item number, no shared zone and no bleed system content."
+        }
+      ],
+      "conclusion": "Not yet issued. The shared rib holes with the leading edge duct supports are the blocking item and must be resolved before the bracket design is frozen.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

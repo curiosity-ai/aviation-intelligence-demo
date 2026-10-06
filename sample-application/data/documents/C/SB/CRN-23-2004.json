@@ -1,0 +1,245 @@
+[
+  {
+    "doc_id": "CRN-23-2004",
+    "doc_type": "SB",
+    "title": "Communications — Datalink Router Upgrade for Oceanic Clearance and Automatic Surveillance",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-02-19",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00137",
+          "to": "C00408"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MTA",
+        "VSL",
+        "GSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111212"
+        ],
+        "pre_mod": [
+          "MOD-111967"
+        ],
+        "post_sb": [
+          "CRN-23-2007"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-05-06",
+      "released": "2021-11-30",
+      "revised": "2024-02-19",
+      "effective": "2024-03-11"
+    },
+    "abstract": "Upgrade of the installed datalink router to the second standard, adding oceanic clearance exchange and automatic position surveillance on aircraft delivered before the production cut-in at MSN C00408.",
+    "sections": {
+      "planning_reason": "Aircraft at the first router standard cannot hold the oceanic message set and cannot generate the automatic position report the surveillance mandate requires. Three operators opened North Atlantic routes on this type and carry a dispatch restriction on every one of them. The log-on state machine of the first standard is also the root cause of forty-one reported log-on failures across the fleet in one twelve-month period.",
+      "description": "The bulletin replaces the router display unit with the later hardware standard, re-loads the router assembly and adds a second data concentrator on the outboard shelf so that the surveillance function has an independent path to the position source. The antenna feed for the surveillance function is connected at the aft equipment position and a new functional item is allocated.",
+      "accomplishment_summary": "Put the aircraft on external power and open the forward avionics bay. Do the removal task AMM-C-23-70-11-000-011-A for the existing display unit. Install the later display unit D2370118700860 in the same rack position. Install the satellite data unit ELL642868-87 on the outboard shelf using titanium bolts AGS119203K9. Connect the surveillance antenna feed at the aft position in zone 282 and allocate functional item 16RN. Re-load the router assembly D2370006240541 from the maintenance terminal. Install the second data concentrator VED805230-21 and connect it to the rack backplane. Do the installation task AMM-C-23-70-11-400-011-A. Do the log-on test and the surveillance report test with the ground station simulator. Close the avionics bay and record the embodiment.",
+      "effectivity_note": "Applicable to CIRRANE-11 and CIRRANE-13 aircraft from MSN C00137 to MSN C00408 that carry the first datalink router standard. Aircraft that have never had the surveillance antenna land opened must first be inspected under Service Bulletin CRN-23-2007. Aircraft brought to the third router standard are outside the effectivity of this bulletin.",
+      "material_note": "Kit K2370-2004-01 contains the display unit, the satellite data unit, the second concentrator and the antenna feed cable. Lead time is twenty-six weeks. The removed display unit is returned to the supplier under the exchange agreement."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370118700860",
+        "D2370006240541",
+        "VED805230-21",
+        "ELL642868-87",
+        "AGS119203K9"
+      ],
+      "fins": [
+        "218RN",
+        "16RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211",
+        "282"
+      ],
+      "figures": [
+        "FIG-23-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00408"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111225",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "CRN-23-2007",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-C-23-70-11-000-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-23-70-11-400-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-23-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-C-DSC-23-70-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "oceanic clearance",
+      "surveillance",
+      "router upgrade",
+      "satellite data unit",
+      "antenna feed"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Lorencourt",
+      "role": "Customer Services Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-23-2004",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Before the aircraft is planned onto an oceanic track requiring automatic position surveillance, and in any case within thirty-six months of the date of this Service Bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-111225",
+      "manpower": {
+        "elapsed_time_hours": 14,
+        "manhours": 26,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K2370-2004-01",
+        "kit_available_from": "2022-01-20",
+        "parts_required": [
+          {
+            "part_number": "D2370118700860",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "ELL642868-87",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "VED805230-21",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AGS119203K9",
+            "qty": 18,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2370118700860",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Cable ties, self-locking",
+          "Sealant, coaxial connector"
+        ],
+        "tooling": [
+          "Torque wrench 2-20 Nm",
+          "Datalink ground station simulator"
+        ]
+      },
+      "weight_change_kg": 2.9,
+      "accomplishment_steps": 13,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2021-11-30",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2024-02-19",
+          "reason": "Effectivity clarified for aircraft that have never had the surveillance antenna land opened, and the surveillance report test added as a separate acceptance step"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

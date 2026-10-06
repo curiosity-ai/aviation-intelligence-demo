@@ -1,0 +1,355 @@
+[
+  {
+    "doc_id": "PAWO-142240-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Brake Control Unit Replacement on Semiconductor Obsolescence",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-09-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40-11",
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-03-20",
+      "released": "2017-09-14",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the replacement of the brake control unit following withdrawal of the original semiconductor source, covering the functional test, the fault isolation logic, the landing gear bay wiring and the brake assembly part list.",
+    "sections": {
+      "objective": "Establish the full documentation and configuration impact of replacing the brake control unit with a requalified item on a new semiconductor process, and confirm that the replacement can be introduced across the whole fleet in one effectivity block rather than by model. The order was raised by the landing gear systems office once the supplier confirmed a last time buy date, and had to close before the last time buy window so that the spares position could be committed.",
+      "findings_summary": "Four items were confirmed and one blocked release. The unit's built in test emits a different code set, and the published cross channel fault procedure reads a code table that the requalified unit does not produce; on a mixed fleet the same displayed message would lead to two different conclusions depending on which unit is fitted. The functional test task changes in two places, the pin programming step and the channel comparison tolerance, and both belong to the modification rather than to a later documentation cycle. The landing gear bay wiring sheet needs the revised connector keying, which was found through the shared control FIN rather than through any text. The brake assembly parts list carries the attachment hardware the new unit shares with the old one and needs an alternate entry only.",
+      "next_steps": "Release was authorised on condition that the fault isolation procedure is republished with a code table per unit standard and that the functional test task is reissued at the same revision. The wiring sheet was scheduled for the following documentation cycle since the keying change is captured by the connector part number. The spares organisation was asked to hold mixed stock for two years and to mark the two standards as not interchangeable in the same aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126923160",
+        "D3240129015656",
+        "D3240129963184",
+        "AGS146031K9"
+      ],
+      "fins": [
+        "2GM2"
+      ],
+      "drawings": [
+        "D32401274246"
+      ],
+      "software": [
+        "LA7RED5A42D",
+        "LD8R083EA4E"
+      ],
+      "zones": [
+        "734",
+        "754"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142240",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "brake control unit",
+      "obsolescence",
+      "built in test",
+      "functional test"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-142240-01",
+      "subject_mod": "MOD-142240",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2017-09-14",
+      "outcome": "VALIDATED",
+      "raised_date": "2017-03-20",
+      "due_date": "2017-09-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EYIS",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EGAM"
+        ],
+        "estimated_manhours": 150,
+        "spent_manhours": 196
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "32",
+          "92"
+        ],
+        "ata_4d": [
+          "32-40",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3240126923160",
+            "D3240129015656",
+            "AGS146031K9"
+          ],
+          "fins": [
+            "2GM2"
+          ],
+          "drawings": [
+            "D32401274246"
+          ],
+          "zones": [
+            "734",
+            "754"
+          ],
+          "software": [
+            "LA7RED5A42D",
+            "LD8R083EA4E"
+          ]
+        },
+        "similarity_seeds": [
+          "control unit replacement after withdrawal of a semiconductor process",
+          "built in test code set change on a brake system computer"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search maintenance data referencing the brake control unit and its software",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Compare the built in test code sets of the two unit standards",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm connector keying and harness impact in the landing gear bay",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Agree the spares and interchangeability position",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TSM-T-32-40-12-810-801",
+          "doc_type": "TSM",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126923160",
+              "D3240129015656",
+              "AGS146031K9"
+            ],
+            "shared_fins": [
+              "2GM2"
+            ],
+            "shared_zones": [
+              "734",
+              "754"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "shared_software": [
+              "LA7RED5A42D",
+              "LD8R083EA4E"
+            ],
+            "shared_drawings": [
+              "D32401274246"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The cross channel fault procedure isolates the fault from a built in test code table. The requalified unit runs the same operational software over different hardware and does not emit three of the codes the table depends on, so on a mixed fleet the same cockpit message leads to two different conclusions.",
+          "resolution": "Republish the procedure with a code table per unit standard, keyed on the unit part number read at the start of the procedure."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-32-40-12-700-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240126923160",
+              "D3240129015656",
+              "AGS146031K9"
+            ],
+            "shared_fins": [
+              "2GM2"
+            ],
+            "shared_zones": [
+              "734",
+              "754"
+            ],
+            "shared_ata_6d": [
+              "32-40-12",
+              "32-40-11"
+            ],
+            "shared_software": [
+              "LA7RED5A42D",
+              "LD8R083EA4E"
+            ],
+            "shared_drawings": [
+              "D32401274246"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The functional test carries a pin programming step written for the original unit's strapping and a channel comparison tolerance derived from its sampling rate. Both change with the requalified unit, and a test run to the present revision would pass a unit that is incorrectly strapped.",
+          "resolution": "Reissue the task at the same revision as the modification, with the strapping table and the comparison tolerance stated per unit standard."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-T-92-31-12",
+          "doc_type": "WDM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "2GM2"
+            ],
+            "shared_zones": [
+              "734",
+              "754"
+            ],
+            "shared_ata_6d": [],
+            "shared_drawings": [
+              "D32401274246"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Found through the control unit FIN alone. The landing gear bay wiring sheet shows the connector keying of the original unit; the requalified item keys differently on the same shell size, which is exactly the kind of change that is invisible to a text search and unmissable to an entity search.",
+          "resolution": "Update the connector keying on the sheet at the next documentation cycle; the change is already captured by the connector part number so it does not gate the release."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "IPC-T-32-40-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS146031K9"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "734",
+              "754"
+            ],
+            "shared_ata_6d": [
+              "32-40-11"
+            ],
+            "shared_drawings": [
+              "D32401274246"
+            ],
+            "similarity_note": "Both name the same attachment hardware and the same brake and hydraulic interface area, in the same words."
+          },
+          "rationale": "The brake assembly figure carries the unit attachment hardware, which is unchanged. Only an alternate entry for the requalified unit is needed, not a new assembly.",
+          "resolution": "Add the requalified unit as an alternate with its own effectivity note."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "AMM-T-32-40-11-000-001-A",
+          "doc_type": "AMM",
+          "reason": "Shares the wheel well zones, the brake installation drawing and two part numbers, and sits at the top of an entity search of the brake system. It is the mechanical removal of the brake assembly, and nothing in it depends on which control unit standard is fitted."
+        }
+      ],
+      "conclusion": "Issued 2017-09-14. One blocking software conflict and three documentation impacts. Cleared to proceed with the fault isolation procedure and the functional test reissued alongside the modification.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

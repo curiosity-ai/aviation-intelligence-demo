@@ -1,0 +1,188 @@
+[
+  {
+    "doc_id": "CRN-30-1007",
+    "doc_type": "SB",
+    "title": "Ice and Rain Protection — Probe Heat Computer — Per-Element Monitoring Harness and Software",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-06-07",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00286"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-111145"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2018-12-20",
+      "released": "2019-06-07",
+      "revised": null,
+      "effective": "2019-06-28"
+    },
+    "abstract": "Installation of the per-element sense harness and the first monitoring software standard on delivered aircraft, closing the case where a failed heating element in parallel with a healthy one was not declared.",
+    "sections": {
+      "planning_reason": "Two early-build aircraft were found with an open circuit heating element on a static port that the monitoring logic had not declared, because the original threshold band was wide enough to accept a failed element in parallel with a healthy one. The finding was raised by an operator after an ice accretion event on the ground and is treated as a safety item. Every delivered aircraft is exposed until the sense harness gives the computer a per-element measurement.",
+      "description": "The supply hose assembly is replaced by an item carrying an additional core so that each heating element has its own sense return, the computer accumulator is re-mounted to make room for the larger backshell, and the computer is loaded with the first monitoring software standard.",
+      "accomplishment_summary": "De-energise the aircraft and apply the electrical safety precautions. Open the avionics compartment access in zone 162 and the flight compartment floor panels in zone 211. Remove the supply hose assembly D3030112295450 and install the item with the additional core, routing it clear of the bleed duct as shown in the accomplishment instructions. Re-mount the computer accumulator D3030112916343 to the aft position to clear the larger backshell. Terminate the additional cores at the computer connector and do the continuity and insulation resistance checks. Load the monitoring software LB8CAD816CB into the probe heat computer through the maintenance port. Do the probe heat system test and confirm that each element reports individually. Confirm the probe heat regulator 4618WX and the system switch 386WX5 read correctly. Install the access panels and record the embodiment.",
+      "effectivity_note": "Applicable to aircraft MSN C00001 through C00286 that are pre modification standard. Aircraft delivered from MSN C00291 onward carry the harness and the software from build. Loading the software without the harness is not permitted because the logic expects a per-element return.",
+      "material_note": "Kit K3030-1007-01 contains the hose assembly, the backshell, the accumulator mounting hardware and the loadable part media. Lead time is twenty weeks. The removed hose assembly is not returned."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030112295450",
+        "D3030112916343"
+      ],
+      "fins": [
+        "4618WX",
+        "386WX5"
+      ],
+      "drawings": [
+        "D30301165123"
+      ],
+      "software": [
+        "LB8CAD816CB"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00286",
+        "C00291"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111145",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-700-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "probe heat",
+      "per-element sense",
+      "open circuit",
+      "monitoring software",
+      "sense harness"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-30-1007",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Within 18 months after the date of this Service Bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "SAFETY",
+      "embodied_mod": "MOD-111145",
+      "manpower": {
+        "elapsed_time_hours": 20,
+        "manhours": 36,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K3030-1007-01",
+        "kit_available_from": "2019-09-16",
+        "parts_required": [
+          {
+            "part_number": "D3030112295450",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Cable ties, self-locking",
+          "Contact lubricant, electrical"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Insulation resistance tester",
+          "Crimp tool set 98D30301-007"
+        ]
+      },
+      "weight_change_kg": 0.7,
+      "accomplishment_steps": 10,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2019-06-07",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

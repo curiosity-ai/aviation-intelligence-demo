@@ -1,0 +1,261 @@
+[
+  {
+    "doc_id": "PAWO-149230-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Isolated Rack for the Flight Guidance Computers",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-10",
+      "ata_6d": "22-10-11",
+      "title": "Auto Flight — Flight Guidance Computer"
+    },
+    "secondary_ata": [
+      "22-80-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-16",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the isolated rack standard, opened to establish whether the contact resistance trend can be used as a fleet-wide condition indicator and validated with a recording change.",
+    "sections": {
+      "objective": "Establish whether the contact resistance measurement introduced with the isolated rack can be used as a condition indicator across the fleet, and what has to change in the recording so that the trend is usable.",
+      "findings_summary": "The proposal was validated. The measurement is already taken at every rack access and the acceptance limit is defined, but the readings are recorded as a pass or fail rather than as values, which destroys the trend. Operators who kept their own records were able to show the fretting developing over three visits; operators who followed the task only had nothing. The task change required is small: record the value against the contact identifier. Two further items were confirmed. The instruction not to clean a contact that exceeds the limit is essential and is correctly placed, because cleaning removes the evidence. The service loop caution is the other thing that makes the measurement comparable between visits and it is already present.",
+      "next_steps": "Amend the task to record values against contact identifiers rather than a pass or fail result. Issue guidance on the trend interpretation with the amendment. Confirm that the operator reporting route can accept the value set."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2210112806118",
+        "D2210114091568",
+        "ESC385904-77"
+      ],
+      "fins": [
+        "7CC",
+        "872CE",
+        "897CC"
+      ],
+      "drawings": [
+        "D22801194445"
+      ],
+      "software": [
+        "LG7R957079B"
+      ],
+      "zones": [
+        "124",
+        "223",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149230",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "contact resistance",
+      "condition indicator",
+      "trend recording",
+      "historical"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149230-01",
+      "subject_mod": "MOD-149230",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-04-15",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-02-16",
+      "due_date": "2026-04-24",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 95,
+        "spent_manhours": 112
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "22",
+          "31"
+        ],
+        "ata_4d": [
+          "22-10",
+          "31-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM"
+        ],
+        "msn_range": {
+          "from": "T00027",
+          "to": "T00218"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2210112806118",
+            "D2210114091568"
+          ],
+          "fins": [
+            "7CC",
+            "872CE"
+          ],
+          "drawings": [
+            "D22801194445"
+          ],
+          "zones": [
+            "124"
+          ],
+          "software": [
+            "LG7R957079B"
+          ]
+        },
+        "similarity_seeds": [
+          "intermittent behaviour from fretting at a rack connector",
+          "measurement recorded as pass or fail rather than as a value"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Review how the contact resistance readings are recorded",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Compare operator-held records against the task output",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-T-22-10-11-700-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2210112806118",
+              "D2210114091568"
+            ],
+            "shared_fins": [
+              "7CC",
+              "872CE",
+              "897CC"
+            ],
+            "shared_zones": [
+              "124",
+              "223"
+            ],
+            "shared_ata_6d": [
+              "22-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The task defines the measurement and the limit but records only a pass or fail. The trend, which is what makes the measurement useful, is lost at every visit.",
+          "resolution": "Amend the task to record values against contact identifiers."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-22-1024",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2210112806118",
+              "ESC385904-77"
+            ],
+            "shared_fins": [
+              "897CC"
+            ],
+            "shared_zones": [
+              "263"
+            ],
+            "shared_ata_6d": [
+              "22-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin instructs the technician to record the readings as the new baseline after conversion, which is exactly the value set the amended task would then continue. The two are consistent.",
+          "resolution": "No change to the bulletin."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Condition indicator proposal validated with a task recording amendment.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

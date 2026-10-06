@@ -1,0 +1,386 @@
+[
+  {
+    "doc_id": "PAWO-159460-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Wing Tank Access Panel Retained Face Seal Closure Standard",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-26",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-10",
+      "ata_6d": "28-10-13",
+      "title": "Storage — Tank Access Panels"
+    },
+    "secondary_ata": [
+      "57-10",
+      "20-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z03884",
+          "to": "Z09624"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "TSL",
+        "BCA",
+        "ZCT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-26",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the retained face seal closure for wing tank access panels, covering the tank entry work it must share a visit with, the leading edge wiring supported off the panel land and the sealing standard it depends on.",
+    "sections": {
+      "objective": "Establish whether the panel groove can be machined inside a normal tank entry window or whether an exchange pool is required, what else needs the same tank open at the same time, and whether the reduced sealant bead disturbs the lightning protection assessment for the tank boundary.",
+      "scope_note": "The search covers ATA 28-10 as the primary chapter, 57-10 because the panel land is part of the wing lower cover, and 20-40 because the closure depends on the sealing and bonding standard practice. ATA 92-51 was included because the leading edge harness is supported off the panel land at four stations. ATA 30 anti-ice was searched and excluded: the piccolo ducting is forward of the front spar and is not disturbed by a lower surface panel.",
+      "method_note": "Entity linking was seeded from the four part numbers, the single FIN, the drawing and the three zones on the candidate. Semantic similarity used two seed phrases about a wet sealed joint that weeps after every entry and about a machined groove carrying a retained elastomeric seal. The interfay sealing finding is the clearest semantic-only result of the round: the released fuselage joint work describes the same physical idea in completely different language and shares nothing with the candidate in the entity graph.",
+      "findings_summary": "Six items are confirmed and one blocks. The blocking item is concurrency rather than conflict: the centre tank boost pump work needs the same tanks open, uses the same purge and attendant arrangement, and an operator who does the two separately pays for the tank entry twice and closes the same panels twice. The interfay sealing standard released for fuselage lap joints is the finding the round is most pleased with; it was reached by similarity alone and it matters, because the surface preparation it defines is the closest existing precedent for the groove face and its acceptance criteria could be reused rather than re-derived. The leading edge harness support is an entity hit through a shared zone and is real: the harness is attached to the panel land at four stations and must be transferred when a panel is exchanged. The remaining findings are the maintenance content that carries the closure standard.",
+      "next_steps": "Decide between in-situ machining and an exchange panel pool; this governs whether the change can be embodied at a line station. Coordinate the campaign with the centre tank boost pump programme so that a tank is opened once. Ask materials and processes whether the interfay sealing acceptance criteria can be reused for the groove face. Confirm the lightning protection position on the reduced sealant bead."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2810138674936",
+        "ROD517260-78",
+        "AGS540148-51",
+        "BE49012-14"
+      ],
+      "fins": [
+        "44QT"
+      ],
+      "drawings": [
+        "D28101115502"
+      ],
+      "software": [],
+      "zones": [
+        "593",
+        "692",
+        "595"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-159460",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-Z-260463",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "retained face seal",
+      "tank entry concurrency",
+      "harness support transfer",
+      "lightning protection"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Kingsmoor",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-159460-01",
+      "subject_mod": "MOD-159460",
+      "source_io": "IO-Z-260463",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-26",
+      "due_date": "2026-08-21",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Kingsmoor",
+        "contributing_departments": [
+          "EDSA",
+          "ELSC"
+        ],
+        "estimated_manhours": 175,
+        "spent_manhours": 88
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "28",
+          "57",
+          "20",
+          "92"
+        ],
+        "ata_4d": [
+          "28-10",
+          "28-20",
+          "57-10",
+          "20-40",
+          "92-51"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "Z03884",
+          "to": "Z09624"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2810138674936",
+            "ROD517260-78",
+            "AGS540148-51",
+            "BE49012-14"
+          ],
+          "fins": [
+            "44QT"
+          ],
+          "drawings": [
+            "D28101115502"
+          ],
+          "zones": [
+            "593",
+            "692",
+            "595"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "wet sealed joint that weeps within weeks of every closure",
+          "machined groove carrying a retained elastomeric seal in place of a sealant bead"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Decide between in-situ machining and an exchange panel pool",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T02",
+          "title": "Identify work that needs the same tank open",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the leading edge harness support at the panel land",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Test whether the interfay sealing acceptance criteria can be reused",
+          "method": "SME_INTERVIEW",
+          "owner": "EDSA",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-154566",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "BLOCKING",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Reached by following the tank entry access edges rather than by any shared identifier. The two documents share no part, no FIN and no zone, and their texts read as different subjects."
+          },
+          "rationale": "The centre tank boost pump work needs the same tanks drained, purged and attended. An operator embodying the two separately pays for the tank entry twice and closes the same panels twice, and the second closure would be to a different standard from the first.",
+          "resolution": "Declare the two concurrent for planning purposes and issue a combined tank entry work package."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-150214",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "One document is about interfay sealing and corrosion protection on a fuselage lap joint; the other is about a machined groove and a retained seal on a wing panel. They describe the same physical idea, keeping fluid out of a faying surface, in entirely different vocabulary and share no identifier at all."
+          },
+          "rationale": "The interfay sealing standard released for fuselage joints defines a surface preparation and an acceptance criterion for exactly the kind of face the new groove presents. Re-deriving them for the wing panel would repeat work that has already been substantiated.",
+          "resolution": "Ask materials and processes whether the existing acceptance criteria can be adopted for the groove face."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-Z-92-51-11",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "593"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The leading edge harness crosses the tank access panel line at four stations and its support brackets are attached to the panel land. The sheet requires the support to be transferred to a replacement panel, which an exchange pool would make routine and a machining operation would not.",
+          "resolution": "Include the support transfer in the work instruction and decide it together with the exchange pool question."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-Z-28-10-13-400-044-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ROD517260-78",
+              "D2810138674936",
+              "BE49012-14",
+              "AGS540148-51"
+            ],
+            "shared_fins": [
+              "44QT"
+            ],
+            "shared_zones": [
+              "593",
+              "692",
+              "595"
+            ],
+            "shared_ata_6d": [
+              "28-10-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task already carries both closure standards and a caution against applying sealant into the groove, but its single torque sequence and its cure hold are written for the wet sealed case as the default. The candidate inverts that.",
+          "resolution": "Re-issue the task with the retained seal as the primary case and the wet sealed closure as the alternate."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "IPC-Z-28-10-13-FIG-19",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2810138674936",
+              "AGS540148-51"
+            ],
+            "shared_fins": [
+              "44QT"
+            ],
+            "shared_zones": [
+              "692"
+            ],
+            "shared_ata_6d": [
+              "28-10-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries the protective sleeve with a post-modification effectivity, which means the parts data anticipates the change but the panel itself has no item for the machined groove variant.",
+          "resolution": "Add the grooved panel as an alternate item once the machining source is decided."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "SRM-Z-57-10-12-913",
+          "doc_type": "SRM",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "692"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The wing lower cover repair exists mostly because of corrosion caused by weeping panels, and it works on the land immediately around the cut-out. An aircraft carrying that repair has a modified land profile that the groove machining has to respect.",
+          "resolution": "Add a check for an existing lower cover repair to the pre-embodiment survey."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-28-1163",
+          "doc_type": "SB",
+          "reason": "Same chapter and the same fuel system vocabulary about bonding and canisters, and it is genuinely the concurrency partner recorded as F01, but the bulletin itself is not impacted: its accomplishment instructions, its kit and its bonding checks are unaffected by a change to the panel closure standard."
+        },
+        {
+          "doc_id": "AMM-Z-28-10-13-000-044-A",
+          "doc_type": "AMM",
+          "reason": "Returned by every entity seed because it is the removal task for the same panels, but it is deliberately written to record which closure standard was found rather than to prescribe one, so it needs no change when a second standard appears."
+        }
+      ],
+      "conclusion": "Not yet issued. The concurrency with the centre tank work is the blocking planning item; the sealing precedent found by similarity is the finding most likely to save the programme time.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

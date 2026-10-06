@@ -1,0 +1,259 @@
+[
+  {
+    "doc_id": "PAWO-146680-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Datalink Router Relocation and Forced Cooling",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-70-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-13",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the datalink router relocation, carried out to support an effectivity extension to the aircraft delivered after the production cut-in that were later found to carry a different rack loading.",
+    "sections": {
+      "objective": "Establish whether the relocation standard can be extended to a small group of aircraft delivered after the production cut-in whose rack loading differs from the assumption made at release, and whether the shelf temperature sensor provision exists on those aircraft.",
+      "findings_summary": "The extension was validated. Three items were confirmed. The retrofit bulletin can be applied without change to the group concerned, because the ventilated tray and the duct fit the same shelf and the difference in rack loading is upstream of the shelf face. The shelf temperature sensor input exists on all aircraft in the group; it had been provisioned at build and left unused, which was not visible from the configuration record and required a physical check on one aircraft. The troubleshooting procedure needed a small addition so that a sensor reading is not treated as absent on an aircraft where it was never connected. No conflict was found with the cabin connectivity installation, which shares the aerial but not the shelf.",
+      "next_steps": "Extend the bulletin effectivity to the identified group with no content change. Publish the troubleshooting addition. Record the provisioned but unconnected sensor input in the configuration data so that the next analysis does not need a physical check."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370115362436",
+        "D2370116071238",
+        "HOD93837-98"
+      ],
+      "fins": [
+        "295RN",
+        "5RC"
+      ],
+      "drawings": [
+        "D23701264936"
+      ],
+      "software": [],
+      "zones": [
+        "163",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146680",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "datalink router",
+      "effectivity extension",
+      "shelf sensor",
+      "historical"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-146680-01",
+      "subject_mod": "MOD-146680",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-27",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-04-13",
+      "due_date": "2026-06-05",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 84
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "23",
+          "46"
+        ],
+        "ata_4d": [
+          "23-70",
+          "46-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00020",
+          "to": "T00198"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2370115362436",
+            "D2370116071238"
+          ],
+          "fins": [
+            "295RN",
+            "5RC"
+          ],
+          "drawings": [
+            "D23701264936"
+          ],
+          "zones": [
+            "163"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "equipment over-temperature in an unventilated rack position",
+          "cooling duct added at a shelf face"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Check the bulletin content against the differing rack loading",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm the shelf temperature sensor input on the group",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TTN-23-1014",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370115362436",
+              "D2370116071238"
+            ],
+            "shared_fins": [
+              "295RN"
+            ],
+            "shared_zones": [
+              "163"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin effectivity stops at the production cut-in, which excluded a group of aircraft that were later found to need it. The exclusion was correct at release and became wrong when the rack loading difference was discovered.",
+          "resolution": "Extend the effectivity to the identified group. No content change is required."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-T-23-70-11-810-807",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370116071238"
+            ],
+            "shared_fins": [
+              "5RC"
+            ],
+            "shared_zones": [
+              "273"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure reads the shelf temperature sensor and treats an absent reading as a fault. On an aircraft where the input was provisioned but never connected, that produces a false path.",
+          "resolution": "Add a step to establish whether the sensor was ever connected before the reading is used."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-147210",
+          "doc_type": "MOD",
+          "reason": "Surfaces on a semantic search for equipment cooling in a confined installation and shares the flight deck compartment in the search scope, but it concerns a display on a console arm and has no rack, no shelf and no shared identifier with the router installation."
+        }
+      ],
+      "conclusion": "Effectivity extension validated with no content change to the bulletin.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

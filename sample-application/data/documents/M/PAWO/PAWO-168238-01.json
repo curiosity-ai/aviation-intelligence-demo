@@ -1,0 +1,256 @@
+[
+  {
+    "doc_id": "PAWO-168238-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Closed) — Thrust Lever Friction Seal, Lubrication Interval Extension",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-10",
+      "ata_6d": "76-10-11",
+      "title": "Power Control — Thrust Lever Assembly"
+    },
+    "secondary_ata": [
+      "22-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-04",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis supporting the doubled lubrication interval on aircraft carrying the compatible friction seal, validated on twelve months of breakout force data from three operators.",
+    "sections": {
+      "objective": "Establish whether the lubrication interval could be doubled from twelve to twenty-four months on aircraft carrying the compatible friction seal and landed quadrant clamp, as assumed when the modification was released.",
+      "findings_summary": "Three items were confirmed and none blocking. Breakout force measurements from three operators over twelve months showed modified levers holding between seventeen and twenty newtons with no upward trend, against a delivered-seal population that rose measurably over the same period; that data is what supported the interval. The inspection task already reads the seal standard before comparing against the acceptance band, so it needed only an interval table entry rather than a rewrite. The autothrust troubleshooting entry sends the engineer to the breakout force check early, which becomes more important with a longer interval because the check is now the main opportunity to catch a drifting lever. One operator with mixed standards across its fleet asked for a single interval and was told no.",
+      "next_steps": "Interval extension approved for modified aircraft only. The mixed-fleet operator was given a per-aircraft interval table."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7610119485354",
+        "D7610117147370"
+      ],
+      "fins": [
+        "238EC",
+        "2EC"
+      ],
+      "drawings": [
+        "D76100071236"
+      ],
+      "software": [],
+      "zones": [
+        "482",
+        "452"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168238",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "closed pre-analysis",
+      "lubrication interval",
+      "breakout force",
+      "seal compatibility",
+      "mixed fleet"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Port-Rivage",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-168238-01",
+      "subject_mod": "MOD-168238",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-31",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-05-04",
+      "due_date": "2026-08-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Port-Rivage",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 85,
+        "spent_manhours": 74
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "76",
+          "22"
+        ],
+        "ata_4d": [
+          "76-10",
+          "22-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00475"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D7610119485354",
+            "D7610117147370"
+          ],
+          "fins": [
+            "238EC",
+            "2EC"
+          ],
+          "drawings": [
+            "D76100071236"
+          ],
+          "zones": [
+            "482",
+            "452"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "an interval doubled on the strength of one year of measurements"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Collate breakout force data from three operators",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the inspection task acceptance bands by seal standard",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-M-76-10-11-200-047-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "76-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The interval lives in the task rather than in the modification, and the task needed an interval table keyed to the seal standard rather than a single figure.",
+          "resolution": "Add the interval table to the task and reissue."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-76-1005",
+          "doc_type": "SB",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "76-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin requires both levers to be embodied together, and the interval only applies to an aircraft with both at the new standard.",
+          "resolution": "State in the task that the extended interval applies only when both levers are modified."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-M-22-30-11-812-803",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both documents are about lever feel and the breakout force check, one as a maintenance action and one as a fault isolation step."
+          },
+          "rationale": "With a longer interval the breakout force check becomes the main opportunity to catch a drifting lever, which raises the importance of the step in the troubleshooting procedure.",
+          "resolution": "Reference the interval table from the troubleshooting procedure."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed. Interval extension approved for modified aircraft only.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

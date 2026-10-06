@@ -1,0 +1,180 @@
+[
+  {
+    "doc_id": "MOD-139380",
+    "doc_type": "MOD",
+    "title": "Battery Charge Limiter and Essential Direct Current Load Shedding for Extended Diversion",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-30",
+      "ata_6d": "24-30-12",
+      "title": "DC Generation — Battery Charge Limiter"
+    },
+    "secondary_ata": [
+      "24-60",
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "AUN",
+        "GBA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-130310"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-05-18",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "A charge limiter with a leakage cut-off and an automatic shed of three non-essential loads, raising the demonstrated essential network endurance so that a longer diversion allowance can be planned without an operational restriction.",
+    "sections": {
+      "reason": "An operator moving to a longer diversion allowance found the battery to be the limiting item and ran a monitored ground trial that came out below the planning figure by a margin nobody could explain. Shop examination of both aircraft found the charge limiter passing a trickle current into a heated element that the load analysis assumes is shed, which alone accounts for about eleven minutes of the shortfall. A second contributor is three loads that remain live after the generators are lost and that nobody has ever needed in that condition. Together they are worth more than the margin the operator is short of.",
+      "description": "The charge limiter D2430126844974 is replaced by an item with a leakage cut-off that isolates the heated element when the charge current falls below a threshold, and the contactor IB898151-61 in the forward position is replaced by a latching type so that the shed state survives a transient. A shed relay is added on the direct current bus bar ground stud assembly D2460112077642 to drop the three identified loads automatically when both generator channels are lost. Contactor 2389GX and connector 70GX are refitted at the limiter, and relay 360XU on the left-hand bus is re-strapped. Work is in the forward cargo compartment equipment area in zone 115, at the right-hand outboard area in zone 122 and at the wing tank access panel position in zone 592 where the shed relay feed is picked up. Detail is on drawing D24301249210.",
+      "effects": "Estimated mass increase of 1.3 kg. The point of the change is the load, not the mass: essential network draw after generator loss falls by about a hundred and forty volt-amperes, which the analysis converts to nineteen additional minutes of demonstrated endurance. The limiter is not interchangeable with the original because the cut-off changes the charge law and the capacity check acceptance with it. A new dispatch condition is needed for the shed relay. The battery capacity check keeps its interval but its acceptance table is reissued.",
+      "embodiment_note": "Production cut-in is proposed after freeze, with retrofit through a new bulletin at a C-check, about twenty-two manhours including the shed relay feed. Aircraft must already carry the bus bar and contactor standard.",
+      "open_points": "Pre-analysis must confirm that the required earlier bus bar standard is present on every aircraft in the target effectivity, establish what the automatic shed does to the indicating and recording channels that share the same loads, decide whether the endurance claim needs a flight demonstration or can be substantiated by analysis, and check that the shed relay position in the forward cargo area does not sit inside an area already committed to structural work."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2430126844974",
+        "IB898151-61",
+        "D2460112077642"
+      ],
+      "fins": [
+        "2389GX",
+        "70GX",
+        "360XU"
+      ],
+      "drawings": [
+        "D24301249210"
+      ],
+      "software": [],
+      "zones": [
+        "115",
+        "122",
+        "592"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00184",
+        "S01705"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-S-260561",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-130310",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "charge limiter",
+      "load shedding",
+      "essential network",
+      "diversion time",
+      "battery endurance"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 139380,
+      "mod_class": "MAJOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1351",
+          "CS 25.1353",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.3,
+      "balance_impact": "Forward of the reference datum; negligible",
+      "electrical_load_impact_va": -140,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D2460112077642"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2430126844974",
+        "IB898151-61"
+      ],
+      "fins_affected": [
+        "2389GX",
+        "360XU"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 130,
+      "estimated_cost_keur": 1050,
+      "lead_time_weeks": 46,
+      "production_impact": "Cut-in proposed after design freeze",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

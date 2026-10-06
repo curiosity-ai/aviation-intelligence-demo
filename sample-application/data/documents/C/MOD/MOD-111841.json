@@ -1,0 +1,375 @@
+[
+  {
+    "doc_id": "MOD-111841",
+    "doc_type": "MOD",
+    "title": "Wireless Offload and Extended Store for the Aircraft Condition Monitoring Function",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-05",
+      "reason": "Original issue of the wireless offload and extended store proposal dossier.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-40",
+      "ata_6d": "46-40-12",
+      "title": "Maintenance Information — Data Server Module"
+    },
+    "secondary_ata": [
+      "45-20",
+      "44-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-03-02",
+      "released": null,
+      "revised": "2026-03-05",
+      "effective": null
+    },
+    "abstract": "An enlarged condition monitoring store and an automatic ground offload path, so that health data leaves the aircraft without an engineer at the gate and survives a week away from base.",
+    "sections": {
+      "reason": "Operators recover only about half of the condition monitoring data the aircraft produces, because the current route needs a technician with a portable loader at the gate and a turnaround short enough to make that impossible on most rotations. One operator has quantified the loss at 45 per cent of available records across a thirty-one aircraft fleet, and reports that the store overwrites after four days away from base. The predictive maintenance programmes that the aircraft was sold with cannot work on partial data, and two operators have already installed non-standard third-party equipment to work around it.",
+      "description": "The data server module gains a solid-state store of eight times the present capacity and an offload manager that pushes closed records to the operator's ground system whenever the aircraft is on the ground and inside coverage. The server module D4640127537278 is replaced, the maintenance interface unit D4640005187792 is retained but re-strapped for the higher transfer rate, and a low-profile antenna BRD874218-55 is added on the upper fuselage centre line. The rack mounting tray D4210120617730 is re-used, so the avionics rack cut-out is unchanged. The condition monitoring application LC6CB8536A6 and its test load LF2CDCC2FCB are both re-issued to drive the offload manager. The server computer 1923IU keeps its identifier. Revised detail is on drawing D46401233203, and the installation is in the avionics compartment, zones 164 and 173.",
+      "effects": "Mass increase of 2.7 kg per aircraft including the antenna and its doubler. Electrical load rises by 110 VA on the ground service bus only, because the offload manager runs when the aircraft is on the ground. The module is not interchangeable with the current standard because the store partition table differs and the offload manager expects the larger store. No dispatch impact and no minimum equipment list change. Maintenance manual content for the data offload check has to be re-issued and the trouble shooting procedure for the server module changes because the manual loader path becomes a fall-back rather than the primary route.",
+      "embodiment_note": "Proposed as a production cut-in with a retrofit path. Retrofit is a line-level task except for the antenna, which needs a fuselage penetration and is therefore scheduled with an A-check. Kits are supplied per aircraft and include the antenna doubler.",
+      "open_points": "Pre-analysis must establish whether the avionics rack bay is already committed to another change, whether the additional ground-bus load is compatible with the current external power case, whether the extended store duplicates recording capability that the flight data recorder standard already provides, and whether the antenna position clears the existing connectivity installation."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4640127537278",
+        "D4640005187792",
+        "BRD874218-55",
+        "D4210120617730"
+      ],
+      "fins": [
+        "1923IU"
+      ],
+      "drawings": [
+        "D46401233203"
+      ],
+      "software": [
+        "LC6CB8536A6",
+        "LF2CDCC2FCB"
+      ],
+      "zones": [
+        "164",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00102",
+        "C00126"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-260142",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "AMM-C-46-40-12-200-005-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-46-40-12-812-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "condition monitoring",
+      "wireless offload",
+      "data server module",
+      "store capacity",
+      "ground transfer"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Avionics Design"
+    },
+    "type_data": {
+      "mod_number": 111841,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.7,
+      "balance_impact": "Forward avionics compartment, CG shift below 0.01 % MAC",
+      "electrical_load_impact_va": 110,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "BRD874218-55"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4640127537278",
+        "D4640005187792"
+      ],
+      "fins_affected": [
+        "1923IU"
+      ],
+      "software_affected": [
+        "LC6CB8536A6",
+        "LF2CDCC2FCB"
+      ],
+      "estimated_manhours": 120,
+      "estimated_cost_keur": 980,
+      "lead_time_weeks": 48,
+      "production_impact": "Cut-in proposed at the next avionics standard change",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-111841",
+    "doc_type": "MOD",
+    "title": "Wireless Offload and Extended Store for the Aircraft Condition Monitoring Function",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-16",
+      "reason": "Acquisition of the shared parameters taken from the recorder frame, with the two parameter definitions kept apart.",
+      "raised_by_pawo": "PAWO-111196-01",
+      "raised_by_finding": "F01",
+      "finding_type": "OVERLAPPING_SCOPE"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-40",
+      "ata_6d": "46-40-12",
+      "title": "Maintenance Information — Data Server Module"
+    },
+    "secondary_ata": [
+      "45-20",
+      "44-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-03-02",
+      "released": null,
+      "revised": "2026-07-16",
+      "effective": null
+    },
+    "abstract": "An enlarged condition monitoring store and an automatic ground offload path, so that health data leaves the aircraft without an engineer at the gate and survives a week away from base.",
+    "sections": {
+      "reason": "Operators recover only about half of the condition monitoring data the aircraft produces, because the current route needs a technician with a portable loader at the gate and a turnaround short enough to make that impossible on most rotations. One operator has quantified the loss at 45 per cent of available records across a thirty-one aircraft fleet, and reports that the store overwrites after four days away from base. The predictive maintenance programmes that the aircraft was sold with cannot work on partial data, and two operators have already installed non-standard third-party equipment to work around it.",
+      "description": "The data server module gains a solid-state store of eight times the present capacity and an offload manager that pushes closed records to the operator's ground system whenever the aircraft is on the ground and inside coverage. Nineteen of the parameters the monitoring function needs are already acquired for the mandatory recorder frame, and this change takes them from that acquisition rather than adding a second set of sensing. The two definitions stay separate: the recorder frame definition is fixed by the operational rule and cannot be re-scaled or re-rated for a maintenance purpose, so the monitoring function subscribes to the acquired value and applies its own scaling and its own sample rate downstream. The server module D4640127537278 is replaced, the maintenance interface unit D4640005187792 is retained but re-strapped for the higher transfer rate, and a low-profile antenna BRD874218-55 is added on the upper fuselage centre line. The rack mounting tray D4210120617730 is re-used, so the avionics rack cut-out is unchanged. The condition monitoring application LC6CB8536A6 and its test load LF2CDCC2FCB are both re-issued to drive the offload manager and the subscription. The server computer 1923IU keeps its identifier. Revised detail is on drawing D46401233203, and the installation is in the avionics compartment, zones 164 and 173.",
+      "effects": "Mass increase of 2.7 kg per aircraft including the antenna and its doubler, and 0.9 kg less than the first estimate because nineteen parameters no longer need their own sensing. Electrical load rises by 110 VA on the ground service bus only, because the offload manager runs when the aircraft is on the ground. The module is not interchangeable with the current standard because the store partition table differs and the offload manager expects the larger store. Sharing the acquisition means that any change to the mandatory recorder frame has to be assessed against this function as well, which is a coupling the design did not have before and which the configuration control has to carry. No dispatch impact and no minimum equipment list change. Maintenance manual content for the data offload check has to be re-issued and the trouble shooting procedure for the server module changes because the manual loader path becomes a fall-back rather than the primary route.",
+      "embodiment_note": "Proposed as a production cut-in with a retrofit path. Retrofit is a line-level task except for the antenna, which needs a fuselage penetration and is therefore scheduled with an A-check. Kits are supplied per aircraft and include the antenna doubler.",
+      "open_points": "Pre-analysis has settled the acquisition question: the parameter list and the sample rates of the mandatory recorder frame have been issued to this work order and the nineteen shared parameters are subscribed rather than re-sensed. What remains is whether the avionics rack bay is already committed to another change, whether the additional ground-bus load is compatible with the current external power case, and whether the antenna position clears the existing connectivity installation."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4640127537278",
+        "D4640005187792",
+        "BRD874218-55",
+        "D4210120617730"
+      ],
+      "fins": [
+        "1923IU"
+      ],
+      "drawings": [
+        "D46401233203"
+      ],
+      "software": [
+        "LC6CB8536A6",
+        "LF2CDCC2FCB"
+      ],
+      "zones": [
+        "164",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00102",
+        "C00126"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-260142",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-111196",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-C-46-40-12-200-005-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-46-40-12-812-802",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "condition monitoring",
+      "wireless offload",
+      "shared acquisition",
+      "parameter definition",
+      "store capacity"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Avionics Design"
+    },
+    "type_data": {
+      "mod_number": 111841,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.7,
+      "balance_impact": "Forward avionics compartment, CG shift below 0.01 % MAC",
+      "electrical_load_impact_va": 110,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "BRD874218-55"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4640127537278",
+        "D4640005187792"
+      ],
+      "fins_affected": [
+        "1923IU"
+      ],
+      "software_affected": [
+        "LC6CB8536A6",
+        "LF2CDCC2FCB"
+      ],
+      "estimated_manhours": 120,
+      "estimated_cost_keur": 980,
+      "lead_time_weeks": 48,
+      "production_impact": "Cut-in proposed at the next avionics standard change",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

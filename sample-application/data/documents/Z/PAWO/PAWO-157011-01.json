@@ -1,0 +1,255 @@
+[
+  {
+    "doc_id": "PAWO-157011-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Flight Management Computer Standard L23 with Required Navigation Performance Capability",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-09-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CANCELLED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-11",
+      "title": "Flight Management Computing — Flight Management Computer"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-01-16",
+      "released": "2023-09-06",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "First-round pre-analysis of the L23 computer standard, stopped without a position when the supplier moved the baseline the analysis had been written against and the dependency work had to start again.",
+    "sections": {
+      "objective": "Assess the introduction of the L23 computer standard and the navigation performance capability that comes with it, against the position sources and the display content already installed on the Evo fleet. The order was raised early, before the supplier baseline was frozen, on the argument that the dependency work could be done in parallel with the supplier's own definition. That argument is what the round eventually failed on.",
+      "findings_summary": "Two items were confirmed before the round was stopped. The capability depends on a position source with containment monitoring, which on this fleet means the multi-mode receiver installation; the dependency is satisfied but had to be stated, because at the time the order was raised the installation was not yet universal across the delivered population. The receiver application load bulletin was also identified as a constraint: the capability reads the receiver output through an application standard that the bulletin controls, and a computer standard that assumes one application behaviour cannot be released against a fleet where the bulletin has been embodied unevenly. Work on the manual and display content had not started when the supplier issued a revised baseline that changed the interface the two findings were written against, and the round was stopped rather than re-worked in place.",
+      "next_steps": "Stop the work order and close it without a position. Record the two confirmed dependencies in the modification dossier so that the second round does not repeat them, and do not re-open pre-analysis until the supplier baseline is frozen and the interface document is issued. Advise the programme that the parallel-working argument that justified raising the order early did not hold and should not be used again on this dossier."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2280112713549",
+        "D2280114354601",
+        "D2280006212108"
+      ],
+      "fins": [
+        "2854CE2",
+        "4581CC",
+        "49CE"
+      ],
+      "drawings": [
+        "D22801149726"
+      ],
+      "software": [
+        "LB3NAB376EB"
+      ],
+      "zones": [
+        "151",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-157011",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "flight management computer",
+      "supplier baseline",
+      "position source",
+      "stopped work order"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-157011-01",
+      "subject_mod": "MOD-157011",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2023-09-06",
+      "outcome": "REJECTED",
+      "raised_date": "2023-01-16",
+      "due_date": "2023-10-20",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 130,
+        "spent_manhours": 39
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "22",
+          "34"
+        ],
+        "ata_4d": [
+          "22-80",
+          "34-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D2280112713549",
+            "D2280006212108"
+          ],
+          "fins": [
+            "2854CE2",
+            "49CE"
+          ],
+          "drawings": [
+            "D22801149726"
+          ],
+          "zones": [
+            "151",
+            "263"
+          ],
+          "software": [
+            "LB3NAB376EB"
+          ]
+        },
+        "similarity_seeds": [
+          "navigation performance capability dependent on a position source",
+          "application standard controlled by a separate load bulletin"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Identify the position source the capability depends on",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess the receiver application standard across the fleet",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Sweep display and manual content for the affected formats",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ELSC",
+          "status": "BLOCKED"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-155126",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "263"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The performance capability depends on a position source with containment monitoring, which on this fleet is the receiver installation. At the time the order was raised the installation was not universal across the delivered population, so the dependency had to be stated rather than assumed.",
+          "resolution": "Record the dependency in the dossier so that the second round starts from it."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "ZPH-34-1211",
+          "doc_type": "SB",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "263"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The capability reads the receiver output through an application standard that this bulletin controls, and the bulletin has been embodied unevenly. A computer standard that assumes one application behaviour cannot be released against that fleet.",
+          "resolution": "Record the constraint and re-check the application standard distribution at the start of the second round."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Stopped without a position. The supplier issued a revised baseline that changed the interface the confirmed findings were written against, and the dependency work had to start again from a frozen definition.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

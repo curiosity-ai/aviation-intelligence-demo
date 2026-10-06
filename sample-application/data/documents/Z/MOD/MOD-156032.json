@@ -1,0 +1,179 @@
+[
+  {
+    "doc_id": "MOD-156032",
+    "doc_type": "MOD",
+    "title": "Green System Engine Driven Pump — New Case Drain Architecture and Shaft Seal Standard",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-03-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-11",
+      "title": "Main System — Engine Driven Pump"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "Z10817",
+      "production_cut_in_date": "2021-06-30",
+      "retrofit_via": [
+        "ZPH-29-1067"
+      ]
+    },
+    "dates": {
+      "created": "2017-05-09",
+      "released": "2020-11-18",
+      "revised": "2022-03-08",
+      "effective": "2022-04-01"
+    },
+    "abstract": "Redesigned pump case with a dedicated scavenge path and a hard-faced shaft seal, ending the fluid migration into the accessory gearbox drive pad and removing the repeat cavity check imposed by the interim kit.",
+    "sections": {
+      "reason": "The interim seal kit reduced fluid migration into the accessory gearbox drive pad but did not remove it, and it left the fleet carrying a repeat cavity check every 1200 flight hours. Operators reported that the check was frequently deferred because it needs the fan cowl open, and three aircraft reached the reservoir refill line between checks. The underlying problem is that the original case has no scavenge path, so any leakage past the primary seal has nowhere to go except the drive pad. A case redesign was the only way to close it.",
+      "description": "The pump case is redesigned with a dedicated scavenge gallery that returns primary seal leakage to the case drain, and the shaft carries a hard-faced ceramic running surface against a carbon primary seal. The pump valve D2910110251872 is retained but is re-ported to feed the new gallery, the sensor kit GRDE393470-41 is added to monitor case drain flow, and the barrel nuts EN529286-2D at the mounting flange are changed to a longer grip. The transmitter D2910110594226 is relocated to the new gallery boss so that a rising case drain flow is annunciated before the reservoir level falls. The solenoid FIN 16GG keeps its part number and the clamp FIN 280GG8 is re-positioned. Work is done from zone 123 with the fan cowl open and from zone 193 for the case drain line. Drawing D29101190176 issue B carries the revised porting and the flow sensor installation.",
+      "effects": "Mass increase of 1.7 kg per pump position, symmetric between engines. Electrical load increases by 12 VA per pump for the flow sensor. The new pump is not interchangeable with the previous standard because the case drain port position and the sensor connector differ, and a mixed installation across the two engine positions is permitted only until the next pump change. The repeat drive pad cavity check introduced by the interim kit is deleted. AMM and IPC content for ATA 29-10 was re-issued and a new troubleshooting procedure for rising case drain flow was added.",
+      "embodiment_note": "Cut in on the production line at MSN Z10817 in June 2021 and available for retrofit through a single bulletin. Retrofit is a pump change plus a case drain line modification, about ten hours per engine position at line maintenance."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2910110251872",
+        "GRDE393470-41",
+        "EN529286-2D",
+        "D2910110594226"
+      ],
+      "fins": [
+        "16GG",
+        "280GG8"
+      ],
+      "drawings": [
+        "D29101190176"
+      ],
+      "software": [],
+      "zones": [
+        "123",
+        "193"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z10817"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-151295",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "ZPH-29-1067",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "engine driven pump",
+      "case drain",
+      "scavenge gallery",
+      "ceramic running face",
+      "flow sensor"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 156032,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1435",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 3.4,
+      "balance_impact": "Symmetric between engine positions, no measurable effect",
+      "electrical_load_impact_va": 24,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "GRDE393470-41",
+        "EN529286-2D"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2910110251872",
+        "D2910110594226"
+      ],
+      "fins_affected": [
+        "16GG",
+        "280GG8"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 26,
+      "estimated_cost_keur": 870,
+      "lead_time_weeks": 36,
+      "production_impact": "Cut-in at MSN Z10817; supplier tooling change absorbed before cut-in",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

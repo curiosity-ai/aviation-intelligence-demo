@@ -1,0 +1,412 @@
+[
+  {
+    "doc_id": "PAWO-159775-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Windshield with Integrated Heater Termination and Improved Lower Edge Seal",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "56",
+      "ata_4d": "56-10",
+      "ata_6d": "56-10-11",
+      "title": "Flight Compartment Windows — Windshield Assembly"
+    },
+    "secondary_ata": [
+      "30-40",
+      "92-11"
+    ],
+    "applicability": {
+      "scope": "OPERATOR",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-22C4",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA",
+        "HAT"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-11",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the new windshield standard, covering the fault isolation that would send line maintenance to the wrong place, the two published frame repairs the new sill geometry touches, and the cockpit harness spare contacts.",
+    "sections": {
+      "objective": "Identify the released documentation applicable to the two originating operators that the new windshield standard would invalidate or force to be re-issued, and confirm that the cockpit panel harness can carry the new connector without a harness change.",
+      "scope_note": "The search covers ATA 56-10 as the primary chapter, ATA 30-40 because the heater control sees a redistributed channel current, and ATA 92-11 because the new connector needs contacts at the panel. ATA 25-10 flight compartment furnishings was searched and excluded: the glareshield is not disturbed. The search was limited to the two originating operators for the applicability filter but was run fleet-wide for the document search, because a windshield is a rotable and a spare fitted to one operator's aircraft can end up on another's.",
+      "method_note": "Entity linking was seeded from the five part numbers, the two FINs and the three zones on the candidate. Semantic similarity was run over titles and reason text with two seed phrases about moisture ingress at a window edge and about intermittent heating faults. Two repairs were returned, one by entity linking and one only by the text, and the contrast between them is worth noting: the frame land repair shares four part numbers with the candidate, while the side window frame repair shares nothing at all and was found purely on the description of a corroded sealing interface.",
+      "findings_summary": "Seven items were confirmed and two block. The first blocker is the fault isolation procedure. It works by comparing each heater channel resistance against a reference table and treats a deviation above eight per cent as a degrading termination. The new windshield redistributes current between the two channels by design, so every modified aircraft would read as defective against the current table and line maintenance would remove serviceable windows. The second blocker is the frame land repair. It reinforces the lower sill spar cap, which is the exact member the candidate re-profiles to add a drain slot, and the two cannot both be present. Around forty aircraft in the two operators' fleets carry that repair. The remaining findings are the wiring sheet, whose spare contact table already shows the two spares at the left window connector allocated, the removal task, the parts figure, a side window frame repair found only by its description, and a certification question about whether the new faying surfaces need the chromate-free process.",
+      "next_steps": "Obtain the measured channel currents from the development windows and give the fault isolation owner a revised reference table before any aircraft is modified. Ask the repair design owner whether the sill reinforcement can be removed or whether repaired aircraft are simply excluded. Confirm the spare contact position at the left window connector on a sample aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5610114292590",
+        "D5610114829453",
+        "D5610115011532",
+        "AES757493-5D",
+        "ASH299154-04"
+      ],
+      "fins": [
+        "1WX",
+        "1981WX"
+      ],
+      "drawings": [
+        "D56100044608",
+        "D56100083213"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "214",
+        "215"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-159775",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-Z-259144",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "windshield",
+      "heater channel",
+      "frame repair",
+      "spare contacts"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-159775-01",
+      "subject_mod": "MOD-159775",
+      "source_io": "IO-Z-259144",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-02-11",
+      "due_date": "2026-05-22",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EDSA",
+          "EAAM"
+        ],
+        "estimated_manhours": 120,
+        "spent_manhours": 64
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "56",
+          "30",
+          "92"
+        ],
+        "ata_4d": [
+          "56-10",
+          "30-40",
+          "92-11"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "Z00238",
+          "to": "Z12370"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5610114292590",
+            "D5610114829453",
+            "D5610115011532",
+            "AES757493-5D"
+          ],
+          "fins": [
+            "1WX",
+            "1981WX"
+          ],
+          "drawings": [
+            "D56100044608",
+            "D56100083213"
+          ],
+          "zones": [
+            "211",
+            "214",
+            "215"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "moisture ingress at a window edge causing delamination",
+          "intermittent heating fault at an electrical termination in a wet area"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search window and window heat documentation on ATA 56-10 and 30-40",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review published frame repairs around the window apertures",
+          "method": "SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Confirm cockpit panel spare contact availability on a sample aircraft",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TSM-Z-30-40-11-812-803",
+          "doc_type": "TSM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "1WX",
+              "1981WX"
+            ],
+            "shared_zones": [
+              "211",
+              "214",
+              "215"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The procedure compares each heater channel resistance against a reference table and treats a deviation above eight per cent as a degrading termination. The new windshield redistributes current between the channels by design, so every modified aircraft reads as defective and line maintenance would remove serviceable windows.",
+          "resolution": "Produce a revised reference table for the new standard and re-issue the procedure with a table for each standard before the first aircraft is modified."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SRM-Z-56-10-11-906",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5610114829453",
+              "D5610115011532"
+            ],
+            "shared_fins": [
+              "1WX"
+            ],
+            "shared_zones": [
+              "211"
+            ],
+            "shared_ata_6d": [
+              "56-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The repair reinforces the lower sill spar cap, which is the exact member the candidate re-profiles to add a drain slot. The two cannot both be present, and around forty aircraft across the two originating operators already carry the repair.",
+          "resolution": "Ask the repair design owner whether the reinforcement can be removed and the sill restored, or exclude repaired aircraft from the applicability."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "SRM-Z-56-10-12-907",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found only by the description of a corroded sealing interface at a cockpit window aperture. It shares no part number, no FIN and no drawing with the candidate, and its ATA 6D differs by one digit."
+          },
+          "rationale": "The side window frame repair renews a cleat and its shear tie on the same frame that carries the windshield aperture. The candidate does not touch that cleat, but both operations require the internal trim stripped and the frame land exposed, and the two sealant systems are different.",
+          "resolution": "Confirm sealant compatibility at the shared frame land and state a single sealant standard in both documents."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-Z-56-10-11-000-021-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5610114292590"
+            ],
+            "shared_fins": [
+              "1WX"
+            ],
+            "shared_zones": [
+              "211",
+              "214",
+              "215"
+            ],
+            "shared_ata_6d": [
+              "56-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task disconnects the heater termination at the external block. On the new standard the termination is inside the laminate and is brought out through a moulded connector at the upper inboard corner, so the disconnection step and its warning about the live bus no longer describe the aircraft.",
+          "resolution": "Re-issue the removal task with a variant for the new standard, keeping the isolation warning but relocating the disconnection step."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "WDM-Z-92-11-11",
+          "doc_type": "WDM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "211",
+              "214",
+              "215"
+            ],
+            "shared_ata_6d": [
+              "30-40"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The sheet states that the two spare contacts at the left window connector are already allocated to the sensing lead and are not available, which is exactly the provision the new moulded connector was assumed to use. It also forbids routing a new termination across the sealing land.",
+          "resolution": "Confirm the spare contact position on a sample aircraft and, if none is free, define a connector change as part of the modification rather than as a bulletin note."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-Z-56-10-11-FIG-08",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ASH299154-04",
+              "AES757493-5D"
+            ],
+            "shared_fins": [
+              "1WX",
+              "1981WX"
+            ],
+            "shared_zones": [
+              "211",
+              "214",
+              "215"
+            ],
+            "shared_ata_6d": [
+              "56-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure shows the heater termination hardware on a separate sheet with the internal trim removed, because it is only accessible from inside. On the new standard that hardware does not exist in the same form and the upper corner splice plate changes shape around the new connector.",
+          "resolution": "Raise a publication change request for a revised sheet 2 once the connector position is frozen."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "MOD-157355",
+          "doc_type": "MOD",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The candidate creates new faying surfaces at the re-profiled sill and at the moulded seal land. The surface protection standard applies to any joint opened during modification, and the two originating operators use stations whose approval status for the chromate-free process is not confirmed.",
+          "resolution": "State the surface protection requirement explicitly in the retrofit bulletin and check the station approvals of both operators before the kit is released."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-153870",
+          "doc_type": "MOD",
+          "reason": "Matched strongly on 'moisture ingress at a bonded interface' and on the word 'delamination', and it also concerns a structural joint that is opened and re-protected. It is a fuselage lower shell change with no relationship to the flight compartment, no shared part, no shared zone and a completely different applicability range."
+        },
+        {
+          "doc_id": "ZPH-34-1207",
+          "doc_type": "SB",
+          "reason": "Surfaced because it is a flight compartment equipment change on the same aircraft types with a connector keying issue described in similar terms. It works in the avionics racks in zones 262 and 263, shares no zone with the window installation and touches nothing in the window frame or the window heat circuit."
+        }
+      ],
+      "conclusion": "Not yet issued. Two blocking items are confirmed; the reference table for the fault isolation procedure is the first deliverable and is on the critical path.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

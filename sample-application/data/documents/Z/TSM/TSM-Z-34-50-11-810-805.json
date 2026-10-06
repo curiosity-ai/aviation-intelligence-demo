@@ -1,0 +1,342 @@
+[
+  {
+    "doc_id": "TSM-Z-34-50-11-810-805",
+    "doc_type": "TSM",
+    "title": "Surveillance Broadcast Rejected by Ground Systems with the Receiver Serviceable",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1992-02-26",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-06-21",
+      "released": "1992-02-26",
+      "revised": null,
+      "effective": "1992-03-18"
+    },
+    "abstract": "Fault isolation for a surveillance broadcast rejected by ground systems while the receiver reports no fault, focusing on the configuration entries rather than on the hardware.",
+    "sections": {
+      "purpose": "This procedure isolates a surveillance broadcast that ground systems reject or flag as low quality while the multi-mode receiver itself reports no fault, and identifies which configuration entry is wrong.",
+      "fault_description": "The operator is told by an air navigation service provider that the aircraft is transmitting an invalid or low quality surveillance message, but nothing appears on the flight deck and the receiver fault memory is empty. This is almost always a configuration problem rather than a hardware failure. The commonest single cause is a receiver still running the factory load after a hardware change, because that load passes every built-in test but does not carry the aircraft configuration.",
+      "isolation_procedure": "1. Obtain the ground report and record which field was rejected and on which date. 2. Position the aircraft outside and apply power. Do not attempt this on a hangar. 3. Read the software part number reported by the receiver on the position source status page and compare it with the aircraft configuration record. 4. If the receiver is running the factory load, load the application software and enter the configuration; this alone clears most cases. 5. If the part number is correct, connect the ramp test set and read every transmitted field. 6. Compare the identification, the emitter category and the length and width codes with the aircraft configuration data sheet. 7. Correct any field that differs and have the correction independently checked. 8. If every field is correct, verify the antenna offset entry shown in the lower right of the position source status page against the measured value at the tray of FIN 172TR7, because an offset error degrades the position quality without invalidating any field. 9. If the offset is correct, measure the coaxial loss to the antenna and inspect the connector at the transceiver FIN 4DA1. 10. Replace the receiver only when the configuration, the offset and the feeder have all been shown to be correct.",
+      "dispatch_note": "Dispatch is not permitted into airspace subject to the surveillance mandate with an invalid broadcast. Dispatch outside mandated airspace is permitted. The flight crew must be informed so that the correct transponder mode is selected."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450125988160",
+        "D3450128437161"
+      ],
+      "fins": [
+        "172TR7",
+        "4DA1",
+        "32DA"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LF2NDF3D474",
+        "LF5N0045592"
+      ],
+      "zones": [
+        "262",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-34-50-11-700-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-34-1211",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "surveillance broadcast",
+      "configuration entry",
+      "factory load",
+      "antenna offset",
+      "coaxial loss"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "34-50-11-810-805",
+      "fault_symptom": "Surveillance broadcast rejected or flagged low quality by ground systems, no flight deck indication",
+      "fault_codes": [
+        "345011002",
+        "345011026"
+      ],
+      "warning_messages": [
+        "NAV GPS 1 FAULT"
+      ],
+      "affected_fins": [
+        "172TR7",
+        "4DA1"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Receiver still running the factory software load after a hardware change",
+          "probability_pct": 41,
+          "fin": "172TR7"
+        },
+        {
+          "cause": "Incorrect emitter category or length and width code entry",
+          "probability_pct": 23,
+          "fin": "172TR7"
+        },
+        {
+          "cause": "Antenna offset entry differs from the measured value",
+          "probability_pct": 19,
+          "fin": "4DA1"
+        },
+        {
+          "cause": "Coaxial feeder loss above the limit or a degraded connector",
+          "probability_pct": 17,
+          "fin": "4DA1"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-34-50-11-700-020-A",
+      "dispatch": {
+        "mel_item": "34-53-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Not permitted in airspace subject to the surveillance mandate; permitted elsewhere with the crew informed"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-Z-34-50-11-810-805",
+    "doc_type": "TSM",
+    "title": "Surveillance Broadcast Rejected by Ground Systems with the Receiver Serviceable",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-07",
+      "reason": "The position source status readings are given for both display standards, because the page layout the procedure quotes moves on the converted aircraft.",
+      "raised_by_pawo": "PAWO-157011-02",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-06-21",
+      "released": "1992-02-26",
+      "revised": "2026-08-07",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Fault isolation for a surveillance broadcast rejected by ground systems while the receiver reports no fault, focusing on the configuration entries and giving the reading positions for both display standards.",
+    "sections": {
+      "purpose": "This procedure isolates a surveillance broadcast that ground systems reject or flag as low quality while the multi-mode receiver itself reports no fault, and identifies which configuration entry is wrong.",
+      "fault_description": "The operator is told by an air navigation service provider that the aircraft is transmitting an invalid or low quality surveillance message, but nothing appears on the flight deck and the receiver fault memory is empty. This is almost always a configuration problem rather than a hardware failure. The commonest single cause is a receiver still running the factory load after a hardware change, because that load passes every built-in test but does not carry the aircraft configuration. Two display standards are in service and the position source status page is not laid out the same way on both, so the procedure names where each reading is found rather than assuming one layout.",
+      "isolation_procedure": "1. Obtain the ground report and record which field was rejected and on which date. 2. Position the aircraft outside and apply power. Do not attempt this on a hangar. 3. Read the software part number reported by the receiver and compare it with the aircraft configuration record. On the earlier display standard it is on the position source status page; on the later standard that page is split and the part number sits on the position source identity sub-page reached from it. 4. If the receiver is running the factory load, load the application software and enter the configuration; this alone clears most cases. 5. If the part number is correct, connect the ramp test set and read every transmitted field. 6. Compare the identification, the emitter category and the length and width codes with the aircraft configuration data sheet. 7. Correct any field that differs and have the correction independently checked. 8. If every field is correct, verify the antenna offset entry against the measured value at the tray of FIN 172TR7. On the earlier standard the offset is in the lower right of the position source status page; on the later standard it is on the integrity sub-page with the containment radius. An offset error degrades the position quality without invalidating any field. 9. If the offset is correct, measure the coaxial loss to the antenna and inspect the connector at the transceiver FIN 4DA1. 10. Replace the receiver only when the configuration, the offset and the feeder have all been shown to be correct.",
+      "dispatch_note": "Dispatch is not permitted into airspace subject to the surveillance mandate with an invalid broadcast. Dispatch outside mandated airspace is permitted. The flight crew must be informed so that the correct transponder mode is selected."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450125988160",
+        "D3450128437161"
+      ],
+      "fins": [
+        "172TR7",
+        "4DA1",
+        "32DA"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LF2NDF3D474",
+        "LF5N0045592"
+      ],
+      "zones": [
+        "262",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-34-50-11-700-020-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-34-1211",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "surveillance broadcast",
+      "display standard",
+      "configuration entry",
+      "antenna offset",
+      "coaxial loss"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "34-50-11-810-805",
+      "fault_symptom": "Surveillance broadcast rejected or flagged low quality by ground systems, no flight deck indication",
+      "fault_codes": [
+        "345011002",
+        "345011026"
+      ],
+      "warning_messages": [
+        "NAV GPS 1 FAULT"
+      ],
+      "affected_fins": [
+        "172TR7",
+        "4DA1"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Receiver still running the factory software load after a hardware change",
+          "probability_pct": 41,
+          "fin": "172TR7"
+        },
+        {
+          "cause": "Incorrect emitter category or length and width code entry",
+          "probability_pct": 23,
+          "fin": "172TR7"
+        },
+        {
+          "cause": "Antenna offset entry differs from the measured value",
+          "probability_pct": 19,
+          "fin": "4DA1"
+        },
+        {
+          "cause": "Coaxial feeder loss above the limit or a degraded connector",
+          "probability_pct": 17,
+          "fin": "4DA1"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-34-50-11-700-020-A",
+      "dispatch": {
+        "mel_item": "34-53-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Not permitted in airspace subject to the surveillance mandate; permitted elsewhere with the crew informed"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

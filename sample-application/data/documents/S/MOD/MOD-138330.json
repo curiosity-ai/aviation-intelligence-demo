@@ -1,0 +1,190 @@
+[
+  {
+    "doc_id": "MOD-138330",
+    "doc_type": "MOD",
+    "title": "Core Processing Module Rack — Extended Partition Memory and Loadable Configuration, Standard 4",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20",
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-34",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "CKP",
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-136750"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-04-21",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Fourth-generation core processing standard in which the module partition memory is doubled and the rack configuration becomes field loadable, so that a hosted function can be added without a module change.",
+    "sections": {
+      "reason": "Two of the six slots are at ninety-four per cent of their partition memory allocation and cannot accept the next tranche of hosted functions, which means every future function needs a module change and a certification exercise of its own. Separately, the supplier of the current interface unit has given notice that production ends in 2029, and eleven operators have asked for a route to a supported standard that can be embodied inside an already-booked retrofit slot. The two drivers point at the same rack, and doing them separately would open the avionics bay twice.",
+      "description": "The interface unit HE750421-36 is replaced at every slot by an item with double the partition memory and a field-loadable configuration table, so that the allocation between hosted functions is set by a data load rather than by the module part number. The rack, the backplane and the cooling ducting introduced at the previous standard are retained unchanged, which is what keeps the change to a two-shift task. Rail attachment screws EN873313K4 and LN727699-25 are renewed because the modules are heavier and the rail preload changes. Data concentrator 493CP2 and outboard concentrator 7CP7 keep their positions from the previous standard. The configuration set LF6L52A03E3 is superseded by a loadable table carried on the same part number, applied through the portable loader interface rather than through the shop. Work is in the avionics bay in zones 162 and 166 with the rack front removed, and the bay ground stud in zone 183 is re-faced. Detail is on drawings D42101237654 and D42101281090.",
+      "effects": "Estimated mass increase of 0.9 kg over the previous standard. Direct current load rises by about forty volt-amperes across the six slots, which the bay cooling introduced at the previous standard is expected to absorb. Not interchangeable with the first standard, because that rack has neither the backplane nor the ducting; interchangeable with the second standard at the aircraft level. Making the configuration field loadable changes the configuration control regime: the aircraft configuration is no longer implied by part numbers alone and the record has to carry the loaded table.",
+      "embodiment_note": "Production cut-in is proposed once the design is frozen, with retrofit through a new bulletin sized for a two-shift overnight so that it fits inside a cabin retrofit slot. Aircraft still at the delivered configuration are expected to take the previous standard first.",
+      "open_points": "Pre-analysis must establish whether an aircraft at the first standard can go directly to this one or must pass through the second, what the field-loadable table does to the configuration record and to the data loading provisions, whether the additional dissipation is inside the cooling margin that the previous standard created, and whether the existing retrofit bulletin for the second standard has to be reissued or withdrawn."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "drawings": [
+        "D42101237654",
+        "D42101281090"
+      ],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01012",
+        "S01430"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-S-260512",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-136750",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "MOD-133730",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "partition memory",
+      "field loadable",
+      "core processing",
+      "hosted function",
+      "configuration control"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 138330,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.9,
+      "balance_impact": "Forward of the reference datum; negligible",
+      "electrical_load_impact_va": 40,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "HE750421-36"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins_affected": [
+        "493CP2",
+        "7CP7"
+      ],
+      "software_affected": [
+        "LF6L52A03E3"
+      ],
+      "estimated_manhours": 210,
+      "estimated_cost_keur": 2240,
+      "lead_time_weeks": 58,
+      "production_impact": "Cut-in proposed after design freeze on the twin-engine line",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "doc_id": "TSM-Z-27-50-12-810-801",
+    "doc_type": "TSM",
+    "title": "F/CTL FLAP SYS Fault with Flap Position Disagree on the Ground",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-06-12",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-12",
+      "title": "Flaps — Flap Position Sensing"
+    },
+    "secondary_ata": [
+      "27-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-20N3",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24C1",
+        "ZPH-24V1",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-03-12",
+      "released": "2018-08-20",
+      "revised": "2023-06-12",
+      "effective": "2023-07-03"
+    },
+    "abstract": "Fault isolation for a flap system fault accompanied by a position disagree between the two sensing channels, most often caused by a sensing bracket that has moved or by a valve out of rig at the inboard carriage.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a flap system fault reported with a position disagree between the two sensing channels, distinguishing a sensor rigging problem from a computer or wiring failure.",
+      "fault_description": "The crew report a flap system caption with the flaps at an intermediate position, and the maintenance page shows the two sensing channels disagreeing by more than the monitor threshold. The fault is usually intermittent and clears on the next cycle, which is why the isolation must be done with the flap driven slowly rather than by observing the fault in service. On aircraft where the inboard carriage roller has been changed, the most common cause is a sensing bracket displaced during that work rather than a failure of the sensing valve itself.",
+      "isolation_procedure": "1. Read the fault memory and record every message with its flight leg. 2. Extend the flaps to the maintenance position and support them. 3. Do a visual check of the sensing valve at FIN 3416KS4 and of its bracket, and confirm that the bracket has not moved. Measure the clearance to the carriage roller envelope at full extension. 4. If the clearance is below 40 millimetres, the roller is contacting the bracket at extension: correct the installation and repeat the operational test. 5. If the clearance is correct, disconnect the sensing valve and measure the output through the full travel with the test set, comparing it with the reference curve. 6. If the output is outside the curve, replace the valve and repeat the operational test. 7. If the output is correct, measure the loop resistance from the valve connector to the computer at FIN 59KS, and inspect the harness where it crosses the trailing edge rib. 8. If the resistance is outside the limit, repair the harness. 9. If both the valve and the harness are serviceable, replace the flap and slat control computer channel and do the confirmation test. 10. Where the slat filter at FIN 1691KS shows contamination, report it separately; it does not cause this fault but often accompanies it.",
+      "dispatch_note": "Dispatch is permitted with one sensing channel inoperative provided the remaining channel is serviceable and the flaps are confirmed to move symmetrically. Autoland is not permitted in this configuration and the crew must be told. Rectify within ten calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750126616735",
+        "TF950088-45",
+        "AES390161K8"
+      ],
+      "fins": [
+        "3416KS4",
+        "59KS",
+        "1691KS"
+      ],
+      "drawings": [
+        "D27501286380"
+      ],
+      "software": [],
+      "zones": [
+        "562",
+        "565",
+        "662"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-27-50-12-700-009-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-159570",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flap position disagree",
+      "sensing valve",
+      "bracket clearance",
+      "loop resistance",
+      "fault memory"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "27-50-12-810-801",
+      "fault_symptom": "F/CTL FLAP SYS FAULT displayed on ECAM with position disagree between sensing channels",
+      "fault_codes": [
+        "275012001",
+        "275012014"
+      ],
+      "warning_messages": [
+        "F/CTL FLAP SYS 1 FAULT",
+        "F/CTL FLAP SYS 2 FAULT"
+      ],
+      "affected_fins": [
+        "3416KS4",
+        "59KS"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Sensing valve bracket displaced and contacted by the carriage roller at full extension",
+          "probability_pct": 38,
+          "fin": "3416KS4"
+        },
+        {
+          "cause": "Sensing valve output outside the reference curve",
+          "probability_pct": 27,
+          "fin": "3416KS4"
+        },
+        {
+          "cause": "Harness chafing where it crosses the trailing edge rib",
+          "probability_pct": 21,
+          "fin": "59KS"
+        },
+        {
+          "cause": "Flap and slat control computer channel failure",
+          "probability_pct": 14,
+          "fin": "59KS"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-27-50-12-700-009-A",
+      "dispatch": {
+        "mel_item": "27-51-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One sensing channel inoperative, symmetric flap movement confirmed, autoland not permitted"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

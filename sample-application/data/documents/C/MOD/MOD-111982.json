@@ -1,0 +1,185 @@
+[
+  {
+    "doc_id": "MOD-111982",
+    "doc_type": "MOD",
+    "title": "Common Cabin Window Frame Drainage and Reveal Interface Standard",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-10-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "56",
+      "ata_4d": "56-20",
+      "ata_6d": "56-20-11",
+      "title": "Passenger Compartment Windows — Cabin Window Assembly"
+    },
+    "secondary_ata": [
+      "56-20-12",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00137",
+          "to": "C00680"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "WRA",
+        "AMA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "LAUNCHED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2025-10-14",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Launched change bringing the cabin window frame drainage and the reveal interface to one standard across the build, so that condensate leaves the frame rather than collecting at the lower reveal and so that a powered pane could later be fitted.",
+    "sections": {
+      "reason": "Condensate collecting at the lower reveal of the cabin window has produced two hundred and eleven reported findings of staining on the sidewall panel and thirty-one of corrosion at the frame lower flange, the earliest at five years in service. Three build standards of the reveal interface exist across the delivered fleet because the frame was re-sourced twice, and the drainage behaviour differs between them, which makes the in-service instruction impossible to write clearly. A separate driver is that no delivered frame carries an electrical provision at the reveal, which blocks any later powered pane and has already caused one customer request to be closed without a modification.",
+      "description": "The window frame structure is brought to one standard. The frame D5620128912144 replaces all three delivered variants, the cleat sub-assembly D5620124075497 is common to both the left and right sides, and the shear tie D5620006694156 is added at the lower reveal to carry the drain path clear of the sidewall panel. Clamps LN143799-12 secure the drain tube run, countersunk screws LN741597K8 are used at the reveal and the edging grommet AGS159290-6D protects the pass-through where the drain leaves the frame. A blanked electrical provision is added at the reveal so that a powered pane can be fitted later without touching the frame again. Functional item 7WY, the window frame sensor target, is relocated. Work is along the cabin at zones 241, 251 and 274. Reference detail is on drawings D56200053374 and D56200077671.",
+      "effects": "Estimated mass increase of 11.5 kg for a full cabin. Electrical load unchanged, since the provision is blanked. The frame is not interchangeable with any of the three delivered variants and a mixed cabin is permitted only at bay granularity. The scheduled sidewall panel inspection can be extended once the drain path is proven. Repair manual content for a corroded frame lower flange has to be re-issued because the flange section changes, and the illustrated parts figure has to carry all three delivered variants plus the new one until the fleet converges.",
+      "embodiment_note": "Design has started following a successful pre-analysis. Production cut-in is intended at the next fuselage standard change and retrofit is offered during a cabin refresh, because the whole sidewall has to come out. Four shifts per aircraft with the cabin out of service.",
+      "open_points": "Detailed design must settle whether the blanked electrical provision can be qualified now or has to wait for a powered pane definition, and whether the drain tube run can share the sidewall route with the cabin lighting harness."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5620128912144",
+        "D5620124075497",
+        "D5620006694156",
+        "LN143799-12",
+        "LN741597K8",
+        "AGS159290-6D"
+      ],
+      "fins": [
+        "7WY"
+      ],
+      "drawings": [
+        "D56200053374",
+        "D56200077671"
+      ],
+      "software": [],
+      "zones": [
+        "241",
+        "251",
+        "274"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00205",
+        "C00273"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-260264",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SRM-C-56-20-12-914",
+        "doc_type": "SRM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "window frame",
+      "reveal",
+      "drainage",
+      "sidewall staining",
+      "electrical provision"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Alcadara",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111982,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.365",
+          "CS 25.775",
+          "CS 25.609"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 11.5,
+      "balance_impact": "Distributed along the cabin, longitudinal CG shift under 0.02 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D5620006694156",
+        "LN143799-12",
+        "AGS159290-6D"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5620128912144",
+        "D5620124075497"
+      ],
+      "fins_affected": [
+        "7WY"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 690,
+      "estimated_cost_keur": 2750,
+      "lead_time_weeks": 68,
+      "production_impact": "Cut-in intended at the next fuselage standard change; frame re-sourcing is the pacing item",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

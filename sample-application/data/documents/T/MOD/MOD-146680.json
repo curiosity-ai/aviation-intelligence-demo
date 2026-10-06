@@ -1,0 +1,196 @@
+[
+  {
+    "doc_id": "MOD-146680",
+    "doc_type": "MOD",
+    "title": "Relocation and Forced Cooling of the Air Traffic Control Datalink Router in the Upper Avionics Rack",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-10-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-70-12",
+      "46-40-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00020",
+          "to": "T00198"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA",
+        "HKA",
+        "NCA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "T00201",
+      "production_cut_in_date": "2022-07-14",
+      "retrofit_via": [
+        "TTN-23-1014"
+      ]
+    },
+    "dates": {
+      "created": "2020-02-11",
+      "released": "2021-10-06",
+      "revised": null,
+      "effective": "2021-11-15"
+    },
+    "abstract": "Moves the datalink router to a ventilated position in the upper avionics rack and gives it a dedicated cooling path, after thermal shutdowns were traced to a rack position that was never intended to carry a continuously transmitting unit.",
+    "sections": {
+      "reason": "Eleven operators reported datalink unavailability that cleared after a cooling period on the ground, and downloaded maintenance data showed the router reporting an over-temperature condition in every case. The unit had been placed in the upper avionics rack at a position selected for cable length rather than for airflow, immediately behind a display interface unit that runs warm. Ninety-four events were recorded across the fleet in twenty-two months, half of them on aircraft operating in the Gulf and in southern Asia. The unit itself tested serviceable in every one of the seventeen shop investigations carried out.",
+      "description": "The router is moved two positions outboard in the same rack, into a shelf that sits in the main cooling flow, and a dedicated inlet duct is added to the shelf face. The router mounting tray D2370115362436 is replaced by a ventilated tray, and the display interface unit D2370116071238 takes the vacated position. The interface unit HOD93837-98 supplied by the datalink vendor is retained. The coaxial run to the antenna is lengthened by 1.4 metres and re-clamped; the wiring at FIN 295RN and FIN 5RC is re-terminated but the harness is not renumbered. A temperature sensor is added to the shelf so that the condition is reported as a maintenance message before the unit degrades rather than after it shuts down. Work is from the upper avionics compartment in zones 163 and 273 and is detailed on drawing D23701264936. No change is made to the router software or to the antenna installation.",
+      "effects": "Mass increase of 2.6 kg per aircraft, forward of the reference station, with a centre-of-gravity shift below 0.02 per cent mean aerodynamic chord. Cooling airflow to the rack is redistributed but the total demand is unchanged. Electrical load rises by 15 volt-amperes for the shelf sensor. The modification is interchangeable at unit level: the router itself is untouched and a pre-modification unit fits a post-modification tray. Dispatch with the datalink inoperative is unchanged. Maintenance, illustrated parts, troubleshooting and the crew description of datalink availability all require update.",
+      "embodiment_note": "Production cut-in at MSN T00201. Retrofit through the associated service bulletin, about one shift with the upper avionics compartment open, and it can be combined with any scheduled avionics access. Kits contain the ventilated tray, the duct and the sensor."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370115362436",
+        "D2370116071238",
+        "HOD93837-98"
+      ],
+      "fins": [
+        "295RN",
+        "5RC"
+      ],
+      "drawings": [
+        "D23701264936"
+      ],
+      "software": [],
+      "zones": [
+        "163",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00201"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-23-1014",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-23-70-11-400-002-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-T-23-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "TSM-T-23-70-11-810-807",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-T-DSC-23-70-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "avionics rack",
+      "over-temperature",
+      "cooling duct",
+      "relocation"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 146680,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.6,
+      "balance_impact": "Forward of reference station, CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 15,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "D2370115362436"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2370116071238",
+        "HOD93837-98"
+      ],
+      "fins_affected": [
+        "295RN",
+        "5RC"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 112,
+      "estimated_cost_keur": 480,
+      "lead_time_weeks": 40,
+      "production_impact": "Cut-in at MSN T00201, no line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

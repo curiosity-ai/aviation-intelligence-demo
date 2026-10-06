@@ -1,0 +1,255 @@
+[
+  {
+    "doc_id": "PAWO-149420-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Steel Link and Replaceable Bushes at the Auxiliary Power Unit Aft Mount",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-11-10",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-10",
+      "ata_6d": "49-10-12",
+      "title": "Auxiliary Power Unit — Mount Assembly"
+    },
+    "secondary_ata": [
+      "49-10-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-11-10",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the first aft mount standard, opened to consider a bush life extension for high utilisation operators and rejected when the wear mechanism was shown not to scale that way.",
+    "sections": {
+      "objective": "Establish whether the replaceable bush at the aft mount can be given a longer declared life for operators whose auxiliary power unit utilisation is far above the fleet average, on the basis of the first year of in-service measurements.",
+      "findings_summary": "The extension was rejected. The measurement population from the first year showed the bush wear rate rising faster than running hours rather than in proportion to them, which is the opposite of what a life extension needs. The reason was not established at the time and was left as an open question; it was answered several years later by the angular misalignment finding that produced the second issue. Two items were confirmed and remain valid. The inspection task measures the bush inside diameter rather than the link bore on this standard, and reading the wrong limit against the wrong measurement was already the most common error on the task. The illustrated parts figure lists both link standards and its effectivity column is the only reliable way to establish what is fitted.",
+      "next_steps": "No life extension. Continue the measurement programme and revisit when the population is larger. Add a caution to the inspection task about which measurement applies to which standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4910122171974",
+        "D4910124356332",
+        "D4910125048089",
+        "XAN342388-19"
+      ],
+      "fins": [
+        "2PB7",
+        "2PA8"
+      ],
+      "drawings": [
+        "D49101239814"
+      ],
+      "software": [],
+      "zones": [
+        "313",
+        "325"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149420",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "aft mount",
+      "bush life",
+      "utilisation",
+      "historical"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149420-01",
+      "subject_mod": "MOD-149420",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2017-03-22",
+      "outcome": "REJECTED",
+      "raised_date": "2016-11-10",
+      "due_date": "2017-04-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 55,
+        "spent_manhours": 48
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "49"
+        ],
+        "ata_4d": [
+          "49-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00121"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4910124356332",
+            "D4910125048089"
+          ],
+          "fins": [
+            "2PB7",
+            "2PA8"
+          ],
+          "drawings": [
+            "D49101239814"
+          ],
+          "zones": [
+            "313"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "bore elongation at a mount attachment",
+          "wear taken by a replaceable part rather than by structure"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Analyse the first year bush measurement population",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review the inspection task for measurement ambiguity",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-T-49-10-12-200-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4910124356332",
+              "D4910125048089",
+              "XAN342388-19"
+            ],
+            "shared_fins": [
+              "2PB7",
+              "2PA8"
+            ],
+            "shared_zones": [
+              "313",
+              "325"
+            ],
+            "shared_ata_6d": [
+              "49-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Two standards are now in service and each is measured differently. Reading the bore limit against a bush measurement passes an attachment that is out of limits.",
+          "resolution": "Add a caution establishing the standard fitted before any measurement is taken."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-T-49-10-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4910124356332",
+              "D4910122171974"
+            ],
+            "shared_fins": [
+              "2PB7"
+            ],
+            "shared_zones": [
+              "313"
+            ],
+            "shared_ata_6d": [
+              "49-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure lists both link standards as alternates and its effectivity column is the only reliable way to establish what is fitted, since the two links are difficult to distinguish installed.",
+          "resolution": "No change. Confirmed as the reference for the task caution."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Bush life extension rejected. The wear rate does not scale with running hours as assumed.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

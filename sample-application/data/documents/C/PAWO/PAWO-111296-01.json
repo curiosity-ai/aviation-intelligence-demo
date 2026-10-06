@@ -1,0 +1,270 @@
+[
+  {
+    "doc_id": "PAWO-111296-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Load-Only Partial Embodiment of the Maintenance Application",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-24",
+      "released": "2026-05-27",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed re-analysis of the maintenance application upgrade, run to define the load-only partial embodiment two operators had asked for, and delegated once the configuration recording rule was settled.",
+    "sections": {
+      "objective": "Define a load-only partial embodiment of the application upgrade for operators who cannot schedule the tray change, and establish what has to be recorded so that a partially embodied aircraft is not mistaken for a fully embodied one.",
+      "findings_summary": "Two items were confirmed and the work was delegated to customer services engineering. The finding that mattered was a recording problem rather than a technical one: a load-only aircraft keeps the fault history but not the wider correlation window, and nothing on the aircraft distinguishes the two states except the reported window on the maintenance terminal. A technician following the trouble shooting procedure would read the window and infer the wrong standard unless the partial embodiment is recorded in the configuration file, which the bulletin did not require. The second finding was that the trouble shooting procedure quotes the two windows as if they were the only two states, and a partially embodied aircraft is a third.",
+      "next_steps": "Require the partial embodiment to be recorded in the aircraft configuration file and say so in the bulletin. Amend the trouble shooting procedure to recognise three states rather than two. Customer services engineering to complete the partial embodiment definition."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4520114738386",
+        "GRA258107-86",
+        "EN936981-61",
+        "D4520128145158"
+      ],
+      "fins": [
+        "4310TN",
+        "1TM"
+      ],
+      "drawings": [
+        "D45201180284"
+      ],
+      "software": [
+        "LH6CEDA1669",
+        "LH3C76AB34D"
+      ],
+      "zones": [
+        "244",
+        "164"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00544"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111296",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "partial embodiment",
+      "correlation window",
+      "configuration record",
+      "load only"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111296-01",
+      "subject_mod": "MOD-111296",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-27",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-02-24",
+      "due_date": "2026-06-05",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ETGC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 70,
+        "spent_manhours": 41
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "45",
+          "46"
+        ],
+        "ata_4d": [
+          "45-20",
+          "45-45",
+          "46-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D4520114738386",
+            "GRA258107-86",
+            "D4520128145158"
+          ],
+          "fins": [
+            "4310TN",
+            "1TM"
+          ],
+          "drawings": [
+            "D45201180284"
+          ],
+          "zones": [
+            "244",
+            "164"
+          ],
+          "software": [
+            "LH6CEDA1669",
+            "LH3C76AB34D"
+          ]
+        },
+        "similarity_seeds": [
+          "telling a partially modified aircraft apart from a fully modified one on the line"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Define the load-only scope",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check how the two states are distinguished on the aircraft",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TSM-C-45-20-11-810-812",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4520114738386",
+              "D4520128145158"
+            ],
+            "shared_fins": [
+              "4310TN",
+              "1TM"
+            ],
+            "shared_zones": [
+              "244",
+              "164"
+            ],
+            "shared_ata_6d": [
+              "45-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure quotes two correlation windows as if they were the only two states. A load-only aircraft is a third state and a technician reading the window would infer the wrong standard.",
+          "resolution": "Procedure amended to recognise three states and to require the configuration file to be checked."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "CRN-45-2001",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4520114738386",
+              "GRA258107-86",
+              "EN936981-61",
+              "D4520128145158"
+            ],
+            "shared_fins": [
+              "4310TN",
+              "1TM"
+            ],
+            "shared_zones": [
+              "244",
+              "164"
+            ],
+            "shared_ata_6d": [
+              "45-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin offered the load-only embodiment without requiring it to be recorded, which would have left the partially embodied population invisible.",
+          "resolution": "Recording requirement added to the bulletin at its next revision; work delegated to customer services engineering."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Delegated to customer services engineering with the recording rule settled. The three-state problem was the only real risk in the partial embodiment.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

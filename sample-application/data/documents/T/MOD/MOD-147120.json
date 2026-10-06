@@ -1,0 +1,182 @@
+[
+  {
+    "doc_id": "MOD-147120",
+    "doc_type": "MOD",
+    "title": "Enlarged Fault History Store and Revised Correlation Rules in the Central Maintenance Computer",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-02-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Central Maintenance System — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-20-12",
+      "45-45-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00105",
+          "to": "T00238"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "GBA",
+        "SBW",
+        "TMK"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "T00235",
+      "production_cut_in_date": "2025-07-15",
+      "retrofit_via": [
+        "TTN-45-1002"
+      ]
+    },
+    "dates": {
+      "created": "2023-04-03",
+      "released": "2025-02-24",
+      "revised": null,
+      "effective": "2025-04-07"
+    },
+    "abstract": "Multiplies the fault history capacity of the central maintenance computer and rewrites the correlation rules so that a single upstream failure no longer presents as a page of unrelated system messages to the line engineer.",
+    "sections": {
+      "reason": "Line engineers routinely see twenty or more maintenance messages from a single upstream event, because the correlation rules were written when the message population was much smaller and they do not recognise the newer avionics message set. The fault history store holds ten flight legs, which is not enough to investigate an intermittent condition reported once a week. Three operators asked for the history depth to be increased after being unable to correlate a repeat crew report with any recorded maintenance data. The condition is a documentation and diagnosis problem rather than a safety issue, but it is expensive: an unnecessary component removal costs more than the modification does per aircraft.",
+      "description": "The computer processing card VA700112-90 is replaced by a variant with four times the non-volatile storage, and the interface unit KES685215-32 is replaced to match the new card's memory bus. The correlation rule set is rewritten so that a message is suppressed when a declared upstream cause is present in the same processing cycle, and the suppressed messages are retained in the history rather than discarded. The built-in test load LA2R9D6C382 is updated to report the suppression, and the fault database LE2R7E8FEA4 carries the new rules. Wiring at FIN 3971TM and FIN 6TN4 is unchanged. History depth increases from ten legs to sixty. The maintenance terminal presentation is unchanged so that no retraining is required. Work is in the avionics compartment in zones 225 and 265 and is detailed on drawing D45201201098.",
+      "effects": "No meaningful mass change; the replacement card is 0.2 kg heavier. Electrical load is unchanged. The new card is not interchangeable with the original because the memory bus timing differs and the older interface unit cannot drive it. Dispatch is unaffected. The main effect is downstream: troubleshooting procedures that begin from a message list need reworking, because the list a line engineer now sees is shorter and ordered by cause rather than by system. Illustrated parts, troubleshooting and the loadable software list all require update.",
+      "embodiment_note": "Production cut-in at MSN T00235 in July 2025. Retrofit through the associated service bulletin, a three hour task with the avionics compartment open, followed by a data load. There is no interim configuration: the card and the two loads must be applied together."
+    },
+    "entities": {
+      "part_numbers": [
+        "KES685215-32",
+        "VA700112-90"
+      ],
+      "fins": [
+        "3971TM",
+        "6TN4"
+      ],
+      "drawings": [
+        "D45201201098"
+      ],
+      "software": [
+        "LA2R9D6C382",
+        "LE2R7E8FEA4"
+      ],
+      "zones": [
+        "225",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00235"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-45-1002",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-45-20-11-700-002-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "central maintenance computer",
+      "fault history",
+      "correlation rules",
+      "message suppression",
+      "line engineer"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 147120,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.2,
+      "balance_impact": "Not significant",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "KES685215-32",
+        "VA700112-90"
+      ],
+      "fins_affected": [
+        "3971TM",
+        "6TN4"
+      ],
+      "software_affected": [
+        "LA2R9D6C382",
+        "LE2R7E8FEA4"
+      ],
+      "estimated_manhours": 300,
+      "estimated_cost_keur": 1240,
+      "lead_time_weeks": 56,
+      "production_impact": "Cut-in at MSN T00235, no line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

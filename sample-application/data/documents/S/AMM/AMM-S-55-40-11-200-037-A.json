@@ -1,0 +1,340 @@
+[
+  {
+    "doc_id": "AMM-S-55-40-11-200-037-A",
+    "doc_type": "AMM",
+    "title": "Rudder Lightning Diverter Strip — Bonding Resistance Measurement",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1997-01-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "55",
+      "ata_4d": "55-40",
+      "ata_6d": "55-40-11",
+      "title": "Rudder Structure — Rudder Panel Assembly"
+    },
+    "secondary_ata": [
+      "20-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1996-04-10",
+      "released": "1997-01-05",
+      "revised": "1997-01-05",
+      "effective": "1997-01-23"
+    },
+    "abstract": "Four-wire bonding resistance measurement at every diverter strip termination on the rudder, with the acceptance that changes between the delivered and the extended strip standard.",
+    "sections": {
+      "purpose": "This task measures the electrical path from each lightning diverter strip termination into the fin structure and confirms that it is inside the limit for the standard fitted.",
+      "job_setup_note": "A four-wire meter is mandatory. A two-wire reading includes the lead resistance and will pass a termination that is out of limits. Confirm from the aircraft record which strip standard is fitted before you look up the acceptance; the extended strip standard has a tighter limit because it terminates on a dedicated lug.",
+      "procedure": "1. Make sure that the aircraft is earthed and that no work is in progress on the fin. 2. Put the fin access platform in position and secure it. 3. Identify the eight termination positions from the panel map and clean each contact point with the approved solvent. Do not abrade a plated surface. 4. Calibrate the four-wire meter on the reference shunt and record the calibration. 5. Measure from the strip at each termination to the nearest structural reference point and record the reading. 6. WARNING: DO NOT MEASURE IN A THUNDERSTORM OR WHEN LIGHTNING IS FORECAST WITHIN TEN KILOMETRES. 7. Compare each reading against the correct column of the limits table. 8. Where a reading is above the limit, clean the joint again and repeat. Where it is still above, record it as a finding and do not clean it a third time. CAUTION: REPEATED CLEANING OF A PLATED LAND WILL REMOVE THE PLATING AND MAKE THE JOINT WORSE. 9. Examine each termination visually for paint intrusion under the fastener head. 10. Where the fitting ZED693350-29 is fitted, check that the lug face is clean and undamaged. 11. Record the ambient humidity, which affects the reading on a contaminated joint. 12. Restore any protective scheme disturbed by the cleaning.",
+      "close_out": "Record all eight readings, the calibration record and the humidity. A single reading above limits is a defect and not a deferred item; the strike path is the reason the strip exists. Remove the access platform and close the fin area."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5540112864257",
+        "ZED693350-29",
+        "D5540116271167"
+      ],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "351",
+        "353",
+        "355"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-55-40-11-300-036-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bonding resistance",
+      "four-wire",
+      "diverter strip",
+      "termination",
+      "paint intrusion"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Alcadara",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "55-40-11-200-037-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft; the acceptance limit is tighter on aircraft at the extended diverter strip standard",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "351",
+          "353",
+          "355"
+        ],
+        "access_panels": [
+          "351CR",
+          "353CR",
+          "355AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Earth the aircraft before measurement.",
+          "Do not work on the fin in an electrical storm.",
+          "Secure the access platform."
+        ],
+        "tooling": [
+          {
+            "reference": "98D55401-085",
+            "description": "Bonding meter, four-wire"
+          },
+          {
+            "reference": "98D55401-088",
+            "description": "Reference shunt, calibrated"
+          },
+          {
+            "reference": "98D55401-091",
+            "description": "Fin access platform"
+          }
+        ],
+        "consumables": [
+          "Solvent, degreasing",
+          "Primer, epoxy, chromate-free"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-55-40-11-300-036-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-S-55-40-11-200-037-A",
+    "doc_type": "AMM",
+    "title": "Rudder Lightning Diverter Strip — Bonding Resistance Measurement",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-06",
+      "reason": "A note is added stating that a termination on a repaired panel is measured against the same limit as an intact one, with no allowance for the repair.",
+      "raised_by_pawo": "PAWO-131460-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "55",
+      "ata_4d": "55-40",
+      "ata_6d": "55-40-11",
+      "title": "Rudder Structure — Rudder Panel Assembly"
+    },
+    "secondary_ata": [
+      "20-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1996-04-10",
+      "released": "1997-01-05",
+      "revised": "2026-08-06",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Four-wire bonding resistance measurement at every diverter strip termination on the rudder, with the acceptance that changes between the delivered and the extended strip standard.",
+    "sections": {
+      "purpose": "This task measures the electrical path from each lightning diverter strip termination into the fin structure and confirms that it is inside the limit for the standard fitted.",
+      "job_setup_note": "A four-wire meter is mandatory. A two-wire reading includes the lead resistance and will pass a termination that is out of limits. Confirm from the aircraft record which strip standard is fitted before you look up the acceptance; the extended strip standard has a tighter limit because it terminates on a dedicated lug. Check the panel repair record at the same time. A termination on a panel that carries a scarf or doubler repair is measured against exactly the same limit as one on an intact panel: there is no allowance for a repair, and a reading that would be acceptable elsewhere is not acceptable here. The strike current does not care that the laminate has been rebuilt.",
+      "procedure": "1. Make sure that the aircraft is earthed and that no work is in progress on the fin. 2. Put the fin access platform in position and secure it. 3. Identify the eight termination positions from the panel map and clean each contact point with the approved solvent. Do not abrade a plated surface. 4. Note against each position whether the panel carries a recorded repair within one hundred and fifty millimetres of the termination. 5. Calibrate the four-wire meter on the reference shunt and record the calibration. 6. Measure from the strip at each termination to the nearest structural reference point and record the reading. WARNING: DO NOT MEASURE IN A THUNDERSTORM OR WHEN LIGHTNING IS FORECAST WITHIN TEN KILOMETRES. 7. Compare each reading against the correct column of the limits table. The column is selected on the strip standard only; a repaired panel does not change the column and does not earn a wider limit. 8. Where a reading is above the limit, clean the joint again and repeat. Where it is still above, record it as a finding and do not clean it a third time. CAUTION: REPEATED CLEANING OF A PLATED LAND WILL REMOVE THE PLATING AND MAKE THE JOINT WORSE. 9. Examine each termination visually for paint intrusion under the fastener head. 10. Where the fitting ZED693350-29 is fitted, check that the lug face is clean and undamaged. 11. Record the ambient humidity, which affects the reading on a contaminated joint. 12. Restore any protective scheme disturbed by the cleaning.",
+      "close_out": "Record all eight readings, the repair status noted against each position, the calibration record and the humidity. A single reading above limits is a defect and not a deferred item; the strike path is the reason the strip exists. Where the out-of-limits termination is on a repaired panel, raise the finding against the repair as well, because the two are assessed together. Remove the access platform and close the fin area."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5540112864257",
+        "ZED693350-29",
+        "D5540116271167"
+      ],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "351",
+        "353",
+        "355"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-55-40-11-300-036-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bonding resistance",
+      "four-wire",
+      "diverter strip",
+      "repaired panel",
+      "termination"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Alcadara",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "55-40-11-200-037-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft; the acceptance limit is tighter on aircraft at the extended diverter strip standard, and is the same on a repaired panel as on an intact one",
+      "manhours": 4.5,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "351",
+          "353",
+          "355"
+        ],
+        "access_panels": [
+          "351CR",
+          "353CR",
+          "355AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Earth the aircraft before measurement.",
+          "Do not work on the fin in an electrical storm.",
+          "Secure the access platform."
+        ],
+        "tooling": [
+          {
+            "reference": "98D55401-085",
+            "description": "Bonding meter, four-wire"
+          },
+          {
+            "reference": "98D55401-088",
+            "description": "Reference shunt, calibrated"
+          },
+          {
+            "reference": "98D55401-091",
+            "description": "Fin access platform"
+          }
+        ],
+        "consumables": [
+          "Solvent, degreasing",
+          "Primer, epoxy, chromate-free"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-S-55-40-11-300-036-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

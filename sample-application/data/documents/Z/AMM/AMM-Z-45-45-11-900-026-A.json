@@ -1,0 +1,164 @@
+[
+  {
+    "doc_id": "AMM-Z-45-45-11-900-026-A",
+    "doc_type": "AMM",
+    "title": "Software Load through the Portable Data Loader Interface and Configuration Verification",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2023-06-15",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-45-12",
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-04-11",
+      "released": "2017-10-24",
+      "revised": "2023-06-15",
+      "effective": "2023-07-06"
+    },
+    "abstract": "Loading of aircraft software through the portable data loader interface and verification of the resulting configuration, covering both the original media reader and the solid state standard B unit.",
+    "sections": {
+      "purpose": "This task loads software into an aircraft target computer through the portable data loader interface and verifies the resulting configuration against the aircraft software list.",
+      "job_setup_note": "On aircraft with the original transceiver standard the avionics bay temperature must be below the limit given in the instructions before a load is started, because the load will abort above it and leave the target in an indeterminate state. On standard B units this limitation does not apply. Do not interrupt a load once it has started, and do not remove aircraft power until the interface reports a completed load.",
+      "procedure": "1. Confirm the aircraft software list and the part numbers to be loaded before you start. 2. Make sure that the aircraft is on a stable power source that will not be interrupted. 3. On aircraft with the original transceiver standard, measure the avionics bay temperature and confirm that it is below the limit. 4. Get access to the avionics bay in zone 252. 5. Confirm that the interface at the data concentrator FIN 78TN is powered and reports ready. CAUTION: DO NOT REMOVE AIRCRAFT POWER OR DISCONNECT THE MEDIA WHILE A LOAD IS IN PROGRESS. AN INTERRUPTED LOAD LEAVES THE TARGET COMPUTER IN AN INDETERMINATE STATE AND THE FULL LOAD MUST BE REPEATED. 6. Insert the media or connect the solid state device at the rack FIN 23TN. 7. Select the target and start the load. 8. Monitor the progress report and do not leave the flight deck while the load is running. WARNING: DO NOT OPERATE ANY SYSTEM CONTROLLED BY THE TARGET COMPUTER WHILE THE LOAD IS IN PROGRESS. 9. When the interface reports a completed load, read back the loaded part number from the target. 10. On standard B and later units, confirm that the configuration report has been written to the maintenance system and that it names the target, the part number and the result. 11. Compare every read-back part number with the aircraft software list and record any difference. 12. Repeat for each remaining target.",
+      "close_out": "Remove the media and stow it with the aircraft records. Restore the avionics bay closeout. Record the loaded part numbers on the aircraft configuration record; on standard B and later units attach the configuration report instead of transcribing it."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545112932616",
+        "LN760453-5C"
+      ],
+      "fins": [
+        "78TN",
+        "23TN",
+        "71TN"
+      ],
+      "drawings": [
+        "D45451170573"
+      ],
+      "software": [
+        "LE9N96486A3",
+        "LA7ND95B3FE"
+      ],
+      "zones": [
+        "252",
+        "264"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-45-1016",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-155690",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software load",
+      "data loader interface",
+      "configuration report",
+      "read back",
+      "avionics bay temperature"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "45-45-11-900-026-A",
+      "task_type": "ADJUSTMENT",
+      "effectivity_note": "All aircraft. Step 3 applies pre MOD-151480 only; step 10 applies post MOD-155690 only.",
+      "manhours": 2.5,
+      "personnel": 1,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "252",
+          "264"
+        ],
+        "access_panels": [
+          "252AL",
+          "264BR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Make sure that the power source will not be interrupted.",
+          "Do not operate a system controlled by the target computer during a load.",
+          "Do not disconnect the media while a load is in progress."
+        ],
+        "tooling": [
+          {
+            "reference": "Portable data loader",
+            "description": "Load device"
+          },
+          {
+            "reference": "Calibrated thermometer, -20 to 120 C",
+            "description": "Avionics bay temperature check"
+          }
+        ],
+        "consumables": [
+          "Lint free wipes"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "MOD-149120",
+    "doc_type": "MOD",
+    "title": "Flexible Duct Section and Revised Mount for the Engine Air Starter Motor",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Starting — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "80-10-12",
+      "36-10-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00193",
+          "to": "T00238"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "FROZEN",
+      "points": [
+        "PRODUCTION"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-09-02",
+      "released": "2026-04-15",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Introduces a flexible section in the air starter motor supply duct and softens the motor mount, addressing duct flange cracking traced to relative movement between the engine core and the pylon-mounted duct run.",
+    "sections": {
+      "reason": "Duct flange cracking has been found at the air starter motor inlet on seventeen engines, always at the same flange and always on the inboard side. Strain gauge work during ground running showed the flange carrying bending from relative movement between the engine core and the pylon-mounted duct run, which the rigid coupling transmits directly into the flange. The cracking is found at scheduled inspection and has never caused an in-flight event, but a failed flange releases high-pressure air into the fan compartment and the finding rate is increasing as the fleet ages.",
+      "description": "A flexible bellows section D8010117557935 is introduced between the pylon duct run and the starter motor inlet, taking the relative movement out of the flange. The motor mount link D8010117036736 is replaced by a version with a bonded elastomeric bush that reduces the transmitted vibration at the two lower attachments while keeping the motor position within the existing tolerance. The clamp assembly PE187919-09 is renewed at both ends of the bellows. Wiring at FIN 5097ES and FIN 6408ES4 for the start valve position and the motor overspeed switch is re-clamped away from the bellows, which moves in service. Work is in zones 463 and 433 with the fan cowl doors open, and is detailed on drawing D80101152437. The start valve, its control logic and the ducting upstream of the pylon interface are unchanged.",
+      "effects": "Mass increase of 2.9 kg per engine, giving 11.6 kg per aircraft, symmetric. No electrical load change. The bellows section is not interchangeable with the rigid coupling because the installed length differs by 22 mm and the pylon duct run must be re-shimmed. Start times and starter duty cycle limits are unchanged and no flight test is required. Once embodied, the flange inspection can move from every heavy check to a sampling basis. Removal and installation tasks, illustrated parts content and the servicing task for the starter all require update.",
+      "embodiment_note": "The design is frozen and awaiting certification. Production cut-in is planned but not yet effective, and no retrofit bulletin has been released. Operators with the flange finding continue to work to the existing repair scheme until the modification is available."
+    },
+    "entities": {
+      "part_numbers": [
+        "D8010117036736",
+        "D8010117557935",
+        "PE187919-09"
+      ],
+      "fins": [
+        "5097ES",
+        "6408ES4"
+      ],
+      "drawings": [
+        "D80101152437"
+      ],
+      "software": [],
+      "zones": [
+        "463",
+        "433"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-80-10-11-800-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "air starter motor",
+      "flexible duct",
+      "flange cracking",
+      "mount bush",
+      "fan compartment"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149120,
+      "mod_class": "MAJOR",
+      "change_category": "POWERPLANT",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1103",
+          "CS 25.571",
+          "CS 25.863"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 11.6,
+      "balance_impact": "Symmetric, no measurable CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D8010117557935"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D8010117036736",
+        "PE187919-09"
+      ],
+      "fins_affected": [
+        "5097ES",
+        "6408ES4"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 420,
+      "estimated_cost_keur": 1560,
+      "lead_time_weeks": 72,
+      "production_impact": "Cut-in planned, not yet effective",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

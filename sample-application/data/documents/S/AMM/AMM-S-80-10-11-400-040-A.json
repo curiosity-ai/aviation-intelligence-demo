@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "AMM-S-80-10-11-400-040-A",
+    "doc_type": "AMM",
+    "title": "Air Starter Motor and Supply Duct — Installation and Dry Motoring Check",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-01-17",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7000"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-04-16",
+      "released": "2019-12-09",
+      "revised": "2023-01-17",
+      "effective": "2023-02-06"
+    },
+    "abstract": "Installation of the air starter motor and the supply duct with the clamp tensioning sequence, followed by a dry motoring run that proves the joint and, where fitted, the valve position discrete.",
+    "sections": {
+      "purpose": "This task installs the air starter motor and the supply duct, sets the clamp tension and proves the installation by a dry motoring run with a leak check at the duct joints.",
+      "job_setup_note": "Clamp tension is what stops the joint fretting, so the torque wrench must be calibrated and the sequence must be followed. Where the two-piece spherical seat clamp is fitted, the seat must be free to move before the clamp is finally tensioned; a seat that has bound will transfer the misalignment straight into the joint face.",
+      "procedure": "1. Remove the blanks from the gearbox pad and both duct ends and check that nothing has entered. 2. Fit a new pad seal and offer the motor to the pad on the sling. 3. Install the attachment nuts and torque them in the sequence given, in two passes. 4. Install the seal 5193ES at the duct joint. 5. Offer the duct and start both clamps by hand. CAUTION: WHERE THE TWO-PIECE CLAMP IS FITTED, CHECK THAT THE SPHERICAL SEAT MOVES FREELY BEFORE FINAL TENSIONING. A BOUND SEAT PUTS THE MISALIGNMENT INTO THE JOINT FACE. 6. Tension the forward clamp PE187919-09 to the first-pass value, then the aft clamp D8010119758805, then return to the forward clamp for the final value. 7. Where the titanium bolts EN290030-3C are fitted, torque them to the value in the limits table and lock them. 8. Connect the starter electrical connector and, where the position switch is fitted, the switch tail. 9. Remove the isolation tag from the start control. 10. WARNING: KEEP CLEAR OF THE INTAKE AND THE EXHAUST DURING MOTORING. THE ENGINE WILL TURN WITHOUT NOTICE. 11. Do a dry motoring run to the duration in the limits table and record the peak rotor speed and the time to reach it. 12. During the run, listen at the duct joints for leakage and check afterwards for soot tracking at the faces. 13. Where the valve position switch is fitted, confirm that the valve-open discrete appears within one second of the start command and clears at the end. 14. Refit the firewall panel 983ES and close the fan cowls.",
+      "close_out": "Record the clamp torques, the peak rotor speed, the time to reach it and the discrete state. Compare the motoring figures against the previous record for the same engine; a fall of more than five per cent in peak speed points at a joint that is still leaking."
+    },
+    "entities": {
+      "part_numbers": [
+        "D8010119758805",
+        "PE187919-09",
+        "EN290030-3C",
+        "WES955482-79"
+      ],
+      "fins": [
+        "983ES",
+        "5193ES",
+        "2788ES3"
+      ],
+      "drawings": [
+        "D80101134147"
+      ],
+      "software": [],
+      "zones": [
+        "421",
+        "456",
+        "481"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-80-10-11-000-040-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "clamp tension",
+      "spherical seat",
+      "dry motoring",
+      "valve discrete",
+      "soot tracking"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "80-10-11-400-040-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "Auran 7000 aircraft; steps 7 and 13 apply only post modification",
+      "manhours": 7.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "421",
+          "456",
+          "481"
+        ],
+        "access_panels": [
+          "421CR",
+          "456CR",
+          "481CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep clear of the intake and exhaust during motoring.",
+          "Do not exceed the starter duty cycle.",
+          "Fit both cowl hold-open rods."
+        ],
+        "tooling": [
+          {
+            "reference": "98D80101-108",
+            "description": "Starter lifting sling"
+          },
+          {
+            "reference": "98D80101-120",
+            "description": "Torque wrench 10-100 Nm"
+          },
+          {
+            "reference": "98D80101-124",
+            "description": "Clamp tension gauge"
+          }
+        ],
+        "consumables": [
+          "Anti-seize compound, high temperature",
+          "Lockwire, 0.8 mm",
+          "Pad seal"
+        ],
+        "expendables": [
+          {
+            "part_number": "EN290030-3C",
+            "qty": 6
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-S-80-10-11-000-040-A"
+      ],
+      "steps": 14,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,351 @@
+[
+  {
+    "doc_id": "AMM-C-23-70-11-400-011-A",
+    "doc_type": "AMM",
+    "title": "ATC Datalink Router Display Unit — Installation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-12-25",
+      "reason": "Original issue of the ATC datalink router display unit installation task.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-04-24",
+      "released": "2018-12-25",
+      "revised": "2018-12-25",
+      "effective": "2019-01-15"
+    },
+    "abstract": "Installation of the air traffic control datalink router display unit in the lower forward rack position, with the configuration entry and the log-on test that complete the task.",
+    "sections": {
+      "purpose": "To install the datalink router display unit in the lower forward rack position and to prove the installation with a log-on to the ground station simulator.",
+      "job_setup_note": "The aircraft must be de-powered for the installation and then put back on external power for the test. The forward avionics bay must be open and the bay lighting on. Two persons are needed, one at the maintenance terminal and one at the rack. Electrostatic protection is required. The ground station simulator must be available before the task is started, because the task cannot be closed without it.",
+      "procedure": "Make sure that the electrical power is removed from the aircraft and that the warning notices are in position. Open the access panel to the forward avionics bay. Put on the electrostatic wrist strap and connect it to the rack bonding stud. Remove the blanking plate from the lower rack position. Examine the rear connector in the rack for bent or recessed pins. CAUTION: DO NOT USE FORCE TO SEAT THE UNIT. IF THE UNIT DOES NOT ENGAGE WITH LIGHT PRESSURE, REMOVE IT AND EXAMINE THE CONNECTOR AGAIN. Remove the display unit D2370118700860 from its bag and connect the rear connector. Push the unit fully into the rack and tighten the four captive fasteners in a diagonal sequence to 4.5 Nm. Install the titanium bolts AGS119203K9 at the tray retention points and torque to 9 Nm. Do a bonding resistance check between the unit case and the rack and make sure that the value is below the limit. Restore the electrical power. WARNING: MAKE SURE THAT THE BAY IS CLEAR OF PERSONNEL AND TOOLS BEFORE POWER IS RESTORED. At the maintenance terminal, enter the unit serial number and confirm that functional item 218RN is reported. Do the log-on test with the ground station simulator and confirm that the status line shows the simulator identity.",
+      "close_out": "Remove the ground station simulator and restore the antenna feed connection. Remove the electrostatic wrist strap. Make sure that the bay is clean and that no tools remain. Close the access panel. Remove the warning notices and the safety barriers. Record the installation, the serial number and the log-on test result."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370118700860",
+        "D2370006240541",
+        "AGS119203K9"
+      ],
+      "fins": [
+        "218RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211"
+      ],
+      "figures": [
+        "FIG-23-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-23-70-11-000-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-23-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "installation",
+      "log-on test",
+      "bonding check",
+      "configuration entry"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "23-70-11-400-011-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "Aircraft post MOD-111212",
+      "manhours": 2.6,
+      "personnel": 2,
+      "elapsed_time_hours": 1.6,
+      "access": {
+        "zones": [
+          "165",
+          "211"
+        ],
+        "access_panels": [
+          "165AL"
+        ],
+        "doors": [
+          "Forward avionics bay access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Put the safety barriers in position around the nose landing gear.",
+          "Make sure that the bay is clear of personnel and tools before power is restored."
+        ],
+        "tooling": [
+          {
+            "reference": "98C23701-201",
+            "description": "Electrostatic wrist strap and bonding lead"
+          },
+          {
+            "reference": "98C23701-311",
+            "description": "Datalink ground station simulator"
+          },
+          {
+            "reference": "98C00000-050",
+            "description": "Torque wrench 2-20 Nm"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, electrical"
+        ],
+        "expendables": [
+          {
+            "part_number": "AGS119203K9",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-C-23-70-11-000-011-A"
+      ],
+      "steps": 15,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-C-23-70-11-400-011-A",
+    "doc_type": "AMM",
+    "title": "ATC Datalink Router Display Unit — Installation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-12-03",
+      "reason": "Check of the message store safeguard record added before the replacement unit is configured, matching the safeguard step in the removal task.",
+      "raised_by_pawo": "PAWO-111212-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-04-24",
+      "released": "2018-12-25",
+      "revised": "2024-12-03",
+      "effective": "2024-12-24"
+    },
+    "abstract": "Installation of the air traffic control datalink router display unit in the lower forward rack position, with the message store safeguard check, the configuration entry and the log-on test that complete the task.",
+    "sections": {
+      "purpose": "To install the datalink router display unit in the lower forward rack position and to prove the installation with a log-on to the ground station simulator.",
+      "job_setup_note": "The aircraft must be de-powered for the installation and then put back on external power for the test. The forward avionics bay must be open and the bay lighting on. Two persons are needed, one at the maintenance terminal and one at the rack. Electrostatic protection is required. Before the task is started, obtain the message store safeguard record raised by the removal task: the removed unit's stored messages are saved before power is removed, and without that record the new unit cannot be shown to have started clean. The ground station simulator must be available before the task is started, because the task cannot be closed without it.",
+      "procedure": "Make sure that the electrical power is removed from the aircraft and that the warning notices are in position. Confirm that the message store safeguard record from the removal task is present and complete, and that the safeguard was taken before power was removed; if it was not, the store state of the removed unit is unknown and the engineering organisation decides whether the installation may proceed. Open the access panel to the forward avionics bay. Put on the electrostatic wrist strap and connect it to the rack bonding stud. Remove the blanking plate from the lower rack position. Examine the rear connector in the rack for bent or recessed pins. CAUTION: DO NOT USE FORCE TO SEAT THE UNIT. IF THE UNIT DOES NOT ENGAGE WITH LIGHT PRESSURE, REMOVE IT AND EXAMINE THE CONNECTOR AGAIN. Remove the display unit D2370118700860 from its bag and connect the rear connector. Push the unit fully into the rack and tighten the four captive fasteners in a diagonal sequence to 4.5 Nm. Install the titanium bolts AGS119203K9 at the tray retention points and torque to 9 Nm. Do a bonding resistance check between the unit case and the rack and make sure that the value is below the limit. Restore the electrical power. WARNING: MAKE SURE THAT THE BAY IS CLEAR OF PERSONNEL AND TOOLS BEFORE POWER IS RESTORED. At the maintenance terminal, enter the unit serial number and confirm that functional item 218RN is reported. Confirm that the message store of the installed unit is empty and record that it was, together with the safeguard record reference. Do the log-on test with the ground station simulator and confirm that the status line shows the simulator identity.",
+      "close_out": "Remove the ground station simulator and restore the antenna feed connection. Remove the electrostatic wrist strap. Make sure that the bay is clean and that no tools remain. Close the access panel. Remove the warning notices and the safety barriers. Record the installation, the serial number, the message store safeguard record reference and the log-on test result."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370118700860",
+        "D2370006240541",
+        "AGS119203K9"
+      ],
+      "fins": [
+        "218RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211"
+      ],
+      "figures": [
+        "FIG-23-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-23-70-11-000-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-23-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111212",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "datalink router",
+      "installation",
+      "message store safeguard",
+      "log-on test",
+      "configuration entry"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Lorencourt",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "23-70-11-400-011-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "Aircraft post MOD-111212",
+      "manhours": 2.9,
+      "personnel": 2,
+      "elapsed_time_hours": 1.6,
+      "access": {
+        "zones": [
+          "165",
+          "211"
+        ],
+        "access_panels": [
+          "165AL"
+        ],
+        "doors": [
+          "Forward avionics bay access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Put the safety barriers in position around the nose landing gear.",
+          "Make sure that the bay is clear of personnel and tools before power is restored."
+        ],
+        "tooling": [
+          {
+            "reference": "98C23701-201",
+            "description": "Electrostatic wrist strap and bonding lead"
+          },
+          {
+            "reference": "98C23701-311",
+            "description": "Datalink ground station simulator"
+          },
+          {
+            "reference": "98C00000-050",
+            "description": "Torque wrench 2-20 Nm"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, electrical"
+        ],
+        "expendables": [
+          {
+            "part_number": "AGS119203K9",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-C-23-70-11-000-011-A"
+      ],
+      "steps": 17,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "doc_id": "FCOM-Z-DSC-31-50-01",
+    "doc_type": "FCOM",
+    "title": "Indicating and Recording — Alerting Hierarchy and Aural Alert Order",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-01-22",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-00",
+      "title": "Central Warning — General"
+    },
+    "secondary_ata": [
+      "31-60"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-06-12",
+      "released": "2024-01-22",
+      "revised": null,
+      "effective": "2024-02-12"
+    },
+    "abstract": "Flight crew description of the alerting hierarchy, the order in which aural alerts are presented and the phases in which alerts are inhibited, including what changes on aircraft at the later computer standard.",
+    "sections": {
+      "purpose": "This entry describes to the flight crew how alerts are prioritised, the order in which competing aural alerts are presented, and the take-off and go-around phases in which alerts are inhibited.",
+      "description": "Alerts are ranked so that the one requiring the most immediate action is heard first. When several conditions occur together, the aircraft presents them in the ranked order rather than in the order they arose, and it will not present more than a small number in quick succession. During take-off and go-around a defined set of alerts is inhibited so that the crew is not distracted at the point of highest workload; the inhibited set and the boundaries of the inhibit window are given in this section. On aircraft at the later computer standard the ranking has been revised so that configuration and control alerts sit above advisory and surveillance alerts throughout those phases, and the inhibit window extends further than crews may be used to. The change is deliberate and it is the reason a rejected take-off now produces fewer competing sounds. Crews operating a mixed fleet should expect a different order between aircraft and should not treat that difference as a fault.",
+      "crew_procedure": "Respond to the first alert presented and work down the list as it is presented; do not attempt to reorder the response on the basis of what was expected. During take-off and go-around, remember that some alerts are suppressed and that the absence of a sound is not evidence that a condition does not exist. If the presented order differs from what the crew expects on another aircraft of the fleet, confirm the aircraft standard before reporting it, and record the actual order heard if it is reported."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-Z-PRO-26-20-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "alerting hierarchy",
+      "aural alert order",
+      "inhibit window",
+      "rejected take-off",
+      "mixed fleet"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Description — Flight Warning System",
+      "entry_number": "DSC-31-50-01",
+      "flight_phase": "TAKEOFF",
+      "operational_impact": "TRAINING_REQUIRED",
+      "crew_action": "Respond to alerts in the order presented. Confirm the aircraft standard before reporting an unexpected order.",
+      "affects_qrh": true,
+      "affects_mel": true,
+      "mel_items": [
+        "31-50-01A"
+      ],
+      "systems": [
+        "Flight Warning System",
+        "ECAM",
+        "Aural Warning Generation"
+      ],
+      "related_entries": [
+        "FCOM-Z-PRO-26-20-01",
+        "FCOM-Z-DSC-23-70-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,201 @@
+[
+  {
+    "doc_id": "MOD-136750",
+    "doc_type": "MOD",
+    "title": "Core Processing Module Rack — Backplane and Cooling Standard 3",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-02-08",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20",
+      "21-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00029",
+          "to": "S01430"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "CKP",
+        "ZCT",
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01430",
+      "production_cut_in_date": "2022-06-13",
+      "retrofit_via": [
+        "SLN-42-1016"
+      ]
+    },
+    "dates": {
+      "created": "2020-11-10",
+      "released": "2022-02-08",
+      "revised": null,
+      "effective": "2022-03-01"
+    },
+    "abstract": "The second replacement standard for the core processing rack, which renews the backplane and the cooling path in addition to the modules, and which is the entry point for aircraft that never took the first standard.",
+    "sections": {
+      "reason": "The first replacement standard kept the delivered backplane, and by 2020 the backplane itself was the limiting item: connector insertion counts were reaching their qualified limit on aircraft that had been through several module changes, and the cooling path designed for the original dissipation was oversized for the new modules and undersized for the two slots that had grown. Eleven backplane-related events were recorded, all of them intermittent and all of them expensive to find. Continuing to fit new modules into an ageing backplane was not defensible.",
+      "description": "The backplane is renewed and the guide rail set is replaced with a version that carries the cooling ducting integrally, so that airflow is directed at the two high-dissipation slots rather than spread evenly. The interface unit HE750421-36 is retained from the first standard where it is already fitted and supplied new where it is not. Pan head screws EN873313K4 and countersunk screws LN727699-25 are used at the new rail attachment. Data concentrator 493CP2 keeps its slot and the outboard concentrator 7CP7 moves one position so that the two high-dissipation cards are not adjacent. The configuration set LF6L52A03E3 is reloaded unchanged. Work is in the avionics bay in zones 162 and 166 with the rack front removed and the ground stud in zone 183 re-faced. Detail is on drawing D42101281090.",
+      "effects": "Mass increase of 1.7 kg over the first standard, and a net reduction of 1.1 kg against the delivered configuration. Direct current load is unchanged. Interchangeable at the aircraft level; modules of the first and second standard may be mixed in this rack, which is deliberate and is what makes it the entry point for unmodified aircraft. Bay cooling margin improves by about six degrees at the hot slots. The maintenance terminal reads the rack identically.",
+      "embodiment_note": "Production cut-in at MSN S01430. Retrofit is thirty-eight manhours at a C-check with the bay floor open. Superseded in 2026 by the extended partition memory standard, but remains the recommended step for any aircraft still at the delivered configuration."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "drawings": [
+        "D42101281090"
+      ],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01430"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-42-1016",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-133290",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "MOD-138330",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "AMM-S-42-10-12-400-043-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "backplane",
+      "core processing",
+      "cooling path",
+      "insertion count",
+      "module rack"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 136750,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "OBSOLESCENCE",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -1.1,
+      "balance_impact": "Forward of the reference datum; negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "HE750421-36"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins_affected": [
+        "493CP2",
+        "7CP7"
+      ],
+      "software_affected": [
+        "LF6L52A03E3"
+      ],
+      "estimated_manhours": 240,
+      "estimated_cost_keur": 1980,
+      "lead_time_weeks": 52,
+      "production_impact": "Cut-in at MSN S01430",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "doc_id": "MOD-112017",
+    "doc_type": "MOD",
+    "title": "Crew Mask Regulator Change to a Quick-Donning Unit with Integrated Microphone Test",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "35",
+      "ata_4d": "35-10",
+      "ata_6d": "35-10-12",
+      "title": "Crew Oxygen — Crew Mask Regulator"
+    },
+    "secondary_ata": [
+      "35-10-11",
+      "23-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "IOW"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-06-30",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Idea captured for a crew mask regulator that can be donned one-handed and that tests its own microphone path, following crew reports of donning time and of a mask microphone found unserviceable only during an actual event.",
+    "sections": {
+      "reason": "Two operators have measured crew donning time during recurrent training and found the delivered mask taking between five and nine seconds against a target of five, with the harness inflation trigger being the step that most often has to be repeated. Separately, three events were reported where the mask microphone was found unserviceable at the moment it was needed, because the preflight test exercises the regulator flow but not the audio path. Neither finding is an airworthiness issue on its own but together they make a reasonable case for changing the unit at the next opportunity.",
+      "description": "The proposal is to fit a regulator that inflates the harness from a single squeeze and that routes the microphone through a self-test loop the preflight check exercises. The accumulator D3510125326326 is replaced by a smaller item to make room for the test circuit, the heat exchanger D3510127977684 in the regulator body is retained and the manifold sub-assembly D3510128491370 is re-issued with the additional port. Tension bolts EN436848-89 and shear bolts EN685855-63 are renewed at the stowage box. Functional items 4155HD, 5HE and 9HD are affected. Work is at the crew stowage positions in the flight compartment, zones 211, 213 and 223, where the run behind the side console would have to carry the additional audio pair. Reference detail is on drawings D35101233542 and D35101260585.",
+      "effects": "Estimated mass reduction of 0.4 kg per station. Electrical load increases by 5 volt-amperes for the test circuit. The regulator would not be interchangeable with the delivered unit because the stowage box interface changes. The preflight oxygen check in the flight crew procedures would gain the audio step and lose the separate microphone check, which is a small net saving in the flow. Maintenance content for the mask functional test would be re-written.",
+      "embodiment_note": "Nothing is committed. If launched it would be offered as both a production cut-in and a retrofit, since the stowage box work is contained and can be done at a line stop. No supplier has been selected.",
+      "open_points": "Before any commitment the proposal must be checked against whatever else is competing for the run behind the flight compartment side console, and against the audio path change already frozen for the interphone loop, since introducing a second audio route into the same unit twice within two years would be avoidable if the two were combined."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3510125326326",
+        "D3510127977684",
+        "D3510128491370",
+        "EN436848-89",
+        "EN685855-63"
+      ],
+      "fins": [
+        "4155HD",
+        "5HE",
+        "9HD"
+      ],
+      "drawings": [
+        "D35101233542",
+        "D35101260585"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "213",
+        "223"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111362",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "crew mask",
+      "quick donning",
+      "microphone test",
+      "regulator",
+      "preflight check"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Vaubranche",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 112017,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1439",
+          "CS 25.1447"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -0.8,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 5,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3510125326326",
+        "D3510128491370"
+      ],
+      "fins_affected": [
+        "4155HD",
+        "5HE",
+        "9HD"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 150,
+      "estimated_cost_keur": 460,
+      "lead_time_weeks": 44,
+      "production_impact": "Cut-in only if launched; supplier selection not started",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

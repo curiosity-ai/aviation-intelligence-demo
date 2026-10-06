@@ -1,0 +1,312 @@
+[
+  {
+    "doc_id": "PAWO-145110-02",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis Round Two — Head End Rack Feeder Capacity Ahead of the Seat Power Uprating",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-31",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-12",
+      "title": "Inflight Entertainment — Head End Server"
+    },
+    "secondary_ata": [
+      "44-20-13",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00218"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-06-01",
+      "released": "2026-07-31",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Second round of pre-analysis on the second generation head end architecture, raised in 2026 to establish how much rack feeder capacity the architecture actually left before the upper deck seat power uprating consumes it.",
+    "sections": {
+      "objective": "Re-examine the second generation head end architecture from the point of view of what it left behind rather than what it delivered, specifically the rack feeder capacity and the protection coordination, and establish whether the seat power uprating now in pre-analysis can be scoped as a seat side change only. The round was raised because two design offices are now working on the same busbar from opposite ends and neither set of documents says so.",
+      "findings_summary": "Three items were confirmed. The seat power candidate as drafted re-does part of the rack feeder work this modification already delivered, and the overlap is visible in the shared anchor nut standard, the shared equipment area and the shared rack drawing, but not in either scope statement; read on their own the two documents appear to be about different things. The chassis installation task carries the feeder rating as an installation note rather than as a data item, which is why nobody found it when the seat candidate was scoped. The third item is the cabin lighting conversion, which does not share a single identifier with either document and yet is the only reason the busbar closes at all once both changes are embodied.",
+      "next_steps": "The remaining load assessment was delegated to the cabin electrical office, which owns the busbar model and can settle in a week what this office would take a month to approximate. The recommendation carried over with the handover is that the seat power candidate be rescoped to the seat feeders only and that the rack feeder rating be published as a data item rather than as a note in an installation task, so that the next search finds it."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420121334529",
+        "EN258434K3",
+        "D4420116103848"
+      ],
+      "fins": [
+        "7RK6",
+        "8385RM"
+      ],
+      "drawings": [
+        "D44200016279"
+      ],
+      "software": [
+        "LD8CA72D35B"
+      ],
+      "zones": [
+        "916",
+        "941",
+        "942"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-145110",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "rack feeder",
+      "busbar margin",
+      "seat power",
+      "round two"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-145110-02",
+      "subject_mod": "MOD-145110",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-31",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-06-01",
+      "due_date": "2026-08-14",
+      "analysis_round": 2,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EAAM"
+        ],
+        "estimated_manhours": 75,
+        "spent_manhours": 58
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "44",
+          "25",
+          "33"
+        ],
+        "ata_4d": [
+          "44-20",
+          "25-20",
+          "33-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00218"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "EN258434K3",
+            "D4420116103848"
+          ],
+          "fins": [
+            "7RK6",
+            "8385RM"
+          ],
+          "drawings": [
+            "D44200016279"
+          ],
+          "zones": [
+            "916",
+            "942"
+          ],
+          "software": [
+            "LD8CA72D35B"
+          ]
+        },
+        "similarity_seeds": [
+          "cabin busbar margin after a head end architecture change",
+          "how much seat power capacity remains on the upper deck"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Quantify the feeder capacity delivered and consumed by the architecture",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Compare the scope of the seat power candidate against the delivered work",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Search the cabin for load reductions available elsewhere",
+          "method": "SEMANTIC",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-147410",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN258434K3"
+            ],
+            "shared_fins": [
+              "7RK6"
+            ],
+            "shared_zones": [
+              "916",
+              "942"
+            ],
+            "shared_ata_6d": [
+              "44-20-13"
+            ],
+            "shared_drawings": [
+              "D44200016279"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The seat power candidate proposes to uprate feeders that this modification already uprated at the rack end. Neither scope statement mentions the other and the two read as different subjects, but they meet on the anchor nut standard, the equipment area and the rack drawing.",
+          "resolution": "Rescope the candidate to the seat feeders only and reference the rack feeder standard as an assumed precondition."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-T-44-20-12-400-002-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4420121334529",
+              "EN258434K3",
+              "D4420116103848"
+            ],
+            "shared_fins": [
+              "7RK6",
+              "8385RM"
+            ],
+            "shared_zones": [
+              "916",
+              "941",
+              "942"
+            ],
+            "shared_ata_6d": [
+              "44-20-12",
+              "44-20-13"
+            ],
+            "shared_software": [
+              "LD8CA72D35B"
+            ],
+            "shared_drawings": [
+              "D44200016279"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task carries the delivered feeder rating as a note in the preliminaries rather than as a data item. That is why the seat power scoping missed it: no search of the data model returns a value that only exists inside a paragraph of task text.",
+          "resolution": "Publish the feeder rating as a data item on the modification and leave the task text as a cross reference."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-145340",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "shared_drawings": [],
+            "similarity_note": "No identifier and no chapter in common. One document converts cabin lighting to solid state strips and reports a load reduction in its effects text; the other adds entertainment load at the rack. The only link is the busbar they both sit on, which neither names."
+          },
+          "rationale": "With the architecture and the seat uprating both embodied the busbar does not close on an aircraft that still has the original lighting. The lighting conversion is the single largest cabin load reduction available and is therefore a precondition for the pair, which no entity search would ever show.",
+          "resolution": "Handed to the cabin electrical office with the delegation, to be stated as a concurrency in whichever change is released last."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-143680",
+          "doc_type": "MOD",
+          "reason": "Shares four part numbers, the rack FIN, both equipment zones and two software loads with the subject, and is the top entity result by a wide margin. It is the superseded first generation standard and no aircraft in the fleet is still at it, so nothing it describes can constrain the busbar today."
+        }
+      ],
+      "conclusion": "Issued 2026-07-31. The overlap with the seat power candidate is confirmed and the busbar question handed to the cabin electrical office, which owns the model.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

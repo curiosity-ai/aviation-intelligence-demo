@@ -1,0 +1,167 @@
+[
+  {
+    "doc_id": "AMM-M-29-20-12-200-024-A",
+    "doc_type": "AMM",
+    "title": "Inspection of the Ram Air Turbine Filter and Position Transmitter",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-09-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-20",
+      "ata_6d": "29-20-12",
+      "title": "Auxiliary System — Ram Air Turbine"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-04-21",
+      "released": "2020-12-01",
+      "revised": "2024-09-05",
+      "effective": "2024-10-02"
+    },
+    "abstract": "Inspection of the ram air turbine filter element and position transmitter with the turbine locked stowed, including the accumulator pre-charge reading that explains most slow stow findings.",
+    "sections": {
+      "purpose": "This task gives the inspection of the ram air turbine filter element and position transmitter and the reading of the accumulator pre-charge, done with the turbine locked in the stowed position.",
+      "job_setup_note": "Install the turbine ground lock before anyone works in the bay. The turbine deploys under stored energy and it will do so without warning if the release is disturbed. Take the accumulator pre-charge reading with the system cold; a warm reading is high and will hide a low pre-charge. Two people are needed, one in the bay and one at the maintenance panel for the indication checks.",
+      "procedure": "1. Make the aircraft safe and install the ram air turbine ground lock. WARNING: INSTALL THE TURBINE GROUND LOCK BEFORE ANYONE ENTERS THE BAY. THE TURBINE DEPLOYS UNDER STORED ENERGY AND CAN CAUSE FATAL INJURY. 2. Get access to the turbine bay in zone 151 and to the adjacent equipment area in zone 173. 3. Confirm that the hydraulic system is depressurised and that the system is cold. 4. Read the accumulator D2920125958145 pre-charge and record it with the local temperature. CAUTION: TAKE THE PRE-CHARGE READING WITH THE SYSTEM COLD. A WARM READING IS HIGH AND WILL HIDE A LOW PRE-CHARGE. 5. Remove the filter bowl and take out the element D2920128017062. 6. Do a detailed visual inspection of the element for wear debris and keep it for assessment if debris is present. 7. Check the bypass indicator and record whether it has operated. 8. Install a new element and refit the bowl to the stated torque. 9. Do a detailed visual inspection of the position transmitter D2920129947503 and its wiring. 10. Check the actuator 17GA and the sensor 90GG for security and for chafing. 11. Do the indication check at the maintenance panel with the turbine stowed. 12. Do a functional check of the stow position indication.",
+      "close_out": "Record the pre-charge reading, the local temperature, the element condition and the bypass indicator state on the aircraft work card. Send the element for assessment if wear debris is present. Remove the turbine ground lock only after the bay is clear and the indication checks are complete. Report a pre-charge that is inside the limit but falling against the previous visit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2920128017062",
+        "D2920129947503",
+        "D2920125958145"
+      ],
+      "fins": [
+        "17GA",
+        "90GG"
+      ],
+      "drawings": [
+        "D29201256290"
+      ],
+      "software": [],
+      "zones": [
+        "151",
+        "173"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-167350",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "ram air turbine",
+      "filter element",
+      "accumulator pre-charge",
+      "position transmitter",
+      "ground lock"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Hydraulic Systems Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "29-20-12-200-024-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. Aircraft at the coarser filter standard use the second column of the element acceptance table and have a latching bypass indicator.",
+      "manhours": 6.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.5,
+      "access": {
+        "zones": [
+          "151",
+          "173"
+        ],
+        "access_panels": [
+          "151AR",
+          "173CR"
+        ],
+        "doors": [
+          "Ram air turbine bay door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Install the ram air turbine ground lock before entering the bay.",
+          "Confirm that the hydraulic system is depressurised.",
+          "Take the pre-charge reading with the system cold."
+        ],
+        "tooling": [
+          {
+            "reference": "98D2920-110",
+            "description": "Accumulator pre-charge gauge"
+          },
+          {
+            "reference": "98D2920-085",
+            "description": "Ram air turbine ground lock"
+          },
+          {
+            "reference": "TW-050",
+            "description": "Torque wrench 5-50 Nm"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, approved type",
+          "Cleaning agent, solvent, hydraulic"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-32-40-12-700-018-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

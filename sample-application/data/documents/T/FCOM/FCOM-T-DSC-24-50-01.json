@@ -1,0 +1,121 @@
+[
+  {
+    "doc_id": "FCOM-T-DSC-24-50-01",
+    "doc_type": "FCOM",
+    "title": "Electrical Load Distribution and Load Shedding — System Description",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-12-16",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-00",
+      "title": "Electrical Power — Load Distribution"
+    },
+    "secondary_ata": [
+      "24-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-08-17",
+      "released": "2022-12-16",
+      "revised": null,
+      "effective": "2023-01-24"
+    },
+    "abstract": "Flight crew description of how electrical loads are distributed and shed, what the crew see when a generator is lost and which services are dropped in which order.",
+    "sections": {
+      "purpose": "Describes for the flight crew how the electrical loads are distributed across the busbars, what happens automatically when a source is lost, and which services are shed in which order.",
+      "description": "Electrical power is distributed to the aircraft services through a set of busbars fed from the generators, with each busbar able to be fed from more than one source. When a source is lost, the system transfers the affected busbars to a remaining source automatically and the crew see the transfer on the electrical page. Where the remaining sources cannot carry the whole load, services are shed in a defined order: commercial and galley loads first, then cabin services, then non-essential flight deck services. Flight critical services are never shed. On aircraft with the current distribution standard the transfer is commanded rather than allowed to happen by itself, which means the busbar changeover is clean and the crew do not see a momentary loss of the services on the transferred bus. On earlier aircraft a brief interruption at changeover is normal and is not a fault. The electrical page shows the source feeding each busbar and any load that has been shed.",
+      "crew_procedure": "On loss of a generator, confirm on the electrical page that the affected busbars have transferred and note any load that has been shed. Do not attempt to restore a shed load manually while the shed condition is displayed; the system will restore it when capacity allows. If a busbar shows no source, apply the electrical procedure in the quick reference handbook. Advise the cabin crew when galley loads have been shed, because the first indication in the cabin will be a galley that has gone dead with no explanation.",
+      "limitation_note": ""
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [
+        "3PC"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-T-DSC-31-50-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "load shedding",
+      "busbar",
+      "generator loss",
+      "electrical page",
+      "transfer"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Electrical — Load Distribution and Shedding",
+      "entry_number": "DSC-ELEC-24-50-01",
+      "flight_phase": "ALL_PHASES",
+      "operational_impact": "NONE",
+      "crew_action": "Confirm busbar transfer on the electrical page and note any shed load.",
+      "affects_qrh": true,
+      "affects_mel": false,
+      "mel_items": [],
+      "systems": [
+        "Electrical Load Distribution",
+        "Generator Control"
+      ],
+      "related_entries": [
+        "FCOM-T-DSC-31-50-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

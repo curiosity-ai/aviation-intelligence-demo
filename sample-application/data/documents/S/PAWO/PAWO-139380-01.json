@@ -1,0 +1,396 @@
+[
+  {
+    "doc_id": "PAWO-139380-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Battery Charge Limiter and Essential Load Shedding for Extended Diversion",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-30",
+      "ata_6d": "24-30-12",
+      "title": "DC Generation — Battery Charge Limiter"
+    },
+    "secondary_ata": [
+      "24-60",
+      "31-50",
+      "53-22"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "AUN",
+        "GBA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-20",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the charge limiter and load shedding candidate, covering the earlier bus bar standard it depends on, a structural repair in the bay it routes through, and the crew endurance figure that is the real deliverable.",
+    "sections": {
+      "objective": "Identify every released or candidate item applicable to the SLN-30R3 and SLN-39R1 aircraft in the target operators' fleets that the charge limiter and load shedding candidate would conflict with, depend on, supersede or invalidate, and establish whether the claimed endurance improvement can be substantiated on the population as it actually stands.",
+      "scope_note": "The search covers ATA 24-30 and 24-60 as the primary chapters, ATA 31-50 for the indicating and recording loads that appear on the shed list and ATA 53-22 for the structure the relay bracket attaches to. ATA 21 was excluded: the shed list contains no air conditioning item. ATA 92 wiring was searched and returned only routes that are unchanged. The structural chapter was added after entity linking returned a repair scheme through a shared zone, which was not anticipated when the scope was written.",
+      "method_note": "Entity linking was run from the three part numbers, the three equipment positions, the drawing and the three zones the candidate carries. Semantic similarity was run over titles, abstracts and reason-for-change text with the two seed phrases below. The structural repair scheme was returned by entity linking alone through a single shared zone and has no vocabulary in common with the candidate. The flight crew description was returned by similarity alone with no shared identifier at all, and it turned out to contain the number the whole candidate exists to change.",
+      "findings_summary": "Six items are confirmed and one is blocking. The blocking item is the prerequisite: the candidate assumes the machined bus bar and silver-plated relay standard, both because the shed relay takes its feed from the bus bar assembly that standard introduced and because the leakage cut-off is calibrated against the joint resistance it achieves. On an aircraft at the delivered configuration neither holds, and the target effectivity has not been checked aircraft by aircraft. The most interesting finding came from entity linking alone: the centre fuselage external patch repair covers the same bay the relay feed routes through, and its drawing forbids an equipment attachment inside the patch footprint. A structural repair scheme and an electrical shedding change share no vocabulary at all and would never have been connected by reading; they share one zone. Similarly the flight crew description was found only by similarity, and it publishes the endurance figure that the crew actually plans a diversion on. That figure is the deliverable of this candidate and nothing in the candidate dossier mentions it. Three of the shed loads feed indicating and recording functions, which is a certification question rather than a load analysis one, and the outflow valve candidate is changing the same essential network in the opposite direction without either load case knowing about the other.",
+      "next_steps": "Confirm the prerequisite standard aircraft by aircraft before the effectivity is fixed. Extract the patched aircraft from the repair map and agree an alternative bracket position for them. Refer the shed list to the certification office. Agree a single essential network load case with the outflow valve candidate team. Make the crew endurance figure an explicit deliverable and agree its publication route with flight operations."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2430126844974",
+        "IB898151-61",
+        "D2460112077642"
+      ],
+      "fins": [
+        "2389GX",
+        "70GX",
+        "360XU"
+      ],
+      "drawings": [
+        "D24301249210"
+      ],
+      "software": [],
+      "zones": [
+        "115",
+        "122",
+        "592"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00184",
+        "S01705"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-139380",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-260561",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-130310",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SRM-S-53-22-11-013",
+        "doc_type": "SRM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "FCOM-S-DSC-24-40-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SRM-S-51-20-11-009",
+        "doc_type": "SRM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-133730",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-139620",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "load shedding",
+      "battery endurance",
+      "repair footprint",
+      "conflict search"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-139380-01",
+      "subject_mod": "MOD-139380",
+      "source_io": "IO-S-260561",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-20",
+      "due_date": "2026-09-25",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "EDSA",
+          "EYIS",
+          "EGAM"
+        ],
+        "estimated_manhours": 140,
+        "spent_manhours": 86
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-39"
+        ],
+        "ata_2d": [
+          "24",
+          "31",
+          "53",
+          "51"
+        ],
+        "ata_4d": [
+          "24-30",
+          "24-60",
+          "31-50",
+          "53-22",
+          "51-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D2430126844974",
+            "IB898151-61",
+            "D2460112077642"
+          ],
+          "fins": [
+            "2389GX",
+            "70GX",
+            "360XU"
+          ],
+          "drawings": [
+            "D24301249210"
+          ],
+          "zones": [
+            "115",
+            "122",
+            "592"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "essential network endurance shorter than the planning figure",
+          "trickle current into a load that should have been shed"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Confirm the prerequisite bus bar standard across the effectivity",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search structural repairs in the relay feed bay",
+          "method": "ENTITY",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Refer the shed list to the certification office",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Reconcile the essential network load case with the outflow valve candidate",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T05",
+          "title": "Agree the crew endurance figure publication route",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-130310",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found through the applicability condition. The candidate declares the earlier standard as a post-mod condition and the two sit on adjacent sub-chapters with no shared part number and no common ATA 6D."
+          },
+          "rationale": "The candidate assumes the machined output bus bar and the silver-plated relay set. Its shed relay is fed from the bus bar assembly that the earlier standard introduced, and the leakage cut-off is calibrated against the joint resistance that standard achieves. On an aircraft at the delivered configuration the endurance claim would not hold and the shed relay would have nowhere to take its feed.",
+          "resolution": "Confirm aircraft by aircraft that the earlier standard is embodied across the target effectivity, and keep it as a hard post-mod condition rather than a recommendation."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "SRM-S-53-22-11-013",
+          "doc_type": "SRM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "122"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The external patch repair covers the centre fuselage lower shell in the same bay the candidate takes its shed relay feed through, and the repair drawing requires that no equipment attachment falls inside the patch footprint. The two documents describe entirely different subjects in entirely different vocabulary: one is a structural repair scheme and the other is an electrical load shedding change. Nothing links them but the zone, and an aircraft that already carries a patch there may not be able to accept the relay bracket.",
+          "resolution": "Extract the patched aircraft from the repair map before the effectivity is fixed, and agree an alternative bracket position for them."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "FCOM-S-DSC-24-40-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by similarity alone. The crew entry talks about what stays powered, what is shed and how long the battery lasts; the candidate talks about charge laws, leakage currents and latching contactors. No FIN, part number or zone is shared, and the only common ground is the concept of endurance expressed in two entirely different registers."
+          },
+          "rationale": "The crew entry publishes the endurance figure the crew plans a diversion on, and states that non-essential loads drop automatically with no crew action. The candidate changes both: it raises the endurance by about nineteen minutes and it adds three loads to the automatic shed. The figure in the crew entry is the one that actually governs the operation, and changing it is the whole point of the candidate, yet nothing in the candidate dossier references it.",
+          "resolution": "Make the crew endurance figure an explicit deliverable of the candidate and agree with flight operations when it may be published."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-S-51-20-11-009",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Reached by traversing from the patch repair in the same bay to the protective scheme restoration it calls out."
+          },
+          "rationale": "Any bracket added to a structure that carries a completed repair has to respect the protective scheme boundary, and the restoration scheme requires that bonding lands be masked and proved. The candidate's shed relay bracket is a bonded item and its land would sit inside a repair boundary on the patched aircraft.",
+          "resolution": "Include the bonding land treatment for a patched structure in the candidate installation instructions."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-133730",
+          "doc_type": "MOD",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both strategies returned it. The two documents share the indicating and recording chapter as a secondary reference and describe changes that alter what is recorded about the aircraft."
+          },
+          "rationale": "Three of the loads the candidate sheds automatically feed indicating and recording functions. Whether those functions may be lost after a double generator failure is a certification question that the load analysis alone does not answer, and the maintenance terminal standard is the document that defines what is expected to keep reporting.",
+          "resolution": "Refer the shed list to the certification office and confirm which indicating and recording functions must survive."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "MOD-139620",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found through the applicability overlap: both candidates target overlapping twin-engine effectivities and both draw on the essential network."
+          },
+          "rationale": "The outflow valve candidate removes twenty-eight volt-amperes from the second essential bus by consolidating two housings into one, and the load shedding candidate is counting every volt-ampere on the same network. The two changes are additive and neither load analysis knows about the other.",
+          "resolution": "Agree a single essential network load case covering both candidates before either endurance claim is submitted."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-134860",
+          "doc_type": "MOD",
+          "reason": "Ranks high on similarity because it is an extended-duration change justified by diversion time and uses the same operational vocabulary throughout. It is a cargo compartment fire suppression change with no electrical load on the essential network, no shared equipment position and no zone in common with the candidate."
+        },
+        {
+          "doc_id": "SLN-24-1071",
+          "doc_type": "SB",
+          "reason": "Returned first by entity linking because it embodies the prerequisite standard and shares the bus bar and relay part numbers. It is the vehicle by which the prerequisite is satisfied rather than a conflict with the candidate, and treating it as a conflict would invert the dependency the analysis has just established."
+        }
+      ],
+      "conclusion": "Not yet issued. The prerequisite check is incomplete and the certification referral is open.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

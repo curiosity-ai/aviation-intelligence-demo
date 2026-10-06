@@ -1,0 +1,433 @@
+[
+  {
+    "doc_id": "PAWO-149850-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Redundant Supply Rail and Revised Port Initialisation for the Network Switch",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Integrated Modular Avionics — Network Switch"
+    },
+    "secondary_ata": [
+      "42-20-12",
+      "45-20-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00080",
+          "to": "T00238"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "JTA",
+        "GBA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-07-06",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the second issue network switch standard, covering the supersession of the thermal redesign, the software bulletin whose configuration load it replaces, the segregation argument for the second rail and the compartment it shares with the datalink equipment.",
+    "sections": {
+      "objective": "Establish what the redundant supply rail and the revised port initialisation order supersede or invalidate, whether the second rail can be taken from the opposite bus without breaking the electrical segregation argument, and what the third change to the maintenance message set does to the troubleshooting content.",
+      "scope_note": "The search covers ATA 42-20 as the primary chapter, ATA 45-20 as secondary because the maintenance message presentation is owned there, and ATA 24-50 for the bus from which the second rail would be taken. ATA 23-70 was included through the zone search rather than by chapter, because the datalink equipment shares the forward avionics compartment. Structures chapters were not searched.",
+      "method_note": "Entity linking was seeded from the three part numbers, the two FINs, the two drawings, the two software part numbers and the two zones. Semantic similarity was run over the operator request text, the reason-for-change sections and the maintenance message descriptions. One finding came from semantic similarity alone and it is the one the team found most useful: a central maintenance system change in a different chapter, written about correlation rules rather than about switches, which is trying to solve the same operator problem from the other end. One finding came from the zone search alone, connecting the candidate to a datalink relocation with which it shares nothing but a compartment.",
+      "findings_summary": "Seven items are confirmed and two are blocking. The candidate supersedes the thermal redesign of the line card, which is itself still being retrofitted, and the two must not be embodied out of order because the revised port initialisation assumes the redesigned card. More seriously, the configuration load delivered by the software bulletin is superseded outright: an aircraft that takes the candidate and later has a switch carrier replaced from spares would receive a carrier carrying the earlier load, and the port initialisation order would then be wrong rather than merely old. That is the blocking finding and it is the same spares mechanism that a previous analysis on this equipment identified and only partly fixed. Two documentation items follow, and both are reworks rather than amendments: the fault isolation procedure and the maintenance task were written around the current message set and the candidate changes it for the third time. The illustrated parts figure needs the modified rack. And the compartment is shared with the datalink installation, which is adding a feed of its own.",
+      "next_steps": "Obtain an electrical segregation position on taking the second rail from the opposite bus before the design proceeds. Agree with the spares organisation how a carrier is prevented from arriving with a superseded load, this time at the process level rather than by a note in a bulletin. Coordinate the compartment work with the datalink candidate so that the two feeds are routed once. Plan the troubleshooting rework as a rewrite and give it its own owner."
+    },
+    "entities": {
+      "part_numbers": [
+        "AES271290K2",
+        "D4220115959692",
+        "D4220122248639"
+      ],
+      "fins": [
+        "2029CP1",
+        "423CP4"
+      ],
+      "drawings": [
+        "D42201115709",
+        "D42201260575"
+      ],
+      "software": [
+        "LC9R67A042E",
+        "LE7RC1DE5E9"
+      ],
+      "zones": [
+        "163",
+        "161"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149850",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-T-260503",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "network switch",
+      "supply rail",
+      "port initialisation",
+      "spares reversion"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-149850-01",
+      "subject_mod": "MOD-149850",
+      "source_io": "IO-T-260503",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-07-06",
+      "due_date": "2026-10-16",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 230,
+        "spent_manhours": 66
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "42",
+          "45",
+          "24",
+          "23"
+        ],
+        "ata_4d": [
+          "42-20",
+          "45-20",
+          "24-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "T00080",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4220115959692",
+            "D4220122248639"
+          ],
+          "fins": [
+            "2029CP1",
+            "423CP4"
+          ],
+          "drawings": [
+            "D42201115709"
+          ],
+          "zones": [
+            "163",
+            "161"
+          ],
+          "software": [
+            "LC9R67A042E"
+          ]
+        },
+        "similarity_seeds": [
+          "burst of maintenance messages after a cold night stop",
+          "configuration held in the equipment and reverted by a spare",
+          "port brought up in dependency order with a hold at each stage"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Trace the switch standard supersession and load chain",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Obtain an electrical segregation position on the second rail",
+          "method": "SME_INTERVIEW",
+          "owner": "ELSC",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the spares process for load reversion",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Assess the compartment work against the datalink candidate",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "OPEN"
+        },
+        {
+          "task_id": "T05",
+          "title": "Scope the troubleshooting rework",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-147040",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES271290K2",
+              "D4220115959692"
+            ],
+            "shared_fins": [
+              "2029CP1"
+            ],
+            "shared_zones": [
+              "163"
+            ],
+            "shared_ata_6d": [
+              "42-20-11"
+            ],
+            "similarity_note": "Both are about the same line card in the same switch, share two part numbers and the same FIN and zone, and both describe a restart condition after a cold night stop."
+          },
+          "rationale": "The revised port initialisation order assumes the redesigned card, so the candidate cannot be embodied first. The thermal redesign is still being retrofitted across the fleet and the two programmes will run concurrently for at least two years.",
+          "resolution": "Declare the supersession and state the ordering constraint in the bulletin. Do not cancel the thermal redesign bulletin; its card content remains required."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-42-1007",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4220115959692"
+            ],
+            "shared_fins": [
+              "2029CP1"
+            ],
+            "shared_zones": [
+              "163"
+            ],
+            "shared_ata_6d": [
+              "42-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The configuration load this bulletin delivers is superseded by the candidate. A switch carrier drawn from spares after the candidate is embodied would arrive with the earlier load and would bring its ports up in the wrong order, which is a functional error rather than an out-of-date state.",
+          "resolution": "Fix this at the spares process level, not with a note. A carrier must not be issued without the current load, and the bulletin must be re-issued to say so."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-146680",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "163"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The datalink relocation put a ventilated shelf, an inlet duct and a sensor harness into the same forward avionics compartment, and the datalink candidate now proposes to add an aerial feed through it. The candidate adds a second supply rail through the same space. The two documents have no wording and no identifier in common; only the zone connects them.",
+          "resolution": "Coordinate the compartment work with the datalink candidate so that both feeds are routed in one visit and the clamp block capacity is assessed once."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-147120",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both changes exist because a line engineer is spending hours a week proving that nothing is wrong. One attacks the equipment that generates the message burst; the other attacks the rules that present it. Neither names anything the other names and they sit in different chapters with no shared identifier of any kind."
+          },
+          "rationale": "The correlation rules already suppress the downstream messages that follow a switch restart. If they work as intended, part of the operator benefit claimed by the candidate has already been delivered, and the residual event rate the candidate is justified on may be measured against the wrong baseline.",
+          "resolution": "Re-measure the assessment workload on aircraft that carry the correlation rules before the business case is finalised."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "TSM-T-42-20-11-810-811",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES271290K2",
+              "D4220115959692",
+              "D4220122248639"
+            ],
+            "shared_fins": [
+              "2029CP1",
+              "423CP4"
+            ],
+            "shared_zones": [
+              "163",
+              "161"
+            ],
+            "shared_ata_6d": [
+              "42-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure was written for the original card, revised for the redesigned card and would need revising again. Its signature-based reasoning, identifying the switch at the head of a burst, no longer applies when the ports are held in dependency order and reported as a state.",
+          "resolution": "Treat this as a rewrite with its own owner, not as a third revision."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "AMM-T-42-20-11-900-001-A",
+          "doc_type": "AMM",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES271290K2",
+              "D4220115959692",
+              "D4220122248639"
+            ],
+            "shared_fins": [
+              "2029CP1",
+              "423CP4"
+            ],
+            "shared_zones": [
+              "163",
+              "161"
+            ],
+            "shared_ata_6d": [
+              "42-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The task pairs a card standard with a configuration file standard and warns that the two are a matched pair. A third combination makes the pairing rule a table rather than a sentence, and the warm-up hold acceptance step no longer describes the observable behaviour.",
+          "resolution": "Replace the pairing sentence with a table and rewrite the acceptance step around the port hold states."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "IPC-T-42-20-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4220122248639",
+              "AES271290K2"
+            ],
+            "shared_fins": [
+              "423CP4"
+            ],
+            "shared_zones": [
+              "161"
+            ],
+            "shared_ata_6d": [
+              "42-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The rack assembly is currently listed as a pre-modification item. The candidate modifies it to carry the second feed, which turns a deleted item back into a current one at a different standard.",
+          "resolution": "Re-baseline the rack item with the modified standard and remove the pre-modification annotation."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-149310",
+          "doc_type": "MOD",
+          "reason": "Returned high on a semantic search for a separately loadable configuration file superseding an earlier one, which is exactly the mechanism at issue here, but it concerns the flight warning computer inhibit table and shares no equipment, no zone and no identifier with the network switch."
+        },
+        {
+          "doc_id": "TSM-T-31-50-11-812-803",
+          "doc_type": "TSM",
+          "reason": "Surfaces on the same search because it also establishes a software standard before doing anything else, and the reasoning pattern is genuinely similar, but it isolates a transient crew caution and has no relationship to the avionics network."
+        }
+      ],
+      "conclusion": "Not yet issued. One blocking spares invalidation confirmed and the electrical segregation position is outstanding.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

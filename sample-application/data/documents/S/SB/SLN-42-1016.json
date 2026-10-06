@@ -1,0 +1,219 @@
+[
+  {
+    "doc_id": "SLN-42-1016",
+    "doc_type": "SB",
+    "title": "Integrated Modular Avionics — Core Processing Backplane and Cooling Standard 3",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-09-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20",
+      "21-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00029",
+          "to": "S01380"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "CKP",
+        "ZCT",
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-136750"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2022-03-14",
+      "released": "2022-09-27",
+      "revised": null,
+      "effective": "2022-10-18"
+    },
+    "abstract": "Renewal of the core processing backplane and the guide rail set with integral cooling ducting, the recommended entry point for every aircraft still at the delivered core processing configuration.",
+    "sections": {
+      "planning_reason": "The first replacement standard kept the delivered backplane, and by 2020 the backplane was the limiting item: connector insertion counts were reaching their qualified limit on aircraft that had been through several module changes, and eleven backplane-related events were recorded, all intermittent and all expensive to find. The cooling path designed for the original dissipation was also oversized for the new modules and undersized for the two slots that had grown. This bulletin supersedes the earlier one, which is cancelled.",
+      "description": "The backplane is renewed and the guide rail set is replaced with a version carrying the cooling ducting integrally, so that airflow is directed at the two high-dissipation slots rather than spread evenly. Interface units are retained where already fitted and supplied new where they are not. The outboard data concentrator moves one position so that the two high-dissipation cards are not adjacent, and the configuration set is reloaded unchanged.",
+      "accomplishment_summary": "Put the aircraft on ground power and lift the avionics bay floor panels. Remove the rack front. Do AMM-S-42-10-12-400-043-A to record the installed module configuration before any part is disturbed. Remove all six modules and the backplane. Install the new backplane and the guide rail set with the integral ducting, using the pan head screws EN873313K4 and the countersunk screws LN727699-25 at the rail attachment. Install the interface units HE750421-36, supplying new units for any slot still at the delivered standard. Move the outboard data concentrator 7CP7 one position in accordance with the slot map. Re-face the bay ground stud and measure the bonding resistance. Reload the configuration set LF6L52A03E3 and confirm it by checksum. Do AMM-S-42-10-12-400-043-A to verify the installed configuration and the cooling airflow at the two high-dissipation slots. Record the embodiment.",
+      "effectivity_note": "Applicable to SOLANO-30, SOLANO-34 and SOLANO-39 aircraft from MSN S00029 to MSN S01380, whether they carry the delivered configuration or the first replacement standard. Aircraft from MSN S01430 onward are post-modification from build. Modules of the first and second standard may be mixed in this rack, which is what makes it a valid entry point for unmodified aircraft.",
+      "material_note": "Kit K4210-1016-01 contains the backplane, the guide rail set with ducting and the rail fastener set. A second kit K4210-1016-02 supplies six interface units and is ordered only for aircraft at the delivered configuration. Lead time is thirty weeks for the backplane. The removed backplane is returned for insertion count analysis."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "drawings": [
+        "D42101281090"
+      ],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01430",
+        "S01380"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-136750",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "SLN-42-1009",
+        "doc_type": "SB",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "AMM-S-42-10-12-400-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-42-10-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "backplane renewal",
+      "cooling ducting",
+      "insertion count",
+      "slot map",
+      "entry point"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-42-1016",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 60 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-136750",
+      "manpower": {
+        "elapsed_time_hours": 26,
+        "manhours": 38,
+        "personnel": 2,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K4210-1016-01",
+        "kit_available_from": "2023-01-23",
+        "parts_required": [
+          {
+            "part_number": "HE750421-36",
+            "qty": 6,
+            "uom": "EA"
+          },
+          {
+            "part_number": "EN873313K4",
+            "qty": 24,
+            "uom": "EA"
+          },
+          {
+            "part_number": "LN727699-25",
+            "qty": 24,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Anti-static packaging",
+          "Contact cleaner, electrical",
+          "Thermal interface pad"
+        ],
+        "tooling": [
+          "Electrostatic discharge mat",
+          "Module extraction tool 98D42101-072",
+          "Airflow meter, vane type"
+        ]
+      },
+      "weight_change_kg": -1.1,
+      "accomplishment_steps": 13,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2022-09-27",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,524 @@
+[
+  {
+    "doc_id": "TSM-C-52-70-11-812-801",
+    "doc_type": "TSM",
+    "title": "CARGO DOOR Indication Remains On After Closing — Fault Symptom",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-01-16",
+      "reason": "Original issue of the fault symptom procedure for a cargo door indication that stays on after closing.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-70",
+      "ata_6d": "52-70-11",
+      "title": "Door Warning — Door Proximity Sensing"
+    },
+    "secondary_ata": [
+      "52-30",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-09-25",
+      "released": "2017-01-16",
+      "revised": "2017-01-16",
+      "effective": "2017-02-06"
+    },
+    "abstract": "Symptom-driven isolation of a cargo door indication that stays on after the door is closed and latched, covering sensor gap, target shimming and harness faults in the door warning wiring.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a cargo door indication that remains on after the door has been closed and latched, and gives the checks in the order that resolves the fault fastest at the gate.",
+      "fault_description": "The flight deck indication stays on although the door handle is fully home and the latches are visibly engaged. Ground staff often report that a second closing cycle clears it. The most common cause is not a failed sensor but grease that has migrated out of the latch bearings onto the target plate and the sensor face, which lifts the effective gap without anything having moved. A drifted sensor gap after a latch shaft disturbance is the next most likely cause. A genuine sensor failure does not respond to cleaning or to a gap adjustment.",
+      "isolation_procedure": "1. Confirm from the technical record whether the latch shaft or its bearings have been disturbed recently; if so go directly to the target shim check at step 5. 2. Operate the door through a full cycle and confirm whether the indication clears on the second attempt. 3. Measure the sensor gap at the proximity sensor with the feeler gauge and compare it with the limit in the task. 4. If the gap is outside the limit, adjust it and repeat the door operational test. 5. Measure the latch shaft end float and compare it with the value recorded at the last bush change; a change in end float moves the target relative to the sensor. 6. Re-shim the target plate to the measured end float and repeat the test. 7. If the indication still stays on, disconnect the sensor at its connector and measure its output through a full latch cycle with the test set. 8. If the sensor output is correct at the connector, the fault is in the door warning wiring: check the continuity and the insulation resistance of the run to the door warning computing unit. 9. If the sensor output is incorrect, replace the sensor and repeat the test. 10. Confirm through two complete door cycles that the indication clears and stays clear.",
+      "dispatch_note": "Dispatch is not permitted with a cargo door indication that remains on. The door must be confirmed latched by the visual indicator and the indication must be cleared before departure, or the aircraft must be dispatched with the compartment declared unserviceable and empty under the applicable minimum equipment list item."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5270113382199",
+        "D5270123897323",
+        "D9221131539978"
+      ],
+      "fins": [
+        "3323WT",
+        "8511WT",
+        "331WT4",
+        "161VU"
+      ],
+      "drawings": [
+        "D52701199300"
+      ],
+      "software": [],
+      "zones": [
+        "831",
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-52-30-12-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-C-92-21-13",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door indication",
+      "lubricant migration",
+      "proximity sensor gap",
+      "target shim",
+      "door warning wiring"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Lorencourt",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "52-70-11-812-801",
+      "fault_symptom": "CARGO DOOR indication remains displayed after the door is closed and latched",
+      "fault_codes": [
+        "527011006",
+        "527011022",
+        "527011038"
+      ],
+      "warning_messages": [
+        "DOORS CARGO FWD",
+        "DOORS CARGO AFT"
+      ],
+      "affected_fins": [
+        "3323WT",
+        "8511WT",
+        "331WT4",
+        "161VU"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Lubricant migration from the latch bearings onto the sensor face and target plate",
+          "probability_pct": 37,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "Proximity sensor gap outside limit after latch disturbance",
+          "probability_pct": 26,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "Target plate shim incorrect for the measured latch shaft end float",
+          "probability_pct": 18,
+          "fin": "8511WT"
+        },
+        {
+          "cause": "Door warning wiring open or high resistance to the computing unit",
+          "probability_pct": 11,
+          "fin": "161VU"
+        },
+        {
+          "cause": "Proximity sensor internal failure",
+          "probability_pct": 8,
+          "fin": "3323WT"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-C-52-30-12-700-001-A",
+      "dispatch": {
+        "mel_item": "52-70-01A",
+        "dispatchable": false,
+        "dispatch_condition": "Not dispatchable with the indication displayed; compartment may be declared unserviceable and empty"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-C-52-70-11-812-801",
+    "doc_type": "TSM",
+    "title": "CARGO DOOR Indication Remains On After Closing — Fault Symptom",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2019-12-09",
+      "reason": "Most probable cause list re-ordered for aircraft at the grease-free bush standard, with the test steps left unchanged.",
+      "raised_by_pawo": "PAWO-111034-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-70",
+      "ata_6d": "52-70-11",
+      "title": "Door Warning — Door Proximity Sensing"
+    },
+    "secondary_ata": [
+      "52-30",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-09-25",
+      "released": "2017-01-16",
+      "revised": "2019-12-09",
+      "effective": "2020-01-13"
+    },
+    "abstract": "Symptom-driven isolation of a cargo door indication that stays on after the door is closed and latched, covering sensor gap, target shimming and harness faults in the door warning wiring.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a cargo door indication that remains on after the door has been closed and latched, and gives the checks in the order that resolves the fault fastest at the gate.",
+      "fault_description": "The flight deck indication stays on although the door handle is fully home and the latches are visibly engaged. Ground staff often report that a second closing cycle clears it. On a door at the greased bearing standard the first thing to look for is grease that has migrated onto the target plate and the sensor face; on a door at the self-lubricating liner standard there is no grease to migrate and that cause does not apply, so the cause list below is read from the second entry down. The most common cause on a grease-free door is a sensor gap that has drifted, usually after a latch shaft has been disturbed or after a bush change that altered the shaft end float. A genuine sensor failure does not respond to a gap adjustment.",
+      "isolation_procedure": "1. Confirm from the technical record whether the latch shaft or its bearings have been disturbed recently; if so go directly to the target shim check at step 5. 2. Operate the door through a full cycle and confirm whether the indication clears on the second attempt. 3. Measure the sensor gap at the proximity sensor with the feeler gauge and compare it with the limit in the task. 4. If the gap is outside the limit, adjust it and repeat the door operational test. 5. Measure the latch shaft end float and compare it with the value recorded at the last bush change; a change in end float moves the target relative to the sensor. 6. Re-shim the target plate to the measured end float and repeat the test. 7. If the indication still stays on, disconnect the sensor at its connector and measure its output through a full latch cycle with the test set. 8. If the sensor output is correct at the connector, the fault is in the door warning wiring: check the continuity and the insulation resistance of the run to the door warning computing unit. 9. If the sensor output is incorrect, replace the sensor and repeat the test. 10. Confirm through two complete door cycles that the indication clears and stays clear.",
+      "dispatch_note": "Dispatch is not permitted with a cargo door indication that remains on. The door must be confirmed latched by the visual indicator and the indication must be cleared before departure, or the aircraft must be dispatched with the compartment declared unserviceable and empty under the applicable minimum equipment list item."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5270113382199",
+        "D5270123897323",
+        "D9221131539978"
+      ],
+      "fins": [
+        "3323WT",
+        "8511WT",
+        "331WT4",
+        "161VU"
+      ],
+      "drawings": [
+        "D52701199300"
+      ],
+      "software": [],
+      "zones": [
+        "831",
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-52-30-12-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-C-92-21-13",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111034",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door indication",
+      "proximity sensor gap",
+      "target shim",
+      "end float",
+      "door warning wiring"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Lorencourt",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "52-70-11-812-801",
+      "fault_symptom": "CARGO DOOR indication remains displayed after the door is closed and latched",
+      "fault_codes": [
+        "527011006",
+        "527011022",
+        "527011038"
+      ],
+      "warning_messages": [
+        "DOORS CARGO FWD",
+        "DOORS CARGO AFT"
+      ],
+      "affected_fins": [
+        "3323WT",
+        "8511WT",
+        "331WT4",
+        "161VU"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Proximity sensor gap outside limit after latch disturbance",
+          "probability_pct": 41,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "Target plate shim incorrect for the measured latch shaft end float",
+          "probability_pct": 28,
+          "fin": "8511WT"
+        },
+        {
+          "cause": "Door warning wiring open or high resistance to the computing unit",
+          "probability_pct": 18,
+          "fin": "161VU"
+        },
+        {
+          "cause": "Proximity sensor internal failure",
+          "probability_pct": 13,
+          "fin": "3323WT"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-C-52-30-12-700-001-A",
+      "dispatch": {
+        "mel_item": "52-70-01A",
+        "dispatchable": false,
+        "dispatch_condition": "Not dispatchable with the indication displayed; compartment may be declared unserviceable and empty"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-C-52-70-11-812-801",
+    "doc_type": "TSM",
+    "title": "CARGO DOOR Indication Remains On After Closing — Fault Symptom",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2020-11-16",
+      "reason": "Datum for the sensor gap measurement clarified after the door surround reinforcement changed the surface finish it is taken from.",
+      "raised_by_pawo": "PAWO-111071-02",
+      "raised_by_finding": "F04",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-70",
+      "ata_6d": "52-70-11",
+      "title": "Door Warning — Door Proximity Sensing"
+    },
+    "secondary_ata": [
+      "52-30",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-09-25",
+      "released": "2017-01-16",
+      "revised": "2020-11-16",
+      "effective": "2020-12-07"
+    },
+    "abstract": "Symptom-driven isolation of a cargo door indication that stays on after the door is closed and latched, covering sensor gap, target shimming and harness faults in the door warning wiring.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a cargo door indication that remains on after the door has been closed and latched, and gives the checks in the order that resolves the fault fastest at the gate.",
+      "fault_description": "The flight deck indication stays on although the door handle is fully home and the latches are visibly engaged. Ground staff often report that a second closing cycle clears it. On a door at the greased bearing standard the first thing to look for is grease that has migrated onto the target plate and the sensor face; on a door at the self-lubricating liner standard there is no grease to migrate and that cause does not apply, so the cause list below is read from the second entry down. The most common cause on a grease-free door is a sensor gap that has drifted, usually after a latch shaft has been disturbed or after a bush change that altered the shaft end float. A genuine sensor failure does not respond to a gap adjustment.",
+      "isolation_procedure": "1. Confirm from the technical record whether the latch shaft or its bearings have been disturbed recently; if so go directly to the target shim check at step 5. 2. Operate the door through a full cycle and confirm whether the indication clears on the second attempt. 3. Measure the sensor gap at the proximity sensor with the feeler gauge and compare it with the limit in the task. Take the measurement from the machined datum face of the surround fitting and not from the surrounding surface: on a reinforced door surround that surface carries a shot-peened finish and reads up to 0.15 mm proud of the datum, which is enough on its own to make a serviceable gap look out of limit. The gap values themselves are the same at both surround standards. 4. If the gap is outside the limit, adjust it and repeat the door operational test. 5. Measure the latch shaft end float and compare it with the value recorded at the last bush change; a change in end float moves the target relative to the sensor. 6. Re-shim the target plate to the measured end float and repeat the test. 7. If the indication still stays on, disconnect the sensor at its connector and measure its output through a full latch cycle with the test set. 8. If the sensor output is correct at the connector, the fault is in the door warning wiring: check the continuity and the insulation resistance of the run to the door warning computing unit. 9. If the sensor output is incorrect, replace the sensor and repeat the test. 10. Confirm through two complete door cycles that the indication clears and stays clear.",
+      "dispatch_note": "Dispatch is not permitted with a cargo door indication that remains on. The door must be confirmed latched by the visual indicator and the indication must be cleared before departure, or the aircraft must be dispatched with the compartment declared unserviceable and empty under the applicable minimum equipment list item."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5270113382199",
+        "D5270123897323",
+        "D9221131539978"
+      ],
+      "fins": [
+        "3323WT",
+        "8511WT",
+        "331WT4",
+        "161VU"
+      ],
+      "drawings": [
+        "D52701199300"
+      ],
+      "software": [],
+      "zones": [
+        "831",
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-52-30-12-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-C-92-21-13",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111034",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-111071",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door indication",
+      "proximity sensor gap",
+      "datum face",
+      "target shim",
+      "end float",
+      "door warning wiring"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Lorencourt",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "procedure_number": "52-70-11-812-801",
+      "fault_symptom": "CARGO DOOR indication remains displayed after the door is closed and latched",
+      "fault_codes": [
+        "527011006",
+        "527011022",
+        "527011038"
+      ],
+      "warning_messages": [
+        "DOORS CARGO FWD",
+        "DOORS CARGO AFT"
+      ],
+      "affected_fins": [
+        "3323WT",
+        "8511WT",
+        "331WT4",
+        "161VU"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Proximity sensor gap outside limit after latch disturbance",
+          "probability_pct": 41,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "Target plate shim incorrect for the measured latch shaft end float",
+          "probability_pct": 28,
+          "fin": "8511WT"
+        },
+        {
+          "cause": "Door warning wiring open or high resistance to the computing unit",
+          "probability_pct": 18,
+          "fin": "161VU"
+        },
+        {
+          "cause": "Proximity sensor internal failure",
+          "probability_pct": 13,
+          "fin": "3323WT"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-C-52-30-12-700-001-A",
+      "dispatch": {
+        "mel_item": "52-70-01A",
+        "dispatchable": false,
+        "dispatch_condition": "Not dispatchable with the indication displayed; compartment may be declared unserviceable and empty"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

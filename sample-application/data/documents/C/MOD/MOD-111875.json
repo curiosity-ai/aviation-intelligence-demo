@@ -1,0 +1,325 @@
+[
+  {
+    "doc_id": "MOD-111875",
+    "doc_type": "MOD",
+    "title": "Dual Wavelength Smoke Detectors in the Aft Cargo Compartment",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-20",
+      "reason": "Original issue of the dual wavelength cargo smoke detector proposal dossier.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-04-07",
+      "released": null,
+      "revised": "2026-04-20",
+      "effective": null
+    },
+    "abstract": "Detectors that compare two scattering wavelengths before declaring smoke in the aft hold, proposed to remove the false warnings that dust and water vapour produce after a wet loading turnaround.",
+    "sections": {
+      "reason": "Cargo smoke warnings in the aft compartment that turn out to be dust or water vapour are running at eleven per million flight hours across the fleet, against a design objective of two. The pattern is clear: the warning appears in the climb after a turnaround where the hold was loaded in rain or snow, and it does not repeat on the same aircraft. Each event costs a diversion decision and, in four cases in the last two years, an actual diversion. The current single-wavelength scattering detector cannot tell a water droplet from a smoke particle because both scatter strongly at the wavelength it uses.",
+      "description": "Each aft compartment detector is replaced by a dual wavelength unit that compares scattering in the blue and infrared bands and declares smoke only when the ratio matches a combustion signature. The detector solenoid D2610121418404 is replaced, the sampling non-return valve D2610122282692 is retained, and the sample line clamp D2610123247735 is repositioned because the new detector body is 18 mm longer. The detection manifolds 2099WD and 77WD keep their identifiers. Revised detail is on drawings D26101237031 and D26101256961. The detectors sit above the aft compartment ceiling lining and are reached from inside the hold, zones 131, 135 and 141, with two lining panels removed on each side.",
+      "effects": "Mass increase of 1.8 kg per aircraft. Electrical load rises by 25 VA on the essential bus. The detector is not interchangeable with the current unit because the body length and the connector keying both change, and a mixed installation in one compartment is not permitted since the units cross-check. Response time to a certification test fire is unchanged, which is the point the certification case turns on. Illustrated parts content and the detector removal task both need re-issue, and the cargo lining removal task gains a caution about the longer detector body.",
+      "embodiment_note": "Proposed for production cut-in with a retrofit path at line level, about five hours per aircraft. No kit is needed beyond the detectors and the revised clamp, and the removed units have a residual value that offsets part of the cost.",
+      "open_points": "Pre-analysis must confirm that the longer detector body clears the cargo lining panel standard fitted to later production aircraft, that the aft compartment access for the detector does not conflict with any structural change proposed in the same bays, and that the certification test fire response time can be demonstrated by similarity rather than by a repeat compartment test."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610121418404",
+        "D2610122282692",
+        "D2610123247735"
+      ],
+      "fins": [
+        "2099WD",
+        "77WD"
+      ],
+      "drawings": [
+        "D26101237031",
+        "D26101256961"
+      ],
+      "software": [],
+      "zones": [
+        "131",
+        "135",
+        "141"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [],
+    "keywords": [
+      "cargo smoke detection",
+      "dual wavelength",
+      "false warning",
+      "water vapour",
+      "aft compartment"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Wendmark",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111875,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.858",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.8,
+      "balance_impact": "Aft compartment, CG shift below 0.01 % MAC",
+      "electrical_load_impact_va": 25,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2610121418404",
+        "D2610123247735"
+      ],
+      "fins_affected": [
+        "2099WD",
+        "77WD"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 62,
+      "estimated_cost_keur": 700,
+      "lead_time_weeks": 44,
+      "production_impact": "Cut-in proposed once the detector is qualified to the compartment fire test",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-111875",
+    "doc_type": "MOD",
+    "title": "Dual Wavelength Smoke Detectors in the Aft Cargo Compartment",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-06",
+      "reason": "Concurrency with the lining panel conversion stated in the dossier after the detector footprint was found to sit on the moulded ceiling line.",
+      "raised_by_pawo": "PAWO-111166-01",
+      "raised_by_finding": "F01",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PROPOSAL",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-04-07",
+      "released": null,
+      "revised": "2026-08-06",
+      "effective": null
+    },
+    "abstract": "Detectors that compare two scattering wavelengths before declaring smoke in the aft hold, proposed to remove the false warnings that dust and water vapour produce after a wet loading turnaround.",
+    "sections": {
+      "reason": "Cargo smoke warnings in the aft compartment that turn out to be dust or water vapour are running at eleven per million flight hours across the fleet, against a design objective of two. The pattern is clear: the warning appears in the climb after a turnaround where the hold was loaded in rain or snow, and it does not repeat on the same aircraft. Each event costs a diversion decision and, in four cases in the last two years, an actual diversion. The current single-wavelength scattering detector cannot tell a water droplet from a smoke particle because both scatter strongly at the wavelength it uses.",
+      "description": "Each aft compartment detector is replaced by a dual wavelength unit that compares scattering in the blue and infrared bands and declares smoke only when the ratio matches a combustion signature. The detector solenoid D2610121418404 is replaced, the sampling non-return valve D2610122282692 is retained, and the sample line clamp D2610123247735 is repositioned because the new detector body is 18 mm longer. The detection manifolds 2099WD and 77WD keep their identifiers. Revised detail is on drawings D26101237031 and D26101256961. The detectors sit above the aft compartment ceiling lining and are reached from inside the hold, zones 131, 135 and 141, with two lining panels removed on each side.",
+      "effects": "Mass increase of 1.8 kg per aircraft. Electrical load rises by 25 VA on the essential bus. The detector is not interchangeable with the current unit because the body length and the connector keying both change, and a mixed installation in one compartment is not permitted since the units cross-check. Response time to a certification test fire is unchanged, which is the point the certification case turns on. Illustrated parts content and the detector removal task both need re-issue, and the cargo lining removal task gains a caution about the longer detector body. The 18 mm longer body also lands on the ceiling line that the moulded lining panel occupies. On a compartment already converted to the moulded panel the detector cannot be fitted without cutting the moulding, and no repair scheme covers a cut in a moulded panel, so the panel would have to be scrapped and re-ordered. The two changes are therefore not independent and must not be planned as though they were.",
+      "embodiment_note": "Proposed for production cut-in with a retrofit path at line level, about five hours per aircraft. No kit is needed beyond the detectors and the revised clamp, and the removed units have a residual value that offsets part of the cost. Sequencing is fixed rather than preferred: on any compartment where both this change and the moulded lining panel conversion are wanted, the detector is fitted first or the two are done in the same visit. The lining panel retrofit bulletin is held until the detector footprint is frozen, and it carries a concurrency statement to that effect so that an operator does not convert a compartment that then has to be opened and re-panelled.",
+      "open_points": "Pre-analysis has established that the longer detector body does not clear the moulded lining panel standard and that the two embodiments have to be sequenced. What remains is to confirm that the aft compartment access for the detector does not conflict with any structural change proposed in the same bays, and that the certification test fire response time can be demonstrated by similarity rather than by a repeat compartment test."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610121418404",
+        "D2610122282692",
+        "D2610123247735"
+      ],
+      "fins": [
+        "2099WD",
+        "77WD"
+      ],
+      "drawings": [
+        "D26101237031",
+        "D26101256961"
+      ],
+      "software": [],
+      "zones": [
+        "131",
+        "135",
+        "141"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111166",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      },
+      {
+        "doc_id": "CRN-25-1018",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cargo smoke detection",
+      "dual wavelength",
+      "concurrency",
+      "ceiling line",
+      "aft compartment"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Wendmark",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111875,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.858",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.8,
+      "balance_impact": "Aft compartment, CG shift below 0.01 % MAC",
+      "electrical_load_impact_va": 25,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2610121418404",
+        "D2610123247735"
+      ],
+      "fins_affected": [
+        "2099WD",
+        "77WD"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 62,
+      "estimated_cost_keur": 700,
+      "lead_time_weeks": 44,
+      "production_impact": "Cut-in proposed once the detector is qualified to the compartment fire test",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

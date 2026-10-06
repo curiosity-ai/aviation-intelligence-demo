@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "AMM-M-24-20-12-400-031-A",
+    "doc_type": "AMM",
+    "title": "Generator Control Unit — Installation",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-04-18",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-12",
+      "title": "AC Generation — Generator Control Unit"
+    },
+    "secondary_ata": [
+      "24-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-05-09",
+      "released": "2018-01-23",
+      "revised": "2023-04-18",
+      "effective": "2023-05-16"
+    },
+    "abstract": "Installation of a generator control unit in the aft distribution bay, with the bonding measurement, the configuration load check and the functional test that release the channel back to service.",
+    "sections": {
+      "purpose": "This task gives the procedure to install one generator control unit in its rack position in the aft distribution bay and to release the channel back to service.",
+      "job_setup_note": "Make sure the removal task is complete and that the rack position is clean and undamaged. Get the antistatic wrist strap and mat, the torque wrench, the bond resistance meter and the portable data loader. Confirm that the unit to be installed carries the configuration standard applicable to the aircraft before you fit it; a unit at the wrong standard will pass the fitting steps and fail the functional test at the end, which wastes the whole task.",
+      "procedure": "1. Put the antistatic mat in position and attach the wrist strap. 2. Remove the protective cover from the rack position and do a visual check of the rack contacts. 3. Lift the unit into the rack with two people and engage it on its guides. 4. Install the four rack fasteners hand tight, then torque in a diagonal sequence to the value in the fits and clearances table. 5. Connect the bonding strap at the mounting rail with the fasteners kept from the removal. 6. CAUTION: DO NOT OVERTIGHTEN THE BONDING STRAP FASTENERS. THE RAIL THREAD IS IN ALUMINIUM AND WILL STRIP. 7. Measure the bond resistance between the unit case and the rail. It must be less than 2.5 milliohms. 8. Connect the sensing return lead to the terminal block and remove the tag. 9. Remove the protective caps and connect the two rack connectors. 10. WARNING: MAKE SURE THAT NO PERSON AND NO TOOL IS IN THE BAY BEFORE YOU CLOSE THE CIRCUIT BREAKERS. 11. Remove the tags, close the circuit breakers and restore external power. 12. Read the configuration standard reported by the unit and confirm it agrees with the aircraft configuration record. 13. Do the functional test in AMM-M-24-20-12-700-032-A.",
+      "close_out": "Close the access panel to the aft distribution bay. Remove the warning notices. Record the installation, the unit serial number, the bond resistance value and the configuration standard in the aircraft technical log. Return the antistatic equipment and the loader to the store."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2420007230862",
+        "AES247501-43"
+      ],
+      "fins": [
+        "14PC2",
+        "18GX"
+      ],
+      "drawings": [
+        "D24201265226"
+      ],
+      "software": [
+        "LE9PB857871"
+      ],
+      "zones": [
+        "663"
+      ],
+      "figures": [
+        "FIG-24-20-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-24-20-12-000-031-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-24-20-12-700-032-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "generator control unit",
+      "installation",
+      "bond resistance",
+      "configuration standard",
+      "torque sequence"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "24-20-12-400-031-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft",
+      "manhours": 4.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "663"
+        ],
+        "access_panels": [
+          "663BR",
+          "663CR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep the circuit breakers open until the installation is complete.",
+          "Make sure that no tool remains in the bay before the breakers are closed."
+        ],
+        "tooling": [
+          {
+            "reference": "98D24201-311",
+            "description": "Antistatic wrist strap and mat"
+          },
+          {
+            "reference": "98D24201-322",
+            "description": "Bond resistance meter, 4-wire"
+          },
+          {
+            "reference": "98D24201-330",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [
+          "Corrosion inhibiting compound",
+          "Identification label set"
+        ],
+        "expendables": [
+          {
+            "part_number": "AES247501-43",
+            "qty": 2
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-M-24-20-12-000-031-A",
+        "AMM-M-24-20-12-700-032-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

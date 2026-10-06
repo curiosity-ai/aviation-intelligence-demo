@@ -1,0 +1,190 @@
+[
+  {
+    "doc_id": "MOD-160915",
+    "doc_type": "MOD",
+    "title": "Self-Lubricating Bushings in the Fwd Cargo Door Latch Pin Housings",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-06-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00360"
+        }
+      ],
+      "excluded_msns": [
+        "M00202"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "M00361",
+      "production_cut_in_date": "2021-11-30",
+      "retrofit_via": [
+        "MRD-52-1024",
+        "MRD-52-1031"
+      ]
+    },
+    "dates": {
+      "created": "2019-02-21",
+      "released": "2020-06-11",
+      "revised": null,
+      "effective": "2020-07-06"
+    },
+    "abstract": "Dry-film bushings replace the greased bronze bushings in the eight latch pin housings of the forward cargo door, removing a lubrication task that operators were repeatedly missing on short turnarounds.",
+    "sections": {
+      "reason": "Between 2017 and 2019 the forward cargo door latching mechanism generated 63 unscheduled removals across a fleet of about 290 aircraft, more than four times the predicted rate. Teardown of nineteen returned housings showed dry running and pin scoring in every case. The greasing task sits at a 750 flight hour interval and is easy to defer, and operators in dusty environments reported that grease was carrying grit into the bore rather than protecting it. The reliability committee accepted a design answer rather than a further change to the maintenance interval.",
+      "description": "The greased bronze bushings in the eight latch pin housings are replaced by dry-film self-lubricating items pressed into a slightly enlarged bore. The splice plate D5230131366114 that carries the two inboard housings is replaced by a thicker item to keep the wall thickness after boring, and the outboard doubler D5230134342244 and the aft retention plate D5230135480243 are re-drilled. Harness routing across the latch beam is re-clipped with cable ties EN816709K3 to keep clear of the enlarged housing bosses. Detail is on drawing D52301308669. Work is done through the open door in zones 891 and 893 with the door on the maintenance stay. The latch position indication path, including the indicator 1490WV, is checked but not modified.",
+      "effects": "Mass reduction of 0.6 kg per aircraft. No electrical load change. One-way interchangeable: a post-modification housing accepts the old pin, but the old housing must not be fitted to a post-modification door because the bore diameter differs. The 750 flight hour lubrication task is deleted and the latch mechanism functional check moves from an A-check to a C-check interval. Illustrated parts content and the latch installation task both require reissue.",
+      "embodiment_note": "Cut in at MSN M00361 in November 2021. Delivered aircraft go through Service Bulletin MRD-52-1024, which takes one shift on a parked aircraft. Operators reporting a latch defect are asked to do the borescope survey of Service Bulletin MRD-52-1031 first so that scored pins are captured before the bushings are changed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230131366114",
+        "D5230134342244",
+        "D5230135480243",
+        "EN816709K3"
+      ],
+      "fins": [
+        "1490WV"
+      ],
+      "drawings": [
+        "D52301308669"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893"
+      ],
+      "figures": [
+        "FIG-52-30-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00361"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-52-1024",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MRD-52-1031",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-M-52-30-13-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-M-52-30-13-400-002-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "cargo door latch",
+      "bushing",
+      "lubrication task",
+      "unscheduled removal",
+      "dry film"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 160915,
+      "mod_class": "MINOR",
+      "change_category": "STRUCTURE",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.783"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -0.6,
+      "balance_impact": "Negligible, CG shift below 0.01 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "D5230135480243",
+        "EN816709K3"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5230131366114",
+        "D5230134342244"
+      ],
+      "fins_affected": [
+        "1490WV"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 42,
+      "estimated_cost_keur": 190,
+      "lead_time_weeks": 22,
+      "production_impact": "Cut-in at MSN M00361, door supplier build standard change",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

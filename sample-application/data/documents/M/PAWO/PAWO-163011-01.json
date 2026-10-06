@@ -1,0 +1,317 @@
+[
+  {
+    "doc_id": "PAWO-163011-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Extension of the Coarser Boost Pump Inlet Filter Mesh to the Remaining Fleet",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-02",
+      "released": "2026-05-18",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of a proposal to extend the coarser boost pump inlet filter mesh to the aircraft that never took it, and to adopt the same element in the centre tank pumps. The proposal was not sustained.",
+    "sections": {
+      "objective": "Test a fleet support proposal to extend the coarser inlet filter mesh grade to the aircraft that never embodied it, and to reuse the same filter element in the centre tank pumps, where an element obsolescence notice had just been received. The attraction was a single element part across all pump positions; the question this order had to answer was whether the fuel system evidence actually supports that.",
+      "findings_summary": "It does not, and the proposal was rejected on the first substantive finding. The coarser mesh was justified against a specific contaminant profile seen on aircraft operating from a small number of airfields, and the substantiation is explicitly bounded to the wing tank pump installation. The centre tank pump sits downstream of a different scavenge path and the coarser mesh would pass particulate that the quantity indication probes are sensitive to, which is a known and separately documented failure mode. Extending the mesh to the remaining wing tank aircraft would have been defensible on its own, but the parts content, the bulletin effectivity and the removal task all treat mesh grade as an attribute of the pump position, so a partial extension needs three documentation changes for a benefit the reliability data does not show on those aircraft.",
+      "next_steps": "Do not extend the mesh grade. Handle the element obsolescence in the centre tank pumps as a separate like-for-like sourcing action against the fine mesh element. Record the contaminant profile boundary in the fuel system design justification so the proposal is not raised a third time, and reference the quantity indication failure mode alongside it. Notify fleet support of the decision and the reasoning in writing rather than by exception, since the attraction of a single element part across all pump positions will otherwise return with the next obsolescence notice."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820117143540",
+        "D2820116810419",
+        "EN968165-23"
+      ],
+      "fins": [
+        "41QA",
+        "7953QT"
+      ],
+      "drawings": [
+        "D28201127242"
+      ],
+      "software": [],
+      "zones": [
+        "591",
+        "691"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163011",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "boost pump",
+      "inlet filter mesh",
+      "contaminant profile",
+      "fleet extension"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-163011-01",
+      "subject_mod": "MOD-163011",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-18",
+      "outcome": "REJECTED",
+      "raised_date": "2026-03-02",
+      "due_date": "2026-05-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 45,
+        "spent_manhours": 62
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "28"
+        ],
+        "ata_4d": [
+          "28-20",
+          "28-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00520"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2820117143540",
+            "D2820116810419",
+            "EN968165-23"
+          ],
+          "fins": [
+            "41QA",
+            "7953QT"
+          ],
+          "drawings": [
+            "D28201127242"
+          ],
+          "zones": [
+            "591",
+            "691"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "filter mesh grade justified against a specific airfield contaminant profile",
+          "particulate reaching a fuel quantity probe after a filter change"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Recover the original mesh grade substantiation and its boundaries",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search fuel system content for downstream sensitivity to particulate",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Cost the partial extension against the documentation change",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MRD-28-1095",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2820117143540",
+              "D2820116810419",
+              "EN968165-23"
+            ],
+            "shared_fins": [
+              "41QA",
+              "7953QT"
+            ],
+            "shared_zones": [
+              "591",
+              "691"
+            ],
+            "shared_ata_6d": [
+              "28-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin effectivity is deliberately restricted to operators exposed to the contaminant profile the mesh grade was justified against. Widening it to the whole fleet would take the change outside its substantiation, and the bulletin would have to be re-substantiated rather than re-issued.",
+          "resolution": "Do not widen the effectivity. Record the boundary of the substantiation in the design justification."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-M-28-40-11-810-804",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2820117143540"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "591",
+              "691"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The quantity indication step and freeze procedure names particulate on the probe as a cause and links it to filter condition. A coarser mesh in the centre tank position would make that failure mode more likely, which is the opposite of what the proposal was trying to achieve.",
+          "resolution": "Reject the centre tank part of the proposal and leave the fine mesh element in that position."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-M-28-20-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2820117143540",
+              "D2820116810419",
+              "EN968165-23"
+            ],
+            "shared_fins": [
+              "41QA",
+              "7953QT"
+            ],
+            "shared_zones": [
+              "591",
+              "691"
+            ],
+            "shared_ata_6d": [
+              "28-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Mesh grade is carried as an attribute of the pump position rather than of the element, so a partial extension needs the figure restructured before either element can be ordered against the wrong position by mistake.",
+          "resolution": "No action. The restructure is only justified if the extension proceeds, and it does not."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-M-28-20-11-400-006-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2820116810419",
+              "EN968165-23"
+            ],
+            "shared_fins": [
+              "41QA",
+              "7953QT"
+            ],
+            "shared_zones": [
+              "591",
+              "691"
+            ],
+            "shared_ata_6d": [
+              "28-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task selects the element by pump position rather than by part number, which is the same structural problem as the parts content and would have to be corrected alongside it.",
+          "resolution": "No action while the proposal is rejected; record the observation for the next fuel system documentation review."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed and rejected. The mesh grade substantiation is bounded to the wing tank installation and a specific contaminant profile, and the centre tank extension works against a documented indication failure mode.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

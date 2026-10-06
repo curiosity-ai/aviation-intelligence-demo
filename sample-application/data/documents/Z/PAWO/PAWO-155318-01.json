@@ -1,0 +1,312 @@
+[
+  {
+    "doc_id": "PAWO-155318-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Air Starter Compensating Clamp and Heat Shield Tab",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "80",
+      "ata_4d": "80-10",
+      "ata_6d": "80-10-11",
+      "title": "Cranking — Air Starter Motor"
+    },
+    "secondary_ata": [
+      "80-10-12",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-1226",
+        "VDK-1232",
+        "PYR-1127G",
+        "PYR-1133G"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-03",
+      "released": "2026-06-30",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the compensating starter clamp, opened when an operator asked for the extended motoring duration to be raised further, and closed with a rejection of the duration increase.",
+    "sections": {
+      "objective": "An operator running a core conditioning programme asked whether the extended dry motoring duration could be raised from ninety to one hundred and fifty seconds now that the compensating clamp was available. The round was opened to establish what the clamp actually qualifies and what else the longer run would touch.",
+      "findings_summary": "Four items were confirmed and the duration increase was rejected. The clamp was qualified against the ninety second soak and nothing longer; the compensating spring section restores the band load at that temperature, not at an arbitrary one. The retrofit bulletin quotes the duration explicitly in its leak check, so a longer run would make its acceptance test invalid. The trouble shooting procedure builds its whole first branch on the clamp standard and the duration used, and a third duration would need a third branch. The fourth finding is the crew procedure, which counts every motoring run as a start attempt against the starter duty cycle; a longer run consumes more of that cycle and the operator had not accounted for it. The request was declined and the operator was offered a qualification study instead.",
+      "next_steps": "Decline the duration increase and offer a qualification study for a longer soak if the operator will fund it. Ask the crew procedure owner to make the duty cycle arithmetic explicit. No change to the released standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "PE187919-09",
+        "D8010116441198",
+        "EN290030-3C"
+      ],
+      "fins": [
+        "293ES",
+        "2520ES"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "462",
+        "421"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155318",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "motoring duration",
+      "clamp qualification",
+      "duty cycle",
+      "acceptance test"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-155318-01",
+      "subject_mod": "MOD-155318",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-30",
+      "outcome": "REJECTED",
+      "raised_date": "2026-03-03",
+      "due_date": "2026-06-26",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EGAM"
+        ],
+        "estimated_manhours": 85,
+        "spent_manhours": 78
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "80",
+          "36"
+        ],
+        "ata_4d": [
+          "80-10",
+          "36-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "PE187919-09",
+            "D8010116441198",
+            "EN290030-3C"
+          ],
+          "fins": [
+            "293ES",
+            "2520ES"
+          ],
+          "drawings": [],
+          "zones": [
+            "462",
+            "421"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "duct clamp taking a permanent set at an extended soak temperature",
+          "motoring run counted against the starter duty cycle"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish what soak temperature the clamp was qualified against",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Identify the published content that quotes the duration",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the crew procedure duty cycle arithmetic",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-80-1003",
+          "doc_type": "SB",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "PE187919-09"
+            ],
+            "shared_fins": [
+              "293ES"
+            ],
+            "shared_zones": [
+              "462"
+            ],
+            "shared_ata_6d": [
+              "80-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin quotes the ninety second duration explicitly in its leak check, so a longer run would make its acceptance test invalid.",
+          "resolution": "Decline the duration increase or re-qualify the clamp and re-issue the bulletin."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-Z-80-10-11-812-815",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D8010116441198"
+            ],
+            "shared_fins": [
+              "2520ES"
+            ],
+            "shared_zones": [
+              "421"
+            ],
+            "shared_ata_6d": [
+              "80-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure builds its first branch on the clamp standard and the duration used. A third duration would need a third branch.",
+          "resolution": "No change while the duration is unchanged."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-Z-80-10-11-FIG-16",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "EN290030-3C"
+            ],
+            "shared_fins": [
+              "293ES"
+            ],
+            "shared_zones": [
+              "462"
+            ],
+            "shared_ata_6d": [
+              "80-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure states that the original clamp must not be refitted where the heat shield tab is present because the band diameter differs. A duration change would not alter that but it would need restating.",
+          "resolution": "No change required."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "FCOM-Z-PRO-80-10-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew entry is about counting start attempts and cooling intervals; the modification text is about a clamp band and a heat shield tab. Nothing links them in the entity graph and the vocabulary does not overlap."
+          },
+          "rationale": "The crew procedure counts every motoring run as a start attempt against the starter duty cycle. A longer run consumes more of that cycle and the operator had not accounted for it.",
+          "resolution": "Ask the crew procedure owner to make the duty cycle arithmetic explicit."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-36-1009",
+          "doc_type": "SB",
+          "reason": "Same bleed air vocabulary and the same nacelle zones, but it relocates a bleed overheat sensor on the distribution ducting and shares no clamp, no tube assembly and no start valve item with the starter installation."
+        }
+      ],
+      "conclusion": "Closed with the duration increase declined. The clamp qualification, not the hardware, is the constraint and the operator was offered a study rather than a refusal.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

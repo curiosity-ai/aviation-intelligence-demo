@@ -1,0 +1,145 @@
+[
+  {
+    "doc_id": "IO-C-260226",
+    "doc_type": "IO",
+    "title": "Time Taken to Load Software at the Gate and Repeated Configuration Disputes After a Line Replacement",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "OPEN",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HKA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-14",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Operator request for a faster and better documented way of loading software at the gate, driven by turnaround overruns and by repeated disagreements about what standard is actually on the aircraft after a unit has been changed on the line.",
+    "sections": {
+      "request": "Two things are costing us time. The first is that a software load at the gate needs the panel in the flight compartment open, a laptop, and a technician standing in the cockpit for the whole of it, which on our network means we can only do it at the two stations where we have our own people. A single load runs to fifty minutes on a good day and we have had it take two hours. The second is worse in the long run. When a line station changes a unit, nobody can say afterwards with confidence what standard is on the aeroplane, because the record is whatever the technician wrote down. We have had three occasions in the last year where an aircraft flew for several days at a mixed standard and we only found out at the next check. We want a printed or downloadable statement of what is actually on the aircraft, produced by the aircraft itself, and we want the loading to be possible without a person sitting in the flight compartment for an hour.",
+      "background": "We raised the same subject informally at the technical liaison meeting two years ago and were told the maintenance terminal would eventually cover it. It does list the software but our people say the list is not trusted because it does not always update after a change until the next power cycle. We currently keep a spreadsheet per aircraft, maintained by hand, and it is the spreadsheet the engineering department actually believes. Our dispatch reliability on this chapter is not bad, but the hidden cost is in the labour and in two disputed warranty claims.",
+      "expected_outcome": "A load that can be started from outside the flight compartment and left to run, and a configuration statement the aircraft produces itself that we can attach to the technical log. If the loading time can be halved we would consider the request answered even without the reporting, but the reporting is the part that removes the argument."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [
+        "5TN9",
+        "62TM"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "164"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00612",
+        "C00680"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111938",
+        "doc_type": "MOD",
+        "relation": "CREATED"
+      }
+    ],
+    "keywords": [
+      "software loading",
+      "turnaround",
+      "configuration report",
+      "line replacement",
+      "maintenance terminal"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Customer Support"
+    },
+    "type_data": {
+      "io_number": "IO-C-260226",
+      "raised_by": {
+        "requester_type": "OPERATOR",
+        "operator_code": "HKA",
+        "contact_role": "Head of Line Maintenance",
+        "oem_focal_department": "ETGC",
+        "oem_focal_site": "Valmont"
+      },
+      "request_category": "SOFTWARE",
+      "priority": "MEDIUM",
+      "io_status": "CONVERTED_TO_MOD",
+      "fleet_scope": {
+        "aircraft_count": 24,
+        "msns": [
+          "C00612",
+          "C00680"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ]
+      },
+      "business_justification": "An estimated 900 technician hours a year spent in the flight compartment during software loads, restricted to two stations, plus three mixed-standard events in twelve months that were found late and two disputed warranty claims that turned on configuration evidence.",
+      "commercial": {
+        "funding": "CUSTOMER_FUNDED",
+        "budget_keur": 600,
+        "contract_reference": "CSA-2026-HKA-0031"
+      },
+      "target_dates": {
+        "requested_response": "2026-07-15",
+        "requested_embodiment_start": "2027-06-01"
+      },
+      "created_mod": "MOD-111938",
+      "closure_note": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

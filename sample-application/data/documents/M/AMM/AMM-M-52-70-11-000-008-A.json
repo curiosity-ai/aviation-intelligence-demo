@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "AMM-M-52-70-11-000-008-A",
+    "doc_type": "AMM",
+    "title": "Removal of the Fwd Cargo Door Proximity Sensor and Target Plate",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-12-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-70",
+      "ata_6d": "52-70-11",
+      "title": "Door Warning — Door Proximity Sensing"
+    },
+    "secondary_ata": [
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-05-21",
+      "released": "2019-12-06",
+      "revised": null,
+      "effective": "2020-01-08"
+    },
+    "abstract": "Removal of the forward cargo door proximity sensor and its target plate, with the sensing gap recorded before anything is disturbed so that the installation can be set back to the same value.",
+    "sections": {
+      "purpose": "This task gives the procedure to remove the forward cargo door proximity sensor and the target plate on the door sill, for replacement or for access to the door warning wiring behind them.",
+      "job_setup_note": "Record the sensing gap with the feeler gauge before any fastener is released; the gap is the only reference that lets the installation be set back correctly and it is not recoverable once the parts are off. The door must be open on its maintenance stay with the actuation system isolated. The door warning circuit must be de-energised at the maintenance panel, otherwise the removal will trigger a flight deck indication.",
+      "procedure": "1. Open the forward cargo door and install the maintenance stay. 2. Isolate the door actuation system and de-energise the door warning circuit. WARNING: DO NOT DO THIS TASK WITH THE DOOR ON THE ACTUATION SYSTEM. THE DOOR CAN CLOSE ON THE SENSOR AND ON YOUR HAND. 3. Get access to the sensing installation in zones 811 and 891. 4. Measure the sensing gap between the sensor 3WT6 and the target plate with the feeler gauge and record it. 5. Disconnect the sensor connector and put a protective cap on it. 6. Release the protective sleeving LN209430K7 at the sensor tail. 7. Remove the sensor from its bracket and keep the shim stack in the order it comes off. CAUTION: KEEP THE SHIM STACK IN ORDER AND IDENTIFY IT BY POSITION. THE STACK IS SET PER AIRCRAFT AND CANNOT BE INTERCHANGED. 8. Remove the target plate D5270117831041 from the door sill. 9. Remove the outboard plate D5270114205406 if the task needs it. 10. Do a general visual inspection of the sill mounting face and of the adjacent sensor target 23WT.",
+      "close_out": "Identify the sensor, the target plate and the shim stack by position. Put a protective cap on the open connector and a temporary cover on the sill mounting face. Record the measured sensing gap and the sill face condition on the aircraft work card. Keep the door warning circuit de-energised until the installation is complete."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5270117831041",
+        "D5270114205406",
+        "LN209430K7"
+      ],
+      "fins": [
+        "3WT6",
+        "23WT"
+      ],
+      "drawings": [
+        "D52701117658"
+      ],
+      "software": [],
+      "zones": [
+        "811",
+        "891"
+      ],
+      "figures": [
+        "FIG-52-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-160915",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-52-70-11-400-008-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "proximity sensor",
+      "target plate",
+      "sensing gap",
+      "shim stack",
+      "door warning"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Door Systems Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "52-70-11-000-008-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All aircraft. The target plate is on the door sill on the delivered standard; record the sensing gap before removal in every case.",
+      "manhours": 4.0,
+      "personnel": 1,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "811",
+          "891"
+        ],
+        "access_panels": [
+          "811BL",
+          "891AL"
+        ],
+        "doors": [
+          "Fwd cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Isolate the cargo door actuation system.",
+          "De-energise the door warning circuit at the maintenance panel.",
+          "Make sure that the door maintenance stay is installed."
+        ],
+        "tooling": [
+          {
+            "reference": "FG-015",
+            "description": "Feeler gauge set 0.05-1.50 mm"
+          },
+          {
+            "reference": "98D52701-060",
+            "description": "Sensing gap reference block"
+          }
+        ],
+        "consumables": [
+          "Protective connector caps",
+          "Cleaning agent, aqueous, general"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-52-70-11-400-008-A"
+      ],
+      "steps": 10,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,285 @@
+[
+  {
+    "doc_id": "PAWO-153726-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Bleed Overheat Sensor Relocation and Pre-Cooler Outlet Duct Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "36-10-12",
+      "54-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56B",
+        "VNT-2500A"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-03",
+      "released": "2026-06-02",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the bleed overheat sensor relocation, opened for a spares release of the formed outlet duct, covering the pylon hard point provision and the leak detection loop test that accepts the installation.",
+    "sections": {
+      "objective": "The relocation has been in service for six years and the formed outlet duct is now requested as a standalone spare so that a damaged duct can be replaced without the sensor bracket kit. The round was asked whether the duct can be released alone and what the published set assumes about the two arriving together.",
+      "findings_summary": "Three items were confirmed and the release was recommended with a condition. The duct and the sensor bracket are geometrically coupled: the longer straight run before the first bend is what puts the sensor outside the elbow radiant field, and a duct fitted to an aircraft whose sensor is still in the original position gains nothing while changing the joint positions. The retrofit bulletin is the only place the pylon hard point provision is described, and an operator replacing a duct from the spares catalogue would not see it. The inspection task already measures the sensor to elbow distance and states that an out of tolerance reading must not be corrected by moving the sensor, which is the right instruction and needs no change. The condition attached to the release is that the duct spare carries a note pointing at the bulletin.",
+      "next_steps": "Release the duct as a spare with a catalogue note referring to the bulletin for the sensor position. Confirm with in-service engineering that no aircraft in the field has the new duct and the old sensor position. No design work required."
+    },
+    "entities": {
+      "part_numbers": [
+        "ES695992-47",
+        "D3610116027716",
+        "D3610114004535",
+        "PE873965-99",
+        "LN212801K2"
+      ],
+      "fins": [
+        "16PU"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "431",
+        "433",
+        "443"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-153726",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "spares release",
+      "sensor position",
+      "hard point provision",
+      "radiant field"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-153726-01",
+      "subject_mod": "MOD-153726",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-02",
+      "outcome": "DELEGATED",
+      "raised_date": "2026-02-03",
+      "due_date": "2026-05-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EAAM"
+        ],
+        "estimated_manhours": 80,
+        "spent_manhours": 71
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "36",
+          "54"
+        ],
+        "ata_4d": [
+          "36-10",
+          "54-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM"
+        ],
+        "msn_range": {
+          "from": "Z02497",
+          "to": "Z09175"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "ES695992-47",
+            "D3610116027716",
+            "LN212801K2"
+          ],
+          "fins": [
+            "16PU"
+          ],
+          "drawings": [],
+          "zones": [
+            "431",
+            "433"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "sensor moved out of a radiant heat field by lengthening a duct straight run",
+          "nuisance overheat warning with no confirmed duct leak"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the geometric coupling between the duct and the sensor bracket",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the published content for the hard point provision",
+          "method": "MANUAL_REVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-36-1009",
+          "doc_type": "SB",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ES695992-47",
+              "LN212801K2"
+            ],
+            "shared_fins": [
+              "16PU"
+            ],
+            "shared_zones": [
+              "431",
+              "433"
+            ],
+            "shared_ata_6d": [
+              "36-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The duct and the sensor bracket are geometrically coupled and the bulletin is the only place the pylon hard point provision is described. An operator replacing a duct from the catalogue would not see it.",
+          "resolution": "Release the duct with a catalogue note referring to the bulletin."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-Z-36-10-11-200-032-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3610116027716",
+              "D3610114004535"
+            ],
+            "shared_fins": [
+              "16PU"
+            ],
+            "shared_zones": [
+              "443"
+            ],
+            "shared_ata_6d": [
+              "36-10-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The inspection task already measures the sensor to elbow distance and forbids correcting an out of tolerance reading by moving the sensor. That is the right instruction and needs no change.",
+          "resolution": "No change required."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-152447",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both texts describe protecting something from radiant heat in the pylon area and use the same vocabulary of heat shields and fairings, yet they share no part number, no FIN and no zone."
+          },
+          "rationale": "The pylon aft fairing heat shield work reads very like this modification and was raised for a related reason, but it protects the fairing skin rather than a sensor and touches nothing this modification changes.",
+          "resolution": "No action. Recorded so that the search result is traceable."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-54-1027",
+          "doc_type": "SB",
+          "reason": "Same pylon area and almost identical wording about heat shielding, but it replaces the pylon aft fairing heat shield and shares no duct, no sensor and no hard point with the bleed distribution work."
+        }
+      ],
+      "conclusion": "Closed by delegation to the spares catalogue owner. The engineering position is that the duct may be released alone provided the catalogue carries the pointer to the bulletin.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,338 @@
+[
+  {
+    "doc_id": "TSM-Z-32-40-12-810-802",
+    "doc_type": "TSM",
+    "title": "BRAKES SYS Fault after a Brake and Steering Control Unit Software Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1992-12-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1992-06-27",
+      "released": "1992-12-21",
+      "revised": null,
+      "effective": "1993-01-11"
+    },
+    "abstract": "Fault isolation for a brake system fault that appears after a control unit software change, separating a mismatched calibration table from a genuine wheel speed or pressure feedback failure.",
+    "sections": {
+      "purpose": "This procedure isolates a brake system fault that appears after a control unit software change or a unit exchange, and distinguishes a configuration mismatch from a genuine sensor or wiring failure.",
+      "fault_description": "The fault appears on the first taxi after a software load or a unit exchange, typically as a brake system caption with an anti-skid channel reported inoperative. The unit passes its own built-in test, which misleads the crew into reporting an intermittent fault, but the pressure feedback loop is not closed and the anti-skid channel is inhibited. On aircraft that have had the pressure transmitter fitted at the same visit, an unconnected or reversed transmitter gives exactly the same picture as a failed wheel speed sensor.",
+      "isolation_procedure": "1. Read the fault memory and record the reported software part number at the unit FIN 998GM. 2. Compare it with the aircraft configuration record. If it does not match, the load did not complete: repeat the load and re-test before any component is changed. 3. If the part number matches, read the calibration table checksum on the maintenance page and compare it with the value on the configuration sheet. 4. If the checksum differs, re-write the calibration table for the sensor D3240129735238 and re-test. 5. If the checksum matches, apply the brakes progressively and observe the pressure reported by the transmitter D3240125686751. 6. A pressure that stays at zero indicates an unconnected transmitter; a pressure that falls as the pedal is pressed indicates a reversed connection. Correct either and re-test. 7. If the pressure tracks correctly, roll the aircraft at walking pace and compare the anti-skid reference speed reported on the maintenance page with the ground speed. The reference must sit within 1.5 knots of ground speed; outside that band the unit is at fault and must be replaced. 8. Measure the wheel speed signal at the brake assembly clamp FIN 2225WS and at the non-return valve position FIN 431WS, and replace the wheel speed sensor of the reporting channel if its signal is absent or noisy. 9. If every signal is correct, replace the control unit and repeat the confirmation test. 10. Do a taxi test with at least two autobrake applications before release.",
+      "dispatch_note": "Dispatch is permitted with one anti-skid channel inoperative subject to the landing distance penalty in the operations manual and to a maximum of one channel per side. Autobrake is not permitted. Rectify within three calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240129735238",
+        "D3240125686751",
+        "D3240121994833"
+      ],
+      "fins": [
+        "998GM",
+        "2225WS",
+        "431WS"
+      ],
+      "drawings": [
+        "D32401274246"
+      ],
+      "software": [
+        "LG3N06435DD"
+      ],
+      "zones": [
+        "754",
+        "744",
+        "734"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-32-40-12-700-013-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-32-1240",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "calibration checksum",
+      "pressure transmitter",
+      "wheel speed signal",
+      "software mismatch"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "32-40-12-810-802",
+      "fault_symptom": "BRAKES SYS 1 FAULT displayed on ECAM after a control unit software change",
+      "fault_codes": [
+        "324012007",
+        "324012031"
+      ],
+      "warning_messages": [
+        "BRAKES SYS 1 FAULT",
+        "BRAKES ANTI SKID N/W STRG FAULT"
+      ],
+      "affected_fins": [
+        "998GM",
+        "2225WS"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Software load did not complete and the reported part number does not match the configuration record",
+          "probability_pct": 34,
+          "fin": "998GM"
+        },
+        {
+          "cause": "Calibration table checksum mismatch after a unit exchange",
+          "probability_pct": 24,
+          "fin": "998GM"
+        },
+        {
+          "cause": "Brake pressure transmitter unconnected or reversed",
+          "probability_pct": 22,
+          "fin": "431WS"
+        },
+        {
+          "cause": "Wheel speed sensor signal absent or noisy",
+          "probability_pct": 20,
+          "fin": "2225WS"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-32-40-12-700-013-A",
+      "dispatch": {
+        "mel_item": "32-42-01B",
+        "dispatchable": true,
+        "dispatch_condition": "One anti-skid channel inoperative, maximum one per side, autobrake not permitted, landing distance penalty applied"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-Z-32-40-12-810-802",
+    "doc_type": "TSM",
+    "title": "BRAKES SYS Fault after a Brake and Steering Control Unit Software Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-06",
+      "reason": "A second reference speed acceptance band is added, keyed to the software standard, so that a converted aircraft is not sent to an unnecessary unit replacement.",
+      "raised_by_pawo": "PAWO-155471-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-20N3",
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1992-06-27",
+      "released": "1992-12-21",
+      "revised": "2026-08-06",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Fault isolation for a brake system fault after a control unit software change, separating a mismatched calibration table from a genuine wheel speed or pressure feedback failure, with the reference speed band taken from the software standard fitted.",
+    "sections": {
+      "purpose": "This procedure isolates a brake system fault that appears after a control unit software change or a unit exchange, and distinguishes a configuration mismatch from a genuine sensor or wiring failure.",
+      "fault_description": "The fault appears on the first taxi after a software load or a unit exchange, typically as a brake system caption with an anti-skid channel reported inoperative. The unit passes its own built-in test, which misleads the crew into reporting an intermittent fault, but the pressure feedback loop is not closed and the anti-skid channel is inhibited. On aircraft that have had the pressure transmitter fitted at the same visit, an unconnected or reversed transmitter gives exactly the same picture as a failed wheel speed sensor.",
+      "isolation_procedure": "1. Read the fault memory and record the reported software part number at the unit FIN 998GM. 2. Compare it with the aircraft configuration record. If it does not match, the load did not complete: repeat the load and re-test before any component is changed. 3. If the part number matches, read the calibration table checksum on the maintenance page and compare it with the value on the configuration sheet. 4. If the checksum differs, re-write the calibration table for the sensor D3240129735238 and re-test. 5. If the checksum matches, apply the brakes progressively and observe the pressure reported by the transmitter D3240125686751. 6. A pressure that stays at zero indicates an unconnected transmitter; a pressure that falls as the pedal is pressed indicates a reversed connection. Correct either and re-test. 7. If the pressure tracks correctly, roll the aircraft at walking pace and compare the anti-skid reference speed reported on the maintenance page with the ground speed. Take the acceptance band from the software standard reported at step 1. With the two-wheel reference the band is 1.5 knots. With the four-wheel weighted estimator of standard LG3N06435DD the reference is deliberately damped and the band is 3.0 knots; a reading of two knots on that standard is normal and is not grounds for a unit replacement. 8. Measure the wheel speed signal at the brake assembly clamp FIN 2225WS and at the non-return valve position FIN 431WS, and replace the wheel speed sensor of the reporting channel if its signal is absent or noisy. 9. If every signal is correct and the reference is outside the band for the standard fitted, replace the control unit and repeat the confirmation test. 10. Do a taxi test with at least two autobrake applications before release.",
+      "dispatch_note": "Dispatch is permitted with one anti-skid channel inoperative subject to the landing distance penalty in the operations manual and to a maximum of one channel per side. Autobrake is not permitted. Rectify within three calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240129735238",
+        "D3240125686751",
+        "D3240121994833"
+      ],
+      "fins": [
+        "998GM",
+        "2225WS",
+        "431WS"
+      ],
+      "drawings": [
+        "D32401274246"
+      ],
+      "software": [
+        "LG3N06435DD"
+      ],
+      "zones": [
+        "754",
+        "744",
+        "734"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-32-40-12-700-013-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-32-1240",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "reference speed band",
+      "calibration checksum",
+      "pressure transmitter",
+      "software standard"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "32-40-12-810-802",
+      "fault_symptom": "BRAKES SYS 1 FAULT displayed on ECAM after a control unit software change",
+      "fault_codes": [
+        "324012007",
+        "324012031"
+      ],
+      "warning_messages": [
+        "BRAKES SYS 1 FAULT",
+        "BRAKES ANTI SKID N/W STRG FAULT"
+      ],
+      "affected_fins": [
+        "998GM",
+        "2225WS"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Software load did not complete and the reported part number does not match the configuration record",
+          "probability_pct": 34,
+          "fin": "998GM"
+        },
+        {
+          "cause": "Calibration table checksum mismatch after a unit exchange",
+          "probability_pct": 24,
+          "fin": "998GM"
+        },
+        {
+          "cause": "Brake pressure transmitter unconnected or reversed",
+          "probability_pct": 22,
+          "fin": "431WS"
+        },
+        {
+          "cause": "Wheel speed sensor signal absent or noisy",
+          "probability_pct": 20,
+          "fin": "2225WS"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-32-40-12-700-013-A",
+      "dispatch": {
+        "mel_item": "32-42-01B",
+        "dispatchable": true,
+        "dispatch_condition": "One anti-skid channel inoperative, maximum one per side, autobrake not permitted, landing distance penalty applied"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

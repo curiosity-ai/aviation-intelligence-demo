@@ -1,0 +1,357 @@
+[
+  {
+    "doc_id": "MOD-132860",
+    "doc_type": "MOD",
+    "title": "Autothrust Servo Loop Gain Set and Thrust Control Computer Card Change for Four-Engine Aircraft",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-09-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-11",
+      "title": "Auto Throttle — Thrust Control Computer"
+    },
+    "secondary_ata": [
+      "76-10",
+      "22-80"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56C",
+        "AUR-5560"
+      ],
+      "operators": [
+        "JTA",
+        "HVA",
+        "TMK"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01578",
+      "production_cut_in_date": "2021-11-22",
+      "retrofit_via": [
+        "SLN-22-1014"
+      ]
+    },
+    "dates": {
+      "created": "2020-04-27",
+      "released": "2021-09-08",
+      "revised": "2021-09-08",
+      "effective": "2021-10-04"
+    },
+    "abstract": "A revised servo loop gain set and a new computer card for the four-engine autothrust installation, ending the small thrust lever oscillation that crews reported in turbulence at high cruise weights.",
+    "sections": {
+      "reason": "Crews on the four-engine aircraft reported the thrust levers hunting by three to five degrees in moderate turbulence above flight level three three zero at high weights, which is uncomfortable, wears the friction clutch and occasionally provokes a disconnect. The behaviour does not appear on the twin-engine aircraft because the loop gain was tuned against a two-engine thrust response. Recorded data from eleven aircraft showed the oscillation at a frequency close to the outer wing bending mode, so the loop is picking up airframe motion through the accelerometer term.",
+      "description": "The circuit card HOL769933-05 in the inboard position of the thrust control computer is replaced by an item with a revised anti-alias filter, and the throttle actuation data concentrator D2230122881931 is re-strapped for the four-engine gain set. Circuit card 7CE4 is unchanged; module 86CE in the inboard rack position is refitted after the strapping change, and rack 16CE is re-identified so that the two gain sets cannot be cross-fitted. The change is a hardware strapping and card change, not a software load: the computer part number does not change and no data loading tooling is needed. Work is in the avionics rack area in zone 141 and in the aft cabin equipment area in zones 192 and 265.",
+      "effects": "No mass change of consequence, measured at 0.2 kg. No electrical load change. The card is not interchangeable between the two-engine and four-engine gain sets and the rack re-identification exists to prevent that. Thrust lever activity in turbulence falls by roughly seventy per cent in flight test, and the friction clutch inspection interval is extended from six thousand to twelve thousand flight hours. The functional test procedure changes and the flight crew documentation is not affected, because the behaviour the crew sees is the intended one.",
+      "embodiment_note": "Production cut-in at MSN S01578 on the four-engine line. Retrofit is six manhours at any transit with rack access, and the removed card is returned. The bulletin is offered at no charge to operators of the affected aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL769933-05",
+        "D2230122881931"
+      ],
+      "fins": [
+        "7CE4",
+        "86CE",
+        "16CE"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "141",
+        "192",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01578"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-22-1014",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-S-22-30-11-700-042-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "autothrust",
+      "loop gain",
+      "thrust lever oscillation",
+      "four-engine",
+      "anti-alias filter"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 132860,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1329",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0.2,
+      "balance_impact": "None of consequence",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "HOL769933-05",
+        "D2230122881931"
+      ],
+      "fins_affected": [
+        "86CE",
+        "16CE"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 42,
+      "estimated_cost_keur": 880,
+      "lead_time_weeks": 48,
+      "production_impact": "Cut-in at MSN S01578 on the four-engine line only",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-132860",
+    "doc_type": "MOD",
+    "title": "Autothrust Servo Loop Gain Set and Thrust Control Computer Card Change for Four-Engine Aircraft",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-06",
+      "reason": "The lever angle signal interface is defined in this dossier with a stated resolver tolerance at the computer input, and the quadrant work is scoped with it rather than separately.",
+      "raised_by_pawo": "PAWO-134430-01",
+      "raised_by_finding": "F02",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-11",
+      "title": "Auto Throttle — Thrust Control Computer"
+    },
+    "secondary_ata": [
+      "76-10",
+      "22-80"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56C",
+        "AUR-5560"
+      ],
+      "operators": [
+        "JTA",
+        "HVA",
+        "TMK"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01578",
+      "production_cut_in_date": "2021-11-22",
+      "retrofit_via": [
+        "SLN-22-1014"
+      ]
+    },
+    "dates": {
+      "created": "2020-04-27",
+      "released": "2021-09-08",
+      "revised": "2026-07-06",
+      "effective": "2026-07-24"
+    },
+    "abstract": "A revised servo loop gain set and a new computer card for the four-engine autothrust installation, ending the small thrust lever oscillation that crews reported in turbulence at high cruise weights.",
+    "sections": {
+      "reason": "Crews on the four-engine aircraft reported the thrust levers hunting by three to five degrees in moderate turbulence above flight level three three zero at high weights, which is uncomfortable, wears the friction clutch and occasionally provokes a disconnect. The behaviour does not appear on the twin-engine aircraft because the loop gain was tuned against a two-engine thrust response. Recorded data from eleven aircraft showed the oscillation at a frequency close to the outer wing bending mode, so the loop is picking up airframe motion through the accelerometer term.",
+      "description": "The circuit card HOL769933-05 in the inboard position of the thrust control computer is replaced by an item with a revised anti-alias filter, and the throttle actuation data concentrator D2230122881931 is re-strapped for the four-engine gain set. Circuit card 7CE4 is unchanged; module 86CE in the inboard rack position is refitted after the strapping change, and rack 16CE is re-identified so that the two gain sets cannot be cross-fitted. The change is a hardware strapping and card change, not a software load: the computer part number does not change and no data loading tooling is needed. This issue also fixes the interface the gain set reads from. The lever angle signal is specified at the computer input as plus or minus 0.25 degrees of the mechanical lever position across the full quadrant travel, with a maximum lag of 40 milliseconds, and the anti-alias filter is designed against that figure and no other. Any change to the quadrant resolver, its bracket or its redundancy is therefore inside the scope of this modification and not beside it. Work is in the avionics rack area in zone 141 and in the aft cabin equipment area in zones 192 and 265.",
+      "effects": "No mass change of consequence, measured at 0.2 kg. No electrical load change. The card is not interchangeable between the two-engine and four-engine gain sets and the rack re-identification exists to prevent that. Thrust lever activity in turbulence falls by roughly seventy per cent in flight test, and the friction clutch inspection interval is extended from six thousand to twelve thousand flight hours. The functional test procedure changes and the flight crew documentation is not affected, because the behaviour the crew sees is the intended one. The resolver redundancy and the pedestal side access studied under MOD-134430 sit at the other end of the same signal and are scoped together with this change: a resolver whose output tolerance widens beyond the figure stated above invalidates the filter design, and the two must be released as one configuration rather than two.",
+      "embodiment_note": "Production cut-in at MSN S01578 on the four-engine line. Retrofit is six manhours at any transit with rack access, and the removed card is returned. The bulletin is offered at no charge to operators of the affected aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL769933-05",
+        "D2230122881931"
+      ],
+      "fins": [
+        "7CE4",
+        "86CE",
+        "16CE"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "141",
+        "192",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01578"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-22-1014",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-S-22-30-11-700-042-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "MOD-134430",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "autothrust",
+      "loop gain",
+      "lever angle signal",
+      "resolver tolerance",
+      "four-engine"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 132860,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1329",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 0.2,
+      "balance_impact": "None of consequence",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "HOL769933-05",
+        "D2230122881931"
+      ],
+      "fins_affected": [
+        "86CE",
+        "16CE"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 42,
+      "estimated_cost_keur": 880,
+      "lead_time_weeks": 48,
+      "production_impact": "Cut-in at MSN S01578 on the four-engine line only",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

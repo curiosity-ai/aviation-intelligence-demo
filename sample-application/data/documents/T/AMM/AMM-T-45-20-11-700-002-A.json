@@ -1,0 +1,159 @@
+[
+  {
+    "doc_id": "AMM-T-45-20-11-700-002-A",
+    "doc_type": "AMM",
+    "title": "Central Maintenance Computer — Software Loading and Fault History Verification",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-07-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Central Maintenance System — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45-11"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-02-24",
+      "released": "2025-07-08",
+      "revised": null,
+      "effective": "2025-08-19"
+    },
+    "abstract": "Loading of the central maintenance computer built-in test software and fault database, with the history archive that must be taken first and the correlation verification that closes the task.",
+    "sections": {
+      "purpose": "This task gives the procedure to load the built-in test software and the fault database into the central maintenance computer, to archive the existing fault history before the load and to verify the correlation behaviour afterwards.",
+      "job_setup_note": "A processing card change clears the fault history and there is no way to migrate it, so the history must be downloaded and archived before any work starts. The built-in test software must be loaded before the fault database. The correlation verification uses a deliberately induced upstream fault and must be done with the aircraft on ground power and no other maintenance activity in progress, otherwise the induced fault is not the only thing in the message set.",
+      "procedure": "1. Connect the maintenance terminal and download the complete fault history. 2. Archive the download against the aircraft registration and confirm the file opens before you continue. CAUTION: DO NOT START THE LOAD BEFORE THE ARCHIVE IS CONFIRMED. THE HISTORY IS CLEARED BY THE LOAD AND CANNOT BE RECOVERED. 3. Confirm that no other maintenance activity is in progress on the aircraft. 4. Connect the portable data loader at the avionics loading port. 5. Load the built-in test software and confirm the part number. 6. Load the fault database and confirm the part number. 7. Confirm that the loader has not reported a rejection. 8. Confirm on the maintenance terminal that the reported history depth matches the standard loaded. 9. Induce the upstream fault given in the verification figure. WARNING: THE INDUCED FAULT PRODUCES A FLIGHT DECK CAUTION. WARN ANYONE WORKING IN THE FLIGHT COMPARTMENT BEFORE YOU START. 10. Confirm that the resulting message set is correlated and that the downstream messages are recorded as suppressed rather than absent. 11. Clear the induced fault and confirm that the message set clears. 12. Disconnect the loader and the terminal.",
+      "close_out": "Confirm that no maintenance message remains active and that the fault history is recording. Record both software part numbers in the loadable software list and note the archive reference of the pre-load history download in the aircraft maintenance record."
+    },
+    "entities": {
+      "part_numbers": [
+        "KES685215-32",
+        "VA700112-90"
+      ],
+      "fins": [
+        "3971TM",
+        "6TN4",
+        "7TM"
+      ],
+      "drawings": [
+        "D45201201098"
+      ],
+      "software": [
+        "LA2R9D6C382",
+        "LE2R7E8FEA4"
+      ],
+      "zones": [
+        "225",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-42-20-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "central maintenance computer",
+      "fault history",
+      "archive",
+      "correlation",
+      "data load"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "45-20-11-700-002-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. The sixty leg history depth at step 8 applies only to aircraft post MOD-147120.",
+      "manhours": 3.0,
+      "personnel": 1,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "225",
+          "265"
+        ],
+        "access_panels": [
+          "225AL"
+        ],
+        "doors": [
+          "Avionics compartment access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Warn the flight compartment before the induced fault is applied.",
+          "Confirm that no other maintenance activity is in progress."
+        ],
+        "tooling": [
+          {
+            "reference": "98D31501-033",
+            "description": "Maintenance terminal"
+          },
+          {
+            "reference": "98D31501-027",
+            "description": "Portable data loader"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-42-20-11-900-001-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

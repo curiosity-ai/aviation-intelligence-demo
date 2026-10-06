@@ -1,0 +1,282 @@
+[
+  {
+    "doc_id": "PAWO-146910-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Dual Pressure Sensing for the Bleed Monitoring Computer",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-20",
+      "ata_6d": "36-20-11",
+      "title": "Pneumatic Indicating — Bleed Monitoring Computer"
+    },
+    "secondary_ata": [
+      "36-20-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "CVX-7270"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-04",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the dual pressure sensing standard, opened to assess extending it to the Auran powered fleet and closed when the benefit could not be substantiated for that population.",
+    "sections": {
+      "objective": "Establish whether the dual pressure sensing standard should be extended to the Auran powered fleet, which runs a different bleed pressure schedule and has not reported the shutdown population that drove the original change.",
+      "findings_summary": "The extension was rejected. The shutdown population that justified the change is concentrated almost entirely on the CVX-7270 fleet, whose pressure schedule runs close to the threshold; the Auran fleet reported four comparable events in the same period against twenty-nine. The cost of extending is the same per aircraft and the manifold duct is the long lead item in both cases, so the case rests entirely on event rate and it does not close. Two further items were confirmed. The troubleshooting procedure already handles both sensing standards and needs no change if the extension does not proceed. The crew performance content for single bleed operation is written for both engine types and is unaffected either way.",
+      "next_steps": "Do not extend the standard to the Auran fleet. Review the position again if the Auran event rate rises above the stated threshold. Record the event rate comparison in the fleet reliability register so that the next request does not repeat the analysis."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3620112949513",
+        "D3620115643168",
+        "D3620117912452"
+      ],
+      "fins": [
+        "154PU",
+        "4PU9",
+        "5172PN"
+      ],
+      "drawings": [
+        "D36201195418"
+      ],
+      "software": [
+        "LC8RC1C4C75"
+      ],
+      "zones": [
+        "683",
+        "531",
+        "141"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146910",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "dual sensing",
+      "engine type",
+      "event rate",
+      "historical"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-146910-01",
+      "subject_mod": "MOD-146910",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-17",
+      "outcome": "REJECTED",
+      "raised_date": "2026-05-04",
+      "due_date": "2026-06-26",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EAAM",
+          "EYIS"
+        ],
+        "estimated_manhours": 160,
+        "spent_manhours": 244
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "36",
+          "30"
+        ],
+        "ata_4d": [
+          "36-20",
+          "30-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "T00014",
+          "to": "T00186"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3620112949513",
+            "D3620117912452"
+          ],
+          "fins": [
+            "154PU",
+            "4PU9"
+          ],
+          "drawings": [
+            "D36201195418"
+          ],
+          "zones": [
+            "683"
+          ],
+          "software": [
+            "LC8RC1C4C75"
+          ]
+        },
+        "similarity_seeds": [
+          "single sensor drift commanding a system shutdown",
+          "confirmation window too short for a normal transient"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare the event rate between engine types",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the troubleshooting content for both sensing standards",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TTN-36-1009",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3620112949513",
+              "D3620117912452"
+            ],
+            "shared_fins": [
+              "154PU"
+            ],
+            "shared_zones": [
+              "683"
+            ],
+            "shared_ata_6d": [
+              "36-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin effectivity is limited to the CVX-7270 fleet. Extending it would have required a re-issue and a new substantiation for the Auran pressure schedule, which the event rate does not support.",
+          "resolution": "Leave the effectivity as written. Record the reason so that a later request does not reopen it without new data."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-T-36-20-11-810-810",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3620115643168"
+            ],
+            "shared_fins": [
+              "4PU9",
+              "5172PN"
+            ],
+            "shared_zones": [
+              "531",
+              "141"
+            ],
+            "shared_ata_6d": [
+              "36-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The procedure already branches on the sensing standard fitted rather than on the engine type, so it needs no change whether the extension proceeds or not.",
+          "resolution": "No action."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "FCOM-T-PER-36-20-01",
+          "doc_type": "FCOM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew performance content describes the consequence of losing a bleed source in operational terms and shares no identifier with the sensing change that determines how often it happens."
+          },
+          "rationale": "The performance penalty for single bleed operation is unchanged by the sensing standard, and the crew content is written for both engine types. It was checked because a change to the shutdown rate could have altered the dispatch assumptions behind the tables.",
+          "resolution": "No action. The tables are independent of the sensing standard."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Extension to the Auran fleet rejected on event rate. No documentation change required.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

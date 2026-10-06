@@ -1,0 +1,185 @@
+[
+  {
+    "doc_id": "MOD-138410",
+    "doc_type": "MOD",
+    "title": "Fwd Cargo Door Latching — Sealed Bearing Cartridge in Place of the Carriage Rail",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00003",
+          "to": "S01918"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-133110"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-02-24",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Third-generation forward cargo door latching in which the compliant carriage rail is replaced by a sealed bearing cartridge at each hook station, removing both the residual hook wear and the rail contamination that drives the current inspection.",
+    "sections": {
+      "reason": "The load-sharing carriage introduced in 2020 reduced hook wear by roughly two thirds but did not remove it, and it introduced a new failure mode of its own: the open rail collects dust and de-icing residue at outstations, and once contaminated it no longer takes up load progressively. A managed-fleet operator reports thirty-one departure delays in twelve months traced to spurious door indications, and shop teardown of nine carriages shows the running surface polished on one flank in every case. The carriage travel check that came with the current standard is also unpopular: it needs the door open and a calibrated gauge, and eight of the twenty-two aircraft in the sample had it signed off outside tolerance without a rectification entry.",
+      "description": "Each of the eight hook stations receives a sealed bearing cartridge that carries the take-up compliance internally and presents no open running surface. The right-hand latching web kit D5230136217763 is re-machined to accept the cartridge in place of the rail, and the right-hand cargo door structure lug assembly D5230114238785 is added at each station to react the cartridge housing into the door frame. The upper door structure rib kit XA682613-71 is locally reinforced where the housing bolts through. Blind rivets AGS534950-40 close the housing cover and the inboard latching shear tie GRA7840-60 is retained from the previous standard. The upper cargo door warning sensor 3323WT is re-targeted onto the cartridge output arm, which is a machined feature rather than a bonded plate, so the sensing gap no longer changes as the mechanism wears. Work is through the door aperture in zone 891, from outside in zone 893, and at the door 1 left outboard harness run in zone 812. Detail is on drawings D52301387215 and D52701135292.",
+      "effects": "Estimated mass increase of 2.4 kg per aircraft over the current standard, forward of the reference datum, with no reportable balance effect. No electrical load change; the proximity sensing installation keeps its existing interface. The cartridge is not interchangeable with the carriage rail and cannot be embodied on a door that is still at the first-generation hook standard, because the web machining assumes the rail pocket exists. The carriage travel check is deleted and replaced by a visual cartridge condition check at each C-check. IPC latching content, the door rigging task and the trouble shooting procedure for door indications all require update.",
+      "embodiment_note": "Production cut-in is proposed for the twin-engine line once the design is frozen, with retrofit through a new service bulletin. Provisional estimate is two days at an A-check with the door in place; the cartridge is a single-piece item so no rigging is required after installation.",
+      "open_points": "Pre-analysis must establish what happens to the effectivity of the existing retrofit bulletin for the current latching standard once this modification exists, whether the door warning wiring can stay as installed with the sensor re-targeted, and whether the cartridge can be qualified on the four-engine door, which uses the same latching but a different door frame."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230136217763",
+        "D5230114238785",
+        "XA682613-71",
+        "GRA7840-60",
+        "AGS534950-40"
+      ],
+      "fins": [
+        "3323WT"
+      ],
+      "drawings": [
+        "D52301387215",
+        "D52701135292"
+      ],
+      "software": [],
+      "zones": [
+        "812",
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00371",
+        "S01144"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-S-260218",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-133110",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "latching cartridge",
+      "carriage rail",
+      "hook wear",
+      "door indication",
+      "sealed bearing"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 138410,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.783",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.4,
+      "balance_impact": "Forward of the reference datum; no reportable shift",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D5230114238785",
+        "AGS534950-40"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5230136217763",
+        "XA682613-71"
+      ],
+      "fins_affected": [
+        "3323WT"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 96,
+      "estimated_cost_keur": 560,
+      "lead_time_weeks": 34,
+      "production_impact": "Cut-in proposed on the twin-engine line after design freeze",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

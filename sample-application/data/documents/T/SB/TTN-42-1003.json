@@ -1,0 +1,214 @@
+[
+  {
+    "doc_id": "TTN-42-1003",
+    "doc_type": "SB",
+    "title": "Integrated Modular Avionics — Network Switch — Install the Thermally Redesigned Line Card",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-08-22",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-20",
+      "ata_6d": "42-20-11",
+      "title": "Integrated Modular Avionics — Network Switch"
+    },
+    "secondary_ata": [
+      "42-20-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00190"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-07-14",
+      "released": "2021-11-30",
+      "revised": "2023-08-22",
+      "effective": "2023-10-02"
+    },
+    "abstract": "Replaces the avionics network switch line card with the thermally redesigned variant whose power supply stage tolerates a cold start, and renews the carrier spacers to suit the thicker heat spreader.",
+    "sections": {
+      "planning_reason": "Two hundred and forty message bursts were logged across the fleet in eighteen months, always with the same switch identifier at the head of the burst and always after a cold night stop. Laboratory reproduction showed the line card power supply drawing a higher inrush at low junction temperature, producing a rail dip large enough to restart the card. Each burst has to be assessed before the next dispatch and three operators reported spending several hours a week proving that nothing was wrong.",
+      "description": "This Service Bulletin gives the instructions to replace the line card in each avionics network switch with the thermally redesigned variant, and to renew the carrier spacer set because the new card is fractionally thicker at the heat spreader. The card status discrete is re-terminated at the rack. Switch throughput, port allocation and the network configuration table are unchanged by this bulletin; the controlled warm-up behaviour is enabled by the configuration load delivered under TTN-42-1007, which must be applied afterwards.",
+      "accomplishment_summary": "Remove electrical power from the aircraft and open the forward avionics compartment. Remove the switch carrier from the rack. Remove the existing line card and the spacer set. Install the new spacers and the thermally redesigned line card, observing the antistatic precautions given in AMM-T-42-20-11-900-001-A. Reinstall the carrier in the rack and re-terminate the card status discrete. Restore power and confirm that the switch reaches its operational state and that all ports report link. Do the network integrity check called out in the task. Close the compartment. Apply the configuration load under TTN-42-1007 before releasing the aircraft, because the card and the earlier configuration load are not a supported combination. Record the modification and update the configuration record.",
+      "effectivity_note": "Applicable to TITAN-88 aircraft in the MSN T00001 to T00190 range. Aircraft delivered from MSN T00193 have the redesigned card from the production line. The bulletin covers both switch positions and both must be converted; a mixed pair is not a supported configuration.",
+      "material_note": "Kit K4220-1003-01 covers one aircraft, both switches. The line card is a vendor item with a thirty week lead time. Removed cards are returned to the vendor. Revision 02 corrected the spacer quantity, which was stated for one switch rather than two in the first issue."
+    },
+    "entities": {
+      "part_numbers": [
+        "AES271290K2",
+        "D4220115959692"
+      ],
+      "fins": [
+        "2029CP1"
+      ],
+      "drawings": [
+        "D42201115709",
+        "D42201186509"
+      ],
+      "software": [
+        "LC9R67A042E"
+      ],
+      "zones": [
+        "163"
+      ],
+      "figures": [
+        "FIG-42-20-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00193"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-147040",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "TTN-42-1007",
+        "doc_type": "SB",
+        "relation": "PREREQUISITE_OF"
+      },
+      {
+        "doc_id": "AMM-T-42-20-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-T-42-20-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-T-42-20-11-810-811",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "network switch",
+      "line card",
+      "cold start",
+      "heat spreader",
+      "spacer"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-42-1003",
+      "sb_revision": "02",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled avionics compartment access, or within 36 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-147040",
+      "manpower": {
+        "elapsed_time_hours": 5,
+        "manhours": 8,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K4220-1003-01",
+        "kit_available_from": "2022-04-04",
+        "parts_required": [
+          {
+            "part_number": "D4220115959692",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES271290K2",
+            "qty": 16,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D4220115959692",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Antistatic bag",
+          "Contact cleaner, electronic grade"
+        ],
+        "tooling": [
+          "Antistatic wrist strap and mat",
+          "Maintenance terminal"
+        ]
+      },
+      "weight_change_kg": 0.3,
+      "accomplishment_steps": 10,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2021-11-30",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2023-08-22",
+          "reason": "Spacer quantity corrected to cover both switch positions; note added that the configuration load must follow the card change"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

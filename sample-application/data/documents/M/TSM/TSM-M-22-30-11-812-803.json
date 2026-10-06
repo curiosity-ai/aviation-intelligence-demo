@@ -1,0 +1,337 @@
+[
+  {
+    "doc_id": "TSM-M-22-30-11-812-803",
+    "doc_type": "TSM",
+    "title": "Auto Flight — Autothrust Disconnect Without Crew Action",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-08-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-11",
+      "title": "Auto Throttle — Thrust Control Computer"
+    },
+    "secondary_ata": [
+      "22-30",
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-05-22",
+      "released": "2017-08-06",
+      "revised": "2017-08-06",
+      "effective": "2017-09-03"
+    },
+    "abstract": "Fault isolation for an autothrust disconnect with no crew input, covering the thermal condition of the actuation card, the lever breakout force and the disconnect switch before any component is changed.",
+    "sections": {
+      "purpose": "This procedure isolates an autothrust disconnect that occurs without a crew input, and separates a thermal condition in the actuation card from a mechanical cause at the levers or a switch fault.",
+      "fault_description": "The autothrust disconnects in the cruise or the descent with the associated caution, and re-engages normally afterwards. Reports cluster on aircraft based in hot regions and on aircraft whose thrust levers have become stiff with age. The two causes look identical from the flight deck, which is why the breakout force check appears early in this procedure rather than at the end.",
+      "isolation_procedure": "1. Read the maintenance messages and note the card identification and any thermal status recorded at the time of the disconnect. 2. Record the outside air temperature and the phase of flight for each event; a hot region cluster in the cruise points at the card. 3. Do the breakout force check in AMM-M-76-10-11-200-047-A at both levers before anything is removed. A force outside the band explains the disconnect mechanically and is cheaper to fix. 4. Examine the pedestal ventilation outlet for obstruction by galley loading or stowed items, and record what you find with a photograph. 5. Do the functional test in AMM-M-22-30-12-700-051-A and confirm the actuation travel and the disconnect response. 6. If the breakout force is inside the band and the ventilation is clear, and the card is at the delivered standard, embody the wide thermal margin card. 7. If the card is already at the wide margin standard and the disconnects continue, examine the disconnect switch wiring at each lever for intermittent continuity. 8. Replace the thrust control computer only after the card, the levers and the switch wiring have all been eliminated.",
+      "dispatch_note": "Dispatch with autothrust inoperative is permitted under MEL 22-30-01A with a performance penalty applied and both engines controlled manually. Repeated uncommanded disconnects in flight are not a dispatchable condition and must be isolated before the next sector."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2230121548877",
+        "AGS433103-4C",
+        "D7610119485354"
+      ],
+      "fins": [
+        "18CC",
+        "41CE4",
+        "363CC"
+      ],
+      "drawings": [
+        "D22300085676"
+      ],
+      "software": [],
+      "zones": [
+        "226",
+        "293",
+        "482"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-22-30-12-700-051-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-76-10-11-200-047-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "autothrust disconnect",
+      "thermal margin",
+      "breakout force",
+      "pedestal ventilation",
+      "disconnect switch"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "22-30-11-812-803",
+      "fault_symptom": "A/THR OFF caution with no crew input, re-engages normally afterwards",
+      "fault_codes": [
+        "223011008",
+        "223011029"
+      ],
+      "warning_messages": [
+        "AUTO FLT A/THR OFF"
+      ],
+      "affected_fins": [
+        "18CC",
+        "41CE4",
+        "363CC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Throttle actuation card running close to its rated thermal limit",
+          "probability_pct": 40,
+          "fin": "363CC"
+        },
+        {
+          "cause": "Thrust lever breakout force above the acceptance band",
+          "probability_pct": 28,
+          "fin": "18CC"
+        },
+        {
+          "cause": "Pedestal ventilation outlet obstructed by galley loading",
+          "probability_pct": 20,
+          "fin": "41CE4"
+        },
+        {
+          "cause": "Disconnect switch wiring intermittent at the lever",
+          "probability_pct": 12,
+          "fin": "18CC"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-M-22-30-12-700-051-A",
+      "dispatch": {
+        "mel_item": "22-30-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Autothrust inoperative with performance penalty applied; repeated uncommanded disconnects not dispatchable"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-M-22-30-11-812-803",
+    "doc_type": "TSM",
+    "title": "Auto Flight — Autothrust Disconnect Without Crew Action",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-03",
+      "reason": "Breakout force step tied to the interval table in the lever task, with the drift window that the longer interval opens explained at the step.",
+      "raised_by_pawo": "PAWO-168238-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-11",
+      "title": "Auto Throttle — Thrust Control Computer"
+    },
+    "secondary_ata": [
+      "22-30",
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-05-22",
+      "released": "2017-08-06",
+      "revised": "2026-08-03",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Fault isolation for an autothrust disconnect with no crew input, covering the thermal condition of the actuation card, the lever breakout force and the disconnect switch before any component is changed.",
+    "sections": {
+      "purpose": "This procedure isolates an autothrust disconnect that occurs without a crew input, and separates a thermal condition in the actuation card from a mechanical cause at the levers or a switch fault.",
+      "fault_description": "The autothrust disconnects in the cruise or the descent with the associated caution, and re-engages normally afterwards. Reports cluster on aircraft based in hot regions and on aircraft whose thrust levers have become stiff with age. The two causes look identical from the flight deck, which is why the breakout force check appears early in this procedure rather than at the end. On an aircraft at the compatible friction seal standard the check is scheduled less often, so a lever can drift further between checks than it used to; the reading taken here may be the first measurement of that lever in two years and is the main opportunity to catch the drift.",
+      "isolation_procedure": "1. Read the maintenance messages and note the card identification and any thermal status recorded at the time of the disconnect. 2. Record the outside air temperature and the phase of flight for each event; a hot region cluster in the cruise points at the card. 3. Do the breakout force check in AMM-M-76-10-11-200-047-A at both levers before anything is removed, and read the result against the interval table in that task rather than against a remembered figure: the acceptance band and the scheduled interval both depend on the friction seal standard fitted. Note when the lever was last checked. On an aircraft at the compatible seal standard the interval is doubled, so this reading may be the only measurement of the lever since the last lubrication and a force outside the band explains the disconnect mechanically and is cheaper to fix. 4. Examine the pedestal ventilation outlet for obstruction by galley loading or stowed items, and record what you find with a photograph. 5. Do the functional test in AMM-M-22-30-12-700-051-A and confirm the actuation travel and the disconnect response. 6. If the breakout force is inside the band and the ventilation is clear, and the card is at the delivered standard, embody the wide thermal margin card. 7. If the card is already at the wide margin standard and the disconnects continue, examine the disconnect switch wiring at each lever for intermittent continuity. 8. Replace the thrust control computer only after the card, the levers and the switch wiring have all been eliminated. Enter the breakout force reading into the lever record whatever the outcome of this procedure, so that the trend between the longer scheduled checks is not lost.",
+      "dispatch_note": "Dispatch with autothrust inoperative is permitted under MEL 22-30-01A with a performance penalty applied and both engines controlled manually. Repeated uncommanded disconnects in flight are not a dispatchable condition and must be isolated before the next sector."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2230121548877",
+        "AGS433103-4C",
+        "D7610119485354"
+      ],
+      "fins": [
+        "18CC",
+        "41CE4",
+        "363CC"
+      ],
+      "drawings": [
+        "D22300085676"
+      ],
+      "software": [],
+      "zones": [
+        "226",
+        "293",
+        "482"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-22-30-12-700-051-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-M-76-10-11-200-047-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-168238",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "autothrust disconnect",
+      "thermal margin",
+      "breakout force",
+      "interval table",
+      "disconnect switch"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "22-30-11-812-803",
+      "fault_symptom": "A/THR OFF caution with no crew input, re-engages normally afterwards",
+      "fault_codes": [
+        "223011008",
+        "223011029"
+      ],
+      "warning_messages": [
+        "AUTO FLT A/THR OFF"
+      ],
+      "affected_fins": [
+        "18CC",
+        "41CE4",
+        "363CC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Throttle actuation card running close to its rated thermal limit",
+          "probability_pct": 40,
+          "fin": "363CC"
+        },
+        {
+          "cause": "Thrust lever breakout force above the acceptance band",
+          "probability_pct": 28,
+          "fin": "18CC"
+        },
+        {
+          "cause": "Pedestal ventilation outlet obstructed by galley loading",
+          "probability_pct": 20,
+          "fin": "41CE4"
+        },
+        {
+          "cause": "Disconnect switch wiring intermittent at the lever",
+          "probability_pct": 12,
+          "fin": "18CC"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-M-22-30-12-700-051-A",
+      "dispatch": {
+        "mel_item": "22-30-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Autothrust inoperative with performance penalty applied; repeated uncommanded disconnects not dispatchable"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

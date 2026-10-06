@@ -1,0 +1,182 @@
+[
+  {
+    "doc_id": "AMM-S-27-20-12-900-022-A",
+    "doc_type": "AMM",
+    "title": "Yaw Damper Coupling — Lost Motion Measurement and Rigging Adjustment",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-06-12",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-20",
+      "ata_6d": "27-20-12",
+      "title": "Rudder — Yaw Damper Coupling"
+    },
+    "secondary_ata": [
+      "27-20-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-02-05",
+      "released": "2020-09-24",
+      "revised": "2024-06-12",
+      "effective": "2024-07-01"
+    },
+    "abstract": "Measurement of lost motion in the yaw damper coupling and adjustment of the coupling shims, done after any rudder work and whenever a crew reports inconsistent pedal feel at high speed.",
+    "sections": {
+      "purpose": "This task measures the lost motion between the yaw damper coupling input and the rudder control run, and adjusts the coupling shims to bring it inside tolerance.",
+      "job_setup_note": "Do this task with the rudder de-powered and the fin access platform rigged. The measurement is taken at the coupling itself with the dial gauge, not at the pedal, because the pedal reading includes the whole control run and cannot separate the coupling contribution. Take three readings and use the mean; a single reading is dominated by where the mechanism happened to settle. Two persons are needed, one at the coupling and one at the pedal.",
+      "procedure": "1. De-power the rudder and tag the hydraulic isolation. WARNING: DO NOT PUT A HAND IN THE COUPLING WHILE THE RUDDER IS POWERED. 2. Rig the fin access platform and get access at zones 351, 353 and 394. 3. Mount the dial gauge on the reference bracket at the coupling and zero it. 4. With the second person, move the rudder pedals slowly from the neutral position to the first resistance in one direction, and record the gauge reading. 5. Repeat in the other direction and record. 6. Repeat the pair of readings three times and take the mean of each direction. CAUTION: DO NOT TAKE A SINGLE READING. THE MECHANISM SETTLES DIFFERENTLY EACH TIME AND ONE READING IS NOT REPRESENTATIVE. 7. Add the two means to obtain the total lost motion and compare it against the tolerance in the limits table. 8. Where the measured value is above tolerance, remove the coupling shims and measure their thickness. 9. Re-shim the left-hand coupling sensor JOR552898-79 to bring the lost motion inside tolerance, using the shim selection table. 10. Check the right-hand hose D2720122491963 and the aft restrictor ORDE923015-91 for interference with the adjusted coupling. 11. Repeat the measurement and confirm the value is inside tolerance. 12. Re-secure the harness with cable ties EN461118K6 clear of the coupling travel. 13. Restore rudder power and do the flight control functional check.",
+      "close_out": "Remove the dial gauge and the reference bracket, and account for every shim used and removed. Record the six readings, the two means, the total lost motion before and after, and the shim thickness fitted in the aircraft technical log. A coupling that cannot be brought inside tolerance by shimming is a component change, not a rigging item."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2720120349565",
+        "D2720120578855",
+        "D2720122491963",
+        "ORDE923015-91",
+        "JOR552898-79",
+        "EN461118K6"
+      ],
+      "fins": [
+        "13KS",
+        "47KS2"
+      ],
+      "drawings": [
+        "D27201227968"
+      ],
+      "software": [],
+      "zones": [
+        "351",
+        "353",
+        "394"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-27-90-11-700-021-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-138150",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "lost motion",
+      "yaw damper coupling",
+      "shim selection",
+      "dial gauge",
+      "rudder rigging"
+    ],
+    "originator": {
+      "department": "EYAA",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "27-20-12-900-022-A",
+      "task_type": "ADJUSTMENT",
+      "effectivity_note": "All SOLANO-30 and SOLANO-34 aircraft; the tolerance tightens for aircraft that embody the coupling rework",
+      "manhours": 11.0,
+      "personnel": 2,
+      "elapsed_time_hours": 6.5,
+      "access": {
+        "zones": [
+          "351",
+          "353",
+          "394"
+        ],
+        "access_panels": [
+          "351AR",
+          "353AL",
+          "353CL",
+          "394BL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not put a hand in the coupling while the rudder is powered.",
+          "Tag the hydraulic isolation before access is taken.",
+          "Use fall protection on the fin access platform."
+        ],
+        "tooling": [
+          {
+            "reference": "98D27201-160",
+            "description": "Dial gauge and reference bracket"
+          },
+          {
+            "reference": "98D27201-164",
+            "description": "Fin access platform"
+          },
+          {
+            "reference": "98D27201-167",
+            "description": "Shim thickness micrometer"
+          }
+        ],
+        "consumables": [
+          "Shim set, coupling",
+          "Thread locking compound, medium strength"
+        ],
+        "expendables": [
+          {
+            "part_number": "EN461118K6",
+            "qty": 30
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-S-27-90-11-700-021-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

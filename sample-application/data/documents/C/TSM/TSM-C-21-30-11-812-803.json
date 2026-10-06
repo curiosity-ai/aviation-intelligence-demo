@@ -1,0 +1,162 @@
+[
+  {
+    "doc_id": "TSM-C-21-30-11-812-803",
+    "doc_type": "TSM",
+    "title": "Cabin Rate Excursion During a Rapid Descent",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-28",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-30",
+      "ata_6d": "21-30-11",
+      "title": "Pressurization Control — Outflow Valve Control"
+    },
+    "secondary_ata": [
+      "21-30-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2024-10-30",
+      "released": "2026-04-28",
+      "revised": null,
+      "effective": "2026-05-26"
+    },
+    "abstract": "Fault isolation for a transient cabin vertical speed excursion during a rapid descent from high cruise levels at light weight, which recovers itself within a few seconds and leaves no fault recorded.",
+    "sections": {
+      "purpose": "To isolate the cause of a transient cabin rate excursion during a rapid descent, and to determine whether the aircraft is exhibiting the known envelope characteristic or a genuine control fault.",
+      "fault_description": "The cabin vertical speed reaches about eleven hundred feet per minute for between six and twelve seconds during a rapid descent from above thirty-eight thousand feet at light weight, and then recovers. No cabin altitude limit is exceeded and no maintenance message is recorded, so the only evidence is the crew report and the flight data. Nineteen reports have been received across the fleet, all in the same corner of the envelope. The mechanism is the actuator rate limiter saturating when the commanded valve rate and the achieved rate diverge at low differential pressure, and it does not indicate a failed component.",
+      "isolation_procedure": "Obtain the flight data for the event and confirm the level, the weight and the descent rate at the moment of the excursion. If the event occurred above thirty-eight thousand feet at light weight with a high descent rate and recovered within fifteen seconds, the aircraft is in the known characteristic and no component should be replaced; record the event and continue. If the event occurred outside that envelope, or if the recovery took longer than fifteen seconds, work it as a control fault. Do the cabin rate response check on the ground with the ground pressurisation rig and record the achieved rate and the overshoot in both directions. Compare the overshoot with the acceptance band. If the overshoot is outside the band in one direction only, the actuator null setting is suspect and must be re-set with the linkage disconnected. If the overshoot is outside the band in both directions, the actuator rate limiter is suspect and the actuator D2130114939430 must be replaced. Inspect the sensing plumbing at the cabin pressure indicating manifold D2130128410509, because a leak there makes the indicated rate lag the real one and can turn a normal event into a reported one. Do the installation task as the confirmation task after any actuator work.",
+      "dispatch_note": "There is no dispatch consequence and no minimum equipment list entry applies. An aircraft that has exhibited the known characteristic is fully serviceable. Where the operator has adopted the descent rate advisory as an interim measure, the advisory is an operational limitation and not a dispatch restriction."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2130114939430",
+        "D2130115199629",
+        "HOL977930-80",
+        "JAR222490-37",
+        "D2130128410509"
+      ],
+      "fins": [
+        "4HM5",
+        "529HQ"
+      ],
+      "drawings": [
+        "D21301194893",
+        "D21301272436"
+      ],
+      "software": [],
+      "zones": [
+        "253",
+        "285"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-21-30-11-400-027-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-45-20-11-700-016-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cabin rate",
+      "rapid descent",
+      "rate limiter",
+      "overshoot",
+      "null setting"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "21-30-11-812-803",
+      "fault_symptom": "Transient cabin vertical speed excursion during a rapid descent, recovering without crew action",
+      "fault_codes": [
+        "213011008",
+        "213011025"
+      ],
+      "warning_messages": [],
+      "affected_fins": [
+        "4HM5",
+        "529HQ"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Known envelope characteristic, rate limiter saturation at low differential pressure",
+          "probability_pct": 52,
+          "fin": "4HM5"
+        },
+        {
+          "cause": "Actuator null setting drifted",
+          "probability_pct": 21,
+          "fin": "4HM5"
+        },
+        {
+          "cause": "Cabin pressure indicating sensing leak making the rate read high",
+          "probability_pct": 16,
+          "fin": "529HQ"
+        },
+        {
+          "cause": "Actuator rate limiter degraded",
+          "probability_pct": 11,
+          "fin": "4HM5"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-C-21-30-11-400-027-A",
+      "dispatch": {
+        "mel_item": null,
+        "dispatchable": true,
+        "dispatch_condition": "No dispatch restriction; the descent rate advisory is an operational limitation where the operator has adopted it"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

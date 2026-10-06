@@ -1,0 +1,170 @@
+[
+  {
+    "doc_id": "AMM-C-27-50-11-700-003-A",
+    "doc_type": "AMM",
+    "title": "Flap Drive System — Functional Test",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "D",
+    "issue": {
+      "letter": "D",
+      "supersedes": "C",
+      "date": "2024-04-09",
+      "reason": "Issue D. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [
+      "27-80"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-10-27",
+      "released": "2017-05-18",
+      "revised": "2024-04-09",
+      "effective": "2024-04-30"
+    },
+    "abstract": "Functional test of the flap drive system through three full cycles, with the torque limiter check and the built-in test result read-out that confirms no asymmetry has been declared.",
+    "sections": {
+      "purpose": "This task gives the functional test of the flap drive system through its full travel, the torque limiter verification and the read-out of the built-in test result from the slat flap control computer.",
+      "job_setup_note": "The aircraft must be on the ground with the area below and behind the flaps clear. Electrical and hydraulic power are required. The trailing edge access panels must be open at the drive unit positions on both sides so that the limiter can be observed during the test. A second person is needed at the flight deck to select the flap positions.",
+      "procedure": "1. WARNING: MAKE SURE THAT NO PERSON AND NO EQUIPMENT IS IN THE PATH OF THE FLAPS BEFORE ANY SELECTION IS MADE. 2. Apply electrical power and pressurise the hydraulic system. 3. Read out and record the built-in test standard reported by the slat flap control computer. 4. Clear the fault memory and confirm that it reports clear. 5. Cycle the flaps from fully retracted to fully extended and back, three times, and record the transit time for each cycle. 6. During the second cycle, observe the drive solenoid D2750116570759 and the drive clamp D2750008046179 for movement. 7. CAUTION: STOP THE TEST IMMEDIATELY IF AN ASYMMETRY IS INDICATED. DO NOT RESELECT THE FLAPS UNTIL THE CAUSE IS ESTABLISHED. 8. Verify the torque limiter setting with the calibration head at the position given in the task. 9. Confirm that the drive pump 345EV2 and the flap selector switch 916EV9 respond correctly at each selection. 10. Read out the built-in test result and confirm that no asymmetry has been declared during the three cycles. 11. Confirm the flap position indication agrees with the measured surface position at the fully extended stop. 12. Depressurise the hydraulic system and remove electrical power.",
+      "close_out": "Install the trailing edge access panels and torque the fasteners. Confirm that no maintenance message remains active and that the flap position indication is consistent with the surface position. Record the transit times, the limiter setting, the built-in test standard and the test result in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759",
+        "D2750008046179",
+        "AES606871-9E"
+      ],
+      "fins": [
+        "345EV2",
+        "916EV9"
+      ],
+      "drawings": [
+        "D27501162228"
+      ],
+      "software": [
+        "LC8C8E906FE"
+      ],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [
+        "FIG-27-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-27-50-11-900-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-27-50-11-810-803",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flap drive test",
+      "transit time",
+      "torque limiter",
+      "built-in test",
+      "asymmetry"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "27-50-11-700-003-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. The asymmetry acceptance window differs between built-in test standards; use the window for the standard the computer reports.",
+      "manhours": 5.0,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "522",
+          "561",
+          "661"
+        ],
+        "access_panels": [
+          "522AR",
+          "561AR",
+          "661CR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Make sure that no person or equipment is in the path of the flaps.",
+          "Put the warning notices in the flight compartment.",
+          "Do not stand under an extended flap during a cycle."
+        ],
+        "tooling": [
+          {
+            "reference": "98D27501-033",
+            "description": "Torque limiter calibration head"
+          },
+          {
+            "reference": "98D27501-019",
+            "description": "Portable maintenance terminal"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-27-50-11-900-001-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

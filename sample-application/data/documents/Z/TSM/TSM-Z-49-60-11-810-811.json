@@ -1,0 +1,169 @@
+[
+  {
+    "doc_id": "TSM-Z-49-60-11-810-811",
+    "doc_type": "TSM",
+    "title": "APU Auto-Shutdown on the Ground with No Confirmed Machine Fault",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-05-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50",
+      "49-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-02-09",
+      "released": "2022-09-28",
+      "revised": "2025-05-20",
+      "effective": "2025-06-10"
+    },
+    "abstract": "Fault isolation for an auxiliary power unit that shuts itself down on the ground with no confirmed machine fault, separating a control box over-temperature protection from a genuine sensing or load fault.",
+    "sections": {
+      "purpose": "This procedure isolates an auxiliary power unit auto-shutdown on the ground where no machine fault is confirmed, and distinguishes a control box protection trip from a sensing fault and from a genuine load-related shutdown.",
+      "fault_description": "The unit shuts down between sixty and one hundred and twenty seconds after the bleed is selected on, most often on the second or later turnaround of a hot day, and will not restart until it has cooled. The reported maintenance message points at the control box rather than at the machine, and two unit exchanges on the same aircraft with no improvement is a common history. Ambient temperature and the number of sectors already flown that day are the two most useful pieces of information the crew can give, and they are almost never recorded on the defect report.",
+      "isolation_procedure": "1. Record the ambient temperature, the number of sectors flown that day and the time since the previous shutdown. 2. Read the fault memory at the control box FIN 47PA and record the reported shutdown reason and the recorded parameters. 3. A shutdown reason of internal over-temperature with normal exhaust gas temperature points at the control box installation and not at the machine. 4. Measure the compartment temperature at the control box position with the unit at idle and again with the bleed on, and compare both with the limits in the instructions. 5. If the compartment temperature is inside the limits, check the cooling inlet at the tube assembly FIN 5366PA for obstruction, and check the shroud at FIN 9992PB for correct seating; a displaced shroud diverts the cooling flow. 6. Read the loaded software part numbers and confirm that the protection threshold table matches the configuration record. 7. If the software matches, do the operational test with the load compressor schedule check and compare the surge margin with the table. 8. A surge margin outside the table with correct software indicates a load compressor or inlet guide vane fault; refer to the load compressor procedure. 9. If every check passes and the shutdown reproduces only at high ambient temperature, report the finding; the condition is an installation limitation and not a component failure. 10. Do the confirmation test after any change.",
+      "dispatch_note": "Dispatch is permitted with the auxiliary power unit inoperative subject to the ground power and air availability required at every station on the route, and to the engine start method in the operations manual. Rectify within three calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4960115159645",
+        "D4960118355783",
+        "ESC601932-18"
+      ],
+      "fins": [
+        "47PA",
+        "5366PA",
+        "9992PB"
+      ],
+      "drawings": [
+        "D49601121167"
+      ],
+      "software": [
+        "LA4N61F1A35",
+        "LE1N58BD890",
+        "LG7N7AE7E40"
+      ],
+      "zones": [
+        "321",
+        "396",
+        "391"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-49-60-11-700-028-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-152210",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "apu auto shutdown",
+      "over-temperature protection",
+      "compartment temperature",
+      "cooling inlet",
+      "surge margin"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "49-60-11-810-811",
+      "fault_symptom": "APU AUTO SHUT DOWN on the ground with no confirmed machine fault",
+      "fault_codes": [
+        "496011002",
+        "496011014"
+      ],
+      "warning_messages": [
+        "APU AUTO SHUT DOWN",
+        "APU FAULT"
+      ],
+      "affected_fins": [
+        "47PA",
+        "5366PA",
+        "9992PB"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Control box internal over-temperature protection trip at high compartment temperature",
+          "probability_pct": 46,
+          "fin": "47PA"
+        },
+        {
+          "cause": "Cooling inlet obstruction or displaced shroud diverting the cooling flow",
+          "probability_pct": 24,
+          "fin": "9992PB"
+        },
+        {
+          "cause": "Protection threshold table does not match the configuration record",
+          "probability_pct": 18,
+          "fin": "5366PA"
+        },
+        {
+          "cause": "Load compressor inlet guide vane schedule fault",
+          "probability_pct": 12,
+          "fin": "47PA"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-49-60-11-700-028-A",
+      "dispatch": {
+        "mel_item": "49-10-01A",
+        "dispatchable": true,
+        "dispatch_condition": "APU inoperative, ground power and ground air available at every station on the route"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,196 @@
+[
+  {
+    "doc_id": "MOD-111296",
+    "doc_type": "MOD",
+    "title": "Central Maintenance Computer Application Upgrade and Fault Correlation Window Change",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-05-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [
+      "45-45",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HKA",
+        "BMA",
+        "OST"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00544",
+      "production_cut_in_date": "2022-10-14",
+      "retrofit_via": [
+        "CRN-45-2001"
+      ]
+    },
+    "dates": {
+      "created": "2021-01-19",
+      "released": "2022-07-26",
+      "revised": "2025-05-30",
+      "effective": "2025-06-23"
+    },
+    "abstract": "Upgrade of the central maintenance computer application to widen the fault correlation window and to hold a fault history across power cycles, cutting the number of unconfirmed removals driven by uncorrelated messages.",
+    "sections": {
+      "reason": "The delivered application correlated a flight deck effect with a maintenance message only if the two arrived within four seconds of each other, and a study of eleven hundred line events showed that a third of genuine correlations fell outside that window. The consequence was a maintenance message the line could not tie to anything and a component removed on suspicion. Two operators had independently measured their unconfirmed removal rate on avionics items at more than sixty per cent. The application also lost its fault history at every power cycle, so an intermittent fault on the first sector of the day was invisible by the time the aircraft reached a base.",
+      "description": "The central maintenance computer D4520114738386 is retained and its application load LH6CEDA1669 is replaced, together with the navigation table LH3C76AB34D that maps a maintenance message to the chapter that owns it. The correlation window is widened to sixteen seconds with a weighting that falls off with time, and a non-volatile fault history of the last forty flight legs is added. The mounting tray GRA258107-86 is replaced because the later computer standard needs a deeper rear connector clearance, and the collars EN936981-61 are renewed at the tray. Functional item 4310TN hosts both loads and functional item 1TM carries the maintenance bus interface. Work is in the avionics bay in zones 244 and 164. Installation detail is on drawing D45201180284.",
+      "effects": "Mass increase of 0.4 kg. No electrical load change. The computer is interchangeable in both directions at the hardware level, but the application load is not: an aircraft loaded with the later application cannot be reverted without a reload from the maintenance terminal. Dispatch provisions are unchanged. The trouble shooting manual entry conditions change everywhere they quote a correlation, which is most of the avionics chapters, and the maintenance manual task for reading the fault history is new content rather than an amendment.",
+      "embodiment_note": "Production cut-in at MSN C00544 in October 2022. Retrofit is by Service Bulletin CRN-45-2001, four hours at a line stop for the tray and the loads. Operators who did not want the tray change were offered a load-only partial embodiment that keeps the history but not the wider window."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4520114738386",
+        "GRA258107-86",
+        "EN936981-61",
+        "D4520128145158"
+      ],
+      "fins": [
+        "4310TN",
+        "1TM"
+      ],
+      "drawings": [
+        "D45201180284"
+      ],
+      "software": [
+        "LH6CEDA1669",
+        "LH3C76AB34D"
+      ],
+      "zones": [
+        "244",
+        "164"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00544"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-45-2001",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "FCOM-C-DSC-45-20-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-45-20-11-700-016-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-45-20-11-810-812",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "WDM-C-92-21-31",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "central maintenance computer",
+      "fault correlation",
+      "fault history",
+      "unconfirmed removal",
+      "application load"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111296,
+      "mod_class": "MINOR",
+      "change_category": "SOFTWARE",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.4,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "GRA258107-86"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4520114738386"
+      ],
+      "fins_affected": [
+        "4310TN"
+      ],
+      "software_affected": [
+        "LH6CEDA1669",
+        "LH3C76AB34D"
+      ],
+      "estimated_manhours": 310,
+      "estimated_cost_keur": 720,
+      "lead_time_weeks": 36,
+      "production_impact": "Cut-in at MSN C00544, load applied at the functional test station",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

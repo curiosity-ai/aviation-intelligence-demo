@@ -1,0 +1,166 @@
+[
+  {
+    "doc_id": "WDM-Z-92-11-12",
+    "doc_type": "WDM",
+    "title": "Overhead Panel Wiring — Circuit Breaker Bank and Bus Bar Terminations",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-02-17",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-11",
+      "ata_6d": "92-11-12",
+      "title": "Flight Compartment Wiring — Overhead Panel Wiring"
+    },
+    "secondary_ata": [
+      "24-50",
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-05-23",
+      "released": "2017-12-08",
+      "revised": "2023-02-17",
+      "effective": "2023-03-10"
+    },
+    "abstract": "Wiring diagram sheet for the overhead panel loom, showing the circuit breaker bank terminations, the bus bar arrangement and the support stations along the panel hinge line.",
+    "sections": {
+      "purpose": "This sheet shows the overhead panel wiring, the circuit breaker bank terminations and the bus bar arrangement, for all ZEPHYR-22 family aircraft.",
+      "sheet_note": "The sheet is drawn with the overhead panel lowered and viewed from below. Essential and non-essential circuits share the same bundle on the current build standard, and the minimum separation between them is stated on the sheet at each of the three measurement stations; it is a design value and not a workmanship guideline. Circuit breaker positions are given by bank and column and do not change with the cabin configuration. Bus bar termination torque values are on sheet 2 together with the bonding requirements.",
+      "routing_note": "The loom leaves the overhead panel at the hinge line and runs aft along the crown to the forward avionics penetration through zones 211 and 214. It is supported at six stations, two of which are on the hinge line itself and are subject to repeated flexing whenever the panel is lowered. The loom must never carry the weight of the panel, and any support station disturbed during maintenance must be re-established before the panel is raised."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9211126163344",
+        "D9211126648738",
+        "D9211129111846"
+      ],
+      "fins": [
+        "156VU2",
+        "4784VC",
+        "6545VU1"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-92-11-12-200-047-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-Z-92-11-11",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "overhead panel",
+      "circuit breaker bank",
+      "bus bar termination",
+      "bundle separation",
+      "hinge line"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "sheet_number": "92-11-12",
+      "sheet_title": "OVERHEAD PANEL WIRING — CIRCUIT BREAKER BANK AND BUS BARS",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "1102W",
+        "1104W",
+        "1109W"
+      ],
+      "connectors": [
+        {
+          "reference": "1102VC",
+          "part_number": "D9211126163344",
+          "location_zone": "211",
+          "contacts": 48
+        },
+        {
+          "reference": "1109VC",
+          "part_number": "D9211129111846",
+          "location_zone": "214",
+          "contacts": 26
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "156VU2",
+          "description": "CIRCUIT BREAKER, OVERHEAD PANEL WIRING, OUTBD",
+          "zone": "211"
+        },
+        {
+          "fin": "4784VC",
+          "description": "RELAY, OVERHEAD PANEL WIRING, LOWER",
+          "zone": "214"
+        },
+        {
+          "fin": "6545VU1",
+          "description": "BUS BAR, OVERHEAD PANEL WIRING, RH",
+          "zone": "211"
+        }
+      ],
+      "wire_count": 214,
+      "wire_gauge_range": "AWG 24 to AWG 8",
+      "routes": [
+        "Zone 211 overhead panel hinge line to zone 214 crown run",
+        "Zone 214 crown run to the forward avionics penetration"
+      ],
+      "related_sheets": [
+        "WDM-Z-92-11-11",
+        "WDM-Z-92-21-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,417 @@
+[
+  {
+    "doc_id": "PAWO-169118-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Generator Control Unit Protection Rework for Hot Turnaround Operation",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-12",
+      "title": "AC Generation — Generator Control Unit"
+    },
+    "secondary_ata": [
+      "24-50",
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00028",
+          "to": "M00456"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-8400",
+        "AUR-9700"
+      ],
+      "operators": [
+        "CKP"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-06",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the third issue generator protection rework, covering what the two earlier issues left behind, the retrofit bulletin whose effectivity the supersession disturbs, and the maintenance and crew content that a third reissue in six years would touch.",
+    "sections": {
+      "objective": "Establish what the third issue of the generator control unit protection work conflicts with, which in-service bulletins and manual content become wrong on embodiment, and whether a winding temperature model is an acceptable protection source before the design office commits to it.",
+      "scope_note": "The search covers ATA 24-20 as the primary chapter and ATA 24-50 because the status line introduced by the second issue runs through the distribution bay. ATA 31-50 was added when it became clear that removing the flight deck caution on the ground changes what the warning computer annunciates. Wiring chapter 92 was searched on the entity seeds only, not on text, because the candidate changes no harness. Cabin, structure and powerplant chapters were excluded.",
+      "method_note": "Entity linking was seeded from the two part numbers, the two functional item numbers, the drawing and the two zones on the candidate, which brought back the whole generator control family and, unexpectedly, a wing junction wiring sheet that lists the same contactor. Similarity was run over reason-for-change text with an emphasis on protection behaviour rather than on electrical hardware, which is what surfaced the crew description entry: it shares no identifier with the candidate at all and describes the same behaviour from the other side of the flight deck door.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the second issue itself: the candidate replaces its protection block entirely, so the two cannot coexist on an aircraft and the supersession has to be declared before any operator is offered the third issue. Immediately behind it is the first issue retrofit bulletin, whose effectivity is written as pre-second-issue; once the candidate supersedes the second issue that statement no longer identifies a unique aircraft population and the bulletin has to be re-issued or withdrawn. The troubleshooting procedure and the functional test both quote thresholds and a confirmation window that the model replaces, and the parts figure gains the new bonding bolt with a post-candidate effectivity. The wing junction wiring sheet was found by entity linking alone: it lists the same contactor in the same zone and its bonding class table would have to be checked against the new sensing return, which nobody in the review had considered. Finally the crew description entry states that one reset is permitted on the ground and that a second loss is a technical log item; if the shed is inhibited entirely in that condition the entry describes an aeroplane that no longer exists.",
+      "next_steps": "Get a position from certification on whether a winding temperature model may be the protection source, because everything else depends on it. Ask the bulletin owner whether the first issue retrofit is withdrawn or re-issued. Agree with the documentation owner whether the maintenance content is reissued a third time or rewritten once against the model. Check the bonding class table on the wing junction sheet against the new sensing return."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2420007230862",
+        "AES937741K2"
+      ],
+      "fins": [
+        "14PC2",
+        "1468GX"
+      ],
+      "drawings": [
+        "D24201265226"
+      ],
+      "software": [
+        "LD2NDCE7BA6"
+      ],
+      "zones": [
+        "663",
+        "543"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-169118",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-M-260512",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "generator protection",
+      "supersession",
+      "ground inhibit",
+      "winding model"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-169118-01",
+      "subject_mod": "MOD-169118",
+      "source_io": "IO-M-260512",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-06",
+      "due_date": "2026-08-14",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "EGAM",
+          "EYIS"
+        ],
+        "estimated_manhours": 140,
+        "spent_manhours": 96
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "24",
+          "31",
+          "92"
+        ],
+        "ata_4d": [
+          "24-20",
+          "24-50",
+          "31-50",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "M00028",
+          "to": "M00456"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2420007230862",
+            "AES937741K2"
+          ],
+          "fins": [
+            "14PC2"
+          ],
+          "drawings": [
+            "D24201265226"
+          ],
+          "zones": [
+            "663"
+          ],
+          "software": [
+            "LD2NDCE7BA6"
+          ]
+        },
+        "similarity_seeds": [
+          "protection that trips on a reading taken when ventilation is at its lowest",
+          "equipment taken off line on the ground and restored by a crew reset"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search the generator control family on the entity seeds",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search for comparable protection behaviour changes on other chapters",
+          "method": "SEMANTIC",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the retrofit bulletin effectivity against the supersession",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Obtain the certification position on a modelled protection source",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T05",
+          "title": "Check the wing junction bonding class table against the sensing return",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-168118",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2420007230862"
+            ],
+            "shared_fins": [
+              "14PC2"
+            ],
+            "shared_zones": [
+              "663"
+            ],
+            "shared_ata_6d": [
+              "24-20-12"
+            ],
+            "similarity_note": "Both documents describe the same protection function on the same unit, one setting the thresholds and the ground inhibit and the other replacing them with a modelled source."
+          },
+          "rationale": "The candidate replaces the whole protection block introduced by the second issue, including its inhibit conditions and its sensing return. The two configurations cannot coexist on an aircraft and the aircraft record would show two current standards for the same function.",
+          "resolution": "Declare the supersession explicitly on both documents and define the transition for aircraft that have not yet embodied the second issue."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-24-1041",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The first issue retrofit bulletin is effective on aircraft that have not embodied MOD-168118. Once the candidate supersedes that modification, the pre-modification condition no longer identifies a unique population: an aircraft could be pre-second-issue and post-candidate at the same time, which the bulletin does not admit.",
+          "resolution": "Withdraw the bulletin or re-issue it with an effectivity written against the candidate rather than against the second issue."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-M-24-20-12-810-808",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2420007230862"
+            ],
+            "shared_fins": [
+              "14PC2"
+            ],
+            "shared_zones": [
+              "663"
+            ],
+            "shared_ata_6d": [
+              "24-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure reads the configuration standard and then applies a threshold and confirmation window that the candidate removes. Its second step would send the engineer to compare against values that no longer exist in the unit.",
+          "resolution": "Rewrite the procedure against the modelled protection and reissue it in the same documentation package as the modification."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-M-24-20-12-700-032-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2420007230862"
+            ],
+            "shared_fins": [
+              "14PC2"
+            ],
+            "shared_zones": [
+              "663"
+            ],
+            "shared_ata_6d": [
+              "24-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The functional test drives the channel through its protection thresholds and states the expected shed behaviour per configuration standard. A third standard has to be added, and the test would be reissued for the third time in six years.",
+          "resolution": "Add the modelled standard to the test, or rewrite the test once against the model with the two earlier standards as legacy cases."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "WDM-M-92-31-11",
+          "doc_type": "WDM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "14PC2"
+            ],
+            "shared_zones": [
+              "663"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The wing junction wiring sheet lists the same distribution contactor in the same zone and carries the bonding class table for its terminations. The candidate adds a bonding path at the mounting rail through a new sensing return, which changes what that table has to state for this contactor.",
+          "resolution": "Check the bonding class entries for the contactor against the new sensing return and reissue the sheet if the class changes."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "FCOM-M-DSC-24-20-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew entry describes a channel taken off line on the ground and restored by the crew with one permitted reset, in entirely crew vocabulary. The candidate describes suppressing that behaviour altogether. No part number, no functional item number and no zone appears in both, and the two documents share no distinctive words."
+          },
+          "rationale": "The crew description tells the flight crew that one reset is permitted on the ground and that a second loss in the same turnaround is a technical log item. If the shed is inhibited whenever a door is open on ground power, the situation the entry describes cannot occur and the crew is being briefed on an aeroplane that no longer exists.",
+          "resolution": "Reissue the crew description with the inhibited condition stated, and coordinate the change with flight operations before the modification is offered."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "IPC-M-24-20-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES937741K2",
+              "D2420007230862"
+            ],
+            "shared_fins": [
+              "14PC2"
+            ],
+            "shared_zones": [
+              "663"
+            ],
+            "shared_ata_6d": [
+              "24-20-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries the shear head bolt set with a post-candidate effectivity, entered when the candidate was raised, but the relay assembly item still shows a single standard. Embodiment would leave the figure internally inconsistent.",
+          "resolution": "Reissue the figure with the relay assembly item split by effectivity at the same time as the bolt set."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-168264",
+          "doc_type": "MOD",
+          "reason": "Surfaces strongly on similarity because it is also a hot-region reliability problem closed with a no-fault-found return rate, but it is a throttle actuation card on a different chapter, with no shared part number, no shared functional item number and no electrical bay content."
+        },
+        {
+          "doc_id": "TSM-M-22-30-11-812-803",
+          "doc_type": "TSM",
+          "reason": "Very close in wording — a thermal condition, a hot region cluster and a component that passes its bench test — but it is the autothrust disconnect procedure, shares no identifier with the candidate and would not change if the generator protection were rewritten."
+        }
+      ],
+      "conclusion": "Not yet issued. The supersession of the second issue and the certification position on a modelled protection source are the two items that decide the shape of the change.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "doc_id": "TSM-S-36-10-11-812-808",
+    "doc_type": "TSM",
+    "title": "Bleed Leak Indication with No Duct Leak Found at the Precooler Outlet",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-04-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-10",
+      "ata_6d": "36-10-11",
+      "title": "Distribution — Bleed Ducting"
+    },
+    "secondary_ata": [
+      "36-20",
+      "21-60"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30R3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7720"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-09-13",
+      "released": "2022-04-22",
+      "revised": null,
+      "effective": "2022-05-09"
+    },
+    "abstract": "Fault symptom procedure for a bleed leak indication that cannot be confirmed by a duct pressure decay test, where the pressure tapping in the precooler outlet flange is the item at fault rather than the duct.",
+    "sections": {
+      "purpose": "This procedure covers a bleed leak indication that is not confirmed by a duct pressure decay test, on Auran-powered twin-engine aircraft operating a high sector count.",
+      "fault_description": "The indication appears in the climb or shortly after a thrust reduction, and the loop test on the ground finds no leak. On high-cycle aircraft the usual cause is not the duct but the pressure sensing tapping in the precooler outlet flange: the flange sees a steep thermal gradient at every thrust change and, once the flange has begun to crack around the tapping, the sensed pressure lags the real duct pressure enough to trip the leak logic. The crack is found at borescope inspection long before it produces any real leak, which is why the indication appears with an intact duct.",
+      "isolation_procedure": "1. Record the fault codes and the flight phase, and confirm from the flight data whether the indication followed a thrust change. 2. Do the duct pressure decay test to the standard practice. A duct that holds pressure means the leak logic, not the duct, is the subject of this procedure. 3. Open the pylon fairings and do a borescope inspection of the precooler outlet manifold flange around the pressure tapping. Record the length and orientation of any indication. 4. Check the tapping line from the flange to the transmitter for blockage or partial restriction; a partly blocked tapping gives the same lag as a cracked flange. 5. Check the transmitter position 978PN calibration against the reference gauge. 6. Check the restrictor position 918PU for correct sizing; an incorrect restrictor after a previous repair will produce the fault on a healthy system. 7. Where a flange indication is found, treat it as a structural finding and refer to the applicable damage tolerance assessment before further flight. 8. Prove the downstream duct integrity by the operational test of AMM-S-30-10-11-700-015-A, which loads the same supply. 9. Record every event with the sector count since the last borescope inspection.",
+      "dispatch_note": "Dispatch is permitted with one bleed system inoperative and isolated under the applicable MMEL item, with the associated altitude and air conditioning limitations applied. Dispatch is not permitted where a crack indication has been found at the precooler outlet flange until the damage tolerance assessment is complete."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3610110634925",
+        "PE873965-99",
+        "D3610009086881"
+      ],
+      "fins": [
+        "918PU",
+        "978PN"
+      ],
+      "drawings": [
+        "D36101147611",
+        "D36101168339"
+      ],
+      "software": [],
+      "zones": [
+        "433",
+        "443",
+        "571"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-30-10-11-700-015-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-137640",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bleed leak",
+      "pressure tapping",
+      "flange crack",
+      "decay test",
+      "sector count"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "36-10-11-812-808",
+      "fault_symptom": "BLEED LEAK indication with the duct holding pressure on the decay test",
+      "fault_codes": [
+        "361011006",
+        "361011029"
+      ],
+      "warning_messages": [
+        "AIR ENG 1 BLEED LEAK",
+        "AIR ENG 2 BLEED LEAK"
+      ],
+      "affected_fins": [
+        "918PU",
+        "978PN"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Cracking of the precooler outlet flange around the pressure tapping",
+          "probability_pct": 44,
+          "fin": "978PN"
+        },
+        {
+          "cause": "Partly blocked pressure tapping line giving a lagged reading",
+          "probability_pct": 25,
+          "fin": "978PN"
+        },
+        {
+          "cause": "Duct pressure transmitter out of calibration",
+          "probability_pct": 18,
+          "fin": "978PN"
+        },
+        {
+          "cause": "Incorrectly sized restrictor fitted at a previous repair",
+          "probability_pct": 13,
+          "fin": "918PU"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-S-30-10-11-700-015-A",
+      "dispatch": {
+        "mel_item": "36-10-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One bleed system inoperative and isolated with altitude and air conditioning limitations; no dispatch with a flange crack indication pending assessment"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,366 @@
+[
+  {
+    "doc_id": "PAWO-111138-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis Review — Aft Cabin Feeder Margin of the Ventilated Distribution Box",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-06-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-12",
+      "title": "AC Distribution — Secondary Distribution Box"
+    },
+    "secondary_ata": [
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-03-16",
+      "released": "2026-06-30",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed review of the ventilated secondary distribution box, raised on the back of an operator order about seat power, to establish how much of the restored cabin outlet rating is still available before a higher rated in-seat supply is allocated against it.",
+    "sections": {
+      "objective": "Establish how much of the restored cabin outlet rating on the aft secondary distribution box is genuinely available, and whether it can carry the higher rated in-seat power supply now in pre-analysis. The review was raised against the operator order about seat power dropping out during turnaround, because the answer decides whether that order needs a new feeder allocation or only a supply unit change, and those are very different modifications.",
+      "findings_summary": "Five items were confirmed and the answer was that the margin is smaller than the released rating suggests. The ventilated box restored the outlet rating on the box side, but the aft feeder run itself was never re-rated, and the seat power candidate assumes the box figure rather than the run figure. Two documents already record the consequence: the in-seat power dropout isolation procedure reaches its answer through a feeder that is at its limit on ground supply, and the seat installation task carries a load table taken from the box rating. The higher rated bulletin for the box is also still open and would allocate part of the same margin twice.",
+      "next_steps": "Give the seat power work order the feeder run rating rather than the box rating, and state explicitly which of the two figures a load allocation is to be made against. Re-issue the seat installation load table from the run figure. Take a decision on the higher rated termination bulletin before the seat power candidate is launched, so the same margin is not committed twice."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450122851975",
+        "HAR83831-56",
+        "CIDE636017-51",
+        "AES140047-2A"
+      ],
+      "fins": [
+        "403XU2",
+        "89PC"
+      ],
+      "drawings": [
+        "D24501217521",
+        "D24500024675"
+      ],
+      "software": [],
+      "zones": [
+        "244",
+        "252",
+        "272"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111138",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-260127",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "feeder rating",
+      "distribution box",
+      "load allocation",
+      "seat power"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111138-01",
+      "subject_mod": "MOD-111138",
+      "source_io": "IO-C-260127",
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-30",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-03-16",
+      "due_date": "2026-07-10",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ETGC",
+          "EYIS"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 138
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "24",
+          "44",
+          "92"
+        ],
+        "ata_4d": [
+          "24-50",
+          "44-20",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D2450122851975",
+            "HAR83831-56",
+            "AES140047-2A"
+          ],
+          "fins": [
+            "403XU2",
+            "89PC"
+          ],
+          "drawings": [
+            "D24500024675"
+          ],
+          "zones": [
+            "244",
+            "252",
+            "272"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "cabin outlet rating restored by forced ventilation of a distribution box",
+          "passenger device charging dropping out on ground power during turnaround"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Separate the box rating from the feeder run rating",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search candidate work allocating load against the aft feeders",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review in-service evidence of the feeder limit",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Take a position on the open termination bulletin",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111854",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES140047-2A",
+              "D2450122851975"
+            ],
+            "shared_fins": [
+              "403XU2"
+            ],
+            "shared_zones": [
+              "252",
+              "272"
+            ],
+            "shared_ata_6d": [
+              "24-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The seat power candidate allocates its additional load against the restored outlet rating, which is a box figure. The aft feeder run between the box and the cabin outlets was never re-rated and is the real limit, so the candidate's margin calculation is optimistic by about a fifth.",
+          "resolution": "Feeder run rating issued to the candidate work order as the figure to allocate against, with the box rating marked as not applicable to run loading."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-C-44-20-13-810-805",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450122851975"
+            ],
+            "shared_fins": [
+              "403XU2"
+            ],
+            "shared_zones": [
+              "252",
+              "272"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The in-seat power dropout procedure already reaches its answer through a feeder that is at its limit on ground supply, and it treats that as a fault rather than as a design limit. It is the clearest in-service evidence that the run and not the box is the constraint.",
+          "resolution": "Procedure re-worded to distinguish a genuine fault from the ground supply limit case, and its finding fed to the candidate."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "CRN-24-1036",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES140047-2A",
+              "CIDE636017-51",
+              "D2450122851975",
+              "HAR83831-56"
+            ],
+            "shared_fins": [
+              "403XU2",
+              "89PC"
+            ],
+            "shared_zones": [
+              "244",
+              "252"
+            ],
+            "shared_ata_6d": [
+              "24-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The higher rated terminations bulletin is still open and commits part of the same margin. If it runs to completion while the seat power change is launched against the same figure, the margin is allocated twice and the first aircraft to take both will trip on ground supply.",
+          "resolution": "Decision taken to hold the bulletin until the seat power allocation is fixed; effectivity re-stated afterwards."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-C-44-20-13-400-009-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450122851975"
+            ],
+            "shared_fins": [
+              "403XU2"
+            ],
+            "shared_zones": [
+              "252",
+              "272"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The seat power installation task carries a load table that quotes the box rating as the available figure. Any cabin reconfiguration planned from that table will be planned against the wrong number.",
+          "resolution": "Load table re-issued from the feeder run figure with a note naming both ratings and which applies where."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-111132",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "INFORMATIONAL",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2450122851975",
+              "HAR83831-56"
+            ],
+            "shared_fins": [
+              "403XU2"
+            ],
+            "shared_zones": [
+              "244",
+              "252"
+            ],
+            "shared_ata_6d": [
+              "24-50-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The superseded interim derating is reached only through the chain, but it explains why the run was never re-rated: the interim change lowered the demand rather than raising the capability, and the permanent design restored the box without ever revisiting the run.",
+          "resolution": "Recorded as background in the candidate's dossier; no action on the superseded change."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111126",
+          "doc_type": "MOD",
+          "reason": "Returned on zone 244 because the riser ducts share the ceiling void with the aft rack, but it is an acoustic change with no electrical load and no feeder content at all."
+        }
+      ],
+      "conclusion": "Validated. The restored rating stands, but the feeder run and not the box is the figure any new allocation has to be made against.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

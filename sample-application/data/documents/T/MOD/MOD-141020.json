@@ -1,0 +1,368 @@
+[
+  {
+    "doc_id": "MOD-141020",
+    "doc_type": "MOD",
+    "title": "Fwd and Aft Cargo Door Latching — Duplication of Latch Position Sensing",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-09-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00114",
+      "production_cut_in_date": "2016-11-22",
+      "retrofit_via": [
+        "TTN-52-1038",
+        "TTN-52-1041"
+      ]
+    },
+    "dates": {
+      "created": "2016-02-15",
+      "released": "2016-09-27",
+      "revised": "2016-09-27",
+      "effective": "2016-11-01"
+    },
+    "abstract": "Introduction of a second, independent latch position sensor at each cargo door latching station, removing the single-sensor architecture that produced spurious door-not-locked indications and unnecessary returns to stand.",
+    "sections": {
+      "reason": "Between 2013 and 2015 operators reported 214 spurious cargo door indications across a fleet of roughly 190 aircraft, of which 38 resulted in a return to stand or a delayed departure. Investigation traced the majority to a single position sensor at the upper latching station going out of adjustment as the latching intercostal took up wear. Because the architecture carried one sensor per station, any drift in that sensor was indistinguishable from a genuine unlatched condition, and the flight crew had no way of discriminating between the two.",
+      "description": "A second position sensor is added at each latching station of the forward, aft and bulk cargo doors, mounted on a new bracket plate CAL808635-46 that picks up existing holes in the latching rib assembly D5230135992491. The rib assembly is retained but is locally re-drilled and reamed to accept the additional bracket, and the latching intercostal DED143603-69 is replaced by an item with a hardened wear face at the roller contact. The two sensors at each station are wired to separate channels of the door warning computing function, and agreement between them is required before a locked indication is given; a disagreement is annunciated as a maintenance message rather than as a flight deck warning. Sensor cabling is routed on the existing door harness run in zones 891 and 893 using cable ties LN309661K1, and the cover plates are attached with screws LN143422-1C. Revised detail is on drawings D52301366003 and D52301387215.",
+      "effects": "Mass increase of 6.8 kg per aircraft, distributed across the three cargo doors and with no measurable centre-of-gravity effect. Electrical load increases by 34 VA on the door warning busbar. The latching intercostal is not interchangeable with the previous item because the wear face geometry differs, and mixed installation at a single station is not permitted. Minimum equipment list relief for a single failed sensor becomes available for the first time, since the second channel supports despatch. Maintenance manual content for cargo door rigging and the illustrated parts content for the latching station both require update.",
+      "embodiment_note": "Cut in on the production line at MSN T00114 in November 2016. In service the change is done in two stages: an inspection service bulletin establishes the wear state of the latching intercostals, and the modification service bulletin follows within the same base visit. Elapsed time is about three days on a single door set."
+    },
+    "entities": {
+      "part_numbers": [
+        "CAL808635-46",
+        "D5230135992491",
+        "DED143603-69",
+        "LN143422-1C",
+        "LN309661K1"
+      ],
+      "fins": [
+        "3323WT",
+        "2056WV"
+      ],
+      "drawings": [
+        "D52301366003",
+        "D52301387215"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "143"
+      ],
+      "figures": [
+        "FIG-52-30-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00114"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-52-1041",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "TTN-52-1038",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-T-52-30-13-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "cargo door",
+      "latch position sensor",
+      "spurious indication",
+      "door warning",
+      "return to stand"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 141020,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.783",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 6.8,
+      "balance_impact": "Distributed across three door stations, no reportable CG effect",
+      "electrical_load_impact_va": 34,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "CAL808635-46",
+        "DED143603-69"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5230135992491"
+      ],
+      "fins_affected": [
+        "3323WT",
+        "2056WV"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 186,
+      "estimated_cost_keur": 540,
+      "lead_time_weeks": 32,
+      "production_impact": "Cut-in at MSN T00114, absorbed in the door assembly jig without line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-141020",
+    "doc_type": "MOD",
+    "title": "Fwd and Aft Cargo Door Latching — Duplication of Latch Position Sensing",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-06",
+      "reason": "Embodiment note confirms that the two-channel condition already stated for the forward stations carries to the aft positions without amendment.",
+      "raised_by_pawo": "PAWO-146050-01",
+      "raised_by_finding": "F04",
+      "finding_type": "PREREQUISITE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00114",
+      "production_cut_in_date": "2016-11-22",
+      "retrofit_via": [
+        "TTN-52-1038",
+        "TTN-52-1041"
+      ]
+    },
+    "dates": {
+      "created": "2016-02-15",
+      "released": "2016-09-27",
+      "revised": "2026-08-06",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Introduction of a second, independent latch position sensor at each cargo door latching station, removing the single-sensor architecture that produced spurious door-not-locked indications and unnecessary returns to stand.",
+    "sections": {
+      "reason": "Between 2013 and 2015 operators reported 214 spurious cargo door indications across a fleet of roughly 190 aircraft, of which 38 resulted in a return to stand or a delayed departure. Investigation traced the majority to a single position sensor at the upper latching station going out of adjustment as the latching intercostal took up wear. Because the architecture carried one sensor per station, any drift in that sensor was indistinguishable from a genuine unlatched condition, and the flight crew had no way of discriminating between the two.",
+      "description": "A second position sensor is added at each latching station of the forward, aft and bulk cargo doors, mounted on a new bracket plate CAL808635-46 that picks up existing holes in the latching rib assembly D5230135992491. The rib assembly is retained but is locally re-drilled and reamed to accept the additional bracket, and the latching intercostal DED143603-69 is replaced by an item with a hardened wear face at the roller contact. The two sensors at each station are wired to separate channels of the door warning computing function, and agreement between them is required before a locked indication is given; a disagreement is annunciated as a maintenance message rather than as a flight deck warning. Sensor cabling is routed on the existing door harness run in zones 891 and 893 using cable ties LN309661K1, and the cover plates are attached with screws LN143422-1C. Revised detail is on drawings D52301366003 and D52301387215.",
+      "effects": "Mass increase of 6.8 kg per aircraft, distributed across the three cargo doors and with no measurable centre-of-gravity effect. Electrical load increases by 34 VA on the door warning busbar. The latching intercostal is not interchangeable with the previous item because the wear face geometry differs, and mixed installation at a single station is not permitted. Minimum equipment list relief for a single failed sensor becomes available for the first time, since the second channel supports despatch. Maintenance manual content for cargo door rigging and the illustrated parts content for the latching station both require update.",
+      "embodiment_note": "Cut in on the production line at MSN T00114 in November 2016. In service the change is done in two stages: an inspection service bulletin establishes the wear state of the latching intercostals, and the modification service bulletin follows within the same base visit. Elapsed time is about three days on a single door set. Any later work that segregates the two sensing channels depends on this change, because there is nothing to segregate on a station with a single sensor; the condition is stated once here and applies at the aft positions on the same terms as at the forward ones, so a downstream change need not restate it."
+    },
+    "entities": {
+      "part_numbers": [
+        "CAL808635-46",
+        "D5230135992491",
+        "DED143603-69",
+        "LN143422-1C",
+        "LN309661K1"
+      ],
+      "fins": [
+        "3323WT",
+        "2056WV"
+      ],
+      "drawings": [
+        "D52301366003",
+        "D52301387215"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "143"
+      ],
+      "figures": [
+        "FIG-52-30-13-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00114"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-52-1041",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "TTN-52-1038",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-T-52-30-13-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "cargo door",
+      "latch position sensor",
+      "spurious indication",
+      "door warning",
+      "return to stand"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 141020,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.783",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 6.8,
+      "balance_impact": "Distributed across three door stations, no reportable CG effect",
+      "electrical_load_impact_va": 34,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "CAL808635-46",
+        "DED143603-69"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5230135992491"
+      ],
+      "fins_affected": [
+        "3323WT",
+        "2056WV"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 186,
+      "estimated_cost_keur": 540,
+      "lead_time_weeks": 32,
+      "production_impact": "Cut-in at MSN T00114, absorbed in the door assembly jig without line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

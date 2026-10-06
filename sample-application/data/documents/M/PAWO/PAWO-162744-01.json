@@ -1,0 +1,306 @@
+[
+  {
+    "doc_id": "PAWO-162744-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Improved Sealing of the Flap Track Carriage Roller Bearings",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-08-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-13",
+      "title": "Flaps — Flap Track and Carriage"
+    },
+    "secondary_ata": [
+      "57-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-06-25",
+      "released": "2020-08-05",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the improved roller bearing sealing on the flap track carriage. Ownership of the resulting change was handed to the high lift systems integration team once the supplier interface proved to be the deciding factor.",
+    "sections": {
+      "objective": "Establish the documentation and spares consequences of the improved bearing seal on the flap track carriage roller assembly, and decide whether the change could be released as an Aeralis design change or had to be routed through the supplier interface. Water and runway contaminant ingress had driven the removal rate on early aircraft, and the seal geometry proposed by the supplier changed the drain filter position as a side effect.",
+      "findings_summary": "Three items were confirmed, all of them documentation, and none blocking. The parts content treats the roller, the seal and the drain filter as one assembly with a single spare part reference, which hides the fact that the seal change moves the filter and makes the old filter part unorderable against the new roller. Both the removal and the installation tasks call the drain filter position from the old datum and would have technicians looking for it in the wrong place. What decided the outcome was none of these. The seal geometry is supplier-owned intellectual property, so the change could not be released as an Aeralis design definition without a licence position, and that question sits outside pre-analysis.",
+      "next_steps": "Split the roller, seal and drain filter into separately orderable items in the parts content and mark the old filter as not applicable post-modification. Correct the drain filter datum in both tasks. Hand the licence and supplier interface question, together with the design authority decision that follows from it, to high lift systems integration, which owns the contract. Attach the three documentation findings so they are not re-derived. Close this order without a second round; reopen only if the licence position forces the seal geometry to change again."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750130352279",
+        "D2750139843846",
+        "BEDE63136-96",
+        "EN207383K8"
+      ],
+      "fins": [
+        "5CE",
+        "9KS3"
+      ],
+      "drawings": [
+        "D27500031461"
+      ],
+      "software": [],
+      "zones": [
+        "562",
+        "662"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-162744",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "flap track carriage",
+      "roller bearing seal",
+      "drain filter",
+      "supplier interface"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Wendmark",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-162744-01",
+      "subject_mod": "MOD-162744",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2020-08-05",
+      "outcome": "DELEGATED",
+      "raised_date": "2019-06-25",
+      "due_date": "2020-07-17",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Wendmark",
+        "contributing_departments": [
+          "EAAM"
+        ],
+        "estimated_manhours": 80,
+        "spent_manhours": 57
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "27",
+          "57"
+        ],
+        "ata_4d": [
+          "27-50",
+          "57-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "M00100",
+          "to": "M00400"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2750130352279",
+            "D2750139843846",
+            "BEDE63136-96",
+            "EN207383K8"
+          ],
+          "fins": [
+            "5CE",
+            "9KS3"
+          ],
+          "drawings": [
+            "D27500031461"
+          ],
+          "zones": [
+            "562",
+            "662"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "water ingress past a rolling element seal on a high lift carriage",
+          "drain filter position moved by a seal geometry change"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released flap carriage content on ATA 27-50",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess spares breakdown of the roller and seal assembly",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Establish the supplier licence position on the seal geometry",
+          "method": "SME_INTERVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "IPC-M-27-50-13-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2750130352279",
+              "D2750139843846",
+              "BEDE63136-96",
+              "EN207383K8"
+            ],
+            "shared_fins": [
+              "5CE",
+              "9KS3"
+            ],
+            "shared_zones": [
+              "562",
+              "662"
+            ],
+            "shared_ata_6d": [
+              "27-50-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Roller, seal and drain filter are grouped under one spare reference. The new seal moves the filter, so the existing filter part cannot be ordered against a post-modification roller, but nothing in the parts content says so.",
+          "resolution": "Split the three into separately orderable items and mark the superseded filter as not applicable post-modification."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-M-27-50-13-000-005-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2750130352279",
+              "D2750139843846",
+              "BEDE63136-96"
+            ],
+            "shared_fins": [
+              "5CE",
+              "9KS3"
+            ],
+            "shared_zones": [
+              "562",
+              "662"
+            ],
+            "shared_ata_6d": [
+              "27-50-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task locates the drain filter from a datum on the old seal carrier. After the change that datum no longer exists in the same place and the instruction becomes unusable without interpretation.",
+          "resolution": "Re-datum the drain filter location in the removal task under post-modification effectivity."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-27-50-13-400-005-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2750130352279",
+              "EN207383K8"
+            ],
+            "shared_fins": [
+              "5CE",
+              "9KS3"
+            ],
+            "shared_zones": [
+              "562",
+              "662"
+            ],
+            "shared_ata_6d": [
+              "27-50-13"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task was reached through the impact edge from the roller assembly rather than by similarity. It carries the same drain filter datum and additionally specifies a seal seating force that the new seal does not use.",
+          "resolution": "Correct the datum and replace the seating force step with the supplier-specified installation method."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "SRM-M-57-10-12-001",
+          "doc_type": "SRM",
+          "reason": "Retrieved by similarity on moisture ingress and wing structure language and shares the ATA 57 region, but it is a composite patch repair on the lower cover with no bearing, seal or drain content and no shared part number or zone."
+        }
+      ],
+      "conclusion": "Closed and delegated. The three documentation findings were agreed; the design authority and licence question was handed to high lift systems integration, which owns the supplier interface.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

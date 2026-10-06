@@ -1,0 +1,184 @@
+[
+  {
+    "doc_id": "AMM-S-21-60-11-000-010-A",
+    "doc_type": "AMM",
+    "title": "Trim Air Pressure Regulating Valve — Removal",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2020-04-22",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-10-05",
+      "released": "2017-06-15",
+      "revised": "2020-04-22",
+      "effective": "2020-05-08"
+    },
+    "abstract": "Removal of one trim air pressure regulating valve from the distribution manifold, with the duct cool-down wait, the reference line handling and the ceiling panel access sequence.",
+    "sections": {
+      "purpose": "This task removes one of the four trim air pressure regulating valves from its manifold position so that the valve can be replaced, or so that the regulator section can be changed for the torque motor unit.",
+      "job_setup_note": "Do this task with the bleed system depressurised and the packs off. The duct in this area holds heat for a long time; wait at least forty-five minutes after the last bleed operation before touching a joint. On aircraft still at the diaphragm standard the pneumatic reference line must be capped as soon as it is disconnected, because contamination of that line is a common cause of the drift the change is meant to remove.",
+      "procedure": "1. Make sure that the bleed system is depressurised and that the packs are off. WARNING: THE TRIM AIR DUCT STAYS HOT FOR AT LEAST FORTY-FIVE MINUTES AFTER THE LAST BLEED OPERATION. 2. Open the aft belly fairing at zone 193 for the lower valves, or drop the ceiling panels in zones 241 and 242 for the cabin valves. 3. Isolate and tag the zone controller supply. 4. Disconnect the electrical connector at the valve, or on aircraft at the diaphragm standard disconnect the pneumatic reference line and cap it immediately. CAUTION: AN UNCAPPED REFERENCE LINE WILL CONTAMINATE AND THE REPLACEMENT VALVE WILL DRIFT. 5. Release the duct clamps at the valve inlet and outlet. 6. Support the valve body and remove the mounting bolts. 7. Withdraw the valve from the outboard manifold D2160118677637 and cap both duct ends. 8. Do a visual check of the inboard filter sub-assembly KAD437362-51 and change it if the element is discoloured. 9. Do a visual check of the outboard duct NOD212962-03 at the valve interface for heat distress. 10. Where the right-hand transmitter DED83110-55 is disturbed, record its calibration data before it is removed. 11. Cap the manifold ports.",
+      "close_out": "Put the valve in the transit container with the ports capped and the calibration record attached. Make sure that every duct end is capped before the area is left. Record the removal, the valve serial number and the filter condition in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160115682504",
+        "D2160118677637",
+        "DED83110-55",
+        "KAD437362-51",
+        "NOD212962-03"
+      ],
+      "fins": [
+        "2431HM8"
+      ],
+      "drawings": [
+        "D21601215648"
+      ],
+      "software": [],
+      "zones": [
+        "193",
+        "241",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-21-60-11-400-010-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-21-1029",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "trim air valve",
+      "duct cool down",
+      "reference line",
+      "filter element",
+      "valve removal"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "21-60-11-000-010-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All twin-engine and four-engine aircraft; step 4 differs pre and post MOD-130510",
+      "manhours": 6.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "193",
+          "241",
+          "242"
+        ],
+        "access_panels": [
+          "193AL",
+          "241CL",
+          "241AR",
+          "242AR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Wait at least forty-five minutes after the last bleed operation.",
+          "Isolate and tag the zone controller supply.",
+          "Use heat-resistant gloves at the duct joints."
+        ],
+        "tooling": [
+          {
+            "reference": "98D21601-071",
+            "description": "Trim air test set"
+          },
+          {
+            "reference": "98D21601-076",
+            "description": "Duct cap set"
+          },
+          {
+            "reference": "98D21601-079",
+            "description": "Valve transit container"
+          }
+        ],
+        "consumables": [
+          "Anti-seize compound, high temperature",
+          "Gasket set, trim air valve"
+        ],
+        "expendables": [
+          {
+            "part_number": "KAD437362-51",
+            "qty": 1
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-S-21-60-11-400-010-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

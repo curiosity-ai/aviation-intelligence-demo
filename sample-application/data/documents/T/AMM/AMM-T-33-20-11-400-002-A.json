@@ -1,0 +1,185 @@
+[
+  {
+    "doc_id": "AMM-T-33-20-11-400-002-A",
+    "doc_type": "AMM",
+    "title": "Cabin Ceiling and Wall Wash Light Strip — Installation and Addressing",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-02-27",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "33",
+      "ata_4d": "33-20",
+      "ata_6d": "33-20-11",
+      "title": "Passenger Compartment Lighting — Ceiling and Wall Wash Lights"
+    },
+    "secondary_ata": [
+      "44-10",
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-06-02",
+      "released": "2022-01-13",
+      "revised": "2024-02-27",
+      "effective": "2024-03-18"
+    },
+    "abstract": "Installation of a solid state ceiling or wall wash light strip into the cabin lighting channel, including the addressing sequence and the scene check on the cabin attendant panel.",
+    "sections": {
+      "purpose": "This task gives the installation of a solid state light strip into the cabin lighting channel and the addressing that must follow it, so that the strip responds to the correct scene selection.",
+      "job_setup_note": "Isolate the cabin lighting distribution and put the warning notice on the panel. Before you start, record the position of every channel section change in the run, because a strip must not bridge a section change without a transition piece. Have the cabin configuration loading tool at the aircraft; the addressing cannot be completed without it.",
+      "procedure": "Isolate the cabin lighting distribution and confirm that the channel is dead. Remove the ceiling or wall panel along the run. Clean the lighting channel and inspect it for damage. Install the extrusion into the channel and secure it with bolts LN983579-8C at each ceiling rib position, torquing to the value in the illustration. CAUTION: DO NOT CLIP A STRIP ACROSS A CHANGE OF CHANNEL SECTION WITHOUT A TRANSITION PIECE. THE STRIP WILL SEAT UNDER PRELOAD AND WILL CRACK IN SERVICE. Fit a transition piece at every recorded section change. Clip the strips into the extrusion, working from the forward end of the run and keeping the connection order given in the illustration. Connect the run to the cabin core system driver and dress the harness clear of the panel fixings. WARNING: DO NOT LOOK DIRECTLY INTO AN ENERGISED STRIP AT CLOSE RANGE. THE OUTPUT AT FULL BRIGHTNESS CAUSES TEMPORARY VISUAL IMPAIRMENT. Restore the distribution and load the addressing with the cabin configuration tool, front to rear. Confirm that no addressing gap is reported. Select each scene in turn on the cabin attendant panel and confirm that the run responds as expected. Refit the ceiling or wall panel.",
+      "close_out": "Measure and record the cabin lighting current at full brightness for the converted run. Confirm that every scene selection gives the expected result on both decks where the run crosses a deck boundary. Update the cabin configuration record with the addressing. Remove the warning notice from the distribution panel."
+    },
+    "entities": {
+      "part_numbers": [
+        "LN983579-8C",
+        "NY719919-92",
+        "RO886925-91"
+      ],
+      "fins": [
+        "5LP",
+        "55RH",
+        "297LP",
+        "9691LP"
+      ],
+      "drawings": [
+        "D33201135338"
+      ],
+      "software": [],
+      "zones": [
+        "253",
+        "254",
+        "265",
+        "282"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-145340",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-44-20-12-400-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "light strip",
+      "addressing",
+      "lighting channel",
+      "transition piece",
+      "scene selection"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "33-20-11-400-002-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "Aircraft with the solid state lighting standard. On the extended premium layout, transition pieces are needed at every cabin boundary.",
+      "manhours": 10.0,
+      "personnel": 2,
+      "elapsed_time_hours": 6.0,
+      "access": {
+        "zones": [
+          "253",
+          "254",
+          "265",
+          "282"
+        ],
+        "access_panels": [
+          "253BL",
+          "254BL",
+          "265CR",
+          "282BR"
+        ],
+        "doors": [
+          "Main deck passenger door 2 LH"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Isolate the cabin lighting distribution and put the warning notice on the panel.",
+          "Do not look directly into an energised strip at close range.",
+          "Record every channel section change before you start."
+        ],
+        "tooling": [
+          {
+            "reference": "98D33201-027",
+            "description": "Cabin configuration loading tool"
+          },
+          {
+            "reference": "98D33201-034",
+            "description": "Extrusion setting gauge"
+          },
+          {
+            "reference": "98D33201-039",
+            "description": "Lighting current clamp meter"
+          }
+        ],
+        "consumables": [
+          "Cable tie, self-locking",
+          "Contact cleaner, non-residue",
+          "Cleaning cloth, lint free"
+        ],
+        "expendables": [
+          {
+            "part_number": "LN983579-8C",
+            "qty": 40
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-T-44-20-12-400-002-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

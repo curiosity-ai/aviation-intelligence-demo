@@ -1,0 +1,202 @@
+[
+  {
+    "doc_id": "TTN-31-1031",
+    "doc_type": "SB",
+    "title": "Indicating and Recording — Flight Warning Computer — Install the Revised Input Card and Load the Take-Off Inhibit Table",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-11-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "31-50-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00152"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-149310"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2018-06-20",
+      "released": "2018-11-27",
+      "revised": null,
+      "effective": "2019-01-15"
+    },
+    "abstract": "Replaces the input processing card and display driver of both flight warning computers and loads the revised take-off phase inhibit table, removing the transient cautions crews were seeing during acceleration.",
+    "sections": {
+      "planning_reason": "Two hundred and six crew reports were collected over three years describing cautions that appear briefly during the take-off acceleration segment and clear without action, most of them relating to bleed and hydraulic parameters that are legitimately transient at that point. The inhibit table was declared against a phase boundary derived from a single air-ground signal, which is reached late on a long acceleration. One authority asked for a position, and several operators raised the distraction at the highest workload point of the flight.",
+      "description": "This Service Bulletin gives the instructions to replace the input processing card and the display driver assembly in both flight warning computers, to renew the mounting tray that carries the longer card, and to load the operational software that carries the revised take-off phase inhibit table. The revised table derives the phase boundary from air-ground state, computed airspeed and thrust lever position together, and extends the confirmation window for the affected parameter set. The aural warning generation path and the master caution logic are not changed.",
+      "accomplishment_summary": "Remove electrical power and open the flight deck rack. Remove both flight warning computers and take them to a clean area. Remove the input processing card and the display driver assembly from each computer and replace the mounting tray. Install the revised card and display driver, observing the connector keying, which is deliberately different so that the earlier card cannot be fitted. Reinstall both computers in the rack and re-terminate the rack connector. Restore power. Load the operational software into both computers using AMM-T-31-50-11-700-001-A and confirm the load part number on the maintenance terminal. Do the flight warning system functional test and confirm that the master caution and the aural path are unaffected. Close the rack. Record the modification, update the configuration record and issue the crew documentation supplement.",
+      "effectivity_note": "Applicable to TITAN-88 aircraft in the MSN T00001 to T00152 range that have not embodied the second issue of the inhibit standard. An aircraft already at the second issue carries the separately loadable configuration file and must not be reverted to this standard.",
+      "material_note": "Kit K3150-1031-01 covers one aircraft, both computers, and includes the software media. The input processing card is a twenty-four week lead item. Removed cards are returned to the vendor for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150111234640",
+        "D3150111745067",
+        "D3150116156104"
+      ],
+      "fins": [
+        "60FW"
+      ],
+      "drawings": [
+        "D31501271700"
+      ],
+      "software": [
+        "LC2RA4D7C66"
+      ],
+      "zones": [
+        "292"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146790",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-T-31-50-11-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "FCOM-T-DSC-31-50-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "flight warning computer",
+      "input card",
+      "inhibit table",
+      "nuisance caution",
+      "software load"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-31-1031",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled A-check, or within 24 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-146790",
+      "manpower": {
+        "elapsed_time_hours": 6,
+        "manhours": 10,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K3150-1031-01",
+        "kit_available_from": "2019-03-01",
+        "parts_required": [
+          {
+            "part_number": "D3150116156104",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D3150111745067",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D3150111234640",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D3150116156104",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Antistatic bag",
+          "Contact cleaner, electronic grade"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Maintenance terminal"
+        ]
+      },
+      "weight_change_kg": 0.0,
+      "accomplishment_steps": 12,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2018-11-27",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

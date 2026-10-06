@@ -1,0 +1,329 @@
+[
+  {
+    "doc_id": "PAWO-164355-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — In-Service Retrofit of the Onboard Loadable Software Management Module",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-07-23",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-40",
+      "ata_6d": "42-40-12",
+      "title": "Software Loading — Onboard Loadable Software Management"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-02",
+      "released": "2026-07-23",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of the in-service retrofit of the onboard loadable software management module, cut into production in 2024 and now offered to the aircraft below the cut-in on operator demand.",
+    "sections": {
+      "objective": "The module has been in production for two years and three operators with mixed fleets have asked for the retrofit so that they can run one loading procedure across all their aircraft. Establish what the retrofit needs that the production cut-in did not: what has to be embodied first, what the loading procedure change costs the operator in training and documentation, and how the avionics bay access can be shared with work already queued for the same window.",
+      "findings_summary": "Four items were confirmed, one blocking, and none of them argue against the retrofit. The blocking item is sequencing rather than design: the module and the central maintenance computer rack share the avionics bay zone and the loading path, and the rack replacement re-terminates connectors that the module uses. Embodying the module first on an aircraft that will later take the rack change means opening the bay twice and re-validating the loading path twice. On the three requesting fleets, most aircraft are scheduled for the rack change already. The remaining items follow from that: the rack bulletin becomes a practical prerequisite for those aircraft, the existing module bulletin is written for line completion and needs in-service access content, and the loading task carries the module identifiers under a single effectivity.",
+      "next_steps": "Recommend the retrofit with a sequencing condition: on aircraft scheduled for the rack change, embody the module in the same bay visit. Commission an in-service variant of the module bulletin with access and reinstatement content. Split the loading task effectivity by module standard, with a separate media handling sequence for each, which is what the requesting operators asked for in the first place. Publish a combined embodiment package for the three requesting fleets naming the rack bulletin as a planning prerequisite, and confirm spares cover for a campaign of that size before the first slot is offered."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4240123411827",
+        "YST726849-60",
+        "LN3340K2"
+      ],
+      "fins": [
+        "96CQ8",
+        "7CQ"
+      ],
+      "drawings": [
+        "D42401292851"
+      ],
+      "software": [],
+      "zones": [
+        "116",
+        "165"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-164355",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "software management module",
+      "retrofit",
+      "avionics bay access",
+      "loading path"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-164355-01",
+      "subject_mod": "MOD-164355",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-07-23",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-04-02",
+      "due_date": "2026-08-07",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ELSC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "EAAM"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 96
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46",
+          "MERIDIAN-42F"
+        ],
+        "ata_2d": [
+          "42",
+          "45"
+        ],
+        "ata_4d": [
+          "42-40",
+          "45-45",
+          "45-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00451"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4240123411827",
+            "YST726849-60",
+            "LN3340K2"
+          ],
+          "fins": [
+            "96CQ8",
+            "7CQ"
+          ],
+          "drawings": [
+            "D42401292851"
+          ],
+          "zones": [
+            "116",
+            "165"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "one loading procedure across a mixed fleet",
+          "avionics bay opened twice for changes that share a connector set"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Identify work queued for the same avionics bay window",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess loading path re-validation cost per embodiment sequence",
+          "method": "MANUAL_REVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Scope the in-service access content missing from the bulletin",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Confirm spares availability for a three-fleet campaign",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-165240",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "116"
+            ],
+            "shared_ata_6d": [
+              "45-45"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The rack replacement re-terminates connectors the module uses and occupies the same bay zone. Embodying the module first on an aircraft scheduled for the rack change means two bay openings and two loading path validations for one outcome.",
+          "resolution": "Make the retrofit conditional on sequencing: on aircraft scheduled for the rack change, embody both in the same bay visit."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MRD-45-1021",
+          "doc_type": "SB",
+          "finding_type": "PREREQUISITE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "116"
+            ],
+            "shared_ata_6d": [
+              "45-45"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "On the three requesting fleets most aircraft already have the rack bulletin open. It is not a design prerequisite, but in planning terms it is one, and treating it as independent would produce exactly the double visit the sequencing condition is meant to avoid.",
+          "resolution": "Reference the rack bulletin in the module bulletin planning note as a practical prerequisite."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MRD-42-1013",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4240123411827",
+              "YST726849-60",
+              "LN3340K2"
+            ],
+            "shared_fins": [
+              "96CQ8",
+              "7CQ"
+            ],
+            "shared_zones": [
+              "116",
+              "165"
+            ],
+            "shared_ata_6d": [
+              "42-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The existing bulletin was written for completion on the production line and assumes the bay is open and the aircraft unpowered. As an in-service instruction it omits access, power isolation and the reinstatement checks.",
+          "resolution": "Commission an in-service variant with the missing access and reinstatement content before the campaign opens."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-M-42-40-12-900-020-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4240123411827",
+              "YST726849-60",
+              "LN3340K2"
+            ],
+            "shared_fins": [
+              "96CQ8",
+              "7CQ"
+            ],
+            "shared_zones": [
+              "116",
+              "165"
+            ],
+            "shared_ata_6d": [
+              "42-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The loading task carries both module standards under one effectivity statement, with a single media handling sequence. The two standards accept media differently and an operator running one procedure across a mixed fleet is exactly the case that breaks.",
+          "resolution": "Split the task effectivity by module standard, which is also what the requesting operators asked for."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "WDM-M-92-21-12",
+          "doc_type": "WDM",
+          "reason": "Shares zone 116 and is returned by every zone-driven search of the avionics bay region, but it covers forward cargo compartment lighting, smoke detection and extinguishing harnesses with no shared part number, functional item or connector on the loading path."
+        }
+      ],
+      "conclusion": "Closed. The retrofit was recommended with a sequencing condition tied to the rack replacement; the in-service bulletin variant is the pacing item for the campaign.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

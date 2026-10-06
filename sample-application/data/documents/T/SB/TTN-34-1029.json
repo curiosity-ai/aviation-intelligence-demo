@@ -1,0 +1,200 @@
+[
+  {
+    "doc_id": "TTN-34-1029",
+    "doc_type": "SB",
+    "title": "Navigation — Replacement of the Inertial Reference Units by the Current Production Standard",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-01-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-20",
+      "ata_6d": "34-20-11",
+      "title": "Attitude and Direction — Inertial Reference Unit"
+    },
+    "secondary_ata": [
+      "31-60"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-144880"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-07-19",
+      "released": "2022-01-24",
+      "revised": null,
+      "effective": "2022-02-14"
+    },
+    "abstract": "Replacement of the three inertial reference units by the current production standard, with removal of the dedicated alignment control panel and transfer of its function onto the existing display page.",
+    "sections": {
+      "planning_reason": "The gyro block used in the original inertial reference unit went out of production when the optical coating line that produced its mirrors closed. Repair capability is retained only for units returned with a serviceable block, so the repairable population will fall to nothing by about 2028 at the current removal rate of 1.7 per thousand flight hours. There is no alternative source for the block and no in-service problem with the unit itself.",
+      "description": "Each unit is replaced by the current production equivalent, which uses a different gyro technology in the same chassis envelope with the same connector arrangement and mounting tray. The new internal circuit card D3420114778684 carries interface logic that keeps the output bus label set and timing identical to the original. The obsolete control panel sub-assembly D3420118594107 is removed and its aperture blanked, the alignment control moving onto the existing display page. The interface unit kit GIR577736-25 and the display unit sub-assembly XAD347757-62 are retained, and rivets EN160138K8 secure the revised card carrier.",
+      "accomplishment_summary": "Put the aircraft on ground power and make the navigation system safe for maintenance. Record the current alignment status and shut down all three units. Get access to the avionics bay and disconnect the three units. Remove the units from their mounting trays, keeping the trays in place. Remove the obsolete control panel sub-assembly D3420118594107 from the flight deck panel and install the blanking plate supplied in the kit. Install the three replacement units, each fitted with the interface card D3420114778684, and secure the card carriers with rivets EN160138K8. Reconnect the interfaces and confirm the shell bonding at each unit. Apply ground power and let all three units complete a full alignment, recording the alignment time. Confirm on the display page that the alignment control is available and that no maintenance message is raised. Do a heading comparison check between the three units and the standby indicator. Record the embodiment and update the aircraft configuration list.",
+      "effectivity_note": "Applicable to all TITAN-88 aircraft that still carry the original unit standard. A mixed installation is permitted during the transition, since each unit is independent and the interface card preserves the bus behaviour, but the alignment control panel may only be removed once all three units are at the new standard.",
+      "material_note": "Kit K3420-1029-01 covers one aircraft and contains three units, the interface cards, the blanking plate and the fastener set. Kit lead time is seventy-two weeks. Removed units are returned to the supplier and are used to support the remaining original population."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3420114778684",
+        "D3420118594107",
+        "GIR577736-25",
+        "XAD347757-62",
+        "EN160138K8"
+      ],
+      "fins": [
+        "2326FE",
+        "2TR3",
+        "708TR",
+        "8DA",
+        "285TR"
+      ],
+      "drawings": [
+        "D34201126638"
+      ],
+      "software": [],
+      "zones": [
+        "164",
+        "192",
+        "241",
+        "253",
+        "272"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-144880",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-T-34-20-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-T-34-20-11-810-805",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "inertial reference unit",
+      "gyro obsolescence",
+      "alignment control",
+      "interface card",
+      "avionics bay"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-34-1029",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled base maintenance visit, or within 84 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-144880",
+      "manpower": {
+        "elapsed_time_hours": 24,
+        "manhours": 58,
+        "personnel": 2,
+        "downtime_category": "A_CHECK"
+      },
+      "material": {
+        "kit_number": "K3420-1029-01",
+        "kit_available_from": "2022-08-01",
+        "parts_required": [
+          {
+            "part_number": "D3420114778684",
+            "qty": 3,
+            "uom": "EA"
+          },
+          {
+            "part_number": "EN160138K8",
+            "qty": 36,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D3420118594107",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, non-residue",
+          "Bonding washer set"
+        ],
+        "tooling": [
+          "Bonding resistance meter, four-wire",
+          "Avionics rack extraction handle"
+        ]
+      },
+      "weight_change_kg": -9.0,
+      "accomplishment_steps": 12,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2022-01-24",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

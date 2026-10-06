@@ -1,0 +1,278 @@
+[
+  {
+    "doc_id": "PAWO-132640-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Tail Trim Tank Transfer Valve and Forward Return Line Rework",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-09-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-13",
+      "title": "Distribution — Transfer System"
+    },
+    "secondary_ata": [
+      "55-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-02-19",
+      "released": "2018-09-27",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Original pre-analysis for the transfer valve and forward return line rework on the tail trim tank of the four-engine aircraft, notable for two conflicts that no shared identifier would ever have surfaced.",
+    "sections": {
+      "objective": "Establish what changes when the tail trim tank transfer valve responds faster and the forward return line is re-routed, on aircraft where slow valve response has been leaving the centre of gravity aft of the commanded schedule in the descent. The work order had to look beyond the fuel system, because a change to the achievable aft centre of gravity is an input to structural and landing gear load spectra that were set at certification and have not been revisited on the stretched airframe.",
+      "findings_summary": "Inside the fuel system the rework is self-contained and nothing was found. Outside it, two results matter and neither shares a single identifier with the subject. The wing lower cover reinforcement inboard of rib 14 was sized against a bending spectrum derived from the current centre of gravity schedule; restoring the commanded aft limit in the descent moves the spectrum in the direction that eroded the margin in the first place, and the two design offices had no line of communication. The main gear lock link rework is the second: its overcentre margin was assessed against a touchdown attitude distribution that the same schedule feeds. Both were surfaced by the similarity search on centre of gravity and load spectrum wording, and by nothing else — no part number, FIN, drawing, zone or chapter connects any of the three documents.",
+      "next_steps": "Ask loads and aeroelastics for a written statement of the bending spectrum delta before the design is frozen, and route it to the wing lower cover design office rather than filing it. Give the landing gear office the revised touchdown attitude distribution and ask whether the overcentre assessment is still bounding. Hold the fuel system design as it stands; nothing inside the system requires change. Record both links in the dossier so the next trim tank change starts from them."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820133531277",
+        "KA206956-14",
+        "AGS247313K4",
+        "LN213180-50"
+      ],
+      "fins": [
+        "14QT",
+        "40QT"
+      ],
+      "drawings": [
+        "D28201379804"
+      ],
+      "software": [],
+      "zones": [
+        "331",
+        "341",
+        "613"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-132640",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "MOD-130450",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-133020",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-130760",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "trim tank",
+      "transfer valve",
+      "centre of gravity schedule",
+      "load spectrum"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-132640-01",
+      "subject_mod": "MOD-132640",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2018-09-27",
+      "outcome": "VALIDATED",
+      "raised_date": "2018-02-19",
+      "due_date": "2018-09-21",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ESZS",
+          "EGAM"
+        ],
+        "estimated_manhours": 80,
+        "spent_manhours": 66
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "VANTOR-64",
+          "VANTOR-68"
+        ],
+        "ata_2d": [
+          "28",
+          "55",
+          "57",
+          "32"
+        ],
+        "ata_4d": [
+          "28-20",
+          "55-10",
+          "57-10",
+          "32-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM"
+        ],
+        "msn_range": {
+          "from": "S00400",
+          "to": "S01500"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2820133531277",
+            "KA206956-14",
+            "AGS247313K4",
+            "LN213180-50"
+          ],
+          "fins": [
+            "14QT",
+            "40QT"
+          ],
+          "drawings": [
+            "D28201379804"
+          ],
+          "zones": [
+            "331",
+            "341",
+            "613"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "centre of gravity aft of the commanded schedule in the descent",
+          "transfer valve response time on a tail trim tank"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search the fuel system for interactions with the return line routing",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search for design work sized against the centre of gravity schedule",
+          "method": "SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Obtain a bending spectrum delta from loads and aeroelastics",
+          "method": "SME_INTERVIEW",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Check the touchdown attitude distribution used for the gear assessment",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-130450",
+          "doc_type": "MOD",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Pure similarity result. One document is about a fuel transfer valve and a return line, the other about stringer run-outs and a bonded reinforcement. They share no part number, FIN, drawing, zone or chapter, and the only common thread is the wing bending spectrum, which each expresses in its own vocabulary."
+          },
+          "rationale": "The lower cover reinforcement was sized against a bending spectrum derived from the achieved centre of gravity schedule, not the commanded one. Restoring the commanded aft limit in the descent moves the spectrum toward the condition that eroded the original margin.",
+          "resolution": "Obtain a written bending spectrum delta and route it to the wing design office before the design is frozen."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-133020",
+          "doc_type": "MOD",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Also a pure similarity result, on load spectrum and stretched airframe wording. No identifier is shared with the subject, and the two documents sit in unrelated chapters."
+          },
+          "rationale": "The lock link overcentre margin was assessed against a touchdown attitude distribution fed by the same schedule. The change is small in that direction but the assessment was already described as marginal in cold conditions.",
+          "resolution": "Give the landing gear office the revised distribution and ask whether the assessment remains bounding."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-130760",
+          "doc_type": "MOD",
+          "reason": "Ranks well on any four-engine aft fuselage search and shares the aft galley and rear fuselage context that the trim tank sits behind. It is a corrosion and protection change on frame feet with no fuel, mass or load spectrum content of any kind."
+        }
+      ],
+      "conclusion": "The rework is sound within the fuel system. Two out-of-chapter load spectrum questions must be answered before design freeze; neither is a design change.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

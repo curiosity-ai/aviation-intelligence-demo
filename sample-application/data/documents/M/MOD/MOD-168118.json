@@ -1,0 +1,193 @@
+[
+  {
+    "doc_id": "MOD-168118",
+    "doc_type": "MOD",
+    "title": "Extended Thermal Derating and Ground Inhibit of the Generator Control Unit — Issue 2",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-10-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-12",
+      "title": "AC Generation — Generator Control Unit"
+    },
+    "secondary_ata": [
+      "24-50",
+      "31-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-8400",
+        "AUR-9700"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168012"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "M00370",
+      "production_cut_in_date": "2022-11-07",
+      "retrofit_via": [
+        "MRD-24-1058"
+      ]
+    },
+    "dates": {
+      "created": "2021-09-08",
+      "released": "2022-10-13",
+      "revised": null,
+      "effective": "2022-11-07"
+    },
+    "abstract": "Second issue of the generator control unit thermal work, extending the revised protection to the larger variant and inhibiting the shed function entirely while the aircraft is on the ground with a door open, after the first issue proved insufficient on the higher rated installation.",
+    "sections": {
+      "reason": "The first issue reduced but did not eliminate ground channel losses, and the introduction of the higher rated installation on the larger variant brought the rate back up because that bay runs warmer for the same ambient. Twenty-six further events were recorded across eleven operators in two summers, six of them on aircraft already carrying the first issue. Field measurement showed the bay reaching the revised threshold within four minutes of shutdown at ambient temperatures above forty degrees, which the first issue confirmation window was never going to cover.",
+      "description": "The modification supersedes the first issue and replaces the whole protection block in the control unit configuration load. The shed threshold is raised again for the higher rated installation only, the averaged sensing pair introduced by the first issue is retained, and a new inhibit is added: while the aircraft is on the ground with any door open and no engine running, the thermal shed is suppressed and a maintenance status is raised instead of a flight deck caution. The splice module in the distribution bay is replaced by a variant with a higher rated feed for the added status line, and the sensing pair identification is carried over from the first issue wiring drawing. The relay assembly is unchanged.",
+      "effects": "Mass increase of one and a half kilograms per aircraft from the larger splice module. Electrical load increases by fifteen volt amperes for the status line. The change is not interchangeable with the first issue because the splice module footprint differs. Dispatch is unaffected but the crew no longer sees a caution for this condition, which is a flight crew documentation change as well as a maintenance one. The parts catalogue figure and the troubleshooting entry both require reissue.",
+      "embodiment_note": "Cut in at MSN M00370. Retrofit is by service bulletin at a scheduled check because the splice module change needs the distribution bay open; the load alone is not sufficient."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2420009863177",
+        "D2420007230862"
+      ],
+      "fins": [
+        "14PC2",
+        "18GX"
+      ],
+      "drawings": [
+        "D24201265226"
+      ],
+      "software": [
+        "LD2NDCE7BA6"
+      ],
+      "zones": [
+        "663",
+        "512"
+      ],
+      "figures": [
+        "FIG-24-20-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00370"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-24-1058",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-168012",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "IPC-M-24-20-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "TSM-M-24-20-12-810-808",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "generator control unit",
+      "ground inhibit",
+      "thermal shed",
+      "splice module",
+      "status line"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 168118,
+      "mod_class": "MINOR",
+      "change_category": "ELECTRICAL",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1351",
+          "CS 25.1309",
+          "CS 25.1322"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.5,
+      "balance_impact": "Negligible, within the aft equipment bay",
+      "electrical_load_impact_va": 15,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D2420009863177"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2420007230862"
+      ],
+      "fins_affected": [
+        "14PC2",
+        "18GX"
+      ],
+      "software_affected": [
+        "LD2NDCE7BA6"
+      ],
+      "estimated_manhours": 460,
+      "estimated_cost_keur": 910,
+      "lead_time_weeks": 38,
+      "production_impact": "Cut in at MSN M00370, splice module supplied to the line from the existing vendor tooling",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,157 @@
+[
+  {
+    "doc_id": "TSM-S-23-50-11-812-811",
+    "doc_type": "TSM",
+    "title": "Cabin Interphone Call Unreadable from the Aft Stations",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-02-25",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-50",
+      "ata_6d": "23-50-11",
+      "title": "Audio Integrating — Audio Management Unit"
+    },
+    "secondary_ata": [
+      "23-50-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-07-23",
+      "released": "2020-02-25",
+      "revised": null,
+      "effective": "2020-03-15"
+    },
+    "abstract": "Fault isolation for interphone calls that are unreadable from the aft cabin stations only, with a hum that grows through the sector, distinguishing an amplifier drift from a wiring fault.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of unreadable interphone calls from the aft cabin stations, particularly where the crew report a hum under the speech that gets worse as the flight goes on.",
+      "fault_description": "The cabin crew report that calls from the aft galley to the flight deck are hard to understand, with a hum underneath the speech. It is not present on the first sector of the day and gets worse as the aircraft warms through. Forward stations are usually unaffected. Two mechanisms produce this. The first is the amplifier input stage drifting with temperature, which no bench test in the manual detects and which returns eleven of fourteen removed units as serviceable. The second is a screen that has lost its termination somewhere in the aft run, which is temperature-sensitive for a different reason. A ground test on a cold aircraft will find neither.",
+      "isolation_procedure": "1. Establish from the crew report whether the fault is present from the first sector or appears later. Where it is present from cold, go to step 7. 2. Where it appears with time, run the aircraft on ground power with the cabin lights and galleys on for one hour to reproduce it. 3. Make a call from the aft galley station in zone 263 and listen at the flight deck. 4. Where the hum is present, measure the audio level and the noise floor at the amplifier output with the audio test set. 5. Where the noise floor is above the limit and the level is correct, the amplifier is drifting: replace it. 6. Where the noise floor is correct at the amplifier and the hum is heard at the handset, the fault is downstream: go to step 8. 7. Do the call and sidetone test from every station and record which stations are affected. 8. Check the screen termination at the module 2922RC in the lower position and at the transceiver 95RC in the aft position. 9. Measure the screen continuity from the aft station back to the rack. 10. Where the screen is open, repair it and repeat the call test. 11. CAUTION: DO NOT MIX AMPLIFIER STANDARDS WHILE TROUBLE SHOOTING. THE SIDETONE DIFFERENCE WILL BE READ AS A NEW FAULT.",
+      "dispatch_note": "The aircraft may be dispatched with the cabin interphone degraded provided the flight deck to cabin call function is serviceable at the forward stations and the cabin crew are briefed. Dispatch is not permitted with the passenger address system affected."
+    },
+    "entities": {
+      "part_numbers": [
+        "KE27719-48",
+        "LN112642-3C",
+        "D2350122256689",
+        "XADE368523-89"
+      ],
+      "fins": [
+        "2922RC",
+        "95RC"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "133",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-23-50-11-400-035-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "interphone",
+      "hum",
+      "screen termination",
+      "amplifier drift",
+      "aft station"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "23-50-11-812-811",
+      "fault_symptom": "Cabin interphone call unreadable from the aft stations with a hum under the speech",
+      "fault_codes": [
+        "235011003",
+        "235011021"
+      ],
+      "warning_messages": [
+        "CAB INTPH FAULT"
+      ],
+      "affected_fins": [
+        "2922RC",
+        "95RC"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Amplifier input stage drifting with temperature",
+          "probability_pct": 48,
+          "fin": "2922RC"
+        },
+        {
+          "cause": "Screen termination open in the aft run",
+          "probability_pct": 30,
+          "fin": "95RC"
+        },
+        {
+          "cause": "Handset or station connector contamination",
+          "probability_pct": 14,
+          "fin": "2922RC"
+        },
+        {
+          "cause": "Rack connector contact retention below limits",
+          "probability_pct": 8,
+          "fin": "95RC"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-S-23-50-11-400-035-A",
+      "dispatch": {
+        "mel_item": "23-50-01C",
+        "dispatchable": true,
+        "dispatch_condition": "Forward station call function serviceable, passenger address unaffected, cabin crew briefed"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

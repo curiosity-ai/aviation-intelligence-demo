@@ -1,0 +1,284 @@
+[
+  {
+    "doc_id": "PAWO-168264-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Closed) — Throttle Actuation Card Thermal Margin, Root Cause Question",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-12-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-12",
+      "title": "Auto Throttle — Throttle Actuation"
+    },
+    "secondary_ata": [
+      "22-30",
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-12-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis asking whether the card change addressed the cause or the symptom, concluding that the pedestal ventilation was the real driver and handing the installation change to the cabin definition office.",
+    "sections": {
+      "objective": "Establish whether the wider thermal margin card was a sufficient answer to the removal rate, or whether the pedestal ventilation obstruction identified in the thermal survey needed a change of its own.",
+      "findings_summary": "Four items were confirmed. The card change brought removals back to prediction, which is what it was for, but the thermal survey behind it showed the pedestal outlet obstructed on most operators, so the margin the card bought is being consumed by an installation condition rather than held in reserve. That is a cabin monument question rather than an avionics one, and the review handed it on rather than trying to answer it. The functional test needed the new card identification added. The autothrust troubleshooting procedure was found to put the breakout force check before the card assessment, which is the right order but was not written that way for the wrong reason. The crew description entry needed no change.",
+      "next_steps": "Delegated to the cabin definition office, where it became the pedestal outlet reprofile launched in December 2025."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2230121548877",
+        "AGS433103-4C"
+      ],
+      "fins": [
+        "363CC",
+        "41CE4",
+        "18CC"
+      ],
+      "drawings": [
+        "D22301213347"
+      ],
+      "software": [],
+      "zones": [
+        "226",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168264",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "closed pre-analysis",
+      "thermal margin",
+      "pedestal ventilation",
+      "root cause",
+      "cabin monument"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-168264-01",
+      "subject_mod": "MOD-168264",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-03-24",
+      "outcome": "DELEGATED",
+      "raised_date": "2025-12-08",
+      "due_date": "2026-03-27",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ETGC"
+        ],
+        "estimated_manhours": 75,
+        "spent_manhours": 110
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "22",
+          "76",
+          "25"
+        ],
+        "ata_4d": [
+          "22-30",
+          "76-10",
+          "25-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00475"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2230121548877",
+            "AGS433103-4C"
+          ],
+          "fins": [
+            "363CC",
+            "41CE4"
+          ],
+          "drawings": [
+            "D22301213347"
+          ],
+          "zones": [
+            "226",
+            "293"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "a component change that answers the symptom while the installation stays as it was"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Review the thermal survey against the card change",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess the pedestal outlet obstruction across operators",
+          "method": "SME_INTERVIEW",
+          "owner": "ETGC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MRD-22-1009",
+          "doc_type": "SB",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "22-30-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The retrofit bulletin answers the removal rate but leaves the installation condition in place, so the margin it buys is consumed rather than held.",
+          "resolution": "Keep the bulletin as issued and raise the installation change separately."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-M-22-30-12-700-051-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "22-30-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The functional test reports the card identification and needed the new standard added to its expected values.",
+          "resolution": "Add the new identification to the task."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-M-22-30-11-812-803",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both concern uncommanded autothrust disconnects and the thermal condition behind them, one as the change and one as the isolation procedure."
+          },
+          "rationale": "The procedure puts the breakout force check before the card assessment, which is correct, but its justification refers to cost rather than to the thermal survey.",
+          "resolution": "Restate the justification in the procedure at the next issue."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "FCOM-M-DSC-22-30-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew entry describes the disconnect behaviour and the crew action in crew vocabulary, with no reference to cards, margins or ventilation."
+          },
+          "rationale": "The crew entry describes what the crew sees and does, which does not change with the card standard.",
+          "resolution": "No action."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-168118",
+          "doc_type": "MOD",
+          "reason": "Returned because it is also a hot-condition protection change with a no-fault-found return history, but it is an electrical generation modification with no pedestal content and no shared identifier."
+        }
+      ],
+      "conclusion": "Closed and delegated to the cabin definition office, which launched the pedestal outlet reprofile.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

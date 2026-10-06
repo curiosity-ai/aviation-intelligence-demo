@@ -1,0 +1,286 @@
+[
+  {
+    "doc_id": "PAWO-161477-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Fire-Resistant Sleeving and Seal Renewal at the Fwd Engine Mount",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-07-31",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "71",
+      "ata_4d": "71-20",
+      "ata_6d": "71-20-11",
+      "title": "Mounts — Forward Engine Mount"
+    },
+    "secondary_ata": [
+      "54-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-8400",
+        "AUR-9700"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-12-03",
+      "released": "2019-07-31",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the fire-resistant sleeving and seal renewal at the forward engine mount interface, raised on a safety trigger after a fluid line sleeve degradation finding in the fire zone.",
+    "sections": {
+      "objective": "Establish what else has to move when the drain and vent line sleeving at the forward mount plane is replaced with the fire-resistant standard, and in particular whether the change can be accomplished with the engine on the wing. The safety case set the timescale, so the work order was scoped narrowly: access, clearance to the mount structure, and the inspection content that describes the sleeve condition.",
+      "findings_summary": "Three items were confirmed, none blocking, but one changed the embodiment plan materially. The sleeve condition inspection is written against the existing sleeve material and describes degradation in terms of surface chalking and braid exposure, neither of which is a valid indicator on the replacement material. It needed a rewrite rather than a threshold change. The second finding came from similarity alone: an earlier pylon side link fitting change occupies the same mount plane and was described entirely in structural language, with no shared identifiers, but it needs the same joint broken. Where an operator had not yet embodied it, the two could be combined. The third is a bleed duct overheat fault isolation that reaches the same region and quotes sleeve condition as a possible cause.",
+      "next_steps": "Commission a rewritten sleeve condition inspection using the new material degradation indicators, and release it with the modification rather than after. Offer the combined embodiment with the side link fitting change to the four operators that have neither. Correct the bleed overheat fault isolation cause list and the visual description that goes with it. Confirm engine-on-wing accomplishment with the powerplant integration team before the bulletin is written, since the whole embodiment estimate rests on it, and record the clearance measurement method for the sleeve termination so that the two fitting standards in service are both covered."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7120112839155",
+        "D7120115408026",
+        "D7120111938052"
+      ],
+      "fins": [
+        "93PP",
+        "9634EN"
+      ],
+      "drawings": [
+        "D71200052322"
+      ],
+      "software": [],
+      "zones": [
+        "456",
+        "462"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-161477",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "engine mount",
+      "fire-resistant sleeving",
+      "seal renewal",
+      "fire zone"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-161477-01",
+      "subject_mod": "MOD-161477",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2019-07-31",
+      "outcome": "VALIDATED",
+      "raised_date": "2018-12-03",
+      "due_date": "2019-08-30",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ETGC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ESZS",
+          "EVAA"
+        ],
+        "estimated_manhours": 70,
+        "spent_manhours": 88
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "71",
+          "54",
+          "36"
+        ],
+        "ata_4d": [
+          "71-20",
+          "54-50"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00340"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D7120112839155",
+            "D7120115408026",
+            "D7120111938052"
+          ],
+          "fins": [
+            "93PP",
+            "9634EN"
+          ],
+          "drawings": [
+            "D71200052322"
+          ],
+          "zones": [
+            "456",
+            "462"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "fluid line sleeving degradation inside an engine fire zone",
+          "work at the forward mount plane that requires the joint to be broken"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released mount interface content on ATA 71-20 and 54-50",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review the sleeve condition inspection indicators for the new material",
+          "method": "SME_INTERVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Identify structural work sharing the same mount access",
+          "method": "SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-M-71-20-11-200-014-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D7120112839155",
+              "D7120115408026"
+            ],
+            "shared_fins": [
+              "93PP",
+              "9634EN"
+            ],
+            "shared_zones": [
+              "456",
+              "462"
+            ],
+            "shared_ata_6d": [
+              "71-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The inspection describes sleeve degradation as surface chalking and braid exposure. Neither indicator appears on the fire-resistant material, which fails by stiffening and local charring instead, so the task would pass a degraded sleeve.",
+          "resolution": "Commission a rewritten inspection with the correct degradation indicators and release it with the modification."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-161902",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both changes are at the forward mount plane and both are described in terms of the joint that has to be broken to reach it, one in the language of fluid line routing and sleeving and the other in the language of lug fittings and bolt patterns. They share no part number, no functional item number, no zone and no ATA chapter."
+          },
+          "rationale": "The side link fitting change opens the same mount joint. Operators that have embodied neither would otherwise pay twice for the same access, and the sleeve termination clearance is measured to the fitting the other change replaces.",
+          "resolution": "Offer a combined embodiment package to operators with neither change, and re-measure the sleeve termination clearance against the fitting standard on each aircraft."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-M-36-10-11-810-803",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "54-50"
+            ],
+            "similarity_note": "Reached both by the shared pylon chapter and by similarity on the phrase describing heat damage to lagging and sleeving in the pylon fire zone."
+          },
+          "rationale": "The bleed overheat fault isolation lists degraded sleeving as a possible cause and quotes the existing material by its visual signature. On a post-modification aircraft that signature will not appear and the technician will discount a real cause.",
+          "resolution": "Correct the cause list and the associated visual description in the same documentation package."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-162044",
+          "doc_type": "MOD",
+          "reason": "Sits in the same pylon chapter and the same mount region and scores well on entity search because of the ATA overlap, but it is a structural fitting change with no shared part number, functional item or zone. The sleeving routes clear of the side link and neither change constrains the other."
+        }
+      ],
+      "conclusion": "Closed. The sleeve condition inspection rewrite was the pacing item; the combined embodiment offer with the side link fitting change was the commercially useful finding.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

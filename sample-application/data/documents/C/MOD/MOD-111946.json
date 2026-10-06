@@ -1,0 +1,192 @@
+[
+  {
+    "doc_id": "MOD-111946",
+    "doc_type": "MOD",
+    "title": "Revised Duct Pressure Sensing Threshold and Bleed Monitoring Computer Parameter Set",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-04",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-20",
+      "ata_6d": "36-20-11",
+      "title": "Indicating — Bleed Monitoring Computer"
+    },
+    "secondary_ata": [
+      "36-20-12",
+      "21-60"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00205",
+          "to": "C00612"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [
+        "PYR-1524G",
+        "PYR-1525G"
+      ],
+      "operators": [
+        "MSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111244"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-03-04",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposal to change the duct overpressure detection threshold and its confirmation time in the bleed monitoring computer, and to replace the sensing line restrictor, so that the transient in the climb no longer raises a caution.",
+    "sections": {
+      "reason": "One operator has recorded a bleed caution on roughly one climb in nine on warm days across twenty-eight aircraft, always between fifteen and twenty-two thousand feet, clearing itself before top of climb in four cases out of five. Eleven duct pressure sensors have been replaced under the current trouble shooting procedure and eight of them tested serviceable. Flight data from forty-one events shows a pressure transient of between eleven and fourteen seconds that peaks four per cent above the current threshold and then settles, which is characteristic of the regulator catching up rather than of a duct fault. The crew has begun to disregard the message, which is the real risk.",
+      "description": "The overpressure threshold in the bleed monitoring computer is raised by six per cent and the confirmation time is extended from three to eleven seconds, with a separate faster branch retained for a rate of rise that indicates a genuine duct burst. The parameter load LD1C8FF1C57 is re-issued and the boot load LC2CEC0676C is unchanged. On the hardware side the duct pressure sensing restrictor D3620127370378 is replaced by an item with a smaller orifice so that the sensing line itself damps the transient, and the regulator kit FAR419327-35 is changed to match. The bleed monitoring duct D3620110073248 and the accumulator kit D3620115081319 are retained. Washers EN521096K2 are renewed at the sensing line union. Functional items 4PU9, 883PU, 9PN1 and 3PN are affected. Work is at the wing root in zone 531, at the left winglet route in zone 583 and at the pylon in zone 443. Reference detail is on drawings D36201137521 and D36201229644.",
+      "effects": "Mass change is negligible. Electrical load unchanged. The restrictor is not interchangeable with the delivered item and a mixed installation between the two sides would produce asymmetric damping, so both sides must be changed together. The change is expected to remove the caution without slowing genuine duct burst detection beyond the certified figure, and that claim is the pacing item for the certification office. The trouble shooting procedure that ends in a sensor replacement is superseded, and the maintenance manual test after a sensor change needs a new acceptance band.",
+      "embodiment_note": "Retrofit is intended as a parameter load at the gate wherever the aircraft already carries the current restrictor, with the hardware part of the change deferred to the next scheduled visit. The operator has asked explicitly for a load-only first stage and the change is being scoped so that the two stages can be released separately.",
+      "open_points": "Pre-analysis must confirm that the extended confirmation time does not conflict with the duct burst detection case already accepted for the cross-bleed standard, whether the smaller restrictor orifice is compatible with the position sensing introduced at the four valve positions, whether the parameter load can be released independently of the boot load, and whether the crew procedure for a bleed caution needs re-wording once the message no longer appears in the climb."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3620127370378",
+        "FAR419327-35",
+        "D3620110073248",
+        "D3620115081319",
+        "EN521096K2"
+      ],
+      "fins": [
+        "4PU9",
+        "883PU",
+        "9PN1",
+        "3PN"
+      ],
+      "drawings": [
+        "D36201137521",
+        "D36201229644"
+      ],
+      "software": [
+        "LD1C8FF1C57",
+        "LC2CEC0676C"
+      ],
+      "zones": [
+        "531",
+        "583",
+        "443"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00273",
+        "C00544"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-C-260233",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-111244",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "duct pressure",
+      "overpressure threshold",
+      "confirmation time",
+      "restrictor",
+      "parameter load"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111946,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1439"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.2,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "FAR419327-35"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3620127370378"
+      ],
+      "fins_affected": [
+        "4PU9",
+        "883PU"
+      ],
+      "software_affected": [
+        "LD1C8FF1C57"
+      ],
+      "estimated_manhours": 140,
+      "estimated_cost_keur": 420,
+      "lead_time_weeks": 28,
+      "production_impact": "No cut-in proposed; the current build standard already carries the later restrictor land",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

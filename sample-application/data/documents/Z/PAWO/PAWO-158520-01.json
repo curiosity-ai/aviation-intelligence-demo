@@ -1,0 +1,403 @@
+[
+  {
+    "doc_id": "PAWO-158520-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Auxiliary Power Unit Control Box Thermal Repackaging",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-20",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50",
+      "49-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z08554",
+          "to": "Z12264"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "SOL",
+        "ACL",
+        "PAL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-152210"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-20",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the auxiliary power unit control box repackaging and load compressor schedule change, covering the firewall panel it mounts to, the software that carries the protection threshold and the crew-facing operating envelope.",
+    "sections": {
+      "objective": "Establish whether the standoff bracket can be carried by the firewall panel that the earlier compartment rework introduced, what the revised surge margin schedule invalidates in the published performance data, and whether the two software loads can be released ahead of the hardware so that the requesting operators get relief during the current summer season.",
+      "scope_note": "The search covers ATA 49-60 as the primary chapter, 49-50 because the load compressor schedule changes and 49-10 because the bracket lands on the compartment firewall panel. ATA 26 fire detection was searched and excluded: the compartment detection loop passes near the new bracket footprint but is not disturbed. ATA 53-40 was excluded because the tail cone structure itself is not modified. The search was restricted to the Evo sub-fleet in the requesting operators' MSN range, which is where every reported event has occurred.",
+      "method_note": "Entity linking was seeded from the four part numbers, the three FINs, the single drawing, the two software loads and the three zones on the candidate. Semantic similarity used two seed phrases about a control unit protecting itself out of service on a hot ramp and about a bracket standoff opening a dedicated cooling path. The crew-facing finding came from similarity alone and shares nothing with the candidate in the entity graph; the fastener finding is the opposite case, an entity hit between two documents whose subjects have nothing to do with each other.",
+      "findings_summary": "Six items are confirmed and one blocks. The blocking item is the firewall panel: the standoff bracket footprint is drilled into the panel that the 2018 compartment rework introduced, and that panel is a fire barrier, so its structural allowance and its sealing continuity both have to be re-established before the bracket geometry can be fixed. The trouble shooting procedure is the second most consequential finding, because it currently treats an internal over-temperature trip with normal exhaust gas temperature as an installation limitation to be reported rather than a fault to be fixed; the candidate makes that advice wrong. The crew-facing description of the ground operating envelope was found by similarity alone and changes with the published maximum ambient for continuous bleed extraction. A shared anchor nut standard links the candidate to a thrust reverser repair scheme with which it has nothing in common, which is a precision problem rather than a real conflict and is recorded as such.",
+      "next_steps": "Obtain the structural allowance position on the firewall panel before the bracket footprint is frozen; this is the item on the critical path. Ask the software owner whether the protection threshold change can be released without the hardware and, if so, what the interim envelope would be. Raise the publication change requests for the trouble shooting procedure and the crew entry together. Confirm with the fire protection office that the compartment detection loop is genuinely undisturbed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4960115159645",
+        "D4960118355783",
+        "ESC601932-18",
+        "AGS522879K5"
+      ],
+      "fins": [
+        "47PA",
+        "5366PA",
+        "9992PB"
+      ],
+      "drawings": [
+        "D49601121167"
+      ],
+      "software": [
+        "LA4N61F1A35",
+        "LG7N7AE7E40"
+      ],
+      "zones": [
+        "396",
+        "391",
+        "321"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-158520",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-Z-260342",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "control box repackaging",
+      "firewall panel allowance",
+      "surge margin schedule",
+      "operating envelope"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-158520-01",
+      "subject_mod": "MOD-158520",
+      "source_io": "IO-Z-260342",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-04-20",
+      "due_date": "2026-08-14",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EDSA",
+          "EGAM"
+        ],
+        "estimated_manhours": 180,
+        "spent_manhours": 124
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "49",
+          "26",
+          "53"
+        ],
+        "ata_4d": [
+          "49-60",
+          "49-50",
+          "49-10",
+          "53-40"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "Z08554",
+          "to": "Z12264"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4960115159645",
+            "D4960118355783",
+            "AGS522879K5"
+          ],
+          "fins": [
+            "47PA",
+            "5366PA",
+            "9992PB"
+          ],
+          "drawings": [
+            "D49601121167"
+          ],
+          "zones": [
+            "396",
+            "391",
+            "321"
+          ],
+          "software": [
+            "LA4N61F1A35",
+            "LG7N7AE7E40"
+          ]
+        },
+        "similarity_seeds": [
+          "control unit shutting itself down on a hot ramp with no machine fault",
+          "bracket standoff opening a dedicated cooling path away from a hot wall",
+          "auxiliary power unit ground operating envelope described for the crew"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the structural allowance of the firewall panel for the bracket footprint",
+          "method": "SME_INTERVIEW",
+          "owner": "EDSA",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T02",
+          "title": "Map the maintenance content that assumes the current box position",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess whether the software loads can be released ahead of the hardware",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Screen entity hits outside the chapter for precision",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-152210",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS522879K5"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "396",
+              "391"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The standoff bracket footprint is drilled into the firewall panel introduced by the 2018 compartment rework, and that panel is a fire barrier. Its structural allowance and its sealing continuity both have to be re-established before the bracket geometry can be fixed, and an aircraft without the rework has a different panel entirely.",
+          "resolution": "Set the candidate effectivity as post the compartment rework and obtain a written structural allowance for the footprint."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-Z-49-60-11-810-811",
+          "doc_type": "TSM",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "47PA",
+              "5366PA",
+              "9992PB"
+            ],
+            "shared_zones": [
+              "396",
+              "391",
+              "321"
+            ],
+            "shared_ata_6d": [
+              "49-60-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure ends by telling the engineer that a reproducible shutdown at high ambient temperature is an installation limitation to be reported rather than a component failure. The candidate changes both the installation and the protection threshold table, which makes that advice wrong and the fault code mapping incomplete.",
+          "resolution": "Rewrite the closing branch of the procedure and re-map the fault codes against the new threshold table."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "FCOM-Z-DSC-49-10-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew entry is written about managing bleed and electrical demand on a hot ramp and about cooling periods after a shutdown; the candidate is written about a standoff bracket, a heat shield and a surge margin schedule. Nothing in the entity graph links them and the two registers share almost no words."
+          },
+          "rationale": "The crew-facing description of the ground operating envelope tells crews that an automatic shutdown at high ambient temperature is expected behaviour. The candidate widens the envelope and the advice becomes misleading on modified aircraft.",
+          "resolution": "Raise a review of the crew entry and issue it with the maintenance content and the operator communication."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-Z-54-10-13-914",
+          "doc_type": "SRM",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS522879K5"
+            ],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The thrust reverser spar cap repair installs the same anchor nut standard in quantity, and the two documents therefore appear together in any parts-driven search. Their subjects have nothing in common and no aircraft is affected by both at once, but the shared standard is real and the item is on allocation.",
+          "resolution": "Confirm the anchor nut supply position with procurement; no engineering action."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-Z-49-60-11-700-028-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4960115159645",
+              "D4960118355783",
+              "ESC601932-18"
+            ],
+            "shared_fins": [
+              "5366PA"
+            ],
+            "shared_zones": [
+              "396",
+              "321"
+            ],
+            "shared_ata_6d": [
+              "49-60-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The operational test measures the compartment temperature at the control box position and compares the surge margin against a table tied to the loaded configuration. Both the position and the table change, so the acceptance criteria for every software load and unit exchange move with the candidate.",
+          "resolution": "Re-issue the test task with the new position and the revised table, and treat it as a condition of the software release."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-Z-49-10-11-FIG-13",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS522879K5"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "391",
+              "396"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The compartment figure carries the anchor nut set and the firewall panel that the bracket footprint lands on. It will need a new item for the standoff bracket once the geometry is fixed.",
+          "resolution": "Hold the publication change request until the bracket geometry is frozen."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-49-1004",
+          "doc_type": "SB",
+          "reason": "Same compartment, same zones and the same firewall panel vocabulary, and it is genuinely the prerequisite recorded as F01, but as a bulletin it is not itself impacted: its accomplishment instructions, its kit and its drain flow acceptance are untouched by a bracket added to the panel afterwards."
+        },
+        {
+          "doc_id": "AMM-Z-49-10-11-000-027-A",
+          "doc_type": "AMM",
+          "reason": "Returned by the shared compartment zones and by the firewall panel part number, but it is the panel removal task and it is unaffected: the standoff bracket is removed with the box before the panel is disturbed, and the fastener layout it records does not change."
+        }
+      ],
+      "conclusion": "Not yet issued. The firewall panel structural allowance is the blocking item and is with the design office; the software release question is open and would give the requesting operators relief this season if the answer is yes.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,459 @@
+[
+  {
+    "doc_id": "PAWO-139620-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Integrated Outflow Valve Actuator with Manual Override and Shaft Feedback",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-30",
+      "ata_6d": "21-30-11",
+      "title": "Pressurization Control — Outflow Valve Control"
+    },
+    "secondary_ata": [
+      "21-30-12",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34R3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00097",
+          "to": "S01552"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HVA",
+        "SRP"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-02",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the integrated outflow valve actuator, covering the duplex standard it both requires and supersedes, the shared clamp in the avionics bay, and the crew and trouble shooting content that shaft feedback makes obsolete.",
+    "sections": {
+      "objective": "Identify every released or candidate item applicable to the aircraft in the MSN S00097 to S01552 range that the integrated outflow valve actuator would conflict with, depend on, supersede or invalidate, and establish what taking the valve position indication from the shaft rather than from the controller means for the documents that assume the opposite.",
+      "scope_note": "The search covers ATA 21-30 as the primary chapter and ATA 92-21 for the bay wiring the actuator sits among. ATA 21-50 ventilation was excluded: nothing in the pack or duct system is disturbed. ATA 35 oxygen was included in the first pass because of the abnormal procedure link and then retained, because the crew procedure that covers excessive cabin altitude sits across both. The four-engine VANTOR-68 is inside the effectivity because the duplex standard was extended to it, which is what makes it a candidate for the successor as well.",
+      "method_note": "Entity linking was run from the four part numbers, the two equipment positions, the drawing and the three zones the candidate carries. Semantic similarity was run over titles, abstracts and reason-for-change text with the two seed phrases below and the results merged. The harness segregation candidate was returned by entity linking alone, through the loop clamp part number and the bay zone, and shares no vocabulary with the candidate. The flight crew description was returned by similarity alone with no shared identifier of any kind.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the supersession of the duplex standard, which is unusual in that the candidate both requires it and replaces it: the second essential bus feed the candidate relies on was run by the duplex retrofit, so an aircraft that never had it has nowhere to take the second winding from, and yet the duplex actuator itself is removed. That has to be resolved as an entry condition before the effectivity can be written. Two findings came from a single retrieval strategy each. The harness segregation standard shares nothing with the candidate but a cushioned loop clamp and a bay zone, and the larger integrated housing changes where those clips can sit; a pressurisation dossier and a wiring segregation dossier have no vocabulary in common and this was found by part number alone. The flight crew description was found by similarity alone and contains two statements the candidate makes untrue: that the indicated position follows the controller, and the manual-descent advice built around a slow valve. Beyond those, the duplex retrofit bulletin has four years of compliance window left and would sell a superseded configuration, the removal task needs a third branch with a revised isolation warning, and the position disagreement procedure loses its most probable cause entirely.",
+      "next_steps": "Resolve the entry condition: decide whether an aircraft at the delivered configuration can be taken directly to the candidate and, if not, how the second bus feed is provided. Agree the clip positions with the wiring office. Shorten or restate the duplex bulletin compliance window. Have flight operations review the manual-descent advice before the description is amended. Raise the removal task and trouble shooting procedure changes as one package."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2130114939430",
+        "D2130117925957",
+        "AGS958367K4",
+        "AGS336823-99"
+      ],
+      "fins": [
+        "141HM",
+        "6820HQ"
+      ],
+      "drawings": [
+        "D21301105897"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "242",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01020",
+        "S01317"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-139620",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "MOD-136810",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-135180",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "FCOM-S-DSC-21-30-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-21-1046",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-138330",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-21-30-11-000-051-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-21-30-11-812-815",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "outflow valve",
+      "shaft feedback",
+      "entry condition",
+      "conflict search"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-139620-01",
+      "subject_mod": "MOD-139620",
+      "source_io": null,
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-04-02",
+      "due_date": "2026-10-16",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS",
+          "EGAM"
+        ],
+        "estimated_manhours": 165,
+        "spent_manhours": 124
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-30",
+          "SOLANO-34",
+          "VANTOR-68"
+        ],
+        "ata_2d": [
+          "21",
+          "92",
+          "35"
+        ],
+        "ata_4d": [
+          "21-30",
+          "92-21",
+          "35-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "S00097",
+          "to": "S01552"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2130114939430",
+            "D2130117925957",
+            "AGS958367K4",
+            "AGS336823-99"
+          ],
+          "fins": [
+            "141HM",
+            "6820HQ"
+          ],
+          "drawings": [
+            "D21301105897"
+          ],
+          "zones": [
+            "165",
+            "242",
+            "273"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "dead band in manual control of a cabin outflow valve",
+          "valve position indication that does not follow the valve"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the entry condition for the second essential bus feed",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Assess the clamp positions against the segregation standard",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the crew description and manual-descent advice",
+          "method": "SEMANTIC",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T04",
+          "title": "Determine the duplex bulletin compliance window disposition",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T05",
+          "title": "Scope the removal task and trouble shooting changes",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-136810",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2130114939430",
+              "D2130117925957",
+              "AGS958367K4"
+            ],
+            "shared_fins": [
+              "141HM",
+              "6820HQ"
+            ],
+            "shared_zones": [
+              "165",
+              "242",
+              "273"
+            ],
+            "shared_ata_6d": [
+              "21-30-11"
+            ],
+            "similarity_note": "Returned first by both strategies. The two share the actuator, the accumulator, the loop clamps, both equipment positions, all three zones and the ATA 6D, and their reason-for-change texts describe the same manual drive weakness in similar terms."
+          },
+          "rationale": "The candidate consolidates the duplex actuator and the bolted-on manual drive into a single housing on the same mounting. The two cannot coexist and the duplex standard is declared as a post-mod condition, which makes the supersession a hard dependency in both directions: aircraft must have the earlier standard and must then lose it.",
+          "resolution": "Declare the supersession, and decide whether an aircraft at the delivered single-motor configuration may be taken directly to the candidate or must pass through the duplex standard for the second bus feed."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-135180",
+          "doc_type": "MOD",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AGS958367K4"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "165"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The candidate re-clips the forward duct with the same cushioned loop clamp the harness segregation standard uses at its six support positions, in the same avionics bay zone. The larger housing changes where those clips can sit. The two documents describe a pressurisation actuator and a wiring segregation respectively and share no vocabulary at all; only the clamp part number and the bay zone connect them.",
+          "resolution": "Confirm with the wiring office that the new housing envelope does not force a clip position that the segregation standard has fixed, and record the agreed positions in both dossiers."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "FCOM-S-DSC-21-30-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by similarity alone. The crew entry describes a rocker, a slow valve and the advice to fly the cabin ahead of the aircraft; the candidate describes resolvers, splines and connector contacts. No FIN, part number or zone is shared and the two texts read as if they were about different systems."
+          },
+          "rationale": "The crew description states explicitly that the indicated valve position follows the automatic controller and not the valve shaft, and builds its manual-descent advice around a slow valve. The candidate makes the indication read the shaft directly and regears nothing further, so both statements change. This is the entry a crew reads to understand the system and nothing in the candidate dossier points at it.",
+          "resolution": "Amend the description with the candidate and have the manual-descent advice reviewed by flight operations before publication."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SLN-21-1046",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "21-30-11"
+            ],
+            "similarity_note": "Found through the applicability chain: the bulletin embodies the modification the candidate supersedes and carries a pre-modification effectivity against it."
+          },
+          "rationale": "The retrofit bulletin for the duplex standard is at revision three and still open, with a compliance window running for another four years. If the candidate supersedes the duplex standard, an operator embodying the bulletin in year three of that window pays for a configuration that is then immediately superseded.",
+          "resolution": "Shorten the bulletin compliance window or restate it against a fixed date, and publish the candidate's existence to operators still inside the window."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-138330",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Found through the applicability overlap and the shared maintenance opportunity: both candidates require the avionics bay floor lifted on an overlapping twin-engine effectivity, and both are quoted against a C-check slot."
+          },
+          "rationale": "Both candidates work in the avionics bay with the floor lifted, one at the rack and one at the outflow valve actuator position, and both are quoted against a C-check slot. Nothing technical connects them; the maintenance opportunity does.",
+          "resolution": "Coordinate the retrofit planning so that an operator taking both is offered one bay opening rather than two."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "AMM-S-21-30-11-000-051-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2130114939430",
+              "D2130117925957",
+              "AGS958367K4"
+            ],
+            "shared_fins": [
+              "141HM",
+              "6820HQ"
+            ],
+            "shared_zones": [
+              "165",
+              "242",
+              "273"
+            ],
+            "shared_ata_6d": [
+              "21-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The removal task branches on whether the single-motor or the duplex actuator is fitted, and its duplex branch carries the isolation warning that makes the task safe. A third installation adds a third branch, and the isolation warning has to be restated because the integrated housing presents one connector rather than two.",
+          "resolution": "Raise a manual change request against the removal task for the third branch and the revised isolation warning, effective with the candidate."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "TSM-S-21-30-11-812-815",
+          "doc_type": "TSM",
+          "finding_type": "FIN_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "141HM",
+              "6820HQ"
+            ],
+            "shared_zones": [
+              "165",
+              "242",
+              "273"
+            ],
+            "shared_ata_6d": [
+              "21-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The position disagreement procedure is built around an indication that follows the controller, and its most probable cause is an actuator refitted one spline out. The candidate reads the valve shaft directly, which removes the spline offset as a cause and makes the first half of the procedure inapplicable.",
+          "resolution": "Rewrite the procedure around the shaft feedback for the candidate effectivity and retain the existing text for the earlier standards."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-131930",
+          "doc_type": "MOD",
+          "reason": "Ranks high on similarity because it is a systems change about an indication that does not reflect reality, described in almost the same words as the position disagreement this candidate solves. It is the crew oxygen transducer, on a different chapter, with no shared equipment position, part number or zone and no interaction with cabin pressure control."
+        },
+        {
+          "doc_id": "FCOM-S-PRO-21-30-02",
+          "doc_type": "FCOM",
+          "reason": "Returned by both strategies and sits on the same sub-chapter, and it is genuinely impacted by the duplex standard that the candidate supersedes. It is not impacted by this candidate: the immediate actions for excessive cabin altitude are unchanged, and the manual control paragraph it contains is the one already amended for the duplex standard rather than a new exposure."
+        }
+      ],
+      "conclusion": "Not yet issued. The entry condition for the second bus feed is unresolved and blocks the effectivity.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

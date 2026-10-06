@@ -1,0 +1,179 @@
+[
+  {
+    "doc_id": "AMM-C-32-40-12-400-004-A",
+    "doc_type": "AMM",
+    "title": "Brake and Steering Control Unit — Installation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2022-04-19",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-11-14",
+      "released": "2017-07-06",
+      "revised": "2022-04-19",
+      "effective": "2022-05-10"
+    },
+    "abstract": "Installation of the brake and steering control unit, including the configuration load, the accumulator re-charge and the bleed sequence that must be completed before the anti-skid test.",
+    "sections": {
+      "purpose": "This task gives the installation of the brake and steering control unit, the loading of the applicable configuration standard and the hydraulic bleed that prepares the system for the anti-skid test.",
+      "job_setup_note": "The unit must be at the same or a later configuration standard than the one recorded at removal; a unit at an earlier standard must not be installed. Nitrogen of charging grade and the accumulator charging adapter are needed. The bleed sequence must be completed before the anti-skid system test is started, otherwise entrained air makes the test result meaningless.",
+      "procedure": "1. WARNING: MAKE SURE THAT THE AIRCRAFT IS CHOCKED AND THAT THE BRAKE ACCUMULATOR IS DISCHARGED BEFORE ANY HYDRAULIC CONNECTION IS MADE. 2. Compare the configuration standard of the replacement unit with the value recorded at removal. Do not continue if it is earlier. 3. Put the unit on its mounting and install the fasteners to the torque given in the task. 4. Install the pressure regulator D3240120310957 if it was removed, and fit the clamp D3240128079286 on the sense line run. 5. CAUTION: DO NOT CROSS-CONNECT THE BRAKE PRESSURE LINES. THE CONNECTIONS ARE THE SAME SIZE AND ARE ONLY IDENTIFIED BY THEIR LABELS. 6. Connect the hydraulic lines and torque each union to the value in the task. 7. Connect the electrical connectors and lock them. 8. Re-charge the accumulator D3240121944667 to the pre-load recorded at removal, or to the higher pre-load if the aircraft is at the revised configuration standard. 9. Load the configuration standard LA5CCE9DE6B into the unit through the maintenance port if a load is required. 10. Pressurise the system and bleed each brake line in the sequence given in the task. 11. Do the hydraulic leak check at full pressure and hold for ten minutes. 12. Do the anti-skid system test and confirm that the unit reports the correct configuration and that the fault memory is clear.",
+      "close_out": "Make sure that there is no external leak at any connection after the ten minute hold. Remove the spillage protection and clean the bay. Record the installed serial number, the loaded configuration part number, the accumulator pre-load and the leak check result in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240120310957",
+        "D3240121944667",
+        "D3240128079286"
+      ],
+      "fins": [
+        "210WS9",
+        "248WS"
+      ],
+      "drawings": [
+        "D32401216639"
+      ],
+      "software": [
+        "LA5CCE9DE6B"
+      ],
+      "zones": [
+        "721",
+        "734",
+        "771"
+      ],
+      "figures": [
+        "FIG-32-40-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-32-40-12-000-004-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-32-40-12-700-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "control unit installation",
+      "configuration load",
+      "accumulator charge",
+      "bleed sequence",
+      "leak check"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "32-40-12-400-004-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. A unit at an earlier configuration standard than the one recorded at removal must not be installed.",
+      "manhours": 8.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "721",
+          "734",
+          "771"
+        ],
+        "access_panels": [
+          "721CR",
+          "734CL",
+          "771BR"
+        ],
+        "doors": [
+          "Main gear door, LH",
+          "Main gear door, RH"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Chock the aircraft and release the parking brake.",
+          "Discharge the brake accumulator before any connection is made.",
+          "Use eye protection during the pressurised leak check."
+        ],
+        "tooling": [
+          {
+            "reference": "98D32401-027",
+            "description": "Accumulator charging adapter"
+          },
+          {
+            "reference": "98D32401-011",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D32401-016",
+            "description": "Torque wrench, 5 to 50 Nm"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Nitrogen, dry, charging grade"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-32-40-12-000-004-A",
+        "AMM-C-32-40-12-700-002-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

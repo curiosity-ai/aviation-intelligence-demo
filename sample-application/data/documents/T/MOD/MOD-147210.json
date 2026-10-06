@@ -1,0 +1,190 @@
+[
+  {
+    "doc_id": "MOD-147210",
+    "doc_type": "MOD",
+    "title": "Ventilated Mount and Switched Power Supply for the Flight Deck Electronic Flight Bag",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-11-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-20",
+      "ata_6d": "46-20-11",
+      "title": "Flight Deck Information — Electronic Flight Bag Unit"
+    },
+    "secondary_ata": [
+      "46-20-12",
+      "33-10-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00069",
+          "to": "T00224"
+        }
+      ],
+      "excluded_msns": [
+        "T00145"
+      ],
+      "engine_types": [],
+      "operators": [
+        "FRR",
+        "PYR",
+        "SOL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00229",
+      "production_cut_in_date": "2024-03-19",
+      "retrofit_via": [
+        "TTN-46-1005"
+      ]
+    },
+    "dates": {
+      "created": "2022-02-15",
+      "released": "2023-11-08",
+      "revised": null,
+      "effective": "2023-12-14"
+    },
+    "abstract": "Replaces the flight deck electronic flight bag mount with a ventilated arm and gives the unit a switched supply that follows the aircraft power state, addressing thermal shutdowns on hot turnarounds.",
+    "sections": {
+      "reason": "The captain-side electronic flight bag shuts down on hot-weather turnarounds. The unit sits close to the windscreen on an arm that was designed for a lighter display and provides no rear clearance, and it stays powered whenever the aircraft has ground power, so it spends a two hour turnaround in direct sun at full screen brightness. Fifty-one reports were received in two summer seasons, all from operators based below forty degrees latitude and all from the left hand installation. The right hand installation, which sits further aft, has never reported the condition.",
+      "description": "The mounting arm D4620114030606 is replaced by a ventilated arm that holds the unit 60 mm further aft and 25 mm lower, clear of the direct sun line, and provides a rear air gap. The control panel D4620117513908 is repositioned on the same arm. The power supply module D4620126779963 is replaced by a switched unit that removes power from the display when the aircraft is on ground power and no flight crew member is logged in, and the connector assembly DE804651-11 is renewed to carry the additional discrete. Wiring at FIN 510IU is extended by 300 mm and re-clamped in zone 234. The unit itself, its software and its data loading path are unchanged. Work is from the flight deck with the side console trim removed, and is detailed on drawings D46201175014 and D46201183104.",
+      "effects": "Mass increase of 1.1 kg per side, forward of the reference station, with a negligible centre-of-gravity effect. Average electrical demand falls because the display is no longer powered through the whole turnaround; peak demand is unchanged. The new arm is not interchangeable with the original because the pivot base bolt pattern changes. Dispatch is unchanged and the electronic flight bag remains a non-required item. Maintenance, illustrated parts and the crew description of the flight bag installation require update, and the crew must be told that the display now switches off on ground power.",
+      "embodiment_note": "Production cut-in at MSN T00229 in March 2024. Retrofit through the associated service bulletin, about six hours per flight deck for both sides, and it can be done on a night stop. Operators may take the left hand side only, and the bulletin says so explicitly."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4620114030606",
+        "D4620117513908",
+        "D4620126779963",
+        "DE804651-11"
+      ],
+      "fins": [
+        "510IU"
+      ],
+      "drawings": [
+        "D46201175014",
+        "D46201183104"
+      ],
+      "software": [],
+      "zones": [
+        "234"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00145",
+        "T00229"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-46-1005",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-46-20-11-400-004-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-T-46-20-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "electronic flight bag",
+      "mounting arm",
+      "ventilation",
+      "switched supply",
+      "flight deck"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 147210,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.789"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.2,
+      "balance_impact": "Forward of reference station, negligible CG effect",
+      "electrical_load_impact_va": -60,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D4620126779963",
+        "DE804651-11"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4620114030606",
+        "D4620117513908"
+      ],
+      "fins_affected": [
+        "510IU"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 150,
+      "estimated_cost_keur": 620,
+      "lead_time_weeks": 42,
+      "production_impact": "Cut-in at MSN T00229, no line stoppage",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

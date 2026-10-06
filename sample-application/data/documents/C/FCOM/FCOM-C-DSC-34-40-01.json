@@ -1,0 +1,120 @@
+[
+  {
+    "doc_id": "FCOM-C-DSC-34-40-01",
+    "doc_type": "FCOM",
+    "title": "Weather Radar — Description of the Display, Tilt Control and Ground Return Behaviour",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2025-06-13",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-40",
+      "ata_6d": "34-40-00",
+      "title": "Independent Position Determining — General"
+    },
+    "secondary_ata": [
+      "34-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-04-03",
+      "released": "2020-09-25",
+      "revised": "2025-06-13",
+      "effective": "2025-07-07"
+    },
+    "abstract": "Flight crew description of the weather radar picture, the meaning of each colour, how the tilt control behaves with and without the stabilised antenna, and why the picture changes character below three thousand feet.",
+    "sections": {
+      "purpose": "To describe the weather radar display to the flight crew, explain the tilt control and set out what the crew should expect from the picture at low level on the approach.",
+      "description": "The radar paints returns in four colours by intensity, with magenta reserved for turbulence where the aircraft is fitted with the function. The picture is drawn from a scan that sweeps ahead of the aircraft and is refreshed a little under twice a second, so a fast-moving cell close in will lag the aeroplane slightly. The tilt control aims the beam up or down relative to the horizon. On aircraft without the stabilised antenna the tilt is referenced to the aircraft, so it moves with pitch and bank and the crew has to re-aim it as the attitude changes; on aircraft with the stabilised antenna the beam holds its angle to the horizon and re-aiming is rarely needed. Below about three thousand feet the ground fills much of the beam and the return from it can be stronger than the return from the weather. On the earlier standard this shows as a wall of red across the bottom of the display; on the later standard the ground contribution is subtracted using a stored map and what remains is the weather. Knowing which standard the aircraft carries matters, because the two behave very differently in the flare region.",
+      "crew_procedure": "Set the range to match the phase of flight and select the tilt so that the top of the significant return sits in the upper half of the display. In the climb and descent on an aircraft without the stabilised antenna, re-aim the tilt as the attitude settles. On the approach, do not increase the gain to see through ground return; reduce the range instead. Cross-check what the display shows against what you can see, and if the two disagree, believe the window. Report a picture that freezes and catches up, because that is not normal behaviour on either standard."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-C-DSC-22-80-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "weather radar",
+      "tilt",
+      "ground return",
+      "stabilised antenna",
+      "picture refresh"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Systems Description — Navigation",
+      "entry_number": "DSC-NAV-34-40-01",
+      "flight_phase": "ALL_PHASES",
+      "operational_impact": "TRAINING_REQUIRED",
+      "crew_action": "Set range and tilt for the phase of flight; do not use gain to see through ground return.",
+      "affects_qrh": false,
+      "affects_mel": true,
+      "mel_items": [
+        "34-40-01A"
+      ],
+      "systems": [
+        "Weather Radar",
+        "Inertial Reference"
+      ],
+      "related_entries": [
+        "FCOM-C-DSC-22-80-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,181 @@
+[
+  {
+    "doc_id": "MOD-111407",
+    "doc_type": "MOD",
+    "title": "Outflow Valve Control Actuator Change to Remove the Cabin Rate Excursion in Rapid Descent",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-30",
+      "ata_6d": "21-30-11",
+      "title": "Pressurization Control — Outflow Valve Control"
+    },
+    "secondary_ata": [
+      "21-30-12",
+      "21-60"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00342",
+          "to": "C00796"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "BMA",
+        "SBW"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "FROZEN",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2024-06-25",
+      "released": "2026-03-19",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Design-frozen change to the outflow valve control actuator and its rate limiter, addressing a transient cabin rate excursion reported during rapid descents from high cruise levels on light aircraft.",
+    "sections": {
+      "reason": "Nineteen reports were received of a cabin vertical speed excursion to about eleven hundred feet per minute during a rapid descent from above thirty-eight thousand feet at light weight, lasting between six and twelve seconds before the controller recovered. No cabin altitude limit was exceeded and there is no airworthiness finding, but passengers and cabin crew notice it and two operators have made it a formal complaint. Analysis showed the actuator rate limiter saturating when the commanded valve rate and the achieved rate diverge at low differential pressure, which only happens in this narrow part of the envelope.",
+      "description": "The outflow valve actuator D2130114939430 is replaced by a unit with a faster rate limiter and a wider dead band around the null position, and the solenoid D2130115199629 is changed for one with a shorter pull-in time. The switch HOL977930-80 that arms the manual mode is retained. The pump kit JAR222490-37 in the aft equipment area is replaced because the earlier item cannot sustain the higher slew rate. Countersunk screws AGS149379-16 are renewed at the actuator flange. The cabin pressure indicating manifold D2130128410509 is re-plumbed so that the indicated rate follows the valve rather than the cabin, which is what makes the excursion visible to the crew in the first place. Functional items 4HM5 and 529HQ are affected. Work is in the aft cabin and overhead crew rest areas, zones 253 and 285. Installation detail is on drawing D21301194893.",
+      "effects": "Mass increase of 1.2 kg. Electrical load unchanged. The actuator is not interchangeable with the delivered unit because the rate limiter is internal to it and a mixed pair would fight. There is no minimum equipment list change. The trouble shooting content for a cabin rate complaint is superseded, since the most probable cause changes. The flight crew procedure for a rapid descent is unaffected; the crew action is unchanged.",
+      "embodiment_note": "The design is frozen and the certification submission is with the authority. Production cut-in and a retrofit bulletin are both planned but neither is fixed, and the affected operators have been given a descent rate advisory as an interim measure. Kit definition is complete and long-lead actuator procurement has started."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2130114939430",
+        "D2130115199629",
+        "HOL977930-80",
+        "JAR222490-37",
+        "AGS149379-16",
+        "D2130128410509"
+      ],
+      "fins": [
+        "4HM5",
+        "529HQ"
+      ],
+      "drawings": [
+        "D21301194893",
+        "D21301272436"
+      ],
+      "software": [],
+      "zones": [
+        "253",
+        "285"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-21-30-11-400-027-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-21-30-11-812-803",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "outflow valve",
+      "cabin rate",
+      "rate limiter",
+      "rapid descent",
+      "actuator"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111407,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.841",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 1.2,
+      "balance_impact": "Negligible, aft installation",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "JAR222490-37",
+        "D2130128410509"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2130114939430",
+        "D2130115199629"
+      ],
+      "fins_affected": [
+        "4HM5",
+        "529HQ"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 250,
+      "estimated_cost_keur": 780,
+      "lead_time_weeks": 50,
+      "production_impact": "Cut-in planned but not fixed; actuator qualification and a flight test point are the pacing items",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

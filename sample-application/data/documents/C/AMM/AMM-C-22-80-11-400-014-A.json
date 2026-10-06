@@ -1,0 +1,188 @@
+[
+  {
+    "doc_id": "AMM-C-22-80-11-400-014-A",
+    "doc_type": "AMM",
+    "title": "Flight Management Computer — Installation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-03-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-11",
+      "title": "Flight Management Computing — Flight Management Computer"
+    },
+    "secondary_ata": [
+      "22-80-12",
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-09-14",
+      "released": "2022-03-02",
+      "revised": null,
+      "effective": "2022-03-28"
+    },
+    "abstract": "Installation of the flight management computer, including the tray fit, the software and navigation database load and the identity page check that confirms the aircraft is at the intended standard.",
+    "sections": {
+      "purpose": "To install the flight management computer in the flight compartment rack, load the software and the navigation database and confirm the aircraft standard on the identity page.",
+      "job_setup_note": "The aircraft must be de-powered for the mechanical work and on external power for the loads. The maintenance terminal and the current navigation database media must be available before the task is started. Electrostatic protection is required. Two persons are needed.",
+      "procedure": "Make sure that the electrical power is removed and that the warning notices are in position. Put on the electrostatic wrist strap and connect it to the rack bonding stud. Examine the tray for distortion. If a tray change is required, remove the tray D2280111910946 and install the deeper tray HES490975-50 with bolts EN462879-3E and collars AGS987591K7, torqued to 8 Nm. Examine the rear connector for bent or recessed pins. Put the computer D2280117216234 into the tray and push it squarely home for the last 40 mm. CAUTION: DO NOT CLOSE THE FRONT LATCHES UNTIL THE REAR CONNECTOR IS FELT TO ENGAGE. CLOSING THE LATCHES AGAINST A MISALIGNED CONNECTOR WILL DAMAGE THE PINS. Close both front latches and confirm that each is fully over centre. Do a bonding resistance check at the tray. Restore the electrical power. WARNING: DO NOT INTERRUPT THE POWER DURING A DATABASE LOAD. AN INTERRUPTED LOAD LEAVES THE PARTITION UNUSABLE AND THE UNIT MUST GO TO THE SHOP. At the maintenance terminal, load the operational software LE1C320FA60 and then the navigation database LA7C64D57DF. On the identity page, confirm the active database, its effective dates and the coverage type against the configuration recorded at removal. Do a self-test and confirm that no fault is reported.",
+      "close_out": "Make sure that the rack area is clean and that no tools remain. Remove the electrostatic wrist strap. Close the rack access. Remove the warning notices. Record the installation, the serial number, both loaded software part numbers and the navigation database identifier."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2280117216234",
+        "D2280111910946",
+        "HES490975-50",
+        "D2280124326903",
+        "EN462879-3E",
+        "AGS987591K7"
+      ],
+      "fins": [
+        "5CC",
+        "8488CE"
+      ],
+      "drawings": [
+        "D22801178992"
+      ],
+      "software": [
+        "LA7C64D57DF",
+        "LE1C320FA60"
+      ],
+      "zones": [
+        "263",
+        "173"
+      ],
+      "figures": [
+        "FIG-22-80-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-22-80-11-000-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-C-22-80-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight management computer",
+      "installation",
+      "database load",
+      "identity page",
+      "tray change"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "22-80-11-400-014-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "Tray change steps apply to aircraft pre MOD-111277 only",
+      "manhours": 2.8,
+      "personnel": 2,
+      "elapsed_time_hours": 1.8,
+      "access": {
+        "zones": [
+          "263",
+          "173"
+        ],
+        "access_panels": [
+          "263BL",
+          "173AR"
+        ],
+        "doors": [
+          "Flight compartment rack access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not interrupt the power during a database load.",
+          "Do not close the front latches until the rear connector is felt to engage.",
+          "Put the warning notices in position."
+        ],
+        "tooling": [
+          {
+            "reference": "98C23701-201",
+            "description": "Electrostatic wrist strap and bonding lead"
+          },
+          {
+            "reference": "98C00000-050",
+            "description": "Torque wrench 2-20 Nm"
+          },
+          {
+            "reference": "98C45201-210",
+            "description": "Maintenance terminal and load media reader"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, electrical"
+        ],
+        "expendables": [
+          {
+            "part_number": "EN462879-3E",
+            "qty": 4
+          },
+          {
+            "part_number": "AGS987591K7",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-C-22-80-11-000-014-A",
+        "AMM-C-45-45-11-700-030-A"
+      ],
+      "steps": 17,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

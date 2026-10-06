@@ -1,0 +1,297 @@
+[
+  {
+    "doc_id": "PAWO-153315-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Twenty-Two Minute Passenger Oxygen Generator Standard",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-26",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "35",
+      "ata_4d": "35-20",
+      "ata_6d": "35-20-11",
+      "title": "Passenger Oxygen — Chemical Oxygen Generators"
+    },
+    "secondary_ata": [
+      "25-20",
+      "33-20"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22N1",
+        "ZPH-22N7",
+        "ZPH-24N3",
+        "ZPH-24N7"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-28",
+      "released": "2026-05-26",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the twenty-two minute oxygen generator standard, opened to support a retrofit campaign, covering the whole-aircraft rule, the manifold rating and the crew limitation that depends on the fitted duration.",
+    "sections": {
+      "objective": "Two operators moving onto high terrain routes asked for a retrofit campaign on aircraft already delivered at the fifteen minute standard. The round was opened to establish what a retrofit involves that the production cut-in did not, and in particular whether the conversion can be done zone by zone across successive cabin refreshes rather than as one event.",
+      "findings_summary": "Four items were confirmed and the answer to the sequencing question was no. Generators of different durations must not be installed in one cabin, so the conversion is a whole-aircraft activity and cannot be spread across refreshes; the bulletin states this and it is the single constraint that governs the campaign plan. The distribution manifold accumulator and its filter must be at the same duration rating as the cores, and the parts figure carries them with a duration-specific effectivity that a planner would miss if the work were split. The oxygen inspection task includes a sample drop test whose sample size assumes a uniform cabin. The fourth finding is the crew limitation on cabin altitude duration, which is written against the duration fitted to the aircraft and stated on the load sheet; it changes on the day the last generator is swapped and not before.",
+      "next_steps": "Plan the campaign as a whole-aircraft event aligned with each aircraft's generator replacement cycle so that generator life is not wasted. Issue the crew limitation change with an effectivity tied to the aircraft record rather than to a date. Confirm the manifold rating in the kit list explicitly."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3520114349032",
+        "D3520117593776"
+      ],
+      "fins": [],
+      "drawings": [
+        "D35201154822",
+        "D35201170600"
+      ],
+      "software": [],
+      "zones": [
+        "254",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-153315",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "oxygen duration",
+      "whole aircraft rule",
+      "manifold rating",
+      "crew limitation"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-153315-01",
+      "subject_mod": "MOD-153315",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-26",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-01-28",
+      "due_date": "2026-05-22",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ETGC",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EGAM",
+          "EYIS"
+        ],
+        "estimated_manhours": 140,
+        "spent_manhours": 132
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "35",
+          "25"
+        ],
+        "ata_4d": [
+          "35-20",
+          "35-10",
+          "25-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D3520114349032",
+            "D3520117593776"
+          ],
+          "fins": [],
+          "drawings": [
+            "D35201154822"
+          ],
+          "zones": [
+            "254",
+            "265"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "chemical generator duration governing an emergency descent profile",
+          "whole aircraft conversion that cannot be split across cabin refreshes"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Test whether the conversion can be split across refreshes",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the manifold rating and the parts figure effectivity",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the crew limitation and its effectivity basis",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-35-1012",
+          "doc_type": "SB",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3520114349032"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "254"
+            ],
+            "shared_ata_6d": [
+              "35-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Generators of different durations must not be installed in one cabin, so the conversion is a whole-aircraft event. The bulletin states it and it governs the whole campaign plan.",
+          "resolution": "Plan the campaign per aircraft and align it with the generator replacement cycle."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "IPC-Z-35-20-11-FIG-15",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3520117593776"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "254"
+            ],
+            "shared_ata_6d": [
+              "35-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The manifold accumulator and its filter must be at the same duration rating as the cores, and the figure carries them with a duration-specific effectivity a planner would miss if the work were split.",
+          "resolution": "State the manifold rating explicitly in the kit list."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-Z-35-20-11-200-031-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "265"
+            ],
+            "shared_ata_6d": [
+              "35-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The inspection task includes a sample drop test whose sample size assumes a uniform cabin, which a split conversion would invalidate.",
+          "resolution": "No change required if the whole-aircraft rule is enforced."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "FCOM-Z-LIM-35-20-01",
+          "doc_type": "FCOM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "The crew limitation is written about cabin altitude and descent profiles; the modification text is about generator cores and manifold ratings. No identifier is shared and the two read as different subjects entirely."
+          },
+          "rationale": "The crew limitation on time at cabin altitude is written against the duration fitted to the aircraft and stated on the load sheet. It changes on the day the last generator is swapped and not before.",
+          "resolution": "Issue the limitation change with an effectivity tied to the aircraft record rather than to a date."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-25-1310",
+          "doc_type": "SB",
+          "reason": "Same cabin ceiling area and the same conversion vocabulary, but it converts the rear galley complex and stowage arrangement. It does not touch a passenger service unit, an oxygen generator or the distribution manifold."
+        }
+      ],
+      "conclusion": "Closed with a workable campaign plan. The whole-aircraft rule was the finding that mattered and it changed the sequencing the operators had assumed.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

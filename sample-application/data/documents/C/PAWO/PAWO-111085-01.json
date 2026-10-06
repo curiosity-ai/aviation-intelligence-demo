@@ -1,0 +1,338 @@
+[
+  {
+    "doc_id": "PAWO-111085-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Brake and Steering Control Unit Standard 1.5 with a Bundled Hardware Change",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-04-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-08-04",
+      "released": "2021-04-22",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of the touchdown protection change as first submitted, with a new control unit part number bundled into the same dossier; the bundled scope was rejected and the configuration change re-submitted on its own.",
+    "sections": {
+      "objective": "Assess the brake and steering control unit change as submitted, which bundled a revised touchdown protection configuration with a new unit part number, and establish whether the two can be released together. The work order was raised internally after a run of brake pressure transients on contaminated runways, and was asked in particular to look at what the hardware half of the dossier would do to the anti-skid certification credit.",
+      "findings_summary": "Four items were confirmed and the scope did not survive them. Bundling a new unit part number into the same dossier turns a configuration change into a hardware change: the part list would have to carry two units, the anti-skid credit is held against the unit currently listed and would have to be re-demonstrated, and a fleet part way through the campaign would be running two units and two configurations at once. The touchdown protection change on its own was found to be clean. The isolation procedure and the wheel spin-up functional test both need re-issuing either way, and the gear bay feeder sheet was returned on the zone seed with nothing to change.",
+      "next_steps": "Return the dossier to the design office with a recommendation to split it. The configuration change can be re-submitted alone under the same modification number and the unit part number change raised separately once the anti-skid credit position is settled with certification. Hold the isolation procedure and the functional test re-issue until the split is agreed so that the manual work is done once."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240120310957",
+        "D3240121944667",
+        "D3240128079286"
+      ],
+      "fins": [
+        "210WS9",
+        "248WS"
+      ],
+      "drawings": [
+        "D32401216639"
+      ],
+      "software": [
+        "LA5CCE9DE6B"
+      ],
+      "zones": [
+        "721",
+        "734",
+        "771"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111085",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "brake control unit",
+      "touchdown protection",
+      "anti-skid",
+      "scope split"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111085-01",
+      "subject_mod": "MOD-111085",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2021-04-22",
+      "outcome": "REJECTED",
+      "raised_date": "2020-08-04",
+      "due_date": "2021-03-31",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EGAM",
+          "EYIS",
+          "ELSC"
+        ],
+        "estimated_manhours": 100,
+        "spent_manhours": 141
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "32",
+          "92"
+        ],
+        "ata_4d": [
+          "32-40",
+          "32-30",
+          "92-31"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D3240120310957",
+            "D3240121944667",
+            "D3240128079286"
+          ],
+          "fins": [
+            "210WS9",
+            "248WS"
+          ],
+          "drawings": [
+            "D32401216639"
+          ],
+          "zones": [
+            "721",
+            "734",
+            "771"
+          ],
+          "software": [
+            "LA5CCE9DE6B"
+          ]
+        },
+        "similarity_seeds": [
+          "brake pressure transient at touchdown on a contaminated runway",
+          "anti-skid authority released before both wheels have spun up"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Establish the certification position of the bundled unit change",
+          "method": "SME_INTERVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search part list and manual content on the control unit",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review fault isolation built on the current logic",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Check gear bay routing for the new unit footprint",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "IPC-C-32-40-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240120310957",
+              "D3240121944667",
+              "D3240128079286"
+            ],
+            "shared_fins": [
+              "210WS9",
+              "248WS"
+            ],
+            "shared_zones": [
+              "721",
+              "734",
+              "771"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bundled hardware half introduces a second control unit part number into a figure that has carried one. Because the configuration is loadable into either unit, the figure would have to express a two-by-two matrix of unit and configuration, which is not something the line can order from reliably.",
+          "resolution": "Scope split recommended: the unit part number change is raised separately so the figure carries one change at a time."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-C-32-40-12-700-002-A",
+          "doc_type": "AMM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240120310957"
+            ],
+            "shared_fins": [
+              "210WS9",
+              "248WS"
+            ],
+            "shared_zones": [
+              "721",
+              "734",
+              "771"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": "The functional test and the dossier use the same wheel spin-up simulation vocabulary and share the unit part number, both functional item numbers and all three zones."
+          },
+          "rationale": "The anti-skid credit is demonstrated by the wheel spin-up simulation test against the unit currently listed. Changing the unit in the same dossier invalidates the demonstration and would require the whole test campaign to be re-flown, which the programme has no window for.",
+          "resolution": "Bundled unit change rejected on this dossier; the credit position is to be settled with certification before it is raised again."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-C-32-40-12-810-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3240120310957",
+              "D3240121944667"
+            ],
+            "shared_fins": [
+              "210WS9",
+              "248WS"
+            ],
+            "shared_zones": [
+              "721",
+              "734",
+              "771"
+            ],
+            "shared_ata_6d": [
+              "32-40-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure for a brake pressure transient at touchdown is written against the current authority logic and its most probable cause list starts with a wheel speed transducer. With authority delayed until both wheels spin up the ranking is wrong, whichever way the scope is split.",
+          "resolution": "Re-issue held until the split is agreed, then written once for the configuration change."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "WDM-C-92-31-12",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "INFORMATIONAL",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "721"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The gear bay feeder sheet was returned on the zone seed. The proposed unit has a different connector position, so the sheet would have needed a note if the hardware half had survived.",
+          "resolution": "No action while the change is configuration only; recorded for the separate hardware dossier."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111117",
+          "doc_type": "MOD",
+          "reason": "Returned on zones 721 and 734 because it works in the same bay, but it is a hydraulic case drain change on the engine driven pump with no braking content and no shared part or functional item number."
+        }
+      ],
+      "conclusion": "Rejected as submitted. The configuration change is sound but cannot be released with a unit part number change bundled into the same dossier.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

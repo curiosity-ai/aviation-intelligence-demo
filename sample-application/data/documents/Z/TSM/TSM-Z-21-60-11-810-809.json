@@ -1,0 +1,330 @@
+[
+  {
+    "doc_id": "TSM-Z-21-60-11-810-809",
+    "doc_type": "TSM",
+    "title": "Cabin Zone Temperature Does Not Follow the Selector after a Trim Air Valve Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1991-10-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-60-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-05-14",
+      "released": "1991-10-18",
+      "revised": null,
+      "effective": "1991-11-08"
+    },
+    "abstract": "Fault isolation for a cabin zone that stops following its selector after a valve change, working from the duct-mounted sensing element outwards to the valve motor and the zone controller.",
+    "sections": {
+      "purpose": "This procedure isolates a cabin zone that does not follow its temperature selector after a trim air valve change, taking the duct-mounted sensing element as the primary measurement and working outwards from it to the valve and the controller.",
+      "fault_description": "The complaint appears on the first flight after a valve change and is usually reported by the cabin crew rather than by an alert. The zone sits at whatever the pack is delivering and moves slowly if at all when the selector is turned. On aircraft at the standard 2 configuration the most common cause by a wide margin is a valve of the earlier standard fitted into a duct with a sensor boss, which leaves the zone loop with no sensing element and no fault reported, because the controller cannot tell the difference between a missing sensor and a sensor reading the pack outlet.",
+      "isolation_procedure": "1. Read the zone controller maintenance page and record the reported valve position and the reported zone temperature. 2. Compare the reported zone temperature with a calibrated thermometer held at the zone outlet. A difference larger than the limit in the instructions points at the sensing element and not at the valve. 3. Check the aircraft modification status and the part number of the valve that was fitted. 4. If the valve standard does not match the duct standard, the valve is wrong: fit the correct standard and repeat the test. 5. If the standards match, disconnect the sensor harness at the duct boss and measure the element resistance at the valve FIN 726HQ for the forward zone or FIN 980HQ for the aft zone. 6. An open or short circuit indicates a failed element; replace the valve. 7. If the element is good, command the valve to full cold from the maintenance page and observe the reported position. 8. A position that does not change indicates a failed valve motor or a wiring fault; check the harness continuity before you condemn the valve. 9. If the position follows the command, the fault is in the controller: read the fault memory at the controller FIN 3267HM and replace the controller if a fault is confirmed. 10. Do the operational test after any component change.",
+      "dispatch_note": "Dispatch is permitted with one cabin zone unregulated, subject to the cabin temperature limits in the operations manual and to the remaining zones being serviceable. Trim air must be selected off for the affected zone. Rectify within ten calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160114404059",
+        "ASH878362-87",
+        "KAD437362-51"
+      ],
+      "fins": [
+        "726HQ",
+        "980HQ",
+        "3267HM",
+        "872HQ"
+      ],
+      "drawings": [
+        "D21601252810"
+      ],
+      "software": [
+        "LD9NC45B7FC"
+      ],
+      "zones": [
+        "254",
+        "291",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-21-60-12-700-024-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-153140",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "zone temperature",
+      "valve standard mismatch",
+      "sensing element",
+      "valve position command",
+      "controller fault"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "21-60-11-810-809",
+      "fault_symptom": "Cabin zone temperature does not follow the zone selector",
+      "fault_codes": [
+        "216011004",
+        "216011019"
+      ],
+      "warning_messages": [
+        "AIR ZONE CTL FAULT"
+      ],
+      "affected_fins": [
+        "726HQ",
+        "980HQ",
+        "3267HM"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Valve of the earlier standard fitted into a duct with a sensor boss, leaving the zone loop unsensed",
+          "probability_pct": 42,
+          "fin": "726HQ"
+        },
+        {
+          "cause": "Duct-mounted sensing element open or short circuit",
+          "probability_pct": 28,
+          "fin": "980HQ"
+        },
+        {
+          "cause": "Valve motor failure or harness discontinuity",
+          "probability_pct": 19,
+          "fin": "726HQ"
+        },
+        {
+          "cause": "Zone controller internal failure",
+          "probability_pct": 11,
+          "fin": "3267HM"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-21-60-12-700-024-A",
+      "dispatch": {
+        "mel_item": "21-60-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One zone unregulated with trim air selected off for that zone and the remaining zones serviceable"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-Z-21-60-11-810-809",
+    "doc_type": "TSM",
+    "title": "Cabin Zone Temperature Does Not Follow the Selector after a Trim Air Valve Change",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-07",
+      "reason": "A caveat records that the opening steps assume a duct-mounted sensing element and that their rewrite is held for the boss-less standard.",
+      "raised_by_pawo": "PAWO-153140-02",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-11",
+      "title": "Temperature Control — Trim Air System"
+    },
+    "secondary_ata": [
+      "21-60-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1991-05-14",
+      "released": "1991-10-18",
+      "revised": "2026-08-07",
+      "effective": "2026-08-07"
+    },
+    "abstract": "Fault isolation for a cabin zone that no longer follows its selector after a valve change, separating a mismatched valve standard from a sensing fault and from a genuine valve failure.",
+    "sections": {
+      "purpose": "This procedure isolates a cabin zone that does not follow its temperature selector after a trim air valve change, and distinguishes a mismatched valve standard from a sensing or a controller fault. Steps 1 to 3 assume that the zone is sensed at a duct-mounted element. On a configuration that senses inside the valve body there is no duct element to read and no valve-to-duct standard to mismatch, so those three steps have nothing to act on; a rewrite is registered and held until that configuration is decided.",
+      "fault_description": "The complaint appears on the first flight after a valve change and is usually reported by the cabin crew rather than by an alert. The zone sits at whatever the pack is delivering and moves slowly if at all when the selector is turned. On aircraft at the standard 2 configuration the most common cause by a wide margin is a valve of the earlier standard fitted into a duct with a sensor boss, which leaves the zone loop with no sensing element and no fault reported, because the controller cannot tell the difference between a missing sensor and a sensor reading the pack outlet. That failure mode disappears entirely on a configuration whose element sits inside the valve, which is why the opening of this procedure is standard dependent and not general.",
+      "isolation_procedure": "1. Read the zone controller maintenance page and record the reported valve position and the reported zone temperature. 2. Compare the reported zone temperature with a calibrated thermometer held at the zone outlet. A difference larger than the limit in the instructions points at the sensing element and not at the valve. 3. Check the aircraft modification status and the part number of the valve that was fitted. 4. If the valve standard does not match the duct standard, the valve is wrong: fit the correct standard and repeat the test. 5. If the standards match, disconnect the sensor harness at the duct boss and measure the element resistance at the valve FIN 726HQ for the forward zone or FIN 980HQ for the aft zone. 6. An open or short circuit indicates a failed element; replace the valve. 7. If the element is good, command the valve to full cold from the maintenance page and observe the reported position. 8. A position that does not change indicates a failed valve motor or a wiring fault; check the harness continuity before you condemn the valve. 9. If the position follows the command, the fault is in the controller: read the fault memory at the controller FIN 3267HM and replace the controller if a fault is confirmed. 10. Do the operational test after any component change.",
+      "dispatch_note": "Dispatch is permitted with one cabin zone unregulated, subject to the cabin temperature limits in the operations manual and to the remaining zones being serviceable. Trim air must be selected off for the affected zone. Rectify within ten calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160114404059",
+        "ASH878362-87",
+        "KAD437362-51"
+      ],
+      "fins": [
+        "726HQ",
+        "980HQ",
+        "3267HM",
+        "872HQ"
+      ],
+      "drawings": [
+        "D21601252810"
+      ],
+      "software": [
+        "LD9NC45B7FC"
+      ],
+      "zones": [
+        "254",
+        "291",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-21-60-12-700-024-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-153140",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "zone temperature",
+      "valve standard mismatch",
+      "sensing element",
+      "standard dependent isolation",
+      "controller fault"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "21-60-11-810-809",
+      "fault_symptom": "Cabin zone temperature does not follow the zone selector",
+      "fault_codes": [
+        "216011004",
+        "216011019"
+      ],
+      "warning_messages": [
+        "AIR ZONE CTL FAULT"
+      ],
+      "affected_fins": [
+        "726HQ",
+        "980HQ",
+        "3267HM"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Valve of the earlier standard fitted into a duct with a sensor boss, leaving the zone loop unsensed",
+          "probability_pct": 42,
+          "fin": "726HQ"
+        },
+        {
+          "cause": "Duct-mounted sensing element open or short circuit",
+          "probability_pct": 28,
+          "fin": "980HQ"
+        },
+        {
+          "cause": "Valve motor failure or harness discontinuity",
+          "probability_pct": 19,
+          "fin": "726HQ"
+        },
+        {
+          "cause": "Zone controller internal failure",
+          "probability_pct": 11,
+          "fin": "3267HM"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-Z-21-60-12-700-024-A",
+      "dispatch": {
+        "mel_item": "21-60-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One zone unregulated with trim air selected off for that zone and the remaining zones serviceable"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

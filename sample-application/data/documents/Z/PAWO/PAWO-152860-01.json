@@ -1,0 +1,310 @@
+[
+  {
+    "doc_id": "PAWO-152860-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Air Cycle Machine Silencer and Bearing Change for Rear Cabin Noise",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-05-31",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-50",
+      "ata_6d": "21-50-11",
+      "title": "Cooling — Air Cycle Machine"
+    },
+    "secondary_ata": [
+      "21-20"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-05-11",
+      "released": "2017-05-31",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of a customer-requested silencer and bearing change against rear cabin tonal noise, returned for re-scoping when the proposed retrofit was found to answer only part of the measured spectrum.",
+    "sections": {
+      "objective": "Assess a customer request to reduce the tonal component measured in the rear cabin in the cruise, by changing the air cycle machine turbine silencer and the bearing cartridge. The request arrived with the operator's own cabin noise measurements, which is unusual and useful. Pre-analysis was asked whether the proposed change addresses what those measurements actually show, and what else in the pack bay and the overhead would have to move with it.",
+      "findings_summary": "Three items were confirmed and together they sent the proposal back. The silencer and bearing change addresses the machine tone, but the operator's own spectrum shows a second component at a frequency the machine does not produce, and the pack bay installation content shows a mount arrangement that transmits structure-borne noise into the same cabin section; changing the machine alone would leave roughly half the measured level in place and the customer would reasonably regard the retrofit as having failed. The fault symptom procedure for reported pack bay noise would also become misleading, because it currently ends at a machine replacement that would no longer be the answer. The ceiling lighting work in the same period claims the same overhead access, which matters if the scope grows to include the mount.",
+      "next_steps": "Return the proposal for re-scoping with the mount arrangement included, and ask the design office to quote a decoupled mount alongside the silencer and bearing change rather than after it. Send the operator's spectrum to acoustics so that the second component is attributed before any retrofit is quoted. Hold the fault symptom procedure change until the scope is settled. Re-raise the pre-analysis when the wider scope is available."
+    },
+    "entities": {
+      "part_numbers": [
+        "KEDE723823-59",
+        "LU579123-82",
+        "D2150113216257",
+        "EN911564K9"
+      ],
+      "fins": [
+        "312HM",
+        "33HQ",
+        "4HM"
+      ],
+      "drawings": [
+        "D21500081959",
+        "D21501246663"
+      ],
+      "software": [],
+      "zones": [
+        "191",
+        "192",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-152860",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "air cycle machine",
+      "tonal noise",
+      "bearing cartridge",
+      "scope rework"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-152860-01",
+      "subject_mod": "MOD-152860",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2017-05-31",
+      "outcome": "REJECTED",
+      "raised_date": "2016-05-11",
+      "due_date": "2017-05-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 110,
+        "spent_manhours": 133
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "21",
+          "33"
+        ],
+        "ata_4d": [
+          "21-50",
+          "21-20",
+          "33-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "KEDE723823-59",
+            "LU579123-82",
+            "D2150113216257"
+          ],
+          "fins": [
+            "312HM",
+            "33HQ",
+            "4HM"
+          ],
+          "drawings": [
+            "D21500081959"
+          ],
+          "zones": [
+            "191",
+            "192",
+            "265"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "tonal noise measured in the rear cabin in the cruise",
+          "structure borne transmission from a pack bay mount",
+          "overhead ceiling access shared between cabin retrofits"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare the operator spectrum against the machine tone",
+          "method": "MANUAL_REVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Review pack bay installation and mount content",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check fault symptom content for the reported noise",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-Z-21-50-11-200-015-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "KEDE723823-59",
+              "LU579123-82",
+              "D2150113216257",
+              "EN911564K9"
+            ],
+            "shared_fins": [
+              "312HM",
+              "33HQ",
+              "4HM"
+            ],
+            "shared_zones": [
+              "191",
+              "192",
+              "265"
+            ],
+            "shared_ata_6d": [
+              "21-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The inspection of the machine, silencer and mount installation shows a mount arrangement that transmits structure-borne noise into the same cabin section. Changing the machine alone leaves that path untouched, and it accounts for a large part of the measured level.",
+          "resolution": "Re-scope the proposal to include a decoupled mount and quote the two together."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-Z-21-50-11-812-806",
+          "doc_type": "TSM",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "KEDE723823-59",
+              "EN911564K9",
+              "LU579123-82",
+              "D2150113216257"
+            ],
+            "shared_fins": [
+              "312HM",
+              "33HQ",
+              "4HM"
+            ],
+            "shared_zones": [
+              "191",
+              "192",
+              "265"
+            ],
+            "shared_ata_6d": [
+              "21-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The fault symptom procedure for pack bay noise reported by the cabin crew ends at a machine replacement. On a retrofitted aircraft that is no longer the answer, and the procedure would send the operator round the same loop it has been round already.",
+          "resolution": "Hold the procedure change until the retrofit scope is settled, then revise it once."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-152578",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "265"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The ceiling lighting change works the same overhead panels in the same cabin section. If the noise scope grows to include the mount, the two retrofits should be offered as one downtime.",
+          "resolution": "Note the overlap for the re-scoped proposal rather than acting on it now."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "ZPH-33-1088",
+          "doc_type": "SB",
+          "reason": "Returned high by the semantic pass on cabin comfort and rear cabin language and shares the overhead zone, but it changes lighting ballasts and diffusers. It shares no part number, no functional item number and no acoustic path with the air cycle machine installation."
+        }
+      ],
+      "conclusion": "Closed with a negative position on the proposal as submitted. The change answers only part of the measured spectrum and was returned for re-scoping with the mount arrangement included.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

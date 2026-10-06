@@ -1,0 +1,350 @@
+[
+  {
+    "doc_id": "AMM-S-30-10-11-700-015-A",
+    "doc_type": "AMM",
+    "title": "Wing Anti-Ice Valve — Operational Test with Feedback Sweep",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1996-05-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Airfoil Anti-Ice — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1996-01-03",
+      "released": "1996-05-08",
+      "revised": "1996-05-08",
+      "effective": "1996-05-26"
+    },
+    "abstract": "Operational test of one wing anti-ice valve including a full travel sweep with the position feedback recorded, which is what finds a valve that binds only under a duct temperature gradient.",
+    "sections": {
+      "purpose": "This task proves that a wing anti-ice valve opens, closes and holds intermediate positions on command, and records the position feedback across the full sweep so that binding can be seen rather than inferred.",
+      "job_setup_note": "Do this task with the slats extended and the slat locks installed, and with the bleed system available. The sweep must be done twice: once with the duct cold and once after a warm-through, because the fault the test is written to find only appears when the duct is hot on one side. Record the feedback resistance at every step of the sweep and not only at the end points; the acceptance band in the test schedule is a resistance band and it is read step by step.",
+      "procedure": "1. Extend the slats and install the slat locks. WARNING: DO NOT WORK IN THE SLAT AREA WITHOUT THE SLAT LOCKS INSTALLED. 2. Get access at the wing leading edge in zones 512 and 611 and at the slat area in zone 551. 3. Connect the anti-ice test set at the valve and at the switch position 6HA. 4. With the duct cold, command the valve from closed to open in ten per cent steps and record the feedback resistance at each step against the band in the test schedule. 5. Command it back to closed in the same steps and record the resistance again. 6. Compare the two sets; a difference of more than the hysteresis limit at any step means the butterfly is binding. CAUTION: DO NOT CONCLUDE FROM THE END POINTS ALONE. A BINDING VALVE OFTEN REACHES BOTH END POINTS CORRECTLY. 7. Run the bleed system to warm the duct to the temperature in the test schedule and hold it. 8. Repeat the ten-step sweep in both directions at the warm condition. 9. Compare the warm sweep against the cold sweep and against the acceptance band. 10. Check that the valve holds its commanded position for two minutes with no drift. 11. Check the fault message list on the maintenance terminal and confirm that no anti-ice fault is latched. 12. Depressurise, disconnect the test set, remove the slat locks and retract the slats.",
+      "close_out": "Record the twenty feedback resistance readings from each sweep, the hysteresis at the worst step and the fault message state in the aircraft technical log. A valve outside the acceptance band at the warm condition must be replaced even if the cold sweep was acceptable."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010115902013",
+        "EN229422-9A",
+        "EN906402-5B"
+      ],
+      "fins": [
+        "6HA"
+      ],
+      "drawings": [
+        "D30100042160"
+      ],
+      "software": [],
+      "zones": [
+        "512",
+        "551",
+        "611"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01741"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-30-1011",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-30-10-11-810-802",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "anti-ice valve",
+      "feedback sweep",
+      "hysteresis",
+      "warm duct",
+      "operational test"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "30-10-11-700-015-A",
+      "task_type": "TEST",
+      "effectivity_note": "Twin-engine aircraft up to MSN S01741; later aircraft carry a different valve feedback interface and this test is not applicable to them",
+      "manhours": 6.0,
+      "personnel": 2,
+      "elapsed_time_hours": 4.5,
+      "access": {
+        "zones": [
+          "512",
+          "551",
+          "611"
+        ],
+        "access_panels": [
+          "512AR",
+          "512BL",
+          "551CR",
+          "611AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Install the slat locks before any person enters the slat area.",
+          "Use heat-resistant gloves during the warm sweep.",
+          "Keep clear of the slat track during the test."
+        ],
+        "tooling": [
+          {
+            "reference": "98D30100-092",
+            "description": "Anti-ice test set"
+          },
+          {
+            "reference": "98D30100-096",
+            "description": "Slat lock set"
+          },
+          {
+            "reference": "98D30100-099",
+            "description": "Duct thermocouple set"
+          }
+        ],
+        "consumables": [
+          "Thermocouple tape",
+          "Gasket set, anti-ice valve"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-S-30-10-11-700-015-A",
+    "doc_type": "AMM",
+    "title": "Wing Anti-Ice Valve — Operational Test with Feedback Sweep",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-24",
+      "reason": "The acceptance table is rewritten with one column per feedback standard, selected on the modification instead of an MSN break, and a duty cycle column is added for the non-contact sensor.",
+      "raised_by_pawo": "PAWO-130940-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-11",
+      "title": "Airfoil Anti-Ice — Wing Anti-Ice Valves"
+    },
+    "secondary_ata": [
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1996-01-03",
+      "released": "1996-05-08",
+      "revised": "2026-07-24",
+      "effective": "2026-08-06"
+    },
+    "abstract": "Operational test of one wing anti-ice valve including a full travel sweep with the position feedback recorded, read against the acceptance column for the feedback standard installed on the aircraft.",
+    "sections": {
+      "purpose": "This task proves that a wing anti-ice valve opens, closes and holds intermediate positions on command, and records the position feedback across the full sweep so that binding can be seen rather than inferred.",
+      "job_setup_note": "Do this task with the slats extended and the slat locks installed, and with the bleed system available. Establish the feedback standard before the test set is connected; it selects the acceptance column and the instrument. The delivered valve reports position as a wiper resistance and is read against column A. The reprofiled valve reports position as a duty cycle and is read against column B; it has no resistance track at all, so column A cannot be satisfied by a serviceable unit and must not be applied to it. The sweep is done twice on either standard, once with the duct cold and once after a warm-through, because the fault the test is written to find only appears when the duct is hot on one side.",
+      "procedure": "1. Extend the slats and install the slat locks. WARNING: DO NOT WORK IN THE SLAT AREA WITHOUT THE SLAT LOCKS INSTALLED. 2. Get access at the wing leading edge in zones 512 and 611 and at the slat area in zone 551. 3. Read the feedback standard from the aircraft configuration and select acceptance column A or column B. 4. Connect the anti-ice test set at the valve and at the switch position 6HA, using the resistance lead for column A and the pulse lead for column B. 5. With the duct cold, command the valve from closed to open in ten per cent steps and record the feedback at each step: resistance in ohms for column A, reported duty cycle as a percentage for column B. 6. Command it back to closed in the same steps and record the feedback again. 7. Compare the two sets; a difference of more than the hysteresis limit for the selected column at any step means the butterfly is binding. CAUTION: DO NOT CONCLUDE FROM THE END POINTS ALONE. A BINDING VALVE OFTEN REACHES BOTH END POINTS CORRECTLY. 8. Run the bleed system to warm the duct to the temperature in the test schedule and hold it. 9. Repeat the ten-step sweep in both directions at the warm condition. 10. Compare the warm sweep against the cold sweep and against the acceptance column. 11. Check that the valve holds its commanded position for two minutes with no drift. On column B, confirm the pulse train is continuous throughout the hold; a dropout is a failure even if the reported position is steady. 12. Check the fault message list on the maintenance terminal and confirm that no anti-ice fault is latched. 13. Depressurise, disconnect the test set, remove the slat locks and retract the slats.",
+      "close_out": "Record the acceptance column used, the twenty feedback readings from each sweep, the hysteresis at the worst step and the fault message state in the aircraft technical log. A valve outside the acceptance band at the warm condition must be replaced even if the cold sweep was acceptable. Do not enter a resistance reading against a column B valve; the field is left blank and the duty cycle is entered instead."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010115902013",
+        "EN229422-9A",
+        "EN906402-5B"
+      ],
+      "fins": [
+        "6HA"
+      ],
+      "drawings": [
+        "D30100042160"
+      ],
+      "software": [],
+      "zones": [
+        "512",
+        "551",
+        "611"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "SLN-30-1011",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-30-10-11-810-802",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "anti-ice valve",
+      "feedback sweep",
+      "acceptance column",
+      "duty cycle",
+      "operational test"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "30-10-11-700-015-A",
+      "task_type": "TEST",
+      "effectivity_note": "All twin-engine aircraft including the Evo variants. Acceptance column A applies pre MOD-130940 and column B post MOD-130940; the selection is made on the modification and not on an MSN break, because the valve is interchangeable at unit level",
+      "manhours": 6.5,
+      "personnel": 2,
+      "elapsed_time_hours": 4.5,
+      "access": {
+        "zones": [
+          "512",
+          "551",
+          "611"
+        ],
+        "access_panels": [
+          "512AR",
+          "512BL",
+          "551CR",
+          "611AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Install the slat locks before any person enters the slat area.",
+          "Use heat-resistant gloves during the warm sweep.",
+          "Keep clear of the slat track during the test."
+        ],
+        "tooling": [
+          {
+            "reference": "98D30100-092",
+            "description": "Anti-ice test set"
+          },
+          {
+            "reference": "98D30100-096",
+            "description": "Slat lock set"
+          },
+          {
+            "reference": "98D30100-099",
+            "description": "Duct thermocouple set"
+          }
+        ],
+        "consumables": [
+          "Thermocouple tape",
+          "Gasket set, anti-ice valve"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

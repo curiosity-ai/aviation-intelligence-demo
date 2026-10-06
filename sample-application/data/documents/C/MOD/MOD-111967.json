@@ -1,0 +1,184 @@
+[
+  {
+    "doc_id": "MOD-111967",
+    "doc_type": "MOD",
+    "title": "Third Issue of the Datalink Router Standard for Oceanic Position Reporting at Reduced Separation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-26",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00408",
+          "to": "C00796"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "GSL",
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111225"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-01-26",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Third issue of the datalink router standard, narrowing the reporting interval and adding the integrity monitor that reduced lateral separation requires, on the aircraft already at the oceanic clearance standard.",
+    "sections": {
+      "reason": "The oceanic authorities have published a date after which the reduced lateral separation tracks require a position report at a shorter interval and with a declared integrity figure that the second router standard cannot produce. Two operators have built their North Atlantic schedules on those tracks and would lose them. Unlike the earlier issues this is not a capability the fleet is missing altogether; it is a narrowing of one already present, which is why the change is being scoped as an extension rather than as a new installation. The second standard also carries a known limitation on the reporting interval at high latitude that has produced twenty-three reports of a missed position message in two years.",
+      "description": "The router assembly D2370006240541 is retained and re-loaded, the display unit D2370118700860 is unchanged, and the satellite data unit ELL642868-87 is replaced by a variant that reports its own integrity. The reporting interval is narrowed from fourteen to four minutes and an integrity monitor is added that compares the reported position against the independent source before each transmission. The data concentrator VED805230-21 is retained on the outboard shelf. Titanium bolts AGS119203K9 are renewed at the shelf. Functional items 218RN, 16RN and 7RC are affected. Work is in the forward avionics bay in zone 165, at the flight compartment overhead panel in zone 211 and at the antenna feed in zone 282. Reference detail is on drawing D23700095149.",
+      "effects": "Estimated mass increase of 0.8 kg. Electrical load increases by 35 volt-amperes. The satellite data unit is not interchangeable with the earlier variant. Dispatch with the integrity monitor inoperative would prohibit reduced separation track allocation but not oceanic operation as such, and the minimum equipment list entry has to be written accordingly. The flight crew description of the datalink pages changes because the integrity state is annunciated, and the maintenance and illustrated parts content for the satellite data unit change.",
+      "embodiment_note": "Both a production cut-in and a retrofit are intended, and the retrofit is only offered on aircraft already at the second standard because the router load will not run on the first. One shift at a line stop for the unit and the load. The two affected operators want the whole of their oceanic fleets embodied inside one winter.",
+      "open_points": "Pre-analysis must confirm whether the narrowed reporting interval saturates the satellite path when both the surveillance function and the reporting function are active, whether the independent position source used by the integrity monitor is affected by a change already in work on the navigation side, whether the overhead panel run has room for the additional pair given what else has been added to that route, and whether the second standard's own service bulletin effectivity has to be closed off once this issue is released."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370006240541",
+        "D2370118700860",
+        "ELL642868-87",
+        "VED805230-21",
+        "AGS119203K9"
+      ],
+      "fins": [
+        "218RN",
+        "16RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211",
+        "282"
+      ],
+      "figures": [
+        "FIG-23-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00680",
+        "C00750"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111225",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      }
+    ],
+    "keywords": [
+      "oceanic position reporting",
+      "reduced separation",
+      "integrity monitor",
+      "reporting interval",
+      "satellite data unit"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Lorencourt",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111967,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CERTIFICATION",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.8,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 35,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "ELL642868-87"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2370006240541"
+      ],
+      "fins_affected": [
+        "218RN",
+        "16RN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 320,
+      "estimated_cost_keur": 1450,
+      "lead_time_weeks": 46,
+      "production_impact": "Cut-in intended at the next avionics standard change; no line stoppage foreseen",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

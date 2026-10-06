@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "AMM-C-45-45-11-700-030-A",
+    "doc_type": "AMM",
+    "title": "Portable Data Loader Interface — Functional Test and Configuration Report",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-08-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-20",
+      "22-80"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-02-21",
+      "released": "2023-08-30",
+      "revised": null,
+      "effective": "2023-09-25"
+    },
+    "abstract": "Functional test of the portable data loader interface and production of the aircraft software configuration report, including the check that a load started at one port cannot be started at another at the same time.",
+    "sections": {
+      "purpose": "To prove the portable data loader interface at each installed port and to produce the aircraft software configuration report for the technical record.",
+      "job_setup_note": "The aircraft must be on stable external power for the whole test; a power interruption during a load leaves the target unit unusable. The maintenance terminal, the loader and a validated test load must be available. On aircraft with a cabin-side port, two persons are needed so that both ports can be attempted at the same time.",
+      "procedure": "Make sure that the aircraft is on stable external power and that no other maintenance work that could interrupt power is in progress. WARNING: DO NOT INTERRUPT THE ELECTRICAL POWER DURING A LOAD. AN INTERRUPTED LOAD LEAVES THE TARGET UNIT UNUSABLE AND IT MUST GO TO THE SHOP. Connect the loader at the flight compartment port and select the interface page. Confirm that the interface reports ready and that the connected loader is identified. Start the validated test load to the nominated target and let it run to completion. Record the elapsed load time. Confirm that the target reports the loaded part number correctly after the load. CAUTION: DO NOT USE AN OPERATIONAL SOFTWARE LOAD FOR THIS TEST. USE THE VALIDATED TEST LOAD ONLY. On aircraft with a cabin-side port, move the loader to the cabin port at the attendant panel in zone 234 and repeat the load. With one loader connected and a load running, attempt to start a load from the other port and confirm that the interface refuses it and gives the correct message. Disconnect both loaders. From the maintenance terminal, request the aircraft software configuration report and confirm that it lists every loadable unit with its part number and its load date. Save the report with the aircraft registration and the date.",
+      "close_out": "Disconnect the loader and the maintenance terminal and fit the port dust caps. Make sure that the cabin port cover is closed and latched where fitted. Restore the aircraft to its normal electrical configuration. Record the two elapsed load times, the result of the simultaneous load attempt and the file name of the saved configuration report."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545112932616",
+        "D4545119446504",
+        "BED484003-95",
+        "D4545128867418",
+        "AES196920-75"
+      ],
+      "fins": [
+        "5TN9",
+        "78TN",
+        "62TM"
+      ],
+      "drawings": [
+        "D45451245065",
+        "D45450069919"
+      ],
+      "software": [
+        "LH6CEDA1669"
+      ],
+      "zones": [
+        "164",
+        "252",
+        "234"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-45-20-11-700-016-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-22-80-11-400-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "data loader",
+      "functional test",
+      "configuration report",
+      "simultaneous load",
+      "port"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "45-45-11-700-030-A",
+      "task_type": "TEST",
+      "effectivity_note": "The cabin port steps apply only to aircraft carrying the cabin-side interface.",
+      "manhours": 2.2,
+      "personnel": 2,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "164",
+          "252",
+          "234"
+        ],
+        "access_panels": [
+          "164AL",
+          "234CL"
+        ],
+        "doors": [
+          "Flight compartment maintenance panel",
+          "Forward attendant panel"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not interrupt the electrical power during a load.",
+          "Do not use an operational software load for this test.",
+          "Make sure that no other work that could interrupt power is in progress."
+        ],
+        "tooling": [
+          {
+            "reference": "98C45201-210",
+            "description": "Maintenance terminal and load media reader"
+          },
+          {
+            "reference": "98C45451-118",
+            "description": "Portable data loader, validated test load"
+          }
+        ],
+        "consumables": [
+          "Dust caps, data load port"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-45-20-11-700-016-A",
+        "AMM-C-22-80-11-400-014-A"
+      ],
+      "steps": 15,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,554 @@
+[
+  {
+    "doc_id": "MOD-133020",
+    "doc_type": "MOD",
+    "title": "Main Gear Side Stay Lock Link Actuation and Downlock Sensing Rework, VANTOR-68",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-11-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-10",
+      "ata_6d": "32-10-12",
+      "title": "Main Gear — Side Stay and Lock Links"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-5560"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "SLN-32-1027"
+      ]
+    },
+    "dates": {
+      "created": "2016-09-27",
+      "released": "2017-11-08",
+      "revised": "2017-11-08",
+      "effective": "2017-11-29"
+    },
+    "abstract": "Rework of the lock link actuation and the downlock proximity sensing of the wing-mounted main gear on the four-engine stretched aircraft, where the heavier landing gear load path made the original overcentre margin marginal in cold conditions.",
+    "sections": {
+      "reason": "The VANTOR-68 carries the highest maximum landing weight in the family on a gear geometry shared with lighter variants, and the lock link overcentre margin was set from the lighter case. Six operators reported a total of twenty-three unsafe gear indications during extension at outside air temperatures below minus five degrees Celsius, all of which cleared on recycling. Ground testing at low temperature reproduced the condition: the grease in the lock link joint stiffens enough to leave the link 1.2 degrees short of the overcentre position, which is inside the proximity sensor dead band but outside the certified locked geometry. The condition is specific to the stretched four-engine aircraft; the shorter four-engine variant and the twin-engine aircraft have adequate margin at the same temperature.",
+      "description": "The lock link actuation is re-worked to increase the overcentre travel by 3.5 degrees and to lower the breakout force at low temperature. The inboard clamp assembly D3210122801088 is replaced by a stiffer item, the inboard heat exchanger sub-assembly D3210122818558 is retained, and the obsolete lower manifold D3210129320861 and forward pump D3210120197201 are deleted with the circuit re-plumbed directly. The outboard solenoid VAD543968-23 is replaced by a unit with a wider operating temperature band, and the lower pump HED997832-72 and the upper non-return valve LUDE897936-82 are removed from the assembly. Proximity sensing is re-targeted: the outboard manifold sensing position 14WS and the forward sensing position 70GM are moved to read the link directly rather than the actuator rod, and the inboard hose position 448GB is re-routed clear of the new travel. The right-hand filter position 9WS8 is retained. Work is done in the main gear bays and the gear doors, zones 721, 731 and 752, with the aircraft on jacks. Detail is on drawings D32100087428 and D32101114402.",
+      "effects": "Mass reduction of 6.8 kg per aircraft after deletion of the redundant pump and manifold. No electrical load change; the proximity sensing draws the same current from an unchanged interface unit. Not interchangeable, because the lock link geometry and the sensor target positions change together and neither can be embodied alone. The recycling procedure in the flight crew operating manual is unchanged but the cold weather advisory note is withdrawn once embodied. Landing gear swing test content and the associated trouble shooting procedure require update.",
+      "embodiment_note": "Retrofit only; the VANTOR-68 line closed in 2011. Embodiment is through Service Bulletin SLN-32-1027 with the aircraft on jacks over four days, and it includes a full landing gear swing test. The kit includes the revised clamp, the solenoid and the sensor brackets."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3210122801088",
+        "D3210122818558",
+        "D3210129320861",
+        "D3210120197201",
+        "VAD543968-23",
+        "HED997832-72",
+        "LUDE897936-82"
+      ],
+      "fins": [
+        "14WS",
+        "70GM",
+        "448GB",
+        "9WS8"
+      ],
+      "drawings": [
+        "D32100087428",
+        "D32101114402"
+      ],
+      "software": [],
+      "zones": [
+        "721",
+        "731",
+        "752"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00785",
+        "S01131"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-32-1027",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "lock link",
+      "overcentre margin",
+      "downlock proximity",
+      "unsafe gear indication",
+      "low temperature"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Ashcombe",
+      "role": "Landing Gear Systems"
+    },
+    "type_data": {
+      "mod_number": 133020,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.729",
+          "CS 25.1301",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": -6.8,
+      "balance_impact": "Symmetric; no reportable effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "VAD543968-23"
+      ],
+      "parts_removed": [
+        "D3210129320861",
+        "D3210120197201",
+        "HED997832-72",
+        "LUDE897936-82"
+      ],
+      "parts_modified": [
+        "D3210122801088"
+      ],
+      "fins_affected": [
+        "14WS",
+        "70GM",
+        "448GB"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 260,
+      "estimated_cost_keur": 940,
+      "lead_time_weeks": 46,
+      "production_impact": "None; the VANTOR-68 line is closed",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-133020",
+    "doc_type": "MOD",
+    "title": "Main Gear Side Stay Lock Link Actuation and Downlock Sensing Rework, VANTOR-68",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2018-11-26",
+      "reason": "The touchdown attitude distribution used for the overcentre assessment is restated against the restored aft centre of gravity limit and the landing gear office confirmation is recorded.",
+      "raised_by_pawo": "PAWO-132640-01",
+      "raised_by_finding": "F02",
+      "finding_type": "CERTIFICATION_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-10",
+      "ata_6d": "32-10-12",
+      "title": "Main Gear — Side Stay and Lock Links"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-5560"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "SLN-32-1027"
+      ]
+    },
+    "dates": {
+      "created": "2016-09-27",
+      "released": "2017-11-08",
+      "revised": "2018-11-26",
+      "effective": "2018-12-14"
+    },
+    "abstract": "Rework of the lock link actuation and the downlock proximity sensing of the wing-mounted main gear on the four-engine stretched aircraft, where the heavier landing gear load path made the original overcentre margin marginal in cold conditions.",
+    "sections": {
+      "reason": "The VANTOR-68 carries the highest maximum landing weight in the family on a gear geometry shared with lighter variants, and the lock link overcentre margin was set from the lighter case. Six operators reported a total of twenty-three unsafe gear indications during extension at outside air temperatures below minus five degrees Celsius, all of which cleared on recycling. Ground testing at low temperature reproduced the condition: the grease in the lock link joint stiffens enough to leave the link 1.2 degrees short of the overcentre position, which is inside the proximity sensor dead band but outside the certified locked geometry. The condition is specific to the stretched four-engine aircraft; the shorter four-engine variant and the twin-engine aircraft have adequate margin at the same temperature.",
+      "description": "The lock link actuation is re-worked to increase the overcentre travel by 3.5 degrees and to lower the breakout force at low temperature. The inboard clamp assembly D3210122801088 is replaced by a stiffer item, the inboard heat exchanger sub-assembly D3210122818558 is retained, and the obsolete lower manifold D3210129320861 and forward pump D3210120197201 are deleted with the circuit re-plumbed directly. The outboard solenoid VAD543968-23 is replaced by a unit with a wider operating temperature band, and the lower pump HED997832-72 and the upper non-return valve LUDE897936-82 are removed from the assembly. Proximity sensing is re-targeted: the outboard manifold sensing position 14WS and the forward sensing position 70GM are moved to read the link directly rather than the actuator rod, and the inboard hose position 448GB is re-routed clear of the new travel. The right-hand filter position 9WS8 is retained. Work is done in the main gear bays and the gear doors, zones 721, 731 and 752, with the aircraft on jacks. Detail is on drawings D32100087428 and D32101114402.",
+      "effects": "Mass reduction of 6.8 kg per aircraft after deletion of the redundant pump and manifold. No electrical load change; the proximity sensing draws the same current from an unchanged interface unit. Not interchangeable, because the lock link geometry and the sensor target positions change together and neither can be embodied alone. The recycling procedure in the flight crew operating manual is unchanged but the cold weather advisory note is withdrawn once embodied. Landing gear swing test content and the associated trouble shooting procedure require update. The overcentre assessment was made against the touchdown attitude distribution the fleet has flown with the tail trim tank restricted. The landing gear office has been given the distribution that applies once the trim tank transfer valve change restores the commanded aft limit and has confirmed that the assessment remains bounding: the nose-up shift is 0.4 degrees at the ninety-fifth percentile and the cold case still governs. The confirmation is held in the dossier so that the margin is not re-argued at every review.",
+      "embodiment_note": "Retrofit only; the VANTOR-68 line closed in 2011. Embodiment is through Service Bulletin SLN-32-1027 with the aircraft on jacks over four days, and it includes a full landing gear swing test. The kit includes the revised clamp, the solenoid and the sensor brackets."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3210122801088",
+        "D3210122818558",
+        "D3210129320861",
+        "D3210120197201",
+        "VAD543968-23",
+        "HED997832-72",
+        "LUDE897936-82"
+      ],
+      "fins": [
+        "14WS",
+        "70GM",
+        "448GB",
+        "9WS8"
+      ],
+      "drawings": [
+        "D32100087428",
+        "D32101114402"
+      ],
+      "software": [],
+      "zones": [
+        "721",
+        "731",
+        "752"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00785",
+        "S01131"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-32-1027",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-132640",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "lock link",
+      "overcentre margin",
+      "downlock proximity",
+      "unsafe gear indication",
+      "low temperature"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Ashcombe",
+      "role": "Landing Gear Systems"
+    },
+    "type_data": {
+      "mod_number": 133020,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.729",
+          "CS 25.1301",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": -6.8,
+      "balance_impact": "Symmetric; no reportable effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "VAD543968-23"
+      ],
+      "parts_removed": [
+        "D3210129320861",
+        "D3210120197201",
+        "HED997832-72",
+        "LUDE897936-82"
+      ],
+      "parts_modified": [
+        "D3210122801088"
+      ],
+      "fins_affected": [
+        "14WS",
+        "70GM",
+        "448GB"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 260,
+      "estimated_cost_keur": 940,
+      "lead_time_weeks": 46,
+      "production_impact": "None; the VANTOR-68 line is closed",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-133020",
+    "doc_type": "MOD",
+    "title": "Main Gear Side Stay Lock Link Actuation and Downlock Sensing Rework, VANTOR-68",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2020-03-24",
+      "reason": "One green system depressurisation sequence is adopted for the gear bay work, valid on both engine driven pump standards, and the solenoid drop-out confirmation is withdrawn.",
+      "raised_by_pawo": "PAWO-131570-01",
+      "raised_by_finding": "F03",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-10",
+      "ata_6d": "32-10-12",
+      "title": "Main Gear — Side Stay and Lock Links"
+    },
+    "secondary_ata": [
+      "32-30"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-5560"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "SLN-32-1027"
+      ]
+    },
+    "dates": {
+      "created": "2016-09-27",
+      "released": "2017-11-08",
+      "revised": "2020-03-24",
+      "effective": "2020-04-10"
+    },
+    "abstract": "Rework of the lock link actuation and the downlock proximity sensing of the wing-mounted main gear on the four-engine stretched aircraft, where the heavier landing gear load path made the original overcentre margin marginal in cold conditions.",
+    "sections": {
+      "reason": "The VANTOR-68 carries the highest maximum landing weight in the family on a gear geometry shared with lighter variants, and the lock link overcentre margin was set from the lighter case. Six operators reported a total of twenty-three unsafe gear indications during extension at outside air temperatures below minus five degrees Celsius, all of which cleared on recycling. Ground testing at low temperature reproduced the condition: the grease in the lock link joint stiffens enough to leave the link 1.2 degrees short of the overcentre position, which is inside the proximity sensor dead band but outside the certified locked geometry. The condition is specific to the stretched four-engine aircraft; the shorter four-engine variant and the twin-engine aircraft have adequate margin at the same temperature.",
+      "description": "The lock link actuation is re-worked to increase the overcentre travel by 3.5 degrees and to lower the breakout force at low temperature. The inboard clamp assembly D3210122801088 is replaced by a stiffer item, the inboard heat exchanger sub-assembly D3210122818558 is retained, and the obsolete lower manifold D3210129320861 and forward pump D3210120197201 are deleted with the circuit re-plumbed directly. The outboard solenoid VAD543968-23 is replaced by a unit with a wider operating temperature band, and the lower pump HED997832-72 and the upper non-return valve LUDE897936-82 are removed from the assembly. Proximity sensing is re-targeted: the outboard manifold sensing position 14WS and the forward sensing position 70GM are moved to read the link directly rather than the actuator rod, and the inboard hose position 448GB is re-routed clear of the new travel. The right-hand filter position 9WS8 is retained. Work is done in the main gear bays and the gear doors, zones 721, 731 and 752, with the aircraft on jacks. Detail is on drawings D32100087428 and D32101114402.",
+      "effects": "Mass reduction of 6.8 kg per aircraft after deletion of the redundant pump and manifold. No electrical load change; the proximity sensing draws the same current from an unchanged interface unit. Not interchangeable, because the lock link geometry and the sensor target positions change together and neither can be embodied alone. The recycling procedure in the flight crew operating manual is unchanged but the cold weather advisory note is withdrawn once embodied. Landing gear swing test content and the associated trouble shooting procedure require update. The overcentre assessment was made against the touchdown attitude distribution the fleet has flown with the tail trim tank restricted. The landing gear office has been given the distribution that applies once the trim tank transfer valve change restores the commanded aft limit and has confirmed that the assessment remains bounding: the nose-up shift is 0.4 degrees at the ninety-fifth percentile and the cold case still governs. The confirmation is held in the dossier so that the margin is not re-argued at every review. The rework is carried out with the green system depressurised, and there is now one depressurisation sequence for the main gear bay that is valid whether or not the engine driven pump case drain filter of MOD-131570 is fitted. Confirmation is by accumulator pressure and the ground service indication, not by solenoid drop-out, because drop-out behaviour differs between the two pump standards. Both retrofit bulletins point at that one sequence.",
+      "embodiment_note": "Retrofit only; the VANTOR-68 line closed in 2011. Embodiment is through Service Bulletin SLN-32-1027 with the aircraft on jacks over four days, and it includes a full landing gear swing test. The kit includes the revised clamp, the solenoid and the sensor brackets. Where the aircraft is also taking the engine driven pump case drain filter change, plan the two into one visit: the gear bay is depressurised once, under the common sequence, and the swing test is done once at the end."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3210122801088",
+        "D3210122818558",
+        "D3210129320861",
+        "D3210120197201",
+        "VAD543968-23",
+        "HED997832-72",
+        "LUDE897936-82"
+      ],
+      "fins": [
+        "14WS",
+        "70GM",
+        "448GB",
+        "9WS8"
+      ],
+      "drawings": [
+        "D32100087428",
+        "D32101114402"
+      ],
+      "software": [],
+      "zones": [
+        "721",
+        "731",
+        "752"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00785",
+        "S01131"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-32-1027",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-132640",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-131570",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "lock link",
+      "overcentre margin",
+      "downlock proximity",
+      "green system",
+      "depressurisation sequence"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Ashcombe",
+      "role": "Landing Gear Systems"
+    },
+    "type_data": {
+      "mod_number": 133020,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.729",
+          "CS 25.1301",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": -6.8,
+      "balance_impact": "Symmetric; no reportable effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "VAD543968-23"
+      ],
+      "parts_removed": [
+        "D3210129320861",
+        "D3210120197201",
+        "HED997832-72",
+        "LUDE897936-82"
+      ],
+      "parts_modified": [
+        "D3210122801088"
+      ],
+      "fins_affected": [
+        "14WS",
+        "70GM",
+        "448GB"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 260,
+      "estimated_cost_keur": 940,
+      "lead_time_weeks": 46,
+      "production_impact": "None; the VANTOR-68 line is closed",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

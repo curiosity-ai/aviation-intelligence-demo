@@ -1,0 +1,285 @@
+[
+  {
+    "doc_id": "PAWO-162530-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Cargo Compartment Heating Transmitter Replacement",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-10-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CANCELLED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-40",
+      "ata_6d": "21-40-11",
+      "title": "Heating — Cargo Compartment Heating"
+    },
+    "secondary_ata": [
+      "26-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-02-04",
+      "released": "2020-10-13",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Cancelled pre-analysis for the cargo compartment heating transmitter replacement. The work order was stopped once the analysis showed the scope had to be widened beyond a single supplier substitution.",
+    "sections": {
+      "objective": "Assess a straight supplier substitution of the cargo compartment heating temperature transmitter, driven by a component obsolescence notice and a poor mean time between unscheduled removals on the incumbent unit. The order was scoped as a like-for-like change with a documentation impact assessment only, on the assumption that the replacement transmitter would present the same interface and occupy the same functional item numbers.",
+      "findings_summary": "That assumption did not survive contact with the search. The replacement transmitter reports over a different resolution and needs a second sensing element in the aft compartment to reach the same control accuracy, which means it is not a single functional item substitution at all. The fault isolation procedure keyed to the low temperature indication is built around the incumbent unit failure signature and would have had to be rewritten rather than amended. The operational test carries calibration values that do not exist on the replacement. Once the second sensing element entered the scope the change crossed into the smoke detection and extinguishing wiring in the aft compartment, which this work order was not authorised to cover.",
+      "next_steps": "The work order was cancelled at that point rather than run to a conclusion it could not support. The scope was rewritten as a system change covering both compartments and the wiring, and re-raised under a new order. The three documentation findings recorded here were carried forward as inputs so the effort was not lost, and the fault isolation rewrite in particular was flagged as a full rewrite rather than an amendment. Fleet support was told that the incumbent transmitter remains supportable from stock for the interim, so the obsolescence notice does not force a decision before the wider order reports."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2140118706760",
+        "EN889198-3B"
+      ],
+      "fins": [
+        "181HM",
+        "9469HM"
+      ],
+      "drawings": [
+        "D21401127591"
+      ],
+      "software": [],
+      "zones": [
+        "172",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-162530",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "cargo heating",
+      "temperature transmitter",
+      "supplier substitution",
+      "scope rework"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-162530-01",
+      "subject_mod": "MOD-162530",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2020-10-13",
+      "outcome": "REJECTED",
+      "raised_date": "2020-02-04",
+      "due_date": "2020-11-27",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 55,
+        "spent_manhours": 31
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "21",
+          "26"
+        ],
+        "ata_4d": [
+          "21-40",
+          "26-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "M00100",
+          "to": "M00380"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2140118706760",
+            "EN889198-3B"
+          ],
+          "fins": [
+            "181HM",
+            "9469HM"
+          ],
+          "drawings": [
+            "D21401127591"
+          ],
+          "zones": [
+            "172",
+            "273"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "temperature transmitter substitution with a different reporting resolution",
+          "cargo compartment low temperature indication after a cold soak"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released cargo heating content on ATA 21-40",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Compare the replacement transmitter interface with the incumbent",
+          "method": "SME_INTERVIEW",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess aft compartment wiring impact of a second sensing element",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ELSC",
+          "status": "BLOCKED"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "TSM-M-21-40-11-810-805",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2140118706760",
+              "EN889198-3B"
+            ],
+            "shared_fins": [
+              "181HM",
+              "9469HM"
+            ],
+            "shared_zones": [
+              "172",
+              "273"
+            ],
+            "shared_ata_6d": [
+              "21-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The fault isolation logic keys on the incumbent transmitter failure signature after a cold soak, including the specific drift pattern it shows before failing. The replacement fails differently, so the procedure would send the technician down the wrong branch.",
+          "resolution": "Rewrite the procedure rather than amend it, and include the second sensing element in the isolation logic."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-M-21-40-11-700-016-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2140118706760",
+              "EN889198-3B"
+            ],
+            "shared_fins": [
+              "181HM",
+              "9469HM"
+            ],
+            "shared_zones": [
+              "172",
+              "273"
+            ],
+            "shared_ata_6d": [
+              "21-40-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The operational test quotes calibration values that only exist on the incumbent transmitter. On the replacement there is no equivalent adjustment, so the test as written cannot be completed.",
+          "resolution": "Replace the calibration steps with a reported-value comparison against the second sensing element."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-M-92-41-11",
+          "doc_type": "WDM",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "26-10"
+            ],
+            "similarity_note": "Reached through the shared fire protection chapter and by similarity on the aft compartment sensing and detection harness description."
+          },
+          "rationale": "A second sensing element in the aft compartment shares harness routing with the smoke detection and extinguishing loop. Any change to that harness is a certification matter and is outside what this work order was authorised to assess.",
+          "resolution": "Stop the work order, rewrite the scope as a two-compartment system change including the wiring, and re-raise it."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Cancelled. The like-for-like assumption was wrong and the correct scope crossed into fire protection wiring. The three findings were carried forward into the reworked order.",
+      "recommendation": "REWORK_SCOPE"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

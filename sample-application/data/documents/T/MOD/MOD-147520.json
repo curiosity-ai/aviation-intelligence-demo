@@ -1,0 +1,384 @@
+[
+  {
+    "doc_id": "MOD-147520",
+    "doc_type": "MOD",
+    "title": "Conversion of the Aft Cargo Door Actuation to Electromechanical Drive",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-12",
+      "title": "Cargo Doors — Cargo Door Actuation"
+    },
+    "secondary_ata": [
+      "29-10",
+      "92-21",
+      "52-70"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00193"
+        }
+      ],
+      "excluded_msns": [
+        "T00099",
+        "T00188"
+      ],
+      "engine_types": [],
+      "operators": [
+        "RVC"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-141020"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-02-16",
+      "released": null,
+      "revised": "2026-03-02",
+      "effective": null
+    },
+    "abstract": "Removal of the hydraulic drive from the aft cargo door and its replacement by an electromechanical actuator, ending cold-soak opening delays and the fluid leakage that puts the door on the critical path of every freight turnround.",
+    "sections": {
+      "reason": "One cargo operator recorded 86 departure delays attributed to the aft cargo door over two winters on nineteen aircraft, 61 of them at stations below minus five degrees, where the opening time roughly triples as the fluid thickens. The same fleet finds hydraulic staining in the door bay at 24 per cent of C checks. Neither symptom is an airworthiness matter, but the door is on the critical path of every turnround and the manual opening procedure that ground crews have adopted as routine is not what it was written for. The hydraulic supply to this door exists for no other purpose, so removing it removes the leak path entirely.",
+      "description": "The hydraulic actuator, its supply and return lines and the local isolation valve are removed, and an electromechanical actuator with an integral brake and a manual drive input is installed on a new mounting. The inboard skin panel D5230124385707 is retained; the aft stiffener D5230126176648 is replaced by a deeper item that carries the actuator reaction load into the door frame, and the obsolete aft stringer D5230128427066 is deleted. The left-hand web FJO180206-65 is re-drilled to pick up the new mounting and tubular spacers AES684992-82 set the actuator alignment. Control comes from the existing door warning computing function over the aft channel pair as it is routed today, and the two latch position channels at FINs 2056WV and 3323WT are unchanged. Work is in zones 143, 891 and 893 with the door in the open position on ground support. Detail is on drawings D52301272875 and D52301281228.",
+      "effects": "Estimated mass reduction of 41 kg per aircraft once the hydraulic run is removed, with a centre-of-gravity shift of 0.04 per cent mean aerodynamic chord forward. Continuous electrical load is unchanged but the peak draw during a door cycle is 11 kilovolt-amperes, which has to be assessed against the ground service busbar with an external supply connected. The electromechanical actuator is not interchangeable with the hydraulic one. The door opening time at minus twenty degrees is predicted to be within ten per cent of the ambient figure. Maintenance manual, wiring and fault isolation content for cargo door actuation all require update, and the hydraulic system schematic changes.",
+      "embodiment_note": "Retrofit only, applicable to aircraft already carrying the duplicated latch sensing standard. Provisional estimate is two consecutive night stops per aircraft. No production cut-in is proposed.",
+      "open_points": "Pre-analysis must confirm the ground service busbar margin during a door cycle with the aircraft on external power, whether the manual drive input can be reached with the door bay lining in place, and what happens to the published door bay hydraulic leak inspection once the supply is deleted."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230124385707",
+        "D5230126176648",
+        "D5230128427066",
+        "FJO180206-65",
+        "AES684992-82"
+      ],
+      "fins": [
+        "2056WV",
+        "3323WT"
+      ],
+      "drawings": [
+        "D52301272875",
+        "D52301281228"
+      ],
+      "software": [],
+      "zones": [
+        "143",
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00099",
+        "T00188"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-T-260031",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-141020",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "cargo door actuation",
+      "electromechanical actuator",
+      "cold soak",
+      "hydraulic leak",
+      "turnround"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 147520,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.783",
+          "CS 25.1309",
+          "CS 25.1435"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": -41.0,
+      "balance_impact": "0.04 % MAC forward once the hydraulic run is removed",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES684992-82"
+      ],
+      "parts_removed": [
+        "D5230128427066"
+      ],
+      "parts_modified": [
+        "D5230126176648",
+        "FJO180206-65"
+      ],
+      "fins_affected": [
+        "2056WV"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 340,
+      "estimated_cost_keur": 3900,
+      "lead_time_weeks": 62,
+      "production_impact": "No production cut-in proposed",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-147520",
+    "doc_type": "MOD",
+    "title": "Conversion of the Aft Cargo Door Actuation to Electromechanical Drive",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-04",
+      "reason": "Position feedback redrawn onto the segregated aft channel pair and the segregation extension declared as a prerequisite rather than a concurrent change.",
+      "raised_by_pawo": "PAWO-146050-01",
+      "raised_by_finding": "F01",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-12",
+      "title": "Cargo Doors — Cargo Door Actuation"
+    },
+    "secondary_ata": [
+      "29-10",
+      "92-21",
+      "52-70"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00193"
+        }
+      ],
+      "excluded_msns": [
+        "T00099",
+        "T00188"
+      ],
+      "engine_types": [],
+      "operators": [
+        "RVC"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-141020",
+          "MOD-146050"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-02-16",
+      "released": null,
+      "revised": "2026-08-04",
+      "effective": null
+    },
+    "abstract": "Removal of the hydraulic drive from the aft cargo door and its replacement by an electromechanical actuator, ending cold-soak opening delays and the fluid leakage that puts the door on the critical path of every freight turnround.",
+    "sections": {
+      "reason": "One cargo operator recorded 86 departure delays attributed to the aft cargo door over two winters on nineteen aircraft, 61 of them at stations below minus five degrees, where the opening time roughly triples as the fluid thickens. The same fleet finds hydraulic staining in the door bay at 24 per cent of C checks. Neither symptom is an airworthiness matter, but the door is on the critical path of every turnround and the manual opening procedure that ground crews have adopted as routine is not what it was written for. The hydraulic supply to this door exists for no other purpose, so removing it removes the leak path entirely.",
+      "description": "The hydraulic actuator, its supply and return lines and the local isolation valve are removed, and an electromechanical actuator with an integral brake and a manual drive input is installed on a new mounting. The inboard skin panel D5230124385707 is retained; the aft stiffener D5230126176648 is replaced by a deeper item that carries the actuator reaction load into the door frame, and the obsolete aft stringer D5230128427066 is deleted. The left-hand web FJO180206-65 is re-drilled to pick up the new mounting and tubular spacers AES684992-82 set the actuator alignment. Control and position feedback come from the existing door warning computing function over the segregated aft channel pair, and the harness is drawn to the segregated route from the outset; the two latch position channels at FINs 2056WV and 3323WT are unchanged. Work is in zones 143, 891 and 893 with the door in the open position on ground support. Detail is on drawings D52301272875 and D52301281228.",
+      "effects": "Estimated mass reduction of 41 kg per aircraft once the hydraulic run is removed, with a centre-of-gravity shift of 0.04 per cent mean aerodynamic chord forward. Continuous electrical load is unchanged but the peak draw during a door cycle is 11 kilovolt-amperes, which has to be assessed against the ground service busbar with an external supply connected. The electromechanical actuator is not interchangeable with the hydraulic one. Embodiment order is not free: the feedback harness is terminated to the segregated aft route, so on an aircraft that has not taken the segregation extension the harness would have to be cut and reterminated at the later conversion, on every aircraft that takes both. The door opening time at minus twenty degrees is predicted to be within ten per cent of the ambient figure. Maintenance manual, wiring and fault isolation content for cargo door actuation all require update, and the hydraulic system schematic changes.",
+      "embodiment_note": "Retrofit only, applicable to aircraft already carrying the duplicated latch sensing standard and the segregated aft door warning harness route; the segregation extension is a prerequisite and not a concurrent change, and the ordering was agreed by both offices at the pre-analysis review. Provisional estimate is two consecutive night stops per aircraft. No production cut-in is proposed.",
+      "open_points": "Pre-analysis must confirm the ground service busbar margin during a door cycle with the aircraft on external power, whether the manual drive input can be reached with the door bay lining in place, and what happens to the published door bay hydraulic leak inspection once the supply is deleted. The harness segregation question is closed: the extension is released first and is declared as a prerequisite here."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230124385707",
+        "D5230126176648",
+        "D5230128427066",
+        "FJO180206-65",
+        "AES684992-82"
+      ],
+      "fins": [
+        "2056WV",
+        "3323WT"
+      ],
+      "drawings": [
+        "D52301272875",
+        "D52301281228"
+      ],
+      "software": [],
+      "zones": [
+        "143",
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00099",
+        "T00188"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-T-260031",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-146050",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      },
+      {
+        "doc_id": "MOD-141020",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "cargo door actuation",
+      "electromechanical actuator",
+      "cold soak",
+      "hydraulic leak",
+      "turnround"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 147520,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.783",
+          "CS 25.1309",
+          "CS 25.1435"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": -41.0,
+      "balance_impact": "0.04 % MAC forward once the hydraulic run is removed",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES684992-82"
+      ],
+      "parts_removed": [
+        "D5230128427066"
+      ],
+      "parts_modified": [
+        "D5230126176648",
+        "FJO180206-65"
+      ],
+      "fins_affected": [
+        "2056WV"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 340,
+      "estimated_cost_keur": 3900,
+      "lead_time_weeks": 62,
+      "production_impact": "No production cut-in proposed",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

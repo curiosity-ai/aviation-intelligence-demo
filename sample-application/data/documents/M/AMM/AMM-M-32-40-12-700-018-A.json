@@ -1,0 +1,161 @@
+[
+  {
+    "doc_id": "AMM-M-32-40-12-700-018-A",
+    "doc_type": "AMM",
+    "title": "Built-In Test of the Brake and Steering Control Unit",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2024-02-27",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-12",
+      "title": "Wheels and Brakes — Brake Control Unit"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-08-19",
+      "released": "2020-03-25",
+      "revised": "2024-02-27",
+      "effective": "2024-03-22"
+    },
+    "abstract": "Built-in test of the brake and steering control unit, including the read-back of the loaded software standard and the check that the recorded fault snapshot is written and readable.",
+    "sections": {
+      "purpose": "This task gives the built-in test of the brake and steering control unit and the check of the recorded fault snapshot after a software load or a component replacement.",
+      "job_setup_note": "The aircraft must be on ground power with the landing gear ground locks installed and the parking brake released. Confirm the loaded software standard before the test starts: the snapshot check in the last steps only applies to aircraft carrying the standard that writes it, and the acceptance report is different for each standard. A second person is needed at the maintenance terminal.",
+      "procedure": "1. Put the aircraft on ground power and install the landing gear ground locks. WARNING: INSTALL THE LANDING GEAR GROUND LOCKS BEFORE YOU START. THE BRAKE AND STEERING TEST COMMANDS GEAR SYSTEM OUTPUTS. 2. Release the parking brake and confirm that the accumulator pressure is in the normal band. 3. Connect the maintenance terminal and read back the loaded software part number. 4. Confirm that the software part number matches the aircraft configuration record. 5. Start the built-in test from the maintenance terminal. 6. Confirm that the brake filter position 1GM5 and the solenoid 23GM report no fault. 7. Watch the anti-skid channel test and confirm that each channel reports in turn. CAUTION: DO NOT INTERRUPT THE BUILT-IN TEST ONCE IT HAS STARTED. AN INTERRUPTED TEST LEAVES A LATCHED FAULT THAT CAN ONLY BE CLEARED BY A FULL POWER CYCLE. 8. Confirm that the transmitter D3240127464045 reports the expected pressure. 9. Trigger the snapshot self-test and confirm that a record is written. 10. Read the snapshot on the maintenance terminal and check that the recorded window matches the aircraft software standard. 11. Clear the test faults and do a final built-in test with no fault expected.",
+      "close_out": "Record the software part number, the built-in test result and the snapshot check on the aircraft work card. Remove the landing gear ground locks after the test if the aircraft is to be moved. Where the snapshot is truncated or missing, do the fault isolation procedure before the aircraft is released to service."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240126111041",
+        "D3240127464045"
+      ],
+      "fins": [
+        "1GM5",
+        "23GM"
+      ],
+      "drawings": [
+        "D32401260138"
+      ],
+      "software": [
+        "LH4PE7117BE"
+      ],
+      "zones": [
+        "721",
+        "755"
+      ],
+      "figures": [
+        "FIG-32-40-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-163460",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake control unit",
+      "built-in test",
+      "software read-back",
+      "fault snapshot",
+      "anti-skid channel"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "Landing Gear Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "32-40-12-700-018-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft. Steps 9 and 10 apply only to aircraft carrying the software standard that writes the fault snapshot; earlier standards stop at step 8.",
+      "manhours": 3.5,
+      "personnel": 2,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "721",
+          "755"
+        ],
+        "access_panels": [
+          "721CR",
+          "755BR"
+        ],
+        "doors": [
+          "Main gear bay door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Install the landing gear ground locks before the test.",
+          "Confirm that the accumulator pressure is in the normal band.",
+          "Do not interrupt the built-in test once started."
+        ],
+        "tooling": [
+          {
+            "reference": "98D32401-260",
+            "description": "Brake calibration set"
+          },
+          {
+            "reference": "TM-MAINT",
+            "description": "Maintenance terminal interface cable"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-42-40-12-900-020-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

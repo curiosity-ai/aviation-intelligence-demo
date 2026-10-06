@@ -1,0 +1,175 @@
+[
+  {
+    "doc_id": "MRD-24-1041",
+    "doc_type": "SB",
+    "title": "Electrical Power — Generator Control Unit — Load the Revised Thermal Protection Configuration and Install the Bay Bonding Strap",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-06-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-20",
+      "ata_6d": "24-20-12",
+      "title": "AC Generation — Generator Control Unit"
+    },
+    "secondary_ata": [
+      "24-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42"
+      ],
+      "models": [
+        "MRD-42K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00157"
+        }
+      ],
+      "excluded_msns": [
+        "M00069"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-168118"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-03-18",
+      "released": "2019-06-27",
+      "revised": null,
+      "effective": "2019-07-22"
+    },
+    "abstract": "Retrofit of the first issue generator control unit thermal protection: load the revised configuration and add a bonding strap at the mounting rail, on aircraft delivered before the production cut-in.",
+    "sections": {
+      "planning_reason": "Aircraft delivered before MSN M00157 lose an alternating current channel on the ground at hot stations at a rate of about one event per aircraft per summer month, with no fault found on the removed control unit. The behaviour is produced by a bay temperature protection that trips on a reading taken while ventilation is lowest. Operators report departure delays and unnecessary shop visits. Embodiment removes the majority of these events and stops the associated no-fault-found returns.",
+      "description": "This bulletin loads the revised protection configuration into the generator control unit and installs a bonding strap between the relay assembly and the mounting rail using the supplied tension head bolt set. The revised configuration raises the shed threshold, averages the sensing pair and introduces a twelve second confirmation window. No unit removal is required and no wiring is changed apart from the added bonding path.",
+      "accomplishment_summary": "Open the aft equipment bay access, isolate the affected channel and apply the safety precautions in the job setup. Connect the portable loader at the maintenance terminal and load the revised configuration into both control units in turn, confirming the part number reported after each load. Remove the two existing mounting rail fasteners at the relay assembly, install the bonding strap with the supplied tension head bolts and torque to the value in the bulletin, then measure the bond resistance and record it. Restore the channel, do the functional test of the generator control channel given in AMM-M-24-20-12-700-032-A and confirm no maintenance status remains. Close the bay and make the aircraft records entry.",
+      "effectivity_note": "Applies to MERIDIAN-42 aircraft between MSN M00001 and M00157 that have not embodied MOD-168118. Aircraft already carrying the second issue configuration must not be reloaded with this standard: the second issue supersedes it and reloading would remove the ground inhibit function.",
+      "material_note": "Kit contains the bonding strap, two tension head bolts and a bond test record card. The configuration load is supplied electronically on request and is not part of the kit. No parts are returned."
+    },
+    "entities": {
+      "part_numbers": [
+        "AES247501-43",
+        "D2420007230862"
+      ],
+      "fins": [
+        "14PC2"
+      ],
+      "drawings": [
+        "D24201265226"
+      ],
+      "software": [
+        "LE9PB857871"
+      ],
+      "zones": [
+        "663"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00157"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168012",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-M-24-20-12-700-032-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "generator control unit",
+      "configuration load",
+      "bonding strap",
+      "thermal protection",
+      "retrofit"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Customer Services"
+    },
+    "type_data": {
+      "sb_number": "MRD-24-1041",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the operator's convenience, preferably before the next hot season.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-168012",
+      "manpower": {
+        "elapsed_time_hours": 6,
+        "manhours": 10,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K2420-1041-01",
+        "kit_available_from": "2019-08-05",
+        "parts_required": [
+          {
+            "part_number": "AES247501-43",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [],
+        "consumables": [
+          "Corrosion inhibiting compound",
+          "Lockwire 0.8 mm"
+        ],
+        "tooling": [
+          "Portable data loader",
+          "Bond resistance meter, 4-wire",
+          "Torque wrench 2-20 Nm"
+        ]
+      },
+      "weight_change_kg": 0.2,
+      "accomplishment_steps": 7,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2019-06-27",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

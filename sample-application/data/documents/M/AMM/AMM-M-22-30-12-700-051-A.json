@@ -1,0 +1,162 @@
+[
+  {
+    "doc_id": "AMM-M-22-30-12-700-051-A",
+    "doc_type": "AMM",
+    "title": "Throttle Actuation — Functional Test",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-07-17",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-12",
+      "title": "Auto Throttle — Throttle Actuation"
+    },
+    "secondary_ata": [
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-12-11",
+      "released": "2018-08-06",
+      "revised": "2023-07-17",
+      "effective": "2023-08-14"
+    },
+    "abstract": "Functional test of the throttle actuation function after a card change or an autothrust complaint, covering the built-in test identification, the actuation travel and the disconnect response at both levers.",
+    "sections": {
+      "purpose": "This task gives the functional test of the throttle actuation function after a circuit card replacement, after a pedestal disturbance or following a crew report of an autothrust disconnect.",
+      "job_setup_note": "The test drives the thrust levers under power. Make sure the engines are shut down and the fuel is off, and tell anyone working in the nacelle area that the levers will move. Record the card identification reported by the built-in test before the test starts; the whole point of the test after a card change is to confirm the new identification, and it is easy to run the sequence and forget to read it.",
+      "procedure": "1. Confirm the engines are shut down and the fuel control is off. 2. WARNING: TELL EVERY PERSON IN THE NACELLE AREA THAT THE THRUST LEVERS WILL MOVE UNDER POWER. 3. Restore power to the pedestal and let the built-in test complete. 4. Read and record the card identification reported. 5. Engage autothrust and confirm both levers move to the commanded position. 6. Check the actuation travel at three commanded positions against the table. 7. CAUTION: DO NOT OBSTRUCT A LEVER DURING THE TEST. THE ACTUATION WILL DETECT THE OBSTRUCTION AS A JAM AND LATCH A FAULT THAT NEEDS A GROUND RESET. 8. Do the manual override check at each lever and confirm the actuation releases. 9. Do the disconnect check at each lever pushbutton and confirm the caution is annunciated. 10. Clear the maintenance messages raised by the test. 11. Confirm the flight deck is free of cautions.",
+      "close_out": "Close the pedestal access panel. Confirm no tool remains in the pedestal and that both levers move freely by hand through the full arc. Record the card identification, the travel values and the disconnect results in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2230121548877",
+        "AGS433103-4C"
+      ],
+      "fins": [
+        "363CC",
+        "41CE4",
+        "18CC"
+      ],
+      "drawings": [
+        "D22301213347"
+      ],
+      "software": [],
+      "zones": [
+        "226",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-76-10-11-200-047-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-M-22-30-11-812-803",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "throttle actuation",
+      "functional test",
+      "built-in test",
+      "actuation travel",
+      "autothrust disconnect"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "22-30-12-700-051-A",
+      "task_type": "TEST",
+      "effectivity_note": "All aircraft",
+      "manhours": 2.0,
+      "personnel": 2,
+      "elapsed_time_hours": 1.5,
+      "access": {
+        "zones": [
+          "226",
+          "293"
+        ],
+        "access_panels": [
+          "226CL",
+          "293CR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Tell every person in the nacelle area that the thrust levers will move under power.",
+          "Confirm the engines are shut down and the fuel control is off."
+        ],
+        "tooling": [
+          {
+            "reference": "98D22301-591",
+            "description": "Antistatic wrist strap and mat"
+          },
+          {
+            "reference": "98D22301-596",
+            "description": "Travel gauge, thrust lever arc"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-76-10-11-200-047-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

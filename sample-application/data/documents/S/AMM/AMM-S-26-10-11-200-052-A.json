@@ -1,0 +1,174 @@
+[
+  {
+    "doc_id": "AMM-S-26-10-11-200-052-A",
+    "doc_type": "AMM",
+    "title": "Engine and Auxiliary Power Unit Fire Detection Loop — Insulation Resistance Measurement",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-12-01",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-11",
+      "title": "Detection — Engine Fire Detection Loops"
+    },
+    "secondary_ata": [
+      "26-10-13"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-05-08",
+      "released": "2023-12-01",
+      "revised": null,
+      "effective": "2023-12-20"
+    },
+    "abstract": "Insulation resistance measurement at every fire detection loop connector, with the wet-weather variant that must be done before the loop dries out if a false warning is to be reproduced.",
+    "sections": {
+      "purpose": "This task measures the insulation resistance of the engine and auxiliary power unit fire detection loops at every connector, so that moisture ingress is found before it produces a false fire warning.",
+      "job_setup_note": "If the aircraft has had a false fire warning after rain, do this task before the loop dries. Once it has dried the reading will be normal and nothing will be found. The insulation tester is a five hundred volt instrument; disconnect the detection unit before it is applied or the unit will be damaged.",
+      "procedure": "1. Confirm that the engine has been shut down for at least one hour and that the fire bottles are safetied. WARNING: DO NOT DISCONNECT A FIRE DETECTION LOOP WITH THE FIRE BOTTLE ARMED. THE DISCHARGE CIRCUIT CAN BE COMPLETED BY THE DISCONNECTION. 2. Record whether the aircraft has been rained on within the last four hours, and whether a false warning has been reported. 3. Gain access to the loop connectors at the pylon in zone 431 and in the auxiliary power unit compartment in zone 393. 4. Disconnect the detection unit before the tester is applied. CAUTION: DO NOT APPLY THE INSULATION TESTER WITH THE DETECTION UNIT CONNECTED. FIVE HUNDRED VOLTS WILL DAMAGE THE UNIT. 5. Measure the insulation resistance from each loop conductor to the loop screen and to structure, at every connector position, and record all readings. 6. Compare each reading against the limit in the table. 7. Where a reading is below the limit, examine the connector for water in the rear grommet and for tracking on the insert face, and record what you find with a photograph. 8. Where the sealed connector standard is fitted, check the moulded boot for splits at the cable entry. 9. Examine the loop routing at the pylon break and confirm that it is clear of the drain path. 10. In the auxiliary power unit compartment, confirm the standoff from the hot duct and check the regulator 25WD clip positions. 11. Check the transmitter D2610111824651 and the sensor 939WF3 for security. 12. Reconnect the detection unit and do the fire detection operational test on all loops. 13. Confirm that the manifold 126WF and the filter 90WF are secure before closing.",
+      "close_out": "Record every insulation reading with its connector position, and record the weather state at the time of the test. A low reading on a dry aircraft is a defect; a low reading on a wet aircraft with a matching false warning is the confirmation the trouble shooting procedure is looking for."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610111824651",
+        "EN557658-57",
+        "AGS49442-85"
+      ],
+      "fins": [
+        "126WF",
+        "939WF3",
+        "90WF",
+        "25WD"
+      ],
+      "drawings": [
+        "D26101127238"
+      ],
+      "software": [],
+      "zones": [
+        "393",
+        "431",
+        "472"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-S-26-10-11-810-816",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "insulation resistance",
+      "fire loop",
+      "moisture ingress",
+      "false warning",
+      "standoff"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "26-10-11-200-052-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft; steps 8 and 10 apply only where the sealed connector and rerouting standards are embodied",
+      "manhours": 3.5,
+      "personnel": 2,
+      "elapsed_time_hours": 3.0,
+      "access": {
+        "zones": [
+          "393",
+          "431",
+          "472"
+        ],
+        "access_panels": [
+          "393AL",
+          "431CL",
+          "472AR"
+        ],
+        "doors": [
+          "Tail cone access door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Safety the fire bottles before disconnecting a loop.",
+          "Disconnect the detection unit before applying the tester.",
+          "Do not work on a hot engine."
+        ],
+        "tooling": [
+          {
+            "reference": "98D26101-072",
+            "description": "Insulation resistance tester, 500 V"
+          },
+          {
+            "reference": "98D26101-076",
+            "description": "Camera, maintenance record"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, electrical",
+          "Sealant, high temperature"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

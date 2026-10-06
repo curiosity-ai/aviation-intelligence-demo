@@ -1,0 +1,366 @@
+[
+  {
+    "doc_id": "MOD-111145",
+    "doc_type": "MOD",
+    "title": "First Probe Heat Monitoring Standard with Fixed Element Resistance Thresholds",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-12-14",
+      "reason": "Original issue of the fixed element resistance threshold monitoring dossier.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00291"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "C00291",
+      "production_cut_in_date": "2019-08-12",
+      "retrofit_via": [
+        "CRN-30-1007"
+      ]
+    },
+    "dates": {
+      "created": "2017-10-09",
+      "released": "2018-12-14",
+      "revised": "2018-12-14",
+      "effective": "2019-01-08"
+    },
+    "abstract": "The original probe heat monitoring standard, which judged element health against fixed resistance thresholds and was released to close an early finding of undetected heater element open circuits.",
+    "sections": {
+      "reason": "Two early-build aircraft were found with an open circuit heating element on a static port that the monitoring logic had not declared, because the original threshold band was wide enough to accept a failed element in parallel with a healthy one. The finding was raised by an operator after an ice accretion event on the ground and was treated as a safety item. The immediate answer was a tighter, fixed resistance threshold per element applied at every power-up.",
+      "description": "The probe heat computer adopts operational software LB8CAD816CB, which measures each heating element individually at power-up against a fixed resistance band and declares a fault outside it. The measurement harness is changed so that each element has its own sense return: the supply hose assembly D3030112295450 is replaced by an item with the additional core and the computer accumulator D3030112916343 is re-mounted to make room for the larger backshell. The probe heat regulator 4618WX and the system switch 386WX5 keep their identifiers. Revised detail is on drawings D30301165123 and D30301166008. Work is done in the avionics compartment and the flight compartment, zones 162, 211 and 214.",
+      "effects": "Mass increase of 0.7 kg per aircraft. Electrical load is unchanged in steady state. The harness is not interchangeable with the previous standard because the connector has two additional contacts. Minimum equipment list dispatch with one probe heat channel inoperative is unchanged. Maintenance manual content for the probe heat system test needs re-issue and the trouble shooting content for probe heat faults is re-written around the per-element result.",
+      "embodiment_note": "Cut in on the production line at MSN C00291 in August 2019 and retrofitted through Service Bulletin CRN-30-1007 at line level. The fixed threshold approach is expected to need review if cold-soak behaviour is reported, because the accept band is set at ambient."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030112295450",
+        "D3030112916343"
+      ],
+      "fins": [
+        "4618WX",
+        "386WX5"
+      ],
+      "drawings": [
+        "D30301165123",
+        "D30301166008"
+      ],
+      "software": [
+        "LB8CAD816CB"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00291"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-30-1007",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-700-004-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "probe heat",
+      "element resistance",
+      "open circuit",
+      "monitoring threshold",
+      "power-up test"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111145,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1323",
+          "CS 25.1419"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.7,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3030112295450",
+        "D3030112916343"
+      ],
+      "fins_affected": [
+        "4618WX"
+      ],
+      "software_affected": [
+        "LB8CAD816CB"
+      ],
+      "estimated_manhours": 54,
+      "estimated_cost_keur": 230,
+      "lead_time_weeks": 20,
+      "production_impact": "Cut-in at MSN C00291, avionics rack dressing unchanged",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-111145",
+    "doc_type": "MOD",
+    "title": "First Probe Heat Monitoring Standard with Fixed Element Resistance Thresholds",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-08-05",
+      "reason": "Two-step embodiment path recorded for the aircraft still at this standard, which cannot go directly to the change now in pre-analysis.",
+      "raised_by_pawo": "PAWO-111159-01",
+      "raised_by_finding": "F03",
+      "finding_type": "PREREQUISITE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-30",
+      "ata_6d": "30-30-11",
+      "title": "Pitot and Static Heat — Probe Heat Computer"
+    },
+    "secondary_ata": [
+      "34-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00291"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "C00291",
+      "production_cut_in_date": "2019-08-12",
+      "retrofit_via": [
+        "CRN-30-1007"
+      ]
+    },
+    "dates": {
+      "created": "2017-10-09",
+      "released": "2018-12-14",
+      "revised": "2026-08-05",
+      "effective": "2026-08-07"
+    },
+    "abstract": "The original probe heat monitoring standard, which judged element health against fixed resistance thresholds and was released to close an early finding of undetected heater element open circuits.",
+    "sections": {
+      "reason": "Two early-build aircraft were found with an open circuit heating element on a static port that the monitoring logic had not declared, because the original threshold band was wide enough to accept a failed element in parallel with a healthy one. The finding was raised by an operator after an ice accretion event on the ground and was treated as a safety item. The immediate answer was a tighter, fixed resistance threshold per element applied at every power-up.",
+      "description": "The probe heat computer adopts operational software LB8CAD816CB, which measures each heating element individually at power-up against a fixed resistance band and declares a fault outside it. The measurement harness is changed so that each element has its own sense return: the supply hose assembly D3030112295450 is replaced by an item with the additional core and the computer accumulator D3030112916343 is re-mounted to make room for the larger backshell. The probe heat regulator 4618WX and the system switch 386WX5 keep their identifiers. Revised detail is on drawings D30301165123 and D30301166008. Work is done in the avionics compartment and the flight compartment, zones 162, 211 and 214.",
+      "effects": "Mass increase of 0.7 kg per aircraft. Electrical load is unchanged in steady state. The harness is not interchangeable with the previous standard because the connector has two additional contacts. Minimum equipment list dispatch with one probe heat channel inoperative is unchanged. Maintenance manual content for the probe heat system test needs re-issue and the trouble shooting content for probe heat faults is re-written around the per-element result. The per-element sense return introduced here is the foundation every later monitoring standard reads, which is why an aircraft that skipped the compensated standard is still a valid starting point but not a direct one.",
+      "embodiment_note": "Cut in on the production line at MSN C00291 in August 2019 and retrofitted through Service Bulletin CRN-30-1007 at line level. The fixed threshold approach was later replaced by a temperature-compensated standard after cold-soak false declarations were reported. A small population never took that replacement and is still monitored against the fixed thresholds installed here. Those aircraft have been identified from the embodiment records and given a two-step plan: they take MOD-111159 first and only then the thermal response standard now in pre-analysis, because the probe base temperature reference that the later standard measures against arrives with MOD-111159 and not with this one. They cannot be planned as a single visit and they cannot be left to the later cut-in."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3030112295450",
+        "D3030112916343"
+      ],
+      "fins": [
+        "4618WX",
+        "386WX5"
+      ],
+      "drawings": [
+        "D30301165123",
+        "D30301166008"
+      ],
+      "software": [
+        "LB8CAD816CB"
+      ],
+      "zones": [
+        "162",
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00291"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-30-1007",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-111159",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "MOD-111883",
+        "doc_type": "MOD",
+        "relation": "PREREQUISITE_OF"
+      },
+      {
+        "doc_id": "AMM-C-30-30-11-700-004-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "probe heat",
+      "element resistance",
+      "two-step embodiment",
+      "monitoring threshold",
+      "power-up test"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111145,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1323",
+          "CS 25.1419"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.7,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [
+        "D3030112295450",
+        "D3030112916343"
+      ],
+      "fins_affected": [
+        "4618WX"
+      ],
+      "software_affected": [
+        "LB8CAD816CB"
+      ],
+      "estimated_manhours": 54,
+      "estimated_cost_keur": 230,
+      "lead_time_weeks": 20,
+      "production_impact": "Cut-in at MSN C00291, avionics rack dressing unchanged",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

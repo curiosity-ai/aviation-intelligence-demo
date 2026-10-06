@@ -1,0 +1,342 @@
+[
+  {
+    "doc_id": "TSM-T-44-20-12-810-803",
+    "doc_type": "TSM",
+    "title": "CABIN ENTERTAINMENT PARTIAL LOSS Late in the Cruise",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2007-06-16",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-12",
+      "title": "Inflight Entertainment — Head End Server"
+    },
+    "secondary_ata": [
+      "44-20-13"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2006-12-17",
+      "released": "2007-06-16",
+      "revised": "2007-06-16",
+      "effective": "2007-07-07"
+    },
+    "abstract": "Fault isolation for a partial loss of cabin entertainment that appears late in the cruise and clears on a crew reset, a symptom that usually points at distribution capacity rather than at a failed unit.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a partial loss of cabin entertainment that appears after several hours of flight and clears when the crew reset the system. Use it after a repeated cabin report on the same seat groups.",
+      "fault_description": "The reported symptom is that seat display units in one cabin go blank and the seat power outlets in the same seat groups stop delivering, usually two to four hours into a long sector and typically after a meal service when passenger device charging is at its peak. A crew reset restores the function for a period and the symptom then returns. The units removed in response to this symptom almost always test serviceable, because the fault is a distribution capacity limit rather than a component failure. The head end reports no fault of its own and the maintenance store may be empty.",
+      "isolation_procedure": "Get the cabin report and identify the seat groups affected and the time into the sector at which the loss occurred. Read the maintenance store and record any entertainment fault code. Walk the seat group state history from the head end server log for the affected sector: the log is written per seat group and the entries either side of the reported time say whether the group was dropped by the head end or stopped drawing on its own. Do the head end functional check and confirm that the chassis reports no internal fault and that its software part number is correct. Measure the rack outlet air temperature at full cabin load and compare it against the limit; a rack running hot points at the ventilated partition being absent or blocked. Measure the current drawn by each affected seat group with every outlet loaded and compare it against the allowance for the position. Where the measured current is at or above the allowance, the fault is a distribution capacity limit and no unit should be replaced; report it to the operator engineering department. Where the measured current is well inside the allowance, check the feeder connector at the seat group and measure the voltage at the seat box under load. Where the voltage drops out of tolerance under load, the fault is in the feeder or its protection device.",
+      "dispatch_note": "Despatch is permitted with the entertainment system wholly or partially inoperative, subject to the operator informing passengers. There is no airworthiness limitation. Where the seat power outlets alone are inoperative the entertainment function may still be despatched, provided the affected outlets are placarded."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420125490996",
+        "D4420121334529",
+        "D4420134200425",
+        "EN258434K3"
+      ],
+      "fins": [
+        "7RK6",
+        "8385RM",
+        "303RM1",
+        "433RM"
+      ],
+      "drawings": [
+        "D44200016279",
+        "D44201142928"
+      ],
+      "software": [
+        "LD8CA72D35B",
+        "LC4RABC2783"
+      ],
+      "zones": [
+        "916",
+        "941",
+        "942",
+        "222"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-44-20-12-400-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-145110",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "entertainment loss",
+      "seat power",
+      "crew reset",
+      "distribution capacity",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "44-20-12-810-803",
+      "fault_symptom": "CABIN ENTERTAINMENT PARTIAL LOSS reported by cabin crew late in the cruise",
+      "fault_codes": [
+        "442012011",
+        "442012034"
+      ],
+      "warning_messages": [
+        "CIDS IFE PARTIAL LOSS"
+      ],
+      "affected_fins": [
+        "7RK6",
+        "8385RM",
+        "303RM1",
+        "433RM"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Seat group current at or above the per-position allowance under full passenger device load",
+          "probability_pct": 51,
+          "fin": "433RM"
+        },
+        {
+          "cause": "Feeder protection device tripping thermally at the rack",
+          "probability_pct": 21,
+          "fin": "7RK6"
+        },
+        {
+          "cause": "Rack outlet temperature above limit because the ventilated partition is absent or blocked",
+          "probability_pct": 16,
+          "fin": "7RK6"
+        },
+        {
+          "cause": "Seat box connector high resistance under load",
+          "probability_pct": 12,
+          "fin": "8385RM"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-T-44-20-12-400-002-A",
+      "dispatch": {
+        "mel_item": "44-20-03C",
+        "dispatchable": true,
+        "dispatch_condition": "Entertainment or seat power inoperative in whole or in part, affected outlets placarded, passengers informed"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-T-44-20-12-810-803",
+    "doc_type": "TSM",
+    "title": "CABIN ENTERTAINMENT PARTIAL LOSS Late in the Cruise",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-12-20",
+      "reason": "Log walk restated per zone controller for the second generation architecture, with a seat group to zone mapping table added ahead of it.",
+      "raised_by_pawo": "PAWO-145110-01",
+      "raised_by_finding": "F03",
+      "finding_type": "SOFTWARE_CONFLICT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "44",
+      "ata_4d": "44-20",
+      "ata_6d": "44-20-12",
+      "title": "Inflight Entertainment — Head End Server"
+    },
+    "secondary_ata": [
+      "44-20-13"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2006-12-17",
+      "released": "2007-06-16",
+      "revised": "2021-12-20",
+      "effective": "2022-01-24"
+    },
+    "abstract": "Fault isolation for a partial loss of cabin entertainment that appears late in the cruise and clears on a crew reset, a symptom that usually points at distribution capacity rather than at a failed unit.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a partial loss of cabin entertainment that appears after several hours of flight and clears when the crew reset the system. Use it after a repeated cabin report on the same seat groups.",
+      "fault_description": "The reported symptom is that seat display units in one cabin go blank and the seat power outlets in the same seat groups stop delivering, usually two to four hours into a long sector and typically after a meal service when passenger device charging is at its peak. A crew reset restores the function for a period and the symptom then returns. The units removed in response to this symptom almost always test serviceable, because the fault is a distribution capacity limit rather than a component failure. Where the state history is read, note which architecture the aircraft carries: the first generation head end writes the history per seat group, the second generation writes it per zone controller, and the two files do not have the same shape. The head end reports no fault of its own and the maintenance store may be empty.",
+      "isolation_procedure": "Get the cabin report and identify the seat groups affected and the time into the sector at which the loss occurred. Read the maintenance store and record any entertainment fault code. Establish the entertainment architecture of the aircraft. On a first generation head end, walk the seat group state history from the server log. On the second generation, the history is written per zone controller and there is no seat group record to read: use the seat group to zone mapping table in the preliminaries to find the controller that serves the affected groups, then walk that controller's history for the sector. Do the head end functional check and confirm that the chassis reports no internal fault and that its software part number is correct. Measure the rack outlet air temperature at full cabin load and compare it against the limit; a rack running hot points at the ventilated partition being absent or blocked. Measure the current drawn by each affected seat group with every outlet loaded and compare it against the allowance for the position. Where the measured current is at or above the allowance, the fault is a distribution capacity limit and no unit should be replaced; report it to the operator engineering department. Where the measured current is well inside the allowance, check the feeder connector at the seat group and measure the voltage at the seat box under load. Where the voltage drops out of tolerance under load, the fault is in the feeder or its protection device.",
+      "dispatch_note": "Despatch is permitted with the entertainment system wholly or partially inoperative, subject to the operator informing passengers. There is no airworthiness limitation. Where the seat power outlets alone are inoperative the entertainment function may still be despatched, provided the affected outlets are placarded."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4420125490996",
+        "D4420121334529",
+        "D4420134200425",
+        "EN258434K3"
+      ],
+      "fins": [
+        "7RK6",
+        "8385RM",
+        "303RM1",
+        "433RM"
+      ],
+      "drawings": [
+        "D44200016279",
+        "D44201142928"
+      ],
+      "software": [
+        "LD8CA72D35B",
+        "LC4RABC2783"
+      ],
+      "zones": [
+        "916",
+        "941",
+        "942",
+        "222"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-44-20-12-400-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-145110",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "entertainment loss",
+      "seat power",
+      "zone controller",
+      "state history",
+      "distribution capacity"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Neuhafen",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "44-20-12-810-803",
+      "fault_symptom": "CABIN ENTERTAINMENT PARTIAL LOSS reported by cabin crew late in the cruise",
+      "fault_codes": [
+        "442012011",
+        "442012034"
+      ],
+      "warning_messages": [
+        "CIDS IFE PARTIAL LOSS"
+      ],
+      "affected_fins": [
+        "7RK6",
+        "8385RM",
+        "303RM1",
+        "433RM"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Seat group current at or above the per-position allowance under full passenger device load",
+          "probability_pct": 51,
+          "fin": "433RM"
+        },
+        {
+          "cause": "Feeder protection device tripping thermally at the rack",
+          "probability_pct": 21,
+          "fin": "7RK6"
+        },
+        {
+          "cause": "Rack outlet temperature above limit because the ventilated partition is absent or blocked",
+          "probability_pct": 16,
+          "fin": "7RK6"
+        },
+        {
+          "cause": "Seat box connector high resistance under load",
+          "probability_pct": 12,
+          "fin": "8385RM"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-T-44-20-12-400-002-A",
+      "dispatch": {
+        "mel_item": "44-20-03C",
+        "dispatchable": true,
+        "dispatch_condition": "Entertainment or seat power inoperative in whole or in part, affected outlets placarded, passengers informed"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,229 @@
+[
+  {
+    "doc_id": "TTN-24-1112",
+    "doc_type": "SB",
+    "title": "Electrical Power — Distribution — Extend the Latching Contactor Standard to the Secondary Boxes and the Aft Rack",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-10-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-11",
+      "title": "Electrical Load Distribution — Primary Distribution Centre"
+    },
+    "secondary_ata": [
+      "24-50-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-146420"
+        ],
+        "pre_mod": [],
+        "post_sb": [
+          "TTN-24-1105"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2022-04-19",
+      "released": "2022-10-11",
+      "revised": null,
+      "effective": "2022-11-21"
+    },
+    "abstract": "Converts the two secondary distribution boxes and the aft primary rack to the latching contactor standard and re-declares the load-shed sequencing across all four racks.",
+    "sections": {
+      "planning_reason": "Four years of service data on the converted forward racks confirmed the expected contact life, and the same erosion signature has since appeared on the secondary distribution box modules across a population twice the size. The supplier has now given notice on that coil family as well. Operators that took the first bulletin have also asked for the standing load saving to be realised across the whole distribution architecture rather than in one rack, and for the load-shed transient on generator changeover to be removed.",
+      "description": "This Service Bulletin gives the instructions to convert the two secondary distribution boxes and the aft primary rack to the latching contactor standard. The primary positions take the same module and auxiliary contact block as the forward rack. The secondary boxes take the shallower module variant with its support bracket, because the box depth does not accept the forward interface bracket. Mounting screws are renewed at every position and the status wiring is re-terminated. After the hardware change the load-shed sequencing is re-declared through the distribution configuration procedure, so that a latched contactor is commanded open rather than allowed to drop.",
+      "accomplishment_summary": "Confirm that the forward rack has been converted under TTN-24-1105 and that the configuration record agrees. Isolate and safety the distribution system. Open the avionics bay and the two secondary distribution box covers. Remove the existing modules from the aft primary rack and both secondary boxes. Install the primary modules and contact blocks in the aft rack, and the shallow variant with its support bracket in each secondary box, using AMM-T-24-50-12-200-002-A for the box access and the post-installation inspection. Re-terminate the status wiring at all positions. Close the covers and restore power. Run the load-shed sequencing declaration and the generator changeover functional test. Verify that no contactor drops during the changeover. Record the modification and update the configuration record and the crew documentation supplement.",
+      "effectivity_note": "Applicable to all TITAN-88 aircraft that have embodied TTN-24-1105 or that were delivered post MSN T00114 with the forward rack already at the latching standard. Aircraft with an unconverted forward rack must take that bulletin first; the load-shed declaration assumes latched forward contactors and will be rejected otherwise.",
+      "material_note": "Kit K2450-1112-01 covers one aircraft and contains modules for the aft rack and both secondary boxes. The shallow module variant is a twenty-week lead item and should be ordered against a planned slot. Removed modules are returned for core credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450112131298",
+        "D2450115910023",
+        "D2450122086171",
+        "ASD216805-37",
+        "EN575431K5"
+      ],
+      "fins": [
+        "1198GX9",
+        "3102GX",
+        "35GX"
+      ],
+      "drawings": [
+        "D24501125799",
+        "D24501284380"
+      ],
+      "software": [],
+      "zones": [
+        "292",
+        "682",
+        "254"
+      ],
+      "figures": [
+        "FIG-24-50-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00203"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-149510",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "TTN-24-1105",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-T-24-50-12-200-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-T-24-50-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "FCOM-T-DSC-24-50-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "secondary distribution box",
+      "aft rack",
+      "load shed",
+      "latching contactor",
+      "generator changeover"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-24-1112",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled C-check, or within 48 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "OBSOLESCENCE",
+      "embodied_mod": "MOD-149510",
+      "manpower": {
+        "elapsed_time_hours": 30,
+        "manhours": 56,
+        "personnel": 2,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K2450-1112-01",
+        "kit_available_from": "2023-01-15",
+        "parts_required": [
+          {
+            "part_number": "D2450112131298",
+            "qty": 3,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2450115910023",
+            "qty": 3,
+            "uom": "EA"
+          },
+          {
+            "part_number": "D2450122086171",
+            "qty": 6,
+            "uom": "EA"
+          },
+          {
+            "part_number": "ASD216805-37",
+            "qty": 6,
+            "uom": "EA"
+          },
+          {
+            "part_number": "EN575431K5",
+            "qty": 72,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "D2450115910023",
+            "qty": 3,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Contact lubricant, electrical",
+          "Cable tie, self-locking"
+        ],
+        "tooling": [
+          "Torque screwdriver 0.5-5 Nm",
+          "Contact resistance meter",
+          "Distribution configuration terminal"
+        ]
+      },
+      "weight_change_kg": -3.1,
+      "accomplishment_steps": 14,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2022-10-11",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

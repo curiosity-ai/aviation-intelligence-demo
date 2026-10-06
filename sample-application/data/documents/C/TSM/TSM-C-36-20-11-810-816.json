@@ -1,0 +1,172 @@
+[
+  {
+    "doc_id": "TSM-C-36-20-11-810-816",
+    "doc_type": "TSM",
+    "title": "Bleed Caution in the Climb That Clears Itself Before Top of Climb",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-10-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-20",
+      "ata_6d": "36-20-11",
+      "title": "Indicating — Bleed Monitoring Computer"
+    },
+    "secondary_ata": [
+      "36-20-12",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-04-12",
+      "released": "2023-10-06",
+      "revised": null,
+      "effective": "2023-11-03"
+    },
+    "abstract": "Fault isolation for a bleed caution that appears between fifteen and twenty-two thousand feet on warm days and clears itself before top of climb, aimed at avoiding a sensor replacement that will not fix it.",
+    "sections": {
+      "purpose": "To isolate the cause of a bleed caution that appears in the climb and clears itself, and specifically to establish whether the sensing damping rather than the sensor is at fault.",
+      "fault_description": "The caution appears on one side between fifteen and twenty-two thousand feet, almost always on a warm day, and clears itself before top of climb in about four cases out of five. Nothing is found on the ground. Flight data from forty-one events shows a pressure transient of between eleven and fourteen seconds that peaks about four per cent above the current threshold and then settles, which is characteristic of the regulator catching up rather than of a duct fault. Eleven sensors have been replaced across the fleet under the earlier version of this procedure and eight of them tested serviceable.",
+      "isolation_procedure": "Read the fault history and extract every occurrence with its altitude, its outside air temperature and its duration. If the events cluster between fifteen and twenty-two thousand feet with a duration under fifteen seconds and clear without crew action, do not replace a sensor. Do the sensing line and restrictor inspection first. Measure the restrictor orifice with the pin gauge set and compare it with the size in the task; a partially blocked or eroded orifice changes the damping and produces exactly this pattern. Do the step response check and compare the mean response time with the acceptance band for the restrictor fitted. If the response is faster than the band, the damping is insufficient and the restrictor must be changed. If the response is inside the band, examine the sensing line run for a kink or a loose clamp that would give an intermittent short path. Only if the line, the restrictor and the response are all acceptable should the duct pressure sensor be replaced. Where the aircraft carries the revised parameter load, check that the load is at the current standard before any hardware work, because the threshold and confirmation time changed with it.",
+      "dispatch_note": "There is no dispatch relief for a bleed caution that is present on the ground. A caution that appeared in flight and cleared itself, with no fault found on the ground and the sensing inspection passed, does not restrict dispatch, but the event must be recorded so that the pattern remains visible."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3620127370378",
+        "FAR419327-35",
+        "D3620110073248",
+        "D3620115081319",
+        "EN521096K2"
+      ],
+      "fins": [
+        "4PU9",
+        "883PU",
+        "9PN1",
+        "3PN"
+      ],
+      "drawings": [
+        "D36201137521",
+        "D36201229644"
+      ],
+      "software": [
+        "LD1C8FF1C57",
+        "LC2CEC0676C"
+      ],
+      "zones": [
+        "531",
+        "583",
+        "443"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-36-20-11-200-031-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-36-10-12-400-012-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "bleed caution",
+      "climb transient",
+      "restrictor orifice",
+      "step response",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "36-20-11-810-816",
+      "fault_symptom": "BLEED caution in the climb that clears itself before top of climb, with no fault found on the ground",
+      "fault_codes": [
+        "362011006",
+        "362011023"
+      ],
+      "warning_messages": [
+        "AIR BLEED FAULT"
+      ],
+      "affected_fins": [
+        "4PU9",
+        "883PU",
+        "3PN"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Sensing line damping insufficient, restrictor orifice eroded",
+          "probability_pct": 37,
+          "fin": "3PN"
+        },
+        {
+          "cause": "Threshold and confirmation time at the earlier parameter standard",
+          "probability_pct": 28,
+          "fin": "4PU9"
+        },
+        {
+          "cause": "Sensing line kinked or clamp loose",
+          "probability_pct": 20,
+          "fin": "883PU"
+        },
+        {
+          "cause": "Duct pressure sensor drift",
+          "probability_pct": 15,
+          "fin": "9PN1"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-C-36-20-11-200-031-A",
+      "dispatch": {
+        "mel_item": "36-20-01A",
+        "dispatchable": true,
+        "dispatch_condition": "No relief with the caution present on the ground; an in-flight caution that cleared itself with the sensing inspection passed does not restrict dispatch"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

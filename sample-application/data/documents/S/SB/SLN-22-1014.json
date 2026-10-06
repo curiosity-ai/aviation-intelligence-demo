@@ -1,0 +1,188 @@
+[
+  {
+    "doc_id": "SLN-22-1014",
+    "doc_type": "SB",
+    "title": "Auto Flight — Thrust Control Computer Card and Four-Engine Gain Set Strapping",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-03-11",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-30",
+      "ata_6d": "22-30-11",
+      "title": "Auto Throttle — Thrust Control Computer"
+    },
+    "secondary_ata": [
+      "76-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "VDK-56C",
+        "AUR-5560"
+      ],
+      "operators": [
+        "JTA",
+        "HVA",
+        "TMK"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-10-04",
+      "released": "2022-03-11",
+      "revised": null,
+      "effective": "2022-04-01"
+    },
+    "abstract": "Replacement of the thrust control computer inboard circuit card and re-strapping of the throttle actuation concentrator to the four-engine gain set, removing the thrust lever oscillation reported in turbulence.",
+    "sections": {
+      "planning_reason": "Crews on the four-engine aircraft reported the thrust levers hunting by three to five degrees in moderate turbulence above flight level three three zero at high weights. The behaviour is uncomfortable, wears the friction clutch and occasionally provokes an autothrust disconnect. Recorded data from eleven aircraft showed the oscillation at a frequency close to the outer wing bending mode, so the loop is picking up airframe motion through the accelerometer term. The twin-engine aircraft are not affected because the loop gain was tuned against a two-engine thrust response.",
+      "description": "The inboard circuit card of the thrust control computer is replaced by an item with a revised anti-alias filter, and the throttle actuation data concentrator is re-strapped for the four-engine gain set. The rack is re-identified so that the two gain sets cannot be cross-fitted. This is a hardware strapping and card change and not a software load: the computer part number does not change and no data loading tooling is required.",
+      "accomplishment_summary": "Put the aircraft on ground power with the flight controls unpowered. Open the avionics rack in the equipment area and remove the thrust control computer. Replace the inboard circuit card HOL769933-05 and record the serial numbers of both the removed and the installed card. Re-strap the throttle actuation data concentrator D2230122881931 to the four-engine gain set in accordance with the strapping table in the accomplishment instructions. CAUTION: THE TWO GAIN SETS ARE NOT INTERCHANGEABLE. CONFIRM THE STRAPPING BEFORE THE RACK IS CLOSED. Re-identify the rack 16CE with the label supplied in the kit. Re-install the computer and do AMM-S-22-30-11-700-042-A to run the autothrust servo loop functional test. Confirm that the loop response is inside the tolerance band given in the test. Record the embodiment and return the removed card.",
+      "effectivity_note": "Applicable to VANTOR-64 and VANTOR-68 aircraft only. Aircraft from MSN S01578 onward are post-modification from build. The twin-engine aircraft must not be modified under this Service Bulletin; the four-engine gain set is not valid for a two-engine thrust response.",
+      "material_note": "Kit K2230-1014-01 contains the circuit card, the strapping harness and the rack identification label. Lead time is nine weeks. The removed card is returned to Aeralis. Aeralis bears the cost of the kit and of the labour for operators of the affected aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOL769933-05",
+        "D2230122881931"
+      ],
+      "fins": [
+        "7CE4",
+        "86CE",
+        "16CE"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "141",
+        "192"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01578"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-132860",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-S-22-30-11-700-042-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "thrust control computer",
+      "gain set",
+      "anti-alias filter",
+      "strapping",
+      "turbulence"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-22-1014",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Within 18 months after the date of this Service Bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CUSTOMER",
+      "embodied_mod": "MOD-132860",
+      "manpower": {
+        "elapsed_time_hours": 5,
+        "manhours": 6,
+        "personnel": 1,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": "K2230-1014-01",
+        "kit_available_from": "2022-06-20",
+        "parts_required": [
+          {
+            "part_number": "HOL769933-05",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "HOL769933-05",
+            "qty": 1,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Anti-static wrist strap",
+          "Cable tie, self-locking"
+        ],
+        "tooling": [
+          "Electrostatic discharge mat",
+          "Autothrust test set"
+        ]
+      },
+      "weight_change_kg": 0.2,
+      "accomplishment_steps": 9,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2022-03-11",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

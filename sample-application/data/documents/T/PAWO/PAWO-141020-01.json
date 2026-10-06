@@ -1,0 +1,352 @@
+[
+  {
+    "doc_id": "PAWO-141020-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Duplication of the Cargo Door Latch Position Sensing",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2016-07-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-03-02",
+      "released": "2016-07-19",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis for the duplication of latch position sensing on the forward and aft cargo doors, covering the rigging procedure, the latching station part list, the fault isolation logic and the published intercostal repair.",
+    "sections": {
+      "objective": "Establish what the addition of a second latch position sensor at each latching station changes in the published maintenance data, and whether any structural repair or wiring provision already occupies the bracket location the second sensor needs. The work order was raised by the door systems design office after the operational reliability review put door warning nuisance messages at the top of the dispatch delay list for the type. Manual impact was to be quantified precisely enough for the documentation plan to be costed before the change was released.",
+      "findings_summary": "Four items were confirmed, one of them blocking. The installation and rigging task is written for a single sensor per station and its rigging tolerance table cannot be extended without a second column, so the task must be reissued with the modification rather than after it. The fault isolation procedure for a not-locked indication with the door correctly latched was found to be invalid post-modification: it instructs the mechanic to substitute the single sensor, and on a duplicated station that test proves nothing until the voting logic is inhibited. The illustrated parts list needs the second bracket, its shim pack and the longer attachment pins as new items rather than as alternates. The published cleat and intercostal replacement repair reuses the intercostal that now carries the second bracket, and its fastener pattern was found to clash with two of the new bracket holes.",
+      "next_steps": "The documentation plan was accepted with three conditions: the rigging task and the fault isolation procedure are to be released at the same revision as the modification, the parts list is to carry the second bracket as a separate item with its own effectivity, and the repair drawing is to be reissued with a revised fastener pattern in the sensor bracket footprint. The wiring sheet owner was asked to confirm channel separation before the production cut-in date was fixed."
+    },
+    "entities": {
+      "part_numbers": [
+        "CAL808635-46",
+        "D5230135992491",
+        "DED143603-69",
+        "LN143422-1C",
+        "LN309661K1"
+      ],
+      "fins": [
+        "3323WT",
+        "2056WV"
+      ],
+      "drawings": [
+        "D52301366003",
+        "D52301387215"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "143"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-141020",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "cargo door latching",
+      "position sensor",
+      "rigging",
+      "fault isolation"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-141020-01",
+      "subject_mod": "MOD-141020",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2016-07-19",
+      "outcome": "VALIDATED",
+      "raised_date": "2016-03-02",
+      "due_date": "2016-07-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ESZS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 90,
+        "spent_manhours": 118
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "52",
+          "92"
+        ],
+        "ata_4d": [
+          "52-30",
+          "52-70",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": {
+          "from": "T00001",
+          "to": "T00238"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "CAL808635-46",
+            "D5230135992491",
+            "DED143603-69"
+          ],
+          "fins": [
+            "3323WT",
+            "2056WV"
+          ],
+          "drawings": [
+            "D52301366003"
+          ],
+          "zones": [
+            "891",
+            "893"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "duplicated proximity sensing on a latching mechanism",
+          "cargo door not locked indication with the door correctly closed"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search published maintenance data on the forward and aft latching stations",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Confirm the bracket footprint against the published intercostal repair",
+          "method": "MANUAL_REVIEW",
+          "owner": "ESZS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Review the door warning fault isolation logic with the systems office",
+          "method": "SME_INTERVIEW",
+          "owner": "ELSC",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-T-52-30-13-400-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "CAL808635-46",
+              "D5230135992491",
+              "LN143422-1C"
+            ],
+            "shared_fins": [
+              "3323WT",
+              "2056WV"
+            ],
+            "shared_zones": [
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "shared_drawings": [
+              "D52301366003"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation and rigging task carries a single rigging tolerance per latching station and a single continuity check. With two sensors and a voting rule the tolerance has to be stated per channel, and the continuity check has to be run twice with the second channel isolated. The task cannot be left at its present revision on a modified aircraft.",
+          "resolution": "Reissue the task at the same revision as the modification, with a rigging tolerance table per channel and an isolation step for the second sensor."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-T-52-30-13-812-802",
+          "doc_type": "TSM",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "CAL808635-46",
+              "D5230135992491",
+              "LN143422-1C"
+            ],
+            "shared_fins": [
+              "3323WT",
+              "2056WV"
+            ],
+            "shared_zones": [
+              "891",
+              "893",
+              "143"
+            ],
+            "shared_ata_6d": [
+              "52-30-13",
+              "52-70"
+            ],
+            "shared_drawings": [
+              "D52301366003"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The published procedure for a not-locked indication with the door correctly latched isolates the fault by substituting the station sensor. On a duplicated station the substitution proves nothing while the voting logic is active, and the mechanic is led to replace a serviceable sensor. The procedure is invalid the moment the first aircraft is modified.",
+          "resolution": "Split the procedure by embodiment condition and add an inhibition step for the second channel before any substitution is attempted."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-T-52-30-13-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5230135992491",
+              "DED143603-69",
+              "LN309661K1"
+            ],
+            "shared_fins": [
+              "3323WT"
+            ],
+            "shared_zones": [
+              "891",
+              "893",
+              "143"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "shared_drawings": [
+              "D52301366003",
+              "D52301387215"
+            ],
+            "similarity_note": "The figure and the modification describe the same bracket and intercostal assembly, using the same nomenclature for the sensor bracket and its shim pack."
+          },
+          "rationale": "The figure holds one bracket, one shim pack and one pin length per station. The second sensor is not an alternate of the first, it is an addition, and the present item numbering has no room for it without renumbering the callouts downstream of the intercostal.",
+          "resolution": "Add the second bracket, shim pack and pin as new items with their own effectivity, and renumber the callouts once rather than twice."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "SRM-T-52-30-11-001",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [
+              "2056WV"
+            ],
+            "shared_zones": [
+              "891",
+              "893"
+            ],
+            "shared_ata_6d": [
+              "52-30-13"
+            ],
+            "shared_drawings": [
+              "D52301387215"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The cleat and intercostal replacement repair reinstates the intercostal with the fastener pattern of the unmodified aircraft. Two of those fastener positions fall inside the footprint of the second sensor bracket, so an aircraft repaired to the published standard cannot then take the modification without a concession.",
+          "resolution": "Reissue the repair with the sensor bracket footprint shown as a keep-out area, and add a note directing the reader to the modification status of the station before the repair is started."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "AMM-T-52-30-12-700-001-A",
+          "doc_type": "AMM",
+          "reason": "Shares the aft cargo door zone and the door control FIN, and ranks high on any entity search of the door area, but it is the hydraulic actuation operational test. Nothing in it reads or reports latch position, so the sensor duplication leaves it untouched."
+        }
+      ],
+      "conclusion": "Issued 2016-07-19. Four impacts confirmed, one of them invalidating a published fault isolation procedure. The change was cleared to proceed on condition that the rigging task, the fault isolation procedure and the repair drawing are reissued with it.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

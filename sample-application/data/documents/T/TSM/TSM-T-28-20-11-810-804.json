@@ -1,0 +1,330 @@
+[
+  {
+    "doc_id": "TSM-T-28-20-11-810-804",
+    "doc_type": "TSM",
+    "title": "FUEL INNER TANK PUMP LO PR With Normal Tank Quantity",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2008-04-07",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-40"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-07-06",
+      "released": "2008-04-07",
+      "revised": "2008-04-07",
+      "effective": "2008-05-05"
+    },
+    "abstract": "Fault isolation for a low pressure indication from an inner tank boost pump while the tank quantity is normal, covering the inlet restriction, the pressure switch and the harness before the pump itself.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a low pressure indication from an inner tank boost pump with normal tank quantity. Use it before any tank entry, because most causes are outside the tank.",
+      "fault_description": "The low pressure indication comes from a pressure switch downstream of the pump outlet. A genuine pump failure is only one of several causes and is not the most common. An inlet restriction, a switch out of calibration or a high resistance in the switch harness will all produce the same indication with the pump running normally. On installations identified by the earlier pump part number in the aircraft technical records, a partial blockage at the inlet strainer has also been reported and produces an indication that comes and goes with fuel load. Record the tank quantity, the fuel temperature and whether the indication is steady or intermittent before you plan any work.",
+      "isolation_procedure": "Record the tank quantity, the fuel temperature and whether the indication is steady or intermittent. Read the pump part number for the affected position from the aircraft technical records and select the acceptance figures for that installation. Read the maintenance store and record the fault code and the pump position. Run the pump on the ground and measure the delivery pressure at the test point; where the pressure is normal, the fault is in the sensing path. Measure the resistance of the pressure switch harness from the connector to the panel and compare it against the limit. Where the harness is sound, replace the pressure switch and repeat the run. Where the measured delivery pressure is genuinely low, check the crossfeed valve position and the transfer system state, because a valve left open will unload the pump. Where the system configuration is correct and the pressure is still low, plan a tank entry and inspect the inlet strainer and the inlet housing before you condemn the pump.",
+      "dispatch_note": "Despatch is permitted with one inner tank boost pump inoperative in each inner tank, with an altitude limitation and a fuel management procedure. Despatch is not permitted with two pumps inoperative in the same tank."
+    },
+    "entities": {
+      "part_numbers": [
+        "NY844698-29",
+        "NYD659955-61",
+        "MON278175-36",
+        "EN968165-23"
+      ],
+      "fins": [
+        "7953QT",
+        "99QT5",
+        "854QT"
+      ],
+      "drawings": [
+        "D28201188199"
+      ],
+      "software": [],
+      "zones": [
+        "591",
+        "593",
+        "523"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-28-20-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-145620",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "boost pump",
+      "low pressure",
+      "pressure switch",
+      "inlet strainer",
+      "tank entry"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Ashcombe",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "28-20-11-810-804",
+      "fault_symptom": "FUEL INNER TANK PUMP LO PR with normal tank quantity",
+      "fault_codes": [
+        "282011006",
+        "282011024"
+      ],
+      "warning_messages": [
+        "FUEL L INR TK PUMP 1 LO PR",
+        "FUEL R INR TK PUMP 2 LO PR"
+      ],
+      "affected_fins": [
+        "7953QT",
+        "99QT5",
+        "854QT"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Pressure switch out of calibration or failed",
+          "probability_pct": 34,
+          "fin": "7953QT"
+        },
+        {
+          "cause": "High resistance in the pressure switch harness",
+          "probability_pct": 26,
+          "fin": "99QT5"
+        },
+        {
+          "cause": "System configuration unloading the pump, crossfeed or transfer valve open",
+          "probability_pct": 21,
+          "fin": "854QT"
+        },
+        {
+          "cause": "Inlet strainer partially blocked or pump internal wear",
+          "probability_pct": 19,
+          "fin": "7953QT"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-T-28-20-11-400-001-A",
+      "dispatch": {
+        "mel_item": "28-20-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One pump inoperative per inner tank, altitude limitation applied, fuel management procedure in force"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-T-28-20-11-810-804",
+    "doc_type": "TSM",
+    "title": "FUEL INNER TANK PUMP LO PR With Normal Tank Quantity",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-08",
+      "reason": "Procedure keyed on the inlet housing standard of the aircraft instead of the pump part number, with the standard read in the preliminaries.",
+      "raised_by_pawo": "PAWO-145620-01",
+      "raised_by_finding": "F03",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-40"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2007-07-06",
+      "released": "2008-04-07",
+      "revised": "2026-07-08",
+      "effective": "2026-08-05"
+    },
+    "abstract": "Fault isolation for a low pressure indication from an inner tank boost pump while the tank quantity is normal, keyed on the inlet housing standard of the aircraft, covering the inlet restriction, the pressure switch and the harness before the pump itself.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a low pressure indication from an inner tank boost pump with normal tank quantity. Use it before any tank entry, because most causes are outside the tank. Establish the inlet housing standard of the aircraft in the preliminaries; the acceptance figures are stated per housing standard and the pump part number will not tell you which is fitted.",
+      "fault_description": "The low pressure indication comes from a pressure switch downstream of the pump outlet. A genuine pump failure is only one of several causes and is not the most common. An inlet restriction, a switch out of calibration or a high resistance in the switch harness will all produce the same indication with the pump running normally. The pump itself is common to both inlet geometries and is fitted interchangeably across the fleet, so it cannot be used to identify the installation; the inlet housing is what changes the acceptance figure and it is not interchangeable. On aircraft that still carry the original inlet housing standard, a partial blockage at the inlet strainer has also been reported and produces an indication that comes and goes with fuel load. Record the tank quantity, the fuel temperature and whether the indication is steady or intermittent before you plan any work.",
+      "isolation_procedure": "Record the tank quantity, the fuel temperature and whether the indication is steady or intermittent. Establish the inlet housing standard at the affected position from the aircraft embodiment record and take the delivery pressure acceptance figure for that standard; do not read the standard from the pump part number, which is the same at both. Read the maintenance store and record the fault code and the pump position. Run the pump on the ground and measure the delivery pressure at the test point; where the pressure is normal for the housing standard fitted, the fault is in the sensing path. Measure the resistance of the pressure switch harness from the connector to the panel and compare it against the limit. Where the harness is sound, replace the pressure switch and repeat the run. Where the measured delivery pressure is genuinely low, check the crossfeed valve position and the transfer system state, because a valve left open will unload the pump. Where the system configuration is correct and the pressure is still low, plan a tank entry and inspect the inlet strainer and the inlet housing before you condemn the pump. On aircraft at the original inlet housing standard, inspect the flange land for indications at the same visit, because the tank is open.",
+      "dispatch_note": "Despatch is permitted with one inner tank boost pump inoperative in each inner tank, with an altitude limitation and a fuel management procedure. Despatch is not permitted with two pumps inoperative in the same tank."
+    },
+    "entities": {
+      "part_numbers": [
+        "NY844698-29",
+        "NYD659955-61",
+        "MON278175-36",
+        "EN968165-23"
+      ],
+      "fins": [
+        "7953QT",
+        "99QT5",
+        "854QT"
+      ],
+      "drawings": [
+        "D28201188199"
+      ],
+      "software": [],
+      "zones": [
+        "591",
+        "593",
+        "523"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-28-20-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-145620",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "boost pump",
+      "low pressure",
+      "housing standard",
+      "pressure switch",
+      "tank entry"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Ashcombe",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "28-20-11-810-804",
+      "fault_symptom": "FUEL INNER TANK PUMP LO PR with normal tank quantity",
+      "fault_codes": [
+        "282011006",
+        "282011024"
+      ],
+      "warning_messages": [
+        "FUEL L INR TK PUMP 1 LO PR",
+        "FUEL R INR TK PUMP 2 LO PR"
+      ],
+      "affected_fins": [
+        "7953QT",
+        "99QT5",
+        "854QT"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Pressure switch out of calibration or failed",
+          "probability_pct": 34,
+          "fin": "7953QT"
+        },
+        {
+          "cause": "High resistance in the pressure switch harness",
+          "probability_pct": 26,
+          "fin": "99QT5"
+        },
+        {
+          "cause": "System configuration unloading the pump, crossfeed or transfer valve open",
+          "probability_pct": 21,
+          "fin": "854QT"
+        },
+        {
+          "cause": "Inlet strainer partially blocked or pump internal wear",
+          "probability_pct": 19,
+          "fin": "7953QT"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-T-28-20-11-400-001-A",
+      "dispatch": {
+        "mel_item": "28-20-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One pump inoperative per inner tank, altitude limitation applied, fuel management procedure in force"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

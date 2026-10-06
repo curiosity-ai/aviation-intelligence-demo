@@ -1,0 +1,349 @@
+[
+  {
+    "doc_id": "CRN-27-1040",
+    "doc_type": "SB",
+    "title": "Flight Controls — Slat Flap Control Computer — Loadable Software Part 6.7 Alone",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-10-24",
+      "reason": "Initial issue of the loadable software part companion bulletin.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00503"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [
+          "CRN-27-1033"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2023-05-04",
+      "released": "2023-10-24",
+      "revised": "2023-10-24",
+      "effective": "2023-11-13"
+    },
+    "abstract": "A line-level loading of the flap control built-in test standard for aircraft whose torque limiter solenoid has already been replaced by the higher rated item during unscheduled maintenance.",
+    "sections": {
+      "planning_reason": "A significant number of aircraft in the effectivity of the main bulletin have already had the higher rated torque limiter solenoid fitted, because it is the only spare available since the vendor changed the delivered standard. On those aircraft the hardware work of the main bulletin is redundant and only the loadable part is needed. Making operators plan an A-check for a fifteen minute data load was not acceptable, so this companion bulletin exists to cover the loadable part alone.",
+      "description": "The slat flap control computer is loaded with built-in test standard 6.7 through the maintenance port. No hardware is removed or installed, and no rigging is disturbed.",
+      "accomplishment_summary": "Confirm from the aircraft technical record that the higher rated torque limiter solenoid is installed on both sides, or verify it physically through the trailing edge access panel in zones 561 and 661. Do not continue if either side is at the earlier standard. Apply electrical power and select the maintenance mode on the flight deck. Load the built-in test standard LC8C8E906FE into the slat flap control computer through the maintenance port using the portable data loader. Confirm the loaded part number reported by the computer. Do the flap drive system test through one full extension and retraction and confirm no asymmetry is declared. Check the fault memory is clear. Record the embodiment and the loaded part number in the aircraft technical record.",
+      "effectivity_note": "Applicable to aircraft MSN C00001 through C00503 on which the higher rated torque limiter solenoid is already installed on both sides, whether by the main modification bulletin or by unscheduled replacement. Aircraft that are still at the earlier solenoid standard must use the main bulletin instead, because the built-in test standard assumes the higher limiter setting.",
+      "material_note": "No kit and no parts are required. The loadable part media is distributed electronically through the operator's software distribution account and no physical delivery is made."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759"
+      ],
+      "fins": [
+        "345EV2"
+      ],
+      "drawings": [],
+      "software": [
+        "LC8C8E906FE"
+      ],
+      "zones": [
+        "561",
+        "661"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00503"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111094",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "CRN-27-1033",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-C-27-50-11-700-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "loadable software part",
+      "flap control computer",
+      "line level",
+      "data load",
+      "companion bulletin"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-27-1040",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next convenient line opportunity, or within 24 months after the date of this Service Bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-111094",
+      "manpower": {
+        "elapsed_time_hours": 4,
+        "manhours": 6,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": null,
+        "parts_required": [],
+        "parts_returned": [],
+        "consumables": [],
+        "tooling": [
+          "Portable data loader"
+        ]
+      },
+      "weight_change_kg": 0,
+      "accomplishment_steps": 8,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-10-24",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "CRN-27-1040",
+    "doc_type": "SB",
+    "title": "Flight Controls — Slat Flap Control Computer — Loadable Software Part 6.7 Alone",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-24",
+      "reason": "Embodiment condition re-stated against the loaded part number in the computer instead of against the solenoid fitted.",
+      "raised_by_pawo": "PAWO-111094-01",
+      "raised_by_finding": "F03",
+      "finding_type": "SOFTWARE_CONFLICT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00001",
+          "to": "C00503"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [
+          "CRN-27-1033"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2023-05-04",
+      "released": "2023-10-24",
+      "revised": "2026-06-24",
+      "effective": "2026-07-15"
+    },
+    "abstract": "A line-level loading of the flap control built-in test standard, with its embodiment condition read from the software part currently in the computer rather than from the hardware standard of the torque limiter solenoid.",
+    "sections": {
+      "planning_reason": "A significant number of aircraft in the effectivity of the main bulletin have already had the higher rated torque limiter solenoid fitted, because it is the only spare available since the vendor changed the delivered standard. On those aircraft the hardware work of the main bulletin is redundant and only the loadable part is needed. Making operators plan an A-check for a fifteen minute data load was not acceptable, so this companion bulletin exists to cover the loadable part alone. It remains the vehicle for the loadable part while a further test standard is in pre-analysis, which is why its condition is now written against the part in the computer: a condition written against the solenoid cannot tell one load from another once a third exists.",
+      "description": "The slat flap control computer is loaded with built-in test standard 6.7 through the maintenance port. No hardware is removed or installed, and no rigging is disturbed.",
+      "accomplishment_summary": "Apply electrical power and select the maintenance mode on the flight deck. Read the loadable part number reported by the slat flap control computer on the identification page and record it; do not continue if it is already LC8C8E906FE. Confirm from the aircraft technical record that the higher rated torque limiter solenoid is installed on both sides, or verify it physically through the trailing edge access panel in zones 561 and 661. Do not continue if either side is at the earlier standard. Load the built-in test standard LC8C8E906FE into the slat flap control computer through the maintenance port using the portable data loader. Confirm the loaded part number reported by the computer after the load. Do the flap drive system test through one full extension and retraction and confirm no asymmetry is declared. Check the fault memory is clear. Record the embodiment, the part number found before the load and the part number after it in the aircraft technical record.",
+      "effectivity_note": "Applicable to aircraft MSN C00001 through C00503 whose slat flap control computer does not already report loadable part LC8C8E906FE. Read the loaded part number from the computer identification page and do not rely on the technical record alone. The higher rated torque limiter solenoid must be installed on both sides, whether by the main modification bulletin or by unscheduled replacement, because the loaded standard assumes the higher limiter setting; an aircraft that already reports LC8C8E906FE is outside the effectivity whichever way it got there.",
+      "material_note": "No kit and no parts are required. The loadable part media is distributed electronically through the operator's software distribution account and no physical delivery is made."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759"
+      ],
+      "fins": [
+        "345EV2"
+      ],
+      "drawings": [],
+      "software": [
+        "LC8C8E906FE"
+      ],
+      "zones": [
+        "561",
+        "661"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00503"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111094",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "CRN-27-1033",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-C-27-50-11-700-003-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "loadable software part",
+      "flap control computer",
+      "loaded part number",
+      "data load",
+      "companion bulletin"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Ashcombe",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-27-1040",
+      "sb_revision": "01",
+      "sb_type": "SOFTWARE_LOAD",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next convenient line opportunity, or within 24 months after the date of this Service Bulletin.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-111094",
+      "manpower": {
+        "elapsed_time_hours": 4,
+        "manhours": 6,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": null,
+        "parts_required": [],
+        "parts_returned": [],
+        "consumables": [],
+        "tooling": [
+          "Portable data loader"
+        ]
+      },
+      "weight_change_kg": 0,
+      "accomplishment_steps": 9,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": false,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2023-10-24",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-06-24",
+          "reason": "Embodiment condition re-stated against the loaded part number reported by the computer; pre-load read-out added to the accomplishment instructions"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

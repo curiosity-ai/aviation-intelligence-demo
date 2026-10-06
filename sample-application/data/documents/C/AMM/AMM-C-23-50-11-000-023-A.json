@@ -1,0 +1,178 @@
+[
+  {
+    "doc_id": "AMM-C-23-50-11-000-023-A",
+    "doc_type": "AMM",
+    "title": "Audio Management Unit — Removal",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-50",
+      "ata_6d": "23-50-11",
+      "title": "Audio Integrating — Audio Management Unit"
+    },
+    "secondary_ata": [
+      "23-50-12",
+      "44-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2024-05-27",
+      "released": "2026-02-24",
+      "revised": null,
+      "effective": "2026-03-23"
+    },
+    "abstract": "Removal of the audio management unit from the cabin ceiling rack, with the interphone loop isolation and the return path record needed when the unit is being changed for the separated return standard.",
+    "sections": {
+      "purpose": "To remove the audio management unit from the cabin ceiling rack for replacement or for access to the cabin loop terminations.",
+      "job_setup_note": "The aircraft must be de-powered and the cabin lighting dimmer supply isolated at its circuit breaker, because on the delivered standard the dimmer supply shares a return with the audio unit. Access is through the ceiling panel above the aft cabin. A working platform is needed. Two persons are needed, one on the platform and one at the rack.",
+      "procedure": "Remove the electrical power and put the warning notices in position. Isolate and collar the cabin lighting dimmer circuit breaker. WARNING: THE CABIN LIGHTING DIMMER SUPPLY SHARES A RETURN WITH THE AUDIO UNIT ON THE DELIVERED STANDARD. DO NOT WORK AT THE RACK UNTIL THE DIMMER CIRCUIT BREAKER IS COLLARED. Put the working platform in position under the ceiling panel and set the brakes. Remove the ceiling panel above the aft cabin and support it clear. Put on the electrostatic wrist strap and connect it to the rack bonding stud. Record which return stud each of the cabin loop pairs is terminated on, and photograph the terminations where the operator procedure allows it. CAUTION: THE RETURN STUD ALLOCATION IS NOT THE SAME ON EVERY AIRCRAFT. DO NOT RELY ON THE WIRING SHEET ALONE; RECORD WHAT IS ACTUALLY FITTED. Disconnect the cabin loop pairs one at a time, labelling each as it is freed. Disconnect the flight interphone connector at the control panel D2350120530307. Remove the washers LN760279K5 at the rack retention points. Support the receiver D2350002635675, release the two front latches and withdraw it from the rack. Put the unit in an electrostatic bag with the termination record attached.",
+      "close_out": "Make sure that every disconnected pair is labelled and insulated. Make sure that the ceiling panel is supported or refitted before the platform is moved. Remove the electrostatic wrist strap. Remove the working platform. Record the removal, the serial number and the return stud allocation exactly as found."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2350002635675",
+        "EL170895-98",
+        "D2350120530307",
+        "LN760279K5",
+        "LN112642-3C"
+      ],
+      "fins": [
+        "6383RC",
+        "509RC",
+        "7RN1"
+      ],
+      "drawings": [
+        "D23501294034"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "234",
+        "265"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "WDM-C-92-11-21",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-25-20-12-000-024-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "audio management unit",
+      "cabin interphone loop",
+      "return stud",
+      "dimmer supply",
+      "ceiling rack"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Wendmark",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "23-50-11-000-023-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All aircraft. The return stud allocation changes on aircraft post MOD-111362.",
+      "manhours": 3.6,
+      "personnel": 2,
+      "elapsed_time_hours": 2.4,
+      "access": {
+        "zones": [
+          "111",
+          "234",
+          "265"
+        ],
+        "access_panels": [
+          "234CL",
+          "265AR"
+        ],
+        "doors": [
+          "Aft cabin ceiling panel"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "The cabin lighting dimmer supply shares a return with the audio unit on the delivered standard. Collar the dimmer circuit breaker first.",
+          "Set the brakes on the working platform.",
+          "Support the ceiling panel clear before working at the rack."
+        ],
+        "tooling": [
+          {
+            "reference": "98C23701-201",
+            "description": "Electrostatic wrist strap and bonding lead"
+          },
+          {
+            "reference": "98C23501-166",
+            "description": "Cabin working platform, ceiling access"
+          }
+        ],
+        "consumables": [
+          "Electrostatic bag, avionics unit",
+          "Wire labels, self-adhesive",
+          "Insulating tape"
+        ],
+        "expendables": [
+          {
+            "part_number": "LN760279K5",
+            "qty": 6
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-C-25-20-12-000-024-A"
+      ],
+      "steps": 14,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

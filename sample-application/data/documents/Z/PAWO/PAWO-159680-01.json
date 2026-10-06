@@ -1,0 +1,395 @@
+[
+  {
+    "doc_id": "PAWO-159680-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Lateral Load Introduction Strap at the Fin Box Root Rib",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "55",
+      "ata_4d": "55-30",
+      "ata_6d": "55-30-11",
+      "title": "Vertical Stabilizer — Fin Box Structure"
+    },
+    "secondary_ata": [
+      "55-30-12",
+      "53-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z00313",
+          "to": "Z04665"
+        }
+      ],
+      "excluded_msns": [
+        "Z00947"
+      ],
+      "engine_types": [
+        "VDK-56B",
+        "VNT-2500A"
+      ],
+      "operators": [
+        "ATS",
+        "CKP",
+        "FRR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-05-18",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the fin box root rib lateral load strap, covering the interim repair already flying on two aircraft, the certification precedent from the tailplane attachment work and the equipment that shares the fin root zone.",
+    "sections": {
+      "objective": "Establish whether the two aircraft carrying the interim crack stop and reinforcing plate scheme can be modified without removing it, whether the damage tolerance substantiation can be shared with the tailplane front spar attachment work rather than repeated, and what else occupies the fin root zone that the anchor nut pattern would disturb.",
+      "scope_note": "The search covers ATA 55-30 as the primary chapter and 55-30-12 as secondary because the strap footprint reaches the fin attachment fittings. ATA 53-40 was included because access is through the tail cone. ATA 49 was included late and produced the zone finding recorded below. ATA 27-20 rudder actuation was searched and excluded: the rudder is removed for access but nothing in its system is modified. The population is the short-sector aircraft in the requesting operators' fleets.",
+      "method_note": "Entity linking was seeded from the four part numbers, the two drawings and the three zones on the candidate. Semantic similarity used two seed phrases about a lateral load introduction reaching its reserve factor on high-cycle aircraft and about restoring a structural inspection interval by adding material. The tailplane attachment finding is a semantic-only result and the most useful one of the round: it is a different structure on a different sub-chapter, described in different words, whose certification argument is the one this modification needs.",
+      "findings_summary": "Six items are confirmed and one blocks. The blocking item is the interim repair: two aircraft in the target population carry the crack stop and reinforcing plate scheme, and it occupies the exact flange the strap lands on. No substantiation exists for the strap over the plate, and the plate's own repeat inspection cannot be performed once the strap covers the crack stop holes. The certification precedent from the tailplane front spar attachment work is the finding that could save the programme most: it was approved against the same design service goal argument on the same aircraft, and its damage tolerance case is directly reusable. The auxiliary power unit control box trouble shooting procedure was returned by a shared zone, which surprised the reviewers until they realised the control box sits at the fin root; the anchor nut pattern is close enough to its harness route to matter.",
+      "next_steps": "Obtain a repair design position on the two aircraft carrying the interim scheme, including whether the plate can be removed and the flange restored. Ask certification whether the tailplane attachment damage tolerance argument can be extended rather than repeated. Confirm the harness clearance at the fin root against the anchor nut pattern. Establish the aft loading limit consequence of 18.5 kilograms at the extreme aft with weight and balance."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5530113880239",
+        "D5530110749890",
+        "AES147323-7D",
+        "ORD555543-03"
+      ],
+      "fins": [],
+      "drawings": [
+        "D55301101338",
+        "D55301155365"
+      ],
+      "software": [],
+      "zones": [
+        "321",
+        "322",
+        "323"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z00947"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-159680",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-Z-260502",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "fin root rib",
+      "interim repair",
+      "damage tolerance precedent",
+      "anchor nut pattern"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Alcadara",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-159680-01",
+      "subject_mod": "MOD-159680",
+      "source_io": "IO-Z-260502",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-05-18",
+      "due_date": "2026-09-11",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EDSA",
+        "lead_site": "Alcadara",
+        "contributing_departments": [
+          "ESZS",
+          "EAAM"
+        ],
+        "estimated_manhours": 195,
+        "spent_manhours": 104
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-20",
+          "ZEPHYR-22"
+        ],
+        "ata_2d": [
+          "55",
+          "53",
+          "49",
+          "27"
+        ],
+        "ata_4d": [
+          "55-30",
+          "55-10",
+          "53-40",
+          "49-60",
+          "27-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM"
+        ],
+        "msn_range": {
+          "from": "Z00313",
+          "to": "Z04665"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D5530113880239",
+            "D5530110749890",
+            "AES147323-7D",
+            "ORD555543-03"
+          ],
+          "fins": [],
+          "drawings": [
+            "D55301101338",
+            "D55301155365"
+          ],
+          "zones": [
+            "321",
+            "322",
+            "323"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "lateral load introduction reaching its reserve factor on high cycle aircraft",
+          "restoring a structural inspection interval by adding material at a load introduction"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Obtain a repair design position on the interim scheme aircraft",
+          "method": "SME_INTERVIEW",
+          "owner": "ESZS",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T02",
+          "title": "Test whether the tailplane damage tolerance argument can be extended",
+          "method": "SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the fin root equipment and harness against the anchor nut pattern",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Establish the aft loading limit consequence with weight and balance",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "SRM-Z-55-30-11-910",
+          "doc_type": "SRM",
+          "finding_type": "REPAIR_CONFLICT",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5530113880239",
+              "D5530110749890",
+              "AES147323-7D"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "321",
+              "322",
+              "323"
+            ],
+            "shared_ata_6d": [
+              "55-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Two aircraft in the target population carry the interim crack stop and reinforcing plate scheme, which occupies the exact flange the strap lands on. No substantiation exists for the strap over the plate, and the plate's repeat eddy current inspection cannot be performed once the strap covers the crack stop holes.",
+          "resolution": "Obtain a repair design position on removing the plate and restoring the flange, and add a pre-embodiment repair survey to the work package."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-155908",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "One document is about a forged attachment fitting on a tailplane front spar and a liquid shim; the other is about a bolted strap at a fin root rib and an anchor nut pattern. Different structures, different sub-chapters, no shared identifier, and the only thing that connects them is that both restore an inspection interval at a load introduction on high-cycle aircraft."
+          },
+          "rationale": "The tailplane front spar attachment change was approved on the same aircraft against the same design service goal argument, and its damage tolerance case is directly reusable rather than something to be re-derived.",
+          "resolution": "Ask certification whether the existing argument can be extended, and use its structure for the substantiation plan."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "TSM-Z-49-60-11-810-811",
+          "doc_type": "TSM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "321"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The auxiliary power unit control box and its cooling inlet sit at the fin root in the same zone as the strap footprint. The anchor nut pattern is close enough to the box harness route that the clearance has to be established before the pattern is drilled.",
+          "resolution": "Confirm the harness clearance at the fin root and, if it is tight, adjust the pattern rather than the harness."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "ZPH-55-1015",
+          "doc_type": "SB",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The tailplane retrofit bulletin is the published expression of the certification argument this modification wants to reuse, and it writes its effectivity against accumulated flight cycles rather than serial number. That effectivity model is the one this modification needs.",
+          "resolution": "Adopt the cycle-based effectivity model and cite the bulletin as the precedent in the certification plan."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "AMM-Z-55-30-11-200-045-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D5530110749890",
+              "D5530113880239",
+              "AES147323-7D",
+              "ORD555543-03"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "321",
+              "322",
+              "323"
+            ],
+            "shared_ata_6d": [
+              "55-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The root rib inspection task is the item the whole business case is about, since the modification exists to return it to the base structural interval. Its eddy current coverage and its anchor nut security check both change with the strap.",
+          "resolution": "Re-issue the inspection task with the revised interval and the strap coverage once the substantiation is agreed."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-Z-55-30-11-FIG-20",
+          "doc_type": "IPC",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "ORD555543-03",
+              "D5530113880239"
+            ],
+            "shared_fins": [],
+            "shared_zones": [
+              "322"
+            ],
+            "shared_ata_6d": [
+              "55-30-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already carries the strap with a post-modification effectivity and states that its anchor nuts are installed at embodiment. That statement needs to be reconciled with the repair position on removal.",
+          "resolution": "Restate the figure note once the repair design position on removal is known."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "SRM-Z-53-31-13-903",
+          "doc_type": "SRM",
+          "reason": "Same aft fuselage region and almost identical language about a reinforcing plate and repeat eddy current inspection, but it repairs the rear pressure bulkhead web. It shares no rib, no flange and no fastener pattern with the fin box root and an aircraft carrying it is unaffected by the strap."
+        },
+        {
+          "doc_id": "AMM-Z-53-31-13-200-011-A",
+          "doc_type": "AMM",
+          "reason": "Returned by the shared tail cone access and by the eddy current inspection vocabulary, but it inspects the rear pressure bulkhead. It uses the same staging and the same inspector, which is a planning overlap and not an engineering impact."
+        }
+      ],
+      "conclusion": "Not yet issued. The interim repair on two aircraft blocks, and the certification precedent found by similarity is the item most likely to shorten the programme.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

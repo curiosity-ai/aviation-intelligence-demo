@@ -1,0 +1,190 @@
+[
+  {
+    "doc_id": "MOD-133110",
+    "doc_type": "MOD",
+    "title": "Load-Sharing Hook and Roller Arrangement for the Fwd Cargo Door Latching",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2020-05-28",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S00003",
+          "to": "S01336"
+        }
+      ],
+      "excluded_msns": [
+        "S00559"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "S01361",
+      "production_cut_in_date": "2021-07-06",
+      "retrofit_via": [
+        "SLN-52-1043",
+        "SLN-52-1051"
+      ]
+    },
+    "dates": {
+      "created": "2018-10-11",
+      "released": "2020-05-28",
+      "revised": null,
+      "effective": "2020-06-15"
+    },
+    "abstract": "Second-generation forward cargo door latching in which the closing load is shared across all eight hooks by a compliant roller carriage, taking the peak bearing pressure off the two hooks nearest the actuator.",
+    "sections": {
+      "reason": "Shop findings after the corrosion-resistant hook standard entered service showed that the wear had moved rather than stopped: the two hooks closest to the actuator were carrying a disproportionate share of the closing load and were wearing on one flank only. Strain survey on a test door confirmed a 2.4 to 1 load ratio between the worst and best hook position. Sixty-one hook replacements were recorded across the fleet in eighteen months, and the resulting hook profile change was producing spurious door-not-locked indications on push-back at eight operators.",
+      "description": "A compliant roller carriage is introduced between the latch shaft and the hook so that the eight hooks take up the closing load progressively rather than in fixed sequence. The right-hand latching web kit D5230136217763 is replaced by an item with the carriage rail integral, and the inboard latching shear tie sub-assembly GRA7840-60 is added at each hook station to react the new rail load into the door frame. The outboard latching skin panel HOD355133-89 is re-drilled locally. Harness routing across the door is re-clipped with cable ties LN309661K1 to clear the carriage travel. The proximity target plate is moved 8 mm outboard so that the sensing gap is measured on the carriage rather than on the hook, which is what removes the spurious indication. Work is done through the door aperture in zone 891 and from outside in zone 893. Detail is on drawings D52301387215 and D52301376901.",
+      "effects": "Mass increase of 3.9 kg per aircraft. No electrical load change; the proximity sensing installation is unchanged electrically although its target moves. The arrangement is not interchangeable with either earlier standard because the carriage rail is integral to the web. Hook replacement drops out of the scheduled programme and is replaced by a carriage travel check at each C-check. IPC, AMM rigging and the trouble shooting procedure for door-not-locked indications all require update.",
+      "embodiment_note": "Cut in on the production line at MSN S01361 in July 2021 for the twin-engine aircraft. Retrofit is through Service Bulletin SLN-52-1043, with the wear survey of SLN-52-1051 available separately for operators who want to establish a baseline first. Typical embodiment is three days at an A-check with the door in place."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230136217763",
+        "GRA7840-60",
+        "HOD355133-89",
+        "LN309661K1"
+      ],
+      "fins": [],
+      "drawings": [
+        "D52301387215",
+        "D52301376901"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01361",
+        "S00559"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-131020",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "SLN-52-1043",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "SLN-52-1051",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-138410",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      }
+    ],
+    "keywords": [
+      "latch hook",
+      "roller carriage",
+      "load sharing",
+      "door not locked",
+      "proximity target"
+    ],
+    "originator": {
+      "department": "ESZS",
+      "site": "Neuhafen",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 133110,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.783",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 3.9,
+      "balance_impact": "Forward of the reference datum; CG shift below 0.02 % MAC",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "GRA7840-60",
+        "LN309661K1"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5230136217763",
+        "HOD355133-89"
+      ],
+      "fins_affected": [],
+      "software_affected": [],
+      "estimated_manhours": 118,
+      "estimated_cost_keur": 460,
+      "lead_time_weeks": 26,
+      "production_impact": "Cut-in at MSN S01361 with no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

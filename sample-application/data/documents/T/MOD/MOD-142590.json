@@ -1,0 +1,167 @@
+[
+  {
+    "doc_id": "MOD-142590",
+    "doc_type": "MOD",
+    "title": "Green System Reservoir Pressurisation Seal and Sight Glass Rework",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-11-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-12",
+      "title": "Main System — Reservoir Assembly"
+    },
+    "secondary_ata": [
+      "29-10-13"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00168"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "T00168",
+      "production_cut_in_date": "2020-06-16",
+      "retrofit_via": [
+        "TTN-29-1017"
+      ]
+    },
+    "dates": {
+      "created": "2018-09-27",
+      "released": "2019-11-19",
+      "revised": null,
+      "effective": "2019-12-09"
+    },
+    "abstract": "Rework of the green system reservoir pressurisation seal and its sight glass, addressing weeping at the upper gland that made fluid level checks unreliable and generated unnecessary reservoir replacements.",
+    "sections": {
+      "reason": "Line stations reported hydraulic staining around the green system reservoir on roughly one aircraft in five at every A check, and the sight glass was frequently too clouded by the same fluid film to read. Because the level could not be confirmed visually, the standard response became a reservoir replacement, and eleven of the forty-two units removed in 2018 tested fully serviceable on the bench. The root cause was traced to extrusion of the pressurisation gland at the upper land under repeated thermal cycling on long sectors.",
+      "description": "The upper pressurisation gland is replaced by a two-piece arrangement with an anti-extrusion backing ring, and the gland land in the reservoir head is machined to a wider groove. The internal transfer pump kit KE634291-03 is retained; its mounting rivets LN745829-02 are renewed because the head has to come off to reach the gland. The sight glass is changed for a borosilicate item with an internal wiper actuated by the fluid level float, so that the reading face is cleaned each time the level moves. The accumulator assembly NO46703-01 is unaffected but its charging line is disconnected for access. The hose at FIN 8893GA1 is disconnected and reconnected with a new seal. Work is done in the avionics bay area, zone 162, with the reservoir left on its mounting; the left main gear bay access at zone 723 is used for the charging line. Revised detail is on drawings D29101228651 and D29101262441.",
+      "effects": "Mass increase of 0.7 kg per aircraft. No electrical load change. The reworked reservoir head is interchangeable with the original at aircraft level, since the external interfaces are unchanged, but the gland parts are not interchangeable between the two head standards. Scheduled maintenance benefit is a reliable visual level check, which removes the fluid sampling task introduced as an interim measure. Servicing content for hydraulic reservoir replenishment requires update to describe the new sight glass reading procedure.",
+      "embodiment_note": "Cut in on the production line at MSN T00168 in June 2020. In service the rework is done at reservoir overhaul or, where an operator wants the whole fleet at one standard, through the retrofit service bulletin as a two-shift line task. No fleet campaign was mandated."
+    },
+    "entities": {
+      "part_numbers": [
+        "KE634291-03",
+        "LN745829-02",
+        "NO46703-01"
+      ],
+      "fins": [
+        "8893GA1"
+      ],
+      "drawings": [
+        "D29101228651",
+        "D29101262441"
+      ],
+      "software": [],
+      "zones": [
+        "162",
+        "723"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00168"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-29-1017",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "hydraulic reservoir",
+      "pressurisation gland",
+      "sight glass",
+      "no fault found",
+      "fluid staining"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 142590,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1435"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.7,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "LN745829-02"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "KE634291-03"
+      ],
+      "fins_affected": [
+        "8893GA1"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 38,
+      "estimated_cost_keur": 150,
+      "lead_time_weeks": 22,
+      "production_impact": "Cut-in at MSN T00168, supplier-side change with no line impact",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

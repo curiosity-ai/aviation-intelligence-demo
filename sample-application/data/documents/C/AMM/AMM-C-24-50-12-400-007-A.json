@@ -1,0 +1,176 @@
+[
+  {
+    "doc_id": "AMM-C-24-50-12-400-007-A",
+    "doc_type": "AMM",
+    "title": "Aft Secondary Distribution Box — Installation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2021-09-08",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "24",
+      "ata_4d": "24-50",
+      "ata_6d": "24-50-12",
+      "title": "AC Distribution — Secondary Distribution Box"
+    },
+    "secondary_ata": [
+      "92-31"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-03-02",
+      "released": "2017-10-19",
+      "revised": "2021-09-08",
+      "effective": "2021-09-29"
+    },
+    "abstract": "Installation of the aft secondary distribution box, with the strapping restoration, the ventilation flow measurement on the ventilated standard and the cabin outlet functional check at every seat row.",
+    "sections": {
+      "purpose": "This task gives the installation of the aft secondary distribution box, the restoration of the feeder group allocation and the checks that release the cabin outlets for service.",
+      "job_setup_note": "The strapping arrangement recorded at removal must be available before the terminations are made; a box installed to the wrong allocation puts the aft galley and the cabin outlets on one feeder, which is the condition the derating was written to prevent. Where the box is at the ventilated standard the hot wire anemometer is needed for the flow measurement at the box inlet.",
+      "procedure": "1. WARNING: KEEP THE AIRCRAFT DE-ENERGISED AND THE BATTERIES ISOLATED UNTIL EVERY TERMINATION IS MADE AND TORQUED. 2. Clean the rack mounting face and remove the aperture blank. 3. Put the box on its mounting and install the fasteners to the torque given in the task. 4. Install the feeder relay CIDE636017-51 and torque its terminals. 5. Make the harness D2450122851975 terminations and fit the connector HAR83831-56, following the recorded allocation exactly. 6. CAUTION: DO NOT DEVIATE FROM THE RECORDED FEEDER ALLOCATION. THE AFT GALLEY AND THE CABIN OUTLETS MUST NOT SHARE A FEEDER GROUP. 7. Restore the strapping of the bus bar 403XU2 and of the feeder contactor 89PC. 8. Where the box is at the ventilated standard, install the baffle with spacers AES140047-2A and connect the duct at the box inlet. 9. Install the box cover. 10. Restore power and do the insulation resistance check before any load is applied. 11. Where the box is at the ventilated standard, measure the ventilation flow at the box inlet and confirm it is inside the limit. 12. Do the cabin outlet functional check at every seat row and confirm the group allocation matches the table.",
+      "close_out": "Make sure that the cover is secured and that the rack access is closed. Confirm that no maintenance message remains active. Record the installed serial number, the restored allocation, the insulation resistance result and, where applicable, the ventilation flow measurement in the aircraft technical record."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2450122851975",
+        "HAR83831-56",
+        "CIDE636017-51",
+        "AES140047-2A"
+      ],
+      "fins": [
+        "403XU2",
+        "89PC",
+        "9177PC5"
+      ],
+      "drawings": [
+        "D24501217521",
+        "D24500024675"
+      ],
+      "software": [],
+      "zones": [
+        "244",
+        "252",
+        "272"
+      ],
+      "figures": [
+        "FIG-24-50-12-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-C-24-50-12-000-007-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-C-24-50-12-810-804",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "distribution box installation",
+      "feeder allocation",
+      "ventilation flow",
+      "insulation resistance",
+      "cabin outlet check"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "24-50-12-400-007-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. The ventilation flow measurement applies only to aircraft at the ventilated distribution box standard.",
+      "manhours": 10.0,
+      "personnel": 2,
+      "elapsed_time_hours": 6.0,
+      "access": {
+        "zones": [
+          "244",
+          "252",
+          "272"
+        ],
+        "access_panels": [
+          "244AR",
+          "252CR",
+          "272AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Keep the aircraft de-energised until every termination is made and torqued.",
+          "Do not apply load before the insulation resistance check has passed.",
+          "Use the recorded feeder allocation, not a generic diagram."
+        ],
+        "tooling": [
+          {
+            "reference": "98D24501-009",
+            "description": "Crimp tool set"
+          },
+          {
+            "reference": "98D24501-018",
+            "description": "Anemometer, hot wire"
+          },
+          {
+            "reference": "98D24501-021",
+            "description": "Insulation resistance tester"
+          }
+        ],
+        "consumables": [
+          "Contact lubricant, electrical",
+          "Cable ties, self-locking"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-C-24-50-12-000-007-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,493 @@
+[
+  {
+    "doc_id": "TSM-M-31-50-11-812-801",
+    "doc_type": "TSM",
+    "title": "Flight Warning Computer Reports a Fault that the Maintenance System Cannot Correlate",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-02-23",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-01-08",
+      "released": "2017-02-23",
+      "revised": "2017-02-23",
+      "effective": "2017-03-23"
+    },
+    "abstract": "Fault symptom procedure for a flight warning computer fault that the central maintenance system reports without a correlated source, common on aircraft without the fault correlation concentrator.",
+    "sections": {
+      "purpose": "This procedure gives the fault symptom analysis for a flight warning computer fault reported by the central maintenance system with no correlated source system identified.",
+      "fault_description": "The central maintenance system lists a flight warning computer fault but gives no source system and no supporting parameter. The flight deck shows no warning and the crew report nothing abnormal. On aircraft without the fault correlation concentrator the maintenance system has no way of linking the warning computer entry to the system that actually raised it, so the entry looks like a computer fault when it is usually the symptom of something else. Removing the warning computer on this evidence alone has a very high no-fault-found rate.",
+      "isolation_procedure": "1. Do not remove the flight warning computer on this evidence alone. 2. Read the central maintenance system report and record every fault entry from the same flight leg with its timestamp. 3. Establish whether the aircraft carries the fault correlation concentrator; if it does, run the correlation and use its output to select the source system. 4. If the aircraft has no concentrator, sort the fault entries by timestamp and look for a system fault within thirty seconds of the warning computer entry. 5. Check the data concentrator positions 6FP and 213FW4 for a reported internal fault. 6. To reach the rack, lift the forward cabin floor panels between stations 41 and 44 in zones 241 and 251. Each panel is held by 18 fasteners at the outboard joint and 14 at the inboard joint; account for that count when the panels are refitted. 7. Do a built-in test of the flight warning computer and record the result. 8. Read back the loaded warning computer software part number and compare it with the aircraft configuration record. 9. Check continuity at the rack backshell connectors J1 and J2, which carry the warning computer bus on the narrow rack. 10. Where the built-in test is clear and no correlated entry exists, do the confirmation task on the maintenance system display and confirm that the report is being read correctly. 11. Where the same entry repeats on three consecutive legs with no correlated source, replace the interface unit rather than the computer, and record the event with the full fault list so that the fleet correlation study can use it.",
+      "dispatch_note": "Dispatch is permitted with the maintenance system entry present and no flight deck warning. Dispatch is not permitted where a flight warning computer built-in test failure is confirmed, because the warning function itself is then in doubt."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150112805874",
+        "D3150008234986"
+      ],
+      "fins": [
+        "6FP",
+        "213FW4"
+      ],
+      "drawings": [
+        "D31500064995"
+      ],
+      "software": [
+        "LG2P8EB6B14"
+      ],
+      "zones": [
+        "241",
+        "251"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-45-20-11-000-021-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight warning computer",
+      "fault correlation",
+      "no fault found",
+      "maintenance system report",
+      "built-in test"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "31-50-11-812-801",
+      "fault_symptom": "Central maintenance system reports a flight warning computer fault with no correlated source",
+      "fault_codes": [
+        "315011008",
+        "315011029"
+      ],
+      "warning_messages": [
+        "FWS FWC 1 FAULT",
+        "FWS FWC 2 FAULT"
+      ],
+      "affected_fins": [
+        "6FP",
+        "213FW4"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Uncorrelated source system fault reported against the warning computer",
+          "probability_pct": 50,
+          "fin": "6FP"
+        },
+        {
+          "cause": "Data concentrator internal fault at one of the two positions",
+          "probability_pct": 23,
+          "fin": "213FW4"
+        },
+        {
+          "cause": "Warning computer software standard mismatch with the aircraft configuration",
+          "probability_pct": 17,
+          "fin": "6FP"
+        },
+        {
+          "cause": "Genuine flight warning computer internal failure",
+          "probability_pct": 10,
+          "fin": "213FW4"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-M-45-20-11-000-021-A",
+      "dispatch": {
+        "mel_item": "31-51-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Maintenance system entry present with no flight deck warning and a satisfactory built-in test."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-M-31-50-11-812-801",
+    "doc_type": "TSM",
+    "title": "Flight Warning Computer Reports a Fault that the Maintenance System Cannot Correlate",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2021-04-08",
+      "reason": "Fastener counts in the floor panel access instruction corrected for the two joints altered by the seat track splice strap standard.",
+      "raised_by_pawo": "PAWO-161330-01",
+      "raised_by_finding": "F04",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-01-08",
+      "released": "2017-02-23",
+      "revised": "2021-04-08",
+      "effective": "2021-05-06"
+    },
+    "abstract": "Fault symptom procedure for a flight warning computer fault that the central maintenance system reports without a correlated source, common on aircraft without the fault correlation concentrator.",
+    "sections": {
+      "purpose": "This procedure gives the fault symptom analysis for a flight warning computer fault reported by the central maintenance system with no correlated source system identified.",
+      "fault_description": "The central maintenance system lists a flight warning computer fault but gives no source system and no supporting parameter. The flight deck shows no warning and the crew report nothing abnormal. On aircraft without the fault correlation concentrator the maintenance system has no way of linking the warning computer entry to the system that actually raised it, so the entry looks like a computer fault when it is usually the symptom of something else. Removing the warning computer on this evidence alone has a very high no-fault-found rate.",
+      "isolation_procedure": "1. Do not remove the flight warning computer on this evidence alone. 2. Read the central maintenance system report and record every fault entry from the same flight leg with its timestamp. 3. Establish whether the aircraft carries the fault correlation concentrator; if it does, run the correlation and use its output to select the source system. 4. If the aircraft has no concentrator, sort the fault entries by timestamp and look for a system fault within thirty seconds of the warning computer entry. 5. Check the data concentrator positions 6FP and 213FW4 for a reported internal fault. 6. To reach the rack, lift the forward cabin floor panels between stations 41 and 44 in zones 241 and 251. On a pre MOD-161330 aircraft each panel is held by 18 fasteners at the outboard joint and 14 at the inboard joint. On a post MOD-161330 aircraft the two joints at stations 42 and 43 carry 20 outboard and 16 inboard, because the corrosion-resistant splice strap is wider and picks up two additional fasteners each side. Count the fasteners out and back in; a panel refitted short at a converted joint has been the cause of more than one repeat floor squawk. 7. Do a built-in test of the flight warning computer and record the result. 8. Read back the loaded warning computer software part number and compare it with the aircraft configuration record. 9. Check continuity at the rack backshell connectors J1 and J2, which carry the warning computer bus on the narrow rack. 10. Where the built-in test is clear and no correlated entry exists, do the confirmation task on the maintenance system display and confirm that the report is being read correctly. 11. Where the same entry repeats on three consecutive legs with no correlated source, replace the interface unit rather than the computer, and record the event with the full fault list so that the fleet correlation study can use it.",
+      "dispatch_note": "Dispatch is permitted with the maintenance system entry present and no flight deck warning. Dispatch is not permitted where a flight warning computer built-in test failure is confirmed, because the warning function itself is then in doubt."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150112805874",
+        "D3150008234986"
+      ],
+      "fins": [
+        "6FP",
+        "213FW4"
+      ],
+      "drawings": [
+        "D31500064995"
+      ],
+      "software": [
+        "LG2P8EB6B14"
+      ],
+      "zones": [
+        "241",
+        "251"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-45-20-11-000-021-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-161330",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight warning computer",
+      "fault correlation",
+      "no fault found",
+      "maintenance system report",
+      "built-in test"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "31-50-11-812-801",
+      "fault_symptom": "Central maintenance system reports a flight warning computer fault with no correlated source",
+      "fault_codes": [
+        "315011008",
+        "315011029"
+      ],
+      "warning_messages": [
+        "FWS FWC 1 FAULT",
+        "FWS FWC 2 FAULT"
+      ],
+      "affected_fins": [
+        "6FP",
+        "213FW4"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Uncorrelated source system fault reported against the warning computer",
+          "probability_pct": 50,
+          "fin": "6FP"
+        },
+        {
+          "cause": "Data concentrator internal fault at one of the two positions",
+          "probability_pct": 23,
+          "fin": "213FW4"
+        },
+        {
+          "cause": "Warning computer software standard mismatch with the aircraft configuration",
+          "probability_pct": 17,
+          "fin": "6FP"
+        },
+        {
+          "cause": "Genuine flight warning computer internal failure",
+          "probability_pct": 10,
+          "fin": "213FW4"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-M-45-20-11-000-021-A",
+      "dispatch": {
+        "mel_item": "31-51-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Maintenance system entry present with no flight deck warning and a satisfactory built-in test."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-M-31-50-11-812-801",
+    "doc_type": "TSM",
+    "title": "Flight Warning Computer Reports a Fault that the Maintenance System Cannot Correlate",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2022-12-06",
+      "reason": "Rack connector identifiers and the floor access instruction updated for the wide rack and concentrator standard.",
+      "raised_by_pawo": "PAWO-165240-01",
+      "raised_by_finding": "F05",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "31",
+      "ata_4d": "31-50",
+      "ata_6d": "31-50-11",
+      "title": "Central Warning — Flight Warning Computer"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-01-08",
+      "released": "2017-02-23",
+      "revised": "2022-12-06",
+      "effective": "2023-01-03"
+    },
+    "abstract": "Fault symptom procedure for a flight warning computer fault that the central maintenance system reports without a correlated source, common on aircraft without the fault correlation concentrator.",
+    "sections": {
+      "purpose": "This procedure gives the fault symptom analysis for a flight warning computer fault reported by the central maintenance system with no correlated source system identified.",
+      "fault_description": "The central maintenance system lists a flight warning computer fault but gives no source system and no supporting parameter. The flight deck shows no warning and the crew report nothing abnormal. On aircraft without the fault correlation concentrator the maintenance system has no way of linking the warning computer entry to the system that actually raised it, so the entry looks like a computer fault when it is usually the symptom of something else. Removing the warning computer on this evidence alone has a very high no-fault-found rate. On an aircraft at the MOD-165240 standard the concentrator is fitted and the correlation output normally names the source at the first step, so this procedure is short; the rack, its connector identifiers and the floor access are all different on that standard and the steps below are written for both.",
+      "isolation_procedure": "1. Do not remove the flight warning computer on this evidence alone. 2. Read the central maintenance system report and record every fault entry from the same flight leg with its timestamp. 3. Establish whether the aircraft carries the fault correlation concentrator; on a post MOD-165240 aircraft it is fitted in the upper spare slot of the wide rack. If it is present, run the correlation and use its output to select the source system. 4. If the aircraft has no concentrator, sort the fault entries by timestamp and look for a system fault within thirty seconds of the warning computer entry. 5. Check the data concentrator positions 6FP and 213FW4 for a reported internal fault. 6. To reach the rack, lift the forward cabin floor panels between stations 41 and 44 in zones 241 and 251. On a pre MOD-161330 aircraft each panel is held by 18 fasteners at the outboard joint and 14 at the inboard joint; on a post MOD-161330 aircraft the two joints at stations 42 and 43 carry 20 outboard and 16 inboard. On a post MOD-165240 aircraft the wide rack extends one bay further inboard and the panel at station 44 must come out as well, which the earlier issues of this procedure did not say. Count the fasteners out and back in. 7. Do a built-in test of the flight warning computer and record the result. 8. Read back the loaded warning computer software part number and compare it with the aircraft configuration record. 9. Check continuity at the rack backshell connectors. On the narrow rack the warning computer bus is on J1 and J2. On the wide rack of MOD-165240 the same bus is on J3 and J4, J1 and J2 are the concentrator feed, and the terminal computer 6796TN8 is re-cabled to the concentrator rather than to the rack backplane. Reading J1 and J2 on a wide rack measures the wrong pair and returns a clear result on a faulty bus. 10. Where the built-in test is clear and no correlated entry exists, do the confirmation task on the maintenance system display and confirm that the report is being read correctly. 11. Where the same entry repeats on three consecutive legs with no correlated source, replace the interface unit rather than the computer, and record the event with the full fault list so that the fleet correlation study can use it.",
+      "dispatch_note": "Dispatch is permitted with the maintenance system entry present and no flight deck warning. Dispatch is not permitted where a flight warning computer built-in test failure is confirmed, because the warning function itself is then in doubt."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3150112805874",
+        "D3150008234986"
+      ],
+      "fins": [
+        "6FP",
+        "213FW4",
+        "6796TN8"
+      ],
+      "drawings": [
+        "D31500064995"
+      ],
+      "software": [
+        "LG2P8EB6B14"
+      ],
+      "zones": [
+        "241",
+        "251"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-45-20-11-000-021-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-161330",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-165240",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "flight warning computer",
+      "fault correlation",
+      "rack connector",
+      "floor access",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "31-50-11-812-801",
+      "fault_symptom": "Central maintenance system reports a flight warning computer fault with no correlated source",
+      "fault_codes": [
+        "315011008",
+        "315011029"
+      ],
+      "warning_messages": [
+        "FWS FWC 1 FAULT",
+        "FWS FWC 2 FAULT"
+      ],
+      "affected_fins": [
+        "6FP",
+        "213FW4",
+        "6796TN8"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Uncorrelated source system fault reported against the warning computer",
+          "probability_pct": 50,
+          "fin": "6FP"
+        },
+        {
+          "cause": "Data concentrator internal fault at one of the two positions",
+          "probability_pct": 23,
+          "fin": "213FW4"
+        },
+        {
+          "cause": "Warning computer software standard mismatch with the aircraft configuration",
+          "probability_pct": 17,
+          "fin": "6FP"
+        },
+        {
+          "cause": "Genuine flight warning computer internal failure",
+          "probability_pct": 10,
+          "fin": "213FW4"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-M-45-20-11-000-021-A",
+      "dispatch": {
+        "mel_item": "31-51-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Maintenance system entry present with no flight deck warning and a satisfactory built-in test."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

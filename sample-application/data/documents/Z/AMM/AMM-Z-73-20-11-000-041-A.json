@@ -1,0 +1,180 @@
+[
+  {
+    "doc_id": "AMM-Z-73-20-11-000-041-A",
+    "doc_type": "AMM",
+    "title": "Removal of the Engine Electronic Control Unit from the Fan Case Mounting",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2025-07-02",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-20",
+      "ata_6d": "73-20-11",
+      "title": "Controlling — Engine Electronic Control Unit"
+    },
+    "secondary_ata": [
+      "73-20-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-03-08",
+      "released": "2022-10-19",
+      "revised": "2025-07-02",
+      "effective": "2025-07-23"
+    },
+    "abstract": "Removal of the engine electronic control unit from its fan case mounting, including the fault history download that must be taken before power is removed and the mounting bracket inspection.",
+    "sections": {
+      "purpose": "This task removes the engine electronic control unit from the fan case mounting so that it can be exchanged, and captures the fault history before aircraft power is removed.",
+      "job_setup_note": "Download the fault history before you remove power. On units at the earlier build standard the recorded window is short and the history is lost when the unit is de-powered, which is the single most common reason a returned unit is found serviceable. Do not disturb the cooling duct until the unit is out, because the duct inlet is the datum for the reinstallation clearance check.",
+      "procedure": "1. Make sure that the engine is cool and that the aircraft is powered. 2. Download the fault history from the unit at FIN 25EF and save it against the aircraft record. CAUTION: DOWNLOAD THE FAULT HISTORY BEFORE POWER IS REMOVED. ON THE EARLIER BUILD STANDARD THE RECORDED HISTORY IS LOST WHEN THE UNIT IS DE-POWERED AND THE UNIT WILL BE RETURNED AS NO FAULT FOUND. 3. Remove aircraft power and confirm that the engine cannot be started. WARNING: MAKE SURE THAT THE ENGINE START SELECTOR IS OFF AND THAT A WARNING NOTICE IS IN THE FLIGHT COMPARTMENT BEFORE YOU WORK ON THE FAN CASE. 4. Open the fan cowl and the pylon lower fairing to reach zones 433, 412 and 483. 5. Label and disconnect the harness connectors at the unit, and fit a protective cap on each. 6. Check that the grommets AES641639-8C at the harness penetrations are undamaged and record any finding. 7. Support the unit and remove the attachment nuts in the reverse of the torque sequence. 8. Withdraw the unit clear of the cooling duct D7320110360398 without disturbing the duct inlet. 9. Put the unit in its transport container with the connector caps fitted. 10. Inspect the mounting bracket INN739616-21 for cracking at the fillet radii and for elongated fastener holes. 11. Check the anchor nuts LN953956K3 for security and record any that turn. 12. Check the clearance between the tube assembly at FIN 342EF and the clamp at FIN 18EF and record it. 13. Blank the unit aperture.",
+      "close_out": "Leave the unit aperture blanked and the connectors capped. Attach the fault history download to the maintenance record and to the unit return documentation. Record the bracket inspection result and the tube clearance. Make an entry in the technical log that the engine must not be started."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7320110360398",
+        "INN739616-21",
+        "LN953956K3",
+        "AES641639-8C"
+      ],
+      "fins": [
+        "25EF",
+        "342EF",
+        "18EF",
+        "5EF"
+      ],
+      "drawings": [],
+      "software": [
+        "LE2NF49598E",
+        "LF5N800C79F",
+        "LB2N19CF509"
+      ],
+      "zones": [
+        "433",
+        "412",
+        "483"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-73-1010",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-Z-73-20-11-810-814",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "engine control unit",
+      "fault history download",
+      "mounting bracket",
+      "cooling duct datum",
+      "no fault found"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "73-20-11-000-041-A",
+      "task_type": "REMOVAL",
+      "effectivity_note": "All aircraft. The recorded fault window is 30 seconds pre MOD-157240 and 8 minutes post.",
+      "manhours": 5.5,
+      "personnel": 2,
+      "elapsed_time_hours": 4.0,
+      "access": {
+        "zones": [
+          "433",
+          "412",
+          "483"
+        ],
+        "access_panels": [
+          "433AR",
+          "412CL",
+          "483BR"
+        ],
+        "doors": [
+          "Fan cowl doors"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Download the fault history before power is removed.",
+          "Make sure that the engine start selector is off.",
+          "Do not disturb the cooling duct inlet during removal."
+        ],
+        "tooling": [
+          {
+            "reference": "Portable data loader",
+            "description": "Fault history download"
+          },
+          {
+            "reference": "Torque wrench 5-50 Nm",
+            "description": "Attachment nuts"
+          },
+          {
+            "reference": "Borescope, 6 mm",
+            "description": "Bracket fillet inspection"
+          }
+        ],
+        "consumables": [
+          "Blanking caps, electrical connector, assorted",
+          "Lint free wipes"
+        ],
+        "expendables": [
+          {
+            "part_number": "AES641639-8C",
+            "qty": 8
+          }
+        ]
+      },
+      "referenced_tasks": [],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

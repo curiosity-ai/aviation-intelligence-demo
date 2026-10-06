@@ -1,0 +1,316 @@
+[
+  {
+    "doc_id": "AMM-M-34-50-11-700-037-A",
+    "doc_type": "AMM",
+    "title": "Multi-Mode Receiver — Cold Start Test",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-07-15",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168155"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-02-07",
+      "released": "2017-07-15",
+      "revised": "2017-07-15",
+      "effective": "2017-08-12"
+    },
+    "abstract": "Cold start test of the multi-mode receiver on aircraft carrying the aligned navigation database, verifying that a first fix is obtained within three minutes after a thirty minute power-down.",
+    "sections": {
+      "purpose": "This task gives the cold start test used to confirm that the aligned navigation database performs as intended after a long power-down, and to close a crew report of a slow first fix.",
+      "job_setup_note": "The test requires the receiver to be de-powered for thirty minutes, so plan it into a period when the aircraft is not needed. The aircraft must be parked with a clear view of the sky. Confirm from the configuration record that the aligned database is fitted; on the delivered database this test will fail and the correct action is the database load, not a receiver replacement.",
+      "procedure": "1. Confirm from the configuration record that the aligned navigation database is fitted. 2. Open the receiver circuit breaker and attach the do-not-close tag. 3. Wait thirty minutes with the receiver de-powered. Record the start and end times. 4. CAUTION: DO NOT SHORTEN THE POWER-DOWN PERIOD. A SHORTER PERIOD LEAVES THE ALMANAC VALID AND GIVES A FAST FIX ON ANY DATABASE STANDARD. 5. Remove the tag and close the circuit breaker. 6. Start the stopwatch as the receiver initialises. 7. Record the time to the first valid fix. It must be less than three minutes. 8. Confirm the augmentation status is reported as available within one further minute. 9. WARNING: DO NOT MOVE THE AIRCRAFT OR OPERATE GROUND TRANSMITTERS NEAR THE ANTENNA DURING THE TEST. 10. If the time exceeds three minutes, do the operational check in AMM-M-34-50-11-200-036-A before any component is removed. 11. Record the result.",
+      "close_out": "Clear any maintenance message raised by the power-down. Confirm the flight deck shows a valid position and that no navigation caution remains. Record the cold start time and the database identification in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450118136339"
+      ],
+      "fins": [
+        "1038DA"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LE4PC90617C"
+      ],
+      "zones": [
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-34-50-11-200-036-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-168155",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cold start",
+      "first fix",
+      "navigation database",
+      "power-down",
+      "almanac"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "34-50-11-700-037-A",
+      "task_type": "TEST",
+      "effectivity_note": "Aircraft post MOD-168155 only",
+      "manhours": 1.5,
+      "personnel": 1,
+      "elapsed_time_hours": 1.0,
+      "access": {
+        "zones": [
+          "183"
+        ],
+        "access_panels": [
+          "183AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not move the aircraft during the test.",
+          "Do not operate ground transmitters near the antenna."
+        ],
+        "tooling": [
+          {
+            "reference": "98D34501-386",
+            "description": "Stopwatch, calibrated"
+          },
+          {
+            "reference": "98D34501-381",
+            "description": "Satellite signal simulator"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-34-50-11-200-036-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-M-34-50-11-700-037-A",
+    "doc_type": "AMM",
+    "title": "Multi-Mode Receiver — Cold Start Test",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-28",
+      "reason": "Task effectivity extended to the freighter on release of the freighter embodiment, with the rack layout difference called out at the access step.",
+      "raised_by_pawo": "PAWO-168155-01",
+      "raised_by_finding": "F02",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-168155"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-02-07",
+      "released": "2017-07-15",
+      "revised": "2026-07-28",
+      "effective": "2026-08-06"
+    },
+    "abstract": "Cold start test of the multi-mode receiver on aircraft carrying the aligned navigation database, verifying that a first fix is obtained within three minutes after a thirty minute power-down.",
+    "sections": {
+      "purpose": "This task gives the cold start test used to confirm that the aligned navigation database performs as intended after a long power-down, and to close a crew report of a slow first fix.",
+      "job_setup_note": "The test requires the receiver to be de-powered for thirty minutes, so plan it into a period when the aircraft is not needed. The aircraft must be parked with a clear view of the sky. Confirm from the configuration record that the aligned database is fitted; on the delivered database this test will fail and the correct action is the database load, not a receiver replacement. On the freighter the receiver circuit breaker is on the lower row of the bay panel rather than the upper, because the rack layout differs from the passenger aircraft; the breaker reference is the same and the test is otherwise identical.",
+      "procedure": "1. Confirm from the configuration record that the aligned navigation database is fitted. 2. Open the receiver circuit breaker and attach the do-not-close tag. On the freighter the breaker is on the lower row of the bay panel. 3. Wait thirty minutes with the receiver de-powered. Record the start and end times. 4. CAUTION: DO NOT SHORTEN THE POWER-DOWN PERIOD. A SHORTER PERIOD LEAVES THE ALMANAC VALID AND GIVES A FAST FIX ON ANY DATABASE STANDARD. 5. Remove the tag and close the circuit breaker. 6. Start the stopwatch as the receiver initialises. 7. Record the time to the first valid fix. It must be less than three minutes. 8. Confirm the augmentation status is reported as available within one further minute. 9. WARNING: DO NOT MOVE THE AIRCRAFT OR OPERATE GROUND TRANSMITTERS NEAR THE ANTENNA DURING THE TEST. 10. If the time exceeds three minutes, do the operational check in AMM-M-34-50-11-200-036-A before any component is removed. 11. Record the result.",
+      "close_out": "Clear any maintenance message raised by the power-down. Confirm the flight deck shows a valid position and that no navigation caution remains. Record the cold start time and the database identification in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450118136339"
+      ],
+      "fins": [
+        "1038DA"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LE4PC90617C"
+      ],
+      "zones": [
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-34-50-11-200-036-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-168155",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "cold start",
+      "first fix",
+      "navigation database",
+      "power-down",
+      "almanac"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "34-50-11-700-037-A",
+      "task_type": "TEST",
+      "effectivity_note": "Aircraft post MOD-168155 only, all three aircraft types. The freighter was added when its embodiment of MOD-168155 was released; the acceptance figures are the same and only the circuit breaker position at step 2 differs.",
+      "manhours": 1.5,
+      "personnel": 1,
+      "elapsed_time_hours": 1.0,
+      "access": {
+        "zones": [
+          "183"
+        ],
+        "access_panels": [
+          "183AL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not move the aircraft during the test.",
+          "Do not operate ground transmitters near the antenna."
+        ],
+        "tooling": [
+          {
+            "reference": "98D34501-386",
+            "description": "Stopwatch, calibrated"
+          },
+          {
+            "reference": "98D34501-381",
+            "description": "Satellite signal simulator"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-M-34-50-11-200-036-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

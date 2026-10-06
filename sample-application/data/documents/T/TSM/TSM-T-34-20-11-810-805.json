@@ -1,0 +1,170 @@
+[
+  {
+    "doc_id": "TSM-T-34-20-11-810-805",
+    "doc_type": "TSM",
+    "title": "NAV IR FAULT or Extended Alignment Time on the Ground",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-04-19",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-20",
+      "ata_6d": "34-20-11",
+      "title": "Attitude and Direction — Inertial Reference Unit"
+    },
+    "secondary_ata": [
+      "31-60"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-05-11",
+      "released": "2021-12-02",
+      "revised": "2022-04-19",
+      "effective": "2022-05-10"
+    },
+    "abstract": "Fault isolation for an inertial reference fault or an alignment that takes longer than the published time, distinguishing a disturbed alignment from a genuine unit or mounting problem.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an inertial reference fault or an extended alignment. Use it at the gate when a unit will not align, and after any work in the avionics bay.",
+      "fault_description": "An alignment that does not complete, or that takes appreciably longer than the published time, has three common causes and only one of them is the unit. Movement of the airframe during the alignment is the most common: refuelling, a towing movement, landing gear operation or even a heavy loading operation on a windy stand will disturb it. A poor shell bonding at the mounting tray is the second, and produces an intermittent fault that follows the position rather than the unit. A genuine internal failure is the third. The current production unit reports a different built-in test message set from the original, so read the message text and not only the code.",
+      "isolation_procedure": "Read the maintenance store and record the fault code, the unit position and the reported message text. Confirm the unit standard fitted at the reported position from the aircraft configuration list. Establish whether the aircraft was moved, refuelled, towed or loaded during the alignment; where it was, restart the alignment with the aircraft undisturbed and record the time. Where the alignment then completes inside the published time, close the event. Where it does not, measure the shell bonding resistance at the reported position and compare it against the limit. Where the bonding is out of limits, clean the tray contact area and repeat. Where the bonding is correct, exchange the unit with one from another position and repeat the alignment; if the fault follows the unit, replace it, and if it stays at the position, the fault is in the mounting or the aircraft wiring. Do a heading comparison between all three units before you close the event, whatever the outcome.",
+      "dispatch_note": "Despatch is permitted with one inertial reference unit inoperative, subject to the operational limitations in the minimum equipment list for the intended route. Despatch is not permitted with two units inoperative, and a unit that has not completed an alignment must be treated as inoperative even if it reports no fault."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3420114778684",
+        "GIR577736-25",
+        "XAD347757-62",
+        "EN160138K8"
+      ],
+      "fins": [
+        "2326FE",
+        "2TR3",
+        "708TR",
+        "8DA"
+      ],
+      "drawings": [
+        "D34201126638"
+      ],
+      "software": [],
+      "zones": [
+        "164",
+        "192",
+        "241",
+        "272"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-34-20-11-400-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-144880",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "inertial reference",
+      "alignment",
+      "shell bonding",
+      "disturbed alignment",
+      "built-in test"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "34-20-11-810-805",
+      "fault_symptom": "NAV IR FAULT or alignment not complete within the published time",
+      "fault_codes": [
+        "342011013",
+        "342011027"
+      ],
+      "warning_messages": [
+        "NAV IR 1 FAULT",
+        "NAV IR 3 FAULT",
+        "NAV IR ALIGN NOT COMPLETE"
+      ],
+      "affected_fins": [
+        "2326FE",
+        "2TR3",
+        "708TR",
+        "8DA"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Airframe disturbed during the alignment by refuelling, towing or loading",
+          "probability_pct": 46,
+          "fin": "2TR3"
+        },
+        {
+          "cause": "Shell bonding resistance out of limits at the mounting tray",
+          "probability_pct": 24,
+          "fin": "708TR"
+        },
+        {
+          "cause": "Unit internal failure",
+          "probability_pct": 19,
+          "fin": "2326FE"
+        },
+        {
+          "cause": "Aircraft wiring fault at the unit connector",
+          "probability_pct": 11,
+          "fin": "8DA"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-T-34-20-11-400-001-A",
+      "dispatch": {
+        "mel_item": "34-20-01B",
+        "dispatchable": true,
+        "dispatch_condition": "One unit inoperative, operational limitations applied for the intended route; a unit that has not completed alignment counts as inoperative"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

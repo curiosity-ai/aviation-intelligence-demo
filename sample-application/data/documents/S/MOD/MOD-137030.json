@@ -1,0 +1,175 @@
+[
+  {
+    "doc_id": "MOD-137030",
+    "doc_type": "MOD",
+    "title": "Engine Electronic Control Unit Mounting and Thermal Shroud Rework, Auran 7700",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2024-08-13",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "73",
+      "ata_4d": "73-20",
+      "ata_6d": "73-20-11",
+      "title": "Controlling — Engine Electronic Control Unit"
+    },
+    "secondary_ata": [
+      "71-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30R3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7720"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "SPARES"
+      ],
+      "production_effectivity": "S01873",
+      "production_cut_in_date": "2025-01-22",
+      "retrofit_via": [
+        "SLN-73-1015"
+      ]
+    },
+    "dates": {
+      "created": "2022-06-30",
+      "released": "2024-08-13",
+      "revised": null,
+      "effective": "2024-09-02"
+    },
+    "abstract": "Softer mounting and a redesigned thermal shroud for the engine electronic control unit on Auran-powered twin-engine aircraft, after vibration and soak temperature together shortened the life of the internal power supply.",
+    "sections": {
+      "reason": "Engine electronic control unit unscheduled removals on Auran-powered aircraft ran at 2.4 times the rate seen on the other engine option, with the shop consistently reporting power supply failures rather than processing faults. Instrumented engine running showed the unit seeing 1.8 g root mean square at the fan blade passing frequency, close to its qualification limit, and a soak temperature after shutdown some 18 degrees Celsius above the design assumption because the shroud traps heat rather than venting it. Neither number alone explains the removal rate; together they do.",
+      "description": "The unit is re-mounted on four wire rope isolators tuned to attenuate the blade passing frequency, replacing the rigid rail mounting. The outboard shroud D7320110360329 is replaced by a shroud with a rear vent and an internal reflective liner, and the outboard mounting bracket PEDE179202-26 is replaced by a bracket carrying the isolators. Protective sleeving AES911172K8 is added where the control harness crosses the new isolator travel, tubular spacers EN25879-6A set the isolator preload, and solid rivets AGS860444K6 close the shroud seam. The obsolete anchor nut set LN953956K3 is deleted from the bracket. The control unit database LC7C004B308 is unchanged and no software is re-loaded. Work is on the fan case with the fan cowl doors open, zones 452 and 461, and the pylon connector at position 189EF is disturbed and re-torqued. Detail is on drawings D73201119154 and D73201191928.",
+      "effects": "Mass increase of 2.1 kg per engine. No electrical load change. The isolator mounting is not interchangeable with the rigid rail because the bracket footprint changes, and a unit removed from a modified engine can be fitted to an unmodified one only with the old bracket. Predicted unscheduled removal rate falls from 0.19 to 0.07 per engine per year. No dispatch or MMEL change. The engine build up drawing set and the control unit removal and installation tasks require update; the engine change procedure gains a note on isolator handling.",
+      "embodiment_note": "Cut in on the production line at MSN S01873 in January 2025 and simultaneously in the engine build up standard at the propulsion partner. Retrofit is through Service Bulletin SLN-73-1015, which is normally done at an engine shop visit but can be done on wing in eleven hours per engine."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7320110360329",
+        "PEDE179202-26",
+        "AES911172K8",
+        "EN25879-6A",
+        "AGS860444K6",
+        "LN953956K3"
+      ],
+      "fins": [
+        "189EF"
+      ],
+      "drawings": [
+        "D73201119154",
+        "D73201191928"
+      ],
+      "software": [
+        "LC7C004B308"
+      ],
+      "zones": [
+        "452",
+        "461"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01873"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "SLN-73-1015",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "engine electronic control",
+      "wire rope isolator",
+      "thermal shroud",
+      "blade passing frequency",
+      "power supply failure"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Propulsion Systems"
+    },
+    "type_data": {
+      "mod_number": 137030,
+      "mod_class": "MINOR",
+      "change_category": "POWERPLANT",
+      "trigger": "RELIABILITY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.901"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 4.2,
+      "balance_impact": "Symmetric about the centre line; no reportable effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "AES911172K8",
+        "EN25879-6A",
+        "AGS860444K6"
+      ],
+      "parts_removed": [
+        "LN953956K3"
+      ],
+      "parts_modified": [
+        "D7320110360329",
+        "PEDE179202-26"
+      ],
+      "fins_affected": [
+        "189EF"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 58,
+      "estimated_cost_keur": 470,
+      "lead_time_weeks": 26,
+      "production_impact": "Cut-in at MSN S01873 and in the engine build up standard at the same point",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,224 @@
+[
+  {
+    "doc_id": "TTN-26-1021",
+    "doc_type": "SB",
+    "title": "Fire Protection — Installation of the Second Cargo Smoke Sampling Loop and Condensate Trap",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-08-28",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "25-50",
+      "21-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00159"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [
+          "MOD-143950"
+        ],
+        "post_sb": [
+          "TTN-26-1018"
+        ],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2019-01-22",
+      "released": "2019-08-28",
+      "revised": null,
+      "effective": "2019-09-23"
+    },
+    "abstract": "Installation of a second independently routed sampling loop, a condensate trap and a heated bleed in each cargo compartment, so that a flight deck smoke warning requires agreement between two loops.",
+    "sections": {
+      "planning_reason": "Sixty-three cargo smoke warnings recorded across the fleet in four years were found on inspection to be false, and nineteen of them led to a diversion at a cost of between 180 and 400 thousand euro each. Condensation forming in the sampling line during descent into humid destinations scatters light in the detector chamber in a way a single loop cannot distinguish from smoke. The dual loop standard makes agreement between two independently routed loops a condition of the flight deck warning.",
+      "description": "A second sampling loop is installed in each of the forward, aft and bulk compartments on a route that shares no support with the first. The obsolete regulator RO713090-77 is deleted from the sampling line and replaced by the valve kit UMD917763-33, which carries an integral condensate trap and a heated bleed at the low point. The upper detection sensor assembly D2610001304989 is remounted 120 mm inboard, out of the condensate path, and the clamp at FIN 2841WD is repositioned. Screws AES545422-2C attach the trap bracket and tension bolts EN830228K3 secure the relocated sensor mount.",
+      "accomplishment_summary": "Confirm that the sampling line borescope inspection Service Bulletin has been closed on this compartment. Empty the compartment and remove the lining panels along the new loop route. Remove the regulator RO713090-77 and cap the port. Install the valve kit UMD917763-33 with its condensate trap at the low point, using screws AES545422-2C on the trap bracket. Route the second sampling loop on the new supports, keeping the minimum separation from the first loop given in the accomplishment instructions. Move the detection sensor assembly D2610001304989 to the new position and secure it with tension bolts EN830228K3. Reposition the clamp at FIN 2841WD. Connect the heated bleed to the compartment heating supply and do an insulation check. Do the sampling flow check of AMM-T-26-10-12-200-001-A on both loops and confirm the flow split. Do a smoke generator test on the compartment and confirm that a warning is raised only when both loops respond. Refit the lining panels and record the embodiment.",
+      "effectivity_note": "Applicable to TITAN-88 aircraft up to and including MSN T00159. Accomplishment is only permitted on a compartment for which the sampling line borescope inspection has been completed and closed, because the voting logic assumes a clean line. Aircraft from MSN T00160 onwards were built to the dual loop standard.",
+      "material_note": "Kit K2610-1021-01 covers one compartment. Kit lead time is twenty-eight weeks. The heated bleed element has a shelf life of thirty-six months. Removed regulators are returned to Aeralis for the fleet monitoring programme."
+    },
+    "entities": {
+      "part_numbers": [
+        "RO713090-77",
+        "UMD917763-33",
+        "D2610001304989",
+        "AES545422-2C",
+        "EN830228K3"
+      ],
+      "fins": [
+        "2841WD"
+      ],
+      "drawings": [
+        "D26101202565",
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "115",
+        "131",
+        "151"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00159",
+        "T00160"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "TTN-26-1018",
+        "doc_type": "SB",
+        "relation": "REQUIRES"
+      },
+      {
+        "doc_id": "AMM-T-26-10-12-200-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-T-26-10-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-T-26-10-12-812-801",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "dual sampling loop",
+      "condensate trap",
+      "heated bleed",
+      "smoke generator test",
+      "false warning"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "TTN-26-1021",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "At the next scheduled base maintenance visit, or within 60 months after the date of this Service Bulletin, whichever occurs first.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-143950",
+      "manpower": {
+        "elapsed_time_hours": 144,
+        "manhours": 340,
+        "personnel": 3,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K2610-1021-01",
+        "kit_available_from": "2020-01-20",
+        "parts_required": [
+          {
+            "part_number": "UMD917763-33",
+            "qty": 2,
+            "uom": "EA"
+          },
+          {
+            "part_number": "AES545422-2C",
+            "qty": 48,
+            "uom": "EA"
+          },
+          {
+            "part_number": "EN830228K3",
+            "qty": 32,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "RO713090-77",
+            "qty": 2,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Sealant, silicone, fire resistant",
+          "Cable tie, self-locking",
+          "Contact cleaner, non-residue"
+        ],
+        "tooling": [
+          "Sampling flow test set",
+          "Smoke generator, certified type",
+          "Insulation resistance tester, 500 V"
+        ]
+      },
+      "weight_change_kg": 21.0,
+      "accomplishment_steps": 15,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2019-08-28",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

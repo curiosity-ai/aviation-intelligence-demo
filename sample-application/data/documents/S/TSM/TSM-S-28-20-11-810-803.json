@@ -1,0 +1,332 @@
+[
+  {
+    "doc_id": "TSM-S-28-20-11-810-803",
+    "doc_type": "TSM",
+    "title": "CTR TK PUMP LO PR with Fuel Available in the Centre Tank",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1995-04-02",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-10",
+      "28-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1994-09-17",
+      "released": "1995-04-02",
+      "revised": "1995-04-02",
+      "effective": "1995-04-20"
+    },
+    "abstract": "Fault isolation for a centre tank pump low pressure indication with fuel available, distinguishing a genuine pump failure from the bearing distress that follows repeated water ingestion at the pump inlet.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a centre tank pump low pressure indication when the fuel quantity indication shows usable fuel in the tank.",
+      "fault_description": "The indication appears in the cruise with usable fuel showing in the centre tank, and is often preceded by a period of noisy pump operation reported by the cabin crew from the rear of the cabin. On aircraft operating into persistently humid airfields the underlying cause is frequently not an electrical failure but bearing distress from repeated water ingestion, in which case the pump has been degrading for some time and the inlet screen carries the evidence. A pump that fails from this cause almost always has a wet drain sample history behind it.",
+      "isolation_procedure": "1. Record the fault codes and confirm the fuel quantity indication against the flight plan figure. A quantity indication error will produce the same symptom from a serviceable pump. 2. Check the pump contactor and its supply, and confirm the pump is running by the current draw. 3. If the pump is not running, isolate the electrical fault and do not continue with this procedure. 4. If the pump is running, do the sump drain of AMM-S-28-20-11-800-012-A and record whether a separated water layer is present. 5. Review the drain record for the previous thirty days. Three or more positive samples with the pump running points at bearing distress rather than a control fault. 6. Check the non-return valve position 34QA4 for free movement; a stuck valve gives a low delivery pressure with a healthy pump. 7. Remove the pump under AMM-S-28-20-11-000-011-A and record the inlet screen condition with a photograph. 8. Send the inlet photograph and the sump observation to the operator reliability department whether or not the pump is confirmed failed.",
+      "dispatch_note": "Dispatch is permitted with one centre tank pump inoperative under the applicable MMEL item, with the centre tank fuel restricted to the quantity that can be transferred by the remaining pump and with the associated performance penalty applied. Both centre tank pumps inoperative is a no-go item."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820111551992",
+        "D2820115755380",
+        "LN41340-8C"
+      ],
+      "fins": [
+        "34QA4"
+      ],
+      "drawings": [
+        "D28201202725"
+      ],
+      "software": [],
+      "zones": [
+        "183",
+        "591"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-28-20-11-000-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-28-20-11-800-012-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pump low pressure",
+      "water ingestion",
+      "inlet screen",
+      "drain record",
+      "bearing distress"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "28-20-11-810-803",
+      "fault_symptom": "CTR TK PUMP LO PR displayed with usable fuel indicated in the centre tank",
+      "fault_codes": [
+        "282011003",
+        "282011019"
+      ],
+      "warning_messages": [
+        "FUEL CTR TK PUMP 1 LO PR",
+        "FUEL CTR TK PUMP 2 LO PR"
+      ],
+      "affected_fins": [
+        "34QA4"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Pump bearing distress following repeated water ingestion at the inlet",
+          "probability_pct": 41,
+          "fin": "34QA4"
+        },
+        {
+          "cause": "Non-return valve stuck partly closed",
+          "probability_pct": 23,
+          "fin": "34QA4"
+        },
+        {
+          "cause": "Pump contactor or supply fault",
+          "probability_pct": 21,
+          "fin": "34QA4"
+        },
+        {
+          "cause": "Fuel quantity indication error giving a false usable quantity",
+          "probability_pct": 15,
+          "fin": "34QA4"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-S-28-20-11-000-011-A",
+      "dispatch": {
+        "mel_item": "28-20-01B",
+        "dispatchable": true,
+        "dispatch_condition": "One centre tank pump inoperative, centre tank quantity restricted, performance penalty applied. Both pumps inoperative is a no-go item"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-S-28-20-11-810-803",
+    "doc_type": "TSM",
+    "title": "CTR TK PUMP LO PR with Fuel Available in the Centre Tank",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2020-07-23",
+      "reason": "A note is added confirming that the pump access in the dry bay is still reachable once the third metering stage is installed, and how the panel is taken off around it.",
+      "raised_by_pawo": "PAWO-134860-01",
+      "raised_by_finding": "F04",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [
+      "28-10",
+      "28-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1994-09-17",
+      "released": "1995-04-02",
+      "revised": "2020-07-23",
+      "effective": "2020-08-10"
+    },
+    "abstract": "Fault isolation for a centre tank pump low pressure indication with fuel available, distinguishing a genuine pump failure from the bearing distress that follows repeated water ingestion at the pump inlet.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a centre tank pump low pressure indication when the fuel quantity indication shows usable fuel in the tank.",
+      "fault_description": "The indication appears in the cruise with usable fuel showing in the centre tank, and is often preceded by a period of noisy pump operation reported by the cabin crew from the rear of the cabin. On aircraft operating into persistently humid airfields the underlying cause is frequently not an electrical failure but bearing distress from repeated water ingestion, in which case the pump has been degrading for some time and the inlet screen carries the evidence. A pump that fails from this cause almost always has a wet drain sample history behind it.",
+      "isolation_procedure": "1. Record the fault codes and confirm the fuel quantity indication against the flight plan figure. A quantity indication error will produce the same symptom from a serviceable pump. 2. Check the pump contactor and its supply, and confirm the pump is running by the current draw. 3. If the pump is not running, isolate the electrical fault and do not continue with this procedure. 4. If the pump is running, do the sump drain of AMM-S-28-20-11-800-012-A and record whether a separated water layer is present. 5. Review the drain record for the previous thirty days. Three or more positive samples with the pump running points at bearing distress rather than a control fault. 6. Check the non-return valve position 34QA4 for free movement; a stuck valve gives a low delivery pressure with a healthy pump. 7. Remove the pump under AMM-S-28-20-11-000-011-A and record the inlet screen condition with a photograph. 8. Send the inlet photograph and the sump observation to the operator reliability department whether or not the pump is confirmed failed.",
+      "dispatch_note": "Dispatch is permitted with one centre tank pump inoperative under the applicable MMEL item, with the centre tank fuel restricted to the quantity that can be transferred by the remaining pump and with the associated performance penalty applied. Both centre tank pumps inoperative is a no-go item. Access note for the dry bay in zone 183: on aircraft at the extended discharge standard the third metering orifice block is mounted on the forward face of the same access, immediately behind the panel. The pump and its inlet screen remain reachable and no additional access is needed, but the panel is taken off outboard edge first so that it does not swing onto the block, and the block is never used as a hand or foot hold. The clearance was measured on a modified aircraft and is 95 mm at the closest point."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820111551992",
+        "D2820115755380",
+        "LN41340-8C"
+      ],
+      "fins": [
+        "34QA4"
+      ],
+      "drawings": [
+        "D28201202725"
+      ],
+      "software": [],
+      "zones": [
+        "183",
+        "591"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-28-20-11-000-011-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-28-20-11-800-012-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pump low pressure",
+      "water ingestion",
+      "inlet screen",
+      "drain record",
+      "dry bay access"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "28-20-11-810-803",
+      "fault_symptom": "CTR TK PUMP LO PR displayed with usable fuel indicated in the centre tank",
+      "fault_codes": [
+        "282011003",
+        "282011019"
+      ],
+      "warning_messages": [
+        "FUEL CTR TK PUMP 1 LO PR",
+        "FUEL CTR TK PUMP 2 LO PR"
+      ],
+      "affected_fins": [
+        "34QA4"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Pump bearing distress following repeated water ingestion at the inlet",
+          "probability_pct": 41,
+          "fin": "34QA4"
+        },
+        {
+          "cause": "Non-return valve stuck partly closed",
+          "probability_pct": 23,
+          "fin": "34QA4"
+        },
+        {
+          "cause": "Pump contactor or supply fault",
+          "probability_pct": 21,
+          "fin": "34QA4"
+        },
+        {
+          "cause": "Fuel quantity indication error giving a false usable quantity",
+          "probability_pct": 15,
+          "fin": "34QA4"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-S-28-20-11-000-011-A",
+      "dispatch": {
+        "mel_item": "28-20-01B",
+        "dispatchable": true,
+        "dispatch_condition": "One centre tank pump inoperative, centre tank quantity restricted, performance penalty applied. Both pumps inoperative is a no-go item"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

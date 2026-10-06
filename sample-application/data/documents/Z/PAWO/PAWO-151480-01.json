@@ -1,0 +1,243 @@
+[
+  {
+    "doc_id": "PAWO-151480-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Data Loader Interface Transceiver Change for the High Temperature Load Abort",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-03-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-11-24",
+      "released": "2026-03-17",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the transceiver change opened to decide whether its bulletin should be cancelled once the standard B conversion was available, closed early when the answer became obvious.",
+    "sections": {
+      "objective": "The transceiver change had been superseded by the standard B conversion, which contains it. The question was whether the earlier bulletin should be cancelled outright or left open for operators who wanted the temperature fix without the media change, and what the published set would look like in each case.",
+      "findings_summary": "Two items were confirmed and the analysis was stopped once they were clear. The earlier bulletin fits a unit that the standard B conversion replaces entirely, so an operator who embodies it and then converts has paid twice for the same aircraft; there is no population for whom keeping it open is the cheaper route. The data loading task carries a temperature caveat that applies only to the unmodified transceiver, and that caveat has to survive as long as any unmodified aircraft is flying, whether or not the bulletin is cancelled. The round was closed early as cancelled rather than completed, because the decision no longer needed an engineering position once the kit content was compared.",
+      "next_steps": "Cancel the earlier bulletin and point operators at the standard B conversion. Keep the temperature caveat in the data loading task until the last unmodified aircraft is converted. No further analysis required."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545112932616"
+      ],
+      "fins": [
+        "78TN"
+      ],
+      "drawings": [
+        "D45451170573"
+      ],
+      "software": [],
+      "zones": [
+        "252"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-151480",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "bulletin cancellation",
+      "superseded standard",
+      "temperature caveat",
+      "kit comparison"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-151480-01",
+      "subject_mod": "MOD-151480",
+      "source_io": null,
+      "pawo_status": "CANCELLED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-03-17",
+      "outcome": "REJECTED",
+      "raised_date": "2025-11-24",
+      "due_date": "2026-04-10",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [],
+        "estimated_manhours": 60,
+        "spent_manhours": 26
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "45"
+        ],
+        "ata_4d": [
+          "45-45",
+          "45-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM"
+        ],
+        "msn_range": {
+          "from": "Z02022",
+          "to": "Z07470"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4545112932616"
+          ],
+          "fins": [
+            "78TN"
+          ],
+          "drawings": [
+            "D45451170573"
+          ],
+          "zones": [
+            "252"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "superseded bulletin retained for an operator who wants only part of a later change"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare the kit content of the two bulletins",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Identify the published content that depends on the unmodified transceiver",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "ZPH-45-1010",
+          "doc_type": "SB",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4545112932616"
+            ],
+            "shared_fins": [
+              "78TN"
+            ],
+            "shared_zones": [
+              "252"
+            ],
+            "shared_ata_6d": [
+              "45-45-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The earlier bulletin fits a unit that the standard B conversion replaces entirely. An operator who embodies it and then converts has paid twice on the same aircraft.",
+          "resolution": "Cancel the earlier bulletin and point operators at the conversion."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-Z-45-45-11-900-026-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4545112932616"
+            ],
+            "shared_fins": [
+              "78TN"
+            ],
+            "shared_zones": [
+              "252"
+            ],
+            "shared_ata_6d": [
+              "45-45-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The data loading task carries a temperature caveat that applies only to the unmodified transceiver. It must survive as long as any unmodified aircraft flies.",
+          "resolution": "Retain the caveat and mark it against the pre-modification standard."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Cancelled rather than completed. Once the two kit contents were compared there was no population for whom keeping the earlier bulletin open was cheaper, and no engineering position was needed.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

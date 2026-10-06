@@ -1,0 +1,354 @@
+[
+  {
+    "doc_id": "TSM-S-42-10-12-810-813",
+    "doc_type": "TSM",
+    "title": "Core Processing Module Fault with No Function Loss",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "1995-09-26",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1994-12-31",
+      "released": "1995-09-26",
+      "revised": "1995-09-26",
+      "effective": "1995-10-14"
+    },
+    "abstract": "Fault isolation for an intermittent core processing module report with no loss of any hosted function, which is usually the backplane and almost never the module.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an intermittent core processing module report that appears in the maintenance system without any hosted function being lost.",
+      "fault_description": "A module report appears, typically once or twice a week, with no crew report and no function affected. The module is replaced, the report continues, the removed module tests serviceable. This pattern is the backplane, not the module. Connector insertion count is the strongest predictor we have: racks that have been through several module changes produce these reports and racks that have not do not. The observation comes from operator maintenance data and there is no published qualified count to measure a rack against, so the judgement of a high count is left to the engineer. The second candidate is induced noise at the rack feedthrough, which produces the same report and which only appears when a particular high-load item cycles.",
+      "isolation_procedure": "1. Read the backplane insertion count from the aircraft record before anything is removed. 2. Where the count is high in the engineer's judgement, treat the backplane as the probable cause and do not change modules; raise the finding to the operator engineering department. 3. Correlate the report timestamps against the operation of high-load items on the same bay. 4. Where the reports correlate with a single item cycling, do the avionics bay harness routing check. 5. Where the feedthrough is at the single-aperture build standard, the induced noise path is present and the segregation modification is the answer. 6. Where the feedthrough is segregated, confirm the screen terminates at the aperture and measure the divider stud bonding resistance. 7. Where neither correlates, remove the module in the reporting slot and examine the backplane contacts with a magnifier. CAUTION: EVERY REMOVAL COUNTS AGAINST THE BACKPLANE LIFE. DO NOT REMOVE A MODULE FOR INSPECTION ALONE UNLESS STEPS 1 TO 6 ARE EXHAUSTED. 8. Record any bent or recessed contact and do not refit a module into that slot. 9. Where the contacts are sound, move the module to a spare slot and observe for two weeks. 10. Where the report follows the module, replace it; where it stays with the slot, the backplane is confirmed. 11. Update the insertion count after every removal.",
+      "dispatch_note": "The aircraft may be dispatched with an intermittent module report provided no hosted function is affected and the built-in test does not raise a function-level report. Dispatch is not permitted where a bent backplane contact has been found in a populated slot."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25",
+        "QUD240612-74"
+      ],
+      "fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "drawings": [],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-42-10-12-000-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-92-21-11-200-048-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "module report",
+      "insertion count",
+      "backplane contact",
+      "induced noise",
+      "slot swap"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "42-10-12-810-813",
+      "fault_symptom": "Intermittent core processing module report with no hosted function affected",
+      "fault_codes": [
+        "421012005",
+        "421012023"
+      ],
+      "warning_messages": [
+        "IMA CPIOM FAULT"
+      ],
+      "affected_fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Backplane connector at or beyond its qualified insertion count",
+          "probability_pct": 52,
+          "fin": "493CP2"
+        },
+        {
+          "cause": "Induced noise from a shared feedthrough aperture",
+          "probability_pct": 26,
+          "fin": "7CP7"
+        },
+        {
+          "cause": "Bent or recessed backplane contact in one slot",
+          "probability_pct": 14,
+          "fin": "493CP2"
+        },
+        {
+          "cause": "Module internal intermittent",
+          "probability_pct": 8,
+          "fin": "7CP7"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-S-42-10-12-400-043-A",
+      "dispatch": {
+        "mel_item": "42-10-01B",
+        "dispatchable": true,
+        "dispatch_condition": "No hosted function affected, no function-level built-in test report, no bent contact in a populated slot"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-S-42-10-12-810-813",
+    "doc_type": "TSM",
+    "title": "Core Processing Module Fault with No Function Loss",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-06-22",
+      "reason": "The insertion count position now carries a published qualified limit and names the backplane standard that replaces module renewal on a high-count rack.",
+      "raised_by_pawo": "PAWO-133290-01",
+      "raised_by_finding": "F01",
+      "finding_type": "OVERLAPPING_SCOPE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "1994-12-31",
+      "released": "1995-09-26",
+      "revised": "2026-06-22",
+      "effective": "2026-07-10"
+    },
+    "abstract": "Fault isolation for an intermittent core processing module report with no loss of any hosted function, which is usually the backplane and almost never the module.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of an intermittent core processing module report that appears in the maintenance system without any hosted function being lost.",
+      "fault_description": "A module report appears, typically once or twice a week, with no crew report and no function affected. The module is replaced, the report continues, the removed module tests serviceable. This pattern is the backplane, not the module. Connector insertion count is the strongest predictor: the backplane connector is qualified for 250 insertions per slot, a figure now published against the delivered standard, and a rack at or beyond it gives an intermittent contact under vibration and temperature. What used to be a field judgement is the engineering position behind the supersession of the module replacement route: SLN-42-1009 is cancelled and SLN-42-1016, which renews the backplane and the cooling path together, is the entry point for a high-count rack. The second candidate is induced noise at the rack feedthrough, which produces the same report and which only appears when a particular high-load item cycles.",
+      "isolation_procedure": "1. Read the backplane insertion count from the aircraft record before anything is removed. 2. Where the count is at or above 250 in any slot, the backplane is the probable cause; plan SLN-42-1016 and do not change modules. Do not raise a kit order against SLN-42-1009, which is cancelled. 3. Correlate the report timestamps against the operation of high-load items on the same bay. 4. Where the reports correlate with a single item cycling, do the avionics bay harness routing check. 5. Where the feedthrough is at the single-aperture build standard, the induced noise path is present and the segregation modification is the answer. 6. Where the feedthrough is segregated, confirm the screen terminates at the aperture and measure the divider stud bonding resistance. 7. Where neither correlates, remove the module in the reporting slot and examine the backplane contacts with a magnifier. CAUTION: EVERY REMOVAL COUNTS AGAINST THE BACKPLANE LIFE. DO NOT REMOVE A MODULE FOR INSPECTION ALONE UNLESS STEPS 1 TO 6 ARE EXHAUSTED. 8. Record any bent or recessed contact and do not refit a module into that slot. 9. Where the contacts are sound, move the module to a spare slot and observe for two weeks. 10. Where the report follows the module, replace it; where it stays with the slot, the backplane is confirmed. 11. Update the insertion count after every removal and reset it to zero when the backplane is renewed.",
+      "dispatch_note": "The aircraft may be dispatched with an intermittent module report provided no hosted function is affected and the built-in test does not raise a function-level report. Dispatch is not permitted where a bent backplane contact has been found in a populated slot."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25",
+        "QUD240612-74"
+      ],
+      "fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "drawings": [],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-42-10-12-000-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-92-21-11-200-048-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-42-1009",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-42-1016",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "module report",
+      "insertion count",
+      "qualified limit",
+      "backplane renewal",
+      "induced noise"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "42-10-12-810-813",
+      "fault_symptom": "Intermittent core processing module report with no hosted function affected",
+      "fault_codes": [
+        "421012005",
+        "421012023"
+      ],
+      "warning_messages": [
+        "IMA CPIOM FAULT"
+      ],
+      "affected_fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Backplane connector at or beyond its qualified insertion count",
+          "probability_pct": 52,
+          "fin": "493CP2"
+        },
+        {
+          "cause": "Induced noise from a shared feedthrough aperture",
+          "probability_pct": 26,
+          "fin": "7CP7"
+        },
+        {
+          "cause": "Bent or recessed backplane contact in one slot",
+          "probability_pct": 14,
+          "fin": "493CP2"
+        },
+        {
+          "cause": "Module internal intermittent",
+          "probability_pct": 8,
+          "fin": "7CP7"
+        }
+      ],
+      "isolation_steps": 11,
+      "confirmation_task": "AMM-S-42-10-12-400-043-A",
+      "dispatch": {
+        "mel_item": "42-10-01B",
+        "dispatchable": true,
+        "dispatch_condition": "No hosted function affected, no function-level built-in test report, no bent contact in a populated slot"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

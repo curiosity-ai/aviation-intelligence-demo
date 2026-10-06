@@ -1,0 +1,189 @@
+[
+  {
+    "doc_id": "MOD-149740",
+    "doc_type": "MOD",
+    "title": "Dual Path Session Management and Antenna Sharing Change for the Air Traffic Control Datalink",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-21",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-70-12",
+      "46-40-12"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00095",
+          "to": "T00238"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "ECA",
+        "HKA",
+        "JTA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-146680"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-05-21",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Gives the datalink router an independent second session path and takes the satellite aerial sharing arrangement away from the cabin connectivity installation, so that oceanic sessions survive the coverage handover.",
+    "sections": {
+      "reason": "Eleven operators have reported controller-pilot datalink sessions dropping at the boundary between terrestrial and satellite coverage, with recovery taking four to six minutes. Forty-one reports were collected from one operator alone in eleven months. Shop investigation of removed routers has been consistently no-fault-found. Recorded data shows the satellite path available throughout, which points at the session layer rather than the radio: the router tears the session down and rebuilds it from the beginning instead of holding it open across the handover. The behaviour is worse on aircraft carrying the later cabin connectivity installation, which shares the aerial through a splitter that was not part of the original design assumption.",
+      "description": "The router mounting tray D2370115362436 is retained and the display interface unit D2370116071238 is replaced by a variant with a second independent processing path, so that the outgoing session is held open on the incoming medium while the new one is established. The vendor interface unit HOD93837-98 is re-qualified rather than replaced. The aerial splitter is removed and a dedicated feed is run to the satellite data unit, using the spacer set EN364032-83 at the new bulkhead penetration; the cabin connectivity installation keeps the original feed. Wiring at FIN 295RN and FIN 5RC is re-terminated and a new run is added to FIN 55RC in the upper avionics compartment. Work is in zones 163, 273 and 242. Detail is on drawing D23701264936. No change is made to the antenna itself or to the flight deck presentation.",
+      "effects": "Estimated mass increase of 4.8 kg per aircraft including the new feed, forward of the reference station, with a negligible centre-of-gravity effect. Electrical load rises by 55 volt-amperes for the second processing path. The replacement interface unit is not interchangeable with the current standard because the second path connector is new. Dispatch with the datalink inoperative is unchanged, but the crew indication during a handover changes from a lost connection message to a transferring state, which is a crew documentation change. Maintenance, illustrated parts, troubleshooting and the crew description of datalink availability all require update.",
+      "embodiment_note": "Retrofit only. Provisional estimate is two shifts with the upper avionics compartment open and the crown route accessible for the new aerial feed. No production cut-in is proposed until the aerial sharing question is settled with the connectivity supplier.",
+      "open_points": "Pre-analysis must establish whether removing the splitter invalidates the cabin connectivity installation approval, whether the second processing path can be added without re-opening the datalink qualification, and whether the crown route has capacity for the additional feed on aircraft that already carry the later connectivity harness. It must also confirm that the thermal relocation standard already embodied leaves room for the deeper interface unit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370115362436",
+        "D2370116071238",
+        "HOD93837-98",
+        "EN364032-83"
+      ],
+      "fins": [
+        "295RN",
+        "5RC",
+        "55RC"
+      ],
+      "drawings": [
+        "D23701264936"
+      ],
+      "software": [],
+      "zones": [
+        "163",
+        "273",
+        "242"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00124",
+        "T00132",
+        "T00232"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-T-260355",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      },
+      {
+        "doc_id": "MOD-146680",
+        "doc_type": "MOD",
+        "relation": "REQUIRES"
+      }
+    ],
+    "keywords": [
+      "datalink",
+      "session handover",
+      "aerial sharing",
+      "oceanic",
+      "second path"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 149740,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.1431",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 4.8,
+      "balance_impact": "Forward of reference station, negligible CG effect",
+      "electrical_load_impact_va": 55,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "EN364032-83"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2370116071238",
+        "HOD93837-98",
+        "D2370115362436"
+      ],
+      "fins_affected": [
+        "295RN",
+        "5RC",
+        "55RC"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 520,
+      "estimated_cost_keur": 2050,
+      "lead_time_weeks": 58,
+      "production_impact": "No production cut-in proposed at this stage",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

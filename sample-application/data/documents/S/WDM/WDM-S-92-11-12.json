@@ -1,0 +1,182 @@
+[
+  {
+    "doc_id": "WDM-S-92-11-12",
+    "doc_type": "WDM",
+    "title": "Overhead Panel Wiring — Engine Start and Auxiliary Power Unit Control Group",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2023-08-07",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-11",
+      "ata_6d": "92-11-12",
+      "title": "Flight Compartment Wiring — Overhead Panel Wiring"
+    },
+    "secondary_ata": [
+      "80-10",
+      "49-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2019-05-14",
+      "released": "2019-12-02",
+      "revised": "2023-08-07",
+      "effective": "2023-08-25"
+    },
+    "abstract": "Wiring sheet for the overhead panel group that carries the engine start and auxiliary power unit controls, including the discretes added when a start valve position switch is fitted.",
+    "sections": {
+      "purpose": "This sheet shows the overhead panel wiring for the engine start and auxiliary power unit control group, including the discrete signals that reach the panel from the nacelle and the tail cone.",
+      "sheet_note": "The three spare positions in the panel connector are the ones used when a start valve position switch is added, and they are shown here even on aircraft that do not have the switch, because that is what makes the retrofit a wiring job rather than a harness change. Wire numbering follows the panel position and not the harness build order. The overhead panel terminal block is the point at which the start discretes are split between the panel and the recording system, and a fault that affects both usually sits at that block rather than at either end.",
+      "routing_note": "The group leaves the overhead panel through the left-hand feedthrough, runs down the forward face of the cockpit bulkhead and joins the main forward run above the avionics bay. Nothing in this group passes below the floor line in the flight compartment. The nacelle discretes join at the pylon disconnect and are not shown beyond it; refer to the wing wiring sheets for that part of the route."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9211121104346",
+        "TRDE307197-02",
+        "D9211110599169",
+        "IBE397383-72"
+      ],
+      "fins": [
+        "34VU",
+        "3822VU5",
+        "6295VU",
+        "82VU"
+      ],
+      "drawings": [
+        "D92111257022"
+      ],
+      "software": [],
+      "zones": [
+        "211",
+        "214",
+        "216"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-80-10-11-400-040-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-S-92-21-11",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "overhead panel",
+      "start discretes",
+      "spare positions",
+      "terminal block",
+      "cockpit bulkhead"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Wiring Data"
+    },
+    "type_data": {
+      "sheet_number": "92-11-12",
+      "sheet_title": "OVERHEAD PANEL WIRING — ENGINE START AND AUXILIARY POWER UNIT CONTROL GROUP",
+      "diagram_type": "WIRING_DIAGRAM",
+      "harnesses": [
+        "2110W",
+        "2141W"
+      ],
+      "connectors": [
+        {
+          "reference": "2111VC",
+          "part_number": "D9211121104346",
+          "location_zone": "211",
+          "contacts": 55
+        },
+        {
+          "reference": "2143VC",
+          "part_number": "IBE397383-72",
+          "location_zone": "214",
+          "contacts": 37
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "34VU",
+          "description": "CONTACTOR, OVERHEAD PANEL WIRING, RH",
+          "zone": "211"
+        },
+        {
+          "fin": "3822VU5",
+          "description": "TERMINAL BLOCK, OVERHEAD PANEL WIRING",
+          "zone": "214"
+        },
+        {
+          "fin": "6295VU",
+          "description": "CIRCUIT BREAKER, COCKPIT PANEL HARNESSES",
+          "zone": "216"
+        }
+      ],
+      "wire_count": 84,
+      "wire_gauge_range": "AWG 24 to AWG 16",
+      "routes": [
+        "Overhead panel left feedthrough to the cockpit bulkhead forward face",
+        "Cockpit bulkhead to the main forward run above the avionics bay",
+        "Nacelle discretes join at the pylon disconnect"
+      ],
+      "related_sheets": [
+        "WDM-S-92-21-11",
+        "WDM-S-92-51-11"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

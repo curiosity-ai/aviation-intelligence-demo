@@ -1,0 +1,171 @@
+[
+  {
+    "doc_id": "AMM-M-21-20-13-100-052-A",
+    "doc_type": "AMM",
+    "title": "Recirculation Filter — Cleaning and Airflow Check",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-04-08",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-20",
+      "ata_6d": "21-20-13",
+      "title": "Distribution — Recirculation"
+    },
+    "secondary_ata": [
+      "21-20"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-02-13",
+      "released": "2017-10-16",
+      "revised": "2024-04-08",
+      "effective": "2024-05-06"
+    },
+    "abstract": "Cleaning of the recirculation filter housing and change of the element at the six month interval, with the manifold joint handling that differs between the delivered and the quarter turn housings.",
+    "sections": {
+      "purpose": "This task gives the six monthly cleaning of the recirculation filter housing, the change of the filter element and the airflow check that confirms the installation.",
+      "job_setup_note": "The task is done from the ceiling void access panels with the packs off. On the delivered housing the manifold joint has to be broken to get the element out and must be resealed on reassembly; on the quarter turn housing the joint stays closed and there is no reseal step. Working the wrong sequence on a quarter turn housing wastes an hour and disturbs a joint that did not need to be opened.",
+      "procedure": "1. Select the air conditioning packs off and confirm no airflow at the recirculation outlet. 2. Open the ceiling void access panels and support the ducting. 3. On aircraft with the delivered housing, break the manifold joint at the flange and support the manifold. 4. On aircraft post MOD-168276, release the quarter turn cover and leave the manifold joint closed. 5. Remove the filter element and put it in the disposal bag. 6. CAUTION: DO NOT BLOW THE HOUSING OUT WITH COMPRESSED AIR IN THE CEILING VOID. THE DUST WILL ENTER THE CABIN THROUGH THE ADJACENT OUTLETS. 7. Clean the housing bore and the sealing faces with the approved agent and a damp wipe. 8. Fit the new element with the flow arrow towards the manifold. 9. On aircraft with the delivered housing, reseal and reassemble the manifold joint and torque in the sequence given. 10. On aircraft post MOD-168276, close the quarter turn cover and confirm it latches. 11. WARNING: MAKE SURE NO TOOL OR WIPE REMAINS IN THE CEILING VOID BEFORE THE PANELS ARE CLOSED. 12. Select the packs on and measure the airflow at the recirculation outlet. 13. Refit the ceiling void access panels.",
+      "close_out": "Confirm the cabin airflow is normal and that no noise is audible at the manifold joint. Dispose of the element to the local scheme. Record the element change, the airflow value and the next due date in the aircraft technical log."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2120112750655",
+        "AES418841-25",
+        "D2120006111409"
+      ],
+      "fins": [
+        "482HM",
+        "3HQ"
+      ],
+      "drawings": [
+        "D21201107143"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-26-10-12-200-033-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-168276",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "recirculation filter",
+      "element change",
+      "manifold joint",
+      "airflow check",
+      "ceiling void"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "21-20-13-100-052-A",
+      "task_type": "CLEANING",
+      "effectivity_note": "All aircraft; steps 4 and 10 apply to aircraft post MOD-168276, steps 3 and 9 to all others",
+      "manhours": 3.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "111",
+          "293"
+        ],
+        "access_panels": [
+          "111BL",
+          "293BL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Make sure no tool or wipe remains in the ceiling void before the panels are closed.",
+          "Select the packs off and confirm no airflow before the housing is opened."
+        ],
+        "tooling": [
+          {
+            "reference": "98D21201-601",
+            "description": "Airflow meter 0-600 l/s"
+          },
+          {
+            "reference": "98D21201-605",
+            "description": "Torque wrench 2-20 Nm"
+          }
+        ],
+        "consumables": [
+          "Filter element, recirculation",
+          "Sealant, duct flange",
+          "Cleaning agent, cabin approved"
+        ],
+        "expendables": [
+          {
+            "part_number": "AES418841-25",
+            "qty": 8
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-M-26-10-12-200-033-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

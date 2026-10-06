@@ -1,0 +1,180 @@
+[
+  {
+    "doc_id": "MOD-159680",
+    "doc_type": "MOD",
+    "title": "Lateral Load Introduction Strap at the Fin Box Root Rib for High-Cycle Short-Sector Aircraft",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "55",
+      "ata_4d": "55-30",
+      "ata_6d": "55-30-11",
+      "title": "Vertical Stabilizer — Fin Box Structure"
+    },
+    "secondary_ata": [
+      "55-30-12",
+      "53-40"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "ZEPHYR-20",
+        "ZEPHYR-22"
+      ],
+      "models": [
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "Z00313",
+          "to": "Z04665"
+        }
+      ],
+      "excluded_msns": [
+        "Z00947"
+      ],
+      "engine_types": [
+        "VDK-56B",
+        "VNT-2500A"
+      ],
+      "operators": [
+        "ATS",
+        "CKP",
+        "FRR"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-05-18",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Proposal for a bolted strap that spreads the lateral load introduction at the fin box root rib, restoring the original inspection interval on aircraft whose sector length has driven cycles far beyond the design assumption.",
+    "sections": {
+      "reason": "Four findings in two years at the fin box root rib, at 47000, 51000, 51500 and 53000 flight cycles, have turned a scheduled structural inspection into the item that decides how often the tail dock is used on the oldest short-sector aircraft. Each finding has taken the aircraft into an unplanned repair with the rudder removed, and two of the four are now flying with a temporary scheme that carries its own repeat inspection at 3000 cycles. The population at risk accumulates 2900 cycles a year on forty to fifty minute sectors, against a design assumption of roughly half that, and no operator in the group plans to retire an aircraft before 2033.",
+      "description": "A machined strap is bolted across the root rib so that the lateral load from the fin is introduced into the rear fuselage over four fastener rows instead of two. The strap D5530113880239 lands on the existing rib flange, the shear tie D5530110749890 is renewed at each of the three lower stations, and the splice plate that carries the diagonal is replaced by the skin panel item ORD555543-03 where the existing plate is too thin to accept the additional row. Anchor nuts AES147323-7D are installed in the rib flange, which is the operation that fixes the geometry and makes the change irreversible. The rudder is removed and the fin leading edge is opened; the fin box itself is not disturbed above the root rib. Work is in zones 321, 322 and 323 with the aircraft on its wheels. Detail is on drawings D55301101338 and D55301155365.",
+      "effects": "Mass increase of 18.5 kilograms at the extreme aft of the aircraft, with a centre of gravity shift of 0.11 per cent MAC that has to be reflected in the weight and balance manual. No electrical load change. Not interchangeable: the rib flange is drilled for the anchor nuts at embodiment. The root rib inspection returns to the base structural interval, removing the standalone tail dock visit, and the repeat inspection on the temporary scheme is superseded for aircraft that are modified. The structure repair manual content for the fin root, the fin inspection task and the parts figure all require re-issue, and the change touches the same load path as the tailplane attachment work already released for the longer variant.",
+      "embodiment_note": "Retrofit only, embodied in a single tail dock visit with the rudder removed. Nine to eleven days is the provisional estimate, most of it access and the drilling of the anchor nut pattern. No production cut-in is proposed; the affected build standard left the line in 2004.",
+      "open_points": "Pre-analysis must establish whether the two aircraft carrying the temporary reinforcing scheme can be modified without first removing it, whether the additional 18.5 kilograms at the extreme aft is acceptable against the aft loading limit on the shorter variant, whether the damage tolerance substantiation can be shared with the tailplane attachment work rather than repeated, and what the anchor nut pattern does to the published repair schemes for the root rib."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5530113880239",
+        "D5530110749890",
+        "AES147323-7D",
+        "ORD555543-03"
+      ],
+      "fins": [],
+      "drawings": [
+        "D55301101338",
+        "D55301155365"
+      ],
+      "software": [],
+      "zones": [
+        "321",
+        "322",
+        "323"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "Z00947"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "IO-Z-260502",
+        "doc_type": "IO",
+        "relation": "RAISED_BY"
+      }
+    ],
+    "keywords": [
+      "fin box root rib",
+      "lateral load introduction",
+      "bolted strap",
+      "inspection interval",
+      "tail dock"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Alcadara",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 159680,
+      "mod_class": "MAJOR",
+      "change_category": "STRUCTURE",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.571",
+          "CS 25.301",
+          "CS 25.307"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 18.5,
+      "balance_impact": "Extreme aft, CG shift 0.11 % MAC, weight and balance manual affected",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "D5530113880239",
+        "AES147323-7D",
+        "ORD555543-03"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D5530110749890"
+      ],
+      "fins_affected": [],
+      "software_affected": [],
+      "estimated_manhours": 940,
+      "estimated_cost_keur": 3600,
+      "lead_time_weeks": 58,
+      "production_impact": "No cut-in; the affected build standard is out of production",
+      "risk_level": "HIGH"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

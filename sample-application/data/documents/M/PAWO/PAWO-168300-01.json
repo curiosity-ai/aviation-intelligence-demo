@@ -1,0 +1,270 @@
+[
+  {
+    "doc_id": "PAWO-168300-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Closed) — Data Load Record Extension, Proposed Freighter Deferral",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-08-06",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-12",
+      "title": "Data Loading — Data Load Configuration"
+    },
+    "secondary_ata": [
+      "45-20",
+      "31-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2025-08-06",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis of a proposal to defer the load record retrofit on freighter aircraft, rejected because the partial-load exposure is worse on a fleet that loads software more often, not better.",
+    "sections": {
+      "objective": "Establish whether the extended load record retrofit could be deferred on the freighter fleet, whose operator argued that its shorter turnarounds made an avionics bay visit harder to schedule.",
+      "findings_summary": "Three items were confirmed and the deferral was rejected. The operator's own data undermined the request: its freighters carry out roughly twice as many loading actions per year as its passenger aircraft, which means twice the exposure to the interruption the retrofit addresses. The bulletin already allows a line station embodiment of five hours, which fits inside the operator's overnight window, so the scheduling argument did not hold once the actual task time was checked. The troubleshooting entry for an incomplete session has no dispatch relief, which is the point the operator had not appreciated: without the extended record an incomplete session on a freighter grounds the aircraft until the whole session is repeated. The crew description entry needed no change either way.",
+      "next_steps": "Deferral rejected. The operator embodied the retrofit at its next overnight cycle and the exposure data was retained for the rollback proposal."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545120504726",
+        "LN760453-5C"
+      ],
+      "fins": [
+        "228TN",
+        "2848TN"
+      ],
+      "drawings": [
+        "D45450007012"
+      ],
+      "software": [
+        "LH4PE007934"
+      ],
+      "zones": [
+        "273",
+        "262"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168300",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "closed pre-analysis",
+      "freighter",
+      "deferral",
+      "load exposure",
+      "dispatch relief"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-168300-01",
+      "subject_mod": "MOD-168300",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2025-11-12",
+      "outcome": "REJECTED",
+      "raised_date": "2025-08-06",
+      "due_date": "2025-11-21",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 70,
+        "spent_manhours": 83
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42F"
+        ],
+        "ata_2d": [
+          "45",
+          "31"
+        ],
+        "ata_4d": [
+          "45-45",
+          "45-20",
+          "31-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "TSM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "M00001",
+          "to": "M00475"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D4545120504726",
+            "LN760453-5C"
+          ],
+          "fins": [
+            "228TN",
+            "2848TN"
+          ],
+          "drawings": [
+            "D45450007012"
+          ],
+          "zones": [
+            "273",
+            "262"
+          ],
+          "software": [
+            "LH4PE007934"
+          ]
+        },
+        "similarity_seeds": [
+          "a deferral requested by the fleet with the highest exposure"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Compare loading action frequency across the operator's fleets",
+          "method": "MANUAL_REVIEW",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the bulletin task time against the overnight window",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MRD-45-1029",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "45-45-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin covers the whole family including the freighter and states a five hour line embodiment, which fits the operator's overnight window; a deferral would have required an effectivity carve-out with no technical basis.",
+          "resolution": "Reject the deferral and confirm the task time with the operator."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-M-45-20-11-812-802",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The procedure gives no dispatch relief for an incomplete session, so an unmodified freighter is grounded until the session is repeated in full. That consequence was the strongest argument against the deferral and the operator had not seen it.",
+          "resolution": "Point the operator at the dispatch statement in the procedure."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "AMM-M-45-45-12-900-053-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "45-45-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The record format check is the task that would be run more often on a deferred freighter, and its steps assume the aircraft standard is known before it starts.",
+          "resolution": "No change; recorded as supporting evidence for the rejection."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "AMM-M-31-30-11-400-035-A",
+          "doc_type": "AMM",
+          "reason": "Surfaces because it also warns about releasing an aircraft whose reported configuration disagrees with the record, in very similar words, but it is a recorder installation task with no data loading content and no shared identifier."
+        }
+      ],
+      "conclusion": "Closed. Deferral rejected; the exposure data was retained and later supported the rollback proposal.",
+      "recommendation": "REJECT"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

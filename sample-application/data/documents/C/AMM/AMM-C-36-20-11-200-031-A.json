@@ -1,0 +1,186 @@
+[
+  {
+    "doc_id": "AMM-C-36-20-11-200-031-A",
+    "doc_type": "AMM",
+    "title": "Duct Pressure Sensing Line and Restrictor — Inspection and Response Check",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2023-09-18",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "36",
+      "ata_4d": "36-20",
+      "ata_6d": "36-20-11",
+      "title": "Indicating — Bleed Monitoring Computer"
+    },
+    "secondary_ata": [
+      "36-20-12",
+      "36-10"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-03-27",
+      "released": "2023-09-18",
+      "revised": null,
+      "effective": "2023-10-16"
+    },
+    "abstract": "Inspection of the duct pressure sensing line and its restrictor, with a step response check that establishes whether the damping is correct before a pressure sensor is replaced for a nuisance caution.",
+    "sections": {
+      "purpose": "To inspect the duct pressure sensing line and its restrictor and to measure the sensing response, so that a nuisance caution is not answered by replacing a serviceable sensor.",
+      "job_setup_note": "The engine must have been shut down for at least ninety minutes and the bleed system depressurised. The wing root and winglet access must be open. A pneumatic step source and the maintenance terminal are needed for the response check. This task should be done before any pressure sensor is replaced for a caution that clears itself in the climb. Two persons are needed.",
+      "procedure": "WARNING: MAKE SURE THAT THE BLEED SYSTEM IS DEPRESSURISED AND THAT THE ENGINE HAS BEEN SHUT DOWN FOR AT LEAST NINETY MINUTES BEFORE THE SENSING LINE IS DISCONNECTED. Put the safety barriers in position and open the wing root access at zone 531 and the winglet access at zone 583. Examine the sensing line along its whole run for chafing, for kinking and for loose clamps, and record the position of any finding. Examine the union at each end for signs of leakage. Disconnect the sensing line at the restrictor D3620127370378 and cap the open port. CAUTION: DO NOT BLOW THROUGH THE RESTRICTOR TO CHECK IT. THE ORIFICE IS SMALL ENOUGH THAT BREATH MOISTURE WILL BLOCK IT AND THE BLOCKAGE WILL NOT BE VISIBLE. Remove the restrictor and examine the orifice under magnification for partial blockage and for erosion. Measure the orifice with the pin gauge set and record the size. Install the restrictor with a new seal and torque the union to 12 Nm. Connect the pneumatic step source at the duct tapping. Restore the electrical power and select the bleed maintenance page. Apply a step of the magnitude in the task and record the time for the indicated pressure to reach ninety per cent of the step. Repeat three times and take the mean. Compare the mean with the acceptance band, which differs between the delivered restrictor and the smaller orifice item.",
+      "close_out": "Disconnect the pneumatic step source and cap the duct tapping. Make sure that every clamp on the sensing line run is secure and that the line is not touching structure. Close the wing root and winglet access. Remove the safety barriers. Record the orifice size, the three response times, the mean and the acceptance band used. Do not replace a pressure sensor for a nuisance caution until this task has passed."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3620127370378",
+        "FAR419327-35",
+        "D3620110073248",
+        "D3620115081319",
+        "EN521096K2"
+      ],
+      "fins": [
+        "4PU9",
+        "883PU",
+        "9PN1",
+        "3PN"
+      ],
+      "drawings": [
+        "D36201137521",
+        "D36201229644"
+      ],
+      "software": [
+        "LD1C8FF1C57"
+      ],
+      "zones": [
+        "531",
+        "583",
+        "443"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "TSM-C-36-20-11-810-816",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-C-36-10-12-400-012-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "duct pressure sensing",
+      "restrictor orifice",
+      "step response",
+      "nuisance caution",
+      "damping"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "task_number": "36-20-11-200-031-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft. The acceptance band differs where the smaller restrictor orifice is fitted.",
+      "manhours": 4.8,
+      "personnel": 2,
+      "elapsed_time_hours": 3.2,
+      "access": {
+        "zones": [
+          "531",
+          "583",
+          "443"
+        ],
+        "access_panels": [
+          "531AL",
+          "583BR"
+        ],
+        "doors": [
+          "Wing root access",
+          "Winglet access"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Make sure that the bleed system is depressurised before the sensing line is disconnected.",
+          "Do not blow through the restrictor to check it.",
+          "Put the safety barriers in position."
+        ],
+        "tooling": [
+          {
+            "reference": "98C36201-172",
+            "description": "Pneumatic step source, sensing line"
+          },
+          {
+            "reference": "98C36201-186",
+            "description": "Pin gauge set, restrictor orifice"
+          },
+          {
+            "reference": "98C45201-210",
+            "description": "Maintenance terminal and load media reader"
+          }
+        ],
+        "consumables": [
+          "Union seal, sensing line",
+          "Blanking caps, pneumatic port"
+        ],
+        "expendables": [
+          {
+            "part_number": "EN521096K2",
+            "qty": 4
+          }
+        ]
+      },
+      "referenced_tasks": [
+        "AMM-C-36-10-12-400-012-A"
+      ],
+      "steps": 16,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

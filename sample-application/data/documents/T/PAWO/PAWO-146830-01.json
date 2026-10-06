@@ -1,0 +1,256 @@
+[
+  {
+    "doc_id": "PAWO-146830-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Secondary Retention for the Chemical Oxygen Generators",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "35",
+      "ata_4d": "35-20",
+      "ata_6d": "35-20-11",
+      "title": "Passenger Oxygen — Chemical Oxygen Generators"
+    },
+    "secondary_ata": [
+      "25-20-12"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-27",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Re-analysis of the oxygen generator retention standard, opened after cabin audits found brackets fitted with the original end cap, to decide whether the maintenance programme relief can still be claimed.",
+    "sections": {
+      "objective": "Establish whether the inspection interval relief granted with the retention standard remains justified given that two cabin audits found brackets fitted with the original end cap, and whether the inspection task can detect that condition reliably.",
+      "findings_summary": "The relief was validated but with a task change. The retention only works when the machined end cap engages the bracket, and a bracket fitted with the original cap gives no retention while looking correct from a distance. The inspection task contained a step that checked for the presence of the bracket but not for the cap type, which is exactly the condition the audits found. That step has been rewritten and a caution added. The illustrated parts figure was checked and lists both cap standards, so the ordering path is not the cause; the cause is that the two caps are visually similar in the service unit. With the task change the relief remains justified, because the corrected inspection will find the condition at the first opportunity.",
+      "next_steps": "Publish the corrected inspection task with the end cap type check and the caution. Retain the interval relief. Issue an all-operator information notice describing the condition, so that operators can check their embodied aircraft before the next scheduled inspection."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3520117585166",
+        "AES260727K2",
+        "XAN326870-64"
+      ],
+      "fins": [
+        "957HD"
+      ],
+      "drawings": [
+        "D35200029961"
+      ],
+      "software": [],
+      "zones": [
+        "981",
+        "963"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-146830",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "oxygen generator",
+      "retention",
+      "assembly error",
+      "historical"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Vaubranche",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-146830-01",
+      "subject_mod": "MOD-146830",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-06-11",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-04-27",
+      "due_date": "2026-06-19",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ETGC",
+        "lead_site": "Vaubranche",
+        "contributing_departments": [
+          "EYIS"
+        ],
+        "estimated_manhours": 80,
+        "spent_manhours": 96
+      },
+      "search_scope": {
+        "programs": [
+          "T"
+        ],
+        "aircraft_types": [
+          "TITAN-88"
+        ],
+        "ata_2d": [
+          "35",
+          "25"
+        ],
+        "ata_4d": [
+          "35-20",
+          "25-20"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM"
+        ],
+        "msn_range": {
+          "from": "T00033",
+          "to": "T00171"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D3520117585166",
+            "XAN326870-64"
+          ],
+          "fins": [
+            "957HD"
+          ],
+          "drawings": [
+            "D35200029961"
+          ],
+          "zones": [
+            "981"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "item working loose in an overhead cabin installation",
+          "retention that depends on correct assembly orientation"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Review the inspection task against the audit findings",
+          "method": "MANUAL_REVIEW",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the illustrated parts path for the two cap standards",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-T-35-20-11-200-001-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3520117585166",
+              "XAN326870-64"
+            ],
+            "shared_fins": [
+              "957HD"
+            ],
+            "shared_zones": [
+              "981",
+              "963"
+            ],
+            "shared_ata_6d": [
+              "35-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The task checked for the presence of the retention bracket but not for the end cap type. A bracket with the original cap gives no retention and passes that check.",
+          "resolution": "Rewrite the step to check the cap type and add a caution. Published with the corrected task."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TTN-35-1006",
+          "doc_type": "SB",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3520117585166",
+              "AES260727K2"
+            ],
+            "shared_fins": [
+              "957HD"
+            ],
+            "shared_zones": [
+              "981"
+            ],
+            "shared_ata_6d": [
+              "35-20-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The bulletin accomplishment steps are correct and do call out the new cap, so the assembly error is not caused by the bulletin. It was checked because the audits initially suggested it might be.",
+          "resolution": "No change to the bulletin. An all-operator information notice will describe the condition instead."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-149910",
+          "doc_type": "MOD",
+          "reason": "Same subject, same ATA 6D and directly motivated by the same audit findings, but it is the proposal that removes the assembly error altogether rather than a conflict with the current standard, and it has no effectivity of its own yet."
+        }
+      ],
+      "conclusion": "Interval relief retained. Inspection task corrected and an information notice raised.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

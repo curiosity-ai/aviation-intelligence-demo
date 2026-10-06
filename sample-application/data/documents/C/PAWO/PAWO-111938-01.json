@@ -1,0 +1,405 @@
+[
+  {
+    "doc_id": "PAWO-111938-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Cabin-Side Data Load Interface and Configuration Reporting",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-45",
+      "ata_6d": "45-45-11",
+      "title": "Data Loading — Portable Data Loader Interface"
+    },
+    "secondary_ata": [
+      "45-20",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HKA",
+        "OST"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-24",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the cabin-side load interface and self-generated configuration statement, covering the reporting capability the aircraft already has, the cabin route the new run would take and the certification question about an unattended load.",
+    "sections": {
+      "objective": "Establish whether the proposed configuration statement duplicates reporting the aircraft can already produce, whether the cabin run can share the existing route without a segregation finding, whether the attendant panel position is claimed by anything else, and whether a load with nobody in the flight compartment can be certified at all.",
+      "scope_note": "The search covered ATA 45 as the primary chapter with ATA 46 and ATA 22 as secondary, because all three hold loadable software and any of them could already provide the statement the operator has asked for. ATA 92 was included for the cabin route and ATA 23 and ATA 25 for what else is fitted at the forward attendant position. Structural and powerplant chapters were excluded. No MSN restriction was applied because the change is proposed for both types across the fleet.",
+      "method_note": "Entity linking was run from the five part numbers, the three functional item numbers and the three zones, and it returned the rack and route items directly. Semantic similarity was run separately on the operator's own words about not trusting the maintenance terminal list, and it returned the crew-facing description of the maintenance system, which shares no identifier with this proposal and which turns out to say the same thing from the other side of the aeroplane.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is a dependency rather than a collision: the signed configuration statement is written by the load configuration transceiver but is served to the technician by the central maintenance computer application, and only the upgraded application can hold it. Aircraft at the delivered application would get the statement written and never be able to read it, which is worse than not having it. The most interesting finding came from similarity alone. The crew-facing description of the onboard maintenance system already explains that the aircraft keeps its own record and that the crew's technical log entry is what ties the record to the event; the operator's complaint is the same complaint from the maintenance side, and the two documents share no identifier at all. The cabin route is a real but tractable finding: the avionics bay harness sheet records the spare pair count at each shelf and warns that the count has been wrong twice, so it must be confirmed on the aircraft. The remaining items are content and one zone competition at the attendant panel.",
+      "next_steps": "Confirm the application standard on the target fleet and make the upgraded application a stated prerequisite rather than an assumption. Verify the spare pair count on two aircraft before the route is fixed. Settle with the cabin office whether the attendant panel position is available. Obtain a certification position on an unattended load, since the answer determines whether the change is worth doing at all."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4545112932616",
+        "D4545119446504",
+        "BED484003-95",
+        "D4545128867418",
+        "AES196920-75"
+      ],
+      "fins": [
+        "5TN9",
+        "78TN",
+        "62TM"
+      ],
+      "drawings": [
+        "D45451245065",
+        "D45450069919"
+      ],
+      "software": [
+        "LH6CEDA1669"
+      ],
+      "zones": [
+        "164",
+        "252",
+        "234"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00612",
+        "C00680"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111938",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-C-260226",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "data loading",
+      "configuration statement",
+      "cabin route",
+      "unattended load"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111938-01",
+      "subject_mod": "MOD-111938",
+      "source_io": "IO-C-260226",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-04-24",
+      "due_date": "2026-09-30",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "ETGC",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS"
+        ],
+        "estimated_manhours": 120,
+        "spent_manhours": 44
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "45",
+          "46",
+          "22",
+          "92",
+          "25"
+        ],
+        "ata_4d": [
+          "45-45",
+          "45-20",
+          "46-40",
+          "22-80",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D4545112932616",
+            "D4545119446504",
+            "BED484003-95",
+            "D4545128867418"
+          ],
+          "fins": [
+            "5TN9",
+            "78TN",
+            "62TM"
+          ],
+          "drawings": [
+            "D45451245065"
+          ],
+          "zones": [
+            "164",
+            "252",
+            "234"
+          ],
+          "software": [
+            "LH6CEDA1669"
+          ]
+        },
+        "similarity_seeds": [
+          "nobody can say with confidence what software standard is actually on the aeroplane",
+          "starting a software load and leaving it to run without a technician in the flight compartment"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search for existing configuration reporting capability",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the cabin route and the spare pair count",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the attendant panel position against cabin changes",
+          "method": "ENTITY",
+          "owner": "ETGC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Obtain a certification position on an unattended load",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "IN_PROGRESS"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111362",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "234"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The audio management change re-terminates the cabin loop at the same aft cabin rack area that the new data load run has to pass through, and it adds protective sleeving over a re-routed pair there. Nothing in the two texts suggests any relationship; the only link is the zone, and it is enough to require the two installations to be coordinated.",
+          "resolution": "Agree the cable tray allocation at the rack area with the audio change owner before either design is frozen."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "FCOM-C-DSC-45-20-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "No shared identifier and almost no shared vocabulary. The crew entry talks about writing down what you observed and when; the proposal talks about signed configuration statements and load paths. They are the same problem seen from the two ends of the aeroplane."
+          },
+          "rationale": "The crew-facing description already explains that the aircraft keeps its own record and that the crew's own words are what tie the record to the event. If the aircraft starts publishing a signed statement of its own state, the relationship between what the aircraft asserts and what a person wrote down changes, and the crew entry should say so.",
+          "resolution": "Amend the crew description at embodiment to note that the aircraft publishes its own configuration statement, and keep the instruction about describing what was observed."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "MOD-111296",
+          "doc_type": "MOD",
+          "finding_type": "PREREQUISITE",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "164"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The configuration statement is written by the load configuration transceiver but is served to the technician by the central maintenance computer application. Only the upgraded application can hold it. On an aircraft at the delivered application the statement would be produced and never be readable, which is a worse position than not having it at all.",
+          "resolution": "Make the upgraded application standard an explicit post-modification condition rather than an assumption, and check the fleet standard before the retrofit is offered."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "AMM-C-45-45-11-700-030-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D4545112932616",
+              "D4545119446504",
+              "BED484003-95",
+              "D4545128867418",
+              "AES196920-75"
+            ],
+            "shared_fins": [
+              "5TN9",
+              "78TN",
+              "62TM"
+            ],
+            "shared_zones": [
+              "164",
+              "252",
+              "234"
+            ],
+            "shared_ata_6d": [
+              "45-45-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The functional test already contains the cabin port steps and the simultaneous load refusal check, written conditionally for aircraft that carry the cabin interface. Those steps were written speculatively and have never been run on an aircraft; they will have to be validated rather than simply released.",
+          "resolution": "Run the conditional steps on the first embodied aircraft and re-issue the task with the measured elapsed load times."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "WDM-C-92-21-31",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "164"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The avionics bay sheet is the reference for spare capacity at each shelf, and it states explicitly that the spare pair count is not maintained automatically and has been wrong twice in service. The proposal assumes the cabin run can be taken from spare pairs at the terminal block.",
+          "resolution": "Confirm the spare pair count on two aircraft before the route is fixed, and correct the sheet if the count is wrong again."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "TSM-C-45-20-11-810-812",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "164"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": "Also returned by similarity on the shared subject of not being able to establish what state the aircraft is in."
+          },
+          "rationale": "The isolation procedure asks the technician to confirm a software standard from the maintenance terminal, which is the list the operator says it does not trust. A signed statement produced by the aircraft would change that step from a judgement into a check.",
+          "resolution": "Amend the confirmation step to use the configuration statement where it is available and keep the terminal list as the fall-back."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "MOD-111277",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both describe adding a second way of getting data into the aeroplane so that the job does not have to be done from the flight compartment. Neither names an identifier the other uses, and the two are written in different chapters by different offices."
+          },
+          "rationale": "The navigation database change already provided a second load path at the maintenance connector for one particular target, for exactly the reason this proposal gives for all targets. If the two are not reconciled the aircraft will end up with two second paths, one of which is unnecessary.",
+          "resolution": "Reconcile the two load paths with the auto flight office and decide whether the earlier one is absorbed by this change or retained."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111212",
+          "doc_type": "MOD",
+          "reason": "Returned by the semantic search because it also speaks of a single point of routing and of data moving between units without retyping. It is an air traffic control message router with no software loading content, no shared functional item and no relationship to the maintenance side of the aircraft."
+        },
+        {
+          "doc_id": "AMM-C-22-80-11-400-014-A",
+          "doc_type": "AMM",
+          "reason": "Surfaces on the load and database vocabulary and on the shared warning about not interrupting power during a load. It is a computer installation task in the flight compartment rack; the loading it describes is a consequence of the installation and it will not change because a cabin port exists."
+        }
+      ],
+      "conclusion": "Not yet issued. The upgraded application is a hard prerequisite and the certification position on an unattended load is the item that decides whether the change is worth launching.",
+      "recommendation": "PENDING"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,371 @@
+[
+  {
+    "doc_id": "CRN-23-2007",
+    "doc_type": "SB",
+    "title": "Communications — Inspection of the Surveillance Antenna Land and Bonding Path Before Router Upgrade",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-11-30",
+      "reason": "Initial issue of the surveillance antenna land inspection bulletin.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "51-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00137",
+          "to": "C00408"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MTA",
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111212"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": [
+          "CRN-23-2004"
+        ]
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-06-22",
+      "released": "2021-11-30",
+      "revised": "2021-11-30",
+      "effective": "2021-12-13"
+    },
+    "abstract": "One-time inspection of the surveillance antenna land, its sealant and its bonding path on aircraft that have never had the land opened, to be accomplished before the datalink router upgrade.",
+    "sections": {
+      "planning_reason": "On the first ten aircraft upgraded to the second router standard, four were found with degraded sealant and one with a bonding resistance outside limits at the surveillance antenna land, none of which had been disturbed since delivery. Connecting the surveillance feed to a land in that condition gives an intermittent report that is very difficult to diagnose afterwards, and two aircraft were returned to the hangar for exactly that reason. The inspection was written as a separate bulletin so that it can be done at a routine check well ahead of the upgrade.",
+      "description": "The bulletin opens the surveillance antenna land at the aft equipment position, inspects the sealant and the mating faces, measures the bonding resistance and re-seals the land. No part is changed unless a finding requires it.",
+      "accomplishment_summary": "Open the access panel at the aft equipment position in zone 282. Remove the antenna blanking cover. Do a detailed visual inspection of the sealant bead around the land and record any lifting or cracking. Do a detailed visual inspection of the mating faces for corrosion product. Measure the bonding resistance between the land and the airframe and record the value. If the resistance is above the limit, clean the mating faces to bare metal and re-measure. Apply the surface treatment and the sealant to the standard practice of AMM-C-20-40-11-800-017-A. Install the blanking cover. Close the access panel and record the inspection result in the aircraft file.",
+      "effectivity_note": "Applicable to CIRRANE-11 and CIRRANE-13 aircraft from MSN C00137 to MSN C00408 that carry the first datalink router standard and on which the surveillance antenna land has not been opened since delivery. It must be accomplished before Service Bulletin CRN-23-2004.",
+      "material_note": "No kit is required. Sealant, surface treatment material and a bonding meter are needed. Aircraft with a finding will need the land preparation materials listed in the standard practice, which are not supplied with this bulletin."
+    },
+    "entities": {
+      "part_numbers": [
+        "AGS119203K9",
+        "ELL642868-87"
+      ],
+      "fins": [
+        "16RN"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "282"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111225",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "CRN-23-2004",
+        "doc_type": "SB",
+        "relation": "PREREQUISITE_OF"
+      },
+      {
+        "doc_id": "AMM-C-20-40-11-800-017-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "antenna land",
+      "bonding resistance",
+      "sealant inspection",
+      "surveillance feed",
+      "prerequisite"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Lorencourt",
+      "role": "Customer Services Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-23-2007",
+      "sb_revision": "01",
+      "sb_type": "INSPECTION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Before the accomplishment of Service Bulletin CRN-23-2004, and preferably at a scheduled check where the aft equipment access is already open.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CORROSION",
+      "embodied_mod": "MOD-111225",
+      "manpower": {
+        "elapsed_time_hours": 6,
+        "manhours": 9,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": null,
+        "parts_required": [],
+        "parts_returned": [],
+        "consumables": [
+          "Sealant, chromate-free, Class B",
+          "Surface treatment, chromate-free",
+          "Abrasive pad, non-metallic"
+        ],
+        "tooling": [
+          "Bonding resistance meter",
+          "Inspection mirror and light"
+        ]
+      },
+      "weight_change_kg": 0.0,
+      "accomplishment_steps": 9,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2021-11-30",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "CRN-23-2007",
+    "doc_type": "SB",
+    "title": "Communications — Inspection of the Surveillance Antenna Land and Bonding Path Before Router Upgrade",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "02",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-01-20",
+      "reason": "Effectivity extended to the later build range with the prerequisite retained and the reason for retaining it written into the planning information.",
+      "raised_by_pawo": "PAWO-111225-01",
+      "raised_by_finding": "F01",
+      "finding_type": "PREREQUISITE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "51-20"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00137",
+          "to": "C00466"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "MTA",
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111212"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": [
+          "CRN-23-2004"
+        ]
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-06-22",
+      "released": "2021-11-30",
+      "revised": "2026-01-20",
+      "effective": "2026-02-10"
+    },
+    "abstract": "One-time inspection of the surveillance antenna land, its sealant and its bonding path on aircraft that have never had the land opened, to be accomplished before the datalink router upgrade.",
+    "sections": {
+      "planning_reason": "On the first ten aircraft upgraded to the second router standard, four were found with degraded sealant and one with a bonding resistance outside limits at the surveillance antenna land, none of which had been disturbed since delivery. Connecting the surveillance feed to a land in that condition gives an intermittent report that is very difficult to diagnose afterwards, and two aircraft were returned to the hangar for exactly that reason. The inspection was written as a separate bulletin so that it can be done at a routine check well ahead of the upgrade. Operators asked at the effectivity extension for the inspection to be dropped, on the argument that the findings were concentrated in one build batch and one operating environment. The analysis does not support that. Across the aircraft inspected so far the findings do not correlate with the sealant batch, with the assembly station or with the operator's climate, and the one aircraft with a bonding resistance outside limits was the youngest in the sample. There is no property of an aircraft that predicts the condition of its land, so the only way to know is to look, and the inspection is retained for the extended range on that basis.",
+      "description": "The bulletin opens the surveillance antenna land at the aft equipment position, inspects the sealant and the mating faces, measures the bonding resistance and re-seals the land. No part is changed unless a finding requires it.",
+      "accomplishment_summary": "Open the access panel at the aft equipment position in zone 282. Remove the antenna blanking cover. Do a detailed visual inspection of the sealant bead around the land and record any lifting or cracking. Do a detailed visual inspection of the mating faces for corrosion product. Measure the bonding resistance between the land and the airframe and record the value. If the resistance is above the limit, clean the mating faces to bare metal and re-measure. Apply the surface treatment and the sealant to the standard practice of AMM-C-20-40-11-800-017-A. Install the blanking cover. Close the access panel and record the inspection result in the aircraft file.",
+      "effectivity_note": "Applicable to CIRRANE-11 and CIRRANE-13 aircraft from MSN C00137 to MSN C00466 that carry the first datalink router standard and on which the surveillance antenna land has not been opened since delivery. The upper limit was C00408 at first issue and is extended by this revision to cover the remainder of the pre-upgrade population. It must be accomplished before Service Bulletin CRN-23-2004, and no aircraft in the range is exempt: the inspection cannot be replaced by a records check, because a land that has never been opened has nothing in the records to check.",
+      "material_note": "No kit is required. Sealant, surface treatment material and a bonding meter are needed. Aircraft with a finding will need the land preparation materials listed in the standard practice, which are not supplied with this bulletin."
+    },
+    "entities": {
+      "part_numbers": [
+        "AGS119203K9",
+        "ELL642868-87"
+      ],
+      "fins": [
+        "16RN"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "282"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111225",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "CRN-23-2004",
+        "doc_type": "SB",
+        "relation": "PREREQUISITE_OF"
+      },
+      {
+        "doc_id": "AMM-C-20-40-11-800-017-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "antenna land",
+      "bonding resistance",
+      "retained prerequisite",
+      "effectivity extension",
+      "surveillance feed"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Lorencourt",
+      "role": "Customer Services Engineering"
+    },
+    "type_data": {
+      "sb_number": "CRN-23-2007",
+      "sb_revision": "01",
+      "sb_type": "INSPECTION",
+      "compliance": "RECOMMENDED",
+      "compliance_time": "Before the accomplishment of Service Bulletin CRN-23-2004, and preferably at a scheduled check where the aft equipment access is already open.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "CORROSION",
+      "embodied_mod": "MOD-111225",
+      "manpower": {
+        "elapsed_time_hours": 6,
+        "manhours": 9,
+        "personnel": 2,
+        "downtime_category": "LINE"
+      },
+      "material": {
+        "kit_number": null,
+        "kit_available_from": null,
+        "parts_required": [],
+        "parts_returned": [],
+        "consumables": [
+          "Sealant, chromate-free, Class B",
+          "Surface treatment, chromate-free",
+          "Abrasive pad, non-metallic"
+        ],
+        "tooling": [
+          "Bonding resistance meter",
+          "Inspection mirror and light"
+        ]
+      },
+      "weight_change_kg": 0.0,
+      "accomplishment_steps": 9,
+      "interchangeability": "INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2021-11-30",
+          "reason": "Initial issue"
+        },
+        {
+          "revision": "02",
+          "date": "2026-01-20",
+          "reason": "Effectivity extended to MSN C00466; prerequisite retained with the supporting reasoning added to the planning information"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

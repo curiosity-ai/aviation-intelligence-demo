@@ -1,0 +1,189 @@
+[
+  {
+    "doc_id": "MOD-148940",
+    "doc_type": "MOD",
+    "title": "Positive Detent and Guarded Travel for the Engine Fire Handle Assembly",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-10-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-20",
+      "ata_6d": "76-20-11",
+      "title": "Engine Controls — Fire Handle Assembly"
+    },
+    "secondary_ata": [
+      "76-20-12",
+      "26-20-11"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "T00001",
+          "to": "T00206"
+        }
+      ],
+      "excluded_msns": [
+        "T00190"
+      ],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00209",
+      "production_cut_in_date": "2023-05-04",
+      "retrofit_via": [
+        "TTN-76-1008"
+      ]
+    },
+    "dates": {
+      "created": "2021-01-25",
+      "released": "2022-10-14",
+      "revised": null,
+      "effective": "2022-11-30"
+    },
+    "abstract": "Adds a positive detent and a mechanical guard to the engine fire handle so that the pulled position is unambiguous to the crew and cannot be reached by an inadvertent knee or bag contact on the overhead panel.",
+    "sections": {
+      "reason": "Two operators reported that the fire handle can be moved a short distance out of its stowed position without latching, leaving an ambiguous state in which the handle looks disturbed but the shut-off has not been commanded. In one case a handle was found part-pulled after a crew changeover and the aircraft was returned to stand. Separately, an inadvertent contact case was reported during a cockpit preparation with a flight bag on the pedestal. Neither event affected the engine, but a control of this criticality should have a single defined position and no partial state.",
+      "description": "The handle mechanism is given a positive over-centre detent so that the handle either stays stowed or latches fully pulled, with no stable intermediate position. The link D7620110697976 is replaced by a version carrying the detent spring seat, and the tube assembly D7620118982319 is renewed with a machined stop at the pulled position. A hinged guard is added over the handle face, retained by screws AES254025-97 and the fitting KAD86061-43, which must be lifted before the handle can be reached; the guard falls clear when the handle is pulled and does not obstruct the pull. Wiring at FIN 57EC and FIN 90EC is re-terminated at the microswitch block because the switch actuation point moves 4 mm. The extinguishing discharge path and the bottle installation are unchanged. Work is on the overhead panel in zones 481 and 432, and is detailed on drawing D76201138009.",
+      "effects": "Mass increase of 0.9 kg per aircraft for all four handles. No electrical load change; the microswitch rating is unchanged. The modified handle is not interchangeable with the original because the microswitch actuation point differs, and a mixed installation across the four handles is not permitted. Dispatch is unaffected. Flight crew procedures for engine fire and for the cockpit preparation flow both change, because the guard must be lifted, and crew documentation and training material require update. Maintenance and illustrated parts content also require update.",
+      "embodiment_note": "Production cut-in at MSN T00209 in May 2023. Retrofit through the associated service bulletin, one shift for all four handles with the overhead panel dropped. All four handles must be converted together and the bulletin states this explicitly."
+    },
+    "entities": {
+      "part_numbers": [
+        "D7620110697976",
+        "D7620118982319",
+        "AES254025-97",
+        "KAD86061-43"
+      ],
+      "fins": [
+        "57EC",
+        "90EC"
+      ],
+      "drawings": [
+        "D76201138009"
+      ],
+      "software": [],
+      "zones": [
+        "481",
+        "432"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00190",
+        "T00209"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-76-1008",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-T-76-20-11-200-002-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-T-76-20-11-810-813",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "fire handle",
+      "detent",
+      "guard",
+      "overhead panel",
+      "inadvertent operation"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 148940,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1141",
+          "CS 25.777",
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.9,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "KAD86061-43"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D7620110697976",
+        "D7620118982319",
+        "AES254025-97"
+      ],
+      "fins_affected": [
+        "57EC",
+        "90EC"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 210,
+      "estimated_cost_keur": 870,
+      "lead_time_weeks": 46,
+      "production_impact": "Cut-in at MSN T00209, no line stoppage",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

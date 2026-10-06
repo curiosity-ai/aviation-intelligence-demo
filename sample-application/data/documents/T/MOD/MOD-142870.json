@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "MOD-142870",
+    "doc_type": "MOD",
+    "title": "Air Conditioning Zone Controller Operational Software Standard ZC_OPS_V4.1",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2018-01-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "21-60-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "T00145",
+      "production_cut_in_date": "2018-09-11",
+      "retrofit_via": [
+        "TTN-21-1033"
+      ]
+    },
+    "dates": {
+      "created": "2017-04-18",
+      "released": "2018-01-30",
+      "revised": null,
+      "effective": "2018-02-19"
+    },
+    "abstract": "Operational software standard for the zone controller that adds a pull-down authority limit and a duct overheat prediction, issued after nuisance trim air shut-offs on hot-and-high departures.",
+    "sections": {
+      "reason": "Operators flying out of hot-and-high airfields reported the trim air system latching off during the climb, leaving the cabin on pack outlet temperature for the rest of the sector. Eighty-one events were recorded in eighteen months. The controller was commanding full pull-down on the zones that had soaked in ground heat, the duct temperature then exceeded the protection threshold on the way to the demand, and the protection function had no hysteresis, so the shut-off latched until the next power cycle. The hardware was correct in every case investigated.",
+      "description": "The operational load is re-issued as software LA1R2B6A257 with three changes. First, the pull-down authority is limited as a function of duct inlet temperature so that the controller cannot command a demand the duct cannot deliver without tripping the protection. Second, a first-order prediction of duct temperature is added, which throttles the trim air valve before the protection threshold is reached rather than after. Third, the protection latch is replaced by a reset that arms after ninety seconds below threshold, with a maintenance message recording each event. The trim air actuator D2160117909333 and the zone controller valve D2160128690391 are unchanged, as is the manifold kit D2160120235977 and the controller clamp QUI339334-79. Trim air manifold FIN 7982HM and heat exchanger FIN 7HQ5 are unaffected. The interface remains as drawing D21601284523.",
+      "effects": "No mass change and no electrical load change. The software is not interchangeable with the previous standard because the maintenance message set changed, and an aircraft must carry a single standard across both controllers. The cabin attendant panel behaviour is unchanged and no crew retraining is required. Trouble shooting content for trim air shut-off must be re-issued, since the fault symptom that operators previously reported no longer occurs and the new maintenance messages need isolation procedures.",
+      "embodiment_note": "Cut in at MSN T00145 in September 2018. In service the load is applied through the portable data loader as a line task of under two hours, covered by a software service bulletin. No hardware change and no kit is required."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160117909333",
+        "D2160128690391",
+        "D2160120235977",
+        "QUI339334-79"
+      ],
+      "fins": [
+        "7982HM",
+        "7HQ5"
+      ],
+      "drawings": [
+        "D21601284523"
+      ],
+      "software": [
+        "LA1R2B6A257",
+        "LB8R1DDEAAF"
+      ],
+      "zones": [
+        "292",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "T00145"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "TTN-21-1033",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "zone controller",
+      "trim air",
+      "duct overheat",
+      "software load",
+      "hot and high"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 142870,
+      "mod_class": "MINOR",
+      "change_category": "SOFTWARE",
+      "trigger": "RELIABILITY",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1309",
+          "CS 25.831"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0,
+      "balance_impact": "None",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [],
+      "parts_removed": [],
+      "parts_modified": [],
+      "fins_affected": [
+        "7982HM"
+      ],
+      "software_affected": [
+        "LA1R2B6A257",
+        "LB8R1DDEAAF"
+      ],
+      "estimated_manhours": 12,
+      "estimated_cost_keur": 220,
+      "lead_time_weeks": 18,
+      "production_impact": "Cut-in at MSN T00145 as a data load in final assembly",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "doc_id": "MOD-111349",
+    "doc_type": "MOD",
+    "title": "Engine Fire Handle Change to Remove the Latching Ambiguity at the Second Discharge Position",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-09-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "76",
+      "ata_4d": "76-20",
+      "ata_6d": "76-20-11",
+      "title": "Emergency Shutdown — Fire Handle Assembly"
+    },
+    "secondary_ata": [
+      "76-10",
+      "26-10"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00205",
+          "to": "C00796"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "HAT",
+        "ELB"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION"
+      ],
+      "production_effectivity": "C00796",
+      "production_cut_in_date": "2026-02-16",
+      "retrofit_via": [
+        "CRN-76-2005"
+      ]
+    },
+    "dates": {
+      "created": "2023-05-30",
+      "released": "2025-09-22",
+      "revised": null,
+      "effective": "2025-11-04"
+    },
+    "abstract": "Fire handle assembly change that gives the second discharge position a distinct detent and a separate legend, after simulator and line reports of crews being unable to tell whether the second bottle had been armed.",
+    "sections": {
+      "reason": "Operator training departments reported that during the engine fire drill crews frequently could not tell from the handle whether the second discharge had been selected, because the two positions differed only by about eight millimetres of travel and shared one legend. Four line events were recorded where the second bottle was discharged unintentionally during the first drill step and two where it was not discharged when the procedure called for it. A regulator asked for the ambiguity to be addressed after reviewing the fleet's fire drill training records.",
+      "description": "The fire handle assembly is replaced by a unit with a positive detent between the first and second discharge positions and a separate illuminated legend for each. The seal HOD830120-93 behind the handle escutcheon is changed to suit the deeper mechanism, the bolts AES254025-97 are renewed at installation and the firewall panel CID171471-49 behind the pedestal is locally reworked for the deeper unit. The emergency shutdown nozzle assembly D7620002935398 at the bottle head is unchanged but its wiring is re-terminated so that the two discharge circuits are separated all the way back to the handle. Functional items 47EC and 596EC carry the two discharge circuits and functional item 33EC carries the position feedback. Work is in the pylon and nacelle zones 413, 483 and 453 and at the flight compartment pedestal. Reference detail is on drawing D76101142635.",
+      "effects": "Mass increase of 0.9 kg. Electrical load unchanged. The handle is not interchangeable with the earlier assembly because the panel cut-out is deeper and the legend wiring differs. The engine fire procedure in the flight crew operating manual is re-issued with the new legend wording and the training package has to be revised, which is the largest single cost in the change. Minimum equipment list provisions for the second bottle are unchanged.",
+      "embodiment_note": "Production cut-in at MSN C00796 in February 2026. Retrofit is by Service Bulletin CRN-76-2005, offered as recommended rather than mandatory because the delivered handle meets the certification basis; two operators have taken it as a fleet campaign for training commonality. Two shifts with the pedestal opened."
+    },
+    "entities": {
+      "part_numbers": [
+        "HOD830120-93",
+        "AES254025-97",
+        "CID171471-49",
+        "D7620002935398",
+        "VED464294-23"
+      ],
+      "fins": [
+        "47EC",
+        "596EC",
+        "33EC"
+      ],
+      "drawings": [
+        "D76101142635"
+      ],
+      "software": [],
+      "zones": [
+        "413",
+        "483",
+        "453"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00796"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-76-2005",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-76-20-11-400-021-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "TSM-C-76-20-11-810-813",
+        "doc_type": "TSM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "fire handle",
+      "second discharge",
+      "detent",
+      "legend",
+      "engine fire drill"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Lorencourt",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111349,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "SAFETY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1141",
+          "CS 25.1301",
+          "CS 25.1555"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.9,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "VED464294-23"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "HOD830120-93",
+        "CID171471-49"
+      ],
+      "fins_affected": [
+        "47EC",
+        "596EC",
+        "33EC"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 470,
+      "estimated_cost_keur": 1750,
+      "lead_time_weeks": 60,
+      "production_impact": "Cut-in at MSN C00796; pedestal panel change coordinated with the flight deck furnishing supplier",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

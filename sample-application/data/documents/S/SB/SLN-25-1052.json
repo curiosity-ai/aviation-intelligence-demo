@@ -1,0 +1,209 @@
+[
+  {
+    "doc_id": "SLN-25-1052",
+    "doc_type": "SB",
+    "title": "Equipment — Aft Cargo Compartment — Brushless Drive Units and Short-Pitch Roller Trays",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "01",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2022-03-17",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "25",
+      "ata_4d": "25-50",
+      "ata_6d": "25-50-12",
+      "title": "Cargo Compartment — Cargo Loading System"
+    },
+    "secondary_ata": [
+      "53-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "S01046",
+          "to": "S01840"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-132210"
+        ],
+        "pre_mod": [
+          "MOD-133480"
+        ],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2021-08-24",
+      "released": "2022-03-17",
+      "revised": null,
+      "effective": "2022-04-05"
+    },
+    "abstract": "Replacement of the aft compartment brushed drive units and roller trays by a brushless standard with load sensing and a shorter roller pitch, cutting container jams and the handling damage that follows them.",
+    "sections": {
+      "planning_reason": "Ground handling reports across sixteen operators show the aft compartment loading system as the largest single source of container damage on the type, at 4.1 damaged containers per 1 000 loads. The brushed drive units stall without warning when a container is out of square and the loader then forces it, damaging both the container and the tray. Brush wear also drives a 1 200 flight hour inspection that operators dislike because it needs the compartment empty. Two operators had begun loading the aft compartment by hand on short turnarounds.",
+      "description": "The powered drive units are replaced by brushless units with current-based load sensing that stops the drive and lights a fault indication at the loading panel. The loading panel is replaced by a version with the jam indication and a manual override, and the roller trays across the compartment are replaced by trays with a 25 mm shorter roller pitch. The obsolete swaged collar set is deleted from the tray joint in favour of a bolted arrangement.",
+      "accomplishment_summary": "Make sure that the aft compartment is empty and that the ground service bus is available. Remove the cargo lining panels in zones 133, 142 and 145. CAUTION: THE ROLLER TRAYS ARE HEAVY AND WILL TIP WHEN THE END FASTENERS ARE REMOVED. Do AMM-S-25-50-12-000-018-A to remove the powered drive units and the roller trays. Remove the obsolete swaged collars EN728781-4A from each tray joint and discard them. Install the short-pitch roller trays with the bolted joint arrangement from the kit. Install the brushless drive units and connect the load sensing pair. Re-work the cargo loading system kit D2550120953014 to carry the new controller. Install the left-hand loading panel D2550128614202 with the jam indication and the manual override, and re-label the panel position 46DL. Re-cut the upper cargo lining panel position 9DQ where the new tray fouls it and install the lining panels. Retain the outboard latch kit VAL324542-62 with no change. Do the loading system functional test with a test container, including a deliberate skew to prove the jam detection. Record the embodiment and the revised empty mass.",
+      "effectivity_note": "Applicable to SOLANO-30 and SOLANO-34 aircraft from MSN S01046 onward that already carry the freighter hard point provisioning, because the short-pitch tray shares its outer fastener row with the hard point feet. Aircraft below MSN S01046 have a different floor beam standard and cannot take the short-pitch tray without further work.",
+      "material_note": "Kit K2550-1052-01 contains the drive units, the roller trays, the loading panel and the bolted joint hardware. Lead time is twenty-two weeks and the trays are the long-lead item. The removed drive units are returned to the supplier for credit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2550120953014",
+        "D2550128614202",
+        "VAL324542-62",
+        "EN728781-4A"
+      ],
+      "fins": [
+        "46DL",
+        "9DQ"
+      ],
+      "drawings": [
+        "D25500094206"
+      ],
+      "software": [],
+      "zones": [
+        "133",
+        "142",
+        "145"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01046",
+        "S01840"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-133480",
+        "doc_type": "MOD",
+        "relation": "EMBODIES"
+      },
+      {
+        "doc_id": "AMM-S-25-50-12-000-018-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "IPC-S-25-50-12-FIG-01",
+        "doc_type": "IPC",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "brushless drive unit",
+      "roller pitch",
+      "jam detection",
+      "container damage",
+      "loading panel"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "In-Service Engineering"
+    },
+    "type_data": {
+      "sb_number": "SLN-25-1052",
+      "sb_revision": "01",
+      "sb_type": "MODIFICATION",
+      "compliance": "DESIRABLE",
+      "compliance_time": "At the next scheduled C-check where the aft compartment can be emptied, or at the operator's discretion.",
+      "ad_linked": false,
+      "ad_reference": null,
+      "reason_code": "RELIABILITY",
+      "embodied_mod": "MOD-133480",
+      "manpower": {
+        "elapsed_time_hours": 120,
+        "manhours": 216,
+        "personnel": 3,
+        "downtime_category": "C_CHECK"
+      },
+      "material": {
+        "kit_number": "K2550-1052-01",
+        "kit_available_from": "2022-07-01",
+        "parts_required": [
+          {
+            "part_number": "D2550128614202",
+            "qty": 1,
+            "uom": "EA"
+          },
+          {
+            "part_number": "VAL324542-62",
+            "qty": 6,
+            "uom": "EA"
+          }
+        ],
+        "parts_returned": [
+          {
+            "part_number": "EN728781-4A",
+            "qty": 180,
+            "uom": "EA"
+          }
+        ],
+        "consumables": [
+          "Thread locking compound, medium strength",
+          "Contact grease, electrical",
+          "Label set, loading panel"
+        ],
+        "tooling": [
+          "Test container, ULD half size",
+          "Torque wrench 5-50 Nm",
+          "Tray lifting frame 98D25500-138"
+        ]
+      },
+      "weight_change_kg": 34.0,
+      "accomplishment_steps": 13,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "warranty_applicable": true,
+      "revision_history": [
+        {
+          "revision": "01",
+          "date": "2022-03-17",
+          "reason": "Initial issue"
+        }
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "doc_id": "TSM-S-52-30-13-810-801",
+    "doc_type": "TSM",
+    "title": "CARGO FWD DOOR NOT LOCKED Displayed with the Door Mechanically Closed",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2023-07-13",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "52",
+      "ata_4d": "52-30",
+      "ata_6d": "52-30-13",
+      "title": "Cargo Doors — Cargo Door Latching"
+    },
+    "secondary_ata": [
+      "52-70",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2017-06-19",
+      "released": "2018-02-26",
+      "revised": "2023-07-13",
+      "effective": "2023-07-30"
+    },
+    "abstract": "Fault isolation for a forward cargo door not-locked indication that appears with the door mechanically closed and latched, most often on push-back, with the wear-driven sensing gap as the dominant cause.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a forward cargo door not-locked indication when the door is mechanically closed and the latch train is fully home.",
+      "fault_description": "The warning appears in the flight compartment with the door closed, usually during push-back and often after the door has been cycled several times on the same turnaround. Ground staff report that the door is visibly latched and that the external handle is flush. The indication may clear on a further open and close cycle, which is what makes the fault intermittent and what makes crews reluctant to accept it. On aircraft at the load-sharing carriage standard the fault correlates strongly with carriage travel readings at the upper end of the tolerance band.",
+      "isolation_procedure": "1. Confirm from the maintenance terminal whether the fault is latched or transient, and record the fault code. 2. Open the door and check that the latch train reaches the fully locked position by hand, without force. If it does not, the fault is mechanical and this procedure does not apply. 3. Measure the sensing gap at the upper door warning sensor 3323WT with the feeler set. A gap above the upper limit is the most common cause; re-set it and re-test. 4. If the gap is inside limits, do the carriage travel check of AMM-S-52-30-13-200-005-A at all eight hook stations. A station above the tolerance band changes the position at which the sensing target sits and produces the same symptom. 5. If the travel is inside the band, check the continuity and the insulation of the sensing pair back to the door warning computing input, and check the ground stud at position 8VC5. 6. If the wiring is serviceable, replace the sensor and re-set the gap. 7. Do three complete close and open cycles with the warning system live before the aircraft is released; a single cycle will not reproduce the fault.",
+      "dispatch_note": "The aircraft may not be dispatched with a not-locked indication displayed. There is no MMEL relief for the forward cargo door locking indication. If the fault cannot be cleared, the door may be secured by the manual locking procedure and the compartment left empty under the applicable MMEL item, subject to the operator's approved procedures."
+    },
+    "entities": {
+      "part_numbers": [
+        "D5230136217763",
+        "GRA7840-60",
+        "D9221139139564"
+      ],
+      "fins": [
+        "3323WT",
+        "8VC5"
+      ],
+      "drawings": [
+        "D52301376901",
+        "D52701135292"
+      ],
+      "software": [],
+      "zones": [
+        "891",
+        "893",
+        "812"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-52-30-13-200-005-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-133110",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "door not locked",
+      "sensing gap",
+      "carriage travel",
+      "intermittent indication",
+      "push-back delay"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Neuhafen",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "52-30-13-810-801",
+      "fault_symptom": "CARGO FWD DOOR NOT LOCKED displayed on ECAM with the door mechanically closed",
+      "fault_codes": [
+        "523013001",
+        "523013014"
+      ],
+      "warning_messages": [
+        "DOOR CARGO FWD NOT LOCKED",
+        "DOOR CARGO FWD NOT CLOSED"
+      ],
+      "affected_fins": [
+        "3323WT",
+        "8VC5"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Sensing gap out of limits at the upper door warning sensor after hook or carriage wear",
+          "probability_pct": 52,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "Carriage travel above the tolerance band at one or more hook stations",
+          "probability_pct": 24,
+          "fin": "3323WT"
+        },
+        {
+          "cause": "High resistance at the door warning ground stud",
+          "probability_pct": 14,
+          "fin": "8VC5"
+        },
+        {
+          "cause": "Sensor internal failure",
+          "probability_pct": 10,
+          "fin": "3323WT"
+        }
+      ],
+      "isolation_steps": 7,
+      "confirmation_task": "AMM-S-52-30-13-200-005-A",
+      "dispatch": {
+        "mel_item": "52-30-01A",
+        "dispatchable": false,
+        "dispatch_condition": "No dispatch with a not-locked indication displayed; compartment may be secured and left empty under the operator's approved procedure"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

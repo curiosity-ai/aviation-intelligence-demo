@@ -1,0 +1,170 @@
+[
+  {
+    "doc_id": "AMM-T-26-10-12-100-002-A",
+    "doc_type": "AMM",
+    "title": "Cargo Smoke Detection Sampling Line — Cleaning",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-03-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "25-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-08-21",
+      "released": "2019-03-19",
+      "revised": null,
+      "effective": "2019-04-08"
+    },
+    "abstract": "Cleaning of a cargo compartment smoke sampling line by solvent flush and dry air purge, used where the flow check shows a low reading or the borescope shows deposit at a low point.",
+    "sections": {
+      "purpose": "This task gives the flushing and drying of a cargo compartment smoke sampling line. Use it where the flow and integrity check gives a reading below the band, or where a borescope inspection finds deposit at a low point.",
+      "job_setup_note": "The detection sensor must be removed before flushing so that no solvent reaches the detector chamber. Have the waste container in place at the low point drain before you introduce any solvent; the line holds more than most people expect and it will find the floor. Ventilate the compartment for the whole task.",
+      "procedure": "WARNING: REMOVE THE DETECTION SENSOR ASSEMBLY BEFORE YOU INTRODUCE ANY SOLVENT. SOLVENT IN THE DETECTOR CHAMBER WILL DESTROY THE OPTICAL SURFACE AND THE UNIT WILL HAVE TO BE REPLACED. Empty and ventilate the compartment. Remove power from the detection system and put the warning notice on the panel. Remove the lining panels along the run and identify the low points from the illustration. Remove the detection sensor assembly D2610001304989 and cap the line at the detector end. Put the waste container under the low point drain and open the drain. Introduce the flushing solvent at the far end of the run and let it drain. CAUTION: DO NOT EXCEED THE SOLVENT DWELL TIME GIVEN IN THE CONSUMABLES LIST. A LONGER DWELL WILL ATTACK THE LINE SEALING COMPOUND AT THE JOINTS. Repeat the flush until the drained solvent runs clear. Purge the run with filtered dry air for the time given, working from the far end towards the drain. Close the drain and refit the sensor assembly D2610001304989. Re-secure the clamp at FIN 2841WD to the torque in the illustration.",
+      "close_out": "Restore power to the detection system and remove the warning notice. Do the sampling line flow and integrity check on the cleaned run and confirm that the flow is inside the band. Refit the lining panels. Record the volume of solvent used and the condition of the drained solvent, because a run that needs more than two flushes should be reported."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610001304989",
+        "UMD917763-33"
+      ],
+      "fins": [
+        "2841WD"
+      ],
+      "drawings": [
+        "D26101202565"
+      ],
+      "software": [],
+      "zones": [
+        "111",
+        "131",
+        "151"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-T-26-10-12-200-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "sampling line",
+      "cleaning",
+      "solvent flush",
+      "dry air purge",
+      "deposit"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "26-10-12-100-002-A",
+      "task_type": "CLEANING",
+      "effectivity_note": "All aircraft. On dual loop aircraft each loop is flushed separately and the loops must not be cross-connected.",
+      "manhours": 7.0,
+      "personnel": 2,
+      "elapsed_time_hours": 5.0,
+      "access": {
+        "zones": [
+          "111",
+          "131",
+          "151"
+        ],
+        "access_panels": [
+          "111BR",
+          "131BR",
+          "151CR"
+        ],
+        "doors": [
+          "Fwd cargo door",
+          "Aft cargo door",
+          "Bulk cargo door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Remove the detection sensor before you introduce any solvent.",
+          "Ventilate the compartment for the whole task.",
+          "Put the waste container under the low point drain before flushing."
+        ],
+        "tooling": [
+          {
+            "reference": "98D26101-070",
+            "description": "Sampling line flush rig"
+          },
+          {
+            "reference": "98D26101-074",
+            "description": "Filtered dry air purge set"
+          }
+        ],
+        "consumables": [
+          "Solvent, sampling line flushing",
+          "Filtered dry air supply",
+          "Sealing caps, sampling line"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-26-10-12-200-001-A"
+      ],
+      "steps": 13,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

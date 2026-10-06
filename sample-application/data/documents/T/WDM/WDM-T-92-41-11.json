@@ -1,0 +1,367 @@
+[
+  {
+    "doc_id": "WDM-T-92-41-11",
+    "doc_type": "WDM",
+    "title": "Aft Cargo and Bulk Compartment — Detection, Heating and Ground Point Layout",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2009-12-05",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-41",
+      "ata_6d": "92-41-11",
+      "title": "Aft Fuselage Wiring — Aft Cargo Wiring"
+    },
+    "secondary_ata": [
+      "26-10",
+      "21-40"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2009-10-16",
+      "released": "2009-12-05",
+      "revised": "2009-12-05",
+      "effective": "2009-12-26"
+    },
+    "abstract": "Ground point and equipment layout for the aft cargo and bulk compartments, listing every stud with the circuits that return to it, the detection loop returns and the compartment heating supply.",
+    "sections": {
+      "purpose": "This sheet gives the ground point and equipment layout for the aft cargo and bulk compartments, including the detection loop returns, the compartment heating supply and the ground stud positions.",
+      "sheet_note": "This sheet is a ground point list rather than a conventional wiring diagram, because the aft compartment circuits are shown in full on the detection and heating system sheets and what is missing there is where each of them returns. Every ground stud in the two compartments is listed with its position, the circuits that use it and its measured resistance limit. Studs shared by the detection loop and the heating supply are marked, because a high resistance at one of those produces symptoms in both systems at once. There is no unassigned stud in either compartment; every position on the layout is taken.",
+      "routing_note": "The aft compartment returns run to the ground studs at zones 131 and 146, and the bulk compartment returns to the stud at zone 394 in the tail area. The heated bleed circuit at the condensate trap returns to the same stud as the detection loop it serves, which is the reason that stud carries a tighter resistance limit than the others on this sheet."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9241115804053",
+        "D9241117150414",
+        "MOD18630-43",
+        "AGS652234-4A",
+        "D2140112244543"
+      ],
+      "fins": [
+        "70VU",
+        "47VC",
+        "5071VU5",
+        "4HQ7",
+        "47HM2"
+      ],
+      "drawings": [
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "131",
+        "146",
+        "394"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-26-10-12-100-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "ground point list",
+      "aft cargo wiring",
+      "detection return",
+      "heated bleed",
+      "ground stud resistance"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Electrical Installation Design"
+    },
+    "type_data": {
+      "sheet_number": "92-41-11",
+      "sheet_title": "AFT CARGO AND BULK COMPARTMENT — GROUND POINT LAYOUT",
+      "diagram_type": "GROUND_POINT_LIST",
+      "harnesses": [
+        "1461W",
+        "1462W",
+        "3941W"
+      ],
+      "connectors": [
+        {
+          "reference": "1461VC",
+          "part_number": "D9241115804053",
+          "location_zone": "146",
+          "contacts": 22
+        },
+        {
+          "reference": "3941VC",
+          "part_number": "D9241117150414",
+          "location_zone": "394",
+          "contacts": 14
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "70VU",
+          "description": "HARNESS, AFT CARGO WIRING, FWD",
+          "zone": "131"
+        },
+        {
+          "fin": "47VC",
+          "description": "BACKSHELL, AFT CARGO WIRING, LH",
+          "zone": "146"
+        },
+        {
+          "fin": "5071VU5",
+          "description": "BUS BAR, AFT CARGO WIRING, LOWER",
+          "zone": "394"
+        },
+        {
+          "fin": "47HM2",
+          "description": "TRANSMITTER, CARGO COMPARTMENT HEATING, OUTBD",
+          "zone": "131"
+        },
+        {
+          "fin": "4HQ7",
+          "description": "VALVE, CARGO COMPARTMENT HEATING, FWD",
+          "zone": "146"
+        }
+      ],
+      "wire_count": 32,
+      "wire_gauge_range": "AWG 20 to AWG 8",
+      "routes": [
+        "Aft compartment returns to the ground studs at zones 131 and 146",
+        "Bulk compartment returns to the ground stud at zone 394"
+      ],
+      "related_sheets": [
+        "WDM-T-92-21-12",
+        "WDM-T-92-31-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "WDM-T-92-41-11",
+    "doc_type": "WDM",
+    "title": "Aft Cargo and Bulk Compartment — Detection, Heating and Ground Point Layout",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2018-06-19",
+      "reason": "Two ground studs added to the aft layout for the second detection loop screen returns, both marked as embodied with the dual loop standard.",
+      "raised_by_pawo": "PAWO-143950-01",
+      "raised_by_finding": "F04",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-41",
+      "ata_6d": "92-41-11",
+      "title": "Aft Fuselage Wiring — Aft Cargo Wiring"
+    },
+    "secondary_ata": [
+      "26-10",
+      "21-40"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2009-10-16",
+      "released": "2009-12-05",
+      "revised": "2018-06-19",
+      "effective": "2018-07-10"
+    },
+    "abstract": "Ground point and equipment layout for the aft cargo and bulk compartments, covering the detection loops, the compartment heating supply and the ground studs that the heated bleed circuit returns to.",
+    "sections": {
+      "purpose": "This sheet gives the ground point and equipment layout for the aft cargo and bulk compartments, including the detection loop returns, the compartment heating supply and the ground stud positions.",
+      "sheet_note": "This sheet is a ground point list rather than a conventional wiring diagram, because the aft compartment circuits are shown in full on the detection and heating system sheets and what is missing there is where each of them returns. Every ground stud in the two compartments is listed with its position, the circuits that use it and its measured resistance limit. Studs shared by the detection loop and the heating supply are marked, because a high resistance at one of those produces symptoms in both systems at once. Two studs at zones 146 and 394 carry the screen returns of the second detection loop and exist only on aircraft that have the dual sampling loop standard; they are installed in the same slot as that standard, because a loop whose screen is not terminated cannot be released to service.",
+      "routing_note": "The aft compartment returns run to the ground studs at zones 131 and 146, and the bulk compartment returns to the stud at zone 394 in the tail area. The heated bleed circuit at the condensate trap returns to the same stud as the detection loop it serves, which is the reason that stud carries a tighter resistance limit than the others on this sheet. The second loop screen returns to its own stud in each compartment rather than to the shared stud, so that a screen fault does not appear as a heating return fault."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9241115804053",
+        "D9241117150414",
+        "MOD18630-43",
+        "AGS652234-4A",
+        "D2140112244543"
+      ],
+      "fins": [
+        "70VU",
+        "47VC",
+        "5071VU5",
+        "4HQ7",
+        "47HM2"
+      ],
+      "drawings": [
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "131",
+        "146",
+        "394"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-143950",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-26-10-12-100-002-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "ground point list",
+      "aft cargo wiring",
+      "screen return",
+      "second detection loop",
+      "ground stud resistance"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Electrical Installation Design"
+    },
+    "type_data": {
+      "sheet_number": "92-41-11",
+      "sheet_title": "AFT CARGO AND BULK COMPARTMENT — GROUND POINT LAYOUT",
+      "diagram_type": "GROUND_POINT_LIST",
+      "harnesses": [
+        "1461W",
+        "1462W",
+        "3941W"
+      ],
+      "connectors": [
+        {
+          "reference": "1461VC",
+          "part_number": "D9241115804053",
+          "location_zone": "146",
+          "contacts": 22
+        },
+        {
+          "reference": "3941VC",
+          "part_number": "D9241117150414",
+          "location_zone": "394",
+          "contacts": 14
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "70VU",
+          "description": "HARNESS, AFT CARGO WIRING, FWD",
+          "zone": "131"
+        },
+        {
+          "fin": "47VC",
+          "description": "BACKSHELL, AFT CARGO WIRING, LH",
+          "zone": "146"
+        },
+        {
+          "fin": "5071VU5",
+          "description": "BUS BAR, AFT CARGO WIRING, LOWER",
+          "zone": "394"
+        },
+        {
+          "fin": "47HM2",
+          "description": "TRANSMITTER, CARGO COMPARTMENT HEATING, OUTBD",
+          "zone": "131"
+        },
+        {
+          "fin": "4HQ7",
+          "description": "VALVE, CARGO COMPARTMENT HEATING, FWD",
+          "zone": "146"
+        }
+      ],
+      "wire_count": 36,
+      "wire_gauge_range": "AWG 20 to AWG 8",
+      "routes": [
+        "Aft compartment returns to the ground studs at zones 131 and 146",
+        "Bulk compartment returns to the ground stud at zone 394",
+        "Second detection loop screen returns to the added studs at zones 146 and 394"
+      ],
+      "related_sheets": [
+        "WDM-T-92-21-12",
+        "WDM-T-92-31-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

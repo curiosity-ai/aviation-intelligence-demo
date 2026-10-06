@@ -1,0 +1,445 @@
+[
+  {
+    "doc_id": "PAWO-111967-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Third Issue of the Datalink Router Standard for Reduced Separation",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-28",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00408",
+          "to": "C00796"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "GSL",
+        "VSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-01-28",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the third datalink router issue, covering the service bulletin effectivity it closes, the flight compartment routing it competes for and the satellite path loading at the narrowed reporting interval.",
+    "sections": {
+      "objective": "Establish what the third issue does to the effectivity of the second issue and its retrofit bulletin, whether the satellite path saturates when the surveillance and reporting functions are both active at the narrowed interval, whether the overhead panel route has room for the additional pair, and what crew and maintenance content changes.",
+      "scope_note": "The search covered ATA 23 as the primary chapter with ATA 34 for the independent position source and ATA 92 for the routing. ATA 35 came in only through the zone seed on the flight compartment and produced the one finding nobody expected. Structural, powerplant and cabin chapters were excluded. The MSN range follows the second-issue population, because the third issue can only be embodied on aircraft that already carry it.",
+      "method_note": "This analysis is unusually entity-heavy because the three issues of this modification share almost every identifier, so entity linking returns the whole family immediately and the interesting work is in reading the effectivity statements rather than in finding the documents. Similarity was used for two things only: to find the crew-facing description, and to test whether any other change in the programme is making an independence claim about a position source. Both returned something.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the retrofit bulletin for the second issue, which names this candidate in its pre-modification condition. As soon as the third issue is released the bulletin's effectivity is silently reduced, and there is no mechanism that will tell an operator planning a second-issue embodiment next winter that it has happened. The zone finding is the one worth showing at the review: a crew oxygen proposal wants the run behind the flight compartment side console for an additional audio pair, and this change wants the same run for the integrity monitor feed. The two documents could not read less alike, and the only thing linking them is a three digit zone. The remaining findings are the family itself, the wiring schematic, the illustrated part list and a certification question about whether two independence claims on the same position source can both be true.",
+      "next_steps": "Write the effectivity closure for the second-issue bulletin as part of this change rather than as a follow-up. Take the flight compartment routing to the cabin and flight deck installation office and settle it with the oxygen proposal in one meeting. Get the satellite path loading measured at the narrowed interval with the surveillance function active before the design review, because that number decides whether the interval can be met at all. Ask the certification office how two independence claims on one position source are to be substantiated."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370006240541",
+        "D2370118700860",
+        "ELL642868-87",
+        "VED805230-21",
+        "AGS119203K9"
+      ],
+      "fins": [
+        "218RN",
+        "16RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211",
+        "282"
+      ],
+      "figures": [
+        "FIG-23-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00680",
+        "C00750"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111967",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "datalink",
+      "reduced separation",
+      "effectivity closure",
+      "integrity monitor"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Lorencourt",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111967-01",
+      "subject_mod": "MOD-111967",
+      "source_io": null,
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-01-28",
+      "due_date": "2026-10-16",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Lorencourt",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS",
+          "ETGC"
+        ],
+        "estimated_manhours": 130,
+        "spent_manhours": 72
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "23",
+          "34",
+          "92",
+          "35"
+        ],
+        "ata_4d": [
+          "23-70",
+          "23-20",
+          "34-50",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": {
+          "from": "C00408",
+          "to": "C00796"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2370006240541",
+            "D2370118700860",
+            "ELL642868-87",
+            "VED805230-21"
+          ],
+          "fins": [
+            "218RN",
+            "16RN",
+            "7RC"
+          ],
+          "drawings": [
+            "D23700095149"
+          ],
+          "zones": [
+            "165",
+            "211",
+            "282"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "reporting aircraft position more often and proving that the reported position is trustworthy",
+          "claiming that one position source is independent of another on the same aircraft"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Trace the modification family and its bulletin effectivity",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Check the flight compartment routing claims",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Search for competing independence claims on the position source",
+          "method": "SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Measure satellite path loading at the narrowed interval",
+          "method": "SME_INTERVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-112017",
+          "doc_type": "MOD",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "211"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The crew mask regulator proposal states in its own open points that it needs the run behind the flight compartment side console for an additional audio pair. This change needs the same run for the integrity monitor feed. There is no other connection between an oxygen mask and a datalink router, and no search other than an entity search on the zone would ever have put the two documents next to each other.",
+          "resolution": "Settle the side console route allocation with the cabin and flight deck installation office before either proposal is committed."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "FCOM-C-DSC-23-70-01",
+          "doc_type": "FCOM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "No identifier is common to the two documents. The crew entry describes a status line, an amber prompt and three line keys; the modification describes reporting intervals, integrity monitors and satellite data units. Only the subject connects them."
+          },
+          "rationale": "The crew description states that position reporting runs on its own once the log-on is established and never appears on the message page. The third issue adds an annunciated integrity state, which is the first time the reporting function becomes visible to the crew at all. The description as written would be wrong from the day of embodiment.",
+          "resolution": "Re-issue the crew description with the integrity annunciation and its meaning, and coordinate the wording with the operator training departments."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "CRN-23-2004",
+          "doc_type": "SB",
+          "finding_type": "EFFECTIVITY_INVALIDATION",
+          "severity": "BLOCKING",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370118700860",
+              "D2370006240541",
+              "VED805230-21",
+              "ELL642868-87",
+              "AGS119203K9"
+            ],
+            "shared_fins": [
+              "218RN",
+              "16RN",
+              "7RC"
+            ],
+            "shared_zones": [
+              "165",
+              "211",
+              "282"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The retrofit bulletin for the second issue carries this candidate in its pre-modification condition, so releasing the third issue silently reduces the bulletin's effectivity. Two operators have second-issue embodiments planned for next winter against kits already ordered, and nothing in the current process would tell them that the bulletin no longer applies to the aircraft they intend to embody.",
+          "resolution": "Issue an effectivity closure for the bulletin at the same time as the third issue, and notify the two operators directly rather than relying on the revision service."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-111225",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370006240541",
+              "D2370118700860",
+              "VED805230-21",
+              "ELL642868-87",
+              "AGS119203K9"
+            ],
+            "shared_fins": [
+              "218RN",
+              "16RN",
+              "7RC"
+            ],
+            "shared_zones": [
+              "165",
+              "211",
+              "282"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The second issue is the direct predecessor and shares every part number, functional item and zone with this candidate. The supersession is intended and is declared, but the second issue is still in production and its status has to be changed in step with the release rather than afterwards.",
+          "resolution": "Sequence the status change of the second issue with the release of the third and confirm the production cut-in date jointly."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "WDM-C-23-70-01",
+          "doc_type": "WDM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370118700860",
+              "D2370006240541",
+              "VED805230-21",
+              "ELL642868-87"
+            ],
+            "shared_fins": [
+              "218RN",
+              "16RN",
+              "7RC"
+            ],
+            "shared_zones": [
+              "165",
+              "211",
+              "282"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The schematic shows the position source path used by the surveillance function as a dashed line and states that its independence from the flight management path is a certification requirement. The integrity monitor introduces a second consumer of the same path, and the schematic has to show whether the independence claim survives that.",
+          "resolution": "Re-draw the position source path with the integrity monitor shown and have the independence claim re-checked before the sheet is issued."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "IPC-C-23-70-11-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2370118700860",
+              "D2370006240541",
+              "VED805230-21",
+              "ELL642868-87",
+              "AGS119203K9"
+            ],
+            "shared_fins": [
+              "218RN",
+              "16RN",
+              "7RC"
+            ],
+            "shared_zones": [
+              "165",
+              "211",
+              "282"
+            ],
+            "shared_ata_6d": [
+              "23-70-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure already notes that the satellite data unit is replaced by a variant at the third standard, which is not yet in production. It carries two effectivity states behind one part number for the display unit and would carry a third for the satellite data unit, distinguished only by a label.",
+          "resolution": "Allocate a distinct item number for the third-standard satellite data unit rather than adding another label-only effectivity note."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "MOD-111974",
+          "doc_type": "MOD",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MINOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Two changes with no identifier in common, both of which take a position or terrain reference from an existing source and then assert that the resulting function is independent of the source it came from."
+          },
+          "rationale": "The radar proposal derives a terrain-referenced clutter map from the navigation database while this change asserts that its integrity monitor uses a position source independent of the flight management path. Two independence claims resting on overlapping data on the same aeroplane will be looked at together by the authority even though the two teams are treating them separately.",
+          "resolution": "Raise both claims with the certification office in one submission rather than two, so that the shared assumption is stated once."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-111212",
+          "doc_type": "MOD",
+          "reason": "Returned at the top of every entity search because it shares four part numbers and two functional items with this candidate. It is the first issue of the family, already superseded and out of production, and the third issue can only be embodied on aircraft at the second standard, so it has no bearing on this analysis at all."
+        },
+        {
+          "doc_id": "TSM-C-23-20-11-810-815",
+          "doc_type": "TSM",
+          "reason": "A strong semantic match on 'repeated datalink log-on failure', which is the exact phrase used in the operator complaint that drove a different change. That procedure isolates a weak radio installation and has nothing to do with the router, the reporting interval or the integrity monitor."
+        }
+      ],
+      "conclusion": "Not yet issued. The second-issue bulletin effectivity is blocking, and the flight compartment routing has to be settled with the oxygen proposal before either can be committed.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

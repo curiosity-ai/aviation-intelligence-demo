@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "AMM-T-29-10-12-800-002-A",
+    "doc_type": "AMM",
+    "title": "Green System Hydraulic Reservoir — Replenishment",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2021-02-18",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-12",
+      "title": "Main System — Reservoir Assembly"
+    },
+    "secondary_ata": [
+      "29-10-13"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-05-11",
+      "released": "2016-11-28",
+      "revised": "2021-02-18",
+      "effective": "2021-03-10"
+    },
+    "abstract": "Replenishment of the green system hydraulic reservoir from the ground cart, including the level reading procedure for the self-wiping sight glass and the staining check that goes with it.",
+    "sections": {
+      "purpose": "This task gives the replenishment of the green system hydraulic reservoir and the reading of its level, including the procedure for the self-wiping sight glass fitted to reworked reservoir heads.",
+      "job_setup_note": "Read the level with the system depressurised and the aircraft on the ground, with the landing gear down and the flight controls in the neutral position. A level read with an accumulator charged will be low and will lead to over-servicing. Identify the sight glass standard before you read; the two are read differently and the reworked one has a float-driven wiper.",
+      "procedure": "Confirm that the aircraft is on the ground with the landing gear down and the flight controls neutral. Depressurise the green system and discharge the accumulator NO46703-01. WARNING: CONFIRM ZERO PRESSURE AT THE GAUGE BEFORE YOU CONNECT THE GROUND CART. HYDRAULIC FLUID AT SYSTEM PRESSURE WILL INJECT THROUGH SKIN. Get access to the reservoir in the avionics bay. Identify the sight glass standard. For the original sight glass, clean the glass face with the approved solvent before reading. For the self-wiping sight glass, move the float through its travel once with the servicing control and then read. Read the level against the scale and record it. CAUTION: DO NOT REPLENISH ABOVE THE FULL MARK. AN OVERFILLED RESERVOIR WILL VENT THROUGH THE PRESSURISATION GLAND AND WILL BE REPORTED AS A LEAK AT THE NEXT CHECK. Connect the ground cart at the servicing point and replenish to the full mark. Disconnect the cart and cap the servicing point. Inspect the area around the reservoir head and the hose at FIN 8893GA1 for staining and record what you find. Recharge the accumulator and pressurise the system.",
+      "close_out": "Record the level before and after replenishment and the quantity added, because a rising consumption trend is the first sign of gland extrusion. Record the condition of the area around the reservoir head. Confirm that no leakage is present at the servicing point and that the system holds pressure."
+    },
+    "entities": {
+      "part_numbers": [
+        "KE634291-03",
+        "NO46703-01",
+        "LN745829-02"
+      ],
+      "fins": [
+        "8893GA1",
+        "244GG",
+        "4079GG"
+      ],
+      "drawings": [
+        "D29101228651"
+      ],
+      "software": [],
+      "zones": [
+        "162",
+        "723"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142590",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-52-30-12-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "hydraulic reservoir",
+      "replenishment",
+      "sight glass",
+      "level reading",
+      "staining check"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "29-10-12-800-002-A",
+      "task_type": "SERVICING",
+      "effectivity_note": "All aircraft. Use the self-wiping sight glass reading procedure on reservoirs at the reworked head standard.",
+      "manhours": 2.0,
+      "personnel": 1,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "162",
+          "723"
+        ],
+        "access_panels": [
+          "162BL",
+          "723AL"
+        ],
+        "doors": [
+          "Avionics bay access door"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Confirm zero pressure at the gauge before connecting the ground cart.",
+          "Read the level with the gear down and the flight controls neutral.",
+          "Do not replenish above the full mark."
+        ],
+        "tooling": [
+          {
+            "reference": "98D29101-021",
+            "description": "Hydraulic ground servicing cart"
+          },
+          {
+            "reference": "98D29101-027",
+            "description": "Servicing point adapter set"
+          }
+        ],
+        "consumables": [
+          "Hydraulic fluid, phosphate ester",
+          "Solvent, aliphatic naphtha",
+          "Cleaning cloth, lint free"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-52-30-12-700-001-A"
+      ],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

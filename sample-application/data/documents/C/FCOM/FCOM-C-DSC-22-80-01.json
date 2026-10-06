@@ -1,0 +1,118 @@
+[
+  {
+    "doc_id": "FCOM-C-DSC-22-80-01",
+    "doc_type": "FCOM",
+    "title": "Flight Management — Description of the Navigation Database and Its Coverage",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-10-02",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "22",
+      "ata_4d": "22-80",
+      "ata_6d": "22-80-00",
+      "title": "Flight Management Computing — General"
+    },
+    "secondary_ata": [
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-07-30",
+      "released": "2022-01-24",
+      "revised": "2024-10-02",
+      "effective": "2024-11-04"
+    },
+    "abstract": "Flight crew description of the navigation database, the twenty-eight day cycle, what worldwide and regional coverage mean in practice and how the crew confirms which coverage the aircraft is carrying.",
+    "sections": {
+      "purpose": "To describe the navigation database to the flight crew, including the cycle, the coverage options and how to confirm what is loaded before departure.",
+      "description": "The flight management computer works from a navigation database that is replaced every twenty-eight days. Two databases are held, the active one and the next one, and the changeover happens at the effective date without crew action. The identity page shows both, with the effective dates, and it is the only place you can see what the aeroplane is actually carrying. Coverage is not the same on every aircraft. A regional database holds the airports, navigation aids and procedures of one part of the world in full; a worldwide database holds all of them but with fewer procedures at the smaller fields. If your aircraft carries a regional database and you divert outside the region, the airfield may exist as a point but have no approach procedure attached to it, and you will have to fly the approach conventionally. This is not a failure and there is no message to tell you it has happened; the procedure list is simply empty. Crews planning a route close to the edge of a regional coverage should check the alternates on the ground rather than in the air.",
+      "crew_procedure": "During the cockpit preparation, on the identity page confirm the active database, its effective dates and the coverage type. Check that the active database is valid for the whole of the planned flight, including any night crossing of the changeover time. Enter the alternates and confirm that each has the approach procedures you intend to use; if a procedure list is empty, plan the approach conventionally and brief it. Do not attempt to load a database in flight."
+    },
+    "entities": {
+      "part_numbers": [],
+      "fins": [],
+      "drawings": [],
+      "software": [],
+      "zones": [],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "FCOM-C-DSC-45-20-01",
+        "doc_type": "FCOM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "navigation database",
+      "twenty-eight day cycle",
+      "coverage",
+      "identity page",
+      "alternate procedures"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Flight Operations Support"
+    },
+    "type_data": {
+      "section": "DSC",
+      "section_title": "Systems Description — Auto Flight",
+      "entry_number": "DSC-AFS-22-80-01",
+      "flight_phase": "PREFLIGHT",
+      "operational_impact": "NONE",
+      "crew_action": "Confirm the active database, its validity and its coverage on the identity page during cockpit preparation.",
+      "affects_qrh": false,
+      "affects_mel": false,
+      "mel_items": [],
+      "systems": [
+        "Flight Management Computer",
+        "Navigation Database Loading"
+      ],
+      "related_entries": [
+        "FCOM-C-DSC-45-20-01"
+      ],
+      "supersedes_entry": null
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

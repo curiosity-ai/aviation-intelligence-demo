@@ -1,0 +1,499 @@
+[
+  {
+    "doc_id": "MOD-164788",
+    "doc_type": "MOD",
+    "title": "Central Maintenance Computer Display Unit, Initial Flight Deck Standard",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-11-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00303"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "MRD-45-1015"
+      ]
+    },
+    "dates": {
+      "created": "2016-09-08",
+      "released": "2017-11-14",
+      "revised": "2017-11-14",
+      "effective": "2017-12-05"
+    },
+    "abstract": "The first flight deck display standard for the central maintenance system, giving line engineers a fixed screen at the third occupant station instead of a portable terminal connection.",
+    "sections": {
+      "reason": "Early operators found that reading the central maintenance system through a portable terminal was slow on a turnaround and that the connection at the flight deck was awkward to reach with the third occupant seat stowed. Line stations asked for a permanently installed screen. The request came from six operators inside the first two years of service and was accepted as a customer-driven standard change rather than as a defect correction.",
+      "description": "A fixed display unit D4520115601387 is installed at the third occupant station, fed from the existing maintenance system bus with no new processing. The unit is held in a bracket that picks up the existing panel hard points, with silicone edging AES4363-5C protecting the aperture. The maintenance antenna 72TN is unaffected. The maintenance terminal display 626TM remains available and can be used in parallel. Work is in the flight compartment and forward cabin, zones 241 and 226. No wiring is added outside the flight deck and no change is made to the central maintenance computer itself.",
+      "effects": "Mass increase of 2.6 kg per aircraft, forward of the reference datum. Electrical load increase of 65 VA in normal operation. Interchangeable, and the display can be removed without affecting any other function. Turnaround time for a maintenance system interrogation drops by roughly ten minutes, which was the operator business case. No dispatch consequence: the display is not required for dispatch and its failure is a maintenance-only item.",
+      "embodiment_note": "Retrofit only, through Service Bulletin MRD-45-1015. Never cut into the production line in this form: the aperture at the third occupant station has to be cut on the aircraft and the flight deck panel is delivered solid. Typical embodiment is a day and a half with two people and is normally taken during an A-check."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4520115601387",
+        "AES4363-5C"
+      ],
+      "fins": [
+        "72TN",
+        "626TM"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "241",
+        "226"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MRD-45-1015",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      }
+    ],
+    "keywords": [
+      "central maintenance system",
+      "display unit",
+      "flight deck",
+      "turnaround time",
+      "customer option"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Avionics Systems"
+    },
+    "type_data": {
+      "mod_number": 164788,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.6,
+      "balance_impact": "Forward of the datum, CG shift below 0.01 % MAC",
+      "electrical_load_impact_va": 65,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "AES4363-5C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4520115601387"
+      ],
+      "fins_affected": [
+        "72TN",
+        "626TM"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 22,
+      "estimated_cost_keur": 130,
+      "lead_time_weeks": 18,
+      "production_impact": "No production cut-in in this form",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-164788",
+    "doc_type": "MOD",
+    "title": "Central Maintenance Computer Display Unit, Initial Flight Deck Standard",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2020-10-14",
+      "reason": "Access overlap with the seat track strap work under the forward cabin floor recorded and a combined embodiment package offered for it.",
+      "raised_by_pawo": "PAWO-161330-01",
+      "raised_by_finding": "F03",
+      "finding_type": "CONCURRENCY_REQUIRED"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00303"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "MRD-45-1015"
+      ]
+    },
+    "dates": {
+      "created": "2016-09-08",
+      "released": "2017-11-14",
+      "revised": "2020-10-14",
+      "effective": "2020-11-11"
+    },
+    "abstract": "The first flight deck display standard for the central maintenance system, giving line engineers a fixed screen at the third occupant station instead of a portable terminal connection.",
+    "sections": {
+      "reason": "Early operators found that reading the central maintenance system through a portable terminal was slow on a turnaround and that the connection at the flight deck was awkward to reach with the third occupant seat stowed. Line stations asked for a permanently installed screen. The request came from six operators inside the first two years of service and was accepted as a customer-driven standard change rather than as a defect correction.",
+      "description": "A fixed display unit D4520115601387 is installed at the third occupant station, fed from the existing maintenance system bus with no new processing. The unit is held in a bracket that picks up the existing panel hard points, with silicone edging AES4363-5C protecting the aperture. The maintenance antenna 72TN is unaffected. The maintenance terminal display 626TM remains available and can be used in parallel. Work is in the flight compartment and forward cabin, zones 241 and 226. The display feed is routed under the forward cabin floor and is secured clear of the seat track, so the floor panels along that run have to be lifted; no wiring is added outside the flight deck and no change is made to the central maintenance computer itself.",
+      "effects": "Mass increase of 2.6 kg per aircraft, forward of the reference datum. Electrical load increase of 65 VA in normal operation. Interchangeable, and the display can be removed without affecting any other function. Turnaround time for a maintenance system interrogation drops by roughly ten minutes, which was the operator business case. No dispatch consequence: the display is not required for dispatch and its failure is a maintenance-only item.",
+      "embodiment_note": "Retrofit only, through Service Bulletin MRD-45-1015. Never cut into the production line in this form: the aperture at the third occupant station has to be cut on the aircraft and the flight deck panel is delivered solid. Typical embodiment is a day and a half with two people and is normally taken during an A-check. The feed run shares the forward cabin floor access with the seat track splice strap change of MOD-161330, and the two are now offered as one embodiment package. Fleet planning is asked to check for the overlap before either is booked: one operator scheduled them into separate visits and paid twice for the same floor opening."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4520115601387",
+        "AES4363-5C"
+      ],
+      "fins": [
+        "72TN",
+        "626TM"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "241",
+        "226"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MRD-45-1015",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-161330",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "central maintenance system",
+      "display unit",
+      "flight deck",
+      "turnaround time",
+      "customer option"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Avionics Systems"
+    },
+    "type_data": {
+      "mod_number": 164788,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.6,
+      "balance_impact": "Forward of the datum, CG shift below 0.01 % MAC",
+      "electrical_load_impact_va": 65,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "AES4363-5C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4520115601387"
+      ],
+      "fins_affected": [
+        "72TN",
+        "626TM"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 22,
+      "estimated_cost_keur": 130,
+      "lead_time_weeks": 18,
+      "production_impact": "No production cut-in in this form",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "MOD-164788",
+    "doc_type": "MOD",
+    "title": "Central Maintenance Computer Display Unit, Initial Flight Deck Standard",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2022-12-14",
+      "reason": "Recorded as a prerequisite of the rack replacement standard, which terminates on connectors this change introduces, and marked as superseded by it.",
+      "raised_by_pawo": "PAWO-165240-01",
+      "raised_by_finding": "F01",
+      "finding_type": "PREREQUISITE"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "45",
+      "ata_4d": "45-20",
+      "ata_6d": "45-20-11",
+      "title": "Onboard Maintenance — Central Maintenance Computer"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00001",
+          "to": "M00303"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "SUPERSEDED",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "MRD-45-1015"
+      ]
+    },
+    "dates": {
+      "created": "2016-09-08",
+      "released": "2017-11-14",
+      "revised": "2022-12-14",
+      "effective": "2023-01-11"
+    },
+    "abstract": "The first flight deck display standard for the central maintenance system, giving line engineers a fixed screen at the third occupant station instead of a portable terminal connection.",
+    "sections": {
+      "reason": "Early operators found that reading the central maintenance system through a portable terminal was slow on a turnaround and that the connection at the flight deck was awkward to reach with the third occupant seat stowed. Line stations asked for a permanently installed screen. The request came from six operators inside the first two years of service and was accepted as a customer-driven standard change rather than as a defect correction.",
+      "description": "A fixed display unit D4520115601387 is installed at the third occupant station, fed from the existing maintenance system bus with no new processing. The unit is held in a bracket that picks up the existing panel hard points, with silicone edging AES4363-5C protecting the aperture. The maintenance antenna 72TN is unaffected. The maintenance terminal display 626TM remains available and can be used in parallel. Work is in the flight compartment and forward cabin, zones 241 and 226. No wiring is added outside the flight deck and no change is made to the central maintenance computer itself.",
+      "effects": "Mass increase of 2.6 kg per aircraft, forward of the reference datum. Electrical load increase of 65 VA in normal operation. Interchangeable, and the display can be removed without affecting any other function. Turnaround time for a maintenance system interrogation drops by roughly ten minutes, which was the operator business case. No dispatch consequence: the display is not required for dispatch and its failure is a maintenance-only item. This standard is a prerequisite of the rack replacement standard MOD-165240 and not merely an earlier version of it: the aperture at the third occupant station and the two connectors at the panel hard points are introduced here, and the later harness terminates on them. An aircraft below the production cut-in that never took this change cannot be brought to the rack standard until it has been.",
+      "embodiment_note": "Retrofit only, through Service Bulletin MRD-45-1015, taken by eleven operators between 2018 and 2021. Never cut into the production line in this form. The feed run shares the forward cabin floor access with the seat track splice strap change of MOD-161330, and the two are offered as one embodiment package. Superseded once the rack and the display were replaced together by MOD-165240, but not withdrawn: it remains the route by which an aircraft acquires the flight deck aperture and the panel connectors, and it is stated as a post-modification condition in the retrofit bulletin of the later standard."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4520115601387",
+        "AES4363-5C"
+      ],
+      "fins": [
+        "72TN",
+        "626TM"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "241",
+        "226"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-165240",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDED_BY"
+      },
+      {
+        "doc_id": "MOD-165240",
+        "doc_type": "MOD",
+        "relation": "PREREQUISITE_OF"
+      },
+      {
+        "doc_id": "MRD-45-1015",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "MOD-161330",
+        "doc_type": "MOD",
+        "relation": "CONCURRENT_WITH"
+      }
+    ],
+    "keywords": [
+      "central maintenance system",
+      "display unit",
+      "flight deck",
+      "prerequisite",
+      "panel connectors"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Valmont",
+      "role": "Avionics Systems"
+    },
+    "type_data": {
+      "mod_number": 164788,
+      "mod_class": "MINOR",
+      "change_category": "AVIONICS",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 2.6,
+      "balance_impact": "Forward of the datum, CG shift below 0.01 % MAC",
+      "electrical_load_impact_va": 65,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "AES4363-5C"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D4520115601387"
+      ],
+      "fins_affected": [
+        "72TN",
+        "626TM"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 22,
+      "estimated_cost_keur": 130,
+      "lead_time_weeks": 18,
+      "production_impact": "No production cut-in in this form",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

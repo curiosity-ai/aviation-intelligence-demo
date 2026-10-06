@@ -1,0 +1,174 @@
+[
+  {
+    "doc_id": "MOD-111126",
+    "doc_type": "MOD",
+    "title": "Broadband Absorber Inserts in the Cabin Air Distribution Riser Ducts",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-08-19",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-20",
+      "ata_6d": "21-20-11",
+      "title": "Distribution — Cabin Air Distribution"
+    },
+    "secondary_ata": [
+      "25-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00368",
+      "production_cut_in_date": "2020-11-28",
+      "retrofit_via": [
+        "CRN-21-1024"
+      ]
+    },
+    "dates": {
+      "created": "2019-01-15",
+      "released": "2020-06-03",
+      "revised": "2022-08-19",
+      "effective": "2022-09-12"
+    },
+    "abstract": "Perforated absorber inserts fitted inside the cabin air riser ducts, taking the tonal peak out of the distribution noise that passengers seated over the wing had been reporting since entry into service.",
+    "sections": {
+      "reason": "Cabin noise surveys carried out for three launch operators found a narrow tonal peak near 1250 Hz at the seat rows above the wing, traced to a standing wave in the riser ducts that feed the ceiling outlets from the centre distribution manifold. The peak is 6 dB above the surrounding spectrum and is the single loudest feature of the cabin air noise signature at cruise. Passenger survey scores for cabin quietness were consistently lower in those rows, and one operator made it a condition of a follow-on order.",
+      "description": "Each of the eight riser ducts receives a perforated liner insert backed by a bulk absorber, sized to detune the standing wave without measurably changing the duct pressure drop. The riser accumulator D2120111712496 is replaced by a shorter item to make room for the insert at the upper bend, and the duct is re-clamped with BRD511776-85 at a revised pitch. Grommets AES557672-7B protect the insert edge where the duct passes through the ceiling void former, and spacers AES561134-8B set the standoff at the outlet flange. The distribution clamp 3HQ is repositioned by 25 mm and the recirculation sensor 482HM is unchanged. Revised detail is on drawings D21200003569 and D21200049527. Work is done from the ceiling void in zones 244, 265 and 293 with the ceiling panels dropped.",
+      "effects": "Mass increase of 6.8 kg per aircraft, spread along the cabin length, with no measurable centre-of-gravity effect. No electrical load change. Duct pressure drop rises by 0.4 per cent, which is inside the pack margin and does not change the cabin ventilation certification case. The inserts are interchangeable in both directions. Cabin air distribution duct cleaning needs a revised procedure because the insert cannot be steam cleaned. Measured tonal peak reduction is 5.5 dB at the affected rows.",
+      "embodiment_note": "Cut in on the production line at MSN C00368 in November 2020. Retrofit is through Service Bulletin CRN-21-1024, normally combined with a cabin refresh because the ceiling panels have to come down along the whole centre section. Kits are supplied per aircraft."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2120111712496",
+        "BRD511776-85",
+        "AES557672-7B",
+        "AES561134-8B"
+      ],
+      "fins": [
+        "3HQ",
+        "482HM"
+      ],
+      "drawings": [
+        "D21200003569",
+        "D21200049527"
+      ],
+      "software": [],
+      "zones": [
+        "244",
+        "265",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00368"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-21-1024",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-21-20-11-100-001-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "cabin air riser",
+      "tonal peak",
+      "absorber insert",
+      "standing wave",
+      "cabin noise"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Neuhafen",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111126,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "CUSTOMER_REQUEST",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.831"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 6.8,
+      "balance_impact": "Distributed along the cabin, no measurable CG effect",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "INTERCHANGEABLE",
+      "parts_added": [
+        "AES557672-7B",
+        "AES561134-8B"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2120111712496",
+        "BRD511776-85"
+      ],
+      "fins_affected": [
+        "3HQ"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 130,
+      "estimated_cost_keur": 290,
+      "lead_time_weeks": 22,
+      "production_impact": "Cut-in at MSN C00368, ceiling void installation gains 25 minutes",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

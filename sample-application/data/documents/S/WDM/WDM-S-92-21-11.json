@@ -1,0 +1,177 @@
+[
+  {
+    "doc_id": "WDM-S-92-21-11",
+    "doc_type": "WDM",
+    "title": "Avionics Bay Harnesses — Rack Feedthrough and Ground Stud Group",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2024-03-11",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "92",
+      "ata_4d": "92-21",
+      "ata_6d": "92-21-11",
+      "title": "Forward Fuselage Wiring — Avionics Bay Harnesses"
+    },
+    "secondary_ata": [
+      "20-10",
+      "42-10"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2022-11-21",
+      "released": "2023-06-16",
+      "revised": "2024-03-11",
+      "effective": "2024-03-29"
+    },
+    "abstract": "Wiring sheet for the avionics bay harnesses at the rack feedthrough, showing both the single-aperture build standard and the segregated two-aperture standard with its divider ground stud.",
+    "sections": {
+      "purpose": "This sheet shows the avionics bay harness routing at the rack feedthrough, the support positions along the run and the points at which the harness screens are terminated.",
+      "sheet_note": "Two feedthrough standards are shown. Sheet 1 is the single-aperture build standard, in which the sensitive route and the power feed share one grommet; sheet 2 is the segregated standard with the metallic divider and the ground stud on it. The screen termination point differs between the two and it is the difference that matters: on the build standard the screen terminates about three hundred millimetres downstream of the aperture, and that run is where the noise gets in. The six support positions are given as dimensions from the aperture rather than from a frame, because the frame pitch differs across the bay.",
+      "routing_note": "The run enters the bay at the forward bulkhead, passes through the rack feedthrough and follows the outboard side of the rack to the module positions. Below the floor the run is supported at six positions with cushioned loop clamps; no clamp is closer to a connector backshell than the dimension given on the sheet. On the segregated standard the sensitive route takes the upper aperture and the power feed the lower, and the two must not be swapped even though both fit."
+    },
+    "entities": {
+      "part_numbers": [
+        "D9221112074044",
+        "D9221113760580",
+        "QUD240612-74",
+        "EN491538-6A",
+        "AGS958367K4",
+        "JO191099-01",
+        "AGS573791-88"
+      ],
+      "fins": [
+        "8127VC",
+        "9000VC9"
+      ],
+      "drawings": [],
+      "software": [],
+      "zones": [
+        "162",
+        "165",
+        "166"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-92-21-11-200-048-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-S-92-21-12",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "rack feedthrough",
+      "segregation divider",
+      "screen termination",
+      "support position",
+      "avionics bay"
+    ],
+    "originator": {
+      "department": "ELSC",
+      "site": "Neuhafen",
+      "role": "Wiring Data"
+    },
+    "type_data": {
+      "sheet_number": "92-21-11",
+      "sheet_title": "AVIONICS BAY HARNESSES — RACK FEEDTHROUGH AND GROUND STUD GROUP",
+      "diagram_type": "GROUND_POINT_LIST",
+      "harnesses": [
+        "1620W",
+        "1651W",
+        "1660W"
+      ],
+      "connectors": [
+        {
+          "reference": "1621VC",
+          "part_number": "D9221112074044",
+          "location_zone": "162",
+          "contacts": 61
+        },
+        {
+          "reference": "1662VC",
+          "part_number": "JO191099-01",
+          "location_zone": "166",
+          "contacts": 37
+        }
+      ],
+      "equipment": [
+        {
+          "fin": "8127VC",
+          "description": "BUS BAR, AVIONICS BAY HARNESSES, LH",
+          "zone": "162"
+        },
+        {
+          "fin": "9000VC9",
+          "description": "HARNESS, AVIONICS BAY HARNESSES, LOWER",
+          "zone": "166"
+        }
+      ],
+      "wire_count": 142,
+      "wire_gauge_range": "AWG 26 to AWG 10",
+      "routes": [
+        "Forward bulkhead to the rack feedthrough at the bay front",
+        "Rack feedthrough to the module positions along the outboard side of the rack",
+        "Divider ground stud drop on the segregated standard only"
+      ],
+      "related_sheets": [
+        "WDM-S-92-21-12",
+        "WDM-S-92-11-12"
+      ]
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

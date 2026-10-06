@@ -1,0 +1,360 @@
+[
+  {
+    "doc_id": "PAWO-111094-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis Review — Remaining Scope of Test Standard 6.7 Before the Next Test Standard",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-05-14",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "CLOSED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-50",
+      "ata_6d": "27-50-11",
+      "title": "Flaps — Flap Drive System"
+    },
+    "secondary_ata": [
+      "27-80"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-24",
+      "released": "2026-05-14",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed review of the released slat flap control computer test standard, raised to establish what it still owns before a further test standard is released and which of its two bulletins should continue to run.",
+    "sections": {
+      "objective": "Establish what the released test standard and torque limiter rerating still own once a further test standard reaches pre-analysis, and decide which of its two retrofit bulletins should continue to run in the meantime. The review was raised internally by the flap system office rather than by an operator order, on the grounds that two bulletins for one modification are hard to withdraw cleanly and the decision is better taken early.",
+      "findings_summary": "Five items were confirmed. The candidate test standard supersedes the released one and shares the computer part number, the drive functional item and all three zones with it, so the supersession is not in doubt. What the review actually settled was the bulletin question: the released standard has a combined hardware and software bulletin and a software-only bulletin, and both are still open. The combined bulletin duplicates the software content of the other in a way that has already produced two loading records on the same aircraft. The software-only bulletin is the one to keep running, because the candidate will need the same hardware baseline. The isolation procedure and the carriage fitting work were the remaining items.",
+      "next_steps": "Close the combined hardware and software bulletin to new embodiments and let the software-only bulletin run to the end of the current season, with its embodiment condition re-worded against the loaded part number rather than the hardware. Record the duplicate loading records found on eleven aircraft and issue a clarification to the operators concerned, naming which of the two records is the valid one. Pass the supersession statement and the carriage trending baseline question to the candidate work order rather than issuing either from here, so that one document carries the whole picture."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2750116570759",
+        "D2750008046179",
+        "AES606871-9E"
+      ],
+      "fins": [
+        "345EV2",
+        "916EV9"
+      ],
+      "drawings": [
+        "D27501162228"
+      ],
+      "software": [
+        "LC8C8E906FE"
+      ],
+      "zones": [
+        "522",
+        "561",
+        "661"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111094",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "MOD-111904",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "test standard",
+      "torque limiter",
+      "loadable software",
+      "duplicate bulletin"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-111094-01",
+      "subject_mod": "MOD-111094",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-14",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-02-24",
+      "due_date": "2026-05-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EVAA",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "EYIS",
+          "EDSA"
+        ],
+        "estimated_manhours": 85,
+        "spent_manhours": 66
+      },
+      "search_scope": {
+        "programs": [
+          "C"
+        ],
+        "aircraft_types": [
+          "CIRRANE-11",
+          "CIRRANE-13"
+        ],
+        "ata_2d": [
+          "27",
+          "57"
+        ],
+        "ata_4d": [
+          "27-50",
+          "27-80",
+          "57-30"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D2750116570759",
+            "D2750008046179"
+          ],
+          "fins": [
+            "345EV2",
+            "916EV9"
+          ],
+          "drawings": [
+            "D27501162228"
+          ],
+          "zones": [
+            "522",
+            "561",
+            "661"
+          ],
+          "software": [
+            "LC8C8E906FE"
+          ]
+        },
+        "similarity_seeds": [
+          "flap system fault that clears on the ground with nothing found",
+          "built-in test standard loaded into a slat flap control computer"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Confirm the supersession relationship with the candidate",
+          "method": "ENTITY",
+          "owner": "EVAA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Compare the two open retrofit bulletins line by line",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Check the loading records for duplicate embodiments",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Review carriage related work on the same zones",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EDSA",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-111904",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2750116570759"
+            ],
+            "shared_fins": [
+              "345EV2"
+            ],
+            "shared_zones": [
+              "522",
+              "561",
+              "661"
+            ],
+            "shared_ata_6d": [
+              "27-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The candidate test standard runs on the same computer, reads the same drive sensing and replaces the built-in test content of the released standard entirely. It also needs the hardware baseline the released standard introduced, so the relationship is a supersession that carries a dependency inside it.",
+          "resolution": "Supersession statement passed to the candidate work order to be declared there rather than issued from this review."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "CRN-27-1033",
+          "doc_type": "SB",
+          "finding_type": "DUPLICATE",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "AES606871-9E",
+              "D2750008046179",
+              "D2750116570759"
+            ],
+            "shared_fins": [
+              "345EV2",
+              "916EV9"
+            ],
+            "shared_zones": [
+              "522",
+              "561",
+              "661"
+            ],
+            "shared_ata_6d": [
+              "27-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The combined hardware and software bulletin carries the whole loading procedure that the software-only bulletin also carries, with no cross-reference between them. Eleven aircraft carry a loading record from each, which means the same load was recorded twice and one of the records is meaningless.",
+          "resolution": "Combined bulletin closed to new embodiments; a clarification issued to the operators holding duplicate records."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "CRN-27-1040",
+          "doc_type": "SB",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2750116570759"
+            ],
+            "shared_fins": [
+              "345EV2"
+            ],
+            "shared_zones": [
+              "561",
+              "661"
+            ],
+            "shared_ata_6d": [
+              "27-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The software-only bulletin is effective on aircraft that already carry the rerated torque limiter, and it is the vehicle that will still be needed when the candidate standard arrives. Its pre-mod condition is stated on the hardware and not on the loaded part, which will not discriminate once a third load exists.",
+          "resolution": "Kept running to the end of the season with its embodiment condition re-worded against the loaded part number."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "TSM-C-27-50-11-810-803",
+          "doc_type": "TSM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D2750008046179",
+              "D2750116570759"
+            ],
+            "shared_fins": [
+              "345EV2",
+              "916EV9"
+            ],
+            "shared_zones": [
+              "522",
+              "561",
+              "661"
+            ],
+            "shared_ata_6d": [
+              "27-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The isolation procedure for a flap fault with nothing found on the ground branches on the built-in test standard reported by the computer. It already carries two branches and will need a third, which is worth writing once rather than twice.",
+          "resolution": "Re-issue deferred and merged with the candidate's manual impact."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-111047",
+          "doc_type": "MOD",
+          "finding_type": "CONCURRENCY_REQUIRED",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "561",
+              "661"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The thickened carriage bearing land works in the same two zones and its wear behaviour is what the candidate standard proposes to trend. A fleet that mixes fitting standards and test standards makes the trending baseline hard to read.",
+          "resolution": "Recorded for the candidate work order so the trending baseline is defined per fitting standard."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Validated. The combined bulletin is closed, the software-only bulletin runs on, and the supersession is declared by the candidate rather than here.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,160 @@
+[
+  {
+    "doc_id": "TSM-M-49-60-11-810-811",
+    "doc_type": "TSM",
+    "title": "Auxiliary Power Unit — Slow Load Acceptance After Availability",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-03-10",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "49",
+      "ata_4d": "49-60",
+      "ata_6d": "49-60-11",
+      "title": "Controls — Electronic Control Box"
+    },
+    "secondary_ata": [
+      "49-50"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46",
+        "MERIDIAN-42F"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1",
+        "MRD-42FK1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2020-06-29",
+      "released": "2021-03-10",
+      "revised": null,
+      "effective": "2021-04-07"
+    },
+    "abstract": "Fault isolation for an auxiliary power unit that runs normally but is slow to accept the air load, separating the altitude and temperature schedule from a bleed system or control box fault.",
+    "sections": {
+      "purpose": "This procedure isolates a report of slow load acceptance after the availability indication, and establishes whether the delay is the normal stabilisation schedule for the conditions or a fault.",
+      "fault_description": "The unit starts and reaches availability at the expected time, but the packs cannot be transferred to it for a further one to four minutes. The delay is longest at high field elevation and high ambient temperature, and shortest at sea level in cold conditions. Crews report it as a fault because the availability indication has already been shown; the schedule that follows availability is not visible to them.",
+      "isolation_procedure": "1. Record the field elevation and the ambient temperature at the time of the event, and read the acceptance time limit from the table for those conditions. 2. Compare the reported delay against that limit before anything else. A delay inside the limit is the schedule, not a fault, and the crew report should be closed with an explanation. 3. Read the maintenance messages from the control box and note any surge or bleed protection status. 4. Do the load acceptance test in AMM-M-49-60-11-700-042-A and record the measured time and the exhaust gas temperature margin. 5. If the margin at acceptance is low, examine the surge control valve and its nozzle for restriction and check the valve travel. 6. Check the bleed duct for a leak between the load compressor and the pack valves; a leak lengthens acceptance without producing a message. 7. If the test time exceeds the limit with a normal margin and no leak, load the current control box software standard and repeat the test. 8. Replace the control box only if the delay persists after the software standard has been confirmed.",
+      "dispatch_note": "There is no dispatch effect on the aircraft, because the auxiliary power unit is not required for dispatch on most routes. Where it is required for an extended range departure or for a station without ground air, the unit must accept the load inside the tabulated time before departure."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4950123850952",
+        "D4950121625398"
+      ],
+      "fins": [
+        "5PB",
+        "244PB3"
+      ],
+      "drawings": [
+        "D49601217089"
+      ],
+      "software": [
+        "LD7PCEB6F22",
+        "LF2P41059D7"
+      ],
+      "zones": [
+        "394",
+        "323"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-49-60-11-700-042-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "load acceptance",
+      "stabilisation schedule",
+      "surge control valve",
+      "bleed leak",
+      "field elevation"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Port-Rivage",
+      "role": "Technical Data"
+    },
+    "type_data": {
+      "procedure_number": "49-60-11-810-811",
+      "fault_symptom": "APU available but slow to accept the air load, most noticeable at high field elevation",
+      "fault_codes": [
+        "496011005",
+        "496011026"
+      ],
+      "warning_messages": [
+        "APU BLEED FAULT"
+      ],
+      "affected_fins": [
+        "5PB",
+        "244PB3"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Normal stabilisation schedule for the field elevation and ambient temperature",
+          "probability_pct": 50,
+          "fin": "5PB"
+        },
+        {
+          "cause": "Surge control valve restriction or reduced travel",
+          "probability_pct": 22,
+          "fin": "244PB3"
+        },
+        {
+          "cause": "Bleed duct leak between the load compressor and the pack valves",
+          "probability_pct": 18,
+          "fin": "5PB"
+        },
+        {
+          "cause": "Control box software standard not current",
+          "probability_pct": 10,
+          "fin": "244PB3"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-M-49-60-11-700-042-A",
+      "dispatch": {
+        "mel_item": "49-60-01A",
+        "dispatchable": true,
+        "dispatch_condition": "Auxiliary power unit not required for the departure; ground air available at the station"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

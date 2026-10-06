@@ -1,0 +1,174 @@
+[
+  {
+    "doc_id": "MOD-162530",
+    "doc_type": "MOD",
+    "title": "Replacement of the Cargo Compartment Heating Transmitter for Reliability",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-05-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-40",
+      "ata_6d": "21-40-11",
+      "title": "Heating — Cargo Compartment Heating"
+    },
+    "secondary_ata": [
+      "26-10"
+    ],
+    "applicability": {
+      "scope": "MSN_LIST",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [
+        "M00104",
+        "M00129",
+        "M00146",
+        "M00174",
+        "M00212",
+        "M00239",
+        "M00264"
+      ],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": [
+        "MRD-21-1052"
+      ]
+    },
+    "dates": {
+      "created": "2020-01-22",
+      "released": "2021-05-19",
+      "revised": null,
+      "effective": "2021-06-10"
+    },
+    "abstract": "A sealed temperature transmitter replaces the vented unit in the aft cargo compartment heating loop on the seven aircraft that carry the early supplier build standard, ending a run of erroneous low-temperature indications.",
+    "sections": {
+      "reason": "Seven aircraft built from one supplier batch reported erroneous low cargo temperature indications, always after a cold soak and always clearing within twenty minutes of the heating system running. Nineteen events were logged in ten months, of which six led to a live animal shipment being refused at the gate. Strip examination of two returned transmitters found moisture ingress at the vent, which is present on the early build standard and deleted on later units. The population is small and closed, so an MSN list was preferred to a fleet-wide change.",
+      "description": "The vented temperature transmitter is replaced by the sealed unit D2140118706760, mounted on the same bracket with a new washer set EN889198-3B and a repositioned drip loop in the harness. The actuator 181HM and the solenoid 9469HM in the same loop are left in place but their connectors are re-sealed to the current standard practice, because the moisture path runs along the harness as well as through the transmitter vent. Installation detail is on drawing D21401127591. Work is done from the aft cargo compartment in zone 172 and from the equipment area in zone 273, with the compartment lining opened locally. No change is made to the heating duct, the trim valve or the controller software.",
+      "effects": "Mass reduction of 0.2 kg per aircraft. Electrical load is unchanged at 12 VA. Interchangeable in one direction only: the sealed unit fits the old bracket, but the vented unit must not be installed on a post-modification harness because the drip loop then sits above the connector. Dispatch relief under the master minimum equipment list for the cargo heating indication is unchanged. The heating system operational test requires a small amendment to the expected stabilisation time.",
+      "embodiment_note": "Retrofit only. Service Bulletin MRD-21-1052 covers the seven affected aircraft and takes one shift with two people at a line station. Kits were built to order and all seven had been embodied by the end of 2022."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2140118706760",
+        "EN889198-3B"
+      ],
+      "fins": [
+        "181HM",
+        "9469HM"
+      ],
+      "drawings": [
+        "D21401127591"
+      ],
+      "software": [],
+      "zones": [
+        "172",
+        "273"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00104",
+        "M00212"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-21-1052",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-M-21-40-11-700-016-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "cargo heating",
+      "temperature transmitter",
+      "moisture ingress",
+      "erroneous indication",
+      "supplier batch"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Systems Design Office"
+    },
+    "type_data": {
+      "mod_number": 162530,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "SUPPLIER_CHANGE",
+      "customer_driven": true,
+      "certification": {
+        "impact": "NO_IMPACT",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": -0.2,
+      "balance_impact": "Negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "EN889198-3B"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2140118706760"
+      ],
+      "fins_affected": [
+        "181HM",
+        "9469HM"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 16,
+      "estimated_cost_keur": 45,
+      "lead_time_weeks": 12,
+      "production_impact": "No production impact, the affected supplier build standard was already out of production",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

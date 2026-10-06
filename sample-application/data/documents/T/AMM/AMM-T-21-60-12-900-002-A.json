@@ -1,0 +1,329 @@
+[
+  {
+    "doc_id": "AMM-T-21-60-12-900-002-A",
+    "doc_type": "AMM",
+    "title": "Air Conditioning Zone Controller — Software Loading",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2009-09-09",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2009-02-22",
+      "released": "2009-09-09",
+      "revised": "2009-09-09",
+      "effective": "2009-09-30"
+    },
+    "abstract": "Loading of the operational and parameter software standards into both zone controllers using the portable data loader, in the fixed order given by the task, with the configuration list update that closes the work.",
+    "sections": {
+      "purpose": "This task gives the loading of the operational software and the parameter set into the two air conditioning zone controllers, and the confirmation checks that follow the load.",
+      "job_setup_note": "Both controllers must carry the same standard, so plan to load both in one session. Check the media set against the operator software configuration list before you connect the loader, because a partial load leaves the controller in a state that needs a second session to clear. Ground power must be stable for the whole load; do not use a source that is shared with a starting cart.",
+      "procedure": "Put the aircraft on ground power and confirm that the supply is stable. Make the air conditioning system safe for maintenance and confirm that no bleed source is running. Connect the portable data loader at the data loading panel. WARNING: DO NOT REMOVE GROUND POWER DURING A LOAD. AN INTERRUPTED LOAD LEAVES THE CONTROLLER WITHOUT A VALID SOFTWARE IMAGE AND THE UNIT MUST THEN BE REMOVED. Select the first controller and load the parameter set. Wait for the loader to report the load complete and note the checksum. Load the operational software to the same controller and wait for the completion report. CAUTION: DO NOT POWER CYCLE THE CONTROLLER BETWEEN THE PARAMETER LOAD AND THE OPERATIONAL LOAD. THE OPERATIONAL IMAGE WILL NOT RUN AGAINST A PARAMETER SET THAT HAS NOT BEEN VALIDATED. Power cycle the controller. Repeat the whole sequence for the second controller.",
+      "close_out": "Disconnect the portable data loader and close the data loading panel. Update the aircraft software configuration list with the loaded part numbers and the checksums. Do the zone controller operational test before the aircraft is released. Keep the previous media set until the new standard has been in service for thirty days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160120235977",
+        "QUI339334-79"
+      ],
+      "fins": [
+        "7982HM"
+      ],
+      "drawings": [
+        "D21601284523"
+      ],
+      "software": [
+        "LA1R2B6A257",
+        "LB6R17F3334",
+        "LE6RAA1AA20"
+      ],
+      "zones": [
+        "292",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142870",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-21-60-12-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software loading",
+      "zone controller",
+      "portable data loader",
+      "checksum",
+      "configuration list"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "21-60-12-900-002-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. Load the parameter set before the operational software. The manifold assembly D2160120235977 takes the operational standard named in the operator configuration list.",
+      "manhours": 3.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "292",
+          "293"
+        ],
+        "access_panels": [
+          "292BL",
+          "293BL"
+        ],
+        "doors": [
+          "Upper deck passenger door 1 RH"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not remove ground power during a load.",
+          "Do not use a ground power source shared with a starting cart.",
+          "Check the media set against the operator configuration list before connecting."
+        ],
+        "tooling": [
+          {
+            "reference": "98D45451-006",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D21601-033",
+            "description": "Maintenance terminal interface cable"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-21-60-12-700-001-A"
+      ],
+      "steps": 9,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "AMM-T-21-60-12-900-002-A",
+    "doc_type": "AMM",
+    "title": "Air Conditioning Zone Controller — Software Loading",
+    "program": "T",
+    "program_name": "TITAN",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2017-11-27",
+      "reason": "Loadable pairing moved into a table keyed on the controller part number and a post load read back of the reported standard added.",
+      "raised_by_pawo": "PAWO-142870-01",
+      "raised_by_finding": "F01",
+      "finding_type": "SOFTWARE_CONFLICT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "21",
+      "ata_4d": "21-60",
+      "ata_6d": "21-60-12",
+      "title": "Temperature Control — Zone Controller"
+    },
+    "secondary_ata": [
+      "45-45"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "TITAN-88"
+      ],
+      "models": [
+        "TTN-88W1",
+        "TTN-88W2",
+        "TTN-88E1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2009-02-22",
+      "released": "2009-09-09",
+      "revised": "2017-11-27",
+      "effective": "2017-12-18"
+    },
+    "abstract": "Loading of the operational and parameter software standards into both zone controllers using the portable data loader, with the pairing taken from the controller part number and the configuration list update that closes the task.",
+    "sections": {
+      "purpose": "This task gives the loading of the operational software and the parameter set into the two air conditioning zone controllers, and the confirmation checks that follow the load.",
+      "job_setup_note": "Both controllers must carry the same standard, so plan to load both in one session. Read the controller part number at each rack position first and take the parameter and operational pairing from the table in the preliminaries; the pairing is not the same on every controller standard and a valid load put into the wrong channel raises no error at the loader. Check the media set against the operator software configuration list before you connect the loader, because a partial load leaves the controller in a state that needs a second session to clear. Ground power must be stable for the whole load; do not use a source that is shared with a starting cart.",
+      "procedure": "Put the aircraft on ground power and confirm that the supply is stable. Make the air conditioning system safe for maintenance and confirm that no bleed source is running. Record the software part numbers currently reported by each controller. Read the controller part number at each rack position and select the row of the pairing table that matches it. Connect the portable data loader at the data loading panel. WARNING: DO NOT REMOVE GROUND POWER DURING A LOAD. AN INTERRUPTED LOAD LEAVES THE CONTROLLER WITHOUT A VALID SOFTWARE IMAGE AND THE UNIT MUST THEN BE REMOVED. Select the first controller and load the parameter set given by the table. Wait for the loader to report the load complete and note the checksum. Load the operational software from the same table row and wait for the completion report. CAUTION: DO NOT POWER CYCLE THE CONTROLLER BETWEEN THE PARAMETER LOAD AND THE OPERATIONAL LOAD. THE OPERATIONAL IMAGE WILL NOT RUN AGAINST A PARAMETER SET THAT HAS NOT BEEN VALIDATED. Power cycle the controller and read back the reported operational and parameter part numbers; both must match the table row selected, and a mismatch is a rejected load and not a configuration message to be cleared. Repeat the whole sequence for the second controller. Confirm that both controllers report the same standard.",
+      "close_out": "Disconnect the portable data loader and close the data loading panel. Update the aircraft software configuration list with the loaded part numbers, the checksums and the pairing table row used at each position. Do the zone controller operational test before the aircraft is released. Keep the previous media set until the new standard has been in service for thirty days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2160120235977",
+        "QUI339334-79"
+      ],
+      "fins": [
+        "7982HM"
+      ],
+      "drawings": [
+        "D21601284523"
+      ],
+      "software": [
+        "LA1R2B6A257",
+        "LB8R1DDEAAF",
+        "LB6R17F3334",
+        "LE6RAA1AA20"
+      ],
+      "zones": [
+        "292",
+        "293"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-142870",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-T-21-60-12-700-001-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "software loading",
+      "zone controller",
+      "pairing table",
+      "read back",
+      "configuration list"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "21-60-12-900-002-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. The operational standard must match the parameter standard; the pairing table of the illustration is keyed on the controller part number and applies at every rack position.",
+      "manhours": 3.0,
+      "personnel": 2,
+      "elapsed_time_hours": 2.0,
+      "access": {
+        "zones": [
+          "292",
+          "293"
+        ],
+        "access_panels": [
+          "292BL",
+          "293BL"
+        ],
+        "doors": [
+          "Upper deck passenger door 1 RH"
+        ]
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not remove ground power during a load.",
+          "Do not use a ground power source shared with a starting cart.",
+          "Check the media set against the operator configuration list before connecting."
+        ],
+        "tooling": [
+          {
+            "reference": "98D45451-006",
+            "description": "Portable data loader"
+          },
+          {
+            "reference": "98D21601-033",
+            "description": "Maintenance terminal interface cable"
+          }
+        ],
+        "consumables": [],
+        "expendables": []
+      },
+      "referenced_tasks": [
+        "AMM-T-21-60-12-700-001-A"
+      ],
+      "steps": 11,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

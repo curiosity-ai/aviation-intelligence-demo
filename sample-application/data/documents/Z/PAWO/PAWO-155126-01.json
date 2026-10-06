@@ -1,0 +1,306 @@
+[
+  {
+    "doc_id": "PAWO-155126-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Multi-Mode Receiver Installation for Surveillance Broadcast Compliance",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-03-22",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "34",
+      "ata_4d": "34-50",
+      "ata_6d": "34-50-11",
+      "title": "Dependent Position Determining — Multi-Mode Receiver"
+    },
+    "secondary_ata": [
+      "34-50",
+      "92-11"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [
+        "ZPH-18C1",
+        "ZPH-18C2",
+        "ZPH-20C2",
+        "ZPH-20C5",
+        "ZPH-22C4",
+        "ZPH-22V2",
+        "ZPH-24C1",
+        "ZPH-24V1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-06-20",
+      "released": "2017-03-22",
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the receiver installation raised against the surveillance broadcast mandate, handed to the avionics standards office when the fleet-wide software configuration question grew larger than the installation itself.",
+    "sections": {
+      "objective": "Establish what the receiver installation needs beyond the equipment itself in order to meet the surveillance broadcast mandate on a fixed date, across a fleet with several avionics build standards. The mandate date is not negotiable and the population is large, so the pre-analysis was asked to concentrate on what would stop a campaign running at rate: part availability, cockpit panel wiring, and the number of distinct software configurations the installation would have to be qualified against.",
+      "findings_summary": "Three items were confirmed and the third is what moved the work order. The receiver operational test and the surveillance rejection fault-isolation procedure both read the receiver service status from the same interface, and both would have to be issued before the first aircraft is converted rather than after, because the campaign has no slack for a manual gap. The cockpit panel harness that carries the receiver interface was reached by following the installation outward rather than by any shared identifier, and its connector allocation differs between build standards in a way the installation drawing does not acknowledge. Establishing how many distinct avionics configurations exist across the fleet, and which of them the receiver application has to be qualified against, turned out to be a fleet configuration question rather than an installation one, and the avionics standards office took it over.",
+      "next_steps": "Transfer the configuration question to the avionics standards office with the connector allocation finding attached, and ask that the answer come back as a qualified configuration list rather than as a count. Publish the operational test and the fault-isolation procedure before the campaign opens, not with the first bulletin revision. Keep the installation design in the avionics design office; only the configuration question moves."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3450128295476",
+        "D3450125988160",
+        "D3450128437161"
+      ],
+      "fins": [
+        "172TR7",
+        "32DA",
+        "4DA1"
+      ],
+      "drawings": [
+        "D34501177112"
+      ],
+      "software": [
+        "LF2NDF3D474",
+        "LF5N0045592"
+      ],
+      "zones": [
+        "262",
+        "263"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-155126",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "multi-mode receiver",
+      "surveillance broadcast",
+      "configuration list",
+      "campaign rate"
+    ],
+    "originator": {
+      "department": "EAAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-155126-01",
+      "subject_mod": "MOD-155126",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2017-03-22",
+      "outcome": "DELEGATED",
+      "raised_date": "2016-06-20",
+      "due_date": "2017-03-10",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EAAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC"
+        ],
+        "estimated_manhours": 145,
+        "spent_manhours": 121
+      },
+      "search_scope": {
+        "programs": [
+          "Z"
+        ],
+        "aircraft_types": [
+          "ZEPHYR-18",
+          "ZEPHYR-20",
+          "ZEPHYR-22",
+          "ZEPHYR-24"
+        ],
+        "ata_2d": [
+          "34",
+          "92"
+        ],
+        "ata_4d": [
+          "34-50",
+          "92-11"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "SRM",
+          "TSM",
+          "WDM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "D3450128295476",
+            "D3450125988160",
+            "D3450128437161"
+          ],
+          "fins": [
+            "172TR7",
+            "32DA",
+            "4DA1"
+          ],
+          "drawings": [
+            "D34501177112"
+          ],
+          "zones": [
+            "262",
+            "263"
+          ],
+          "software": [
+            "LF2NDF3D474",
+            "LF5N0045592"
+          ]
+        },
+        "similarity_seeds": [
+          "surveillance broadcast mandate compliance on a large single aisle fleet",
+          "receiver application qualified against several avionics build standards",
+          "cockpit panel connector allocation differing by build standard"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Review navigation manual content against the installation",
+          "method": "ENTITY",
+          "owner": "EAAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Trace the cockpit panel harness carrying the receiver interface",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Count and characterise the avionics configurations in the fleet",
+          "method": "SME_INTERVIEW",
+          "owner": "EAAM",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "AMM-Z-34-50-11-700-020-A",
+          "doc_type": "AMM",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3450125988160",
+              "D3450128437161"
+            ],
+            "shared_fins": [
+              "172TR7",
+              "32DA",
+              "4DA1"
+            ],
+            "shared_zones": [
+              "262",
+              "263"
+            ],
+            "shared_ata_6d": [
+              "34-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The operational test names the receiver and its antenna coupler as fitted items and is the closing check of the installation. Published after the campaign opens, it leaves the first conversions with no accepted closing check.",
+          "resolution": "Publish the test before the campaign opens rather than with the first bulletin revision."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "TSM-Z-34-50-11-810-805",
+          "doc_type": "TSM",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "D3450125988160",
+              "D3450128437161"
+            ],
+            "shared_fins": [
+              "172TR7",
+              "32DA",
+              "4DA1"
+            ],
+            "shared_zones": [
+              "262",
+              "263"
+            ],
+            "shared_ata_6d": [
+              "34-50-11"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The fault-isolation procedure for a rejected broadcast reads the receiver service status through the application load. Aircraft at different avionics standards return that status differently, and the procedure assumes one behaviour.",
+          "resolution": "Hold the procedure until the qualified configuration list exists, then write it against that list."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-Z-92-11-11",
+          "doc_type": "WDM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "Reached by following the installation outward through the cockpit panel rather than by any shared identifier. The connector allocation on the panel harness differs between build standards in a way the installation drawing does not acknowledge, which would stop a campaign at rate.",
+          "resolution": "Attach the allocation finding to the configuration question handed to the avionics standards office."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed by delegation. The installation design stays here; the fleet configuration question that governs qualification was transferred to the avionics standards office with the connector allocation finding attached.",
+      "recommendation": "MERGE_WITH_EXISTING_MOD"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "doc_id": "MOD-138150",
+    "doc_type": "MOD",
+    "title": "Rudder Travel Limiter Unit Replacement and Yaw Damper Coupling Rework",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-01-08",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "27",
+      "ata_4d": "27-20",
+      "ata_6d": "27-20-12",
+      "title": "Rudder — Yaw Damper Coupling"
+    },
+    "secondary_ata": [
+      "27-20-11"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34"
+      ],
+      "models": [
+        "SLN-30R3",
+        "SLN-34R3"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-7720"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "PRE_ANALYSIS",
+      "points": [
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": null,
+      "production_cut_in_date": null,
+      "retrofit_via": []
+    },
+    "dates": {
+      "created": "2026-01-08",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Replacement of the mechanical travel limiter in the rudder control run by a unit with a wider scheduling range, together with a stiffer yaw damper coupling, to restore the pedal feel that operators report as degraded on high-cycle aircraft.",
+    "sections": {
+      "reason": "Pilot reports of heavy and inconsistent rudder pedal feel above 250 knots accumulated to fifty-four occurrences over four years on Auran-powered twin-engine aircraft. Ground rigging finds the aircraft in tolerance in almost every case. Instrumented measurement on three aircraft above 45 000 flight cycles found the travel limiter reaching its commanded stop between 0.4 and 0.9 seconds late, and the yaw damper coupling showing 1.6 millimetres of lost motion against a design figure of 0.4. Neither alone is outside limits; together they produce the pedal feel the crews describe. Compliance with the flight manual limitation on rudder use is unaffected, but the reports are persistent enough that two operators have asked for a hardware answer rather than a rigging procedure.",
+      "description": "The travel limiter unit is replaced by a unit with a wider scheduling range and a faster stop actuator, and the yaw damper coupling is re-worked to remove the lost motion. The right-hand coupling filter D2720120349565 is replaced by a finer element, the upper coupling transmitter D2720120578855 is replaced by a unit with a higher output resolution, and the right-hand hose D2720122491963 is re-routed clear of the new actuator body. The obsolete coupling accumulator D2720125127459 is deleted and the aft restrictor ORDE923015-91 is re-sized to compensate. The left-hand coupling sensor JOR552898-79 is re-shimmed to the tightened lost motion tolerance and the harness is re-secured with cable ties EN461118K6. The inboard solenoid position 13KS is re-wired to the new actuator and the forward accumulator position 47KS2 is capped. Work is in the rudder and the fin, zones 351, 353 and 394, from the fin access platform with the rudder de-powered. Detail is on drawing D27201227968.",
+      "effects": "Estimated mass reduction of 2.8 kg per aircraft after deletion of the accumulator, well aft of the reference datum, giving a centre-of-gravity shift of 0.03 per cent MAC. Electrical load increases by 90 VA for the faster stop actuator. Not interchangeable: the coupling and the limiter must be changed as a pair because the lost motion tolerance is only achievable with both. The rigging procedure and its tolerance table change, and the flight control rigging check after any rudder work becomes shorter because the lost motion measurement is deleted. No flight manual limitation changes and no MMEL change.",
+      "embodiment_note": "Retrofit only at this stage, with a production cut-in to be considered once service experience is available. Provisional estimate is three days at a C-check with the fin access platform rigged, followed by a flight control functional check.",
+      "open_points": "Pre-analysis must establish whether the scheduling range of the new limiter is consistent with the directional authority tables held in the flight control computers, whether the deleted accumulator has any role in the standby rudder case, and whether the tightened lost motion tolerance can be held in service without a new special tool."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2720120349565",
+        "D2720120578855",
+        "D2720122491963",
+        "D2720125127459",
+        "ORDE923015-91",
+        "JOR552898-79",
+        "EN461118K6"
+      ],
+      "fins": [
+        "13KS",
+        "47KS2"
+      ],
+      "drawings": [
+        "D27201227968"
+      ],
+      "software": [],
+      "zones": [
+        "351",
+        "353",
+        "394"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S00874",
+        "S01466"
+      ]
+    },
+    "references": [],
+    "keywords": [
+      "travel limiter",
+      "yaw damper coupling",
+      "lost motion",
+      "pedal feel",
+      "rudder rigging"
+    ],
+    "originator": {
+      "department": "EYAA",
+      "site": "Valmont",
+      "role": "Flight Control Systems"
+    },
+    "type_data": {
+      "mod_number": 138150,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.147",
+          "CS 25.671",
+          "CS 25.1309"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": -2.8,
+      "balance_impact": "Aft of the reference datum; CG shift of 0.03 % MAC",
+      "electrical_load_impact_va": 90,
+      "interchangeability": "NOT_INTERCHANGEABLE",
+      "parts_added": [
+        "ORDE923015-91",
+        "EN461118K6"
+      ],
+      "parts_removed": [
+        "D2720125127459"
+      ],
+      "parts_modified": [
+        "D2720120349565",
+        "D2720120578855",
+        "D2720122491963",
+        "JOR552898-79"
+      ],
+      "fins_affected": [
+        "13KS",
+        "47KS2"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 140,
+      "estimated_cost_keur": 720,
+      "lead_time_weeks": 44,
+      "production_impact": "No cut-in proposed until service experience is available",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

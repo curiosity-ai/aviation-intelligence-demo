@@ -1,0 +1,178 @@
+[
+  {
+    "doc_id": "MOD-111117",
+    "doc_type": "MOD",
+    "title": "Anti-Cavitation Relief Valve in the Engine Driven Pump Case Drain Line",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-05-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "29",
+      "ata_4d": "29-10",
+      "ata_6d": "29-10-11",
+      "title": "Main System — Engine Driven Pump"
+    },
+    "secondary_ata": [
+      "29-30"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "PYR-1524G",
+        "PYR-1525G"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_PRODUCTION",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT"
+      ],
+      "production_effectivity": "C00733",
+      "production_cut_in_date": "2025-09-23",
+      "retrofit_via": [
+        "CRN-29-1012"
+      ]
+    },
+    "dates": {
+      "created": "2023-09-12",
+      "released": "2025-05-19",
+      "revised": null,
+      "effective": "2025-06-10"
+    },
+    "abstract": "A relief valve in the engine driven pump case drain line that stops the transient depression seen during rapid thrust reduction, which had been eroding pump bearing life on high-cycle short-sector aircraft.",
+    "sections": {
+      "reason": "Shop findings on twelve engine driven pumps returned from short-sector CIRRANE-13 operators showed cavitation erosion on the bearing journal that the qualification programme had not produced. Recorded pressure data traced it to a transient depression in the case drain line during rapid thrust reduction on descent, which the type sees far more often than the qualification duty cycle assumed. Mean time between unscheduled removals for the pump was running at 8 900 flight hours against a target of 16 000, and pump availability was becoming a spares constraint.",
+      "description": "A cracking relief valve is added to the case drain line between the pump and the reservoir return, set to open at 0.4 bar below reservoir pressure so that the line cannot go sub-atmospheric during a rapid thrust reduction. The pump isolation valve D2910110251872 is replaced by an item with a second port for the relief valve, the return pipe D2910004303006 is re-routed 40 mm outboard to clear the new fitting, and anchor nuts AES818405K5 secure the valve bracket to the pylon rib. The pump clamp 280GG8 and the system non-return valve 469GG are unchanged. Revised detail is on drawings D29100090713 and D29101319946. Work is done in zones 431, 721 and 734 with the fan cowl open and the hydraulic system depressurised.",
+      "effects": "Mass increase of 1.9 kg per aircraft for the two installations. No electrical load change. The pump installation is not interchangeable with the previous standard because the isolation valve has an extra port, but a pre-modification pump can be fitted to a post-modification installation with the relief port blanked, which is stated as a dispatch provision. Minimum equipment list content is unchanged. Maintenance manual content for pump removal and installation needs re-issue and the hydraulic system schematic requires a new symbol.",
+      "embodiment_note": "Cut in on the production line at MSN C00733 in September 2025. Retrofit through Service Bulletin CRN-29-1012 is timed with a scheduled pump replacement so that no additional downtime is incurred. Kits are supplied per aircraft and contain both installations."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2910110251872",
+        "D2910004303006",
+        "AES818405K5"
+      ],
+      "fins": [
+        "280GG8",
+        "469GG"
+      ],
+      "drawings": [
+        "D29100090713",
+        "D29101319946"
+      ],
+      "software": [],
+      "zones": [
+        "431",
+        "721",
+        "734"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00733"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "CRN-29-1012",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "AMM-C-29-10-11-000-006-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-29-10-11-400-006-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "engine driven pump",
+      "case drain",
+      "cavitation",
+      "relief valve",
+      "unscheduled removal"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Ashcombe",
+      "role": "Systems Design"
+    },
+    "type_data": {
+      "mod_number": 111117,
+      "mod_class": "MAJOR",
+      "change_category": "SYSTEM",
+      "trigger": "RELIABILITY",
+      "customer_driven": false,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1435"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 1.9,
+      "balance_impact": "Symmetric, negligible",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "AES818405K5"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2910110251872",
+        "D2910004303006"
+      ],
+      "fins_affected": [
+        "280GG8",
+        "469GG"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 72,
+      "estimated_cost_keur": 330,
+      "lead_time_weeks": 28,
+      "production_impact": "Cut-in at MSN C00733, pylon dressing station absorbs the fitting",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

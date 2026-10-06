@@ -1,0 +1,216 @@
+[
+  {
+    "doc_id": "MOD-111225",
+    "doc_type": "MOD",
+    "title": "Extension of the ATC Datalink Router Standard to Oceanic Clearance and Automatic Dependent Surveillance",
+    "program": "C",
+    "program_name": "CIRRANE",
+    "revision": "C",
+    "issue": {
+      "letter": "C",
+      "supersedes": "B",
+      "date": "2023-06-14",
+      "reason": "Issue C. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "23",
+      "ata_4d": "23-70",
+      "ata_6d": "23-70-11",
+      "title": "Datalink — ATC Datalink Router"
+    },
+    "secondary_ata": [
+      "23-20",
+      "34-50"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "CIRRANE-11",
+        "CIRRANE-13"
+      ],
+      "models": [
+        "CRN-11G1",
+        "CRN-13G1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "C00137",
+          "to": "C00680"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [
+        "PYR-1521G",
+        "PYR-1524G"
+      ],
+      "operators": [
+        "MTA",
+        "VSL",
+        "GSL"
+      ],
+      "embodiment_condition": {
+        "post_mod": [
+          "MOD-111212"
+        ],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "C00408",
+      "production_cut_in_date": "2021-09-30",
+      "retrofit_via": [
+        "CRN-23-2004",
+        "CRN-23-2007"
+      ]
+    },
+    "dates": {
+      "created": "2019-08-05",
+      "released": "2021-04-19",
+      "revised": "2023-06-14",
+      "effective": "2023-07-01"
+    },
+    "abstract": "Second issue of the datalink router standard, adding oceanic clearance exchange and automatic position surveillance to the continental capability introduced earlier, with a larger message store and a reworked log-on state machine.",
+    "sections": {
+      "reason": "The first router standard was written for continental airspace and could not hold the message set the oceanic tracks require. Three operators had by then opened routes across the North Atlantic and were carrying a dispatch restriction on every one of them. Separately, the surveillance mandate that came into force in 2022 required an automatic position report the first standard could not generate, and the log-on state machine of that standard was the root cause of forty-one reported log-on failures across the fleet in one twelve-month period, all of which had to be cleared by a manual re-log-on by the crew.",
+      "description": "The router assembly D2370006240541 is retained but re-loaded, the display unit D2370118700860 is replaced by the same part number at a later hardware standard, and the data concentrator VED805230-21 is supplemented by a second unit on the outboard shelf so that the surveillance function has an independent path to the position source. The message store is quadrupled and the log-on state machine is rewritten so that a failed log-on retries automatically three times before it is annunciated. Functional item 218RN keeps its identity; functional item 16RN is added for the surveillance antenna feed in zone 282. The harness in the forward avionics bay in zone 165 is extended aft along the existing cargo compartment route. Installation detail is on drawing D23700095149 at issue 4, and the assembly bolts AGS119203K9 are unchanged.",
+      "effects": "Additional mass of 2.9 kg over the first standard. Electrical load rises by a further 140 volt-amperes. The change is one-way interchangeable: an aircraft at the second standard cannot be returned to the first without changing the display unit back. Dispatch with the surveillance function inoperative is limited to ten days and prohibits oceanic track allocation. The flight crew operating manual description of the datalink page set has to be re-issued because the log-on annunciation the crew sees is different, and the maintenance and illustrated parts content both change.",
+      "embodiment_note": "Production cut-in at MSN C00408 at the end of September 2021. Retrofit is by Service Bulletin CRN-23-2004, preceded by the antenna feed inspection of Service Bulletin CRN-23-2007 where the aircraft has never had the surveillance antenna land opened. Embodiment takes one shift on an aircraft already at the first standard and three shifts on an aircraft that is not."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2370006240541",
+        "D2370118700860",
+        "VED805230-21",
+        "AGS119203K9",
+        "ELL642868-87"
+      ],
+      "fins": [
+        "218RN",
+        "16RN",
+        "7RC"
+      ],
+      "drawings": [
+        "D23700095149"
+      ],
+      "software": [],
+      "zones": [
+        "165",
+        "211",
+        "282"
+      ],
+      "figures": [
+        "FIG-23-70-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "C00408"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-111212",
+        "doc_type": "MOD",
+        "relation": "SUPERSEDES"
+      },
+      {
+        "doc_id": "CRN-23-2004",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "CRN-23-2007",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "FCOM-C-DSC-23-70-01",
+        "doc_type": "FCOM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "AMM-C-23-70-11-400-011-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      },
+      {
+        "doc_id": "IPC-C-23-70-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      }
+    ],
+    "keywords": [
+      "oceanic clearance",
+      "automatic dependent surveillance",
+      "datalink router",
+      "message store",
+      "log-on"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Lorencourt",
+      "role": "Design Office"
+    },
+    "type_data": {
+      "mod_number": 111225,
+      "mod_class": "MAJOR",
+      "change_category": "AVIONICS",
+      "trigger": "AIRWORTHINESS_DIRECTIVE",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MAJOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA",
+          "TCCA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.1301",
+          "CS 25.1309",
+          "CS 25.1431"
+        ],
+        "requires_flight_test": true
+      },
+      "weight_impact_kg": 2.9,
+      "balance_impact": "Negligible, installation within 400 mm of the first standard",
+      "electrical_load_impact_va": 140,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "ELL642868-87"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2370118700860",
+        "D2370006240541"
+      ],
+      "fins_affected": [
+        "218RN",
+        "16RN"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 420,
+      "estimated_cost_keur": 2450,
+      "lead_time_weeks": 62,
+      "production_impact": "Cut-in at MSN C00408, no line stoppage, second concentrator delivered as a pre-assembled shelf",
+      "risk_level": "MEDIUM"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

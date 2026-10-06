@@ -1,0 +1,322 @@
+[
+  {
+    "doc_id": "TSM-M-30-10-12-810-807",
+    "doc_type": "TSM",
+    "title": "Wing Anti-Ice Duct Low Pressure Indication on One Wing",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2017-05-03",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-12",
+      "title": "Airfoil Anti-Ice — Slat Piccolo Ducts"
+    },
+    "secondary_ata": [
+      "36-10",
+      "57-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-09-29",
+      "released": "2017-05-03",
+      "revised": "2017-05-03",
+      "effective": "2017-05-31"
+    },
+    "abstract": "Fault isolation for a low duct pressure indication on one wing anti-ice system, separating a valve fault from a duct leak and from a displaced piccolo duct at a support bracket.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a low duct pressure indication on one wing anti-ice system with the system selected on.",
+      "fault_description": "The wing anti-ice duct pressure indication for one wing reads low with the system selected on, while the other wing reads normally. In flight the crew may also see a slow rise in the anti-ice supply temperature on the affected side. On the ground the fault can usually be reproduced during a system operational test, which makes it easier to work than most pneumatic faults. A duct that has walked out of position at a support bracket gives exactly the same indication as a small joint leak, so the position check is not optional.",
+      "isolation_procedure": "1. Do a wing anti-ice operational test and record the duct pressure indication on both wings. 2. Record the outside air temperature and the bleed supply pressure at the time of the test. 3. If both wings read low, the fault is upstream in the bleed supply and this procedure does not apply. 4. Isolate the affected wing and connect the leak test rig at the duct test point. 5. Do a pressure decay test on the duct run and compare the decay rate with the limit. 6. If the decay rate is outside the limit, open the leading edge and do the confirmation task to find the leaking joint. 7. Do the duct position check at every support bracket and record every reading. 8. Check the anti-ice valve position feedback and the actuator 1996WX drive time. 9. Check the duct hose 203WX for a collapsed liner, which gives a low pressure with no measurable leak. 10. Where the decay rate is inside the limit and every duct position is nominal, the fault is in the valve or its indication rather than in the duct.",
+      "dispatch_note": "Dispatch with one wing anti-ice system inoperative is permitted only under the icing conditions restriction of the master minimum equipment list. Dispatch is not permitted into forecast icing conditions with the system inoperative on either wing."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010128666060",
+        "D3010120571398"
+      ],
+      "fins": [
+        "203WX",
+        "1996WX"
+      ],
+      "drawings": [
+        "D30101276854"
+      ],
+      "software": [],
+      "zones": [
+        "551",
+        "553"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-30-10-12-200-017-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-163208",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "wing anti-ice",
+      "duct pressure",
+      "pressure decay",
+      "duct position",
+      "piccolo duct"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Wendmark",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "30-10-12-810-807",
+      "fault_symptom": "WING ANTI ICE duct low pressure indication on one wing",
+      "fault_codes": [
+        "301012006",
+        "301012023"
+      ],
+      "warning_messages": [
+        "ANTI ICE L WING LO PR",
+        "ANTI ICE R WING LO PR"
+      ],
+      "affected_fins": [
+        "203WX",
+        "1996WX"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Duct joint opened by a piccolo duct that has walked outboard at a support bracket",
+          "probability_pct": 38,
+          "fin": "203WX"
+        },
+        {
+          "cause": "Small leak at a duct joint in the leading edge run",
+          "probability_pct": 30,
+          "fin": "203WX"
+        },
+        {
+          "cause": "Anti-ice valve not driving fully open",
+          "probability_pct": 20,
+          "fin": "1996WX"
+        },
+        {
+          "cause": "Collapsed liner in the flexible duct hose",
+          "probability_pct": 12,
+          "fin": "203WX"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-M-30-10-12-200-017-A",
+      "dispatch": {
+        "mel_item": "30-11-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One wing anti-ice system inoperative, no dispatch into forecast icing conditions."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  },
+  {
+    "doc_id": "TSM-M-30-10-12-810-807",
+    "doc_type": "TSM",
+    "title": "Wing Anti-Ice Duct Low Pressure Indication on One Wing",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2026-07-06",
+      "reason": "Duct position check moved ahead of the joint leak hunt so that the most probable cause is reached before the leading edge is opened for a second time.",
+      "raised_by_pawo": "PAWO-163208-01",
+      "raised_by_finding": "F01",
+      "finding_type": "MANUAL_IMPACT"
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "30",
+      "ata_4d": "30-10",
+      "ata_6d": "30-10-12",
+      "title": "Airfoil Anti-Ice — Slat Piccolo Ducts"
+    },
+    "secondary_ata": [
+      "36-10",
+      "57-20"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2016-09-29",
+      "released": "2017-05-03",
+      "revised": "2026-07-06",
+      "effective": "2026-08-03"
+    },
+    "abstract": "Fault isolation for a low duct pressure indication on one wing anti-ice system, separating a valve fault from a duct leak and from a displaced piccolo duct at a support bracket.",
+    "sections": {
+      "purpose": "This procedure isolates the cause of a low duct pressure indication on one wing anti-ice system with the system selected on.",
+      "fault_description": "The wing anti-ice duct pressure indication for one wing reads low with the system selected on, while the other wing reads normally. In flight the crew may also see a slow rise in the anti-ice supply temperature on the affected side. On the ground the fault can usually be reproduced during a system operational test, which makes it easier to work than most pneumatic faults. A duct that has walked out of position at a support bracket gives exactly the same indication as a small joint leak and is the more likely of the two by a wide margin on an aircraft that still carries the sliding supports, so the position check comes first in this procedure and is not optional.",
+      "isolation_procedure": "1. Do a wing anti-ice operational test and record the duct pressure indication on both wings. 2. Record the outside air temperature and the bleed supply pressure at the time of the test. 3. If both wings read low, the fault is upstream in the bleed supply and this procedure does not apply. 4. Isolate the affected wing and connect the leak test rig at the duct test point. 5. Do a pressure decay test on the duct run and compare the decay rate with the limit. 6. Open the leading edge and do the duct position check at every support bracket first, recording every reading. On an aircraft that still carries the sliding supports this is the most probable cause and it is found from one opening; a duct that has walked outboard will have opened a joint at the far end of the run, so a displacement finding usually explains the decay rate as well. 7. Only where every duct position is nominal, continue the confirmation task to find a leaking joint at the duct joints themselves. Working the joints first, as the earlier issue of this procedure did, costs a full leading edge opening before the position check is even started. 8. Check the anti-ice valve position feedback and the actuator 1996WX drive time. 9. Check the duct hose 203WX for a collapsed liner, which gives a low pressure with no measurable leak. 10. Where the decay rate is inside the limit and every duct position is nominal, the fault is in the valve or its indication rather than in the duct. Note that on an aircraft at the bellows-compensated bracket standard of MOD-163208 the duct cannot walk and step 6 will always read nominal; go directly to step 7 on those aircraft.",
+      "dispatch_note": "Dispatch with one wing anti-ice system inoperative is permitted only under the icing conditions restriction of the master minimum equipment list. Dispatch is not permitted into forecast icing conditions with the system inoperative on either wing."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3010128666060",
+        "D3010120571398"
+      ],
+      "fins": [
+        "203WX",
+        "1996WX"
+      ],
+      "drawings": [
+        "D30101276854"
+      ],
+      "software": [],
+      "zones": [
+        "551",
+        "553"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-M-30-10-12-200-017-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-163208",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "wing anti-ice",
+      "duct pressure",
+      "duct position",
+      "procedure order",
+      "piccolo duct"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Wendmark",
+      "role": "Troubleshooting Engineering"
+    },
+    "type_data": {
+      "procedure_number": "30-10-12-810-807",
+      "fault_symptom": "WING ANTI ICE duct low pressure indication on one wing",
+      "fault_codes": [
+        "301012006",
+        "301012023"
+      ],
+      "warning_messages": [
+        "ANTI ICE L WING LO PR",
+        "ANTI ICE R WING LO PR"
+      ],
+      "affected_fins": [
+        "203WX",
+        "1996WX"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Duct joint opened by a piccolo duct that has walked outboard at a support bracket",
+          "probability_pct": 38,
+          "fin": "203WX"
+        },
+        {
+          "cause": "Small leak at a duct joint in the leading edge run",
+          "probability_pct": 30,
+          "fin": "203WX"
+        },
+        {
+          "cause": "Anti-ice valve not driving fully open",
+          "probability_pct": 20,
+          "fin": "1996WX"
+        },
+        {
+          "cause": "Collapsed liner in the flexible duct hose",
+          "probability_pct": 12,
+          "fin": "203WX"
+        }
+      ],
+      "isolation_steps": 10,
+      "confirmation_task": "AMM-M-30-10-12-200-017-A",
+      "dispatch": {
+        "mel_item": "30-11-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One wing anti-ice system inoperative, no dispatch into forecast icing conditions."
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

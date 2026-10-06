@@ -1,0 +1,168 @@
+[
+  {
+    "doc_id": "TSM-S-32-10-12-812-806",
+    "doc_type": "TSM",
+    "title": "Main Gear Unsafe Indication During Extension at Low Outside Air Temperature, VANTOR-68",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2019-05-27",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-10",
+      "ata_6d": "32-10-12",
+      "title": "Main Gear — Side Stay and Lock Links"
+    },
+    "secondary_ata": [
+      "32-30",
+      "29-10"
+    ],
+    "applicability": {
+      "scope": "MODEL",
+      "aircraft_types": [
+        "VANTOR-68"
+      ],
+      "models": [
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [
+        "AUR-5560"
+      ],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-10-30",
+      "released": "2019-05-27",
+      "revised": null,
+      "effective": "2019-06-14"
+    },
+    "abstract": "Fault symptom procedure for a wing-mounted main gear unsafe indication that appears during extension below minus five degrees Celsius and clears on recycling, specific to the four-engine stretched aircraft.",
+    "sections": {
+      "purpose": "This procedure covers the wing-mounted main gear unsafe indication that appears during extension at low outside air temperature and clears when the gear is recycled.",
+      "fault_description": "The crew report an unsafe indication for one wing-mounted gear during extension, always below approximately minus five degrees Celsius outside air temperature, which clears on a single recycle. On the ground nothing is found: the gear swings correctly, the sensor gaps are inside limits and the lock link reaches the overcentre position. The cause is that grease in the lock link joint stiffens enough at low temperature to leave the link about one degree short of the certified overcentre geometry, which is still inside the proximity sensor dead band. The condition is specific to the stretched four-engine aircraft, whose overcentre margin was set from a lighter landing weight case.",
+      "isolation_procedure": "1. Record the outside air temperature at the time of the event from the flight data. If the event occurred above zero degrees Celsius, this procedure does not apply. 2. Check the proximity sensor gaps at positions 14WS and 70GM and record them; they will normally be inside limits and that is expected. 3. Measure the overcentre angle of the lock link at ambient temperature with the angle gauge and record it. 4. Cold soak the lock link joint to minus 20 degrees Celsius with the portable chamber and repeat the measurement. A loss of more than one degree between the two readings confirms the mechanism. 5. Check the grease specification in the joint against the standard practice; the wrong grade produces the same result at a higher temperature. 6. Check the hose position 448GB for interference through the retraction cycle. 7. Prove the hydraulic supply at the gear by the pressurisation and leak check of AMM-S-29-10-11-400-014-A. 8. Where the overcentre rework is not embodied, record the event and report it; the rework is the terminating action.",
+      "dispatch_note": "Dispatch is not permitted with an unsafe gear indication. Where the indication has cleared and the gear is confirmed down and locked, the aircraft may be released with the event recorded, subject to the operator's approved repetitive event policy and to the applicable airworthiness directive compliance status."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3210122801088",
+        "VAD543968-23",
+        "D3210122818558"
+      ],
+      "fins": [
+        "14WS",
+        "70GM",
+        "448GB",
+        "9WS8"
+      ],
+      "drawings": [
+        "D32101114402"
+      ],
+      "software": [],
+      "zones": [
+        "721",
+        "731",
+        "752"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-S-29-10-11-400-014-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-133020",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "unsafe indication",
+      "overcentre angle",
+      "cold soak",
+      "lock link",
+      "recycle"
+    ],
+    "originator": {
+      "department": "ETGC",
+      "site": "Ashcombe",
+      "role": "Trouble Shooting Data"
+    },
+    "type_data": {
+      "procedure_number": "32-10-12-812-806",
+      "fault_symptom": "Main gear unsafe indication during extension below minus five degrees Celsius, clearing on recycle",
+      "fault_codes": [
+        "321012004",
+        "321012018"
+      ],
+      "warning_messages": [
+        "L/G GEAR NOT DOWNLOCKED",
+        "L/G SYS DISAGREE"
+      ],
+      "affected_fins": [
+        "14WS",
+        "70GM",
+        "448GB",
+        "9WS8"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Lock link short of the overcentre position at low temperature because of grease stiffening",
+          "probability_pct": 58,
+          "fin": "14WS"
+        },
+        {
+          "cause": "Incorrect grease grade in the lock link joint",
+          "probability_pct": 18,
+          "fin": "70GM"
+        },
+        {
+          "cause": "Hose interference through the retraction cycle",
+          "probability_pct": 13,
+          "fin": "448GB"
+        },
+        {
+          "cause": "Proximity sensor dead band at the limit of tolerance",
+          "probability_pct": 11,
+          "fin": "9WS8"
+        }
+      ],
+      "isolation_steps": 8,
+      "confirmation_task": "AMM-S-29-10-11-400-014-A",
+      "dispatch": {
+        "mel_item": "32-10-05A",
+        "dispatchable": false,
+        "dispatch_condition": "No dispatch with an unsafe indication displayed; release after a cleared event is subject to the operator's repetitive event policy"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

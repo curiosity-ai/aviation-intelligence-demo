@@ -1,0 +1,177 @@
+[
+  {
+    "doc_id": "AMM-S-32-40-11-200-050-A",
+    "doc_type": "AMM",
+    "title": "Carbon Brake — Wear Measurement and Remaining Stack Life Determination",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2022-12-19",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "32",
+      "ata_4d": "32-40",
+      "ata_6d": "32-40-11",
+      "title": "Wheels and Brakes — Brake Assembly"
+    },
+    "secondary_ata": [
+      "32-40-13"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "SOLANO-30",
+        "SOLANO-34",
+        "SOLANO-38",
+        "SOLANO-39",
+        "VANTOR-64",
+        "VANTOR-68"
+      ],
+      "models": [
+        "SLN-30V3",
+        "SLN-30R3",
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-38R1",
+        "SLN-39R1",
+        "VTR-64C3",
+        "VTR-68R2"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2018-05-14",
+      "released": "2019-01-07",
+      "revised": "2022-12-19",
+      "effective": "2023-01-09"
+    },
+    "abstract": "Measurement of remaining carbon stack life, from the wear pin on aircraft at the delivered datum and from the torque tube flange on aircraft at the relocated datum, with the two acceptance tables kept apart.",
+    "sections": {
+      "purpose": "This task establishes the remaining life of a carbon brake stack and decides whether the brake may remain in service until its next scheduled check.",
+      "job_setup_note": "Two acceptance tables exist and they are not interchangeable. Aircraft at the delivered datum are read from the wear pin against a percentage scale; aircraft at the relocated datum are read from the torque tube flange against a millimetre scale. Confirm the standard from the aircraft record first. Do not approach a brake that has been used within the last hour.",
+      "procedure": "1. Chock the aircraft and release the parking brake in accordance with the maintenance manual. WARNING: DO NOT APPROACH A BRAKE USED WITHIN THE LAST HOUR. FUSIBLE PLUGS MAY RELEASE WITHOUT WARNING AND THE WHEEL MAY DEFLATE EXPLOSIVELY. 2. Confirm from the aircraft record which wear pin datum standard is fitted. 3. Gain access to the wear indicator at the brake in zone 753 or zone 731 as applicable. 4. Where the delivered datum is fitted, read the wear pin against the percentage scale with the brake pressure applied to the value given in the limits table. 5. Where the relocated datum is fitted, measure the stack thickness with the depth gauge from the torque tube flange at three positions spaced one hundred and twenty degrees apart, and record all three. CAUTION: ON THE RELOCATED DATUM, TAKE THREE READINGS AND USE THE SMALLEST. A SINGLE READING CAN MISS A STACK THAT HAS WORN UNEVENLY. 6. Compare the reading against the correct acceptance table for the standard fitted. 7. Where the reading is at or below the limit, remove the brake before further flight. 8. Examine the brake regulator D3240112571209 and the pump 1GB for leakage while access is available. 9. Check the pipe 274GB and the inboard pump 584GB for chafe and security. 10. Where the aircraft has a mixed bogie, stop: brakes of the two standards must not be mixed and the readings are not comparable. 11. Record the reading, the standard fitted and the brake serial number. 12. Reapply the parking brake and remove the chocks when the check is complete.",
+      "close_out": "Record every reading with the brake position and serial number. Where a brake is removed, quote the reading and the acceptance limit used. Report the readings to Aeralis where the aircraft is inside the effectivity of the fleet wear model campaign."
+    },
+    "entities": {
+      "part_numbers": [
+        "D3240112571209",
+        "D3240119570323",
+        "LN606496-25",
+        "AGS678120-8C"
+      ],
+      "fins": [
+        "1GB",
+        "274GB",
+        "584GB"
+      ],
+      "drawings": [
+        "D32401123478"
+      ],
+      "software": [],
+      "zones": [
+        "753",
+        "731",
+        "774"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "IPC-S-32-40-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-S-32-40-11-810-814",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "brake wear",
+      "stack life",
+      "wear pin",
+      "depth gauge",
+      "fusible plug"
+    ],
+    "originator": {
+      "department": "EDSA",
+      "site": "Ashcombe",
+      "role": "Maintenance Engineering"
+    },
+    "type_data": {
+      "task_number": "32-40-11-200-050-A",
+      "task_type": "INSPECTION",
+      "effectivity_note": "All aircraft; two acceptance tables, selected by the wear pin datum standard fitted",
+      "manhours": 2.0,
+      "personnel": 1,
+      "elapsed_time_hours": 1.5,
+      "access": {
+        "zones": [
+          "753",
+          "731",
+          "774"
+        ],
+        "access_panels": [
+          "753CL",
+          "731CR",
+          "774AR"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Do not approach a recently used brake.",
+          "Chock the aircraft before releasing the parking brake.",
+          "Do not mix brake standards on one bogie."
+        ],
+        "tooling": [
+          {
+            "reference": "98D32401-266",
+            "description": "Torque tube datum fixture"
+          },
+          {
+            "reference": "98D32401-270",
+            "description": "Depth gauge, 0 to 50 mm, calibrated"
+          }
+        ],
+        "consumables": [
+          "Marker, removable, non-chloride",
+          "Measurement record sheet"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "doc_id": "TSM-Z-46-20-11-810-816",
+    "doc_type": "TSM",
+    "title": "Electronic Flight Bag Slow Rendering or Loss of the Airline Data Link",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2025-04-28",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-20",
+      "ata_6d": "46-20-11",
+      "title": "Flight Deck Information — Electronic Flight Bag Unit"
+    },
+    "secondary_ata": [
+      "46-20-12",
+      "46-40"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2023-02-20",
+      "released": "2023-09-15",
+      "revised": "2025-04-28",
+      "effective": "2025-05-19"
+    },
+    "abstract": "Fault isolation for slow chart rendering or a lost airline data link on the electronic flight bag, separating a unit standard expectation from a bonding fault and from a database problem.",
+    "sections": {
+      "purpose": "This procedure isolates slow chart rendering or a lost airline data link on the electronic flight bag, and distinguishes normal behaviour of the earlier unit standard from a genuine installation or database fault.",
+      "fault_description": "The crew reports either that an approach chart takes an unacceptable time to redraw or that the airline data link is not available. Both are reported as faults but the first is often the expected behaviour of the earlier unit standard, which takes about eleven seconds to redraw a terminal chart, and that must be established before any component is changed. A lost data link on a standard 3 installation is most often a bonding problem at the rack, because the integrated antenna depends on the rack bonding for its ground plane.",
+      "isolation_procedure": "1. Read the unit standard and the loaded software part numbers at the display FIN 2IS8 and compare them with the aircraft configuration record. 2. If the unit is at the earlier standard and the complaint is rendering time, measure the redraw time for a terminal chart and compare it with the published figure for that standard. A time inside that figure is not a fault. 3. If the unit is at the standard 3 build, measure the redraw time and compare it with the shorter published figure. 4. For a data link complaint on a standard 3 installation, measure the rack bonding resistance and compare it with the limit; a high resistance removes the antenna ground plane and the link will fail intermittently. 5. Check the antenna clearance to the sidewall structure and confirm it against the installation drawing. 6. Check for a portable antenna installation in the cabin; an unapproved portable antenna interferes with the integrated antenna and must be removed. 7. Read the aircraft condition monitoring interface at FIN 37IS6 and confirm that it reports at the expected data rate. 8. Verify the chart database part number and its validity date; an expired database produces a slow redraw as the application falls back to a lower resolution source. 9. Replace the unit only after the bonding, the clearance and the database have been cleared.",
+      "dispatch_note": "Dispatch is permitted with one electronic flight bag position inoperative provided the other position is serviceable and the operator carries the paper backup required by its operations manual. Rectify within ten calendar days."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4620114957774",
+        "D4620116309716",
+        "D4620121177406",
+        "D4620114030606"
+      ],
+      "fins": [
+        "2IS8",
+        "37IS6",
+        "50IS"
+      ],
+      "drawings": [
+        "D46201115557"
+      ],
+      "software": [
+        "LE3NF0F3C1D",
+        "LF2N1D4CB64",
+        "LB2N7F85BF5"
+      ],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "AMM-Z-46-20-11-400-039-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "ZPH-46-1009",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "electronic flight bag",
+      "chart rendering time",
+      "bonding resistance",
+      "antenna ground plane",
+      "chart database"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "procedure_number": "46-20-11-810-816",
+      "fault_symptom": "Slow chart rendering or airline data link not available on the electronic flight bag",
+      "fault_codes": [
+        "462011003",
+        "462011015"
+      ],
+      "warning_messages": [
+        "EFB 1 FAULT"
+      ],
+      "affected_fins": [
+        "2IS8",
+        "37IS6"
+      ],
+      "possible_causes": [
+        {
+          "cause": "Reported rendering time is normal for the earlier unit standard and no fault exists",
+          "probability_pct": 34,
+          "fin": "2IS8"
+        },
+        {
+          "cause": "Rack bonding resistance above the limit removing the integrated antenna ground plane",
+          "probability_pct": 28,
+          "fin": "2IS8"
+        },
+        {
+          "cause": "Unapproved portable antenna installation interfering with the integrated antenna",
+          "probability_pct": 21,
+          "fin": "37IS6"
+        },
+        {
+          "cause": "Chart database expired and the application has fallen back to a lower resolution source",
+          "probability_pct": 17,
+          "fin": "2IS8"
+        }
+      ],
+      "isolation_steps": 9,
+      "confirmation_task": "AMM-Z-46-20-11-400-039-A",
+      "dispatch": {
+        "mel_item": "46-20-01A",
+        "dispatchable": true,
+        "dispatch_condition": "One EFB position inoperative, the other position serviceable and the operator paper backup carried"
+      }
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

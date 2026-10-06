@@ -1,0 +1,171 @@
+[
+  {
+    "doc_id": "AMM-Z-46-20-11-400-039-A",
+    "doc_type": "AMM",
+    "title": "Installation of an Electronic Flight Bag Unit and Bonding Resistance Check",
+    "program": "Z",
+    "program_name": "ZEPHYR Family",
+    "revision": "B",
+    "issue": {
+      "letter": "B",
+      "supersedes": "A",
+      "date": "2025-01-15",
+      "reason": "Issue B. Earlier issues are not held in this dataset.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "46",
+      "ata_4d": "46-20",
+      "ata_6d": "46-20-11",
+      "title": "Flight Deck Information — Electronic Flight Bag Unit"
+    },
+    "secondary_ata": [
+      "46-20-12"
+    ],
+    "applicability": {
+      "scope": "ALL_PROGRAM",
+      "aircraft_types": [
+        "ZEPHYR-18",
+        "ZEPHYR-20",
+        "ZEPHYR-22",
+        "ZEPHYR-24"
+      ],
+      "models": [],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2021-11-09",
+      "released": "2022-06-24",
+      "revised": "2025-01-15",
+      "effective": "2025-02-05"
+    },
+    "abstract": "Installation of an electronic flight bag unit in the flight deck rack, including the antenna clearance check on units with an integrated antenna and the bonding resistance measurement that releases the installation.",
+    "sections": {
+      "purpose": "This task installs an electronic flight bag unit at either pilot position, checks the antenna clearance where an integrated antenna is fitted, and measures the bonding resistance that releases the installation to service.",
+      "job_setup_note": "Check the unit standard against the aircraft record before you unpack it. A standard 3 unit will not seat correctly in an unmodified rack, and its integrated antenna will foul the sidewall in the earlier rack position. The bonding resistance measurement is the acceptance evidence; a unit that seats mechanically but does not meet the resistance limit must not be released.",
+      "procedure": "1. Make sure that the flight deck avionics are de-energised and that ground power is removed. 2. Get access in zones 211 and 214 by removing the sidewall panel at the affected position. 3. Confirm the rack standard and the unit standard against the aircraft record. 4. Clean the rack rails and the bonding faces. CAUTION: DO NOT USE AN ABRASIVE ON THE BONDING FACE. THE PLATING IS THIN AND THE RESISTANCE WILL RISE AFTER A FEW MONTHS IN SERVICE. 5. Slide the unit into the rack D4620121177406 and engage the rear connector squarely. 6. Lock the hold-down and check that the front face is flush with the rack. 7. Where an integrated antenna is fitted, measure the clearance between the antenna D4620116309716 and the sidewall structure and confirm that it meets the dimension on drawing D46201115557. 8. Connect the bonding strap and measure the bonding resistance. 9. Compare the reading with the limit in the instructions and stop if it is exceeded. WARNING: DO NOT RESTORE POWER WITH THE SIDEWALL PANEL OFF AND THE ANTENNA UNSHIELDED IF THE AIRLINE DATA LINK IS ACTIVE. 10. Restore power and confirm that the unit at FIN 2IS8 starts and reports its software part numbers. 11. Confirm that the aircraft condition monitoring interface at FIN 37IS6 reports at the expected data rate. 12. Display a terminal chart and record the rendering time.",
+      "close_out": "Restore the sidewall panel and confirm the tool count. Record the bonding resistance, the antenna clearance where measured, the software part numbers and the chart rendering time on the maintenance record. Remove any portable antenna installation found during the work and report it."
+    },
+    "entities": {
+      "part_numbers": [
+        "D4620114957774",
+        "D4620116309716",
+        "D4620121177406",
+        "D4620114030606"
+      ],
+      "fins": [
+        "2IS8",
+        "37IS6",
+        "50IS"
+      ],
+      "drawings": [
+        "D46201115557"
+      ],
+      "software": [
+        "LE3NF0F3C1D",
+        "LF2N1D4CB64"
+      ],
+      "zones": [
+        "211",
+        "214"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "ZPH-46-1009",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "TSM-Z-46-20-11-810-816",
+        "doc_type": "TSM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "electronic flight bag",
+      "rack installation",
+      "antenna clearance",
+      "bonding resistance",
+      "chart rendering"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Technical Publications"
+    },
+    "type_data": {
+      "task_number": "46-20-11-400-039-A",
+      "task_type": "INSTALLATION",
+      "effectivity_note": "All aircraft. Step 7 applies to the standard 3 unit with integrated antenna only.",
+      "manhours": 3.5,
+      "personnel": 2,
+      "elapsed_time_hours": 2.5,
+      "access": {
+        "zones": [
+          "211",
+          "214"
+        ],
+        "access_panels": [
+          "211AR",
+          "214CL"
+        ],
+        "doors": []
+      },
+      "job_setup": {
+        "safety_precautions": [
+          "Remove ground power before the unit is disturbed.",
+          "Do not use an abrasive on the bonding face.",
+          "Do not restore power with the antenna unshielded and the panel off."
+        ],
+        "tooling": [
+          {
+            "reference": "Bonding resistance meter",
+            "description": "Bonding check"
+          },
+          {
+            "reference": "Portable data loader",
+            "description": "Software part number verification"
+          },
+          {
+            "reference": "Feeler gauge set",
+            "description": "Antenna clearance"
+          }
+        ],
+        "consumables": [
+          "Contact cleaner, non residue",
+          "Lint free wipes",
+          "Bonding jumper hardware set"
+        ],
+        "expendables": []
+      },
+      "referenced_tasks": [],
+      "steps": 12,
+      "warnings": 1,
+      "cautions": 1
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

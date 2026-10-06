@@ -1,0 +1,456 @@
+[
+  {
+    "doc_id": "PAWO-138330-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis — Core Processing Standard 4 with Extended Partition Memory",
+    "program": "S",
+    "program_name": "SOLANO Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-04-24",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "42",
+      "ata_4d": "42-10",
+      "ata_6d": "42-10-12",
+      "title": "Core Processing — Module Rack Installation"
+    },
+    "secondary_ata": [
+      "45-20",
+      "45-45",
+      "92-21"
+    ],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "SOLANO-34",
+        "SOLANO-39"
+      ],
+      "models": [
+        "SLN-34V3",
+        "SLN-34R3",
+        "SLN-39R1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [
+        "CKP",
+        "ECA"
+      ],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-04-24",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Pre-analysis of the fourth core processing standard, covering the supersession chain behind it, the wiring and configuration commitments in the same bay, and what a field-loadable partition table does to configuration control.",
+    "sections": {
+      "objective": "Identify every released or candidate item applicable to SOLANO-34 and SOLANO-39 aircraft that the fourth core processing standard would conflict with, depend on, supersede or invalidate, and establish in particular what a field-loadable partition table means for configuration control and for the documents that record the aircraft configuration today.",
+      "scope_note": "The search covers ATA 42-10 as the primary chapter, with ATA 45-20 and 45-45 for the maintenance and data loading interfaces and ATA 92-21 for the bay wiring. ATA 21-50 avionics ventilation was included in the first pass and then excluded: the cooling ducting is part of the rack introduced by the earlier standard and no ventilation system item is disturbed. Cabin chapters were not searched. The MSN range was left open because the two aircraft types are searched in full rather than by effectivity.",
+      "method_note": "Entity linking was run from the three part numbers, the two data concentrator positions, the two drawing numbers, the loadable configuration set and the three zones the candidate carries. Semantic similarity was then run over titles, abstracts and reason-for-change text using the two seed phrases below, and the two result sets were merged. The wiring sheet was returned by entity linking alone through the shared zones and shares no vocabulary with the candidate at all. The information domain proposal was returned by similarity alone and shares no identifier of any kind.",
+      "findings_summary": "Seven items are confirmed and one is blocking. The blocking item is the supersession itself: the candidate replaces the interface unit at every slot of the rack the backplane standard renewed, and until that is declared both standards are simultaneously on offer to the same aircraft. Behind it sits the first replacement standard, which describes the same physical work into the same slots and is still reachable as a retrofit destination for aircraft at the delivered configuration; an aircraft taken there first would pay twice. The more interesting findings are the two that only one retrieval strategy found. The bay wiring sheet was returned by zone alone: it fixes which feedthrough aperture carries the sensitive route and where its screen terminates, in the two zones the candidate works in, and neither document mentions the other or shares a word of vocabulary. The information domain proposal was returned by similarity alone: it shares no identifier whatsoever with the candidate but is solving the same underlying problem from the other end, namely what may be improved without a modification programme. Two documentation items follow from making the partition table loadable: the retrofit bulletin for the earlier standard carries a mixing statement that will be wrong, and the installation task verifies configuration by part number in a world where the part number no longer implies it.",
+      "next_steps": "Agree the supersession and the withdrawal plan for the earlier bulletin before any kit is quoted. Open a coordination item with the information domain proposal owner on what may be loadable. Confirm with the wiring office that the rack front removal does not disturb the segregation. Raise the manual change request against the installation task and the bulletin reissue together, so that the configuration story is consistent when the candidate is launched."
+    },
+    "entities": {
+      "part_numbers": [
+        "HE750421-36",
+        "EN873313K4",
+        "LN727699-25"
+      ],
+      "fins": [
+        "493CP2",
+        "7CP7"
+      ],
+      "drawings": [
+        "D42101237654",
+        "D42101281090"
+      ],
+      "software": [
+        "LF6L52A03E3"
+      ],
+      "zones": [
+        "162",
+        "166",
+        "183"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "S01012",
+        "S01430"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MOD-138330",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      },
+      {
+        "doc_id": "IO-S-260512",
+        "doc_type": "IO",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-136750",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-133290",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "WDM-S-92-21-11",
+        "doc_type": "WDM",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-139930",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "MOD-133730",
+        "doc_type": "MOD",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "SLN-42-1016",
+        "doc_type": "SB",
+        "relation": "REFERENCES"
+      },
+      {
+        "doc_id": "AMM-S-42-10-12-400-043-A",
+        "doc_type": "AMM",
+        "relation": "REFERENCES"
+      }
+    ],
+    "keywords": [
+      "pre-analysis",
+      "core processing",
+      "partition memory",
+      "configuration control",
+      "conflict search"
+    ],
+    "originator": {
+      "department": "EGAM",
+      "site": "Valmont",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-138330-01",
+      "subject_mod": "MOD-138330",
+      "source_io": "IO-S-260512",
+      "pawo_status": "IN_PROGRESS",
+      "hero_scenario": false,
+      "is_historical": false,
+      "completed_date": null,
+      "outcome": null,
+      "raised_date": "2026-04-24",
+      "due_date": "2026-10-02",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EGAM",
+        "lead_site": "Valmont",
+        "contributing_departments": [
+          "ELSC",
+          "EYIS",
+          "EVAA"
+        ],
+        "estimated_manhours": 150,
+        "spent_manhours": 78
+      },
+      "search_scope": {
+        "programs": [
+          "S"
+        ],
+        "aircraft_types": [
+          "SOLANO-34",
+          "SOLANO-39"
+        ],
+        "ata_2d": [
+          "42",
+          "45",
+          "92"
+        ],
+        "ata_4d": [
+          "42-10",
+          "45-20",
+          "45-45",
+          "92-21"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC",
+          "TSM",
+          "WDM",
+          "FCOM"
+        ],
+        "msn_range": null,
+        "entity_seeds": {
+          "part_numbers": [
+            "HE750421-36",
+            "EN873313K4",
+            "LN727699-25"
+          ],
+          "fins": [
+            "493CP2",
+            "7CP7"
+          ],
+          "drawings": [
+            "D42101237654",
+            "D42101281090"
+          ],
+          "zones": [
+            "162",
+            "166",
+            "183"
+          ],
+          "software": [
+            "LF6L52A03E3"
+          ]
+        },
+        "similarity_seeds": [
+          "module partition memory allocation at a hosted function boundary",
+          "loadable configuration replacing a fixed part number standard"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Search released and candidate MODs on ATA 42-10 and 45-20",
+          "method": "ENTITY_AND_SEMANTIC",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Establish the supersession chain and the bulletin withdrawal plan",
+          "method": "ENTITY",
+          "owner": "EGAM",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T03",
+          "title": "Assess the bay wiring commitments at the rack feedthrough",
+          "method": "ENTITY",
+          "owner": "ELSC",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T04",
+          "title": "Coordinate the loadable content question with the domain proposal",
+          "method": "SME_INTERVIEW",
+          "owner": "EVAA",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "task_id": "T05",
+          "title": "Establish what configuration control means with a loadable partition table",
+          "method": "MANUAL_REVIEW",
+          "owner": "EYIS",
+          "status": "OPEN"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MOD-136750",
+          "doc_type": "MOD",
+          "finding_type": "SUPERSESSION",
+          "severity": "BLOCKING",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "HE750421-36",
+              "LN727699-25"
+            ],
+            "shared_fins": [
+              "493CP2",
+              "7CP7"
+            ],
+            "shared_zones": [
+              "162",
+              "166",
+              "183"
+            ],
+            "shared_ata_6d": [
+              "42-10-12"
+            ],
+            "similarity_note": "Returned first by both retrieval strategies: the two documents share the module part number, the rail screws, both data concentrators, all three zones and the ATA 6D, and their reason-for-change texts are close enough that similarity ranks them together as well."
+          },
+          "rationale": "The candidate is the direct successor of the backplane and cooling standard and replaces the interface unit at every slot on the same rack. Until the supersession is declared, both standards remain live retrofit destinations for the same aircraft and an operator can be sold the earlier one weeks before the later one exists.",
+          "resolution": "Declare the supersession in the candidate dossier and plan the withdrawal of the earlier retrofit bulletin so that the two are never simultaneously on offer."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "MOD-133290",
+          "doc_type": "MOD",
+          "finding_type": "DUPLICATE",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [
+              "HE750421-36"
+            ],
+            "shared_fins": [
+              "493CP2"
+            ],
+            "shared_zones": [
+              "162",
+              "166"
+            ],
+            "shared_ata_6d": [
+              "42-10-12"
+            ],
+            "similarity_note": "Shares the interface unit part number, the data concentrator and two zones with the candidate, and describes the same physical work in almost the same words. The similarity search ranks it second behind the immediate predecessor."
+          },
+          "rationale": "The first replacement standard describes the same module change into the same rack and is still open as a retrofit for aircraft at the delivered configuration. An aircraft could be taken to it and then to the candidate, paying twice for the same slots, because nothing in either dossier says the first standard is a dead end.",
+          "resolution": "State in the candidate that aircraft at the delivered configuration take the backplane standard and not the first standard, and confirm that the first bulletin is cancelled."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "WDM-S-92-21-11",
+          "doc_type": "WDM",
+          "finding_type": "ZONE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [
+              "162",
+              "166"
+            ],
+            "shared_ata_6d": [],
+            "similarity_note": null
+          },
+          "rationale": "The wiring sheet fixes which feedthrough aperture carries the sensitive route and where its screen terminates, in the same two bay zones the candidate works in. The two documents share no vocabulary at all: one is a core processing dossier and the other is a harness routing sheet, and neither mentions the other. Only the zones connect them.",
+          "resolution": "Add the segregation standard as a pre-embodiment check to the candidate, and confirm with the wiring office that the rack front removal does not disturb the divider or the screen termination."
+        },
+        {
+          "finding_id": "F04",
+          "doc_id": "MOD-139930",
+          "doc_type": "MOD",
+          "finding_type": "OVERLAPPING_SCOPE",
+          "severity": "MAJOR",
+          "discovery": "SEMANTIC",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Surfaced by similarity alone. Both documents are about getting better information to a maintenance engineer from the same report stream, and both propose to do it by changing where a function is hosted. They share no part number, no FIN, no zone and no ATA code, and their titles have no word in common."
+          },
+          "rationale": "The information domain proposal moves a maintenance function off the certified side to make it improvable from the ground. The candidate makes the core processing configuration field loadable for the same underlying reason. If both proceed independently the fleet ends up with two different answers to the question of what may be changed without a modification.",
+          "resolution": "Coordinate with the domain proposal owner and agree a single position on what is loadable and what is not before either design is frozen."
+        },
+        {
+          "finding_id": "F05",
+          "doc_id": "MOD-133730",
+          "doc_type": "MOD",
+          "finding_type": "SOFTWARE_CONFLICT",
+          "severity": "MAJOR",
+          "discovery": "BOTH",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [],
+            "similarity_note": "Both strategies returned it: the two documents describe loadable content on the same maintenance data path, and the correlation application and the rack configuration table are loaded through the same portable loader interface."
+          },
+          "rationale": "The correlation application is loaded onto the maintenance receiver through the portable data loader. The candidate introduces a second loadable item on the same interface with a different configuration control regime. Nothing today distinguishes the two at the loader, and an engineer loading one could load the other by mistake.",
+          "resolution": "Agree a naming and media convention that separates the two loadable items at the loader, and reflect it in the data loading provisions."
+        },
+        {
+          "finding_id": "F06",
+          "doc_id": "SLN-42-1016",
+          "doc_type": "SB",
+          "finding_type": "CERTIFICATION_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "GRAPH_TRAVERSAL",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "42-10-12"
+            ],
+            "similarity_note": "Reached by traversing from the candidate to the modification it supersedes and from there to that modification's retrofit bulletin."
+          },
+          "rationale": "The retrofit bulletin for the earlier standard states that modules of the first and second standard may be mixed in the renewed rack. The candidate's modules are not mixable with either, because the partition allocation is loadable rather than fixed, and that statement will be wrong the moment the candidate exists.",
+          "resolution": "Reissue the bulletin with a mixing statement that names the candidate, or withdraw the statement entirely and put the rule in the maintenance task."
+        },
+        {
+          "finding_id": "F07",
+          "doc_id": "AMM-S-42-10-12-400-043-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MAJOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [
+              "HE750421-36",
+              "EN873313K4"
+            ],
+            "shared_fins": [
+              "493CP2"
+            ],
+            "shared_zones": [
+              "162",
+              "166",
+              "183"
+            ],
+            "shared_ata_6d": [
+              "42-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The installation task verifies the installed configuration against the slot map by part number and serial number. With a loadable partition table the part number no longer implies the configuration, and the task has to verify a checksum as well or the aircraft record will be incomplete.",
+          "resolution": "Raise a manual change request against the installation task to add checksum verification, effective with the candidate."
+        }
+      ],
+      "expected_non_findings": [
+        {
+          "doc_id": "MOD-133730",
+          "doc_type": "MOD",
+          "reason": "Ranks high on similarity because it is an avionics obsolescence and reliability change on an adjacent chapter with overlapping maintenance vocabulary, and it is genuinely related through the loader interface, which is why it appears as a finding in its own right. It is not a scope conflict: it changes the maintenance terminal and touches nothing in the core processing rack, no slot, no backplane and no partition."
+        },
+        {
+          "doc_id": "SLN-45-1002",
+          "doc_type": "SB",
+          "reason": "Returned by entity linking on the portable loader interface and by similarity on the data loading vocabulary. Its effectivity is the whole programme and its content is entirely within the maintenance terminal; it neither constrains nor is constrained by the core processing rack, and treating it as a conflict would block a bulletin that has nothing to do with this candidate."
+        }
+      ],
+      "conclusion": "Not yet issued. One blocking supersession is confirmed and the configuration control question is open.",
+      "recommendation": "PROCEED_WITH_CONDITIONS"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

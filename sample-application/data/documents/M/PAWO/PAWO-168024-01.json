@@ -1,0 +1,260 @@
+[
+  {
+    "doc_id": "PAWO-168024-01",
+    "doc_type": "PAWO",
+    "title": "Pre-Analysis (Closed) — Aft Hold Smoke Sampling Port Relocation",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "-",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2026-02-19",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "DRAFT",
+    "language": "en",
+    "ata": {
+      "ata_2d": "26",
+      "ata_4d": "26-10",
+      "ata_6d": "26-10-12",
+      "title": "Detection — Cargo Smoke Detection"
+    },
+    "secondary_ata": [
+      "92-41"
+    ],
+    "applicability": {
+      "scope": "MSN_RANGE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [
+        {
+          "from": "M00022",
+          "to": "M00290"
+        }
+      ],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": null,
+    "dates": {
+      "created": "2026-02-19",
+      "released": null,
+      "revised": null,
+      "effective": null
+    },
+    "abstract": "Closed pre-analysis carried out in 2026 for the spares release of the shielded inlet, six years after the relocation entered service, and to answer whether the inlet could be supplied to operators who had not embodied the bulletin.",
+    "sections": {
+      "objective": "Establish whether the shielded inlet could be released as a loose spare independently of the relocation bulletin, and what the ceiling rail condition data collected since 2020 said about the population still to be embodied.",
+      "findings_summary": "Three items were confirmed and none blocking. The inspection bulletin data was the useful part: of one hundred and forty aircraft inspected, eleven had hole elongation outside the limit, which is a higher rate than assumed when the relocation was released and means a proportion of the remaining fleet cannot take the inlet without rail work. The inspection task needed a drain check step for aircraft that had embodied the relocation, which had been added at revision but not propagated to the parts figure effectivity. Supplying the inlet as a loose spare was found to be safe because it cannot be fitted at the delivered port position without the relocated tube run, so an operator cannot install it in the wrong place by accident.",
+      "next_steps": "Spares release approved. The rail elongation rate was passed to continued airworthiness and the parts figure effectivity correction was raised as a documentation change."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2610121518371",
+        "AES545422-2C"
+      ],
+      "fins": [
+        "2332WF",
+        "1WF8"
+      ],
+      "drawings": [
+        "D26101223994"
+      ],
+      "software": [],
+      "zones": [
+        "143",
+        "145"
+      ],
+      "figures": [],
+      "repair_drawings": [],
+      "msn_mentions": []
+    },
+    "references": [
+      {
+        "doc_id": "MOD-168024",
+        "doc_type": "MOD",
+        "relation": "PRE_ANALYSIS_OF"
+      }
+    ],
+    "keywords": [
+      "closed pre-analysis",
+      "spares release",
+      "shielded inlet",
+      "ceiling rail",
+      "hole elongation"
+    ],
+    "originator": {
+      "department": "EYIS",
+      "site": "Neuhafen",
+      "role": "Pre-Analysis"
+    },
+    "type_data": {
+      "pawo_number": "PAWO-168024-01",
+      "subject_mod": "MOD-168024",
+      "source_io": null,
+      "pawo_status": "COMPLETED",
+      "hero_scenario": false,
+      "is_historical": true,
+      "completed_date": "2026-05-12",
+      "outcome": "VALIDATED",
+      "raised_date": "2026-02-19",
+      "due_date": "2026-05-29",
+      "analysis_round": 1,
+      "assigned": {
+        "lead_department": "EYIS",
+        "lead_site": "Neuhafen",
+        "contributing_departments": [
+          "EDSA"
+        ],
+        "estimated_manhours": 150,
+        "spent_manhours": 132
+      },
+      "search_scope": {
+        "programs": [
+          "M"
+        ],
+        "aircraft_types": [
+          "MERIDIAN-42",
+          "MERIDIAN-46"
+        ],
+        "ata_2d": [
+          "26"
+        ],
+        "ata_4d": [
+          "26-10"
+        ],
+        "doc_types": [
+          "MOD",
+          "SB",
+          "AMM",
+          "IPC"
+        ],
+        "msn_range": {
+          "from": "M00022",
+          "to": "M00290"
+        },
+        "entity_seeds": {
+          "part_numbers": [
+            "D2610121518371",
+            "AES545422-2C"
+          ],
+          "fins": [
+            "2332WF"
+          ],
+          "drawings": [
+            "D26101223994"
+          ],
+          "zones": [
+            "143",
+            "145"
+          ],
+          "software": []
+        },
+        "similarity_seeds": [
+          "a part that cannot physically be fitted in the position it replaces"
+        ]
+      },
+      "tasks": [
+        {
+          "task_id": "T01",
+          "title": "Collate the ceiling rail inspection returns since 2020",
+          "method": "MANUAL_REVIEW",
+          "owner": "EDSA",
+          "status": "DONE"
+        },
+        {
+          "task_id": "T02",
+          "title": "Search the detection family on the entity seeds",
+          "method": "ENTITY",
+          "owner": "EYIS",
+          "status": "DONE"
+        }
+      ],
+      "expected_findings": [
+        {
+          "finding_id": "F01",
+          "doc_id": "MRD-26-1019",
+          "doc_type": "SB",
+          "finding_type": "PREREQUISITE",
+          "severity": "MAJOR",
+          "discovery": "APPLICABILITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "26-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "Eleven of one hundred and forty inspected aircraft had ceiling rail hole elongation outside the limit, a higher rate than assumed, so the inspection remains a genuine prerequisite rather than a formality.",
+          "resolution": "Keep the inspection bulletin as a prerequisite and inform continued airworthiness of the elongation rate."
+        },
+        {
+          "finding_id": "F02",
+          "doc_id": "AMM-M-26-10-12-200-033-A",
+          "doc_type": "AMM",
+          "finding_type": "MANUAL_IMPACT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "26-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The drain check step added at revision applies only to embodied aircraft, and the task did not state that clearly enough for a line engineer working a mixed fleet.",
+          "resolution": "Clarify the effectivity of the drain check step in the task."
+        },
+        {
+          "finding_id": "F03",
+          "doc_id": "IPC-M-26-10-12-FIG-01",
+          "doc_type": "IPC",
+          "finding_type": "PART_CONFLICT",
+          "severity": "MINOR",
+          "discovery": "ENTITY",
+          "evidence": {
+            "shared_part_numbers": [],
+            "shared_fins": [],
+            "shared_zones": [],
+            "shared_ata_6d": [
+              "26-10-12"
+            ],
+            "similarity_note": null
+          },
+          "rationale": "The figure effectivity had not been propagated after the task revision, so the pre and post item pair did not match the task text.",
+          "resolution": "Correct the figure effectivity as a documentation change."
+        }
+      ],
+      "expected_non_findings": [],
+      "conclusion": "Closed. Spares release approved and two documentation corrections raised.",
+      "recommendation": "PROCEED"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]

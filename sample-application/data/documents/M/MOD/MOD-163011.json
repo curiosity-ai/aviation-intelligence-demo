@@ -1,0 +1,177 @@
+[
+  {
+    "doc_id": "MOD-163011",
+    "doc_type": "MOD",
+    "title": "Change of the Fuel Boost Pump Inlet Filter Mesh Grade",
+    "program": "M",
+    "program_name": "MERIDIAN Family",
+    "revision": "A",
+    "issue": {
+      "letter": "A",
+      "supersedes": null,
+      "date": "2021-08-30",
+      "reason": "Original issue.",
+      "raised_by_pawo": null,
+      "raised_by_finding": null,
+      "finding_type": null
+    },
+    "status": "RELEASED",
+    "language": "en",
+    "ata": {
+      "ata_2d": "28",
+      "ata_4d": "28-20",
+      "ata_6d": "28-20-11",
+      "title": "Distribution — Boost Pumps"
+    },
+    "secondary_ata": [],
+    "applicability": {
+      "scope": "TYPE",
+      "aircraft_types": [
+        "MERIDIAN-42",
+        "MERIDIAN-46"
+      ],
+      "models": [
+        "MRD-42K1",
+        "MRD-46K1"
+      ],
+      "msns": [],
+      "msn_ranges": [],
+      "excluded_msns": [],
+      "engine_types": [],
+      "operators": [],
+      "embodiment_condition": {
+        "post_mod": [],
+        "pre_mod": [],
+        "post_sb": [],
+        "pre_sb": []
+      }
+    },
+    "embodiment": {
+      "status": "IN_SERVICE",
+      "points": [
+        "PRODUCTION",
+        "RETROFIT",
+        "SPARES"
+      ],
+      "production_effectivity": "M00373",
+      "production_cut_in_date": "2022-01-25",
+      "retrofit_via": [
+        "MRD-28-1095"
+      ]
+    },
+    "dates": {
+      "created": "2020-03-17",
+      "released": "2021-08-30",
+      "revised": null,
+      "effective": "2021-09-23"
+    },
+    "abstract": "The boost pump inlet filter moves from a 40 micron to a 74 micron mesh with a larger effective area, ending a run of low fuel pressure advisories caused by filter blocking on aircraft uplifting biofuel blends.",
+    "sections": {
+      "reason": "Operators uplifting sustainable aviation fuel blends reported low pressure advisories on the left inner boost pump, typically two to four sectors after a blend uplift and clearing after the tank had been run down. Twenty-nine advisories were recorded across the fleet in eighteen months and eleven pumps were removed, of which nine tested serviceable in the shop. Filter examination found a soft gel deposit consistent with the trace polar compounds present in some blends, sitting on a mesh that was finer than the pump actually needs.",
+      "description": "The inlet filter is changed from a 40 micron to a 74 micron mesh and the element is lengthened by 18 mm to recover the effective area lost to the coarser weave. The filter housing D2820117143540 is replaced to take the longer element and the pressure regulator D2820116810419 downstream is re-shimmed so that the differential pressure switch trips at the same delta as before. Self-locking nuts EN968165-23 close the housing. Detail is on drawing D28201127242. Work is done through the tank access panels in zones 591 and 691, tank drained and purged. The pump itself, the pump 41QA and the inlet duct 7953QT are unchanged; only the filter path is affected.",
+      "effects": "Mass increase of 0.3 kg per pump. Electrical load unchanged. Interchangeable in one direction only: the longer element will not fit the pre-modification housing. The filter replacement task moves from 6 000 to 12 000 flight hours and the low pressure advisory troubleshooting path is simplified because the filter is no longer the first suspect. Master minimum equipment list relief for one boost pump inoperative is unchanged. Illustrated parts content requires a new item pair to show the two element lengths.",
+      "embodiment_note": "Cut in at MSN M00373 in January 2022. Retrofit through Service Bulletin MRD-28-1095 requires the tank to be opened, so it is done at a scheduled tank entry; operators taking it as a standalone event report four days per aircraft including purge and re-entry checks."
+    },
+    "entities": {
+      "part_numbers": [
+        "D2820117143540",
+        "D2820116810419",
+        "EN968165-23"
+      ],
+      "fins": [
+        "41QA",
+        "7953QT"
+      ],
+      "drawings": [
+        "D28201127242"
+      ],
+      "software": [],
+      "zones": [
+        "591",
+        "691"
+      ],
+      "figures": [
+        "FIG-28-20-11-01"
+      ],
+      "repair_drawings": [],
+      "msn_mentions": [
+        "M00373"
+      ]
+    },
+    "references": [
+      {
+        "doc_id": "MRD-28-1095",
+        "doc_type": "SB",
+        "relation": "EMBODIED_BY"
+      },
+      {
+        "doc_id": "IPC-M-28-20-11-FIG-01",
+        "doc_type": "IPC",
+        "relation": "REPLACES_PART_IN"
+      },
+      {
+        "doc_id": "AMM-M-28-20-11-000-006-A",
+        "doc_type": "AMM",
+        "relation": "IMPACTS"
+      }
+    ],
+    "keywords": [
+      "boost pump",
+      "inlet filter",
+      "mesh grade",
+      "sustainable aviation fuel",
+      "low pressure advisory"
+    ],
+    "originator": {
+      "department": "EVAA",
+      "site": "Valmont",
+      "role": "Fuel Systems Design Office"
+    },
+    "type_data": {
+      "mod_number": 163011,
+      "mod_class": "MINOR",
+      "change_category": "SYSTEM",
+      "trigger": "IN_SERVICE_FINDING",
+      "customer_driven": true,
+      "certification": {
+        "impact": "MINOR_CHANGE",
+        "authority": [
+          "EASA",
+          "FAA"
+        ],
+        "cs25_paragraphs": [
+          "CS 25.951",
+          "CS 25.997"
+        ],
+        "requires_flight_test": false
+      },
+      "weight_impact_kg": 0.3,
+      "balance_impact": "Negligible, symmetric across the four pumps",
+      "electrical_load_impact_va": 0,
+      "interchangeability": "ONE_WAY_INTERCHANGEABLE",
+      "parts_added": [
+        "EN968165-23"
+      ],
+      "parts_removed": [],
+      "parts_modified": [
+        "D2820117143540",
+        "D2820116810419"
+      ],
+      "fins_affected": [
+        "41QA",
+        "7953QT"
+      ],
+      "software_affected": [],
+      "estimated_manhours": 58,
+      "estimated_cost_keur": 175,
+      "lead_time_weeks": 20,
+      "production_impact": "Cut-in at MSN M00373, filter supplier tooling change with a twenty-week lead",
+      "risk_level": "LOW"
+    },
+    "_meta": {
+      "synthetic": true,
+      "generator": "authored",
+      "dataset_version": "1.0"
+    }
+  }
+]
