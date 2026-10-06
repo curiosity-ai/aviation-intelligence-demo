@@ -10,6 +10,11 @@ aerospace RSS feeds, reads every new article in full, and produces daily and wee
 intelligence reports as HTML pages and PowerPoint decks.
 Read [`README.md`](README.md) and [`docs/use-case.md`](docs/use-case.md) before doing anything.
 
+**Picking this up in a new session:** read [`TODO.md`](TODO.md) for what is done and what is
+open, then [`docs/running-locally.md`](docs/running-locally.md) to rebuild the local server and
+re-ingest. The previous session's network blocked the real feed hosts and had no LLM key, so the
+P0 tasks in `TODO.md` are the ones that need an unrestricted environment.
+
 Five deliverables, in dependency order:
 
 | # | What | Where | Skill |
