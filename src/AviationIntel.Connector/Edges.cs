@@ -53,4 +53,7 @@ public static class Edges
 
     public const string PoweredBy = nameof(PoweredBy);
     public const string Powers    = nameof(Powers);
+
+    public const string LaunchVehicleBuiltBy = nameof(LaunchVehicleBuiltBy);
+    public const string BuildsLaunchVehicle  = nameof(BuildsLaunchVehicle);
 }

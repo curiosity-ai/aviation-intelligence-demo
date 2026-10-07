@@ -8,9 +8,10 @@ namespace AviationIntel.Connector.Ingest;
 /// </summary>
 /// <remarks>
 /// <para>
-/// The four beats, with one change: the expensive part of an article is loading its page, so the
-/// cache is consulted <i>before</i> extraction, and only the misses are loaded - in parallel, through
-/// the browser's per-host gates - before anything is written. Writing stays serial, one
+/// The four beats, with two changes: the expensive part of an article is loading its page, so the
+/// cache is consulted <i>before</i> extraction and only the misses are loaded - in parallel, through
+/// the browser's per-host gates - and they are loaded, written and committed in batches, so a run
+/// that fails part-way keeps what it already read. Writing stays serial, one
 /// <c>AddOrUpdate</c> per article carrying everything, because the pending buffer is not safe for
 /// concurrent writers.
 /// </para>
@@ -30,6 +31,10 @@ internal static class ArticlesIngest
 
     //Below this many words a feed's own content:encoded is a summary, not a body.
     private const int MIN_FEED_BODY_WORDS = 80;
+
+    //Articles loaded, written and committed together. Small enough that a failed run loses little,
+    //large enough that the slowest page in a batch does not hold the others up for long.
+    private const int BATCH_SIZE = 100;
 
     [Node]
     internal sealed class Article
@@ -108,45 +113,51 @@ internal static class ArticlesIngest
 
         Console.WriteLine($"    {byUrl.Count:N0} distinct items, {candidates.Count:N0} new or changed");
 
-        var extracted = new System.Collections.Concurrent.ConcurrentDictionary<string, (ExtractedArticle? Article, string? Error)>(StringComparer.Ordinal);
+        //Round-robin across hosts. In URL order one publisher's fifty items sit together, every
+        //worker queues on that host's politeness gate, and the run goes one page at a time.
+        var interleaved = candidates.GroupBy(c => Urls.Host(c.Item.Url), StringComparer.OrdinalIgnoreCase)
+                                    .SelectMany(g => g.Select((c, i) => (Candidate: c, Turn: i)))
+                                    .OrderBy(x => x.Turn)
+                                    .ThenBy(x => x.Candidate.Item.Url, StringComparer.Ordinal)
+                                    .Select(x => x.Candidate)
+                                    .ToList();
 
-        if (extractor is not null && candidates.Count > 0)
+        // 3. + 4. per batch: a first ingest loads a thousand pages, and a run that dies at page 900
+        // must not have to load them again. Each batch is written, committed to the graph and only
+        // then recorded in the cache.
+        var done = 0;
+
+        foreach (var batch in interleaved.Chunk(BATCH_SIZE))
         {
-            var done = 0;
+            var extracted = new System.Collections.Concurrent.ConcurrentDictionary<string, (ExtractedArticle? Article, string? Error)>(StringComparer.Ordinal);
 
-            //Round-robin across hosts. In URL order one publisher's fifty items sit together, every
-            //worker queues on that host's politeness gate, and the run goes one page at a time.
-            var interleaved = candidates.GroupBy(c => Urls.Host(c.Item.Url), StringComparer.OrdinalIgnoreCase)
-                                        .SelectMany(g => g.Select((c, i) => (Candidate: c, Turn: i)))
-                                        .OrderBy(x => x.Turn)
-                                        .ThenBy(x => x.Candidate.Item.Url, StringComparer.Ordinal)
-                                        .Select(x => x.Candidate)
-                                        .ToList();
-
-            await Parallel.ForEachAsync(interleaved, new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, ctx.Options.BrowserConcurrency * 4) }, async (c, ct) =>
+            if (extractor is not null)
             {
-                extracted[c.Item.Url] = await extractor.ExtractAsync(c.Item.Url, ct);
+                await Parallel.ForEachAsync(batch, new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, ctx.Options.BrowserConcurrency * 4) }, async (c, ct) =>
+                {
+                    extracted[c.Item.Url] = await extractor.ExtractAsync(c.Item.Url, ct);
+                });
+            }
 
-                var n = Interlocked.Increment(ref done);
-                if (n % 25 == 0 || n == candidates.Count) Console.WriteLine($"    extracted {n:N0}/{candidates.Count:N0}");
-            });
+            //Writing stays serial: the pending buffer is not safe for concurrent writers.
+            foreach (var candidate in batch)
+            {
+                extracted.TryGetValue(candidate.Item.Url, out var page);
+                Write(ctx, candidate, page.Article, page.Error, extractor is not null);
+            }
+
+            await ctx.Graph.CommitPendingAsync();
+
+            if (!ctx.DryRun)
+            {
+                foreach (var candidate in batch) ctx.Cache.EnqueueHash(Version, candidate.Hash);
+            }
+
+            await ctx.CommitCacheAsync();
+
+            done += batch.Length;
+            if (extractor is not null) Console.WriteLine($"    extracted and written {done:N0}/{candidates.Count:N0}");
         }
-
-        foreach (var candidate in candidates)
-        {
-            extracted.TryGetValue(candidate.Item.Url, out var page);
-            Write(ctx, candidate, page.Article, page.Error, extractor is not null);
-        }
-
-        // 3. COMMIT the graph, then 4. the cache - never the other way round.
-        await ctx.Graph.CommitPendingAsync();
-
-        if (!ctx.DryRun)
-        {
-            foreach (var candidate in candidates) ctx.Cache.EnqueueHash(Version, candidate.Hash);
-        }
-
-        await ctx.CommitCacheAsync();
     }
 
     private static void Write(ConnectorContext ctx, Candidate candidate, ExtractedArticle? page, string? error, bool browserUsed)

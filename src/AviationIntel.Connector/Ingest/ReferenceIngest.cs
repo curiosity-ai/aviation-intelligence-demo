@@ -5,8 +5,9 @@ using Mosaik.Core;
 namespace AviationIntel.Connector.Ingest;
 
 /// <summary>
-/// <c>data/reference/*.csv</c> → the four vocabularies the workspace spots inside articles:
-/// <see cref="Organisation"/>, <see cref="AircraftType"/>, <see cref="EngineType"/> and <see cref="Airport"/>.
+/// <c>data/reference/*.csv</c> → the five vocabularies the workspace spots inside articles:
+/// <see cref="Organisation"/>, <see cref="AircraftType"/>, <see cref="EngineType"/>,
+/// <see cref="LaunchVehicle"/> and <see cref="Airport"/>.
 /// </summary>
 /// <remarks>
 /// <para>
@@ -23,8 +24,9 @@ namespace AviationIntel.Connector.Ingest;
 /// of the word linking to it.
 /// </para>
 /// <para>
-/// Aliases are only ever added. A term the generator stops producing stays on the node until the
-/// workspace is rebuilt; the vocabularies change rarely enough for that to be the right trade.
+/// The terms each entity was last written with are kept in a ledger next to the hash cache, so a
+/// term the generator stops producing is removed from the node rather than spotted forever. A
+/// workspace ingested without the ledger keeps whatever it was given until it is rebuilt.
 /// </para>
 /// </remarks>
 internal static class ReferenceIngest
@@ -51,6 +53,13 @@ internal static class ReferenceIngest
 
     [Node]
     internal sealed class EngineType
+    {
+        [Key]      public string WikidataId { get; set; } = "";
+        [Property] public string Name       { get; set; } = "";
+    }
+
+    [Node]
+    internal sealed class LaunchVehicle
     {
         [Key]      public string WikidataId { get; set; } = "";
         [Property] public string Name       { get; set; } = "";
@@ -86,6 +95,7 @@ internal static class ReferenceIngest
         [Name("Terms")]           public string Terms           { get; set; } = "";
     }
 
+    //Also the shape of launch_vehicles.csv.
     private sealed class EngineRow
     {
         [Name("Id")]              public string Id              { get; set; } = "";
@@ -115,6 +125,7 @@ internal static class ReferenceIngest
         }
 
         var hashes = new List<UID.UID128>();
+        var ledger = TermsLedger.Load(ctx.Options.TermsLedgerPath);
 
         foreach (var row in ctx.ReadCsv<OrganisationRow>(Path.Combine(folder, "organisations.csv")))
         {
@@ -122,7 +133,7 @@ internal static class ReferenceIngest
 
             var node = ctx.Graph.AddOrUpdate(new Organisation { WikidataId = row.Id, Name = row.Name, Kind = row.Kind, Country = row.Country, IcaoCode = row.IcaoCode });
             ctx.CountNode(nameof(Organisation));
-            AddTerms(ctx, node, row.Terms);
+            SyncTerms(ctx, ledger, node, row.Terms);
         }
 
         foreach (var row in ctx.ReadCsv<EngineRow>(Path.Combine(folder, "engines.csv")))
@@ -131,7 +142,7 @@ internal static class ReferenceIngest
 
             var node = ctx.Graph.AddOrUpdate(new EngineType { WikidataId = row.Id, Name = row.Name });
             ctx.CountNode(nameof(EngineType));
-            AddTerms(ctx, node, row.Terms);
+            SyncTerms(ctx, ledger, node, row.Terms);
 
             foreach (var id in Split(row.ManufacturerIds)) ctx.LinkKey(node, nameof(Organisation), id, Edges.EngineBuiltBy, Edges.BuildsEngine);
         }
@@ -142,10 +153,21 @@ internal static class ReferenceIngest
 
             var node = ctx.Graph.AddOrUpdate(new AircraftType { WikidataId = row.Id, Name = row.Name, FirstFlight = row.FirstFlight });
             ctx.CountNode(nameof(AircraftType));
-            AddTerms(ctx, node, row.Terms);
+            SyncTerms(ctx, ledger, node, row.Terms);
 
             foreach (var id in Split(row.ManufacturerIds)) ctx.LinkKey(node, nameof(Organisation), id, Edges.AircraftBuiltBy, Edges.BuildsAircraft);
             foreach (var id in Split(row.EngineIds))       ctx.LinkKey(node, nameof(EngineType),   id, Edges.PoweredBy,       Edges.Powers);
+        }
+
+        foreach (var row in ctx.ReadCsv<EngineRow>(Path.Combine(folder, "launch_vehicles.csv")))
+        {
+            if (Unchanged(ctx, row, hashes)) continue;
+
+            var node = ctx.Graph.AddOrUpdate(new LaunchVehicle { WikidataId = row.Id, Name = row.Name });
+            ctx.CountNode(nameof(LaunchVehicle));
+            SyncTerms(ctx, ledger, node, row.Terms);
+
+            foreach (var id in Split(row.ManufacturerIds)) ctx.LinkKey(node, nameof(Organisation), id, Edges.LaunchVehicleBuiltBy, Edges.BuildsLaunchVehicle);
         }
 
         foreach (var row in ctx.ReadCsv<AirportRow>(Path.Combine(folder, "airports.csv")))
@@ -154,7 +176,7 @@ internal static class ReferenceIngest
 
             var node = ctx.Graph.AddOrUpdate(new Airport { IcaoCode = row.IcaoCode, Name = row.Name, IataCode = row.IataCode, Municipality = row.Municipality, Country = row.Country });
             ctx.CountNode(nameof(Airport));
-            AddTerms(ctx, node, row.Terms);
+            SyncTerms(ctx, ledger, node, row.Terms);
         }
 
         await ctx.Graph.CommitPendingAsync();
@@ -165,6 +187,8 @@ internal static class ReferenceIngest
         }
 
         await ctx.CommitCacheAsync();
+
+        if (!ctx.DryRun) ledger.Save();
     }
 
     //One hash per row: an unchanged vocabulary costs nothing on the hourly run.
@@ -183,13 +207,57 @@ internal static class ReferenceIngest
     }
 
     //Case-sensitive: the spotters are, and "LEAP" the engine is not "leap" the verb.
-    private static void AddTerms(ConnectorContext ctx, Node node, string terms)
+    private static void SyncTerms(ConnectorContext ctx, TermsLedger ledger, Node node, string terms)
     {
-        foreach (var term in Split(terms))
+        var current = Split(terms).ToArray();
+
+        foreach (var stale in ledger.Previous(node).Except(current, StringComparer.Ordinal))
+        {
+            ctx.Graph.RemoveAlias(node, Language.Any, stale, ignoreCase: false);
+            ctx.CountOutcome("reference term removed");
+        }
+
+        foreach (var term in current)
         {
             ctx.Graph.AddAlias(node, Language.Any, term, ignoreCase: false);
             ctx.CountOutcome("reference term");
         }
+
+        ledger.Record(node, current);
+    }
+
+    /// <summary>The terms each entity was last written with: node type and key → terms.</summary>
+    private sealed class TermsLedger
+    {
+        private readonly string?                          _path;
+        private readonly Dictionary<string, string[]>     _terms;
+
+        private TermsLedger(string? path, Dictionary<string, string[]> terms)
+        {
+            _path  = path;
+            _terms = terms;
+        }
+
+        public static TermsLedger Load(string? path)
+        {
+            var terms = path is not null && File.Exists(path)
+                ? System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, string[]>>(File.ReadAllText(path)) ?? new()
+                : new Dictionary<string, string[]>();
+
+            return new TermsLedger(path, terms);
+        }
+
+        public IEnumerable<string> Previous(Node node) => _terms.TryGetValue(KeyOf(node), out var terms) ? terms : Array.Empty<string>();
+
+        public void Record(Node node, string[] terms) => _terms[KeyOf(node)] = terms;
+
+        public void Save()
+        {
+            if (_path is null) return;
+            File.WriteAllText(_path, System.Text.Json.JsonSerializer.Serialize(_terms));
+        }
+
+        private static string KeyOf(Node node) => node.Type + "\u0000" + node.Key;
     }
 
     private static IEnumerable<string> Split(string value) => value.Split('|', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);

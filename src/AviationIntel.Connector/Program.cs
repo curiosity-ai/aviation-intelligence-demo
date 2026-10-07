@@ -84,11 +84,15 @@ var cacheName = options.DryRun ? "dry-run" : new Uri(endpoint!).Authority.Replac
 var cachePath = Path.Combine(AppContext.BaseDirectory, "cache", $"aviation-connector-{cacheName}.db");
 Directory.CreateDirectory(Path.GetDirectoryName(cachePath)!);
 
+var termsLedgerPath = Path.ChangeExtension(cachePath, ".terms.json");
+
 if (Flag("--reset-cache") && File.Exists(cachePath))
 {
     File.Delete(cachePath);
     Console.WriteLine($"cache reset: {cachePath}");
 }
+
+options = options with { TermsLedgerPath = termsLedgerPath };
 
 Console.WriteLine("Aviation Market Intelligence — RSS connector");
 Console.WriteLine($"Directory: {options.DirectoryCsv}");
@@ -198,6 +202,7 @@ static async Task SyncSchemaAsync(Graph graph)
     await graph.CreateNodeSchemaAsync<ReferenceIngest.Organisation>(overwrite: true);
     await graph.CreateNodeSchemaAsync<ReferenceIngest.AircraftType>(overwrite: true);
     await graph.CreateNodeSchemaAsync<ReferenceIngest.EngineType>(overwrite: true);
+    await graph.CreateNodeSchemaAsync<ReferenceIngest.LaunchVehicle>(overwrite: true);
     await graph.CreateNodeSchemaAsync<ReferenceIngest.Airport>(overwrite: true);
 
     await graph.CreateEdgeSchemaAsync(typeof(Edges));
