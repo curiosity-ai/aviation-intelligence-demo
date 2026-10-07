@@ -9,7 +9,9 @@ Two templates, one data file. You write the report **once**, as JSON, and render
   with PptxGenJS and hands it over from a download button: title, summary + KPIs, native charts,
   one slide per section (first four items), watchlist table, sources appendix.
 
-Both write to `/artifacts/`; then `publish <name>.html`. `sample-daily.json` is a complete example.
+Both write to `/artifacts/`; then `publish <name>.html`. `sample-daily.json` (Tuesday 6 October 2026) and
+`sample-weekly.json` (the week to that day) are complete examples, written from real articles in the
+corpus: every figure in them is quoted from the article it cites.
 Never edit the HTML templates for one report - everything that varies is in the JSON.
 
 ## The JSON contract
