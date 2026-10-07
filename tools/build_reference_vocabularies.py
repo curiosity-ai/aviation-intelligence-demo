@@ -10,14 +10,17 @@ Four master lists, each from a public reference source - never hand-authored:
                      engine lists name
   aircraft.csv       Wikidata: aircraft families and models (first flight 1950 or later)
   engines.csv        Wikidata: the engines those aircraft are "powered by", plus engine families
+  launch_vehicles.csv Wikidata: rocket models, series and families
   airports.csv       OurAirports: large airports with scheduled service
 
 Each row's Terms are what the workspace spots in text - the name included only when it passes
 the same rules as the aliases. What a spotter finds is only as good as its terms, so they are
 filtered by rule:
-a term shorter than 3 characters, purely numeric, not in Latin script, or a common English word
-(google-10000-english) is dropped, and a term two entities claim goes to the one whose own name it
-is, else to the one with more Wikipedia articles (an airport counts as having none). The rules are applied
+a term shorter than 3 characters, purely numeric, not in Latin script, a Roman numeral, a common English word
+(google-10000-english), or a phrase made only of the 2,000 most common words with no industry word
+in it ("Middle East") is dropped. A term two entities claim goes to the one whose own name it is,
+else to the one with more Wikipedia articles (an airport counts as having none) - and a name two
+entities both carry as their own ("Falcon") names neither. The rules are applied
 the same way on every run, so the same sources give the same files.
 
 Wikidata is CC0; OurAirports is public domain. Both are credited in data/reference/README.md.
@@ -66,6 +69,20 @@ SELECT ?x ?first ?s (GROUP_CONCAT(DISTINCT STRAFTER(STR(?m), "entity/"); separat
 } GROUP BY ?x ?first ?s
 """
 
+LAUNCH_VEHICLE_QUERY = """
+SELECT ?x ?s (GROUP_CONCAT(DISTINCT STRAFTER(STR(?m), "entity/"); separator="|") AS ?mfr) WHERE {
+  VALUES ?c { wd:Q110055303 wd:Q111722634 wd:Q109542585 }
+  ?x wdt:P31 ?c ; wikibase:sitelinks ?s .
+  FILTER(?s >= 5)
+  OPTIONAL { ?x wdt:P176 ?m }
+} GROUP BY ?x ?s
+"""
+
+# Words that make a phrase of common words specific to this industry: "American Airlines" is a
+# name, "Middle East" is not.
+INDUSTRY_WORDS = {"air", "airlines", "airline", "airways", "aviation", "aerospace", "aircraft", "airport",
+                  "agency", "administration", "authority", "launch", "rocket"}
+
 ENGINE_FAMILY_QUERY = """
 SELECT ?x ?s WHERE { ?x wdt:P31 wd:Q15057020 ; wikibase:sitelinks ?s . FILTER(?s >= 3) }
 """
@@ -92,6 +109,14 @@ def main():
     for qid, mfrs in values_of(list(engines), "wdt:P176").items():
         engines[qid]["mfr"] = mfrs
 
+    print("launch vehicles…")
+    rockets = {}
+    for row in sparql(LAUNCH_VEHICLE_QUERY):
+        qid = qid_of(row["x"])
+        if qid in aircraft or (qid in rockets and int(rockets[qid]["s"]) >= int(row["s"])):
+            continue
+        rockets[qid] = {"s": row["s"], "mfr": split(row.get("mfr"))}
+
     print("organisations…")
     orgs = {}
     for kind, pattern in ORG_CLASSES:
@@ -99,13 +124,14 @@ def main():
             orgs.setdefault(qid_of(row["x"]), {"kind": kind})
     # "Manufacturer" on Wikidata is sometimes a state or a country (a licence-built type); only an
     # organisation counts.
-    named = sorted({m for a in aircraft.values() for m in a["mfr"]} | {m for e in engines.values() for m in e.get("mfr", [])})
+    named = sorted({m for a in aircraft.values() for m in a["mfr"]} | {m for e in engines.values() for m in e.get("mfr", [])}
+                   | {m for r in rockets.values() for m in r["mfr"]})
     for qid in organisations_among(named):
         orgs.setdefault(qid, {"kind": "Manufacturer"})
 
     print("labels and aliases…")
-    names    = labels_and_aliases(list(orgs) + list(aircraft) + list(engines))
-    weight   = sitelinks(list(orgs) + list(aircraft) + list(engines))
+    names    = labels_and_aliases(list(orgs) + list(aircraft) + list(engines) + list(rockets))
+    weight   = sitelinks(list(orgs) + list(aircraft) + list(engines) + list(rockets))
     country  = {q: c for q, c in first_label_of(list(orgs), "wdt:P17").items()}
     icao     = {q: v[0] for q, v in values_of(list(orgs), "wdt:P230", literal=True).items()}
 
@@ -113,6 +139,7 @@ def main():
     orgs     = {q: v for q, v in orgs.items()     if q in names}
     aircraft = {q: v for q, v in aircraft.items() if q in names}
     engines  = {q: v for q, v in engines.items()  if q in names}
+    rockets  = {q: v for q, v in rockets.items()  if q in names}
 
     print("airports…")
     airports = load_airports()
@@ -125,9 +152,13 @@ def main():
         terms[("aircraft", q)] = candidate_terms(names[q], prefixes=[names[m][0] for m in a["mfr"] if m in names])
     for q, e in engines.items():
         terms[("engine", q)] = candidate_terms(names[q], prefixes=[names[m][0] for m in e.get("mfr", []) if m in names])
+    for q, r in rockets.items():
+        terms[("rocket", q)] = candidate_terms(names[q], prefixes=[names[m][0] for m in r["mfr"] if m in names])
     places = {normal(a["municipality"]) for a in airports} | {normal(a["country"]) for a in airports}
     for a in airports:
         terms[("airport", a["ident"])] = candidate_terms(airport_names(a, places), prefixes=[])
+
+    airports_by_icao = {a["ident"]: a for a in airports}
 
     # Each term goes to one entity: the one it names outright, else the most-referenced one.
     def rank(key, t):
@@ -142,6 +173,13 @@ def main():
             if n not in owner or rank(key, t) < rank(owner[n], t):
                 owner[n] = key
 
+    own_names = defaultdict(set)
+    for key, ts in terms.items():
+        own_names[normal(ts[0])].add(key)
+    for n, keys in own_names.items():
+        if len(keys) > 1:
+            owner[n] = None
+
     # The name is a term like any other: "Emirates" is a common word, so the airline is spotted as
     # "Emirates Group" and not as every mention of the country.
     def keep(key, label):
@@ -150,6 +188,10 @@ def main():
             if owner[normal(t)] != key:
                 continue
             if not acceptable(t, common):
+                continue
+            # An IATA code is three capitals; most three-letter words written in capitals are
+            # something else ("GEO" is an orbit before it is Georgetown), so the whole list applies.
+            if key[0] == "airport" and t == airports_by_icao[key[1]]["iata"] and t.lower() in common:
                 continue
             out.append(t)
         return out
@@ -167,11 +209,15 @@ def main():
         [q, names[q][0], "|".join(m for m in v.get("mfr", []) if m in orgs), "|".join(keep(("engine", q), names[q][0]))]
         for q, v in engines.items()))
 
+    write(OUT / "launch_vehicles.csv", ["Id", "Name", "ManufacturerIds", "Terms"], sorted(
+        [q, names[q][0], "|".join(m for m in v["mfr"] if m in orgs), "|".join(keep(("rocket", q), names[q][0]))]
+        for q, v in rockets.items()))
+
     write(OUT / "airports.csv", ["IcaoCode", "Name", "IataCode", "Municipality", "Country", "Terms"], sorted(
         [a["ident"], a["name"], a["iata"], a["municipality"], a["country"], "|".join(keep(("airport", a["ident"]), a["name"]))]
         for a in airports))
 
-    print(f"{len(orgs)} organisations, {len(aircraft)} aircraft, {len(engines)} engines, {len(airports)} airports")
+    print(f"{len(orgs)} organisations, {len(aircraft)} aircraft, {len(engines)} engines, {len(rockets)} launch vehicles, {len(airports)} airports")
 
 
 # ── terms ────────────────────────────────────────────────────────────────────
@@ -195,7 +241,8 @@ def candidate_terms(names, prefixes):
                     break
                 shared += 1
             rest = " ".join(words[shared:])
-            if 0 < shared < len(words) and (re.search(r"\d", rest) or sum(c.isupper() for c in rest) >= 2):
+            designation = re.search(r"\d", rest) or (sum(c.isupper() for c in rest) >= 2 and not re.fullmatch(r"[IVXLC]+", rest))
+            if 0 < shared < len(words) and designation:
                 out.append(rest)
     seen, unique = set(), []
     for t in out:
@@ -238,7 +285,12 @@ def acceptable(term, common):
         return False
     if any(unicodedata.category(c).startswith("L") and not is_latin(c) for c in term):
         return False
+    if re.fullmatch(r"[IVXLC]+", term):
+        return False
     words = term.split()
+    lowered = [w.lower().strip(".,'") for w in term.replace("-", " ").split()]
+    if len(lowered) > 1 and all(common.get(w, 10**6) < 2000 for w in lowered) and not set(lowered) & INDUSTRY_WORDS:
+        return False
     # Spotting is case-sensitive, so an acronym only collides with a word written in capitals
     # (a shouted headline): those are checked against the 1,000 most common words, everything
     # else against all 10,000.
