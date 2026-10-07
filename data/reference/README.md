@@ -36,6 +36,8 @@ The generator filters the label and the aliases by rule, the same way on every r
 - a term two entities claim goes to the one whose own name it is, else to the one with more
   Wikipedia articles - and a name two entities both carry as their own ("Falcon", "Starship")
   names neither, so each is spotted only by its longer terms ("Dassault Falcon", "SpaceX Starship");
+- dropped: an aircraft's, engine's or launch vehicle's one-word name that is also the first word of
+  an organisation's name ("Pegasus" in airline news is Pegasus Airlines, not the rocket);
 - for aircraft, engines and launch vehicles, the name without its manufacturer's leading words is added when the
   rest is a designation ("Airbus A350" → "A350", "CFM International LEAP" → "LEAP");
 - for airports, the IATA code, the name without its city and "International Airport", and the

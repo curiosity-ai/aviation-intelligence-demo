@@ -19,7 +19,8 @@ filtered by rule:
 a term shorter than 3 characters, purely numeric, not in Latin script, a Roman numeral, a lower-case phrase ("air defense"), a generic industry word ("Aero"), a common English word
 (google-10000-english), a phrase made only of the 2,000 most common words with no industry word
 in it ("Middle East"), an airline's own ICAO code, or a one-word nickname of an aircraft that
-first flew before 1990 ("Fury") is dropped. A term two entities claim goes to the one whose own name it is,
+first flew before 1990 ("Fury"), or a product's one-word name that begins an organisation's name
+("Pegasus", "Condor") is dropped. A term two entities claim goes to the one whose own name it is,
 else to the one with more Wikipedia articles (an airport counts as having none) - and a name two
 entities both carry as their own ("Falcon") names neither, and so does an acronym two entities
 share unless one has three times the other's coverage. Organisations also get their name without
@@ -164,6 +165,9 @@ def main():
 
     airports_by_icao = {a["ident"]: a for a in airports}
 
+    # The first word of a multi-word organisation name ("Pegasus Airlines", "Condor Flugdienst").
+    org_first_words = {names[q][0].split()[0].lower() for q in orgs if len(names[q][0].split()) > 1}
+
     # Each term goes to one entity: the one it names outright, else the most-referenced one.
     def rank(key, t):
         own   = normal(terms[key][0]) == normal(t)
@@ -209,6 +213,10 @@ def main():
             # An airline's ICAO code (CCA, ISR, FIN) is how a flight plan names it, not a newsroom -
             # and as an acronym it is usually something else.
             if key[0] == "org" and t == icao.get(key[1]):
+                continue
+            # A product's one-word name that is also how a company is known names neither:
+            # "Pegasus" in airline news is the airline, not the rocket.
+            if key[0] in ("aircraft", "engine", "rocket") and " " not in t and t.lower() in org_first_words:
                 continue
             # A bare nickname of an old type ("Fury", 1954) is somebody else's newer one.
             if key[0] == "aircraft" and " " not in t and not re.search(r"\d", t) and t != label and (aircraft[key[1]]["first"] or "0") < "1990":

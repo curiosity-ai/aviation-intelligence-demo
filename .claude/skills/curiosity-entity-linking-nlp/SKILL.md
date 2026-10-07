@@ -233,6 +233,19 @@ field you link (`GET /api/index/list/FieldToDocumentIndex` for the `IndexUID`,
 `POST /api/nlp/model/parse/?modelUID=<spotter uid>` with a sentence as the body shows what one
 spotter finds - the quickest test of a term rule.
 
+Three things that are not obvious, all observed:
+
+- **The pipeline caches its own spotter instances.** Refreshing a spotter model does not reach a
+  pipeline that already built it; re-importing the pipeline file (its node timestamp changes) or
+  restarting the server does.
+- **Linking only ever adds edges.** A `_Mentions` written while a term existed survives removing the
+  term, refreshing the spotter, and recreating both the parser and the linking index. Tune the
+  vocabulary on a scratch workspace and ingest the real one once the rules have settled - or
+  rebuild it from the repository afterwards.
+- **`--MSK_LOW_MEMORY=true` throttles linking hard**: the parser and linking indexes pause while
+  the heap is fragmented, for up to an hour at a time on a fresh ingest. Use it only where memory
+  is genuinely short.
+
 **Measure precision on real text before trusting it.** The first pass over 1,556 real articles
 linked "GEO" (an orbit) to Georgetown's airport, "Middle East" to an airline, a Roman numeral
 to a business jet and three unrelated aircraft to "Falcon". Run `top_mentions`-style counts,
