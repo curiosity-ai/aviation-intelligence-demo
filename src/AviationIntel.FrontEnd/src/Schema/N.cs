@@ -5,6 +5,24 @@ namespace AviationIntel.FrontEnd.Schema
 {
     public static class N
     {
+        public static class AircraftType
+        {
+            public const string Type = "AircraftType";
+            public const string WikidataId = "WikidataId";
+            public const string Name = "Name";
+            public const string FirstFlight = "FirstFlight";
+        }
+
+        public static class Airport
+        {
+            public const string Type = "Airport";
+            public const string IcaoCode = "IcaoCode";
+            public const string Name = "Name";
+            public const string IataCode = "IataCode";
+            public const string Municipality = "Municipality";
+            public const string Country = "Country";
+        }
+
         public static class Article
         {
             public const string Type = "Article";
@@ -22,6 +40,13 @@ namespace AviationIntel.FrontEnd.Schema
             public const string WordCount = "WordCount";
             public const string PublishedDay = "PublishedDay";
             public const string PublishedAt = "PublishedAt";
+        }
+
+        public static class EngineType
+        {
+            public const string Type = "EngineType";
+            public const string WikidataId = "WikidataId";
+            public const string Name = "Name";
         }
 
         public static class Feed
@@ -52,6 +77,23 @@ namespace AviationIntel.FrontEnd.Schema
         {
             public const string Type = "FeedCategory";
             public const string Name = "Name";
+        }
+
+        public static class LaunchVehicle
+        {
+            public const string Type = "LaunchVehicle";
+            public const string WikidataId = "WikidataId";
+            public const string Name = "Name";
+        }
+
+        public static class Organisation
+        {
+            public const string Type = "Organisation";
+            public const string WikidataId = "WikidataId";
+            public const string Name = "Name";
+            public const string Kind = "Kind";
+            public const string Country = "Country";
+            public const string IcaoCode = "IcaoCode";
         }
 
         public static class Priority
@@ -98,7 +140,8 @@ namespace AviationIntel.FrontEnd.Schema
         }
 
         public static readonly string[] DocumentTypes = { "Article" };
-        public static readonly string[] All360Types   = { "Article", "Feed", "FeedCategory", "Priority", "Publisher", "SourceType", "Tag" };
+        public static readonly string[] All360Types   = { "AircraftType", "Airport", "Article", "EngineType", "Feed", "FeedCategory", "LaunchVehicle", "Organisation", "Priority", "Publisher", "SourceType", "Tag" };
+        public static readonly string[] EntityTypes   = { "AircraftType", "Airport", "EngineType", "LaunchVehicle", "Organisation" };
     }
 
     public static class E
@@ -119,5 +162,15 @@ namespace AviationIntel.FrontEnd.Schema
         public const string CategoryHasArticle = "CategoryHasArticle";
         public const string TaggedWith = "TaggedWith";
         public const string TagOf = "TagOf";
+        public const string AircraftBuiltBy = "AircraftBuiltBy";
+        public const string BuildsAircraft = "BuildsAircraft";
+        public const string EngineBuiltBy = "EngineBuiltBy";
+        public const string BuildsEngine = "BuildsEngine";
+        public const string PoweredBy = "PoweredBy";
+        public const string Powers = "Powers";
+        public const string LaunchVehicleBuiltBy = "LaunchVehicleBuiltBy";
+        public const string BuildsLaunchVehicle = "BuildsLaunchVehicle";
+        public const string _Mentions = "_Mentions";
+        public const string _AppearsIn = "_AppearsIn";
     }
 }

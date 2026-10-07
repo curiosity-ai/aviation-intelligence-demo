@@ -113,7 +113,8 @@
     const box = el('div', 'chart');
     add(box, el('h3', null, title));
 
-    const labelW = 150, barW = 180, rowH = 22, pad = 6, valueW = 30;
+    // ~6px per character at 11px: a 24-character label needs ~145px plus the gap before the bar.
+    const labelW = 165, barW = 170, rowH = 22, pad = 6, valueW = 30;
     const w = labelW + barW + valueW, h = rows.length * rowH + pad * 2;
     const max = Math.max(1, ...rows.map(r => Number(r.value) || 0));
     const ns = 'http://www.w3.org/2000/svg';
@@ -127,7 +128,7 @@
       const v = Number(r.value) || 0;
       const label = document.createElementNS(ns, 'text');
       label.setAttribute('x', labelW - 8); label.setAttribute('y', y + rowH / 2 + 4); label.setAttribute('text-anchor', 'end');
-      label.textContent = String(r.label).length > 26 ? String(r.label).slice(0, 25) + '…' : String(r.label);
+      label.textContent = String(r.label).length > 24 ? String(r.label).slice(0, 23) + '…' : String(r.label);
       const rect = document.createElementNS(ns, 'rect');
       rect.setAttribute('x', labelW); rect.setAttribute('y', y + 4); rect.setAttribute('height', rowH - 8);
       rect.setAttribute('width', Math.max(2, barW * v / max)); rect.setAttribute('rx', 3);

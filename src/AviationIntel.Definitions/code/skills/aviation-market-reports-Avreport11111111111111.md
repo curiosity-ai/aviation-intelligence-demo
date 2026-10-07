@@ -38,6 +38,7 @@ stats --since 1d                                   # 1. size the period: counts,
 news --since 1d --priority Core | cut -f1-5,9      # 2. scan the Core feeds first
 news --since 1d --priority Secondary | cut -f1-5,9 #    then the rest
 news --since 1d --grep "order" --json | jq -r '.uid + "  " + .title'
+news --since 7d --mentions "Pratt & Whitney PW1000G" # every article that names an engine, a type, a company
 article <uid> <uid> ...                            # 3. read every article you will cite
 cat > /work/daily-2026-10-06.json <<'EOF'          # 4. write the report JSON
 { ... }
@@ -81,6 +82,9 @@ Read the window, then **select**. A report that lists every article is a feed re
 4. **Connect items.** The value of a report is the link nobody else drew: an airworthiness
    directive on an engine type *and* an order for aircraft with that engine *and* shop-visit
    backlogs belong in the same thought. Say it in the `so_what`, the summary and the headline.
+   `stats`' `top_mentions` shows who and what the window was about, and `article` lists each
+   article's mentions - follow one with `news --mentions <name>` to find the other stories that
+   name it. Mentions are found by name: read the article before you rely on one.
 5. **Leave out**: consumer travel tips, aircraft-spotting, trip reports, PR fluff with no number,
    research preprints unless they bear on an industry decision, and anything you could not read
    beyond its title.

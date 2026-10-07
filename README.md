@@ -12,6 +12,7 @@ Curiosity application template; its guide is in
 | | Where |
 | --- | --- |
 | Feed directory (real sources) | [`data/feeds/aviation-aerospace-rss-directory.csv`](data/feeds/aviation-aerospace-rss-directory.csv) |
+| Entity vocabularies (Wikidata, OurAirports) | [`data/reference/`](data/reference) |
 | Connector: RSS + Playwright + Readability | [`src/AviationIntel.Connector/`](src/AviationIntel.Connector) |
 | Workspace definitions (sandbox, agent, skill, assistant, endpoint, schemas) | [`src/AviationIntel.Definitions/`](src/AviationIntel.Definitions) |
 | Report templates (HTML report, PowerPoint deck) | [`src/AviationIntel.Definitions/templates/`](src/AviationIntel.Definitions/templates) |
@@ -26,7 +27,10 @@ flowchart LR
     CSV[Feed directory CSV] --> C[Connector]
     RSS[248 RSS / Atom feeds] --> C
     C -- Chromium + Readability --> P[Article pages]
-    C -->|Feed, Publisher, Category,\nPriority, SourceType, Article, Tag| G[(Workspace graph)]
+    V[Reference vocabularies] --> C
+    C -->|Feed, Publisher, Category,\nPriority, SourceType, Article, Tag,\nOrganisation, AircraftType, EngineType,\nLaunchVehicle, Airport| G[(Workspace graph)]
+    G -- spotters + linking --> M[_Mentions / _AppearsIn]
+    M --> G
     G --> E[aviation/dashboard endpoint] --> FE[Front end: news desk]
     G --> S[Aviation News Desk sandbox]
     S --> A[Analyst agent]
@@ -41,6 +45,9 @@ flowchart LR
 
 `src/AviationIntel.Connector` is a .NET console app on `Curiosity.Library`:
 
+0. writes the five entity vocabularies from `data/reference/` - organisations, aircraft types,
+   engine types, launch vehicles, airports - with every spottable term as an alias, and only the
+   relationships their source states (who builds what, which engine powers which aircraft);
 1. reads the directory CSV (248 feeds, deduplicated by URL);
 2. fetches every feed (HTTP first; through headless Chromium when a bot check answers the HTTP
    client with a 403 or a challenge page) and parses RSS/Atom with `CodeHollow.FeedReader`;
@@ -48,13 +55,20 @@ flowchart LR
    release is **one** article with an edge per feed;
 4. consults the hash cache **before** loading any page - an unchanged item costs nothing;
 5. loads each new article in **Playwright/Chromium** (images, media and fonts blocked; one page
-   at a time per host, with a delay; up to N hosts in parallel) and extracts it with
-   **SmartReader** (Readability) from the rendered DOM - the same extractor the workspace's
-   `RssTask` uses, but over what a browser sees, which covers client-rendered newsrooms and
-   consent walls;
+   at a time per host, with a delay; hosts interleaved so up to N load in parallel) and extracts
+   it with **SmartReader** (Readability) from the rendered DOM - the same extractor the
+   workspace's `RssTask` uses, but over what a browser sees, which covers client-rendered
+   newsrooms and consent walls. A page the browser is refused (several publishers turn away
+   headless Chromium) gets one plain request that identifies the connector by name; a feed
+   service's click tracker (follow.it) is followed to the article it names;
 6. chooses the body - page text, the feed's own full text, or the feed summary - and records
    which (`ContentSource`) and why (`ExtractionNote`: paywall, 404, unreachable, too short);
-7. writes each `Feed` once with this run's fetch status, and each `Article` once with everything.
+7. writes each `Feed` once with this run's fetch status, and each `Article` once with everything,
+   100 articles at a time - each batch committed, then recorded in the cache, so a run that dies
+   keeps what it read. A page that failed transiently is not recorded, so the next run retries it.
+
+The connector never links an article to a company, aircraft or airport: that is entity linking's
+job in the workspace (below).
 
 ```bash
 # Real run (schedule it, e.g. hourly)
@@ -67,7 +81,7 @@ dotnet run --project src/AviationIntel.Connector -- --root . \
 --since-days 7            item window (default 14)   --max-items 50  per feed
 --browser-concurrency 4   pages at once              --no-browser    feed text only
 --chromium <path>         an existing Chromium (or CHROMIUM_PATH); default: Playwright's own
---reset-cache             forget what was ingested
+--reset-cache             forget what was ingested   --skip-reference  leave the vocabularies alone
 --emit-frontend-schema src/AviationIntel.FrontEnd/src/Schema/N.cs
 ```
 
@@ -83,12 +97,15 @@ schema the connector registers. Every file is the workspace's own export, byte f
 
 | Definition | What it is |
 | --- | --- |
-| `code/chat-ai-tools/AVsandboX1111111111111.cs` | **Aviation News Desk** - an `ISandbox`: `/news` (lazy, by day: `README.md`, `index.tsv`, `days/<date>/<uid>.md`), `/feeds` (`directory.tsv` with fetch health, one file per feed), `/templates`, `/work`, `/artifacts`; commands `news`, `article`, `stats`, `render-report`, `search`, `consult`; graph `query` over the seven aviation types |
+| `code/chat-ai-tools/AVsandboX1111111111111.cs` | **Aviation News Desk** - an `ISandbox`: `/news` (lazy, by day: `README.md`, `index.tsv`, `days/<date>/<uid>.md`), `/feeds` (`directory.tsv` with fetch health, one file per feed), `/templates`, `/work`, `/artifacts`; commands `news` (with `--mentions <entity>`), `article` (lists the entities it mentions), `stats` (with `top_mentions`), `render-report`, `search`, `consult`; graph `query` over the twelve aviation types |
 | `code/skills/aviation-market-reports-*.md` | The editorial method for the daily brief and the weekly report, and the render/publish workflow |
 | `code/agents/aviation-market-intelligence-analyst-*.cs` | **Aviation Market Intelligence Analyst** - writes a report end to end |
 | `code/ai-assistants/aviation-market-intelligence-*.cs` | **Aviation Market Intelligence** - the sandbox, search, consult, the agent and the skill |
 | `code/endpoints/aviation/dashboard.cs` | The home page's live numbers, each with the UIDs it counted |
-| `config/schemas/` | The seven node schemas, the edges, and node styles |
+| `config/schemas/` | The twelve node schemas, the edges, and node styles |
+| `nlp/` | Entity recognition: five spotters (one per vocabulary), the `Aviation-Entities` pipeline, and the linking rules for `Article.Title` and `Article.Body` |
+| `config/pipeline-mapping.json`, `config/indexes/` | Which pipeline parses which article field, and the parser indexes that run it |
+| `config/interface.json` | Workspace interface settings: Contacts, Inbox, Calendar and Notes are off |
 
 ### 3. The report templates
 
@@ -120,7 +137,21 @@ sandbox tool.
 request), tiles for the last 24 hours / 7 days / feed health / summary-only articles - each opens
 exactly the articles it counted (`#/news?set=...`) - the week by category, articles per day, and
 the latest news. `#/feeds` is the directory, faceted by category, priority, source type and
-publisher. Every node type has a renderer.
+publisher. The chat page is pinned to the Aviation Market Intelligence assistant with its tools
+and agent, and parses every reply against the entity pipeline so the companies, aircraft and
+airports it names open beside the conversation. Every node type has a renderer; an article card
+shows the entities it mentions.
+
+### 5. Entity recognition
+
+The workspace spots organisations, aircraft types, engine types, launch vehicles and airports in
+every article's title and body, from master lists generated from Wikidata and OurAirports by
+`tools/build_reference_vocabularies.py` ([`data/reference/README.md`](data/reference/README.md)
+has the rules that keep the terms precise). Each spotter is built from the entity's key with its
+aliases, case-sensitive, so what is found is exactly the `Terms` column. Linking writes
+`_Mentions` (article → entity) and `_AppearsIn` (entity → article); the sandbox's
+`news --mentions` and `stats`' `top_mentions`, the article cards and every entity's own page read
+them.
 
 ## Running it locally against a live server
 

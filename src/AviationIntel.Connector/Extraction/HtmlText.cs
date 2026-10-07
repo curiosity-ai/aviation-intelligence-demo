@@ -25,7 +25,20 @@ public static partial class HtmlText
     [GeneratedRegex(@"The post .{1,300}? appeared first on .{1,200}?\.?\s*$", RegexOptions.Singleline)]
     private static partial Regex AppearedFirstOn();
 
+    //Markup that survived one decode: the feed escaped its HTML twice.
+    [GeneratedRegex(@"</?(span|div|p|a|br|em|strong|b|i)\b[^>]*>", RegexOptions.IgnoreCase)]
+    private static partial Regex LeftoverMarkup();
+
     public static string ToText(string? html)
+    {
+        var text = ToTextOnce(html);
+
+        //Some feeds (Aviation Week's among them) entity-encode HTML that was already HTML, so the
+        //first pass decodes it into tags. One more pass, never more.
+        return LeftoverMarkup().IsMatch(text) ? ToTextOnce(text) : text;
+    }
+
+    private static string ToTextOnce(string? html)
     {
         if (string.IsNullOrWhiteSpace(html)) return "";
 

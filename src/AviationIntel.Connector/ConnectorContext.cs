@@ -119,6 +119,12 @@ public sealed record ConnectorOptions
     public TimeSpan         PerHostDelay       { get; init; } = TimeSpan.FromSeconds(1);
     public string           UserAgent          { get; init; } = DefaultUserAgent;
 
+    /// <summary>Where the reference vocabularies' last-written terms are kept; beside the hash cache, per endpoint.</summary>
+    public string?          TermsLedgerPath    { get; init; }
+
+    /// <summary>What the plain-request fallback sends: who is asking, and where to read about it.</summary>
+    public const string IdentifyingUserAgent = "AviationIntelligenceDemo/1.0 (+https://github.com/curiosity-ai/aviation-intelligence-demo)";
+
     //A current desktop Chrome: several newsrooms answer a library user agent with 403.
     public const string DefaultUserAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36";
 }

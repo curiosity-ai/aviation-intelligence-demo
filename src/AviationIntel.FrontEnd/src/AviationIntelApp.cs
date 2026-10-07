@@ -1,3 +1,4 @@
+using AviationIntel.FrontEnd.Components;
 using AviationIntel.FrontEnd.Dashboard;
 using Mosaik;
 using Tesserae;
@@ -19,6 +20,7 @@ namespace AviationIntel.FrontEnd
         private static void Configure(AppSettings settings)
         {
             settings.HomeView              = state => new HomeView(state);
+            settings.AssistantView         = AviationChatView.Create;
             settings.DisableOnboardingTips = true;
 
             // The news desk's own pages, directly under the workspace's header entries: the sets

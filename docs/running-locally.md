@@ -20,13 +20,14 @@ setsid env MSK_GRAPH_STORAGE=/tmp/curiosity/aviation \
     MSK_ADMIN_USER=admin MSK_ADMIN_PASSWORD=admin MSK_ADMIN_EMAIL=admin@test.local \
     MSK_DISABLE_TELEMETRY=true MSK_DISABLE_CLOUD_ERROR_REPORT=true \
     MSK_WWW_FOLDER=<this repo>/src/AviationIntel.FrontEnd/bin/Debug/netstandard2.0/tps \
-    ./curiosity --MSK_LOW_MEMORY=true --MSK_DISABLE_RESOURCE_MONITORING=true --MSK_UNSAFE_AUTO_LOGIN=true \
+    ./curiosity --MSK_DISABLE_RESOURCE_MONITORING=true --MSK_UNSAFE_AUTO_LOGIN=true \
     > /tmp/server.log 2>&1 < /dev/null &
 
 until [ "$(curl -s http://localhost:8080/api/graph/ready)" = "true" ]; do sleep 3; done
 ```
 
-`MSK_UNSAFE_AUTO_LOGIN` signs the browser in as `admin` - local use only. A front-end-only change
+`MSK_UNSAFE_AUTO_LOGIN` signs the browser in as `admin` - local use only. Add `--MSK_LOW_MEMORY=true`
+only on a machine short of memory: it slows entity linking down badly (see below). A front-end-only change
 needs a rebuild and a browser reload, not a server restart.
 
 ## 2. Ingest
@@ -45,6 +46,11 @@ dotnet run --project src/AviationIntel.Connector -- --root . --directory tests/f
     --endpoint http://localhost:8080 --token "$LIBTOK"
 ```
 
+In a Claude Code cloud container Chromium is pre-installed - pass it rather than downloading one:
+`CHROMIUM_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome`. A first full run over the real
+directory loads ~1,500 pages and takes about 30 minutes; it writes and commits every 100 articles,
+so a run that is stopped part-way keeps what it read.
+
 The fixtures exercise every branch of the extraction: a server-rendered page, a page whose body
 only exists after JavaScript runs, a paywall teaser, a 404, an Atom feed, a German feed, and an
 item syndicated by two feeds. A second run reports every article as cached.
@@ -61,6 +67,31 @@ After editing anything in the workspace, export and commit it - the files here a
 ```bash
 curl -s -H "Authorization: Bearer $TOK" $B/graph/export-definitions -o defs.zip
 ```
+
+### Entity recognition after an import or a vocabulary change
+
+The spotters are built from the vocabularies the connector writes, so ingest (at least the
+`reference` step) before importing the definitions. Two things do not happen on their own:
+
+```bash
+# The spotter models are cached: after the terms change, refresh each one.
+for m in AVspotorg1111111111111 AVspotPLane11111111111 AVspotEnginE1111111111 AVspotRockeT1111111111 AVspotAirpoRt111111111; do
+  curl -s -X POST -H "Authorization: Bearer $TOK" "$B/nlp/model/refresh?modelUID=$m"; done
+
+# Articles already parsed are linked again with the new terms once their parser index is recreated.
+# Links found by a term that has since been removed are NOT taken away - only a rebuilt workspace drops them.
+curl -s -H "Authorization: Bearer $TOK" $B/index/list/FieldToDocumentIndex      # Article Title/Body IndexUIDs
+curl -s -X POST -H "Authorization: Bearer $TOK" "$B/index/recreate?nodeType=Article&indexUID=<uid>"
+
+# Check a spotter on a sentence:
+curl -s -X POST -H "Authorization: Bearer $TOK" -H 'Content-Type: text/plain' \
+  "$B/nlp/model/parse/?modelUID=AVspotRockeT1111111111" --data-binary "SpaceX launched a Falcon 9"
+```
+
+A refreshed spotter does not reach a pipeline that already built it: re-import the definitions (or
+restart the server) after the terms change. With `--MSK_LOW_MEMORY=true` the parser and linking
+indexes pause while the heap is fragmented - for up to an hour on a full ingest - so leave it off
+on a machine with a few gigabytes to spare; linking 1,500 articles then takes a few minutes.
 
 ## 4. Exercise the AI layer without a model
 
@@ -97,17 +128,22 @@ With a real provider configured instead, press **Daily brief** on the home page.
 ## What was validated, and what was not
 
 Validated against a live server built from `mosaik` main (October 2026), with
-`Curiosity.Library` / `Curiosity.FrontEnd*` 26.10:
+`Curiosity.Library` / `Curiosity.FrontEnd*` 26.10, in two sessions:
 
-- connector: dry run and real run over the fixtures; second run fully cached; the real 248-feed
-  directory parsed and fetched (most hosts were blocked by the container's egress policy; the two
-  reachable arXiv feeds ingested for real, falling back to feed text when the article host was
-  blocked);
-- definitions: import, compile, sandbox validation, round-trip byte-identical with the export;
-- sandbox: every mount and command, the report contract refusing a bad file, both templates
-  rendered and published as artifacts, the delegated agent path;
-- front end: home, news sets, feeds, article preview, artifact pane, the report button handoff -
-  with no console errors.
+- connector: dry run and real run over the fixtures, second run fully cached; **four full runs
+  over the real 248-feed directory** with an unrestricted network (235 feeds OK, ~1,560 articles,
+  82% read from the page on the last run), one of them into a fresh workspace;
+- extraction tuned on real pages: ~20 articles spot-checked across newsrooms, trade titles,
+  regulators and subscription feeds; the fixes are in the commit history and `TODO.md`;
+- entity recognition: the five vocabularies, spotters, pipeline and linking, checked by
+  `top_mentions` over the corpus and by reading the articles behind the bad ones;
+- definitions: import into a fresh workspace with no warnings, compile, sandbox validation,
+  round-trip byte-identical with the export;
+- sandbox: every mount and command, `--mentions`, the report contract refusing a bad file, the
+  daily and weekly samples rendered and published, the weekly deck downloaded as an 11-slide
+  `.pptx`, the delegated agent path;
+- front end: home (desk width, phone width, dark theme), news sets with mention chips, feeds,
+  the article page with its mention tabs, the pinned chat page.
 
-Not validated here: report *content* written by a real model (no provider key in the test
-environment), and live extraction quality across the real publishers' pages.
+Not validated: report *content* written by a real model (no provider key in either session), and
+the workspace's LLM-interpreted `search`.

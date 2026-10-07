@@ -20,6 +20,7 @@ CONSTANTS = [
     ("ReportTemplate", "report.html"),
     ("DeckTemplate", "deck.html"),
     ("SampleDaily", "sample-daily.json"),
+    ("SampleWeekly", "sample-weekly.json"),
 ]
 
 

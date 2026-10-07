@@ -50,27 +50,34 @@ public class AviationNewsDesk : ISandbox
     {
         SandboxMount.Lazy("/news", "articles by day as markdown, README.md and a 7-day index.tsv", ListNews, ReadNews),
         SandboxMount.Live("/feeds", "the feed directory: directory.tsv plus one markdown file per feed", ReadFeeds),
-        SandboxMount.Files("/templates", "report templates: report.html, deck.html, the JSON contract in README.md and a sample",
+        SandboxMount.Files("/templates", "report templates: report.html, deck.html, the JSON contract in README.md and a daily and a weekly sample",
             SandboxFile.Text("README.md", TemplatesReadme),
             SandboxFile.Text("report.html", ReportTemplate),
             SandboxFile.Text("deck.html", DeckTemplate),
-            SandboxFile.Text("sample-daily.json", SampleDaily)),
+            SandboxFile.Text("sample-daily.json", SampleDaily), SandboxFile.Text("sample-weekly.json", SampleWeekly)),
         SandboxMount.Scratch("/work", "scratch space for report JSON, notes and drafts"),
     };
 
     public Mosaik.Schema.ArtifactType[] Artifacts => new[] { Mosaik.Schema.ArtifactType.Html, Mosaik.Schema.ArtifactType.Pdf };
 
     public SandboxQueryAccess Query => SandboxQueryAccess.For(
-        N.Article.Type, N.Feed.Type, N.Publisher.Type, N.FeedCategory.Type, N.SourceType.Type, N.Priority.Type, N.Tag.Type).WithMaxNodes(200);
+        N.Article.Type, N.Feed.Type, N.Publisher.Type, N.FeedCategory.Type, N.SourceType.Type, N.Priority.Type, N.Tag.Type,
+        N.Organisation.Type, N.AircraftType.Type, N.EngineType.Type, N.LaunchVehicle.Type, N.Airport.Type).WithMaxNodes(200);
+
+    //The vocabularies entity linking resolves mentions to. An article reaches them over _Mentions,
+    //and they reach their articles over _AppearsIn - both written by the workspace, not the connector.
+    private static readonly string[] EntityTypes = { N.Organisation.Type, N.AircraftType.Type, N.EngineType.Type, N.LaunchVehicle.Type, N.Airport.Type };
 
     public SandboxCommand[] Commands => new[]
     {
         SandboxCommand.Create("news",
             "news [--since 1d|7d|YYYY-MM-DD] [--until YYYY-MM-DD] [--category <text>] [--priority Core|Secondary] [--publisher <text>] "
-          + "[--feed <text>] [--lang <code>] [--grep <text>] [--content page|summary] [--limit N] [--json]: "
+          + "[--feed <text>] [--lang <code>] [--grep <text>] [--mentions <name>] [--content page|summary] [--limit N] [--json]: "
           + "articles newest first, one per line as TSV (published, uid, category, priority, publisher, lang, content, words, title, url) "
           + "or JSON lines with --json. Exact over the whole corpus - use it rather than reading a count off /news. "
-          + "--since defaults to 1d; --grep matches title and excerpt; --content summary lists the ones only known from their feed summary.",
+          + "--since defaults to 1d; --grep matches title and excerpt; --content summary lists the ones only known from their feed summary; "
+          + "--mentions keeps articles that entity linking found naming an organisation, aircraft type, engine type, launch vehicle or airport "
+          + "(exact name first, else every name containing the text: --mentions Boeing, --mentions \"A350\", --mentions Heathrow).",
             call => Task.FromResult(News(call))),
 
         SandboxCommand.Create("article",
@@ -96,8 +103,8 @@ public class AviationNewsDesk : ISandbox
             }),
 
         SandboxCommand.Create("stats",
-            "stats [--since 1d|7d|YYYY-MM-DD] [--until YYYY-MM-DD]: article counts by category, priority, publisher, day and content source, "
-          + "plus feed health (feeds that failed on their last fetch, Core feeds with nothing in the window). The numbers for a report's metrics and charts.",
+            "stats [--since 1d|7d|YYYY-MM-DD] [--until YYYY-MM-DD] [--mentions <name>]: article counts by category, priority, publisher, day and content source, "
+          + "the most-mentioned organisations, aircraft types, engine types, launch vehicles and airports (top_mentions), plus feed health (feeds that failed on their last fetch, Core feeds with nothing in the window). The numbers for a report's metrics and charts.",
             call => Task.FromResult(Stats(call))),
 
         SandboxCommand.Create("render-report",
@@ -106,7 +113,7 @@ public class AviationNewsDesk : ISandbox
           + "the contract in /templates/README.md first and refuses a report with missing sections or sources. Then run: publish <name>.html",
             RenderReportAsync),
 
-        SandboxCommand.Search(new[] { N.Article.Type, N.Feed.Type, N.Publisher.Type }),
+        SandboxCommand.Search(new[] { N.Article.Type, N.Feed.Type, N.Publisher.Type, N.Organisation.Type, N.AircraftType.Type, N.EngineType.Type, N.LaunchVehicle.Type, N.Airport.Type }),
         SandboxCommand.Consult(new[] { N.Article.Type, N.Feed.Type, N.Publisher.Type }),
     };
 
@@ -207,12 +214,22 @@ public class AviationNewsDesk : ISandbox
 
             - `news --since 7d --category Airlines` - exact filters over the whole corpus, not just the index.
             - `article <uid>` - same as reading the file, by uid.
-            - `stats --since 1d` - counts for a report's metrics and charts, and feed health.
+            - `stats --since 1d` - counts for a report's metrics and charts, the most-mentioned entities
+              (`top_mentions`), and feed health.
+            - `news --since 7d --mentions "Boeing 737 MAX"` - the articles entity linking found naming it.
             - `search <words>` / `consult <uid>` - the workspace's own search and reader.
             - `query '...'` - the graph query engine over Article, Feed, Publisher, FeedCategory, SourceType,
-              Priority and Tag.
+              Priority, Tag, Organisation, AircraftType, EngineType, LaunchVehicle and Airport.
 
-            Which companies, programmes and airports an article is about is **not** a column: read the text.
+            ## Mentions
+
+            The workspace spots organisations (airlines, manufacturers, authorities, agencies), aircraft
+            types, engine types, launch vehicles and airports in every article's title and body, from master lists built
+            from Wikidata and OurAirports. `article <uid>` lists them; `--mentions` filters by them.
+
+            They are found by name, so treat them as a lead, not a fact: an article that mentions Boeing
+            is not necessarily about Boeing, and an entity missing from the list may still be in the text.
+            Read the article before you say what it is about.
             """;
     }
 
@@ -338,6 +355,9 @@ public class AviationNewsDesk : ISandbox
 
         if (tags.Count > 0) sb.AppendLine($"- publisher tags: {string.Join(", ", tags)}");
 
+        var mentions = MentionsOf(scope, uid).Select(e => $"{EntityName(e)} ({EntityKind(e)})").ToList();
+        if (mentions.Count > 0) sb.AppendLine($"- mentions: {string.Join("; ", mentions)}");
+
         sb.AppendLine().AppendLine("## Excerpt").AppendLine().AppendLine(node.GetString(N.Article.Excerpt));
         sb.AppendLine().AppendLine("## Body").AppendLine().AppendLine(node.GetString(N.Article.Body));
 
@@ -351,6 +371,8 @@ public class AviationNewsDesk : ISandbox
         var args = Options.Parse(call.Arguments);
 
         if (args.Error is not null) return call.Fail(args.Error);
+
+        if (!args.ResolveMentions(call.Scope, out var mentionError)) return call.Fail(mentionError);
 
         var lookup = FeedLookup.Build(call.Scope);
         var sb = new StringBuilder(args.Json ? "" : "#published\tuid\tcategory\tpriority\tpublisher\tlang\tcontent\twords\ttitle\turl\n");
@@ -383,6 +405,7 @@ public class AviationNewsDesk : ISandbox
                     title = node.GetString(N.Article.Title),
                     url = node.GetString(N.Article.Url),
                     excerpt = node.GetString(N.Article.Excerpt),
+                    mentions = MentionsOf(call.Scope, node.UID).Select(EntityName).ToArray(),
                 }));
             }
             else
@@ -403,8 +426,11 @@ public class AviationNewsDesk : ISandbox
 
         if (args.Error is not null) return call.Fail(args.Error);
 
+        if (!args.ResolveMentions(call.Scope, out var mentionError)) return call.Fail(mentionError);
+
         var lookup = FeedLookup.Build(call.Scope);
         var byCategory = new Dictionary<string, int>();
+        var byMention = new Dictionary<string, int>();
         var byPriority = new Dictionary<string, int>();
         var byPublisher = new Dictionary<string, int>();
         var byDay = new SortedDictionary<string, int>();
@@ -415,7 +441,12 @@ public class AviationNewsDesk : ISandbox
         foreach (var node in Articles(call.Scope, args.From, args.To))
         {
             var feed = lookup.PrimaryFeedOf(call.Scope, node.UID);
+
+            if (!args.Matches(node, feed)) continue;
+
             total++;
+
+            foreach (var entity in MentionsOf(call.Scope, node.UID)) Bump(byMention, EntityKind(entity) + "\t" + EntityName(entity));
 
             Bump(byCategory, feed?.Category ?? "(none)");
             Bump(byPriority, feed?.Priority ?? "(none)");
@@ -438,6 +469,10 @@ public class AviationNewsDesk : ISandbox
         Section(sb, "by_publisher", byPublisher, 15);
         Section(sb, "by_content", byContent);
 
+        //Tab-separated kind and name, so the section reads as three columns: kind, name, articles.
+        sb.AppendLine().AppendLine("## top_mentions");
+        foreach (var (key, n) in byMention.OrderByDescending(kv => kv.Value).ThenBy(kv => kv.Key).Take(30)) sb.AppendLine($"{key}\t{n}");
+
         sb.AppendLine().AppendLine("## by_day");
         foreach (var (day, n) in byDay) sb.AppendLine($"{day}\t{n}");
 
@@ -458,6 +493,31 @@ public class AviationNewsDesk : ISandbox
     }
 
     private static void Bump(Dictionary<string, int> counts, string key) => counts[key ?? ""] = counts.GetValueOrDefault(key ?? "") + 1;
+
+    // ── mentions ─────────────────────────────────────────────────────────────
+
+    private static IEnumerable<ReadOnlyNode> MentionsOf(ToolScope scope, UID128 article) =>
+        scope.Q().StartAt(article).Out(edgeType: E._Mentions).AsEnumerable()
+             .Where(n => EntityTypes.Contains(n.Type))
+             .OrderBy(n => Array.IndexOf(EntityTypes, n.Type)).ThenBy(EntityName);
+
+    private static string EntityName(ReadOnlyNode n) => n.Type switch
+    {
+        _ when n.Type == N.Organisation.Type => n.GetString(N.Organisation.Name),
+        _ when n.Type == N.AircraftType.Type => n.GetString(N.AircraftType.Name),
+        _ when n.Type == N.EngineType.Type => n.GetString(N.EngineType.Name),
+        _ when n.Type == N.LaunchVehicle.Type => n.GetString(N.LaunchVehicle.Name),
+        _ => n.GetString(N.Airport.Name),
+    };
+
+    private static string EntityKind(ReadOnlyNode n) => n.Type switch
+    {
+        _ when n.Type == N.Organisation.Type => n.GetString(N.Organisation.Kind),
+        _ when n.Type == N.AircraftType.Type => "Aircraft type",
+        _ when n.Type == N.EngineType.Type => "Engine type",
+        _ when n.Type == N.LaunchVehicle.Type => "Launch vehicle",
+        _ => "Airport",
+    };
 
     // ── render-report ────────────────────────────────────────────────────────
 
@@ -684,6 +744,8 @@ public class AviationNewsDesk : ISandbox
         public string Lang { get; private set; }
         public string Grep { get; private set; }
         public string Content { get; private set; }
+        public string Mentions { get; private set; }
+        public HashSet<UID128> MentionedArticles { get; private set; }
         public int Limit { get; private set; } = 200;
         public bool Json { get; private set; }
         public string Error { get; private set; }
@@ -707,6 +769,7 @@ public class AviationNewsDesk : ISandbox
                     case "--lang": o.Lang = Next(); break;
                     case "--grep": o.Grep = Next(); break;
                     case "--content": o.Content = Next(); break;
+                    case "--mentions": o.Mentions = Next(); break;
                     case "--json": o.Json = true; break;
                     case "--limit": o.Limit = int.TryParse(Next(), out var n) ? Math.Clamp(n, 1, MAX_NEWS_ROWS) : 200; break;
                     default: o.Error = $"unknown option '{argv[i]}' - see `help news`"; break;
@@ -731,8 +794,34 @@ public class AviationNewsDesk : ISandbox
             return now;
         }
 
+        /// <summary>
+        /// --mentions as the set of articles its entities appear in: the entities named exactly
+        /// that when there are any, otherwise every one whose name contains the text.
+        /// </summary>
+        public bool ResolveMentions(ToolScope scope, out string error)
+        {
+            error = null;
+
+            if (Mentions is null) return true;
+
+            var all = EntityTypes.SelectMany(t => scope.Q().StartAt(t).AsEnumerable()).ToList();
+            var exact = all.Where(e => string.Equals(EntityName(e), Mentions, StringComparison.OrdinalIgnoreCase)).ToList();
+            var entities = exact.Count > 0 ? exact : all.Where(e => EntityName(e).Contains(Mentions, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            if (entities.Count == 0)
+            {
+                error = $"no organisation, aircraft type, engine type, launch vehicle or airport is named like '{Mentions}' - try a shorter name";
+                return false;
+            }
+
+            MentionedArticles = new HashSet<UID128>(entities.SelectMany(e => scope.Q().StartAt(e.UID).Out(N.Article.Type, E._AppearsIn).AsUIDEnumerable()));
+            return true;
+        }
+
         public bool Matches(ReadOnlyNode node, FeedInfo feed)
         {
+            if (MentionedArticles is not null && !MentionedArticles.Contains(node.UID)) return false;
+
             static bool Has(string value, string filter) => filter is null || (value ?? "").Contains(filter, StringComparison.OrdinalIgnoreCase);
 
             if (!Has(feed?.Category, Category) || !Has(feed?.Publisher, Publisher) || !Has(feed?.Name, Feed)) return false;
@@ -765,7 +854,9 @@ Two templates, one data file. You write the report **once**, as JSON, and render
   with PptxGenJS and hands it over from a download button: title, summary + KPIs, native charts,
   one slide per section (first four items), watchlist table, sources appendix.
 
-Both write to `/artifacts/`; then `publish <name>.html`. `sample-daily.json` is a complete example.
+Both write to `/artifacts/`; then `publish <name>.html`. `sample-daily.json` (Tuesday 6 October 2026) and
+`sample-weekly.json` (the week to that day) are complete examples, written from real articles in the
+corpus: every figure in them is quoted from the article it cites.
 Never edit the HTML templates for one report - everything that varies is in the JSON.
 
 ## The JSON contract
@@ -937,7 +1028,8 @@ without a source URL, and says which.
     const box = el('div', 'chart');
     add(box, el('h3', null, title));
 
-    const labelW = 150, barW = 180, rowH = 22, pad = 6, valueW = 30;
+    // ~6px per character at 11px: a 24-character label needs ~145px plus the gap before the bar.
+    const labelW = 165, barW = 170, rowH = 22, pad = 6, valueW = 30;
     const w = labelW + barW + valueW, h = rows.length * rowH + pad * 2;
     const max = Math.max(1, ...rows.map(r => Number(r.value) || 0));
     const ns = 'http://www.w3.org/2000/svg';
@@ -951,7 +1043,7 @@ without a source URL, and says which.
       const v = Number(r.value) || 0;
       const label = document.createElementNS(ns, 'text');
       label.setAttribute('x', labelW - 8); label.setAttribute('y', y + rowH / 2 + 4); label.setAttribute('text-anchor', 'end');
-      label.textContent = String(r.label).length > 26 ? String(r.label).slice(0, 25) + '…' : String(r.label);
+      label.textContent = String(r.label).length > 24 ? String(r.label).slice(0, 23) + '…' : String(r.label);
       const rect = document.createElementNS(ns, 'rect');
       rect.setAttribute('x', labelW); rect.setAttribute('y', y + 4); rect.setAttribute('height', rowH - 8);
       rect.setAttribute('width', Math.max(2, barW * v / max)); rect.setAttribute('rx', 3);
@@ -1319,99 +1411,423 @@ without a source URL, and says which.
 {
   "kind": "daily",
   "title": "Aviation Daily Brief",
-  "period": { "from": "2026-10-05", "to": "2026-10-06", "label": "Tuesday 6 October 2026" },
-  "generatedAt": "2026-10-06 18:00 UTC",
+  "fileName": "aviation-daily-2026-10-06",
+  "period": { "from": "2026-10-06", "to": "2026-10-06", "label": "Tuesday 6 October 2026" },
+  "generatedAt": "2026-10-07 03:30 UTC",
   "audience": "Market intelligence desk",
-  "headline": "An emergency directive on HX-35 fan blades lands on an engine supply chain that is already the narrowbody market's tightest constraint.",
+  "headline": "The FAA has ruled the 737 MAX flight-computer glitch not a safety concern, putting MAX 10 certification back on track for Ryanair and Alaska.",
   "summary": [
-    "Regulator mandates ultrasonic fan blade inspections on about 380 HX-35 engines within 50 cycles; expect added pressure on shop capacity already running at ~125-day turnarounds.",
-    "Northwind Air firms 24 Meridian M-220s (+12 options) to upgauge regional-jet routes from 2028; the same engine type is on the order.",
-    "Meridian lifts M-220 output to 9/month and keeps a 12/month target for end-2027, naming titanium forgings as the binding risk.",
-    "Q3 traffic shows transatlantic fares falling for the first time since 2024 while domestic unit revenue keeps rising on constrained capacity."
+    "An FAA review board found the U14 flight-management software issue on some 737 MAX jets not safety-critical; Leeham now sees MAX 10 certification back on track.",
+    "Air cargo is heading into peak season on rising rates: Hong Kong-North America averaged $7.02/kg in September, 31% up on a year earlier, with jet fuel more than 100% higher year on year.",
+    "airBaltic plans 500-700 job cuts, a smaller A220-300 fleet and more ACMI capacity under a new business plan.",
+    "Boeing's $14.7 billion seeker contract from Lockheed Martin funds a seven-year plan to triple PAC-3 MSE seeker production."
   ],
   "metrics": [
-    { "label": "Articles reviewed", "value": "11", "note": "last 24 h" },
-    { "label": "Feeds with news", "value": "6", "note": "of 7 monitored" },
-    { "label": "Engines under the new AD", "value": "~380", "note": "HX-35, per the directive" },
-    { "label": "M-220 backlog", "value": "1,140", "note": "aircraft, per Meridian" }
+    { "label": "Articles reviewed", "value": "439", "note": "6 Oct, UTC day" },
+    { "label": "Feeds with news", "value": "94", "note": "of 248 monitored" },
+    { "label": "Publishers", "value": "69" },
+    { "label": "Summary only", "value": "30", "note": "not read beyond the feed" }
   ],
   "charts": {
     "byCategory": [
-      { "label": "Regulators, public agencies and R&D", "value": 2 },
-      { "label": "Airlines and commercial aviation", "value": 2 },
-      { "label": "MRO and aviation supply chain", "value": 2 },
-      { "label": "Manufacturers and company announcements", "value": 1 },
-      { "label": "Airline company announcements", "value": 1 },
-      { "label": "Airports and air traffic management", "value": 1 }
+      { "label": "Regulators, public agencies and R&D", "value": 139 },
+      { "label": "Defense aviation and aerospace", "value": 75 },
+      { "label": "Aviation industry and OEM analysis", "value": 56 },
+      { "label": "Space and satellite industry", "value": 34 },
+      { "label": "Regional aviation", "value": 28 },
+      { "label": "Cargo and logistics", "value": 25 },
+      { "label": "Business aviation and rotorcraft", "value": 21 },
+      { "label": "Airlines and commercial aviation", "value": 18 }
     ],
     "byPublisher": [
-      { "label": "Aero Trade Weekly", "value": 3 },
-      { "label": "European Air Safety Bulletin", "value": 2 },
-      { "label": "MRO & Supply Chain Review", "value": 2 },
-      { "label": "Northwind Air", "value": 1 },
-      { "label": "Meridian Aerostructures", "value": 1 }
+      { "label": "arXiv instrumentation for astrophysics", "value": 93 },
+      { "label": "Aviation Week", "value": 40 },
+      { "label": "NASA Technology Transfer", "value": 12 },
+      { "label": "AeroTime", "value": 11 },
+      { "label": "Air Cargo Week", "value": 11 },
+      { "label": "Air Journal", "value": 11 },
+      { "label": "Aviation24.be", "value": 10 },
+      { "label": "The Loadstar", "value": 10 }
     ]
   },
   "sections": [
     {
       "title": "Safety & regulation",
-      "takeaway": "One emergency directive with direct fleet and MRO consequences.",
+      "takeaway": "The MAX 10's late software scare has been closed by the regulator itself.",
       "items": [
         {
-          "headline": "Emergency AD: repeat ultrasonic inspections on HX-35 fan blades",
-          "so_what": "~380 engines must be inspected within 50 cycles and every 400 thereafter; six hours per on-wing check adds overnight maintenance load for M-220 operators.",
-          "detail": "Root cause traced so far to a shot-peening deviation at a sub-tier supplier; blade replacement expected as terminating action.",
-          "signal": "negative",
-          "sources": [ { "title": "Airworthiness directive mandates repeat fan blade inspections on HX-35 engines", "publisher": "European Air Safety Bulletin", "url": "http://127.0.0.1:8099/articles/ad-hx35-fan-blade-inspection", "published": "2026-10-06" } ]
+          "headline": "FAA board clears 737 MAX flight-computer software issue",
+          "so_what": "With the U14 flight-management glitch judged not safety-critical, the MAX 10 can join the MAX 7 in clearing its last regulatory hurdle - capacity Ryanair and Alaska Airlines have on order.",
+          "detail": "The glitch can occur when pilots load a new flight plan for a go-around. The FAA's Corrective Action Review Board concluded on October 2 that pilots retain full control and the indications are clear; Alaska had expected certification by the end of September.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Boeing's Path to Max 10 Certification Looks Clear Again", "publisher": "Leeham News and Analysis", "url": "https://leehamnews.com/2026/10/06/max-10-certification-unlikely-to-be-significantly-delayed", "published": "2026-10-06", "uid": "W7HPkoQtnz7JB13p2y7cCf" }
+          ]
         }
       ]
     },
     {
       "title": "Airlines",
-      "takeaway": "Upgauging and long-thin international routes on narrowbodies.",
+      "takeaway": "Premium capacity up at British Airways, headcount down at airBaltic, and cargo yields rising into the peak.",
       "items": [
         {
-          "headline": "Northwind Air firms 24 Meridian M-220s, options for 12 more",
-          "so_what": "Replaces 31 regional jets on dense domestic routes from Q2 2028; capex guidance unchanged.",
-          "detail": "HX-35 engines selected with a ten-year maintenance agreement - now exposed to the new fan blade directive.",
+          "headline": "British Airways turns 75% of its A380 seats premium",
+          "so_what": "All 12 BA A380s are being refitted with more than 35,000 parts each, shifting the type towards premium cabins as part of a £7 billion transformation plan.",
+          "detail": "BA says punctuality is at levels not seen since 2012, with Q3 2026 its best ever departure punctuality within 15 minutes at Heathrow.",
           "signal": "positive",
-          "sources": [ { "title": "Northwind Air firms up order for 24 Meridian M-220 aircraft", "publisher": "Northwind Air", "url": "http://127.0.0.1:8099/articles/northwind-orders-24-m220", "published": "2026-10-06" } ]
+          "sources": [
+            { "title": "Fewer seats, more luxury: step into the new British Airways A380 interiors", "publisher": "Aircraft Interiors International", "url": "https://www.aircraftinteriorsinternational.com/news/airline-news/fewer-seats-more-luxury-step-into-the-new-british-airways-a380-interiors.html", "published": "2026-10-06", "uid": "D9KCo6wuBtgR6JY3zQ1XSY" }
+          ]
         },
         {
-          "headline": "Transatlantic yields soften as capacity returns",
-          "so_what": "Load factors held near 87% but fares fell year on year; expect off-peak transatlantic trims and redeployment to leisure markets.",
+          "headline": "airBaltic to cut 500-700 roles and shrink its A220-300 fleet",
+          "so_what": "500-700 of about 3,000 staff go as the carrier leans on year-round ACMI partners instead of its own aircraft - less Baltic capacity under its own operation.",
+          "detail": "Unions are being consulted on reduced workloads for pilots and cabin crew; the new structures for the rest of the business are due by mid-October.",
+          "signal": "negative",
+          "sources": [
+            { "title": "airBaltic plans up to 700 job cuts as it reshapes business", "publisher": "AviTrader", "url": "https://avitrader.com/2026/10/06/airbaltic-plans-up-to-700-job-cuts-as-it-reshapes-business", "published": "2026-10-06", "uid": "1Agsr2EtZ85K7NZU9EAiXF" }
+          ]
+        },
+        {
+          "headline": "Air freight rates edge up into the fourth-quarter peak",
+          "so_what": "Hong Kong-North America averaged $7.02/kg in September (31% up year on year) and Hong Kong-Europe $4.80/kg (up 8.8%); the Baltic Air Freight Index jumped 5% in the week to October 5.",
+          "detail": "TAC Index attributes the year-on-year rise to jet fuel prices more than 100% higher and to data-centre demand to the US; the EU's €3 charge on low-value parcels is weighing on Asia-Europe volumes.",
           "signal": "watch",
-          "sources": [ { "title": "Q3 traffic: transatlantic yields soften as capacity returns", "publisher": "Aero Trade Weekly", "url": "http://127.0.0.1:8099/articles/q3-traffic-transatlantic-yields-soften", "published": "2026-10-05" } ]
+          "sources": [
+            { "title": "Airfreight rates edge up in September", "publisher": "Air Cargo News", "url": "https://www.aircargonews.net/data/2026/10/airfreight-rates-edge-up-in-september", "published": "2026-10-06", "uid": "ESPtNbyoLwxhy4paA3Fgdg" }
+          ]
+        },
+        {
+          "headline": "Delta recovers from a global technology issue",
+          "so_what": "Delta says systems are stabilising after a limited issue with data connectivity to some systems; the scale of any disruption is not stated.",
+          "signal": "watch",
+          "sources": [
+            { "title": "Update on global technology issue", "publisher": "Delta newsroom", "url": "https://news.delta.com/update-global-technology-issue", "published": "2026-10-06", "uid": "G1VcFQuVKJcQWBeGaSUvqJ", "note": "summary only" }
+          ]
         }
       ]
     },
     {
       "title": "Manufacturers & supply chain",
-      "takeaway": "Rates are rising, but forgings and engine hot sections still set the pace.",
+      "takeaway": "A new regional-aircraft assembly line opens in Germany.",
       "items": [
         {
-          "headline": "Meridian lifts M-220 production to 9 a month",
-          "so_what": "Second final assembly line open; 12/month target for end-2027 reaffirmed with titanium forgings as the main risk.",
+          "headline": "Deutsche Aircraft opens D328eco final assembly in Leipzig",
+          "so_what": "The more than €100 million site is designed for up to 48 aircraft a year and moves the D328eco from development to serial production.",
           "signal": "positive",
-          "sources": [ { "title": "Meridian lifts M-220 production to nine aircraft a month", "publisher": "Meridian Aerostructures", "url": "http://127.0.0.1:8099/articles/meridian-raises-m220-rate", "published": "2026-10-05" } ]
+          "sources": [
+            { "title": "Deutsche Aircraft opens Leipzig plant for D328eco production", "publisher": "AviTrader", "url": "https://avitrader.com/2026/10/06/deutsche-aircraft-opens-leipzig-plant-for-d328eco-production", "published": "2026-10-06", "uid": "HpjHUgFx4i5io6J9udj7ey" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Defence & space",
+      "takeaway": "Missile-defence demand reaches the supply chain, and Northrop flies its own collaborative combat aircraft.",
+      "items": [
+        {
+          "headline": "Boeing wins $14.7 billion to triple PAC-3 MSE seeker output",
+          "so_what": "A seven-year plan to triple seeker production for Lockheed Martin's Patriot interceptor, after seeker deliveries already rose more than 30% in 2025.",
+          "detail": "Work starts while final terms, including pricing, are negotiated; Boeing has invested more than $200 million in its Huntsville seeker production since 2024.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Boeing wins $14.7 billion contract to triple Patriot missile seeker production", "publisher": "AeroTime", "url": "https://www.aerotime.aero/articles/boeing-patriot-missile-seeker-contract-production", "published": "2026-10-06", "uid": "R5xgeRDvunc9KwgCNDCS76" }
+          ]
         },
         {
-          "headline": "Engine shop turnaround passes 120 days",
-          "so_what": "HPT blades and vanes are the most common hold; spare engine lease rates up ~40% in a year.",
-          "signal": "negative",
-          "sources": [ { "title": "Engine shop turnaround stretches past 120 days as parts shortages bite", "publisher": "MRO & Supply Chain Review", "url": "http://127.0.0.1:8099/articles/engine-shop-visit-backlog-120-days", "published": "2026-10-05" } ]
+          "headline": "Northrop's YFQ-48A Talon Blue flies fully autonomously",
+          "so_what": "An internally funded CCA flying taxi to landing on its own, as the US Air Force targets 500 autonomous aircraft in service by 2032 - though Northrop has no CCA production contract yet.",
+          "signal": "watch",
+          "sources": [
+            { "title": "Northrop Grumman's YFQ-48A CCA completes first fully autonomous flight", "publisher": "Defense News", "url": "https://www.defensenews.com/industry/techwatch/2026/10/06/northrop-grummans-yfq-48a-cca-completes-first-fully-autonomous-flight", "published": "2026-10-06", "uid": "TxMQ7dRXPrwLXkac2JB1cX" }
+          ]
+        },
+        {
+          "headline": "Morocco's first F-16 Block 72 flies; first full-rate MH-139A order",
+          "so_what": "Two US programmes advance: Morocco's first F-16 Block 72 is in flight test towards first delivery, and the MH-139A's first four full-rate helicopters take the total under contract to 42.",
+          "detail": "Boeing has delivered 27 MH-139As. In Morocco, an MRO facility of more than 8,000 m² at Benslimane, with Maintenance Aero Maroc, is to service C-130s and later F-16s.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Lockheed Martin Announces First Flight of Morocco's First F 16 Block 72", "publisher": "Lockheed Martin", "url": "https://news.lockheedmartin.com/2026-10-06-Lockheed-Martin-Announces-First-Flight-of-Moroccos-First-F-16-Block-72", "published": "2026-10-06", "uid": "DkkNeUBiiovhzgVqpkeoSp" },
+            { "title": "Boeing wins first full-rate MH-139A Grey Wolf order", "publisher": "AviTrader", "url": "https://avitrader.com/2026/10/06/boeing-wins-first-full-rate-mh-139a-grey-wolf-order", "published": "2026-10-06", "uid": "SqxB9YUCkJkVemCYY6Zwd2" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sustainability",
+      "takeaway": "Airlines want CORSIA, not the EU ETS, to be the global carbon framework.",
+      "items": [
+        {
+          "headline": "IATA marks ten years of CORSIA as the EU reviews its ETS",
+          "so_what": "More than 130 countries take part and CORSIA should have mitigated about 200 million tonnes of CO2 by year-end; IATA wants the EU's ETS review - which considers covering destinations within 5,000 km - to reinforce CORSIA, not overlap it.",
+          "detail": "From 2027 CORSIA is estimated to cover about 85% of global emissions, with up to $120 billion in climate finance over the life of the scheme.",
+          "signal": "watch",
+          "sources": [
+            { "title": "Ten Years on from CORSIA Agreement, Governments Must Strengthen the Global Framework for Aviation Emissions", "publisher": "IATA", "url": "https://www.iata.org/en/pressroom/2026-releases/10-06-ten-years-corsia-governments-strengthen-framework-aviation-emissions", "published": "2026-10-06", "uid": "QC3eHQBHBRc5xwWSQsnJwg" }
+          ]
         }
       ]
     }
   ],
   "watchlist": [
-    { "item": "HX-35 AD root cause", "why": "Determines whether blade replacement becomes a fleet-wide campaign.", "next": "Directive review" },
-    { "item": "Northwind capital markets day", "why": "Updated fleet plan and M-220 financing mix.", "next": "November" },
-    { "item": "Dublin slot confirmation", "why": "Gates Northwind's first transatlantic schedule.", "next": "Summer 2027 slot conference" }
+    { "item": "737 MAX 10 amended type certificate", "why": "Releases MAX 10 deliveries to Ryanair and Alaska Airlines.", "next": "FAA decision, no date given" },
+    { "item": "airBaltic restructuring", "why": "How much capacity moves to ACMI partners.", "next": "New structures by mid-October" },
+    { "item": "Air cargo peak season", "why": "Whether rates keep pace with jet fuel.", "next": "October TAC Index" },
+    { "item": "EU ETS review", "why": "A 5,000 km scope would overlap CORSIA on long-haul routes.", "next": "EU review in progress" }
   ],
   "coverage": {
-    "articles": 11, "feeds": 6, "publishers": 6, "summaryOnly": 1,
-    "notes": "Aero Trade Weekly's analysis piece is behind a subscription; it is cited from its feed summary only."
+    "articles": 439,
+    "feeds": 94,
+    "publishers": 69,
+    "summaryOnly": 30,
+    "notes": "12 feeds failed on their last fetch: the ten Airbus newsroom feeds answer with a bot check, and Cargo Facts and Air Cargo Next refuse the connector. 93 of the 439 articles are arXiv preprints and were not considered. Delta's update is cited from its feed summary only."
+  }
+}
+""";
+
+    private const string SampleWeekly = """
+{
+  "kind": "weekly",
+  "title": "Aviation Weekly Market Report",
+  "fileName": "aviation-weekly-2026-10-06",
+  "period": { "from": "2026-09-30", "to": "2026-10-06", "label": "Week to Tuesday 6 October 2026" },
+  "generatedAt": "2026-10-07 03:45 UTC",
+  "audience": "Market intelligence desk",
+  "headline": "Supply-side risk eased for both OEMs: labour deals ratified at Airbus Spain and Boeing, and the FAA closed the 737 MAX software scare - while Middle East airspace risk widened.",
+  "summary": [
+    "Airbus workers in Spain ended months of strikes (76.76% backed the deal) and SPEEA members ratified four-year contracts with Boeing on October 1.",
+    "An FAA review board found the 737 MAX U14 software issue not safety-critical on October 2, putting MAX 10 certification back on track for customers such as Ryanair and Alaska.",
+    "Houthis told airlines to avoid Saudi airspace on October 5, after EASA had already advised avoiding part of the Jeddah FIR on September 30.",
+    "Air cargo enters peak season on fuel-driven rates: Hong Kong-North America averaged $7.02/kg in September, 31% up year on year, with IATA putting August jet fuel 79.2% above a year earlier.",
+    "AerCap signed 85 leases and bought 20 737 MAX in Q3, while KLM took its first A350-900 and British Airways turned 75% of its A380 seats premium."
+  ],
+  "metrics": [
+    { "label": "Articles reviewed", "value": "1,227", "note": "30 Sep - 6 Oct" },
+    { "label": "Feeds with news", "value": "156", "note": "of 248 monitored" },
+    { "label": "Publishers", "value": "90" },
+    { "label": "Summary only", "value": "76", "note": "not read beyond the feed" }
+  ],
+  "charts": {
+    "byCategory": [
+      { "label": "Regulators, public agencies and R&D", "value": 321 },
+      { "label": "Defense aviation and aerospace", "value": 293 },
+      { "label": "Space and satellite industry", "value": 121 },
+      { "label": "Aviation industry and OEM analysis", "value": 116 },
+      { "label": "MRO and aviation supply chain", "value": 79 },
+      { "label": "Regional aviation", "value": 75 },
+      { "label": "Drones and advanced air mobility", "value": 53 },
+      { "label": "Cargo and logistics", "value": 50 }
+    ],
+    "byDay": [
+      { "label": "2026-09-30", "value": 125 },
+      { "label": "2026-10-01", "value": 162 },
+      { "label": "2026-10-02", "value": 180 },
+      { "label": "2026-10-03", "value": 29 },
+      { "label": "2026-10-04", "value": 47 },
+      { "label": "2026-10-05", "value": 245 },
+      { "label": "2026-10-06", "value": 439 }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Safety & regulation",
+      "takeaway": "One certification risk closed; one airspace risk opened.",
+      "items": [
+        {
+          "headline": "FAA board clears 737 MAX flight-computer software issue",
+          "so_what": "With the U14 glitch judged not safety-critical, the MAX 10 can join the MAX 7 in clearing its last regulatory hurdle - capacity Ryanair and Alaska Airlines have on order.",
+          "detail": "The FAA's Corrective Action Review Board concluded on October 2 that pilots retain full control and the indications are clear.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Boeing's Path to Max 10 Certification Looks Clear Again", "publisher": "Leeham News and Analysis", "url": "https://leehamnews.com/2026/10/06/max-10-certification-unlikely-to-be-significantly-delayed", "published": "2026-10-06", "uid": "W7HPkoQtnz7JB13p2y7cCf" }
+          ]
+        },
+        {
+          "headline": "Houthis warn airlines off Saudi airspace",
+          "so_what": "Adds Saudi skies to the Middle East routes carriers must plan around, on top of EASA's September 30 advice to avoid part of the Jeddah FIR at all altitudes.",
+          "detail": "The warning named no airports, routes or timetable. EASA still recommends against flights over Iran and Jordan at any altitude.",
+          "signal": "negative",
+          "sources": [
+            { "title": "Houthis warn airlines to avoid Saudi airspace as Yemen conflict escalates", "publisher": "AeroTime", "url": "https://www.aerotime.aero/articles/houthis-airlines-saudi-airspace-warning", "published": "2026-10-05", "uid": "4Cf8mcCZoaf2quGHZM3Mfw" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Airlines",
+      "takeaway": "Premium long-haul growth at the network carriers, retrenchment in the Baltics, and cargo yields rising into the peak.",
+      "items": [
+        {
+          "headline": "British Airways turns 75% of its A380 seats premium",
+          "so_what": "All 12 BA A380s are being refitted with more than 35,000 parts each as part of a £7 billion transformation plan.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Fewer seats, more luxury: step into the new British Airways A380 interiors", "publisher": "Aircraft Interiors International", "url": "https://www.aircraftinteriorsinternational.com/news/airline-news/fewer-seats-more-luxury-step-into-the-new-british-airways-a380-interiors.html", "published": "2026-10-06", "uid": "D9KCo6wuBtgR6JY3zQ1XSY" }
+          ]
+        },
+        {
+          "headline": "KLM takes its first A350-900",
+          "so_what": "331 seats in three classes, including 34 business suites, for long-haul routes from Schiphol such as Toronto - as KLM continues renewing its long-haul fleet.",
+          "signal": "positive",
+          "sources": [
+            { "title": "KLM takes delivery of first A350-900", "publisher": "AviTrader", "url": "https://avitrader.com/2026/10/05/klm-takes-first-a350-900", "published": "2026-10-05", "uid": "9bNALaj2GXigkLNUEsJYsS" }
+          ]
+        },
+        {
+          "headline": "Delta-LATAM joint venture up 31% in capacity in four years",
+          "so_what": "Combined capacity rose about 31% in 2026 compared with 2023, across 28 joint routes and 17.4 million customers since October 2022.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Delta and LATAM mark four years of Joint Venture with 31% increase in capacity and 17.4 million customers carried between North and South America", "publisher": "Delta newsroom", "url": "https://news.delta.com/delta-and-latam-mark-four-years-joint-venture-31-increase-capacity-and-174-million-customers", "published": "2026-10-05", "uid": "JssrFRCZAm6fp5mabYkFnY" }
+          ]
+        },
+        {
+          "headline": "airBaltic to cut 500-700 roles and shrink its A220-300 fleet",
+          "so_what": "500-700 of about 3,000 staff go as the carrier leans on year-round ACMI partners instead of its own aircraft.",
+          "signal": "negative",
+          "sources": [
+            { "title": "airBaltic plans up to 700 job cuts as it reshapes business", "publisher": "AviTrader", "url": "https://avitrader.com/2026/10/06/airbaltic-plans-up-to-700-job-cuts-as-it-reshapes-business", "published": "2026-10-06", "uid": "1Agsr2EtZ85K7NZU9EAiXF" }
+          ]
+        },
+        {
+          "headline": "Air cargo heads into peak on fuel-driven rates",
+          "so_what": "Hong Kong-North America averaged $7.02/kg in September (31% up year on year); Cirium finds no major hub has run dry since the Strait of Hormuz closed, but smaller airports have.",
+          "detail": "IATA put August jet fuel 79.2% above a year earlier and demand up 4.4%. CH Robinson warns that if freighter capacity follows technology demand to the US, Europe-bound shippers will have fewer options.",
+          "signal": "watch",
+          "sources": [
+            { "title": "Airfreight rates edge up in September", "publisher": "Air Cargo News", "url": "https://www.aircargonews.net/data/2026/10/airfreight-rates-edge-up-in-september", "published": "2026-10-06", "uid": "ESPtNbyoLwxhy4paA3Fgdg" },
+            { "title": "Major hubs unaffected by jet fuel supply issues", "publisher": "Air Cargo News", "url": "https://www.aircargonews.net/business/2026/10/major-hubs-unaffected-by-jet-fuel-supply-issues", "published": "2026-10-05", "uid": "F85uW33zAYHGb1WdKmH7sF" },
+            { "title": "Peak season pressure to develop unevenly across origins and cargo types", "publisher": "Air Cargo News", "url": "https://www.aircargonews.net/freight-forwarder/2026/10/peak-season-pressure-to-develop-unevenly-across-origins-and-cargo-types", "published": "2026-10-05", "uid": "GE21uAZewnrJ9SQ1iCSAHC" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Manufacturers & supply chain",
+      "takeaway": "Labour peace at both OEMs and new final assembly capacity in Germany, against a narrowbody backlog the duopoly still owns.",
+      "items": [
+        {
+          "headline": "Airbus Spain and Boeing's SPEEA engineers ratify new contracts",
+          "so_what": "Removes the risk of strikes deepening production problems at both manufacturers: 76.76% of voting Airbus staff in Spain backed the deal, and SPEEA ratified Boeing's four-year offers.",
+          "detail": "Airbus Spain staff had begun an indefinite strike on August 25; Airbus has more than 14,000 staff in Spain.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Relief for both Airbus and Boeing as thousands of workers back new contracts", "publisher": "AeroTime", "url": "https://www.aerotime.aero/articles/airbus-boeing-workers-vote-new-contract-proposals", "published": "2026-10-02", "uid": "fzdZkH71Qu8jUTyJj77hBC" }
+          ]
+        },
+        {
+          "headline": "Deutsche Aircraft opens D328eco final assembly in Leipzig",
+          "so_what": "The more than €100 million site is designed for up to 48 aircraft a year and moves the D328eco into serial production.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Deutsche Aircraft opens Leipzig plant for D328eco production", "publisher": "AviTrader", "url": "https://avitrader.com/2026/10/06/deutsche-aircraft-opens-leipzig-plant-for-d328eco-production", "published": "2026-10-06", "uid": "HpjHUgFx4i5io6J9udj7ey" }
+          ]
+        },
+        {
+          "headline": "Narrowbody backlog of 13,500: Airbus 56%, Boeing 36%",
+          "so_what": "Airbus holds 56% of the global backlog of latest-generation narrowbodies and Boeing 36%, the context for Leeham's look at Comac's 1,100-aircraft backlog.",
+          "detail": "Leeham counts orders for over 20,500 of the newest-generation narrowbodies, about 7,000 delivered. The analysis itself is behind a subscription; only the free opening was read.",
+          "signal": "neutral",
+          "sources": [
+            { "title": "About That 1,100-Aircraft Comac Backlog", "publisher": "Leeham News and Analysis", "url": "https://leehamnews.com/2026/10/05/about-that-1100-aircraft-comac-backlog", "published": "2026-10-05", "uid": "2UiPFMpPBicLj8wdY6g1X2", "note": "subscription; opening paragraphs only" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Finance & leasing",
+      "takeaway": "The largest lessor kept recycling its portfolio into new-technology narrowbodies, and a Turkish low-cost carrier closed a European acquisition.",
+      "items": [
+        {
+          "headline": "AerCap signs 85 leases and buys 20 737 MAX in Q3",
+          "so_what": "Purchases of 32 aircraft included eight A320neo-family jets and 20 737 MAX, while 65 aircraft were sold - and about $783 million went on share buybacks.",
+          "detail": "Leases covered 16 wide-bodies, 45 narrow-bodies, 13 engines and 11 helicopters; financing transactions came to about $900 million.",
+          "signal": "positive",
+          "sources": [
+            { "title": "AerCap reports strong Q3 transactions", "publisher": "AviTrader", "url": "https://avitrader.com/2026/10/05/aercap-reports-strong-q3-transactions", "published": "2026-10-05", "uid": "HmjDhX17bBuig1tf5Bbhgy" }
+          ]
+        },
+        {
+          "headline": "Pegasus completes its takeover of Smartwings",
+          "so_what": "The Turkish carrier now controls the Czech Republic's largest airline group, including the CSA Czech Airlines brand, after giving up some Prague-Antalya slots to win approval.",
+          "detail": "Pegasus had offered €154 million for 100% of the group in December 2025.",
+          "signal": "neutral",
+          "sources": [
+            { "title": "Pegasus Airlines completes its acquisition of Czech group Smartwings", "publisher": "AeroTime", "url": "https://www.aerotime.aero/articles/pegasus-airlines-completes-its-acquisition-of-czech-group-smartwings", "published": "2026-10-02", "uid": "TQ9nNoByv8QC9b3V73kdxt" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Defence & space",
+      "takeaway": "Missile-defence and fighter demand is reaching production lines, and India's transport competition is shaping industrial bids.",
+      "items": [
+        {
+          "headline": "Boeing wins $14.7 billion to triple PAC-3 MSE seeker output",
+          "so_what": "A seven-year plan to triple seeker production for Lockheed Martin's Patriot interceptor, after seeker deliveries already rose more than 30% in 2025.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Boeing wins $14.7 billion contract to triple Patriot missile seeker production", "publisher": "AeroTime", "url": "https://www.aerotime.aero/articles/boeing-patriot-missile-seeker-contract-production", "published": "2026-10-06", "uid": "R5xgeRDvunc9KwgCNDCS76" }
+          ]
+        },
+        {
+          "headline": "F-16 deliveries move: Taiwan's first Block 70s, Morocco's first Block 72 flies",
+          "so_what": "Taiwan received the first two of 66 Block 70s - deliveries were due to begin in 2023 and were held up by the F-16 line's relocation, supply-chain and software problems; Morocco's first Block 72 is in flight test.",
+          "detail": "More Taiwanese jets are due before the end of 2026 and the rest in 2027-2028; the two delivered arrived without their Viper Shield electronic-warfare systems.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Taiwan receives first two of 66 F-16V Block 70 jets amid rising Chinese pressure", "publisher": "AeroTime", "url": "https://www.aerotime.aero/articles/taiwan-receives-first-two-of-66-f-16v-block-70-jets-amid-rising-chinese-pressure", "published": "2026-10-02", "uid": "NTxzNh8KmDbaSrZQ3DzUb3" },
+            { "title": "Lockheed Martin Announces First Flight of Morocco's First F 16 Block 72", "publisher": "Lockheed Martin", "url": "https://news.lockheedmartin.com/2026-10-06-Lockheed-Martin-Announces-First-Flight-of-Moroccos-First-F-16-Block-72", "published": "2026-10-06", "uid": "DkkNeUBiiovhzgVqpkeoSp" }
+          ]
+        },
+        {
+          "headline": "Embraer and Mahindra pick Nagpur for a C-390 line",
+          "so_what": "Positions the C-390 against Lockheed Martin and Tata's C-130J-30 for India's 60-aircraft Medium Transport Aircraft programme, with a site ready to build on if India selects it.",
+          "signal": "watch",
+          "sources": [
+            { "title": "Embraer, Mahindra pick Nagpur for potential C-390 assembly line", "publisher": "AeroTime", "url": "https://www.aerotime.aero/articles/embraer-mahindra-nagpur-c390-assembly-line-india", "published": "2026-10-02", "uid": "4ni49ZJLye9GbLbCYaf6eh" }
+          ]
+        },
+        {
+          "headline": "Airbus completes the first 32 OneWeb replacement satellites",
+          "so_what": "The first tranche of 669 spacecraft Eutelsat has on order, heading to SpaceX for launch, towards 1,300 OneWeb satellites in orbit by 2030.",
+          "signal": "positive",
+          "sources": [
+            { "title": "Airbus Completes First 32 OneWeb Replenishment Satellites for Eutelsat Fleet Refresh", "publisher": "SatNews", "url": "https://satnews.com/2026/10/05/airbus-completes-first-32-oneweb-replenishment-satellites-for-eutelsat-fleet-refresh", "published": "2026-10-05", "uid": "KgFYMbdnjQm7JUwwQQgCWZ" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sustainability",
+      "takeaway": "Airlines want CORSIA, not the EU ETS, to be the global carbon framework.",
+      "items": [
+        {
+          "headline": "IATA marks ten years of CORSIA as the EU reviews its ETS",
+          "so_what": "More than 130 countries take part and CORSIA should have mitigated about 200 million tonnes of CO2 by year-end; IATA wants the EU's ETS review - which considers covering destinations within 5,000 km - to reinforce CORSIA, not overlap it.",
+          "signal": "watch",
+          "sources": [
+            { "title": "Ten Years on from CORSIA Agreement, Governments Must Strengthen the Global Framework for Aviation Emissions", "publisher": "IATA", "url": "https://www.iata.org/en/pressroom/2026-releases/10-06-ten-years-corsia-governments-strengthen-framework-aviation-emissions", "published": "2026-10-06", "uid": "QC3eHQBHBRc5xwWSQsnJwg" }
+          ]
+        }
+      ]
+    }
+  ],
+  "watchlist": [
+    { "item": "737 MAX 10 amended type certificate", "why": "Releases MAX 10 deliveries to Ryanair and Alaska Airlines.", "next": "FAA decision, no date given" },
+    { "item": "Saudi airspace", "why": "Whether the Houthi warning turns into attacks on routes carriers still use.", "next": "EASA guidance updates" },
+    { "item": "India Medium Transport Aircraft", "why": "60 aircraft between the C-390 and the C-130J-30.", "next": "Selection after the August 12 request for proposals" },
+    { "item": "Taiwan F-16 Block 70 deliveries", "why": "Tests whether the F-16 line has recovered its schedule.", "next": "More jets before the end of 2026" },
+    { "item": "airBaltic restructuring", "why": "How much capacity moves to ACMI partners.", "next": "New structures by mid-October" },
+    { "item": "EU ETS review", "why": "A 5,000 km scope would overlap CORSIA on long-haul routes.", "next": "EU review in progress" }
+  ],
+  "coverage": {
+    "articles": 1227,
+    "feeds": 156,
+    "publishers": 90,
+    "summaryOnly": 76,
+    "notes": "12 feeds failed on their last fetch: the ten Airbus newsroom feeds answer with a bot check, and Cargo Facts and Air Cargo Next refuse the connector, so Airbus news reaches this report only through trade titles. 93 arXiv preprints were not considered. Leeham's Comac analysis is behind a subscription and is cited from its free opening only."
   }
 }
 """;

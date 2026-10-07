@@ -82,5 +82,30 @@ public static class Urls
         return MultiLabelSuffixes.Contains(lastTwo) ? string.Join('.', labels[^3..]) : lastTwo;
     }
 
+    /// <summary>
+    /// The article behind a feed service's click tracker. follow.it sends a reader through
+    /// <c>api.follow.it/redirect-to-url?q=&lt;article&gt;</c>, a page that says "Redirect Notice"
+    /// and nothing about the story.
+    /// </summary>
+    public static bool TryUnwrapRedirectNotice(string url, out string target)
+    {
+        target = "";
+
+        if (!Uri.TryCreate(url, UriKind.Absolute, out var uri) || !uri.Host.EndsWith("follow.it", StringComparison.OrdinalIgnoreCase)) return false;
+
+        foreach (var pair in uri.Query.TrimStart('?').Split('&', StringSplitOptions.RemoveEmptyEntries))
+        {
+            var parts = pair.Split('=', 2);
+
+            if (parts.Length == 2 && parts[0] == "q" && Uri.TryCreate(Uri.UnescapeDataString(parts[1]), UriKind.Absolute, out var inner) && inner.Scheme.StartsWith("http"))
+            {
+                target = Canonicalize(inner.AbsoluteUri) ?? inner.AbsoluteUri;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public static string Host(string url) => Uri.TryCreate(url, UriKind.Absolute, out var uri) ? uri.Host.ToLowerInvariant() : "";
 }

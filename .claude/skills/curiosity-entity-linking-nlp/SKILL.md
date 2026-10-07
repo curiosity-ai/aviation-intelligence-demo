@@ -182,7 +182,78 @@ Without that labelling you cannot tell a working entity layer from a coincidence
 
 ---
 
-## 7. Checklist
+## 7. Verified wiring (mosaik main, October 2026)
+
+Checked against a live server while building the aviation news desk. The files are what the
+definitions import reads; export after importing and commit what the exporter writes.
+
+**The chain for one text field** - all five must exist, or nothing is linked:
+
+```
+config/indexes/others/index-parser.<Type>.<UID>.json   FieldToDocumentIndex: parses the field
+config/pipeline-mapping.json                           Type 0 entry: (<Type>, <Field>) → pipeline UID
+nlp/pipelines/<Name>.<UID>.json                        base models + your spotters
+nlp/spotters/<Type>.<Field>.<UID>.json                 _NlpSpotterFromNode
+nlp/linking/index-linking.<Type>.<Field>.json          array of mappings; the importer creates the
+                                                       DocumentToGraphIndex if it is missing
+```
+
+- **Parser index settings** are `DenormalizeHtmlBeforeParsing`, `FieldName`, `MaximumLength`,
+  `NodeType`. An older export also carries `MaximumBatchSize`; today's import rejects the file
+  with "Setting MaximumBatchSize not found in SettingsHolder".
+- **`pipeline-mapping.json` replaces the whole mapping**, search and file pipelines included
+  (`Type` 0 = node type and field, 1 = search, 2 = files). The workspace's default pipelines have
+  UIDs that differ per workspace, so commit them with the mapping that names them - otherwise a
+  fresh workspace's search parsing points at pipelines that do not exist.
+- **The exporter has the last word on the format.** It assigns a parser index its own
+  `UniqueExportID` (a hand-minted one is not kept), orders linking rules by entity type, and
+  writes a node-type mapping's `Language` as `"ab"` (the field is unused for `Type` 0). Import
+  your hand-written files once, export, and commit the export.
+- **Base models** `B8rsc5Pqjad4teno7TBVCV` and `8tpTBbfHyygTUYgS9RPzri` (the language-agnostic
+  data-parsing pipeline's) are built-ins with the same UIDs everywhere; start your own pipeline
+  from them and append your spotters. A pipeline of your own, mapped to your fields, leaves the
+  workspace's defaults untouched.
+- **The importer adds the built-in `_Abbreviation` linking** to an index it creates, and then
+  warns that your file does not list it. Keep it (it is free vocabulary) and let the export write
+  it back.
+- **A spotter's `IgnoreCase` applies to all of its terms, aliases included.** An alias's own
+  `ignoreCase` (in `Graph.AddAlias`) only identifies the alias node. An alias in `Language.Any`
+  is used by a spotter of any language.
+- **Spotting on the key, with `IncludeAlias`, makes the aliases the term list.** Build the
+  spotter from a key that never occurs in prose (a Wikidata id, an ICAO code) and write every
+  term you want found as an alias. Then a common-word name ("Emirates") stays the node's name
+  without becoming a term, and removing a term is `RemoveAlias` - keep a ledger of what you wrote.
+- **Scripts get `E._Mentions` / `E._AppearsIn`**; the front end's generated `E` does not include
+  internal edges, so emit them into your own `E` from the connector.
+
+**After the terms change**, the spotter models are cached: refresh each one
+(`POST /api/nlp/model/refresh?modelUID=<spotter uid>`), then recreate the parser index of every
+field you link (`GET /api/index/list/FieldToDocumentIndex` for the `IndexUID`,
+`POST /api/index/recreate?nodeType=<Type>&indexUID=<uid>`) so existing records are parsed again.
+`POST /api/nlp/model/parse/?modelUID=<spotter uid>` with a sentence as the body shows what one
+spotter finds - the quickest test of a term rule.
+
+Three things that are not obvious, all observed:
+
+- **The pipeline caches its own spotter instances.** Refreshing a spotter model does not reach a
+  pipeline that already built it; re-importing the pipeline file (its node timestamp changes) or
+  restarting the server does.
+- **Linking only ever adds edges.** A `_Mentions` written while a term existed survives removing the
+  term, refreshing the spotter, and recreating both the parser and the linking index. Tune the
+  vocabulary on a scratch workspace and ingest the real one once the rules have settled - or
+  rebuild it from the repository afterwards.
+- **`--MSK_LOW_MEMORY=true` throttles linking hard**: the parser and linking indexes pause while
+  the heap is fragmented, for up to an hour at a time on a fresh ingest. Use it only where memory
+  is genuinely short.
+
+**Measure precision on real text before trusting it.** The first pass over 1,556 real articles
+linked "GEO" (an orbit) to Georgetown's airport, "Middle East" to an airline, a Roman numeral
+to a business jet and three unrelated aircraft to "Falcon". Run `top_mentions`-style counts,
+look at the top 30, and fix the rule that produced each bad one - never the row.
+
+---
+
+## 8. Checklist
 
 - [ ] Every identifier from the discovery brief that appears in prose has a spotter
 - [ ] Every spotter is backed by a real master list; `AddIfNotFound` is `false` everywhere
