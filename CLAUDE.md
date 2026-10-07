@@ -12,8 +12,8 @@ Read [`README.md`](README.md) and [`docs/use-case.md`](docs/use-case.md) before 
 
 **Picking this up in a new session:** read [`TODO.md`](TODO.md) for what is done and what is
 open, then [`docs/running-locally.md`](docs/running-locally.md) to rebuild the local server and
-re-ingest. The previous session's network blocked the real feed hosts and had no LLM key, so the
-P0 tasks in `TODO.md` are the ones that need an unrestricted environment.
+re-ingest. The corpus has been ingested from the real feeds and entity linking is in place; no
+session so far has had an LLM key, so the P0 tasks in `TODO.md` are the ones that need a real model.
 
 Five deliverables, in dependency order:
 
@@ -146,7 +146,7 @@ documentation lags the product**, so never write against a signature taken from 
 
 ## 6. Commits
 
-- Branch: the session's designated branch (currently `ccr-029ebc34-jcvr9i`).
+- Branch: the session's designated branch.
 - Never commit anything under `sample-application/` as part of your own work.
 - Commit in logical chunks: docs + skills, tools, reference data, then one commit per stage.
 - Never commit build output or the connector's hash cache.
