@@ -39,7 +39,7 @@ namespace AviationIntel.FrontEnd.Dashboard
                 return VStack().WS().Children(
                     Notices(d),
                     Counters(d),
-                    Grid(2.fr(), 1.fr()).WS().Gap(16.px()).MB(16).Children(
+                    Grid(ChartColumns).WS().Gap(16.px()).MB(16).Children(
                         Card(Categories(d)).SetTitle("This week by category".t(), UIcons.Folder, Theme.Colors.Green600).WS(),
                         Card(Days(d)).SetTitle("Articles per day".t(), UIcons.ChartHistogram, Theme.Colors.Teal600).WS()),
                     Card(Latest(d)).SetTitle("Latest news".t(), UIcons.Newspaper, Theme.Colors.Blue600).WS().H(560));
@@ -71,9 +71,14 @@ namespace AviationIntel.FrontEnd.Dashboard
                 .MB(16);
         }
 
+        //As many columns as fit, each at least this wide: four tiles and two charts side by side on a
+        //desk, one under the other on a phone.
+        private static readonly UnitSize TileColumns  = new UnitSize("repeat(auto-fit, minmax(min(220px, 100%), 1fr))");
+        private static readonly UnitSize ChartColumns = new UnitSize("repeat(auto-fit, minmax(min(380px, 100%), 1fr))");
+
         private static IComponent Counters(DashboardDto d)
         {
-            return Grid(1.fr(), 1.fr(), 1.fr(), 1.fr()).WS().Gap(16.px()).MB(16).Children(
+            return Grid(TileColumns).WS().Gap(16.px()).MB(16).Children(
                 Counter(NewsSets.Today,       d.Articles24h.ToString(), string.Format("from {0} feeds".t(), d.FeedsWithNews24h), () => Router.Navigate(NewsView.RouteFor(NewsSets.Today))),
                 Counter(NewsSets.Week,        d.Articles7d.ToString(),  string.Format("from {0} publishers".t(), d.Publishers7d), () => Router.Navigate(NewsView.RouteFor(NewsSets.Week))),
                 Card(Metric("Feeds healthy".t(), (d.Feeds - d.FeedsFailing) + " / " + d.Feeds)
