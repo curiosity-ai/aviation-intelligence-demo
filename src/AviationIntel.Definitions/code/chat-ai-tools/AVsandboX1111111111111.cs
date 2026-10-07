@@ -61,16 +61,23 @@ public class AviationNewsDesk : ISandbox
     public Mosaik.Schema.ArtifactType[] Artifacts => new[] { Mosaik.Schema.ArtifactType.Html, Mosaik.Schema.ArtifactType.Pdf };
 
     public SandboxQueryAccess Query => SandboxQueryAccess.For(
-        N.Article.Type, N.Feed.Type, N.Publisher.Type, N.FeedCategory.Type, N.SourceType.Type, N.Priority.Type, N.Tag.Type).WithMaxNodes(200);
+        N.Article.Type, N.Feed.Type, N.Publisher.Type, N.FeedCategory.Type, N.SourceType.Type, N.Priority.Type, N.Tag.Type,
+        N.Organisation.Type, N.AircraftType.Type, N.EngineType.Type, N.LaunchVehicle.Type, N.Airport.Type).WithMaxNodes(200);
+
+    //The vocabularies entity linking resolves mentions to. An article reaches them over _Mentions,
+    //and they reach their articles over _AppearsIn - both written by the workspace, not the connector.
+    private static readonly string[] EntityTypes = { N.Organisation.Type, N.AircraftType.Type, N.EngineType.Type, N.LaunchVehicle.Type, N.Airport.Type };
 
     public SandboxCommand[] Commands => new[]
     {
         SandboxCommand.Create("news",
             "news [--since 1d|7d|YYYY-MM-DD] [--until YYYY-MM-DD] [--category <text>] [--priority Core|Secondary] [--publisher <text>] "
-          + "[--feed <text>] [--lang <code>] [--grep <text>] [--content page|summary] [--limit N] [--json]: "
+          + "[--feed <text>] [--lang <code>] [--grep <text>] [--mentions <name>] [--content page|summary] [--limit N] [--json]: "
           + "articles newest first, one per line as TSV (published, uid, category, priority, publisher, lang, content, words, title, url) "
           + "or JSON lines with --json. Exact over the whole corpus - use it rather than reading a count off /news. "
-          + "--since defaults to 1d; --grep matches title and excerpt; --content summary lists the ones only known from their feed summary.",
+          + "--since defaults to 1d; --grep matches title and excerpt; --content summary lists the ones only known from their feed summary; "
+          + "--mentions keeps articles that entity linking found naming an organisation, aircraft type, engine type, launch vehicle or airport "
+          + "(exact name first, else every name containing the text: --mentions Boeing, --mentions \"A350\", --mentions Heathrow).",
             call => Task.FromResult(News(call))),
 
         SandboxCommand.Create("article",
@@ -96,8 +103,8 @@ public class AviationNewsDesk : ISandbox
             }),
 
         SandboxCommand.Create("stats",
-            "stats [--since 1d|7d|YYYY-MM-DD] [--until YYYY-MM-DD]: article counts by category, priority, publisher, day and content source, "
-          + "plus feed health (feeds that failed on their last fetch, Core feeds with nothing in the window). The numbers for a report's metrics and charts.",
+            "stats [--since 1d|7d|YYYY-MM-DD] [--until YYYY-MM-DD] [--mentions <name>]: article counts by category, priority, publisher, day and content source, "
+          + "the most-mentioned organisations, aircraft types, engine types, launch vehicles and airports (top_mentions), plus feed health (feeds that failed on their last fetch, Core feeds with nothing in the window). The numbers for a report's metrics and charts.",
             call => Task.FromResult(Stats(call))),
 
         SandboxCommand.Create("render-report",
@@ -106,7 +113,7 @@ public class AviationNewsDesk : ISandbox
           + "the contract in /templates/README.md first and refuses a report with missing sections or sources. Then run: publish <name>.html",
             RenderReportAsync),
 
-        SandboxCommand.Search(new[] { N.Article.Type, N.Feed.Type, N.Publisher.Type }),
+        SandboxCommand.Search(new[] { N.Article.Type, N.Feed.Type, N.Publisher.Type, N.Organisation.Type, N.AircraftType.Type, N.EngineType.Type, N.LaunchVehicle.Type, N.Airport.Type }),
         SandboxCommand.Consult(new[] { N.Article.Type, N.Feed.Type, N.Publisher.Type }),
     };
 
@@ -207,12 +214,22 @@ public class AviationNewsDesk : ISandbox
 
             - `news --since 7d --category Airlines` - exact filters over the whole corpus, not just the index.
             - `article <uid>` - same as reading the file, by uid.
-            - `stats --since 1d` - counts for a report's metrics and charts, and feed health.
+            - `stats --since 1d` - counts for a report's metrics and charts, the most-mentioned entities
+              (`top_mentions`), and feed health.
+            - `news --since 7d --mentions "Boeing 737 MAX"` - the articles entity linking found naming it.
             - `search <words>` / `consult <uid>` - the workspace's own search and reader.
             - `query '...'` - the graph query engine over Article, Feed, Publisher, FeedCategory, SourceType,
-              Priority and Tag.
+              Priority, Tag, Organisation, AircraftType, EngineType, LaunchVehicle and Airport.
 
-            Which companies, programmes and airports an article is about is **not** a column: read the text.
+            ## Mentions
+
+            The workspace spots organisations (airlines, manufacturers, authorities, agencies), aircraft
+            types, engine types, launch vehicles and airports in every article's title and body, from master lists built
+            from Wikidata and OurAirports. `article <uid>` lists them; `--mentions` filters by them.
+
+            They are found by name, so treat them as a lead, not a fact: an article that mentions Boeing
+            is not necessarily about Boeing, and an entity missing from the list may still be in the text.
+            Read the article before you say what it is about.
             """;
     }
 
@@ -338,6 +355,9 @@ public class AviationNewsDesk : ISandbox
 
         if (tags.Count > 0) sb.AppendLine($"- publisher tags: {string.Join(", ", tags)}");
 
+        var mentions = MentionsOf(scope, uid).Select(e => $"{EntityName(e)} ({EntityKind(e)})").ToList();
+        if (mentions.Count > 0) sb.AppendLine($"- mentions: {string.Join("; ", mentions)}");
+
         sb.AppendLine().AppendLine("## Excerpt").AppendLine().AppendLine(node.GetString(N.Article.Excerpt));
         sb.AppendLine().AppendLine("## Body").AppendLine().AppendLine(node.GetString(N.Article.Body));
 
@@ -351,6 +371,8 @@ public class AviationNewsDesk : ISandbox
         var args = Options.Parse(call.Arguments);
 
         if (args.Error is not null) return call.Fail(args.Error);
+
+        if (!args.ResolveMentions(call.Scope, out var mentionError)) return call.Fail(mentionError);
 
         var lookup = FeedLookup.Build(call.Scope);
         var sb = new StringBuilder(args.Json ? "" : "#published\tuid\tcategory\tpriority\tpublisher\tlang\tcontent\twords\ttitle\turl\n");
@@ -383,6 +405,7 @@ public class AviationNewsDesk : ISandbox
                     title = node.GetString(N.Article.Title),
                     url = node.GetString(N.Article.Url),
                     excerpt = node.GetString(N.Article.Excerpt),
+                    mentions = MentionsOf(call.Scope, node.UID).Select(EntityName).ToArray(),
                 }));
             }
             else
@@ -403,8 +426,11 @@ public class AviationNewsDesk : ISandbox
 
         if (args.Error is not null) return call.Fail(args.Error);
 
+        if (!args.ResolveMentions(call.Scope, out var mentionError)) return call.Fail(mentionError);
+
         var lookup = FeedLookup.Build(call.Scope);
         var byCategory = new Dictionary<string, int>();
+        var byMention = new Dictionary<string, int>();
         var byPriority = new Dictionary<string, int>();
         var byPublisher = new Dictionary<string, int>();
         var byDay = new SortedDictionary<string, int>();
@@ -415,7 +441,12 @@ public class AviationNewsDesk : ISandbox
         foreach (var node in Articles(call.Scope, args.From, args.To))
         {
             var feed = lookup.PrimaryFeedOf(call.Scope, node.UID);
+
+            if (!args.Matches(node, feed)) continue;
+
             total++;
+
+            foreach (var entity in MentionsOf(call.Scope, node.UID)) Bump(byMention, EntityKind(entity) + "\t" + EntityName(entity));
 
             Bump(byCategory, feed?.Category ?? "(none)");
             Bump(byPriority, feed?.Priority ?? "(none)");
@@ -438,6 +469,10 @@ public class AviationNewsDesk : ISandbox
         Section(sb, "by_publisher", byPublisher, 15);
         Section(sb, "by_content", byContent);
 
+        //Tab-separated kind and name, so the section reads as three columns: kind, name, articles.
+        sb.AppendLine().AppendLine("## top_mentions");
+        foreach (var (key, n) in byMention.OrderByDescending(kv => kv.Value).ThenBy(kv => kv.Key).Take(30)) sb.AppendLine($"{key}\t{n}");
+
         sb.AppendLine().AppendLine("## by_day");
         foreach (var (day, n) in byDay) sb.AppendLine($"{day}\t{n}");
 
@@ -458,6 +493,31 @@ public class AviationNewsDesk : ISandbox
     }
 
     private static void Bump(Dictionary<string, int> counts, string key) => counts[key ?? ""] = counts.GetValueOrDefault(key ?? "") + 1;
+
+    // ── mentions ─────────────────────────────────────────────────────────────
+
+    private static IEnumerable<ReadOnlyNode> MentionsOf(ToolScope scope, UID128 article) =>
+        scope.Q().StartAt(article).Out(edgeType: E._Mentions).AsEnumerable()
+             .Where(n => EntityTypes.Contains(n.Type))
+             .OrderBy(n => Array.IndexOf(EntityTypes, n.Type)).ThenBy(EntityName);
+
+    private static string EntityName(ReadOnlyNode n) => n.Type switch
+    {
+        _ when n.Type == N.Organisation.Type => n.GetString(N.Organisation.Name),
+        _ when n.Type == N.AircraftType.Type => n.GetString(N.AircraftType.Name),
+        _ when n.Type == N.EngineType.Type => n.GetString(N.EngineType.Name),
+        _ when n.Type == N.LaunchVehicle.Type => n.GetString(N.LaunchVehicle.Name),
+        _ => n.GetString(N.Airport.Name),
+    };
+
+    private static string EntityKind(ReadOnlyNode n) => n.Type switch
+    {
+        _ when n.Type == N.Organisation.Type => n.GetString(N.Organisation.Kind),
+        _ when n.Type == N.AircraftType.Type => "Aircraft type",
+        _ when n.Type == N.EngineType.Type => "Engine type",
+        _ when n.Type == N.LaunchVehicle.Type => "Launch vehicle",
+        _ => "Airport",
+    };
 
     // ── render-report ────────────────────────────────────────────────────────
 
@@ -684,6 +744,8 @@ public class AviationNewsDesk : ISandbox
         public string Lang { get; private set; }
         public string Grep { get; private set; }
         public string Content { get; private set; }
+        public string Mentions { get; private set; }
+        public HashSet<UID128> MentionedArticles { get; private set; }
         public int Limit { get; private set; } = 200;
         public bool Json { get; private set; }
         public string Error { get; private set; }
@@ -707,6 +769,7 @@ public class AviationNewsDesk : ISandbox
                     case "--lang": o.Lang = Next(); break;
                     case "--grep": o.Grep = Next(); break;
                     case "--content": o.Content = Next(); break;
+                    case "--mentions": o.Mentions = Next(); break;
                     case "--json": o.Json = true; break;
                     case "--limit": o.Limit = int.TryParse(Next(), out var n) ? Math.Clamp(n, 1, MAX_NEWS_ROWS) : 200; break;
                     default: o.Error = $"unknown option '{argv[i]}' - see `help news`"; break;
@@ -731,8 +794,34 @@ public class AviationNewsDesk : ISandbox
             return now;
         }
 
+        /// <summary>
+        /// --mentions as the set of articles its entities appear in: the entities named exactly
+        /// that when there are any, otherwise every one whose name contains the text.
+        /// </summary>
+        public bool ResolveMentions(ToolScope scope, out string error)
+        {
+            error = null;
+
+            if (Mentions is null) return true;
+
+            var all = EntityTypes.SelectMany(t => scope.Q().StartAt(t).AsEnumerable()).ToList();
+            var exact = all.Where(e => string.Equals(EntityName(e), Mentions, StringComparison.OrdinalIgnoreCase)).ToList();
+            var entities = exact.Count > 0 ? exact : all.Where(e => EntityName(e).Contains(Mentions, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            if (entities.Count == 0)
+            {
+                error = $"no organisation, aircraft type, engine type, launch vehicle or airport is named like '{Mentions}' - try a shorter name";
+                return false;
+            }
+
+            MentionedArticles = new HashSet<UID128>(entities.SelectMany(e => scope.Q().StartAt(e.UID).Out(N.Article.Type, E._AppearsIn).AsUIDEnumerable()));
+            return true;
+        }
+
         public bool Matches(ReadOnlyNode node, FeedInfo feed)
         {
+            if (MentionedArticles is not null && !MentionedArticles.Contains(node.UID)) return false;
+
             static bool Has(string value, string filter) => filter is null || (value ?? "").Contains(filter, StringComparison.OrdinalIgnoreCase);
 
             if (!Has(feed?.Category, Category) || !Has(feed?.Publisher, Publisher) || !Has(feed?.Name, Feed)) return false;

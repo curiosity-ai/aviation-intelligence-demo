@@ -45,6 +45,11 @@ dotnet run --project src/AviationIntel.Connector -- --root . --directory tests/f
     --endpoint http://localhost:8080 --token "$LIBTOK"
 ```
 
+In a Claude Code cloud container Chromium is pre-installed - pass it rather than downloading one:
+`CHROMIUM_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome`. A first full run over the real
+directory loads ~1,500 pages and takes about 30 minutes; it writes and commits every 100 articles,
+so a run that is stopped part-way keeps what it read.
+
 The fixtures exercise every branch of the extraction: a server-rendered page, a page whose body
 only exists after JavaScript runs, a paywall teaser, a 404, an Atom feed, a German feed, and an
 item syndicated by two feeds. A second run reports every article as cached.
@@ -61,6 +66,28 @@ After editing anything in the workspace, export and commit it - the files here a
 ```bash
 curl -s -H "Authorization: Bearer $TOK" $B/graph/export-definitions -o defs.zip
 ```
+
+### Entity recognition after an import or a vocabulary change
+
+The spotters are built from the vocabularies the connector writes, so ingest (at least the
+`reference` step) before importing the definitions. Two things do not happen on their own:
+
+```bash
+# The spotter models are cached: after the terms change, refresh each one.
+for m in AVspotorg1111111111111 AVspotPLane11111111111 AVspotEnginE1111111111 AVspotRockeT1111111111 AVspotAirpoRt111111111; do
+  curl -s -X POST -H "Authorization: Bearer $TOK" "$B/nlp/model/refresh?modelUID=$m"; done
+
+# Articles already parsed keep their old links until their parser index is recreated.
+curl -s -H "Authorization: Bearer $TOK" $B/index/list/FieldToDocumentIndex      # Article Title/Body IndexUIDs
+curl -s -X POST -H "Authorization: Bearer $TOK" "$B/index/recreate?nodeType=Article&indexUID=<uid>"
+
+# Check a spotter on a sentence:
+curl -s -X POST -H "Authorization: Bearer $TOK" -H 'Content-Type: text/plain' \
+  "$B/nlp/model/parse/?modelUID=AVspotRockeT1111111111" --data-binary "SpaceX launched a Falcon 9"
+```
+
+With `--MSK_LOW_MEMORY=true` the parser and linking indexes pause while the heap is fragmented and
+resume on their own; linking a full ingest takes several minutes after the connector finishes.
 
 ## 4. Exercise the AI layer without a model
 
