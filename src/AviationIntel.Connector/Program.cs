@@ -28,6 +28,8 @@ using Microsoft.Extensions.Logging;
 //   --reset-cache             forget which articles were already ingested
 //   --skip-reference          do not (re)write the reference vocabularies under data/reference
 //   --install-browser         download Playwright's Chromium and exit (once per machine)
+//   --upload-data             store data/feeds and data/reference in the workspace for the
+//                             in-workspace connectors (code/data-connector-tasks/) and exit
 //
 // The connector writes only what the sources state: the directory's classification of each
 // feed and each item's own metadata. Which companies, programmes and airports an article is
@@ -77,6 +79,15 @@ if (!File.Exists(options.DirectoryCsv))
 {
     Console.Error.WriteLine($"No feed directory at {options.DirectoryCsv}. Pass --root or --directory.");
     return 2;
+}
+
+if (Flag("--upload-data"))
+{
+    using var uploader = Graph.Connect(endpoint!, token!, connectorName: "aviation-rss-data");
+
+    Console.WriteLine("Uploading the connector data for the in-workspace connectors…");
+    await ConnectorData.UploadAsync(uploader, root);
+    return 0;
 }
 
 //The cache is keyed per endpoint, so a dry run or a second workspace never makes another skip work.

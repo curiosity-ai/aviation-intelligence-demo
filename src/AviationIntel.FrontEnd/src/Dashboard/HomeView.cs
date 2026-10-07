@@ -149,7 +149,15 @@ namespace AviationIntel.FrontEnd.Dashboard
         {
             var uids = d.Latest24hUIDs ?? new UID128[0];
 
+            //A card on the landing page, not the page's search: it must not take the caret. NoForceFocus stops the
+            //box re-focusing itself on blur; un-registering it as the active search box - once mounted, and again
+            //each time the user leaves it - stops CommandManager focusing it whenever the window regains focus.
             return SearchArea()
+                .SearchBox(box =>
+                 {
+                     box.NoForceFocus().WhenMounted(() => CommandManager.UnsetActiveSearchBox(box));
+                     box.Render().addEventListener("focusout", _ => CommandManager.UnsetActiveSearchBox(box));
+                 })
                 .OnSearch(sr => sr.WithTargetUIDs(uids)
                                   .MarkAsNoResultsIf(uids.Length == 0)
                                   .WithSortMode(SortModeEnum.RecentFirst))

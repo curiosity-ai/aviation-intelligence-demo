@@ -125,6 +125,49 @@ say done
 
 With a real provider configured instead, press **Daily brief** on the home page.
 
+## 5. Deploying to a hosted workspace
+
+The same steps against a hosted workspace (done for `demos.curiosity.ai/aviation-marketing-intelligence`
+on 2026-10-07, starting from an empty workspace). Mint the tokens in the workspace (Manage → Tokens,
+or the API below) with a system administrator.
+
+```bash
+B=https://<workspace>/api
+TOK=$(curl -s -X POST $B/login/create -H 'Content-Type: application/json' -d '{"UserName":"<admin>","Password":"<password>"}' | tr -d '"')
+LIBTOK=$(curl -s "$B/library/token?purpose=aviation-rss&duration=30" -H "Authorization: Bearer $TOK")
+FETOK=$(curl -s "$B/library/token-front-end-upload?purpose=aviation-frontend&duration=30" -H "Authorization: Bearer $TOK")
+
+# 1. The corpus: the stand-alone connector (vocabularies, then the 248 feeds, with a browser)
+CHROMIUM_PATH=/opt/pw-browsers/chromium-1194/chrome-linux/chrome \
+  dotnet run --project src/AviationIntel.Connector -- --root . --endpoint https://<workspace> --token "$LIBTOK"
+
+# 2. The definitions - schemas, NLP, endpoints, the AI layer, and the in-workspace connectors
+python3 tools/import_definitions.py --endpoint https://<workspace> --token "$TOK"
+
+# 3. The inputs the in-workspace connectors read (feed directory + vocabularies, private files)
+dotnet run --project src/AviationIntel.Connector -- --root . --endpoint https://<workspace> --token "$LIBTOK" --upload-data
+
+# 4. The front end: built locally in Release, uploaded with the Curiosity CLI
+dotnet tool install --global Curiosity.CLI --version 26.10.6426
+dotnet build src/AviationIntel.FrontEnd/AviationIntel.FrontEnd.csproj -c Release
+curiosity-cli upload-front-end -s https://<workspace> -t "$FETOK" -p src/AviationIntel.FrontEnd/bin/Release/netstandard2.0/tps
+```
+
+Step 2 can run as soon as step 1 has written the vocabularies (the first seconds of the run); the
+spotters are built from them. Once the definitions are in, the **Aviation RSS feeds** task runs
+every hour inside the server and **Aviation reference vocabularies** every Monday; run either now
+with `POST $B/scheduling/run?uid=AVconnRSS1111111111111` (or `AVconnRef1111111111111`), and read the
+run under Manage → Data → Connector Runs. To try an edited connector without writing anything:
+
+```bash
+# body: {"Code": "<the task file without its [task: ...] header lines>", "Name": "..."}; answers server-sent events
+curl -s -X POST -H "Authorization: Bearer $TOK" -H 'Content-Type: application/json' \
+  $B/scheduling/data-connector/dry-run --data-binary @request.json
+```
+
+A hosted workspace also offers a server-side front-end build (`/api/frontend-dev/*`, a git repository
+the workspace compiles); it is not used here - the upload is the path this repository supports.
+
 ## What was validated, and what was not
 
 Validated against a live server built from `mosaik` main (October 2026), with

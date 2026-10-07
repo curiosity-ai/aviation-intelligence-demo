@@ -14,6 +14,7 @@ Curiosity application template; its guide is in
 | Feed directory (real sources) | [`data/feeds/aviation-aerospace-rss-directory.csv`](data/feeds/aviation-aerospace-rss-directory.csv) |
 | Entity vocabularies (Wikidata, OurAirports) | [`data/reference/`](data/reference) |
 | Connector: RSS + Playwright + Readability | [`src/AviationIntel.Connector/`](src/AviationIntel.Connector) |
+| In-workspace connectors (scheduled, run inside the server) | [`src/AviationIntel.Definitions/code/data-connector-tasks/`](src/AviationIntel.Definitions/code/data-connector-tasks) |
 | Workspace definitions (sandbox, agent, skill, assistant, endpoint, schemas) | [`src/AviationIntel.Definitions/`](src/AviationIntel.Definitions) |
 | Report templates (HTML report, PowerPoint deck) | [`src/AviationIntel.Definitions/templates/`](src/AviationIntel.Definitions/templates) |
 | Front end (Transpose + Tesserae) | [`src/AviationIntel.FrontEnd/`](src/AviationIntel.FrontEnd) |
@@ -89,10 +90,45 @@ Install Playwright's browser once with `dotnet run --project src/AviationIntel.C
 or point `--chromium` at an existing Chromium. The connector honours `HTTPS_PROXY` for both the
 HTTP client and the browser.
 
+### 1.1 The same connectors, inside the workspace
+
+The connector also exists as two **in-workspace data connectors** - scheduled tasks marked
+`[task: Curiosity.Tasks.Connector]` whose C# runs inside the Curiosity server, write through the
+same connector API (`Curiosity.Library.ConnectorGraph`, applied in-process) and show up under
+Manage → Data → Connector Runs. They travel with the definitions, so importing the definitions is
+all a workspace needs to keep its corpus current with no machine of its own:
+
+| Task | Schedule | Port of |
+| --- | --- | --- |
+| `aviation-rss-feeds-AVconnRSS1111111111111.cs` - **Aviation RSS feeds** | hourly, at :17 | `FeedDirectoryIngest` + `FeedFetcher` + `ArticlesIngest` |
+| `aviation-reference-vocabularies-AVconnRef1111111111111.cs` - **Aviation reference vocabularies** | Mondays 04:41 UTC | `ReferenceIngest` |
+
+What differs, and why:
+
+- **No browser.** The server has no Chromium, so article pages are read with one plain HTTP
+  request and Readability (SmartReader, which the server ships). A page that renders its body
+  with JavaScript or sits behind a bot check falls back to the feed's text, and says so in
+  `ContentSource` / `ExtractionNote`. Feeds are parsed with LINQ to XML (RSS 2.0, RSS 1.0, Atom);
+  `CodeHollow.FeedReader` is not available to workspace code.
+- **No hash cache.** An article already in the workspace is never re-read or re-written - only
+  linked to a feed that newly carries it - so whatever the stand-alone connector extracted with a
+  browser is kept. A page that failed transiently is marked `(retried next run)` and read again.
+  Article keys are canonicalised identically, so both connectors write the same node.
+- **The inputs are workspace files.** The feed directory and the vocabularies are uploaded once
+  with `dotnet run --project src/AviationIntel.Connector -- --upload-data --endpoint <url> --token
+  <library token>` (private files, fixed identifiers; a file's UID is a hash of its identifier, so
+  the tasks find them in any workspace). Re-run it after changing anything under `data/`.
+- **Aliases are cleared and re-added** each run, which replaces the stand-alone connector's terms
+  ledger.
+
+The stand-alone connector remains the better choice for a first full ingest (it reads more pages);
+the in-workspace one keeps the corpus current. Their dry runs (Manage → Data → the task → Dry Run,
+or `POST /api/scheduling/data-connector/dry-run`) read 5 feeds and 10 pages and write nothing.
+
 ### 2. The workspace definitions
 
 Imported with `python3 tools/import_definitions.py --endpoint <url>` **after the first connector
-run**, because the code compiles against the `N`/`E` constants the workspace generates from the
+run** (or, on a fresh workspace, after the schemas exist - they are in `config/schemas/`), because the code compiles against the `N`/`E` constants the workspace generates from the
 schema the connector registers. Every file is the workspace's own export, byte for byte.
 
 | Definition | What it is |
@@ -106,6 +142,7 @@ schema the connector registers. Every file is the workspace's own export, byte f
 | `nlp/` | Entity recognition: five spotters (one per vocabulary), the `Aviation-Entities` pipeline, and the linking rules for `Article.Title` and `Article.Body` |
 | `config/pipeline-mapping.json`, `config/indexes/` | Which pipeline parses which article field, and the parser indexes that run it |
 | `config/interface.json` | Workspace interface settings: Contacts, Inbox, Calendar and Notes are off |
+| `code/data-connector-tasks/` | The two in-workspace connectors (§1.1) |
 
 ### 3. The report templates
 
@@ -152,6 +189,12 @@ aliases, case-sensitive, so what is found is exactly the `Terms` column. Linking
 `_Mentions` (article → entity) and `_AppearsIn` (entity → article); the sandbox's
 `news --mentions` and `stats`' `top_mentions`, the article cards and every entity's own page read
 them.
+
+## Deploying to a hosted workspace
+
+See [`docs/running-locally.md`](docs/running-locally.md) §5 - the front end is built locally and
+uploaded with `curiosity-cli upload-front-end`, the definitions with `tools/import_definitions.py`,
+and the connector data with `--upload-data`.
 
 ## Running it locally against a live server
 
