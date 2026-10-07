@@ -29,6 +29,13 @@ Built, committed and validated against a local Curiosity server (mosaik main, pa
 - [x] **Rebuild-from-scratch rehearsal**: fresh workspace → connector → `import_definitions.py`
       (`Success: True`, no warnings) → sandbox compiles → linking → front end → both reports
 - [x] Definitions round-trip byte for byte with the workspace export
+- [x] **Deployed to `demos.curiosity.ai/aviation-marketing-intelligence`** (2026-10-07): stand-alone
+      connector run, definitions imported (`Success: True`, sandbox compiles), front end built in
+      Release and uploaded with `curiosity-cli`, connector data uploaded (`--upload-data`) -
+      `docs/running-locally.md` §5
+- [x] **In-workspace connectors** (`code/data-connector-tasks/`): *Aviation RSS feeds* (hourly)
+      and *Aviation reference vocabularies* (weekly) run inside the server; dry runs and a real
+      reference run verified on the demo workspace
 
 ## Open tasks
 
@@ -59,8 +66,9 @@ Built, committed and validated against a local Curiosity server (mosaik main, pa
 - [ ] **Near-duplicate stories.** The same announcement from the newsroom and three trade titles is
       still merged only by the AI (the British Airways A380 retrofit came from four publishers on
       6 October). A similarity scenario for "same story", or a shared-entity + same-day heuristic.
-- [ ] **Scheduling.** Run the connector hourly (cron/CI); with the hash cache an hourly run touches
-      only new items. Consider a scheduled task that runs the analyst agent each morning.
+- [x] ~~**Scheduling.** Run the connector hourly (cron/CI)~~ - the in-workspace *Aviation RSS feeds*
+      task does this. Still open: the in-workspace connector has no browser, so JavaScript-rendered and
+      bot-checked pages fall back to feed text (compare `ContentSource` counts with a stand-alone run). Consider a scheduled task that runs the analyst agent each morning.
 - [ ] **Sandbox at real volume.** At ~1,500 articles `stats` and `news --mentions` answer in well
       under a second. Profile again at ~10k (a few months of ingest).
 

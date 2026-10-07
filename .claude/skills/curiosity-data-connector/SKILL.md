@@ -376,6 +376,49 @@ explicitly in the emitter.
 
 ---
 
+## 10.1 Running the same connector inside the workspace
+
+A connector can also live in the workspace as a **data connector task**: a scheduled task file in
+`code/data-connector-tasks/` whose header carries `[task: Curiosity.Tasks.Connector]` beside the
+usual `Name` / `UID` / `Schedule`. It is imported with the definitions, runs inside the server on its
+cron, and is recorded under Manage → Data → Connector Runs. Verified against a hosted workspace on
+Curiosity 26.10 (the aviation repository's `code/data-connector-tasks/`):
+
+- **`Graph` is a `Curiosity.Library.ConnectorGraph`** - the connector API, applied in-process.
+  There is **no typed `AddOrUpdate<T>`**: write `Graph.AddOrUpdate(Key(N.X.Type, key), new { ... })`
+  with the generated `N` / `E` constants. A `Timestamp` member in the anonymous object sets the
+  node's timestamp, as `[Timestamp]` does. `TryAdd`, `Link(a, b, fwd, rev)`, `AddAlias`,
+  `ClearAliases`, `CommitPendingAsync`, `LogAsync`, `GetFile` / `OpenFileAsync` all exist.
+  Operations on one node are applied in the order queued, so `ClearAliases` then `AddAlias` is
+  safe - that replaces a terms ledger.
+- **Read through `Workspace`, write through `Graph`.** `Workspace.TryGetReadOnlyContent(uid, out var
+  node)` and `Mosaik.GraphDB.Node.GetUID(type, key)` (fully qualified - `Node` is ambiguous) tell you
+  whether a keyed node exists; the UID equals the one a stand-alone connector's `Node.FromKey`
+  produces, so the two connectors can share a corpus. That is the in-workspace substitute for the
+  hash cache.
+- **What the script can use:** the standard imports (`System.Net.Http`, `System.Xml.Linq` by full
+  name, `CsvHelper`, `Newtonsoft.Json`), `CreateHttpClient()` (never `new HttpClient()`), and
+  **SmartReader** (Readability). Not available: Playwright / a browser, `CodeHollow.FeedReader` and
+  `AngleSharp` (excluded from workspace compilation), `Task.Run` (use `Task.WhenAll` over async
+  lambdas, or `RunTaskAsync`).
+- **Script traps:** classes declared at the end of the file are fine; a class named like an imported
+  type (`Directory`) is ambiguous; `UID.UID128` resolves to the scope's `UID(...)` method - write
+  `global::UID.UID128`; dispose with `using (...)` statements, never `using var`.
+- **Inputs from the repository** go into the workspace as files with fixed identifiers
+  (`graph.UploadFileWithIdentifierAsync(stream, "app/data/x.csv", "x.csv", source, initiallyPrivate:
+  true)` from a stand-alone tool); the task reads
+  `Graph.GetFile(UID(GraphDB.Schema._FileEntry.For("app/data/x.csv")))`. The UID is a hash of the
+  identifier, so nothing workspace-specific is hard-coded.
+- **Try before importing:** `POST /api/scheduling/data-connector/dry-run` with
+  `{"Code": "<body without the [task:] lines>", "Name": "..."}` compiles and runs the code with every
+  write recorded instead of applied (server-sent events: `log`, `operation`, `stats`, `result`).
+  `IsDryRun` lets the code read a sample instead of everything.
+- **Run now:** `POST /api/scheduling/run?uid=<task UID>`.
+- **Commit the exported copy.** The workspace re-formats the code on import (alignment is lost and
+  a BOM added); export and commit what comes back, so the definitions round-trip.
+
+---
+
 ## 11. Checklist
 
 - [ ] One handler per input type; DTOs and `[Node]` classes nested inside it
