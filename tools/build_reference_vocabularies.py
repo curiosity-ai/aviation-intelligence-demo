@@ -16,7 +16,7 @@ Four master lists, each from a public reference source - never hand-authored:
 Each row's Terms are what the workspace spots in text - the name included only when it passes
 the same rules as the aliases. What a spotter finds is only as good as its terms, so they are
 filtered by rule:
-a term shorter than 3 characters, purely numeric, not in Latin script, a Roman numeral, a generic industry word ("Aero"), a common English word
+a term shorter than 3 characters, purely numeric, not in Latin script, a Roman numeral, a lower-case phrase ("air defense"), a generic industry word ("Aero"), a common English word
 (google-10000-english), a phrase made only of the 2,000 most common words with no industry word
 in it ("Middle East"), an airline's own ICAO code, or a one-word nickname of an aircraft that
 first flew before 1990 ("Fury") is dropped. A term two entities claim goes to the one whose own name it is,
@@ -334,6 +334,10 @@ def acceptable(term, common):
     if re.fullmatch(r"[IVXLC]+", term):
         return False
     words = term.split()
+    # A name is capitalised somewhere; a phrase in lower case ("air defense") is a common noun.
+    # One-word lower-case brands ("flydubai") are left to the common-word check below.
+    if len(words) > 1 and not any(c.isupper() for c in term):
+        return False
     lowered = [w.lower().strip(".,'") for w in term.replace("-", " ").split()]
     if len(lowered) > 1 and all(common.get(w, 10**6) < 2000 for w in lowered) and not set(lowered) & INDUSTRY_WORDS:
         return False

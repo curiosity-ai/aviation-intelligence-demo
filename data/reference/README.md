@@ -25,7 +25,8 @@ are case-sensitive - so what is found is exactly this column.
 
 The generator filters the label and the aliases by rule, the same way on every run:
 
-- dropped: shorter than 3 characters, purely numeric, a Roman numeral, not in Latin script;
+- dropped: shorter than 3 characters, purely numeric, a Roman numeral, not in Latin script, or a
+  phrase with no capital letter ("air defense" is a common noun, not a name);
 - dropped: a phrase made only of the 2,000 most common English words, unless it carries an
   industry word (air, airlines, aviation, aerospace, agency, authority, launch, …) - "Middle East"
   goes, "American Airlines" stays;
