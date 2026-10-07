@@ -79,6 +79,13 @@ namespace AviationIntel.FrontEnd.Schema
             public const string Name = "Name";
         }
 
+        public static class LaunchVehicle
+        {
+            public const string Type = "LaunchVehicle";
+            public const string WikidataId = "WikidataId";
+            public const string Name = "Name";
+        }
+
         public static class Organisation
         {
             public const string Type = "Organisation";
@@ -133,8 +140,8 @@ namespace AviationIntel.FrontEnd.Schema
         }
 
         public static readonly string[] DocumentTypes = { "Article" };
-        public static readonly string[] All360Types   = { "AircraftType", "Airport", "Article", "EngineType", "Feed", "FeedCategory", "Organisation", "Priority", "Publisher", "SourceType", "Tag" };
-        public static readonly string[] EntityTypes   = { "AircraftType", "Airport", "EngineType", "Organisation" };
+        public static readonly string[] All360Types   = { "AircraftType", "Airport", "Article", "EngineType", "Feed", "FeedCategory", "LaunchVehicle", "Organisation", "Priority", "Publisher", "SourceType", "Tag" };
+        public static readonly string[] EntityTypes   = { "AircraftType", "Airport", "EngineType", "LaunchVehicle", "Organisation" };
     }
 
     public static class E
@@ -161,6 +168,8 @@ namespace AviationIntel.FrontEnd.Schema
         public const string BuildsEngine = "BuildsEngine";
         public const string PoweredBy = "PoweredBy";
         public const string Powers = "Powers";
+        public const string LaunchVehicleBuiltBy = "LaunchVehicleBuiltBy";
+        public const string BuildsLaunchVehicle = "BuildsLaunchVehicle";
         public const string _Mentions = "_Mentions";
         public const string _AppearsIn = "_AppearsIn";
     }
