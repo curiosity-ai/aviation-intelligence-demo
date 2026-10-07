@@ -16,11 +16,14 @@ Four master lists, each from a public reference source - never hand-authored:
 Each row's Terms are what the workspace spots in text - the name included only when it passes
 the same rules as the aliases. What a spotter finds is only as good as its terms, so they are
 filtered by rule:
-a term shorter than 3 characters, purely numeric, not in Latin script, a Roman numeral, a common English word
-(google-10000-english), or a phrase made only of the 2,000 most common words with no industry word
-in it ("Middle East") is dropped. A term two entities claim goes to the one whose own name it is,
+a term shorter than 3 characters, purely numeric, not in Latin script, a Roman numeral, a generic industry word ("Aero"), a common English word
+(google-10000-english), a phrase made only of the 2,000 most common words with no industry word
+in it ("Middle East"), an airline's own ICAO code, or a one-word nickname of an aircraft that
+first flew before 1990 ("Fury") is dropped. A term two entities claim goes to the one whose own name it is,
 else to the one with more Wikipedia articles (an airport counts as having none) - and a name two
-entities both carry as their own ("Falcon") names neither. The rules are applied
+entities both carry as their own ("Falcon") names neither, and so does an acronym two entities
+share unless one has three times the other's coverage. Organisations also get their name without
+its legal form ("Northrop Grumman Corporation" → "Northrop Grumman"). The rules are applied
 the same way on every run, so the same sources give the same files.
 
 Wikidata is CC0; OurAirports is public domain. Both are credited in data/reference/README.md.
@@ -49,11 +52,12 @@ COMMON     = "https://raw.githubusercontent.com/first20hours/google-10000-englis
 ORG_CLASSES = [
     ("Aviation authority", "?x wdt:P31 wd:Q1875618 ."),
     ("Space agency",       "?x wdt:P31 wd:Q17505024 . ?x wikibase:sitelinks ?s . FILTER(?s >= 8)"),
+    ("Armed force",        "VALUES ?c { wd:Q781132 wd:Q61883 wd:Q4508 wd:Q1274955 wd:Q772547 } ?x wdt:P31 ?c . ?x wikibase:sitelinks ?s . FILTER(?s >= 15) FILTER NOT EXISTS { ?x wdt:P576 [] }"),
     ("Airline",            "?x wdt:P31/wdt:P279* wd:Q46970 . ?x wikibase:sitelinks ?s . FILTER(?s >= 10) FILTER NOT EXISTS { ?x wdt:P576 [] }"),
     ("Launch provider",    "?x wdt:P31 wd:Q11753232 . ?x wikibase:sitelinks ?s . FILTER(?s >= 3) FILTER NOT EXISTS { ?x wdt:P576 [] }"),
     ("Manufacturer",       "?x wdt:P31 wd:Q936518 . ?x wikibase:sitelinks ?s . FILTER(?s >= 5) FILTER NOT EXISTS { ?x wdt:P576 [] }"),
     ("Defence contractor", "?x wdt:P31 wd:Q1934969 . ?x wikibase:sitelinks ?s . FILTER(?s >= 8) FILTER NOT EXISTS { ?x wdt:P576 [] }"),
-    ("Aerospace company",  "VALUES ?ind { wd:Q3477363 wd:Q1434048 wd:Q1875606 wd:Q2729047 wd:Q639280 } ?x wdt:P452 ?ind . ?x wikibase:sitelinks ?s . FILTER(?s >= 8) FILTER NOT EXISTS { ?x wdt:P576 [] }"),
+    ("Aerospace company",  "VALUES ?ind { wd:Q3477363 wd:Q1434048 wd:Q1875606 wd:Q2729047 wd:Q639280 wd:Q392933 } ?x wdt:P452 ?ind . ?x wikibase:sitelinks ?s . FILTER(?s >= 8) FILTER NOT EXISTS { ?x wdt:P576 [] }"),
 ]
 
 AIRCRAFT_QUERY = """
@@ -147,7 +151,7 @@ def main():
     # Terms per entity, before the cross-entity ambiguity rule.
     terms = {}
     for q in orgs:
-        terms[("org", q)] = candidate_terms(names[q], prefixes=[])
+        terms[("org", q)] = candidate_terms(with_corporate_suffix_dropped(names[q]), prefixes=[])
     for q, a in aircraft.items():
         terms[("aircraft", q)] = candidate_terms(names[q], prefixes=[names[m][0] for m in a["mfr"] if m in names])
     for q, e in engines.items():
@@ -180,6 +184,19 @@ def main():
         if len(keys) > 1:
             owner[n] = None
 
+    # An acronym two entities share goes to a clear front-runner (three times the Wikipedia
+    # coverage of the next: "RAF" is the Royal Air Force), and otherwise names neither ("CSA").
+    acronym_claims = defaultdict(set)
+    for key, ts in terms.items():
+        for t in ts:
+            if is_acronym(t):
+                acronym_claims[t].add(key)
+    for t, keys in acronym_claims.items():
+        if len(keys) > 1:
+            ranked = sorted(keys, key=lambda k: -(0 if k[0] == "airport" else int(weight.get(k[1], 0))))
+            first, second = (int(weight.get(k[1], 0)) if k[0] != "airport" else 0 for k in ranked[:2])
+            owner[normal(t)] = ranked[0] if first >= 3 * max(second, 1) else None
+
     # The name is a term like any other: "Emirates" is a common word, so the airline is spotted as
     # "Emirates Group" and not as every mention of the country.
     def keep(key, label):
@@ -188,6 +205,13 @@ def main():
             if owner[normal(t)] != key:
                 continue
             if not acceptable(t, common):
+                continue
+            # An airline's ICAO code (CCA, ISR, FIN) is how a flight plan names it, not a newsroom -
+            # and as an acronym it is usually something else.
+            if key[0] == "org" and t == icao.get(key[1]):
+                continue
+            # A bare nickname of an old type ("Fury", 1954) is somebody else's newer one.
+            if key[0] == "aircraft" and " " not in t and not re.search(r"\d", t) and t != label and (aircraft[key[1]]["first"] or "0") < "1990":
                 continue
             # An IATA code is three capitals; most three-letter words written in capitals are
             # something else ("GEO" is an orbit before it is Georgetown), so the whole list applies.
@@ -221,6 +245,19 @@ def main():
 
 
 # ── terms ────────────────────────────────────────────────────────────────────
+
+CORPORATE_SUFFIX = re.compile(r",?\s+(Corporation|Corp\.?|Incorporated|Inc\.?|plc|PLC|SE|AG|N\.V\.|NV|S\.A\.|SA|S\.p\.A\.|Ltd\.?|Limited|LLC|Company|Co\.|Holdings|Group)$")
+
+
+def with_corporate_suffix_dropped(names):
+    """Nobody writes "Northrop Grumman Corporation": the name without its legal form is a term too."""
+    out = list(names)
+    for n in names:
+        short = CORPORATE_SUFFIX.sub("", n).strip()
+        if short and short != n and len(short.split()) >= 1:
+            out.append(short)
+    return out
+
 
 def candidate_terms(names, prefixes):
     """The label and aliases, cleaned, plus each with its manufacturer's name taken off the front."""
@@ -278,8 +315,17 @@ def airport_names(a, places):
     return out
 
 
+def is_acronym(term):
+    return 2 < len(term) <= 5 and term.isupper() and term.isalpha()
+
+
+GENERIC_SINGLE = {"aero", "air", "avia", "jet", "jets", "space", "aviation", "aerospace", "airlines", "airways", "airline", "aircraft", "rocket", "launch"}
+
+
 def acceptable(term, common):
     if len(term) < 3:
+        return False
+    if term.lower() in GENERIC_SINGLE:
         return False
     if re.fullmatch(r"[\d\s.,\-/]+", term):
         return False
