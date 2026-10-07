@@ -44,11 +44,17 @@ public sealed class ArticleExtractor : IAsyncDisposable
     private          IPlaywright?                             _playwright;
     private          IBrowser?                                _browser;
     private          IBrowserContext?                         _context;
+    private readonly HttpClient                               _http;
 
     private ArticleExtractor(ConnectorOptions options)
     {
         _options     = options;
         _concurrency = new SemaphoreSlim(Math.Max(1, options.BrowserConcurrency));
+        _http        = new HttpClient(new HttpClientHandler { AutomaticDecompression = System.Net.DecompressionMethods.All, AllowAutoRedirect = false }) { Timeout = options.PageTimeout };
+
+        //The fallback says who it is. Several publishers refuse a headless browser yet serve a plain
+        //request, and some ask crawlers to identify themselves - so it does, rather than pass as Chrome.
+        _http.DefaultRequestHeaders.UserAgent.ParseAdd(ConnectorOptions.IdentifyingUserAgent);
     }
 
     public static async Task<ArticleExtractor> StartAsync(ConnectorOptions options)
@@ -103,7 +109,14 @@ public sealed class ArticleExtractor : IAsyncDisposable
 
             try
             {
-                return await LoadAndReadAsync(url);
+                var (article, error) = await LoadAndReadAsync(url, unwrapRedirect: true);
+
+                if (article is not null) return (article, null);
+
+                //Refused or dropped by the browser: one plain request before giving up on the page.
+                var (fallback, fallbackError) = await ReadWithHttpAsync(url, unwrapRedirect: true);
+
+                return fallback is not null ? (fallback, null) : (null, $"{error}; plain request: {fallbackError}");
             }
             finally
             {
@@ -161,7 +174,52 @@ public sealed class ArticleExtractor : IAsyncDisposable
         }
     }
 
-    private async Task<(ExtractedArticle?, string?)> LoadAndReadAsync(string url)
+    /// <summary>
+    /// Whether a failed page is worth trying again on the next run: the connection dropped or the page
+    /// timed out, as opposed to a publisher that answered with a refusal.
+    /// </summary>
+    public static bool IsTransient(string? error)
+        => error is not null
+        && (error.Contains("net::ERR_", StringComparison.Ordinal)
+         || error.Contains("Timeout", StringComparison.OrdinalIgnoreCase)
+         || error.Contains("timed out", StringComparison.OrdinalIgnoreCase))
+        && !error.Contains("plain request: HTTP 4", StringComparison.Ordinal);
+
+    private async Task<(ExtractedArticle?, string?)> ReadWithHttpAsync(string url, bool unwrapRedirect)
+    {
+        try
+        {
+            //Redirects are followed by hand: HttpClient will not follow https → http, and a few
+            //WordPress hosts send every request on a round trip through http to add a trailing slash.
+            var finalUrl = url;
+            var response = await _http.GetAsync(finalUrl);
+
+            for (var hop = 0; hop < 6 && (int)response.StatusCode is >= 300 and < 400 && response.Headers.Location is { } location; hop++)
+            {
+                finalUrl = new Uri(new Uri(finalUrl), location).AbsoluteUri;
+                response.Dispose();
+                response = await _http.GetAsync(finalUrl);
+            }
+
+            using var _ = response;
+
+            if (!response.IsSuccessStatusCode) return (null, $"HTTP {(int)response.StatusCode}");
+
+            if (unwrapRedirect && Urls.TryUnwrapRedirectNotice(finalUrl, out var target)) return await ReadWithHttpAsync(target, unwrapRedirect: false);
+
+            return (Read(finalUrl, await response.Content.ReadAsStringAsync(), (int)response.StatusCode), null);
+        }
+        catch (HttpRequestException e)
+        {
+            return (null, FirstLine(e.Message));
+        }
+        catch (TaskCanceledException)
+        {
+            return (null, "timed out");
+        }
+    }
+
+    private async Task<(ExtractedArticle?, string?)> LoadAndReadAsync(string url, bool unwrapRedirect)
     {
         var page = await _context!.NewPageAsync();
 
@@ -190,23 +248,15 @@ public sealed class ArticleExtractor : IAsyncDisposable
             var html     = await page.ContentAsync();
             var finalUrl = page.Url;
 
-            //Readability over the DOM the browser built - never a second download.
-            var reader  = new SmartReader.Reader(finalUrl, html) { Logging = SmartReader.ReportLevel.Issue };
-            var article = reader.GetArticle();
+            //A feed service's click tracker ends on a "Redirect Notice" naming the article: read that.
+            if (unwrapRedirect && Urls.TryUnwrapRedirectNotice(finalUrl, out var target))
+            {
+                await page.CloseAsync();
+                return await LoadAndReadAsync(target, unwrapRedirect: false);
+            }
 
-            return (new ExtractedArticle(
-                FinalUrl:      finalUrl,
-                Title:         article.Title         ?? "",
-                TextContent:   Normalise(article.TextContent),
-                Excerpt:       article.Excerpt       ?? "",
-                Byline:        article.Byline        ?? "",
-                Author:        article.Author        ?? "",
-                SiteName:      article.SiteName      ?? "",
-                Language:      article.Language      ?? "",
-                FeaturedImage: article.FeaturedImage ?? "",
-                PublishedAt:   article.PublicationDate is { } d ? new DateTimeOffset(DateTime.SpecifyKind(d, DateTimeKind.Utc)) : null,
-                IsReadable:    article.IsReadable,
-                HttpStatus:    status), null);
+            //Readability over the DOM the browser built - never a second download.
+            return (Read(finalUrl, html, status), null);
         }
         catch (PlaywrightException e)
         {
@@ -218,8 +268,28 @@ public sealed class ArticleExtractor : IAsyncDisposable
         }
         finally
         {
-            await page.CloseAsync();
+            if (!page.IsClosed) await page.CloseAsync();
         }
+    }
+
+    private static ExtractedArticle Read(string finalUrl, string html, int status)
+    {
+        var reader  = new SmartReader.Reader(finalUrl, html) { Logging = SmartReader.ReportLevel.Issue };
+        var article = reader.GetArticle();
+
+        return new ExtractedArticle(
+                FinalUrl:      finalUrl,
+                Title:         article.Title         ?? "",
+                TextContent:   Normalise(article.TextContent),
+                Excerpt:       article.Excerpt       ?? "",
+                Byline:        article.Byline        ?? "",
+                Author:        article.Author        ?? "",
+                SiteName:      article.SiteName      ?? "",
+                Language:      article.Language      ?? "",
+                FeaturedImage: article.FeaturedImage ?? "",
+                PublishedAt:   article.PublicationDate is { } d ? new DateTimeOffset(DateTime.SpecifyKind(d, DateTimeKind.Utc)) : null,
+                IsReadable:    article.IsReadable,
+                HttpStatus:    status);
     }
 
     //The same proxy the HTTP client honours, so the browser reaches what the feed fetch reaches.
@@ -238,13 +308,21 @@ public sealed class ArticleExtractor : IAsyncDisposable
     {
         if (string.IsNullOrWhiteSpace(text)) return "";
 
-        var lines = text.Replace("\r", "").Split('\n').Select(l => l.Trim());
+        var lines      = text.Replace("\r", "").Split('\n').Select(l => l.Trim());
+        var paragraphs = string.Join('\n', lines)
+                               .Split("\n\n", StringSplitOptions.RemoveEmptyEntries)
+                               .Select(p => string.Join(' ', p.Split('\n', StringSplitOptions.RemoveEmptyEntries)))
+                               .Where(p => p.Length > 0)
+                               .ToList();
 
-        return string.Join("\n\n", string.Join('\n', lines)
-                                         .Split("\n\n", StringSplitOptions.RemoveEmptyEntries)
-                                         .Select(p => string.Join(' ', p.Split('\n', StringSplitOptions.RemoveEmptyEntries)))
-                                         .Where(p => p.Length > 0));
+        //What Readability keeps above the first sentence is page furniture: "Skip to content",
+        //"Anzeige", a dateline, an image credit. A story never opens with a paragraph that short.
+        for (var i = 0; i < 3 && paragraphs.Count > 1 && HtmlText.WordCount(paragraphs[0]) < LEADING_FURNITURE_WORDS; i++) paragraphs.RemoveAt(0);
+
+        return string.Join("\n\n", paragraphs);
     }
+
+    private const int LEADING_FURNITURE_WORDS = 6;
 
     private static string FirstLine(string message) => message.Split('\n')[0].Trim();
 
@@ -253,6 +331,7 @@ public sealed class ArticleExtractor : IAsyncDisposable
         if (_context is not null) await _context.CloseAsync();
         if (_browser is not null) await _browser.CloseAsync();
         _playwright?.Dispose();
+        _http.Dispose();
     }
 
     private sealed class HostGate

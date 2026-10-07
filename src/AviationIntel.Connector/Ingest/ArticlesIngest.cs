@@ -23,7 +23,8 @@ namespace AviationIntel.Connector.Ingest;
 /// </remarks>
 internal static class ArticlesIngest
 {
-    public const int Version = 2;
+    //3: the plain-request fallback, follow.it unwrapping and leading-furniture trim (October 2026).
+    public const int Version = 3;
 
     //Below this many words Readability has most likely read a teaser, a cookie wall or a
     //navigation page rather than the article. Short enough to keep a terse press release.
@@ -150,7 +151,18 @@ internal static class ArticlesIngest
 
             if (!ctx.DryRun)
             {
-                foreach (var candidate in batch) ctx.Cache.EnqueueHash(Version, candidate.Hash);
+                foreach (var candidate in batch)
+                {
+                    //A page that failed for a reason that passes (a dropped connection, a timeout) is
+                    //written from its feed text now and not recorded, so the next run reads it again.
+                    if (extracted.TryGetValue(candidate.Item.Url, out var page) && page.Article is null && ArticleExtractor.IsTransient(page.Error))
+                    {
+                        ctx.CountOutcome("page failed transiently (retried next run)");
+                        continue;
+                    }
+
+                    ctx.Cache.EnqueueHash(Version, candidate.Hash);
+                }
             }
 
             await ctx.CommitCacheAsync();
