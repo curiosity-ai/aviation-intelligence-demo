@@ -5,7 +5,7 @@
 > [`sample-application/`](sample-application/README.md) taught; the reasoning behind each rule
 > is in the skills under [`.claude/skills/`](.claude/skills).
 
-This repository builds a **Curiosity-based application** that monitors 248 real aviation &
+This repository builds a **Curiosity-based application** that monitors 293 real aviation &
 aerospace RSS feeds, reads every new article in full, and produces daily and weekly market
 intelligence reports as HTML pages and PowerPoint decks.
 Read [`README.md`](README.md) and [`docs/use-case.md`](docs/use-case.md) before doing anything.

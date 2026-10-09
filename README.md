@@ -1,6 +1,6 @@
 # Aviation Market Intelligence
 
-A Curiosity application that monitors **248 real aviation & aerospace RSS feeds**, reads every new
+A Curiosity application that monitors **293 real aviation & aerospace RSS feeds**, reads every new
 article in full where the publisher allows it, and turns a day or a week of news into a **daily
 brief** or a **weekly market report** - each published as an HTML page and a PowerPoint deck.
 
@@ -26,7 +26,7 @@ Curiosity application template; its guide is in
 ```mermaid
 flowchart LR
     CSV[Feed directory CSV] --> C[Connector]
-    RSS[248 RSS / Atom feeds] --> C
+    RSS[293 RSS / Atom feeds] --> C
     C -- Chromium + Readability --> P[Article pages]
     V[Reference vocabularies] --> C
     C -->|Feed, Publisher, Category,\nPriority, SourceType, Article, Tag,\nOrganisation, AircraftType, EngineType,\nLaunchVehicle, Airport| G[(Workspace graph)]
@@ -49,7 +49,7 @@ flowchart LR
 0. writes the five entity vocabularies from `data/reference/` - organisations, aircraft types,
    engine types, launch vehicles, airports - with every spottable term as an alias, and only the
    relationships their source states (who builds what, which engine powers which aircraft);
-1. reads the directory CSV (248 feeds, deduplicated by URL);
+1. reads the directory CSV (293 feeds, deduplicated by URL);
 2. fetches every feed (HTTP first; through headless Chromium when a bot check answers the HTTP
    client with a 403 or a challenge page) and parses RSS/Atom with `CodeHollow.FeedReader`;
 3. groups items across feeds by canonical URL (tracking parameters stripped), so a syndicated

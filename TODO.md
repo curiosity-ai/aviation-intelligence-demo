@@ -74,6 +74,16 @@ Built, committed and validated against a local Curiosity server (mosaik main, pa
 
 ### P2 — polish and delivery
 
+- [ ] **Feeds added from the Fluent Reader export (2026-10-09) that are not reachable as feeds.** 47
+      feeds were added (2 arXiv feeds removed); 20 of them answer with a 403, 404, 410, a bot check
+      or an HTML page even through the browser, and carry the priority `Review unreachable feed`
+      with the reason in their validation note: Northrop Grumman, Thales blog, Gardner Aerospace,
+      Air Insight, Air & Cosmos, AINonline topic feed, Usine Nouvelle (Aéronautique, Aéro-Spatial),
+      ASDNews (4 channels, Cloudflare), China Aerospace Blog, SoftInWay, Aviator, Reuters Agency,
+      Aerospace Metals, Avascent, The Defense Post, DARPA. Find a moved or alternate official feed
+      for each, or drop it. The general-interest feeds (WIRED Science/Business/Security, Usine
+      Nouvelle à la une) are in a new category, `General technology and business news`; watch
+      whether they add noise to the reports the way the arXiv feeds did.
 - [ ] Bot-protected feeds: the 10 Airbus feeds return an Imperva interstitial from datacenter IPs,
       even to a browser; Cargo Facts and Air Cargo Next refuse every client. Check from an office
       network; if still blocked, mark them in the directory or find alternate official feeds. No

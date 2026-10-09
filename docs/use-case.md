@@ -10,7 +10,7 @@ releases, and hand-writing a brief and a slide deck.
 
 The application does the reading and the first draft:
 
-- it monitors a curated directory of **248 real RSS feeds** - airline and manufacturer newsrooms,
+- it monitors a curated directory of **293 real RSS feeds** - airline and manufacturer newsrooms,
   trade and specialist titles, regulators and agencies, airports, MRO, leasing, defence, space;
 - it reads each new article **in full** where the publisher allows it (a real browser plus
   Readability), and records where it could only read the feed's summary;
@@ -26,7 +26,7 @@ and they say so on every page.
 
 | Source | Shape | Volume | Identity |
 | --- | --- | --- | --- |
-| Feed directory (`data/feeds/aviation-aerospace-rss-directory.csv`) | CSV, 22 columns, curated by an analyst | 248 feeds, 15 categories | Feed URL |
+| Feed directory (`data/feeds/aviation-aerospace-rss-directory.csv`) | CSV, 22 columns, curated by an analyst | 293 feeds, 16 categories | Feed URL |
 | Feed items | RSS 2.0 / Atom | ~10-100 per feed, refreshed continuously | Canonical article URL |
 | Article pages | HTML, often client-rendered, sometimes paywalled or bot-protected | one per item | Canonical article URL |
 
