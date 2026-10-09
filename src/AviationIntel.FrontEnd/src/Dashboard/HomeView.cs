@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Threading.Tasks;
 using AviationIntel.FrontEnd.Api;
 using AviationIntel.FrontEnd.Components;
 using Mosaik;
@@ -28,7 +29,7 @@ namespace AviationIntel.FrontEnd.Dashboard
         {
             var dashboard = Api.Api.DashboardAsync();
 
-            _root.Add(Header());
+            _root.Add(Header(dashboard));
 
             _root.Add(Defer(async () =>
             {
@@ -46,16 +47,28 @@ namespace AviationIntel.FrontEnd.Dashboard
             }).WS());
         }
 
-        private static IComponent Header()
+        private static IComponent Header(Task<DashboardDto> dashboard)
         {
+            //The number of sources is the graph's, like every other number on the page: it arrives with the dashboard.
+            var subtitle = TextBlock("What moved in commercial aviation and aerospace".t()).Small().Secondary();
+
+            ShowSourceCountAsync(subtitle, dashboard).FireAndForget();
+
             return HStack().WS().AlignItemsCenter().Wrap().PB(16).Children(
                 IconTile(UIcons.PlaneAlt, Theme.Colors.Blue600).Size(40.px()),
                 VStack().PL(12).Grow().Children(
                     TextBlock("Aviation market intelligence".t()).XLarge().SemiBold(),
-                    TextBlock("What moved in commercial aviation and aerospace, from 248 monitored sources".t()).Small().Secondary()),
+                    subtitle),
                 HStack().AlignItemsCenter().Children(
                     Button("Daily brief".t()).SetIcon(UIcons.FileChartLine).AI().OnClick(() => AskAssistant.DailyBriefAsync().FireAndForget()).MR(8),
                     Button("Weekly report".t()).SetIcon(UIcons.CalendarLines).AISubtle().OnClick(() => AskAssistant.WeeklyReportAsync().FireAndForget())));
+        }
+
+        private static async Task ShowSourceCountAsync(TextBlock subtitle, Task<DashboardDto> dashboard)
+        {
+            var d = await dashboard;
+
+            if (d is object && d.Feeds > 0) subtitle.Text = string.Format("What moved in commercial aviation and aerospace, from {0} monitored sources".t(), d.Feeds);
         }
 
         /// <summary>A failed feed is said in words before it is said in a number: its news is missing from everything below.</summary>
