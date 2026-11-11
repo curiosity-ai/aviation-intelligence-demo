@@ -190,6 +190,14 @@ aliases, case-sensitive, so what is found is exactly the `Terms` column. Linking
 `news --mentions` and `stats`' `top_mentions`, the article cards and every entity's own page read
 them.
 
+## Deployment
+
+| Host | Workspace slug | URL | Studio version tested |
+| --- | --- | --- | --- |
+| demos.curiosity.ai | `aviation-marketing-intelligence` | https://demos.curiosity.ai/aviation-marketing-intelligence | 26.11.x (image `curiosityai/curiosity:latest`, checked 2026-11-11; AI parts not verified, no LLM key) |
+
+Build: `dotnet build src/AviationIntel.Connector` and `dotnet build src/AviationIntel.FrontEnd` (SDK 10 or the installed 11 RC via `global.json` roll-forward, `tps` on the PATH).
+
 ## Deploying to a hosted workspace
 
 See [`docs/running-locally.md`](docs/running-locally.md) §5 - the front end is built locally and
