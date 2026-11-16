@@ -190,6 +190,16 @@ aliases, case-sensitive, so what is found is exactly the `Terms` column. Linking
 `news --mentions` and `stats`' `top_mentions`, the article cards and every entity's own page read
 them.
 
+## Deployment
+
+| Host | Workspace slug | URL | Studio version tested |
+| --- | --- | --- | --- |
+| demos.curiosity.ai | `aviation-marketing-intelligence` | https://demos.curiosity.ai/aviation-marketing-intelligence | 26.11.x (image `curiosityai/curiosity:latest`, front end redeployed and checked 2026-11-14; AI parts not verified, no LLM key) |
+
+Update 2026-11-14: `Curiosity.FrontEnd*` 26.11.8066, `Tesserae` 2026.11.73601, `Transpose.BCL` 26.11.7972 (.NET 11.0.100 GA, `tps` 26.11.7971); connector and Release front end build clean; no `HubStack`/`HubTitle` use, no Hub migration needed. The front end (only) was uploaded to the workspace and the served bundle is byte-identical to the build. Playwright (Chromium, light theme, admin): Last 24 hours (0 articles, nothing ingested since 2026-11-12), Monitored feeds (295 feeds, 67 failed on their last fetch) load with 0 page errors, search box shows a complete focus border. The read-only admin `claude-ro` does not exist on this workspace, so that check was not run. The workspace was stopped and the orchestrator reported `UpdateAvailable` for its container image.
+
+Build: `dotnet build src/AviationIntel.Connector` and `dotnet build src/AviationIntel.FrontEnd` (SDK 10 or the installed 11 RC via `global.json` roll-forward, `tps` on the PATH).
+
 ## Deploying to a hosted workspace
 
 See [`docs/running-locally.md`](docs/running-locally.md) §5 - the front end is built locally and
