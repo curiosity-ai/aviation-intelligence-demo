@@ -31,3 +31,13 @@ stays the JSON that `render-report` turns into the HTML page and the PowerPoint 
   document. `GET api/editing/documents/text` held BOTH the analyst's line and the assistant's cited text; a second session opening `?doc=` showed the same
   text. Test document and category deleted afterwards. NOT verified: as `claude-ro` (that user does not exist in this workspace and was not created here),
   `tools/readonly-admin-check.py`, the weekly button, a phone width.
+
+## Why the dashboard can show 0 articles in the last 24 hours (checked 2026-11-20)
+
+Nothing is broken. The corpus is kept current by the in-workspace connector task **Aviation RSS feeds** (`AVconnRSS1111111111111`, hourly at :17), and a scheduled task only runs **while the workspace is awake**. Workspaces on `demos.curiosity.ai` go to sleep after an hour without use, so after a few idle days the newest article is days old and "Articles 24 h" is 0 (the 7-day tile still counts what was ingested earlier). The dashboard counts articles by node timestamp and is correct.
+
+Checked on the updated image: the task is enabled and not failing (`LastStartTime` 02:17 UTC, 97 s, no failure); a manual `POST api/scheduling/run?uid=AVconnRSS1111111111111` finished in about 40 s and added 7 articles; the dashboard then answered `Articles24h` 306 and `Articles7d` 1,470, with the newest article 03:28 UTC (the feeds' own latest).
+
+To have fresh news at a demo: open the workspace a few minutes before and run the task once from Manage > Scheduled tasks (or the call above), or keep the workspace warm (`POST /api/admin/instances/aviation-marketing-intelligence/keep-warm`, `{"AlwaysOnline":true}`, which costs a running container).
+
+Feed health on the same day: of 295 feeds, 222 `OK`, 54 `Unreachable` (publishers that refuse a datacentre address or a library user agent), 17 `Invalid feed`, 2 `Empty`. The dashboard's "feeds failing" tile (71) is these.
