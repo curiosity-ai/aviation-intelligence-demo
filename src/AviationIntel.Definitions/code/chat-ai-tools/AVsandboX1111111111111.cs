@@ -60,6 +60,10 @@ public class AviationNewsDesk : ISandbox
 
     public Mosaik.Schema.ArtifactType[] Artifacts => new[] { Mosaik.Schema.ArtifactType.Html, Mosaik.Schema.ArtifactType.Pdf };
 
+    //Collaborative documents: adds the `doc` command (list, cat, write, append, replace, history, diff, create). It works as the person
+    //chatting and never as anybody else; its edits show live in the desk note the analyst has open, under the assistant's name.
+    public SandboxEditingAccess Editing => SandboxEditingAccess.Everything();
+
     public SandboxQueryAccess Query => SandboxQueryAccess.For(
         N.Article.Type, N.Feed.Type, N.Publisher.Type, N.FeedCategory.Type, N.SourceType.Type, N.Priority.Type, N.Tag.Type,
         N.Organisation.Type, N.AircraftType.Type, N.EngineType.Type, N.LaunchVehicle.Type, N.Airport.Type).WithMaxNodes(200);

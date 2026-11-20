@@ -55,7 +55,8 @@ namespace AviationIntel.FrontEnd.Dashboard
                     TextBlock("What moved in commercial aviation and aerospace, from 248 monitored sources".t()).Small().Secondary()),
                 HStack().AlignItemsCenter().Children(
                     Button("Daily brief".t()).SetIcon(UIcons.FileChartLine).AI().OnClick(() => AskAssistant.DailyBriefAsync().FireAndForget()).MR(8),
-                    Button("Weekly report".t()).SetIcon(UIcons.CalendarLines).AISubtle().OnClick(() => AskAssistant.WeeklyReportAsync().FireAndForget())));
+                    Button("Weekly report".t()).SetIcon(UIcons.CalendarLines).AISubtle().OnClick(() => AskAssistant.WeeklyReportAsync().FireAndForget()).MR(8),
+                    Button("Desk note".t()).SetIcon(UIcons.FileEdit).Tooltip("Open (or start) the shared desk note on today's brief: the analyst's commentary, written together with the assistant".t()).OnClickSpinWhile(DeskNotesView.OpenDailyAsync)));
         }
 
         /// <summary>A failed feed is said in words before it is said in a number: its news is missing from everything below.</summary>

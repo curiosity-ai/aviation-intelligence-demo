@@ -30,8 +30,8 @@ namespace AviationIntel.FrontEnd.Components
         /// <summary>Built-in: reads one record by uid.</summary>
         private static readonly UID128 Tool_Consult = UID128.Parse("ConsuLt111111111111111");
 
-        private static readonly UID128[] PinnedTools  = { AskAssistant.NewsDeskToolUID, Tool_Search, Tool_Consult };
-        private static readonly UID128[] PinnedAgents = { AskAssistant.AnalystAgentUID };
+        internal static readonly UID128[] PinnedTools  = { AskAssistant.NewsDeskToolUID, Tool_Search, Tool_Consult };
+        internal static readonly UID128[] PinnedAgents = { AskAssistant.AnalystAgentUID };
 
         /// <summary>
         /// <c>nlp/pipelines/Aviation-Entities.AVpipeLinE111111111111.json</c> - the pipeline the article
@@ -52,6 +52,14 @@ namespace AviationIntel.FrontEnd.Components
             "Summarise this week's news about Boeing 737 MAX production.".t(),
         };
 
+        /// <summary>Linked as an article body; shared with the assistant docked beside a desk note.</summary>
+        internal static ChatViewParseAs ParseAs() => new ChatViewParseAs
+        {
+            PipelineUID = EntitiesPipeline,
+            NodeType    = N.Article.Type,
+            FieldName   = N.Article.Body,
+        };
+
         private static readonly ChatViewConfiguration Configuration = new ChatViewConfiguration
         {
             Title                    = "Aviation Market Intelligence".t(),
@@ -65,13 +73,7 @@ namespace AviationIntel.FrontEnd.Components
             // A news answer is only as good as the articles behind it.
             ShowCitationsPanel       = true,
 
-            // Linked as an article body: the text of a reply is prose about the market, like a body.
-            ParseAs = new ChatViewParseAs
-            {
-                PipelineUID = EntitiesPipeline,
-                NodeType    = N.Article.Type,
-                FieldName   = N.Article.Body,
-            },
+            ParseAs = ParseAs(),
 
             ChatRoute      = chatUID => DefaultRoutes.ChatAI.OpenChat(chatUID, default),
 

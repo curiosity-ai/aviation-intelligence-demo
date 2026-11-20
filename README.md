@@ -3,6 +3,8 @@
 A Curiosity application that monitors **248 real aviation & aerospace RSS feeds**, reads every new
 article in full where the publisher allows it, and turns a day or a week of news into a **daily
 brief** or a **weekly market report** - each published as an HTML page and a PowerPoint deck.
+An analyst's **desk note** (`#/desknotes`) is the commentary beside a report: a shared document the analyst and the assistant
+edit at the same time (see `docs/deployment.md`).
 
 Read [`docs/use-case.md`](docs/use-case.md) for the design brief. The repository started from the
 Curiosity application template; its guide is in
