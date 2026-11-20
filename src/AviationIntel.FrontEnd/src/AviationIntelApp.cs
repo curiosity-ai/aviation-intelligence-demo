@@ -47,6 +47,12 @@ namespace AviationIntel.FrontEnd
 
                 refresh.Add(() => feeds.IsSelected = (Transpose.Core.dom.window.location.hash ?? "").StartsWith(FeedsView.Route));
                 sidebar.AddContent(feeds);
+
+                var notes = new SidebarButton("AVIATION_DESKNOTES", UIcons.FileEdit, "Desk notes".t())
+                    .OnClick(() => Router.Navigate(DeskNotesView.Route));
+
+                refresh.Add(() => notes.IsSelected = DeskNotesView.IsShowing());
+                sidebar.AddContent(notes);
             };
         }
 
@@ -54,6 +60,7 @@ namespace AviationIntel.FrontEnd
         {
             Router.Register(NewsView.Route,  state => App.ShowDefault(new NewsView(state)));
             Router.Register(FeedsView.Route, state => App.ShowDefault(new FeedsView(state)));
+            Router.Register(DeskNotesView.Route, state => App.ShowDefault(new DeskNotesView(state)));
         }
     }
 }

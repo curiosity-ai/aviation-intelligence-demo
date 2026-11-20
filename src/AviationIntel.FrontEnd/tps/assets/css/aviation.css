@@ -1,0 +1,45 @@
+/* Example questions on the empty chat: cards in two columns (one in a narrow panel), the whole question readable. */
+.tss-btn.av-example {
+    flex: 1 1 280px;
+    min-width: 0;
+    height: auto;
+    margin: 0;
+    padding: 10px 14px;
+    justify-content: flex-start;
+    text-align: left;
+    white-space: normal;
+    line-height: 1.35;
+    border-radius: 8px;
+}
+/* The assistant docked beside a page (a panel a few hundred pixels wide): the transcript gets the whole panel.
+   Tesserae reserves an avatar column and a 100 px command column around every message, and caps the bubble at 80 %;
+   in a narrow panel that leaves a text column of about 170 px. The commands overlay the bubble on hover instead. */
+.av-assistant .tss-chatmessage-container            { position: relative; }
+.av-assistant .tss-chatmessage-avatar               { display: none; }
+.av-assistant .tss-chat-maxwidth .tss-chatmessage-bubble { max-width: 100%; }
+.av-assistant .tss-chat-left .tss-chatmessage-bubble     { width: 100%; }
+.av-assistant .tss-chat-right .tss-chatmessage-bubble    { max-width: 92%; }
+.av-assistant .tss-chatmessage-commands {
+    position: absolute;
+    top: -14px;
+    right: 4px;
+    margin: 0;
+    padding: 2px;
+    z-index: 2;
+    background: var(--tss-default-background-color);
+    border: 1px solid var(--tss-default-border-color);
+    border-radius: 6px;
+}
+.av-assistant .tss-chat-right .tss-chatmessage-commands { right: auto; left: 4px; }
+.av-assistant .av-examples-title { display: none; }
+.av-assistant .tss-btn.av-example { flex-basis: 100%; }
+
+/* Docked: a column the height of the window, in view while the page scrolls; the transcript scrolls inside it. */
+.av-assistant.av-docked {
+    position: sticky;
+    top: 8px;
+    height: calc(100vh - 110px);
+    min-height: 360px;
+}
+.av-assistant.av-docked > * { height: 100%; }
+.av-assistant.av-docked > * > .tss-stack { height: 100%; }
